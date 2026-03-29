@@ -1,0 +1,53 @@
+# .dockerignore — portable template for .NET solutions
+# Copy to the repo root (or the Docker build context root) and adjust as needed.
+
+# Source control
+.git
+.gitignore
+.gitattributes
+.github
+
+# IDE / editor artifacts
+**/.vs
+**/.vscode
+**/.idea
+**/*.user
+**/*.suo
+**/*.swp
+
+# Build output — never send to build context
+**/bin
+**/obj
+
+# Developer / local config — must not enter the image
+**/.env
+**/.env.local
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/appsettings.*.json
+!**/appsettings.json
+**/secrets.json
+**/launchSettings.json
+
+# Test output
+**/TestResults
+**/coverage
+
+# Docker files — avoid recursive COPY of compose overrides
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Documentation and workspace tooling
+README.md
+LICENSE
+.docs
+.copilot-tracking
+*.md
+
+# NuGet local cache (if present in repo)
+**/.nuget
+**/packages/
+
+# Node (if any front-end tooling lives in the repo)
+**/node_modules
