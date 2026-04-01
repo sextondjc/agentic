@@ -25,10 +25,10 @@ Use these standards exactly:
 | SKR-M1 | Singular purpose | MUST | Skill scope maps to one objective only. | Mark as failed and recommend scope split or refocus. |
 | SKR-M2 | Valid format | MUST | Valid YAML front matter and valid Markdown structure for Copilot skill loading. | Mark as failed and provide exact formatting fix. |
 | SKR-M3 | Triggers | MUST | Clear discovery triggers in description and body with concrete use conditions. | Mark as failed and provide trigger rewrite guidance. |
-| SKR-M4 | Name-folder alignment | MUST | Frontmatter `name` exactly matches the skill folder name that contains SKILL.md. | Mark as failed and provide exact rename/update steps for folder and frontmatter. |
 | SKR-S1 | Assets | SHOULD | Skill has concrete references or reusable assets for execution support. | Record advisory finding and recommend assets. |
 | SKR-S2 | No conflict | SHOULD NOT conflict | No harmful overlap or contradictory behavior with other skills. | Start conflict workflow and document resolution plan. |
 | SKR-S3 | Link integrity | SHOULD | Markdown links are resolvable, non-placeholder, and aligned with referenced assets/docs, including valid fragment anchors when present. Validate from the on-disk workspace file context. | Record advisory finding and recommend target fixes or valid replacements. |
+| SKR-S4 | Self-contained | SHOULD | Skill guidance is operational without hidden dependencies, with explicit Inputs, Required Outputs, and Workflow sections that fully define execution expectations. | Record advisory finding and recommend adding missing execution context and required sections. |
 
 ## Trigger Conditions
 
@@ -78,8 +78,8 @@ Optional inputs:
 3. Build a recommendation deny-list from history entries marked Rejected, Removed, or Illegitimate.
 4. Evaluate all SKR-M* and SKR-S* standards with evidence.
 5. Validate markdown link integrity in SKILL.md from the on-disk workspace file context (for example, reject placeholder `#` links and unresolved local paths).
-6. Validate that frontmatter `name` exactly matches the containing skill folder name.
-7. Prefer workspace-root-relative markdown links to reduce virtual-buffer resolution mismatch in IDE diagnostics.
+6. Prefer workspace-root-relative markdown links to reduce virtual-buffer resolution mismatch in IDE diagnostics.
+7. Validate self-containedness: required execution context must be explicit and not rely on unstated assumptions.
 8. Produce pass or fail for MUST standards and advisory outcome for SHOULD standards.
 9. If conflict is detected:
    - Document conflict using workspace documentation standards.

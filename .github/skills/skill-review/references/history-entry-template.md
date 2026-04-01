@@ -26,6 +26,7 @@
 | SKR-S1 | Pass/Advisory | <notes> |
 | SKR-S2 | Pass/Advisory/Blocked | <notes> |
 | SKR-S3 | Pass/Advisory | <notes> |
+| SKR-S4 | Pass/Advisory | <notes> |
 
 #### Recommendation Ledger
 

@@ -31,7 +31,7 @@ Read in this order when behavior is unclear:
    - `references/quick-reference.md`
    - `references/implementation-examples.md`
    - `references/review-checklist.md`
-2. Project instructions, when present (for example `/.github/instructions/data-access-and-syrx.instructions.md`).
+2. Project instructions, when present (for example `/.github/instructions/syrx.instructions.md`).
 3. Project reference docs, when present (for example `/.docs/reference/`).
 4. Syrx framework docs and package documentation available to the project.
 

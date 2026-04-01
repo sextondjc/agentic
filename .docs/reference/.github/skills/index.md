@@ -1,4 +1,4 @@
-﻿# Directory Index: /.github/skills
+# Directory Index: /.github/skills
 
 ## Summary
 Mirrored directory landing page for source path /.github/skills.
@@ -7,7 +7,7 @@ Mirrored directory landing page for source path /.github/skills.
 - [adr-generator](./adr-generator/index.md)
 - [api-design](./api-design/index.md)
 - [critical-thinking](./critical-thinking/index.md)
-- [dotnet-modernization](./dotnet-modernization/index.md)
+- [dotnet-refactor](./dotnet-refactor/index.md)
 - [technical-documentation](./technical-documentation/index.md)
 - [performance-research](./performance-research/index.md)
 - [prd-generator](./prd-generator/index.md)

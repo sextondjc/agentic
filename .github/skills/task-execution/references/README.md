@@ -1,1 +1,12 @@
-# subagent-driven-development ReferencesThis folder contains concrete assets used by this skill.## Intended Assets- Templates- Checklists- Examples- Supporting scriptsAdd artifacts here as this skill evolves.
+# task-execution References
+
+This folder contains concrete assets used by this skill.
+
+## Intended Assets
+
+- Templates
+- Checklists
+- Examples
+- Supporting scripts
+
+Add artifacts here as this skill evolves.

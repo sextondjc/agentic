@@ -163,7 +163,7 @@ A finished customization artifact passes authoring quality when:
 - [ ] For agents: `## Singular Purpose` clearly names the boundary.
 - [ ] For agents: instruction file content is referenced, not restated.
 - [ ] No overlap with an existing instruction or agent handling the same domain.
-- [ ] `customization-review` has been requested after authoring.
+- [ ] `validate-customization` has been requested after authoring.
 
 ## Done Criteria
 
@@ -172,4 +172,4 @@ Authoring is complete when:
 - The artifact file exists at the correct workspace path.
 - All frontmatter fields are populated and valid.
 - The content passes the quality signals checklist above.
-- `customization-review` has been invoked to validate the result.
+- `validate-customization` has been invoked to validate the result.

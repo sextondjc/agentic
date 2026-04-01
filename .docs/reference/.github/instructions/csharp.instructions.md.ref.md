@@ -1,13 +1,13 @@
-﻿# Reference: .github/instructions/data-access-and-syrx.instructions.md
+# Reference: .github/instructions/csharp.instructions.md
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/instructions/data-access-and-syrx.instructions.md
-- Documented page: /.docs/reference/.github/instructions/data-access-and-syrx.instructions.md.ref.md
+- Path: /.github/instructions/csharp.instructions.md
+- Documented page: /.docs/reference/.github/instructions/csharp.instructions.md.ref.md
 - File type: Markdown
-- Line count: 336
+- Line count: 169
 
 ## Package/Namespace/Module
 Not observed in code.
@@ -18,7 +18,7 @@ Not observed in code.
 ## Parameters
 | Name | Value |
 |---|---|
-| Frontmatter name | data-access-and-syrx |
+| Frontmatter name | csharp-development-and-standards |
 | Frontmatter applyTo | **/*.cs |
 
 ## Return Value
@@ -28,17 +28,17 @@ Not observed in code.
 Not observed in code.
 
 ## Remarks
-- Primary heading: Data Access & Syrx Instructions
-- Frontmatter description: Definitive Syrx 2.4.1 repository and SQL Server usage instructions.
+- Primary heading: C# Development & Standards
+- Frontmatter description: Consolidated C# development, style, and engineering standards.
 - Secondary headings:
-- Mandatory Pattern
-- CommandStrings
-- Guard & Null Safety
-- Performance
-- Testing
-- Transactions
-- Installer Pattern
-- Mapping DTOs
+- Language & Tooling
+- Naming & Structure
+- Comments & Documentation
+- Validation (Global Rule)
+- Async
+- Data Access
+- Testing Interface Guidance
+- Security & OWASP
 
 ## Thread Safety and Concurrency Notes
 Not observed in code.

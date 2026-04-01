@@ -1,13 +1,13 @@
-﻿# Reference: .github/instructions/csharp-development-and-standards.instructions.md
+# Reference: .github/skills/dotnet-refactor/SKILL.md
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/instructions/csharp-development-and-standards.instructions.md
-- Documented page: /.docs/reference/.github/instructions/csharp-development-and-standards.instructions.md.ref.md
+- Path: /.github/skills/dotnet-refactor/SKILL.md
+- Documented page: /.docs/reference/.github/skills/dotnet-refactor/SKILL.md.ref.md
 - File type: Markdown
-- Line count: 169
+- Line count: 28
 
 ## Package/Namespace/Module
 Not observed in code.
@@ -18,8 +18,8 @@ Not observed in code.
 ## Parameters
 | Name | Value |
 |---|---|
-| Frontmatter name | csharp-development-and-standards |
-| Frontmatter applyTo | **/*.cs |
+| Frontmatter name | dotnet-refactor |
+| Frontmatter applyTo | Not observed in code |
 
 ## Return Value
 Not observed in code.
@@ -28,17 +28,12 @@ Not observed in code.
 Not observed in code.
 
 ## Remarks
-- Primary heading: C# Development & Standards
-- Frontmatter description: Consolidated C# development, style, and engineering standards.
+- Primary heading: .NET Modernization Skill
+- Frontmatter description: >
 - Secondary headings:
-- Language & Tooling
-- Naming & Structure
-- Comments & Documentation
-- Validation (Global Rule)
-- Async
-- Data Access
-- Testing Interface Guidance
-- Security & OWASP
+- Scope
+- Rules
+- Typical Tasks
 
 ## Thread Safety and Concurrency Notes
 Not observed in code.
@@ -56,6 +51,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [Workspace Reference Home](../../../index.md)
+- [Coverage Report](../../../coverage-report.md)
+- [Code Structure](../../../code-structure.md)

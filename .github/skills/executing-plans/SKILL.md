@@ -11,11 +11,11 @@ Load plan, review critically, execute all tasks, report when complete.
 
 **Announce at start:** "I'm using the executing-plans skill to implement this plan."
 
-**When to use this skill vs `subagent-driven-development`:**
+**When to use this skill vs `task-execution`:**
 
 | Situation | Use |
 |---|---|
-| Subagents are available in the current session | `subagent-driven-development` (preferred) |
+| Subagents are available in the current session | `task-execution` (preferred) |
 | Working in a environment without subagent support | `executing-plans` |
 | Executing the plan in a separate, dedicated session | `executing-plans` |
 | Requires a human-in-loop checkpoint between tasks | `executing-plans` |
@@ -39,8 +39,8 @@ For each task:
 ### Step 3: Complete Development
 
 After all tasks complete and verified:
-- Announce: "I'm using the finishing-a-development-branch skill to complete this work."
-- **REQUIRED SUB-SKILL:** Use finishing-a-development-branch
+- Announce: "I'm using the complete-branch skill to complete this work."
+- **REQUIRED SUB-SKILL:** Use `complete-branch`
 - Follow that skill to verify tests, present options, execute choice
 
 ## When to Stop and Ask for Help
@@ -73,4 +73,4 @@ After all tasks complete and verified:
 
 **Required workflow skills:**
 - **writing-plans** - Creates the plan this skill executes
-- **finishing-a-development-branch** - Complete development after all tasks
+- **complete-branch** - Complete development after all tasks

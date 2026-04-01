@@ -24,10 +24,10 @@
 | /.github/agents/project-setup.agent.md | /.docs/reference/.github/agents/project-setup.agent.md.ref.md | Created |
 | /.github/agents/security-researcher.agent.md | /.docs/reference/.github/agents/security-researcher.agent.md.ref.md | Created |
 | /.github/copilot-instructions.md | /.docs/reference/.github/copilot-instructions.md.ref.md | Created |
-| /.github/instructions/architecture-ddd-and-domain.instructions.md | /.docs/reference/.github/instructions/architecture-ddd-and-domain.instructions.md.ref.md | Created |
+| /.github/instructions/architecture.instructions.md | /.docs/reference/.github/instructions/architecture.instructions.md.ref.md | Created |
 | /.github/instructions/async-programming.instructions.md | /.docs/reference/.github/instructions/async-programming.instructions.md.ref.md | Created |
-| /.github/instructions/csharp-development-and-standards.instructions.md | /.docs/reference/.github/instructions/csharp-development-and-standards.instructions.md.ref.md | Created |
-| /.github/instructions/data-access-and-syrx.instructions.md | /.docs/reference/.github/instructions/data-access-and-syrx.instructions.md.ref.md | Created |
+| /.github/instructions/csharp.instructions.md | /.docs/reference/.github/instructions/csharp.instructions.md.ref.md | Created |
+| /.github/instructions/syrx.instructions.md | /.docs/reference/.github/instructions/syrx.instructions.md.ref.md | Created |
 | /.github/instructions/documentation-and-specifications.instructions.md | /.docs/reference/.github/instructions/documentation-and-specifications.instructions.md.ref.md | Created |
 | /.github/instructions/github-actions-ci-cd-best-practices.instructions.md | /.docs/reference/.github/instructions/github-actions-ci-cd-best-practices.instructions.md.ref.md | Created |
 | /.github/instructions/sql-dba.instructions.md | /.docs/reference/.github/instructions/sql-dba.instructions.md.ref.md | Created |
@@ -48,7 +48,7 @@
 | /.github/skills/adr-generator/SKILL.md | /.docs/reference/.github/skills/adr-generator/SKILL.md.ref.md | Created |
 | /.github/skills/api-design/SKILL.md | /.docs/reference/.github/skills/api-design/SKILL.md.ref.md | Created |
 | /.github/skills/critical-thinking/SKILL.md | /.docs/reference/.github/skills/critical-thinking/SKILL.md.ref.md | Created |
-| /.github/skills/dotnet-modernization/SKILL.md | /.docs/reference/.github/skills/dotnet-modernization/SKILL.md.ref.md | Created |
+| /.github/skills/dotnet-refactor/SKILL.md | /.docs/reference/.github/skills/dotnet-refactor/SKILL.md.ref.md | Created |
 | /.github/skills/technical-documentation/references/coverage-report-template.md | /.docs/reference/.github/skills/technical-documentation/references/coverage-report-template.md.ref.md | Created |
 | /.github/skills/technical-documentation/references/documentation-index-template.md | /.docs/reference/.github/skills/technical-documentation/references/documentation-index-template.md.ref.md | Created |
 | /.github/skills/technical-documentation/references/technical-api-page-template.md | /.docs/reference/.github/skills/technical-documentation/references/technical-api-page-template.md.ref.md | Created |

@@ -1,9 +1,12 @@
 ---
 name: prd
 description: 'Merged specification + PRD authoring guidelines.'
-applyTo: '**/*.md'
+applyTo: '.docs/plans/**/*.md,.docs/specs/**/*.md,**/*prd*.md'
 ---
 # Product Specification & PRD Guidelines
+
+## Scope
+Applies to PRD and specification artifacts only. For general technical documentation, use `technical-docs.instructions.md`.
 
 ## Structure
 Unified document: Overview → Goals → Personas → Functional Requirements → User Stories (GH-###) → Interfaces/Data Contracts → Acceptance Criteria (AC-###) → Metrics → Risks → Dependencies.

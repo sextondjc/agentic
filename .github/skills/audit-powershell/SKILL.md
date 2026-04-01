@@ -28,7 +28,7 @@ Apply these workspace standards during review:
 
 - `.github/instructions/powershell.instructions.md`
 - `.github/instructions/security-and-secure-coding.instructions.md`
-- `.github/instructions/planning-execution-review-governance.instructions.md`
+- `.github/instructions/lifecycle-governance.instructions.md`
 
 ## Inputs
 
@@ -40,7 +40,7 @@ Optional:
 
 - Target file(s) or folder(s).
 - Severity focus (`Error`, `Warning`, `Information`).
-- Report directory (default: `.docs/changes/powershell-script-reviews`).
+- Report directory (default: `.docs/changes/audit-powershell-reviews`).
 
 ## Assets
 
@@ -51,9 +51,9 @@ Optional:
 This skill publishes markdown reports for cross-agent consumption.
 
 - Export format: `Markdown` only
-- Default report path: `.docs/changes/powershell-script-reviews/`
-- Default filename: `YYYYMMDD-powershell-script-review.md`
-- Stable latest filename: `latest-powershell-script-review.md` (written by default)
+- Default report path: `.docs/changes/audit-powershell-reviews/`
+- Default filename: `YYYYMMDD-audit-powershell.md`
+- Stable latest filename: `latest-audit-powershell.md` (written by default)
 
 ## Invocation Model
 
@@ -89,7 +89,7 @@ Return a concise report with:
   - `Issue`
   - `Recommendation`
 - A short "next fixes" list prioritized by highest severity first.
-- Persisted markdown report in `.docs/changes/powershell-script-reviews/` so other agents can ingest it.
+- Persisted markdown report in `.docs/changes/audit-powershell-reviews/` so other agents can ingest it.
 
 ## Recommendation Patterns
 

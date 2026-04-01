@@ -66,6 +66,7 @@ Skills discovery index: [.github/skills/README.md](skills/README.md)
 - `audit-powershell`
 - `security-research`
 - `performance-research`
+- `delivery-status-grid`
 - `sync-skills`
 - `skills-authoring`
 - `skill-review`

@@ -14,6 +14,7 @@ This catalog assigns each prompt to a primary lifecycle lane.
 | `testing-xunit` | Execution | Review | Produces test artifacts aligned with xUnit standards. |
 | `review-technical-docs` | Review | Execution | Evaluates and remediates technical docs quality and completeness. |
 | `skill-audit` | Review | Planning | Audits workspace skills against quality standards. |
+| `instructions-audit` | Review | Planning | Runs a deep, report-only audit of instruction files for duplication, conflicts, and boundary alignment with agents and skills. |
 | `security-research` | Review | Planning | Produces security assessment output without implementation. |
 | `performance-research` | Review | Planning | Produces performance assessment output without implementation. |
 

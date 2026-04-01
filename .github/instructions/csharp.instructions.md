@@ -78,23 +78,11 @@ All guards occur at method entry; no partial state mutation before validation co
 ## Data Access
 Syrx-only repositories; no EF Core or other ORMs.
 
-### Repository Placement and Contracts
-- Keep all repository interfaces and implementations in namespaces ending with `.Repositories`.
-- Keep repository interfaces and implementations in `.Repositories` assemblies.
-- Every repository implementation must implement a repository interface.
-- Keep each repository interface and its concrete implementation in the same namespace.
-- Do not perform direct data access outside repository types.
+Detailed repository placement, model contracts, command patterns, and mapping guidance are canonical in `syrx.instructions.md`.
 
 ### Dependency Rules
 - Do not introduce EF Core, FluentValidation, or alternate ORM abstractions.
 - Keep abstractions minimal and justified by testing, boundaries, or external dependencies.
-
-### Repository Pattern (Syrx-Only) Guidance
-- One repository per aggregate root boundary.
-- Avoid generic catch-all repository abstractions.
-- Centralize SQL fragments via `CommandStrings`; ensure parameter tokens not interpolated.
-- Transactions orchestrated at service/application layer; repositories remain atomic.
-- Map multi-result sets via structured tuples — keep mapping pure.
 
 ## Testing Interface Guidance
 Interfaces required for external dependencies & test seams; avoid redundant abstractions around already abstract frameworks.

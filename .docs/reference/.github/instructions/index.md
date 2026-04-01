@@ -7,10 +7,10 @@ Mirrored directory landing page for source path /.github/instructions.
 - None
 
 ## Files
-- [architecture-ddd-and-domain.instructions.md](./architecture-ddd-and-domain.instructions.md.ref.md)
+- [architecture.instructions.md](./architecture.instructions.md.ref.md)
 - [async-programming.instructions.md](./async-programming.instructions.md.ref.md)
-- [csharp-development-and-standards.instructions.md](./csharp-development-and-standards.instructions.md.ref.md)
-- [data-access-and-syrx.instructions.md](./data-access-and-syrx.instructions.md.ref.md)
+- [csharp.instructions.md](./csharp.instructions.md.ref.md)
+- [syrx.instructions.md](./syrx.instructions.md.ref.md)
 - [documentation-and-specifications.instructions.md](./documentation-and-specifications.instructions.md.ref.md)
 - [github-actions-ci-cd-best-practices.instructions.md](./github-actions-ci-cd-best-practices.instructions.md.ref.md)
 - [sql-dba.instructions.md](./sql-dba.instructions.md.ref.md)

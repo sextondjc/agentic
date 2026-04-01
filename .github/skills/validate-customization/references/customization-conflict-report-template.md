@@ -6,7 +6,7 @@
 - Conflict ID: CON-CUSTOM-YYYYMMDD-001
 - Artifact A: <artifact-a>
 - Artifact B: <artifact-b>
-- Reported By: customization-review
+- Reported By: validate-customization
 
 ## Conflict Description
 

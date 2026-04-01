@@ -32,6 +32,7 @@
 | SKR-S1 | Pass/Advisory | <evidence> | <notes> |
 | SKR-S2 | Pass/Advisory/Blocked | <evidence> | <notes> |
 | SKR-S3 | Pass/Advisory | <evidence> | <notes> |
+| SKR-S4 | Pass/Advisory | <evidence> | <notes> |
 
 ## Recommendations
 

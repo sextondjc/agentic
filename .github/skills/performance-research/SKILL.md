@@ -71,7 +71,7 @@ Use these when they improve the quality of the assessment:
 
 - `task-research` for broad evidence gathering
 - `critical-thinking` to challenge assumptions and avoid cargo-cult tuning
-- `dotnet-modernization` for obsolete API or legacy-pattern performance context
+- `dotnet-refactor` for obsolete API or legacy-pattern performance context
 - `api-design` for external integration latency and retry behavior
 - `syrx-data-access` for query-shape, paging, and explicit SQL review
 - `adr-generator` when the recommended remediation should become an ADR

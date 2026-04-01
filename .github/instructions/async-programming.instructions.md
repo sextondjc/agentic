@@ -5,15 +5,27 @@ applyTo: '**/*.cs'
 ---
 # Async Programming Guidelines
 
-## Method Signatures
-Suffix Async; return `Task`/`Task<T>`; consider `ValueTask` only after profiling.
+## Scope
+This file defines advanced async and concurrency policy. Baseline async conventions (method suffixes, cancellation, and blocking prohibitions) are canonical in `csharp.instructions.md`.
 
-## Cancellation
-Accept & propagate `CancellationToken`.
+## Concurrency Patterns
+- Prefer `Task.WhenAll` for independent I/O operations when failure semantics are acceptable.
+- Use bounded concurrency (`SemaphoreSlim` or channel-based worker limits) for high-fanout workloads.
+- Avoid unbounded task creation in loops over external inputs.
 
-## Pitfalls
-No `.Result`/`.Wait()`; no fire-and-forget; avoid unobserved tasks.
+## Fire-and-Forget Policy
+- Fire-and-forget tasks are disallowed unless explicitly supervised by a managed background service.
+- Any detached task execution requires structured exception handling and observable lifecycle signaling.
 
-## Performance
-Batch parallel tasks with `Task.WhenAll`; prefer streaming with `IAsyncEnumerable<T>` for large sequences.
+## ValueTask Policy
+- Consider `ValueTask` only after measured allocation or throughput evidence.
+- Document benchmark evidence in ADR or change notes before broad `Task` to `ValueTask` migration.
+- Do not expose `ValueTask` in APIs where consumers are likely to await multiple times.
+
+## Streaming and Backpressure
+- Prefer `IAsyncEnumerable<T>` for large result streaming when consumer-side backpressure is required.
+- Ensure cancellation is honored during async enumeration.
+
+## Verification
+- Validate concurrency changes with repeatable tests that cover cancellation, timeout, and exception propagation.
 

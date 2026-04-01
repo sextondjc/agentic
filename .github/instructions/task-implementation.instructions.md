@@ -1,94 +1,38 @@
----
-name: task-plan-implementation-instructions
+name: task-implementation
 applyTo: '.docs/changes/*.md'
-description: 'Instructions for implementing task plans with progressive tracking and change record - Brought to you by microsoft/edge-ai'
+description: 'Policy boundaries for executing approved plans and maintaining change traceability artifacts.'
 ---
 
 # Task Plan Implementation Instructions
 
-You will implement task plans from `.docs/plans/**`, use research from `.docs/research/**`, and track execution progress in `.docs/changes/**`.
+This instruction defines policy constraints only. Procedural execution workflows belong to skills.
 
-## Core Implementation Process
+## Scope
 
-### 1. Plan Analysis and Preparation
+- Applies to change artifacts in `.docs/changes/*.md` produced while implementing approved plans.
+- Governs traceability between plan files in `.docs/plans/**`, research notes in `.docs/research/**`, and delivered implementation artifacts.
 
-**MUST complete before starting implementation:**
-- Read the full plan file including goals, phases, tasks, and validation criteria.
-- Read the corresponding changes file completely.
-- Read any referenced research and target source files before modifying code.
-- Understand current project conventions before implementing work.
+## Mandatory Policy Requirements
 
-### 2. Systematic Implementation Process
+- Execution work MUST reference an originating plan identifier.
+- Change artifacts MUST record deviations from the approved plan with rationale.
+- Change artifacts MUST be updated progressively during implementation, not only at completion.
+- Quality and security standards from active instruction files remain mandatory for all implementation output.
+- Release summary sections MUST be completed only after plan phases are finished.
 
-1. Process tasks in order unless the plan explicitly marks them as parallelizable.
-2. Before each task, read the relevant plan and research context fully.
-3. Implement the task with working code that follows workspace standards.
-4. Update the plan and changes file immediately after each completed task.
-5. If implementation diverges from the plan, record the reason in the changes file.
+## Workflow Ownership
 
-### 3. Implementation Quality Standards
+- Use skill workflows for execution procedure details:
+   - `task-execution` for same-session execution with task-level orchestration.
+   - `executing-plans` for dedicated-session execution and checkpointed handoff.
 
-**Every implementation MUST:**
-- Follow workspace conventions and canonical instruction files.
-- Implement complete, working functionality.
-- Include validation, tests, and safe error handling when required by the task.
-- Keep changes small, focused, and traceable.
-
-### 4. Continuous Progress and Validation
-
-**After implementing each task:**
-1. Validate the result against the task requirements.
-2. Fix issues before moving to the next task.
-3. Mark the plan task complete.
-4. Update the changes file with Added, Modified, or Removed entries.
-5. Continue to the next unchecked task.
-
-Continue until all tasks are complete and the plan's success criteria are verified.
-
-### 6. Completion and Documentation
-
-**Implementation is complete when:**
-- All plan tasks are complete.
-- All required files are updated with working code.
-- All success criteria are verified.
-- The changes file accurately records the work.
-
-**Final step - update changes file with release summary:**
-- Add a release summary only after all phases are complete.
-- Document the final file inventory and notable deviations.
-
-### 7. Problem Resolution
-
-**When encountering implementation issues:**
-- Document the problem clearly.
-- Try alternative approaches grounded in workspace patterns.
-- Continue when the intent is clear; record unresolved issues when you cannot complete them safely.
-
-## Implementation Workflow
-
-```
-1. Read the complete plan file
-2. Read the complete changes file
-3. For each unchecked task:
-   a. Read referenced research and target files
-   b. Implement task with working code
-   c. Validate the implementation
-   d. Mark task complete in the plan
-   e. Update the changes file
-   f. Record any deviations and reasons
-4. Repeat until all tasks complete
-5. Add final release summary after all phases are complete
-```
+- This instruction does not define step-by-step task execution flows.
 
 ## Success Criteria
 
-Implementation is complete when:
-- ✅ All plan tasks are marked complete `[x]`
-- ✅ All specified files contain working code
-- ✅ Code follows workspace patterns and conventions
-- ✅ All functionality works as expected within the project
-- ✅ Changes file is updated after every task completion with Added, Modified, or Removed entries
-- ✅ Changes file documents all phases with detailed release-ready documentation and final release summary
+- ✅ Change artifacts preserve plan linkage and deviation traceability.
+- ✅ Progressive updates are present across the implementation lifecycle.
+- ✅ Final release summary is present after completion.
 
 ## Template Changes File
 

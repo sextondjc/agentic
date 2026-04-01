@@ -97,7 +97,7 @@ Identify dependencies and groupings:
 - Example: `planning-research` vs. `orchestrator` — which is the default for ambiguous requests?
 
 **Which skills should always be mentioned together?**
-- Example: `test-driven-development` + `requesting-code-review` + `receiving-code-review` form a review workflow
+- Example: `test-driven-development` + `request-review` + `apply-review` form a review workflow
 
 **Are there any skill/agent pairs that naturally execute together?**
 - Example: `critical-thinking` often pairs with `architecture` for complex design decisions

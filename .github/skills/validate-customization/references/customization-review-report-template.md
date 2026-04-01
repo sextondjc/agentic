@@ -3,7 +3,7 @@
 ## Metadata
 
 - Review Date: YYYY-MM-DD
-- Reviewer Skill: customization-review
+- Reviewer Skill: validate-customization
 - Target Artifact: <file-name>
 - Target Path: <path-to-file>
 - Artifact Type: Instruction File | Agent File

@@ -1,9 +1,12 @@
 ---
 name: technical-docs
 description: 'Unified documentation, component, README, and specification generation standards.'
-applyTo: '**/*.md'
+applyTo: '.docs/reference/**/*.md,.docs/components/**/*.md,README.md,**/README.md'
 ---
 # Documentation & Specifications
+
+## Scope
+Applies to technical reference and README-style documentation. PRD/specification artifacts are governed by `prd.instructions.md`.
 
 ## Core Types
 - README blueprint

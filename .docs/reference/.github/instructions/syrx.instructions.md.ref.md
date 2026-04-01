@@ -1,13 +1,13 @@
-﻿# Reference: .github/instructions/architecture-ddd-and-domain.instructions.md
+# Reference: .github/instructions/syrx.instructions.md
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/instructions/architecture-ddd-and-domain.instructions.md
-- Documented page: /.docs/reference/.github/instructions/architecture-ddd-and-domain.instructions.md.ref.md
+- Path: /.github/instructions/syrx.instructions.md
+- Documented page: /.docs/reference/.github/instructions/syrx.instructions.md.ref.md
 - File type: Markdown
-- Line count: 286
+- Line count: 336
 
 ## Package/Namespace/Module
 Not observed in code.
@@ -18,7 +18,7 @@ Not observed in code.
 ## Parameters
 | Name | Value |
 |---|---|
-| Frontmatter name | architecture-ddd-and-domain |
+| Frontmatter name | data-access-and-syrx |
 | Frontmatter applyTo | **/*.cs |
 
 ## Return Value
@@ -28,17 +28,17 @@ Not observed in code.
 Not observed in code.
 
 ## Remarks
-- Primary heading: Architecture, DDD & Domain Guidelines
-- Frontmatter description: Consolidated DDD, SOLID, and .NET architecture guidance for lean application development.
+- Primary heading: Data Access & Syrx Instructions
+- Frontmatter description: Definitive Syrx 2.4.1 repository and SQL Server usage instructions.
 - Secondary headings:
-- Pre-Implementation Analysis
-- Aggregates & Entities
-- Domain Events
-- Repositories
-- Decision Records
-- Anti-Corruption Layer (ACL)
-- Pattern Selection Matrix
-- Review Checklist (Architecture PR)
+- Mandatory Pattern
+- CommandStrings
+- Guard & Null Safety
+- Performance
+- Testing
+- Transactions
+- Installer Pattern
+- Mapping DTOs
 
 ## Thread Safety and Concurrency Notes
 Not observed in code.

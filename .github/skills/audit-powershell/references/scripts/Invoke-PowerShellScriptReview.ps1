@@ -14,7 +14,7 @@ param(
 
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$ReportBaseName = 'powershell-script-review',
+    [string]$ReportBaseName = 'audit-powershell',
 
     [Parameter()]
     [datetime]$ReviewDate = (Get-Date),
@@ -40,7 +40,7 @@ if (-not (Test-Path -Path $RootPath -PathType Container)) {
 }
 
 if ([string]::IsNullOrWhiteSpace($ReportDirectory)) {
-    $ReportDirectory = Join-Path -Path $RootPath -ChildPath '.docs/changes/powershell-script-reviews'
+    $ReportDirectory = Join-Path -Path $RootPath -ChildPath '.docs/changes/audit-powershell-reviews'
 }
 
 $severityRank = @{

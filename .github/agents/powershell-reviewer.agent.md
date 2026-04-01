@@ -25,7 +25,7 @@ All standards are in the workspace instruction files. The active files for this 
 
 - `powershell.instructions.md`
 - `security-and-secure-coding.instructions.md`
-- `planning-execution-review-governance.instructions.md`
+- `lifecycle-governance.instructions.md`
 
 ## Hard Constraints
 
@@ -37,6 +37,6 @@ All standards are in the workspace instruction files. The active files for this 
 
 ## Preferred Companion Skills
 
-- `powershell-script-review` for repeatable workspace script audits and recommendation patterns
+- `audit-powershell` for repeatable workspace script audits and recommendation patterns
 - `skill-review` when reviewing the quality of PowerShell-related skills
 - `critical-thinking` for trade-off analysis when remediation options conflict

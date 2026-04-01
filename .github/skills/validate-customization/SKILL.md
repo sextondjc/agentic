@@ -11,6 +11,11 @@ Evaluate `.instructions.md` and `.agent.md` files against defined quality standa
 
 This skill has one purpose: customization quality review and follow-up governance.
 
+## Review Mode
+
+- Default mode is report-only.
+- Do not modify customization artifacts during review unless the user explicitly asks for remediation edits.
+
 ## Normative Language
 
 - MUST: Mandatory requirement. Failure means the reviewed artifact fails.
@@ -28,6 +33,7 @@ This skill has one purpose: customization quality review and follow-up governanc
 | INR-M4 | No task workflow content | MUST | No multi-step decision trees or procedures. Policy mandates only. | Mark failed; recommend migrating workflow to a skill. |
 | INR-S1 | No conflict with other instruction files | SHOULD NOT conflict | No harmful overlap or contradictory rules with other active instruction files. | Start conflict workflow; document resolution plan. |
 | INR-S2 | Rationale present for non-obvious rules | SHOULD | Non-obvious mandates include a brief rationale comment. | Record advisory finding; recommend rationale addition. |
+| INR-S3 | No conflict with agent or skill boundaries | SHOULD NOT conflict | Instruction behavior does not contradict active agent personas or skill boundaries. | Start conflict workflow; document boundary resolution options. |
 
 ## Review Standards — Agent Files
 
@@ -51,6 +57,7 @@ Invoke this skill when any of the following is true:
 - A periodic quality audit of customizations is requested.
 - An instruction or agent fails discovery, invocation, or behavior expectations.
 - Two customization artifacts appear to overlap or contradict each other.
+- A deep review of `*.instructions.md` files is requested for duplicates, contradictions, or boundary conflicts with agents and skills.
 
 ## Inputs
 
@@ -76,9 +83,13 @@ Optional:
 2. Determine artifact type: instruction file or agent file.
 3. Apply the applicable INR-M* / INR-S* or AGR-M* / AGR-S* standards with evidence.
 4. Evaluate each standard against the file content; record pass, fail, or advisory outcome.
-5. If conflict is detected:
+5. For instruction-focused audits, perform cross-artifact checks:
+   - detect duplicate and conflicting instruction guidance,
+   - verify alignment with active agent personas,
+   - verify alignment with active skill boundaries.
+6. If conflict is detected:
    - Document conflict using the conflict report template.
    - Recommend one or more concrete resolution options.
    - Work with the user to choose and confirm the resolution.
-6. Produce the review report and store it at the required path.
-7. Route any required fixes to `customization-authoring`.
+7. Produce the review report and store it at the required path.
+8. Route any required fixes to `customization-authoring`.

@@ -35,6 +35,15 @@ applyTo: '.github/**/*.md'
 - Execution must produce concrete artifacts, not planning-only narrative.
 - Execution scope changes must be recorded as explicit decisions before implementation divergence.
 
+## Execution Route Matrix
+
+| Situation | Preferred Skill | Lane Rationale |
+|---|---|---|
+| No approved implementation plan exists | `writing-plans` | Planning produces executable, traceable work items before execution starts |
+| Approved plan exists and execution stays in current session | `task-execution` | Execution lane favors same-session, task-level orchestration |
+| Approved plan exists and execution occurs in a separate or dedicated session | `executing-plans` | Execution lane favors explicit handoff and checkpointed progress |
+| Mixed request includes planning and implementation | `orchestrator` split into phases | Preserve lane boundaries and deterministic ownership |
+
 ## Review Output Requirements
 
 - Review outputs must evaluate artifacts against active instruction files and acceptance criteria.

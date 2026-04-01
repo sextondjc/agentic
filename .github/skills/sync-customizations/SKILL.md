@@ -12,7 +12,7 @@ Maintain quality of `.instructions.md` and `.agent.md` files over time by contin
 ## Required Companion Skills
 
 - REQUIRED SUB-SKILL: Use `customization-authoring` when creating or editing any customization content identified by this skill.
-- REQUIRED SUB-SKILL: Use `customization-review` after updates to confirm the resulting artifacts still pass quality standards.
+- REQUIRED SUB-SKILL: Use `validate-customization` after updates to confirm the resulting artifacts still pass quality standards.
 
 ## Inputs
 
@@ -47,7 +47,7 @@ Optional:
 4. Record concrete deltas that affect workspace instruction or agent files.
 5. For each affected artifact, assess against the evaluation criteria below.
 6. Route content changes to `customization-authoring`.
-7. Route post-update validation to `customization-review`.
+7. Route post-update validation to `validate-customization`.
 8. Publish a short maintenance summary in `.docs/changes/customization-maintenance/` with the date and impacted artifacts.
 
 ## Evaluation Criteria
@@ -77,7 +77,7 @@ Apply all checks for each instruction or agent file:
 - Updated [Source Catalog](./references/source-catalog.md).
 - Optional source evaluation artifact using [Source Evaluation Template](./references/source-evaluation-template.md).
 - A concrete change list for `customization-authoring`.
-- A review request for `customization-review` when updates were made.
+- A review request for `validate-customization` when updates were made.
 
 ## Done Criteria
 
@@ -86,4 +86,4 @@ This skill is complete for a run only when:
 - Every in-use source has an updated Last Evaluated date.
 - Any stale source is marked Needs Review or Deprecated.
 - All affected artifacts were routed to `customization-authoring`.
-- Post-update validation was routed to `customization-review`.
+- Post-update validation was routed to `validate-customization`.

@@ -1,13 +1,13 @@
-﻿# Reference: .github/skills/dotnet-modernization/SKILL.md
+# Reference: .github/instructions/architecture.instructions.md
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/skills/dotnet-modernization/SKILL.md
-- Documented page: /.docs/reference/.github/skills/dotnet-modernization/SKILL.md.ref.md
+- Path: /.github/instructions/architecture.instructions.md
+- Documented page: /.docs/reference/.github/instructions/architecture.instructions.md.ref.md
 - File type: Markdown
-- Line count: 28
+- Line count: 286
 
 ## Package/Namespace/Module
 Not observed in code.
@@ -18,8 +18,8 @@ Not observed in code.
 ## Parameters
 | Name | Value |
 |---|---|
-| Frontmatter name | dotnet-modernization |
-| Frontmatter applyTo | Not observed in code |
+| Frontmatter name | architecture-ddd-and-domain |
+| Frontmatter applyTo | **/*.cs |
 
 ## Return Value
 Not observed in code.
@@ -28,12 +28,17 @@ Not observed in code.
 Not observed in code.
 
 ## Remarks
-- Primary heading: .NET Modernization Skill
-- Frontmatter description: >
+- Primary heading: Architecture, DDD & Domain Guidelines
+- Frontmatter description: Consolidated DDD, SOLID, and .NET architecture guidance for lean application development.
 - Secondary headings:
-- Scope
-- Rules
-- Typical Tasks
+- Pre-Implementation Analysis
+- Aggregates & Entities
+- Domain Events
+- Repositories
+- Decision Records
+- Anti-Corruption Layer (ACL)
+- Pattern Selection Matrix
+- Review Checklist (Architecture PR)
 
 ## Thread Safety and Concurrency Notes
 Not observed in code.
@@ -51,6 +56,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../../index.md)
-- [Coverage Report](../../../coverage-report.md)
-- [Code Structure](../../../code-structure.md)
+- [Workspace Reference Home](../../index.md)
+- [Coverage Report](../../coverage-report.md)
+- [Code Structure](../../code-structure.md)

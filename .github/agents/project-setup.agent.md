@@ -154,7 +154,7 @@ Document which skills are high-priority, optional, or deferred. Example:
 - **api-design**: External integrations present; resilience is important.
 
 ### Deferred
-- **dotnet-modernization**: Not applicable in green-field project.
+- **dotnet-refactor**: Not applicable in green-field project.
 
 ## Guidance by Phase
 - Phase 1 (MVP): syrx-data-access, adr-generator
@@ -178,10 +178,10 @@ Outline the canonical structure and which instruction files are essential vs. op
 
 .github/
 ├── instructions/
-│   ├── csharp-development-and-standards.instructions.md (REQUIRED)
-│   ├── data-access-and-syrx.instructions.md (REQUIRED)
+│   ├── csharp.instructions.md (REQUIRED)
+│   ├── syrx.instructions.md (REQUIRED)
 │   ├── validation-and-guards.instructions.md (REQUIRED)
-│   ├── architecture-ddd-and-domain.instructions.md (REQUIRED)
+│   ├── architecture.instructions.md (REQUIRED)
 │   ├── async-programming.instructions.md (optional in Phase 1)
 │   └── security-and-secure-coding.instructions.md (REQUIRED if handling PII)
 ├── agents/
@@ -205,7 +205,7 @@ Before writing application code:
 
 - [ ] Review and update `.github/agents/project-copilot-instructions.md` with project-specific standards.
 - [ ] Confirm Syrx dependency and version in `.csproj`.
-- [ ] Review `.github/instructions/csharp-development-and-standards.instructions.md` as a team.
+- [ ] Review `.github/instructions/csharp.instructions.md` as a team.
 - [ ] Create first ADR in `.docs/adr/0001-domain-model.md` documenting core aggregates.
 - [ ] Scaffold initial repository structure in `Infrastructure/` using `syrx-data-access` skill guidance.
 - [ ] Create `.docs/plans/phase-1-implementation.md` with detailed tasks.

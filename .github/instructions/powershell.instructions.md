@@ -1,5 +1,5 @@
 ---
-name: powershell-cmdlet-development-guidelines
+name: powershell
 applyTo: '**/*.ps1,**/*.psm1'
 description: 'Consolidated PowerShell scripting and cmdlet guidance for safe, idiomatic automation.'
 ---
