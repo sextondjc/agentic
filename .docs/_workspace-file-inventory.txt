@@ -1,12 +1,12 @@
 .docs/agent-routing-guide.md
 .github/agents/architecture-and-ddd.agent.md
 .github/agents/csharp-engineering.agent.md
-.github/agents/debug.agent.md
+.github/agents/defect-debugger.agent.md
 .github/agents/ms-sql-dba.agent.md
 .github/agents/orchestrator.agent.md
-.github/agents/performance-researcher.agent.md
+.github/agents/performance-assessor.agent.md
 .github/agents/planning-and-research.agent.md
-.github/agents/project-setup.agent.md
+.github/agents/workspace-scaffolder.agent.md
 .github/agents/security-researcher.agent.md
 .github/copilot-instructions.md
 .github/instructions/architecture-ddd-and-domain.instructions.md
@@ -25,7 +25,7 @@
 .github/prompts/create-oo-component-documentation.prompt.md
 .github/prompts/technical-documentation-review.prompt.md
 .github/prompts/performance-research.prompt.md
-.github/prompts/project-setup.prompt.md
+.github/prompts/workspace-scaffolder.prompt.md
 .github/prompts/readme-generation.prompt.md
 .github/prompts/security-research.prompt.md
 .github/prompts/syrx-validation.prompt.md
@@ -47,3 +47,6 @@
 .github/skills/syrx-data-access/SKILL.md
 .github/skills/task-research/references/research-template.md
 .github/skills/task-research/SKILL.md
+
+
+

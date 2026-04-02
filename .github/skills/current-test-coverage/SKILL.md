@@ -29,7 +29,7 @@ Apply these skills as part of this workflow:
 - `delivery-status-grid`
 - `task-execution`
 - `critical-thinking`
-- `request-review`
+- `request-code-review`
 
 ## Built-In First Rule
 

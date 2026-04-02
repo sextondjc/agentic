@@ -6,7 +6,7 @@ This catalog assigns each prompt to a primary lifecycle lane.
 
 | Prompt | Primary Lane | Secondary Lane | Rationale |
 |---|---|---|---|
-| `project-setup` | Execution | Planning | Produces workspace scaffolding and concrete setup artifacts. |
+| `workspace-scaffolder` | Execution | Planning | Produces workspace scaffolding and concrete setup artifacts. |
 | `write-component-docs` | Execution | Review | Produces technical component documentation artifacts. |
 | `curate-copilot` | Execution | Planning | Discovers imported customizations and updates copilot-instructions.md to reflect available agents, skills, and instructions. |
 | `generate-readme` | Execution | Review | Produces consolidated repository README output. |
@@ -15,6 +15,7 @@ This catalog assigns each prompt to a primary lifecycle lane.
 | `review-technical-docs` | Review | Execution | Evaluates and remediates technical docs quality and completeness. |
 | `skill-audit` | Review | Planning | Audits workspace skills against quality standards. |
 | `instructions-audit` | Review | Planning | Runs a deep, report-only audit of instruction files for duplication, conflicts, and boundary alignment with agents and skills. |
+| `governance-cadence` | Review | Planning | Runs a monthly governance health check across all assets and catalogs and produces a ranked remediation report. |
 | `security-research` | Review | Planning | Produces security assessment output without implementation. |
 | `performance-research` | Review | Planning | Produces performance assessment output without implementation. |
 

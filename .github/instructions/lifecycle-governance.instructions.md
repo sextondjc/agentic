@@ -1,7 +1,7 @@
 ---
 name: lifecycle-governance
 description: 'Defines mandatory Planning, Execution, and Review lane classification and traceable handoff requirements for customization artifacts.'
-applyTo: '.github/**/*.md'
+applyTo: '**/*.md'
 ---
 # Planning, Execution, Review Governance
 

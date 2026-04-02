@@ -20,9 +20,9 @@
 | adr-generator | Pass | 0 | 0 | None | .docs/changes/skill-reviews/adr-generator/20260329-review.md |
 | agent-customization | Pass | 0 | 0 | None | .docs/changes/skill-reviews/agent-customization/20260329-review.md |
 | api-design | Pass | 0 | 0 | None | .docs/changes/skill-reviews/api-design/20260329-review.md |
-| apply-review | Pass | 0 | 0 | None | .docs/changes/skill-reviews/apply-review/20260329-review.md |
+| remediate-review | Pass | 0 | 0 | None | .docs/changes/skill-reviews/remediate-review/20260329-review.md |
 | audit-powershell | Pass | 0 | 0 | None | .docs/changes/skill-reviews/audit-powershell/20260329-review.md |
-| complete-branch | Pass | 0 | 0 | None | .docs/changes/skill-reviews/complete-branch/20260329-review.md |
+| branch-completion | Pass | 0 | 0 | None | .docs/changes/skill-reviews/branch-completion/20260329-review.md |
 | critical-thinking | Pass | 0 | 0 | None | .docs/changes/skill-reviews/critical-thinking/20260329-review.md |
 | curating-copilot-instructions | Pass | 0 | 0 | None | .docs/changes/skill-reviews/curating-copilot-instructions/20260329-review.md |
 | customization-authoring | Pass | 0 | 0 | None | .docs/changes/skill-reviews/customization-authoring/20260329-review.md |
@@ -32,7 +32,7 @@
 | perf-benchmark | Pass | 0 | 0 | None | .docs/changes/skill-reviews/perf-benchmark/20260329-review.md |
 | performance-research | Pass | 0 | 0 | None | .docs/changes/skill-reviews/performance-research/20260329-review.md |
 | prd-generator | Pass | 0 | 0 | None | .docs/changes/skill-reviews/prd-generator/20260329-review.md |
-| request-review | Pass | 0 | 0 | None | .docs/changes/skill-reviews/request-review/20260329-review.md |
+| request-code-review | Pass | 0 | 0 | None | .docs/changes/skill-reviews/request-code-review/20260329-review.md |
 | route-customization | Pass | 0 | 0 | None | .docs/changes/skill-reviews/route-customization/20260329-review.md |
 | security-research | Pass | 0 | 0 | None | .docs/changes/skill-reviews/security-research/20260329-review.md |
 | skill-review | Pass | 0 | 0 | None | .docs/changes/skill-reviews/skill-review/20260329-review.md |

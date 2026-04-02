@@ -30,9 +30,9 @@ If required input is missing, ask focused questions before writing.
 Use these collaborators intentionally:
 
 - `orchestrator` for phase routing, boundary control, and parallel sub-task fan-out.
-- `planning-research` for inventory, evidence gathering, and phased plan creation.
+- `plan-researcher` for inventory, evidence gathering, and phased plan creation.
 - `Explore` for fast parallel codebase analysis by path segment.
-- `architecture` for domain boundaries, aggregate context, and ADR-aware rationale.
+- `architecture-designer` for domain boundaries, aggregate context, and ADR-aware rationale.
 - `csharp-engineer` for detailed API/member interpretation in .NET projects.
 - `task-research` skill for deep evidence collection and source-backed findings.
 - `critical-thinking` skill for ambiguity pressure tests before publication.
@@ -161,3 +161,5 @@ Documentation work is complete only when:
 - Internal links resolve to existing docs.
 - No unresolved evidence gaps remain without explicit note.
 - [`Get-DocumentationMetrics.ps1`](./Get-DocumentationMetrics.ps1) passes at the configured minimum score (default: 80; CI enforces 85).
+
+

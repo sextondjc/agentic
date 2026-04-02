@@ -47,7 +47,7 @@ Validation: all 49 files have evidence cards; unresolved unknowns are explicitly
   - Generate index.md at each mirrored directory path in the file map section.
 - TASK-009: Create or update file-level reference pages.
   - Mapping rule: <source-path> -> .docs/reference/<source-path>.ref.md
-  - Example: .github/agents/debug.agent.md -> .docs/reference/.github/agents/debug.agent.md.ref.md
+  - Example: .github/agents/defect-debugger.agent.md -> .docs/reference/.github/agents/defect-debugger.agent.md.ref.md
 - TASK-010: Enforce evidence-only writing gate.
   - Unknown behavior text must use Not observed in code.
 Validation: each planned page is present and contains source-backed content or explicit unknowns.
@@ -179,3 +179,4 @@ Pass criteria:
 PLAN SUMMARY: Inventory-first technical reference documentation generation for 49 files.
 Total Phases: 5 | Total Tasks: 17 | Risks: 4 (High: 1)
 Next Action: Execute Phase 1 tasks and generate the normalized inventory manifest for doc production.
+

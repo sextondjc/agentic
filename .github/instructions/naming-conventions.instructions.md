@@ -31,8 +31,8 @@ Skills are reusable workflows—think of them as capabilities you invoke.
 - `audit-powershell` ← What you do (audit) + domain (PowerShell)
 - `write-technical-docs` ← What you do (write) + domain (technical docs)
 - `sync-skills` ← What you do (sync) + domain (skills)
-- `apply-review` ← What you do (apply) + domain (review)
-- `complete-branch` ← What you do (complete) + domain (branch)
+- `remediate-review` ← What you do (apply) + domain (review)
+- `branch-completion` ← What you do (complete) + domain (branch)
 
 **Noun Pattern (acceptable for tools/generators):**
 - `adr-generator` ← artifact type (ADR) + noun (generator)
@@ -89,16 +89,16 @@ Agents are specialist roles invoked explicitly by name. They apply deep expertis
 - `code-reviewer` ← Review specialist
 - `powershell-reviewer` ← Review specialist
 - `security-researcher` ← Research specialist
-- `architecture` ← Unified specialist (compound domain acceptable when singular purpose)
+- `architecture-designer` ← Unified specialist (compound domain acceptable when singular purpose)
 
 **Modern examples:**
 - `orchestrator` ← Router/dispatcher (no domain needed; meta-level)
-- `debug` ← Single-word imperative (ultra-specific task)
+- `defect-debugger` ← Single-word imperative (ultra-specific task)
 - `sql-dba` ← Database specialist (DBA understood in context)
 
 **Anti-patterns:**
 - ❌ `benchmark-researcher` (too long, 35 chars; consider `perf-researcher`)
-- ❌ `planning-research` (too generic; reassess scope)
+- ❌ `plan-researcher` (too generic; reassess scope)
 
 **Length guide:** Most agents 12–25 characters.
 
@@ -171,7 +171,7 @@ When consolidating existing assets:
 | Skill | `keeping-customizations-current` | `sync-customizations` | Gerund → action verb; 29 → 20 chars |
 | Instruction | `architecture-ddd-and-domain.instructions.md` | `architecture.instructions.md` | Removes redundancy; 35 chars → 22 chars |
 | Instruction | `csharp-development-and-standards.instructions.md` | `csharp.instructions.md` | "Development" implied by "standards"; 42 → 16 chars |
-| Skill | `finishing-a-development-branch` | `complete-branch` | Wordy → concise action; 29 → 15 chars |
+| Skill | `finishing-a-development-branch` | `branch-completion` | Wordy → concise action; 29 → 15 chars |
 | Skill | `subagent-driven-development` | `task-execution` | Vague → clear intent; 26 → 14 chars |
 
 ---
@@ -182,3 +182,7 @@ When consolidating existing assets:
 - Instruction catalog: [.github/instructions/README.md](./README.md)
 - Agent catalog: [.github/agents/README.md](../agents/README.md)
 - Lifecycle governance: `lifecycle-governance.instructions.md`
+
+
+
+

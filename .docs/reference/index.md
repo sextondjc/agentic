@@ -6,6 +6,8 @@ Workspace reference set generated in review mode from a baseline snapshot of 49 
 ## Core Pages
 - [Code Structure](./code-structure.md)
 - [Coverage Report](./coverage-report.md)
+- [Customization Taxonomy v1](./customization-taxonomy-v1.md)
+- [Agent and Skill Routing Guide](../agent-routing-guide.md)
 
 ## Top-Level Areas
 - [.docs](./.docs/index.md)

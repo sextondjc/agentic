@@ -76,7 +76,7 @@ Use these when they improve the quality of the assessment:
 - `syrx-data-access` for query-shape, paging, and explicit SQL review
 - `adr-generator` when the recommended remediation should become an ADR
 
-Recommended coordinating agent: `performance-researcher`
+Recommended coordinating agent: `performance-assessor`
 
 If the task becomes multi-phase or ambiguous, route through `orchestrator`.
 

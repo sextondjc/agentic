@@ -43,7 +43,7 @@ Identify all available customizations in the workspace:
 Decide what belongs in `copilot-instructions.md`:
 
 **Always Include:**
-- Core routing agents (e.g., `orchestrator`, `csharp-engineer`, `planning-research`)
+- Core routing agents (e.g., `orchestrator`, `csharp-engineer`, `plan-researcher`)
 - Essential workflow skills (e.g., domain-specific, TDD, code review)
 - Critical instructions (security, testing, style)
 
@@ -148,7 +148,7 @@ For workspaces that pull regularly from this catalogue:
 ## Recently Imported Customizations
 
 - **Skill:** `task-research` (v2.1) - Deep investigation methodology for complex requirements
-- **Prompt:** `project-setup.prompt.md` - Guided new-project scaffolding workflow
+- **Prompt:** `workspace-scaffolder.prompt.md` - Guided new-project scaffolding workflow
 - **Instruction:** `validation-and-guards.instructions.md` - Syrx guard standardization
 ```
 
@@ -172,7 +172,7 @@ For workspaces that pull regularly from this catalogue:
 This skill pairs naturally with:
 - **`skills-authoring`** — Authoring new skills that should be documented in copilot-instructions
 - **`customization-authoring`** — Creating agents/instructions that need referencing
-- **`project-setup`** — When initializing a new workspace from catalogue
+- **`workspace-scaffolder`** — When initializing a new workspace from catalogue
 - **`keeping-customizations-current`** — When maintaining import relationships over time
 
 ---
@@ -182,3 +182,5 @@ This skill pairs naturally with:
 - [`.github/copilot-instructions.md` canonical template](../../copilot-instructions.md)
 - [Skills discovery index](../README.md)
 - [Customization governance](../../../.docs/reference/planning-execution-review-governance.md)
+
+

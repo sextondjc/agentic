@@ -9,7 +9,7 @@
 | Sources Evaluated | 4 |
 | Sources Updated | 4 |
 | Skills Updated | 1 (skills-authoring) |
-| New Skills Registered | 2 (delivery-status-grid, complete-branch) |
+| New Skills Registered | 2 (delivery-status-grid, branch-completion) |
 | Post-Update Review Outcome | All Pass |
 
 ## Source Evaluation Results
@@ -40,7 +40,7 @@ Added to:
 - `.github/skills/README.md` discovery index (Review / Planning lanes)
 - Skill history and index already created in the 2026-04-01 full audit.
 
-### complete-branch — Registered (index gap)
+### branch-completion — Registered (index gap)
 
 Was present in `copilot-instructions.md` but missing from `.github/skills/README.md`. Added.
 
@@ -52,4 +52,5 @@ Targeted skill-review rerun confirmed all three skills pass all MUST and SHOULD 
 |---|---:|---|
 | skills-authoring | Pass | [.docs/changes/skill-reviews/skills-authoring/20260401-review.md](../../skill-reviews/skills-authoring/20260401-review.md) |
 | delivery-status-grid | Pass | [.docs/changes/skill-reviews/delivery-status-grid/20260401-review.md](../../skill-reviews/delivery-status-grid/20260401-review.md) |
-| complete-branch | Pass | [.docs/changes/skill-reviews/complete-branch/20260401-review.md](../../skill-reviews/complete-branch/20260401-review.md) |
+| branch-completion | Pass | [.docs/changes/skill-reviews/branch-completion/20260401-review.md](../../skill-reviews/branch-completion/20260401-review.md) |
+

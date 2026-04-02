@@ -20,42 +20,42 @@ If a request spans multiple phases, break it into explicit phases and state whic
 
 | Task Type | Route To | What That Specialist Does | What It Must Not Do |
 |-----------|----------|---------------------------|----------------------|
-| Planning, research, implementation plans | `planning-research` | Research, compare options, write plans in `.docs/research` and `.docs/plans` | Implement production code unless the user explicitly changes mode |
+| Planning, research, implementation plans | `plan-researcher` | Research, compare options, write plans in `.docs/research` and `.docs/plans` | Implement production code unless the user explicitly changes mode |
 | Security vulnerability research | `security-researcher` | Investigate .NET/C# security risks and produce remediation reports in `.docs/research/security` | Implement fixes or drift into general engineering |
-| Performance bottleneck research | `performance-researcher` | Investigate .NET/C# performance risks and produce remediation reports in `.docs/research/performance/` | Implement fixes or drift into speculative optimization |
+| Performance bottleneck research | `performance-assessor` | Investigate .NET/C# performance risks and produce remediation reports in `.docs/research/performance/` | Implement fixes or drift into speculative optimization |
 | .NET implementation | `csharp-engineer` | Write and modify .NET code, tests, and targeted docs | Turn into broad planning-only analysis when implementation is clearly requested |
-| Architecture, DDD, ADRs | `architecture` | Boundary design, ADRs, aggregate analysis, refactoring guidance | Drift into general feature implementation |
-| Bug fixing and regression diagnosis | `debug` | Reproduce, isolate, fix, verify | Become a planning-only advisor |
+| Architecture, DDD, ADRs | `architecture-designer` | Boundary design, ADRs, aggregate analysis, refactoring guidance | Drift into general feature implementation |
+| Bug fixing and regression diagnosis | `defect-debugger` | Reproduce, isolate, fix, verify | Become a planning-only advisor |
 | SQL Server DBA work | `sql-dba` | Database inspection, query execution, schema analysis, operational DBA guidance | Perform general application coding |
 | Syrx repository and data-access specialization | `syrx-data-access` skill with `csharp-engineer` | Apply Syrx-specific repository, `CommandStrings`, installer, and commander patterns | Replace the primary implementation agent for non-data-access work |
 | Critical review / assumption challenge | `critical-thinking` skill | Pressure-test decisions and assumptions | Take over implementation |
 | Security research workflow | `security-research` skill with `security-researcher` | Apply the standard security investigation workflow and report template | Replace the primary research agent for mixed-scope work |
-| Performance research workflow | `performance-research` skill with `performance-researcher` | Apply the standard performance investigation workflow and report template | Replace the primary research agent for mixed-scope work |
+| Performance research workflow | `performance-research` skill with `performance-assessor` | Apply the standard performance investigation workflow and report template | Replace the primary research agent for mixed-scope work |
 | API integration design | `api-design` skill | Design resilient API clients and service integrations | Replace the primary implementation or planning agent |
-| ADR authoring | `adr-generator` skill with `architecture` | Write ADRs in `.docs/adr` | Act as the main architecture decision-maker |
+| ADR authoring | `adr-generator` skill with `architecture-designer` | Write ADRs in `.docs/adr` | Act as the main architecture decision-maker |
 | Product and PRD work | `prd-generator` skill | Create PRDs and requirements artifacts | Perform engineering implementation |
 
 ## Routing Rules
 
 ### 1. Planning vs Implementation
-- If the user asks to analyze, research, compare, plan, or produce an implementation plan, route to `planning-research`.
+- If the user asks to analyze, research, compare, plan, or produce an implementation plan, route to `plan-researcher`.
 - If the user asks for security vulnerability assessment or remediation guidance without implementation, route to `security-researcher`.
-- If the user asks for performance bottleneck assessment or optimization guidance without implementation, route to `performance-researcher`.
+- If the user asks for performance bottleneck assessment or optimization guidance without implementation, route to `performance-assessor`.
 - If the user asks to change code, fix code, add code, refactor code, or implement a feature, route to `csharp-engineer` unless the request is primarily debugging.
-- Do not let `planning-research` implement code unless the user explicitly switches from planning to implementation.
+- Do not let `plan-researcher` implement code unless the user explicitly switches from planning to implementation.
 
 ### 1a. Researcher Boundaries
-- `security-researcher` and `performance-researcher` are report-first, research-only lanes.
+- `security-researcher` and `performance-assessor` are report-first, research-only lanes.
 - They may use any workspace tools and skills, including the `security-research` and `performance-research` skills, but they must not implement the recommended remediations.
 - Their default durable output is a report in `.docs/research/security` or `.docs/research/performance` using the workspace naming convention.
 - If remediation work is requested after the report, hand off through `orchestrator` to the correct implementation or architecture specialist.
 
 ### 2. Architecture vs Implementation
-- If the request is mainly about boundaries, aggregates, patterns, domain events, or ADRs, route to `architecture`.
+- If the request is mainly about boundaries, aggregates, patterns, domain events, or ADRs, route to `architecture-designer`.
 - If architecture work results in implementation tasks, keep them separate: architecture first, implementation second.
 
 ### 3. Debugging vs Feature Work
-- If the request is to identify or fix a defect, route to `debug`.
+- If the request is to identify or fix a defect, route to `defect-debugger`.
 - If the root cause points to broader refactoring or architecture issues, call that out separately rather than silently switching modes.
 
 ### 4. Data Access Specialization
@@ -73,12 +73,12 @@ When a request contains multiple concerns, split it explicitly.
 
 Example:
 
-1. Research and plan: `planning-research`
+1. Research and plan: `plan-researcher`
 2. Security assessment: `security-researcher`
-3. Performance assessment: `performance-researcher`
-4. Architecture decision if needed: `architecture`
+3. Performance assessment: `performance-assessor`
+4. Architecture decision if needed: `architecture-designer`
 5. Implementation: `csharp-engineer`
-6. Debugging or verification: `debug`
+6. Debugging or verification: `defect-debugger`
 
 Do not skip the phase split when the distinction matters.
 
@@ -104,3 +104,5 @@ When acting as orchestrator:
 - If the request is ambiguous between planning and implementation, ask the user which phase they want first.
 - If the request mixes DBA and application coding, separate the tracks explicitly.
 - If the request is a trivial single-lane task, route directly without unnecessary ceremony.
+
+

@@ -39,8 +39,8 @@ For each task:
 ### Step 3: Complete Development
 
 After all tasks complete and verified:
-- Announce: "I'm using the complete-branch skill to complete this work."
-- **REQUIRED SUB-SKILL:** Use `complete-branch`
+- Announce: "I'm using the branch-completion skill to complete this work."
+- **REQUIRED SUB-SKILL:** Use `branch-completion`
 - Follow that skill to verify tests, present options, execute choice
 
 ## When to Stop and Ask for Help
@@ -73,4 +73,5 @@ After all tasks complete and verified:
 
 **Required workflow skills:**
 - **writing-plans** - Creates the plan this skill executes
-- **complete-branch** - Complete development after all tasks
+- **branch-completion** - Complete development after all tasks
+

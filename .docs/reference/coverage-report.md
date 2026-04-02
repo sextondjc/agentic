@@ -14,14 +14,14 @@
 | Source File | Documentation Page | Status |
 |---|---|---|
 | /.docs/agent-routing-guide.md | /.docs/reference/.docs/agent-routing-guide.md.ref.md | Created |
-| /.github/agents/architecture.agent.md | /.docs/reference/.github/agents/architecture.agent.md.ref.md | Created |
+| /.github/agents/architecture-designer.agent.md | /.docs/reference/.github/agents/architecture-designer.agent.md.ref.md | Created |
 | /.github/agents/csharp-engineer.agent.md | /.docs/reference/.github/agents/csharp-engineer.agent.md.ref.md | Created |
-| /.github/agents/debug.agent.md | /.docs/reference/.github/agents/debug.agent.md.ref.md | Created |
+| /.github/agents/defect-debugger.agent.md | /.docs/reference/.github/agents/defect-debugger.agent.md.ref.md | Created |
 | /.github/agents/sql-dba.agent.md | /.docs/reference/.github/agents/sql-dba.agent.md.ref.md | Created |
 | /.github/agents/orchestrator.agent.md | /.docs/reference/.github/agents/orchestrator.agent.md.ref.md | Created |
-| /.github/agents/performance-researcher.agent.md | /.docs/reference/.github/agents/performance-researcher.agent.md.ref.md | Created |
-| /.github/agents/planning-research.agent.md | /.docs/reference/.github/agents/planning-research.agent.md.ref.md | Created |
-| /.github/agents/project-setup.agent.md | /.docs/reference/.github/agents/project-setup.agent.md.ref.md | Created |
+| /.github/agents/performance-assessor.agent.md | /.docs/reference/.github/agents/performance-assessor.agent.md.ref.md | Created |
+| /.github/agents/plan-researcher.agent.md | /.docs/reference/.github/agents/plan-researcher.agent.md.ref.md | Created |
+| /.github/agents/workspace-scaffolder.agent.md | /.docs/reference/.github/agents/workspace-scaffolder.agent.md.ref.md | Created |
 | /.github/agents/security-researcher.agent.md | /.docs/reference/.github/agents/security-researcher.agent.md.ref.md | Created |
 | /.github/copilot-instructions.md | /.docs/reference/.github/copilot-instructions.md.ref.md | Created |
 | /.github/instructions/architecture.instructions.md | /.docs/reference/.github/instructions/architecture.instructions.md.ref.md | Created |
@@ -40,7 +40,7 @@
 | /.github/prompts/write-component-docs.prompt.md | /.docs/reference/.github/prompts/write-component-docs.prompt.md.ref.md | Created |
 | /.github/prompts/review-technical-docs.prompt.md | /.docs/reference/.github/prompts/review-technical-docs.prompt.md.ref.md | Created |
 | /.github/prompts/performance-research.prompt.md | /.docs/reference/.github/prompts/performance-research.prompt.md.ref.md | Created |
-| /.github/prompts/project-setup.prompt.md | /.docs/reference/.github/prompts/project-setup.prompt.md.ref.md | Created |
+| /.github/prompts/workspace-scaffolder.prompt.md | /.docs/reference/.github/prompts/workspace-scaffolder.prompt.md.ref.md | Created |
 | /.github/prompts/generate-readme.prompt.md | /.docs/reference/.github/prompts/generate-readme.prompt.md.ref.md | Created |
 | /.github/prompts/security-research.prompt.md | /.docs/reference/.github/prompts/security-research.prompt.md.ref.md | Created |
 | /.github/prompts/syrx-validation.prompt.md | /.docs/reference/.github/prompts/syrx-validation.prompt.md.ref.md | Created |
@@ -71,3 +71,8 @@
 
 ## Link Validation
 Passed. Internal relative-link validation completed with 0 broken links across .docs/reference markdown files.
+
+
+
+
+

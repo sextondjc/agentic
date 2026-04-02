@@ -61,7 +61,7 @@ digraph process {
     "Read plan, extract all tasks with full text, note context, create TodoWrite" [shape=box];
     "More tasks remain?" [shape=diamond];
     "Dispatch final code reviewer subagent for entire implementation" [shape=box];
-    "Use complete-branch" [shape=box style=filled fillcolor=lightgreen];
+    "Use branch-completion" [shape=box style=filled fillcolor=lightgreen];
 
     "Read plan, extract all tasks with full text, note context, create TodoWrite" -> "Dispatch implementer subagent (./implementer-prompt.md)";
     "Dispatch implementer subagent (./implementer-prompt.md)" -> "Implementer subagent asks questions?";
@@ -80,7 +80,7 @@ digraph process {
     "Mark task complete in TodoWrite" -> "More tasks remain?";
     "More tasks remain?" -> "Dispatch implementer subagent (./implementer-prompt.md)" [label="yes"];
     "More tasks remain?" -> "Dispatch final code reviewer subagent for entire implementation" [label="no"];
-    "Dispatch final code reviewer subagent for entire implementation" -> "Use complete-branch";
+    "Dispatch final code reviewer subagent for entire implementation" -> "Use branch-completion";
 }
 ```
 
@@ -266,11 +266,12 @@ Done!
 
 **Required workflow skills:**
 - **writing-plans** - Creates the plan this skill executes
-- **request-review** - Code review request workflow for reviewer subagents
-- **complete-branch** - Complete development after all tasks
+- **request-code-review** - Code review request workflow for reviewer subagents
+- **branch-completion** - Complete development after all tasks
 
 **Subagents should use:**
 - **test-driven-development** - Subagents follow TDD for each task
 
 **Alternative workflow:**
 - **executing-plans** - Use for parallel session instead of same-session execution
+

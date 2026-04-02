@@ -26,10 +26,10 @@ Route through `orchestrator` when the task crosses boundaries.
 
 Hand-offs:
 - `orchestrator` — task classification and multi-phase coordination.
-- `planning-research` — when broader option analysis or research decomposition is needed.
+- `plan-researcher` — when broader option analysis or research decomposition is needed.
 - `csharp-engineer` — recommended implementation owner after the report is complete; not before.
-- `architecture` — when remediation requires structural or boundary changes.
-- `debug` — when a suspected issue must be reproduced or isolated before it can be described.
+- `architecture-designer` — when remediation requires structural or boundary changes.
+- `defect-debugger` — when a suspected issue must be reproduced or isolated before it can be described.
 - `sql-dba` — when live SQL Server security posture or database-side vulnerabilities are in scope.
 
 ## Operating Procedure
@@ -43,3 +43,5 @@ Hand-offs:
 ## Tool Policy
 
 Use all workspace tools to stay organized and complete the assessment rigorously. Durable file changes are limited to the generated report unless the user explicitly asks you to modify customization assets.
+
+

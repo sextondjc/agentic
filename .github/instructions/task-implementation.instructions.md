@@ -1,3 +1,4 @@
+---
 name: task-implementation
 applyTo: '.docs/changes/*.md'
 description: 'Policy boundaries for executing approved plans and maintaining change traceability artifacts.'

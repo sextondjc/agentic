@@ -21,7 +21,7 @@ Use for:
 Do not use for:
 - Specialist domain execution when the lane is already obvious
 
-### `planning-research`
+### `plan-researcher`
 
 Use for:
 - Research
@@ -53,7 +53,7 @@ Do not use for:
 - General feature development
 - Architecture changes beyond recommendation and handoff
 
-### `performance-researcher`
+### `performance-assessor`
 
 Use for:
 - .NET and C# performance assessment
@@ -81,7 +81,7 @@ Do not use for:
 - Broad planning-only work
 - Architecture-only decision work when no implementation is requested
 
-### `architecture`
+### `architecture-designer`
 
 Use for:
 - DDD guidance
@@ -97,7 +97,7 @@ Do not use for:
 - General feature implementation
 - Bug fixing unless the issue is primarily architectural
 
-### `debug`
+### `defect-debugger`
 
 Use for:
 - Reproducing defects
@@ -141,7 +141,7 @@ Use for:
 - Internal and external research before planning or implementation
 
 Typical companion:
-- `planning-research`
+- `plan-researcher`
 
 ### `critical-thinking`
 
@@ -151,8 +151,8 @@ Use for:
 - Pressure-testing a design or plan
 
 Typical companion:
-- `planning-research`
-- `architecture`
+- `plan-researcher`
+- `architecture-designer`
 
 ### `security-research`
 
@@ -173,7 +173,7 @@ Use for:
 - Evidence-backed bottleneck documentation without implementation
 
 Typical companion:
-- `performance-researcher`
+- `performance-assessor`
 - `orchestrator`
 
 ### `api-design`
@@ -185,7 +185,7 @@ Use for:
 
 Typical companion:
 - `csharp-engineer`
-- `planning-research`
+- `plan-researcher`
 
 ### `adr-generator`
 
@@ -193,7 +193,7 @@ Use for:
 - Writing ADRs after an architectural decision is made
 
 Typical companion:
-- `architecture`
+- `architecture-designer`
 
 ### `dotnet-modernization`
 
@@ -220,9 +220,9 @@ Do not use for:
 
 ### Planning vs implementation
 
-- If the user asks to analyze, compare, explore, or plan, start with `planning-research`.
+- If the user asks to analyze, compare, explore, or plan, start with `plan-researcher`.
 - If the user asks for a vulnerability assessment and wants a report rather than code changes, use `security-researcher`.
-- If the user asks for a performance assessment and wants a report rather than code changes, use `performance-researcher`.
+- If the user asks for a performance assessment and wants a report rather than code changes, use `performance-assessor`.
 - If the user asks to modify code, implement features, or refactor, use `csharp-engineer`.
 - Do not let planning silently become implementation.
 
@@ -234,12 +234,12 @@ Do not use for:
 
 ### Architecture vs implementation
 
-- If the main question is about boundaries, aggregates, DDD, or ADRs, use `architecture` first.
+- If the main question is about boundaries, aggregates, DDD, or ADRs, use `architecture-designer` first.
 - If code changes follow, treat implementation as a separate phase.
 
 ### Debugging vs feature work
 
-- If the task is to find or fix a defect, use `debug`.
+- If the task is to find or fix a defect, use `defect-debugger`.
 - If broader refactoring is required after the defect is understood, explicitly hand off to `csharp-engineer`.
 
 ### DBA vs application work
@@ -267,7 +267,7 @@ Request: "Research options for introducing a new payments module and give me a p
 
 Route:
 1. `orchestrator`
-2. `planning-research`
+2. `plan-researcher`
 3. Optional `critical-thinking` if trade-offs need pressure-testing
 
 ### Example 2
@@ -286,7 +286,7 @@ Request: "Find the likely performance bottlenecks in this C# worker and write th
 
 Route:
 1. `orchestrator`
-2. `performance-researcher`
+2. `performance-assessor`
 3. `performance-research` skill
 4. Optional `task-research`, `dotnet-modernization`, or `syrx-data-access` skills
 
@@ -305,7 +305,7 @@ Request: "Create an ADR for how we split order and payment aggregates."
 
 Route:
 1. `orchestrator`
-2. `architecture`
+2. `architecture-designer`
 3. `adr-generator` skill
 
 ### Example 6
@@ -314,7 +314,7 @@ Request: "Find out why this test started failing after the last change."
 
 Route:
 1. `orchestrator`
-2. `debug`
+2. `defect-debugger`
 
 ### Example 7
 
@@ -323,3 +323,6 @@ Request: "Show me the largest tables and missing indexes in SQL Server."
 Route:
 1. `orchestrator`
 2. `sql-dba`
+
+
+

@@ -62,8 +62,8 @@ Compile this into a master list showing what's available.
 
 Sort agents into categories:
 - **Routing/Orchestration:** Agents that dispatch work to specialists (e.g., `orchestrator`)
-- **Specialist:** Agents for specific domains (e.g., `csharp-engineer`, `architecture`)
-- **Analysis/Research:** Agents that produce reports (e.g., `security-researcher`, `performance-researcher`)
+- **Specialist:** Agents for specific domains (e.g., `csharp-engineer`, `architecture-designer`)
+- **Analysis/Research:** Agents that produce reports (e.g., `security-researcher`, `performance-assessor`)
 
 Sort skills into categories:
 - **Workflow/Methodology:** Skills that guide multi-step processes (e.g., `writing-plans`, `executing-plans`)
@@ -94,13 +94,13 @@ For each customization, ask:
 Identify dependencies and groupings:
 
 **Which agents are alternatives to each other?**
-- Example: `planning-research` vs. `orchestrator` — which is the default for ambiguous requests?
+- Example: `plan-researcher` vs. `orchestrator` — which is the default for ambiguous requests?
 
 **Which skills should always be mentioned together?**
-- Example: `test-driven-development` + `request-review` + `apply-review` form a review workflow
+- Example: `test-driven-development` + `request-code-review` + `remediate-review` form a review workflow
 
 **Are there any skill/agent pairs that naturally execute together?**
-- Example: `critical-thinking` often pairs with `architecture` for complex design decisions
+- Example: `critical-thinking` often pairs with `architecture-designer` for complex design decisions
 
 **Which instructions are foundational vs. advisory?**
 - Example: `validation-and-guards.instructions.md` (Syrx) vs. `docker-dotnet.instructions.md` (optional)
@@ -196,3 +196,6 @@ Your updated `copilot-instructions.md` is ready when:
 ✓ Links to indices and governance docs are correct  
 ✓ Formatting is consistent and renders correctly  
 ✓ The file reflects your project's actual scope and default choices
+
+
+

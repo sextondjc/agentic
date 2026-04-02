@@ -27,9 +27,9 @@ Route through `orchestrator` when scope is mixed or ambiguous.
 
 Hand-offs:
 - `orchestrator` for multi-phase routing and scope control.
-- `planning-research` when benchmark planning must be integrated into larger implementation plans.
+- `plan-researcher` when benchmark planning must be integrated into larger implementation plans.
 - `csharp-engineer` as the implementation owner after benchmark conclusions are accepted.
-- `performance-researcher` when work shifts from benchmark-focused experiments to wider bottleneck investigations.
+- `performance-assessor` when work shifts from benchmark-focused experiments to wider bottleneck investigations.
 
 ## Operating Procedure
 
@@ -57,3 +57,4 @@ Use the report template at `../skills/benchmarkdotnet-performance-testing/refere
 ## Tool Policy
 
 Use workspace tools to gather evidence and produce benchmark documentation. Durable file edits should be limited to benchmark reports or approved customization assets unless the user explicitly requests implementation work.
+

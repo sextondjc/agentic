@@ -10,7 +10,7 @@ Mirrored directory landing page for source path /.github/prompts.
 - [write-component-docs.prompt.md](./write-component-docs.prompt.md.ref.md)
 - [review-technical-docs.prompt.md](./review-technical-docs.prompt.md.ref.md)
 - [performance-research.prompt.md](./performance-research.prompt.md.ref.md)
-- [project-setup.prompt.md](./project-setup.prompt.md.ref.md)
+- [workspace-scaffolder.prompt.md](./workspace-scaffolder.prompt.md.ref.md)
 - [generate-readme.prompt.md](./generate-readme.prompt.md.ref.md)
 - [security-research.prompt.md](./security-research.prompt.md.ref.md)
 - [syrx-validation.prompt.md](./syrx-validation.prompt.md.ref.md)
@@ -18,3 +18,4 @@ Mirrored directory landing page for source path /.github/prompts.
 
 ## See Also
 - [Reference Home](../../index.md)
+

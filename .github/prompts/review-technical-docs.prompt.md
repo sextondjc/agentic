@@ -15,10 +15,10 @@ Review all existing documentation, detect drift against source code, update stal
 
 ## Required Execution Model
 
-- Use `planning-research` to create an inventory-first documentation plan.
+- Use `plan-researcher` to create an inventory-first documentation plan.
 - Use parallel exploration for code understanding by path partitions.
 - Use `Explore` for read-only parallel scans.
-- Use `architecture` where boundary or domain terminology is ambiguous.
+- Use `architecture-designer` where boundary or domain terminology is ambiguous.
 - Use `csharp-engineer` for deep .NET member and behavior interpretation.
 - Use `critical-thinking` to challenge assumptions before finalizing claims.
 
@@ -57,3 +57,5 @@ Provide a concise final report containing:
 - Coverage percentage
 - Link validation status
 - Remaining risks or follow-up items
+
+

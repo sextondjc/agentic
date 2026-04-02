@@ -4,7 +4,7 @@
 
 - Report name: `<solution-or-project-or-namespace>-performance-research-report-<yyyyMMdd>.md`
 - Generated on: `<yyyy-MM-dd>`
-- Assessor: `performance-researcher`
+- Assessor: `performance-assessor`
 - Scope: `<solution/project/namespace/component>`
 - Report location: `/.docs/research/performance/`
 - Evidence sources: `<code, profiler output, traces, counters, benchmarks, query evidence, logs>`
@@ -52,7 +52,7 @@ Provide a concise summary of the dominant bottlenecks, the likely business or op
 - Validation or benchmark recommendation:
   - `<specific benchmark, counter, trace, or load-test follow-up>`
 - Implementation status:
-  - `Not implemented by performance-researcher`
+  - `Not implemented by performance-assessor`
 
 Repeat the section above for each finding.
 

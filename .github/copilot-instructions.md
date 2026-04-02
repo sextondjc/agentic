@@ -39,16 +39,16 @@ Each agent has a singular purpose. Go directly to the specialist for single-lane
 |---|---|
 | `csharp-engineer` | **Default for C# work.** Writing, modifying, or reviewing .NET code. |
 | `orchestrator` | Work spans planning + implementation + research, or the right specialist is unclear. |
-| `planning-research` | Researching options, producing research notes, or writing implementation plans. |
-| `architecture` | Evaluating aggregate boundaries, producing blueprints, or identifying anti-patterns. |
-| `debug` | Reproducing, isolating, and fixing a specific defect. |
+| `plan-researcher` | Researching options, producing research notes, or writing implementation plans. |
+| `architecture-designer` | Evaluating aggregate boundaries, producing blueprints, or identifying anti-patterns. |
+| `defect-debugger` | Reproducing, isolating, and fixing a specific defect. |
 | `benchmark-researcher` | BenchmarkDotNet-focused benchmark design and analysis with report-first guidance (no implementation). |
 | `security-researcher` | Security vulnerability assessment; produces a report, does not implement fixes. |
-| `performance-researcher` | Performance bottleneck assessment; produces a report, does not implement fixes. |
+| `performance-assessor` | Performance bottleneck assessment; produces a report, does not implement fixes. |
 | `code-reviewer` | Reviewing a completed implementation step against the plan and workspace standards. |
 | `powershell-reviewer` | Reviewing PowerShell scripts for safety, automation readiness, and maintainability with remediation guidance. |
 | `sql-dba` | Live SQL Server administration, schema inspection, or operational DBA work. |
-| `project-setup` | Scaffolding a new project's workspace configuration and copilot instructions. |
+| `workspace-scaffolder` | Scaffolding a new project's workspace configuration and copilot instructions. |
 
 ## Preferred Skills
 
@@ -64,6 +64,7 @@ Skills discovery index: [.github/skills/README.md](skills/README.md)
 - `docker-dotnet`
 - `syrx-data-access`
 - `audit-powershell`
+- `audit-governance`
 - `security-research`
 - `performance-research`
 - `delivery-status-grid`
@@ -75,9 +76,9 @@ Skills discovery index: [.github/skills/README.md](skills/README.md)
 - `writing-plans`
 - `executing-plans`
 - `task-execution`
-- `request-review`
-- `apply-review`
-- `complete-branch`
+- `request-code-review`
+- `remediate-review`
+- `branch-completion`
 
 ## Imported Superpowers Assets
 
@@ -87,8 +88,8 @@ Skills discovery index: [.github/skills/README.md](skills/README.md)
 - `code-reviewer` (review specialist agent)
 - `executing-plans` (plan execution workflow)
 - `task-execution` (same-session per-task implementation workflow)
-- `request-review` and `apply-review` (review loop workflow)
-- `complete-branch` (completion and branch integration workflow)
+- `request-code-review` and `remediate-review` (review loop workflow)
+- `branch-completion` (completion and branch integration workflow)
 
 ## Workspace Design Rules
 
@@ -97,3 +98,9 @@ Skills discovery index: [.github/skills/README.md](skills/README.md)
 - Avoid duplicate prompts that restate instruction or skill content.
 - Keep prompts task-specific and lightweight.
 - Align all planning and change tracking artifacts to `.docs` rather than legacy `.copilot-tracking` paths.
+
+
+
+
+
+
