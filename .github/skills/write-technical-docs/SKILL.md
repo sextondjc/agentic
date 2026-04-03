@@ -60,9 +60,9 @@ Produce a technical reference documentation set under the selected root (default
 
 Use the provided templates:
 
-- [Technical API page template](./references/technical-api-page-template.md)
-- [Documentation index template](./references/documentation-index-template.md)
-- [Coverage report template](./references/coverage-report-template.md)
+- [technical-api-page-template.md](./references/technical-api-page-template.md)
+- [documentation-index-template.md](./references/documentation-index-template.md)
+- [coverage-report-template.md](./references/coverage-report-template.md)
 
 ## Technical Reference Page Requirements
 
@@ -89,16 +89,16 @@ Before finalizing documentation, enforce all gates:
 
 - Evidence Gate: Every technical claim maps to actual code or existing docs.
 - Drift Gate: Remove or correct stale statements contradicted by code.
-- Coverage Gate: Attempt to document every file in scope; explicitly justify exclusions. Run [`Get-DocumentationMetrics.ps1`](./Get-DocumentationMetrics.ps1) to measure XML doc coverage and README coverage objectively.
+- Coverage Gate: Attempt to document every file in scope; explicitly justify exclusions. Run [Get-DocumentationMetrics.ps1](./Get-DocumentationMetrics.ps1) to measure XML doc coverage and README coverage objectively.
 - Link Gate: Validate that every internal link target exists.
 - Consistency Gate: Terminology is aligned with code symbols and established naming.
 
 ### Documentation Metrics Script
 
-[`Get-DocumentationMetrics.ps1`](./Get-DocumentationMetrics.ps1) measures documentation quality across the solution:
+[Get-DocumentationMetrics.ps1](./Get-DocumentationMetrics.ps1) measures documentation quality across the solution:
 
 - **XML documentation coverage**: percentage of public C# declarations with `///` XML doc comments.
-- **README coverage**: percentage of `src/` projects with a `README.md`.
+- **README coverage**: percentage of `src/` projects with a [README.md](./../../../README.md).
 - **Composite score**: weighted result from both metrics.
 
 Usage:
@@ -160,6 +160,19 @@ Documentation work is complete only when:
 - Coverage report explains included and excluded files.
 - Internal links resolve to existing docs.
 - No unresolved evidence gaps remain without explicit note.
-- [`Get-DocumentationMetrics.ps1`](./Get-DocumentationMetrics.ps1) passes at the configured minimum score (default: 80; CI enforces 85).
+- [Get-DocumentationMetrics.ps1](./Get-DocumentationMetrics.ps1) passes at the configured minimum score (default: 80; CI enforces 85).
 
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
 

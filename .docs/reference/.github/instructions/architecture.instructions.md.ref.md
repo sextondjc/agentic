@@ -1,11 +1,11 @@
-# Reference: .github/instructions/architecture.instructions.md
+# Reference: [architecture.instructions.md](./../../../../.github/instructions/architecture.instructions.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/instructions/architecture.instructions.md
-- Documented page: /.docs/reference/.github/instructions/architecture.instructions.md.ref.md
+- Path: /[architecture.instructions.md](./../../../../.github/instructions/architecture.instructions.md)
+- Documented page: /[architecture.instructions.md.ref.md](./architecture.instructions.md.ref.md)
 - File type: Markdown
 - Line count: 286
 
@@ -56,6 +56,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)

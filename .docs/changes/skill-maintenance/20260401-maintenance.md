@@ -36,13 +36,12 @@
 ### delivery-status-grid — Registered (new)
 
 Added to:
-- `.github/copilot-instructions.md` Preferred Skills list
-- `.github/skills/README.md` discovery index (Review / Planning lanes)
+- [README.md](./../../../../README.md) discovery index (Review / Planning lanes)
 - Skill history and index already created in the 2026-04-01 full audit.
 
 ### branch-completion — Registered (index gap)
 
-Was present in `copilot-instructions.md` but missing from `.github/skills/README.md`. Added.
+Was present in `copilot-instructions.md` but missing from [README.md](./../../../README.md). Added.
 
 ## Post-Update Validation
 
@@ -50,7 +49,7 @@ Targeted skill-review rerun confirmed all three skills pass all MUST and SHOULD 
 
 | Skill | Outcome | Report |
 |---|---:|---|
-| skills-authoring | Pass | [.docs/changes/skill-reviews/skills-authoring/20260401-review.md](../../skill-reviews/skills-authoring/20260401-review.md) |
-| delivery-status-grid | Pass | [.docs/changes/skill-reviews/delivery-status-grid/20260401-review.md](../../skill-reviews/delivery-status-grid/20260401-review.md) |
-| branch-completion | Pass | [.docs/changes/skill-reviews/branch-completion/20260401-review.md](../../skill-reviews/branch-completion/20260401-review.md) |
+| skills-authoring | Pass | [20260401-review.md](./../../skill-reviews/skills-authoring/20260401-review.md) |
+| delivery-status-grid | Pass | [20260401-review.md](./../../skill-reviews/delivery-status-grid/20260401-review.md) |
+| branch-completion | Pass | [20260401-review.md](./../../skill-reviews/branch-completion/20260401-review.md) |
 

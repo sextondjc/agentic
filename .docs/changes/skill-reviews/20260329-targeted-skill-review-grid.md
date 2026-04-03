@@ -18,4 +18,4 @@
 
 | Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---|---|
-| skill-review | Pass | 0 | 0 | None | .docs/changes/skill-reviews/skill-review/20260329-review.md |
+| skill-review | Pass | 0 | 0 | None | [20260329-review.md](./skill-review/20260329-review.md) |

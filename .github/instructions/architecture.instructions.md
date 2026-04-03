@@ -278,9 +278,9 @@ public sealed class LegacyInvoiceAdapter
 Maintain `/.docs/spec/glossary.md` listing domain terms: Term | Definition | Source Authority.
 
 ## Global Usings Guidance
-Add a project-level `GlobalUsings.cs` (or SDK `ImplicitUsings` + manual additions) to simplify guard invocation:
+Add a project-level `Usings.cs` to simplify guard invocation and centralize shared imports:
 ```csharp
 global using static Syrx.Validation.Contract;
 ```
-Do not overuse `using static`; reserve for ubiquitous guard/contract helpers to maintain readability and reduce verbosity. Avoid fully qualified namespace prefixes for guard calls within domain code.
+For projects with more than one `*.cs` file, keep import directives in `Usings.cs` and avoid import `using` directives in other `*.cs` files. Do not overuse `using static`; reserve for ubiquitous guard/contract helpers to maintain readability and reduce verbosity. Avoid fully qualified namespace prefixes for guard calls within domain code.
 

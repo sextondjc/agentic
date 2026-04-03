@@ -13,7 +13,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill-reviews/technical-documentation/20260329-review.md
+- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill-reviews/technical-documentation/20260329-review.md)
 
 #### Findings
 
@@ -43,7 +43,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill-reviews/technical-documentation/20260329-review.md
+- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill-reviews/technical-documentation/20260329-review.md)
 
 #### Findings
 

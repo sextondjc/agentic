@@ -77,10 +77,10 @@ Planning output should prefer markdown grids over narrative text.
 
 Maintain lifecycle mappings in:
 
-- `.github/agents/README.md`
-- `.github/instructions/README.md`
-- `.github/prompts/README.md`
-- `.github/skills/README.md`
+- [README.md](./../../.github/agents/README.md)
+- [README.md](./../../.github/instructions/README.md)
+- [README.md](./../../.github/prompts/README.md)
+- [README.md](./../../.github/skills/README.md)
 
 Each catalog entry should include at least `Primary Lane`, `Secondary Lane`, and `Rationale`.
 

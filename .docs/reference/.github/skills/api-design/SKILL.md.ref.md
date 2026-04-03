@@ -1,11 +1,11 @@
-﻿# Reference: .github/skills/api-design/SKILL.md
+# Reference: [SKILL.md](./../../../../../.github/skills/api-design/SKILL.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/skills/api-design/SKILL.md
-- Documented page: /.docs/reference/.github/skills/api-design/SKILL.md.ref.md
+- Path: /[SKILL.md](./../../../../../.github/skills/api-design/SKILL.md)
+- Documented page: /[SKILL.md.ref.md](./SKILL.md.ref.md)
 - File type: Markdown
 - Line count: 45
 
@@ -52,6 +52,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../../index.md)
-- [Coverage Report](../../../coverage-report.md)
-- [Code Structure](../../../code-structure.md)
+- [index.md](./../../../index.md)
+- [coverage-report.md](./../../../coverage-report.md)
+- [code-structure.md](./../../../code-structure.md)

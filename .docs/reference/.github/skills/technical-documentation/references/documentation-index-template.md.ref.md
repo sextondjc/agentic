@@ -1,11 +1,11 @@
-﻿# Reference: .github/skills/technical-documentation/references/documentation-index-template.md
+# Reference: .github/skills/technical-documentation/references/documentation-index-template.md
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
 - Path: /.github/skills/technical-documentation/references/documentation-index-template.md
-- Documented page: /.docs/reference/.github/skills/technical-documentation/references/documentation-index-template.md.ref.md
+- Documented page: /[documentation-index-template.md.ref.md](./documentation-index-template.md.ref.md)
 - File type: Markdown
 - Line count: 36
 
@@ -54,6 +54,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../../../index.md)
-- [Coverage Report](../../../../coverage-report.md)
-- [Code Structure](../../../../code-structure.md)
+- [index.md](./../../../../index.md)
+- [coverage-report.md](./../../../../coverage-report.md)
+- [code-structure.md](./../../../../code-structure.md)

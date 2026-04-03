@@ -1,11 +1,11 @@
-﻿# Reference: .github/instructions/async-programming.instructions.md
+# Reference: [async-programming.instructions.md](./../../../../.github/instructions/async-programming.instructions.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/instructions/async-programming.instructions.md
-- Documented page: /.docs/reference/.github/instructions/async-programming.instructions.md.ref.md
+- Path: /[async-programming.instructions.md](./../../../../.github/instructions/async-programming.instructions.md)
+- Documented page: /[async-programming.instructions.md.ref.md](./async-programming.instructions.md.ref.md)
 - File type: Markdown
 - Line count: 19
 
@@ -52,6 +52,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)

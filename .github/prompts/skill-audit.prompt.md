@@ -15,13 +15,13 @@ Use the `skill-review` skill to perform a deep review of every skill under `.git
 
 ## Required Actions
 
-1. Load the `skill-review` skill from `.github/skills/skill-review/SKILL.md` before beginning.
+1. Load the `skill-review` skill from [SKILL.md](./../skills/skill-review/SKILL.md) before beginning.
 2. For each skill:
    - Load the current `SKILL.md`.
    - Load its history file from `.github/skills/skill-review/references/history/<skill>-history.md`.
    - Build a deny-list from entries marked Rejected, Removed, or Illegitimate in the history.
    - Evaluate all SKR-M* (MUST) and SKR-S* (SHOULD) standards with evidence.
-   - Write a per-skill review report to `.docs/changes/skill-reviews/<skill-name>/YYYYMMDD-review.md` using the template at `.github/skills/skill-review/references/skill-review-report-template.md`.
+   - Write a per-skill review report to `.docs/changes/skill-reviews/<skill-name>/YYYYMMDD-review.md` using the template at [skill-review-report-template.md](./../skills/skill-review/references/skill-review-report-template.md).
    - Update the history file with findings.
 3. After all skills are reviewed, produce the aggregate Markdown grid output in chat.
 
@@ -58,9 +58,9 @@ Return the following in chat, in this order:
 | Per-skill reports | `.docs/changes/skill-reviews/<skill-name>/YYYYMMDD-review.md` |
 | Aggregate grid | `.docs/changes/skill-reviews/YYYYMMDD-full-skill-review-grid.md` |
 | Skill histories | `.github/skills/skill-review/references/history/<skill>-history.md` |
-| History index | `.github/skills/skill-review/references/history/index.md` |
+| History index | [index.md](./../skills/skill-review/references/history/index.md) |
 
 ## Notes
 
 - Scripts are available in `.github/skills/skill-review/references/scripts/` to automate this audit if preferred over manual review. See `generate-baseline-skill-reviews.ps1` for full baseline generation and `build-skill-review-grid.ps1` to rebuild the aggregate grid from existing reports.
-- If a conflict is detected between two skills, initiate the conflict resolution workflow using `.github/skills/skill-review/references/skill-conflict-report-template.md`.
+- If a conflict is detected between two skills, initiate the conflict resolution workflow using [skill-conflict-report-template.md](./../skills/skill-review/references/skill-conflict-report-template.md).

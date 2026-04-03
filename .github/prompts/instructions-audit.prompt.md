@@ -26,13 +26,13 @@ Review all `*.instructions.md` files and return a report that identifies:
 - Cross-check catalogs and active customizations:
   - `.github/agents/*.agent.md`
   - `.github/skills/*/SKILL.md`
-  - `.github/instructions/README.md`
-  - `.github/agents/README.md`
-  - `.github/skills/README.md`
+  - [README.md](./../instructions/README.md)
+  - [README.md](./../agents/README.md)
+  - [README.md](./../skills/README.md)
 
 ## Required Actions
 
-1. Load and follow `.github/skills/validate-customization/SKILL.md`.
+1. Load and follow [SKILL.md](./../skills/validate-customization/SKILL.md).
 2. Evaluate each instruction file against applicable INR standards.
 3. Perform cross-file analysis for duplicate/conflicting policy content.
 4. Perform boundary analysis against active agent and skill roles.

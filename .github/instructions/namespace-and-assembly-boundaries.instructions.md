@@ -47,6 +47,8 @@ Before creating or editing code, ensure:
 3. New types do not introduce namespace/type name ambiguity.
 4. New project references do not violate the dependency direction above.
 5. Any alias added for ambiguity is temporary and documented in the change description.
+6. Use a project-level `Usings.cs` file for shared imports; do not place import `using` directives in other `*.cs` files.
+7. Keep exactly one top-level type per `*.cs` file; only nested types may share a file with their containing type.
 
 ## Refactor Guidance
 - For boundary refactors, move files physically to match namespace structure in the same change.

@@ -41,7 +41,7 @@ Execution order:
 2. Use the skill-contained quality gate first:
    - `references/scripts/invoke-quality-gate.ps1`
 3. If the standard path fails or does not satisfy the full-run request, use the built-in full-solution command:
-   - `dotnet test .\Rook.sln --collect:"XPlat Code Coverage" --results-directory .\.artifacts\full-solution-coverage --nologo --verbosity minimal`
+   - `dotnet test ./Rook.sln --collect:"XPlat Code Coverage" --results-directory ./.artifacts/full-solution-coverage --nologo --verbosity minimal`
 4. Use helper scripts only for repeatable artifact aggregation and formatting after the run.
 
 ## Inputs
@@ -61,7 +61,7 @@ Optional:
 - Standard coverage gate: `references/scripts/invoke-quality-gate.ps1`
 - Fallback run helper: `references/scripts/invoke-full-solution-coverage.ps1`
 - Coverage aggregation helper: `references/scripts/get-cobertura-coverage-summary.ps1`
-- Script asset guide: `references/scripts/README.md`
+- Script asset guide: `references/scripts/[README.md](./../../../README.md)`
 
 ## Workflow
 
@@ -122,3 +122,8 @@ Coverage reporting is complete only when:
 - Aggregate coverage is reported with X of Y values.
 - Per-project or nearest-valid fresh breakdown is included.
 - Missing data and failure causes are explicitly called out.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+

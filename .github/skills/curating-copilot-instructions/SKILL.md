@@ -53,7 +53,7 @@ Decide what belongs in `copilot-instructions.md`:
 - Auxiliary instructions (specific to certain file types or rare scenarios)
 
 **Document But Don't Feature:**
-- Broad instruction indices (`.github/instructions/README.md`) — link in refs, don't expand inline
+- Broad instruction indices ([README.md](./../../../README.md) — link in refs, don't expand inline
 - Auxiliary prompts (narrow-use-case tools) — link if relevant to featured skills/agents
 
 ### Phase 3: Update Structure
@@ -126,7 +126,7 @@ Use this format when skills are many (>10):
 ```markdown
 ## Preferred Skills
 
-Skills discovery index: [.github/skills/README.md](../README.md)
+Skills discovery index: [README.md](./../README.md)
 - `skill-1` — Short description
 - `skill-2` — Short description
 ```
@@ -179,8 +179,21 @@ This skill pairs naturally with:
 
 ## References
 
-- [`.github/copilot-instructions.md` canonical template](../../copilot-instructions.md)
-- [Skills discovery index](../README.md)
-- [Customization governance](../../../.docs/reference/planning-execution-review-governance.md)
+- [copilot-instructions.md](./../../copilot-instructions.md)
+- [README.md](./../../../README.md)
+- [planning-execution-review-governance.md](./../../../planning-execution-review-governance.md)
 
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
 

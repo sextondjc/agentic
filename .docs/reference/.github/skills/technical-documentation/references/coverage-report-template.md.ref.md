@@ -1,11 +1,11 @@
-﻿# Reference: .github/skills/technical-documentation/references/coverage-report-template.md
+# Reference: .github/skills/technical-documentation/references/coverage-report-template.md
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
 - Path: /.github/skills/technical-documentation/references/coverage-report-template.md
-- Documented page: /.docs/reference/.github/skills/technical-documentation/references/coverage-report-template.md.ref.md
+- Documented page: /[coverage-report-template.md.ref.md](./coverage-report-template.md.ref.md)
 - File type: Markdown
 - Line count: 48
 
@@ -55,6 +55,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../../../index.md)
-- [Coverage Report](../../../../coverage-report.md)
-- [Code Structure](../../../../code-structure.md)
+- [index.md](./../../../../index.md)
+- [coverage-report.md](./../../../../coverage-report.md)
+- [code-structure.md](./../../../../code-structure.md)

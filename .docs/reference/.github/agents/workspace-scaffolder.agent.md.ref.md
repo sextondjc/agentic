@@ -1,11 +1,11 @@
-# Reference: .github/agents/workspace-scaffolder.agent.md
+# Reference: [workspace-scaffolder.agent.md](./../../../../.github/agents/workspace-scaffolder.agent.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/agents/workspace-scaffolder.agent.md
-- Documented page: /.docs/reference/.github/agents/workspace-scaffolder.agent.md.ref.md
+- Path: /[workspace-scaffolder.agent.md](./../../../../.github/agents/workspace-scaffolder.agent.md)
+- Documented page: /[workspace-scaffolder.agent.md.ref.md](./workspace-scaffolder.agent.md.ref.md)
 - File type: Markdown
 - Line count: 269
 
@@ -56,7 +56,7 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)
 

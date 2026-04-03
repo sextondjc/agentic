@@ -21,5 +21,5 @@ This directory records all implementation change artifacts produced during plann
 
 ## References
 
-- Instruction: [.github/instructions/task-implementation.instructions.md](../../.github/instructions/task-implementation.instructions.md)
-- Governance: [.docs/reference/planning-execution-review-governance.md](../reference/planning-execution-review-governance.md)
+- Instruction: [task-implementation.instructions.md](./../../task-implementation.instructions.md)
+- Governance: [planning-execution-review-governance.md](./../reference/planning-execution-review-governance.md)

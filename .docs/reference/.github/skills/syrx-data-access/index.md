@@ -1,4 +1,4 @@
-﻿# Directory Index: /.github/skills/syrx-data-access
+# Directory Index: /.github/skills/syrx-data-access
 
 ## Summary
 Mirrored directory landing page for source path /.github/skills/syrx-data-access.
@@ -7,7 +7,7 @@ Mirrored directory landing page for source path /.github/skills/syrx-data-access
 - None
 
 ## Files
-- [SKILL.md](./SKILL.md.ref.md)
+- [SKILL.md.ref.md](./SKILL.md.ref.md)
 
 ## See Also
-- [Reference Home](../../../index.md)
+- [index.md](./../../../index.md)

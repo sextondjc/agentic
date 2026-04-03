@@ -32,6 +32,13 @@ Hand-offs:
 - `defect-debugger` — when a suspected issue must be reproduced or isolated before it can be described.
 - `sql-dba` — when live SQL Server security posture or database-side vulnerabilities are in scope.
 
+## Preferred Companion Skills
+
+- `security-research`: Mandatory methodology skill for evidence standards and report structure.
+- `task-research`: Use for broad codebase reconnaissance and issue scoping.
+- `critical-thinking`: Use to challenge threat assumptions and separate confirmed findings from hypotheses.
+- `delivery-status-grid`: Use to communicate findings status and remediation readiness in grid form.
+
 ## Operating Procedure
 
 1. Ask `orchestrator` to classify the request when scope is mixed or ambiguous.

@@ -29,3 +29,18 @@ Use this skill when the main value is sharper reasoning rather than immediate co
 - Direct.
 - Evidence-based.
 - Focused on decision quality, not debate for its own sake.
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
+

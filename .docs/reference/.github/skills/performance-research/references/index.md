@@ -1,4 +1,4 @@
-﻿# Directory Index: /.github/skills/performance-research/references
+# Directory Index: /.github/skills/performance-research/references
 
 ## Summary
 Mirrored directory landing page for source path /.github/skills/performance-research/references.
@@ -7,7 +7,7 @@ Mirrored directory landing page for source path /.github/skills/performance-rese
 - None
 
 ## Files
-- [performance-research-report-template.md](./performance-research-report-template.md.ref.md)
+- [performance-research-report-template.md.ref.md](./performance-research-report-template.md.ref.md)
 
 ## See Also
-- [Reference Home](../../../../index.md)
+- [index.md](./../../../../index.md)

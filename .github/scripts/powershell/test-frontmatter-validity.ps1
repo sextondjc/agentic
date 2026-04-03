@@ -16,7 +16,7 @@ $ext = @{'instructions'='*.instructions.md'; 'agents'='*.agent.md'; 'prompts'='*
 $files = Get-ChildItem $filePath/$ext
 $bad = @()
 $requiredKeys = @('name:', 'description:')
-if ($AssetType -ne 'prompts') { $requiredKeys += 'applyTo:' }
+if ($AssetType -eq 'instructions') { $requiredKeys += 'applyTo:' }
 
 foreach ($f in $files) {
   $lines = Get-Content $f.FullName

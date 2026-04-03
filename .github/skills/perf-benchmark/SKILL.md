@@ -116,7 +116,7 @@ public static class Program
 
 ## Report Template
 
-Use the [template](./references/benchmarkdotnet-performance-report-template.md) for every benchmark report. Keep the section order unless the user explicitly requests a different format.
+Use the [benchmarkdotnet-performance-report-template.md](./references/benchmarkdotnet-performance-report-template.md) for every benchmark report. Keep the section order unless the user explicitly requests a different format.
 
 ## Output Expectation
 
@@ -126,3 +126,18 @@ When asked for benchmark guidance, provide:
 - Environment controls
 - Result interpretation rubric
 - Risk notes and next optimization decision
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
+

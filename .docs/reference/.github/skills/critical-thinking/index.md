@@ -1,4 +1,4 @@
-﻿# Directory Index: /.github/skills/critical-thinking
+# Directory Index: /.github/skills/critical-thinking
 
 ## Summary
 Mirrored directory landing page for source path /.github/skills/critical-thinking.
@@ -7,7 +7,7 @@ Mirrored directory landing page for source path /.github/skills/critical-thinkin
 - None
 
 ## Files
-- [SKILL.md](./SKILL.md.ref.md)
+- [SKILL.md.ref.md](./SKILL.md.ref.md)
 
 ## See Also
-- [Reference Home](../../../index.md)
+- [index.md](./../../../index.md)

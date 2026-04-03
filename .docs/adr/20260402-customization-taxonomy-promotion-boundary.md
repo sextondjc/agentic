@@ -8,15 +8,15 @@
 
 ## Context
 
-The workspace had a taxonomy reference in draft state (`.docs/reference/customization-taxonomy-v1.md`) with stale renamed agent names and missing newer governance assets.
+The workspace had a taxonomy reference in draft state ([customization-taxonomy-v1.md](./../reference/customization-taxonomy-v1.md)) with stale renamed agent names and missing newer governance assets.
 
 At the same time, operational governance already had clear routing authority through lifecycle governance guidance and lane catalogs:
 
-- `.docs/reference/planning-execution-review-governance.md`
-- `.github/agents/README.md`
-- `.github/instructions/README.md`
-- `.github/prompts/README.md`
-- `.github/skills/README.md`
+- [planning-execution-review-governance.md](./../reference/planning-execution-review-governance.md)
+- [README.md](./../../.github/agents/README.md)
+- [README.md](./../../.github/instructions/README.md)
+- [README.md](./../../.github/prompts/README.md)
+- [README.md](./../../.github/skills/README.md)
 
 Promoting taxonomy carelessly risked creating a second, conflicting operational source of truth.
 

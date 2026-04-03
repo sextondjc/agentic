@@ -49,20 +49,20 @@ Implement fresh from tests. Period.
 ```dot
 digraph tdd_cycle {
     rankdir=LR;
-    red [label="RED\nWrite failing test", shape=box, style=filled, fillcolor="#ffcccc"];
-    verify_red [label="Verify fails\ncorrectly", shape=diamond];
-    green [label="GREEN\nMinimal code", shape=box, style=filled, fillcolor="#ccffcc"];
-    verify_green [label="Verify passes\nAll green", shape=diamond];
-    refactor [label="REFACTOR\nClean up", shape=box, style=filled, fillcolor="#ccccff"];
+    red [label="RED/nWrite failing test", shape=box, style=filled, fillcolor="#ffcccc"];
+    verify_red [label="Verify fails/ncorrectly", shape=diamond];
+    green [label="GREEN/nMinimal code", shape=box, style=filled, fillcolor="#ccffcc"];
+    verify_green [label="Verify passes/nAll green", shape=diamond];
+    refactor [label="REFACTOR/nClean up", shape=box, style=filled, fillcolor="#ccccff"];
     next [label="Next", shape=ellipse];
 
     red -> verify_red;
     verify_red -> green [label="yes"];
-    verify_red -> red [label="wrong\nfailure"];
+    verify_red -> red [label="wrong/nfailure"];
     green -> verify_green;
     verify_green -> refactor [label="yes"];
     verify_green -> green [label="no"];
-    refactor -> verify_green [label="stay\ngreen"];
+    refactor -> verify_green [label="stay/ngreen"];
     verify_green -> next;
     next -> red;
 }
@@ -369,3 +369,18 @@ Otherwise → not TDD
 ```
 
 No exceptions without your human partner's permission.
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
+

@@ -1,11 +1,11 @@
-﻿# Reference: .github/prompts/syrx-validation.prompt.md
+# Reference: [syrx-validation.prompt.md](./../../../../.github/prompts/syrx-validation.prompt.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/prompts/syrx-validation.prompt.md
-- Documented page: /.docs/reference/.github/prompts/syrx-validation.prompt.md.ref.md
+- Path: /[syrx-validation.prompt.md](./../../../../.github/prompts/syrx-validation.prompt.md)
+- Documented page: /[syrx-validation.prompt.md.ref.md](./syrx-validation.prompt.md.ref.md)
 - File type: Markdown
 - Line count: 81
 
@@ -49,6 +49,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)

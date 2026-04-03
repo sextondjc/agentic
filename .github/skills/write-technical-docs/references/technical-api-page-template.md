@@ -66,7 +66,7 @@ Short, code-verified purpose statement.
 
 ## See also
 
-- [Related symbol/module/page](./documentation-index-template.md)
+- [documentation-index-template.md](./documentation-index-template.md)
 
 ## Evidence
 

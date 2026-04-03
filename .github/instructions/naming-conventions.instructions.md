@@ -154,7 +154,7 @@ When consolidating existing assets:
 1. **Rename files first.** Update folder and `.md` filename.
 2. **Update frontmatter.** Change `name:` field to match new filename.
 3. **Update all references.**
-   - README catalogs (`.github/skills/README.md`, `.github/instructions/README.md`)
+   - README catalogs ([README.md](./../skills/README.md), [README.md](./README.md)
    - `copilot-instructions.md` preferred lists
    - Internal skill references and `applyTo` patterns
    - Documentation links
@@ -178,9 +178,9 @@ When consolidating existing assets:
 
 ## References
 
-- Skill discovery: [.github/skills/README.md](../skills/README.md)
-- Instruction catalog: [.github/instructions/README.md](./README.md)
-- Agent catalog: [.github/agents/README.md](../agents/README.md)
+- Skill discovery: [README.md](./../skills/README.md)
+- Instruction catalog: [README.md](./README.md)
+- Agent catalog: [README.md](./../agents/README.md)
 - Lifecycle governance: `lifecycle-governance.instructions.md`
 
 

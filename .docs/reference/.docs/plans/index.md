@@ -10,5 +10,4 @@ This folder contains generated planning artifacts created during documentation e
 - None
 
 ## See Also
-- [Reference Home](../../index.md)
-- [.docs Index](../index.md)
+- [index.md](./../../index.md)

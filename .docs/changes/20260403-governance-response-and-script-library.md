@@ -11,20 +11,20 @@
 ## Governance Recommendations Implemented
 
 ### R1: Fix GOV-M3 Catalog Integrity (High) — COMPLETED
-- **Action**: Add missing instruction row to `.github/instructions/README.md`
+- **Action**: Add missing instruction row to [README.md](./../../.github/instructions/README.md)
 - **Implementation**: Added `namespace-and-assembly-boundaries.instructions.md` row to instruction catalog with lane and rationale
-- **File**: [.github/instructions/README.md](.github/instructions/README.md)
+- **File**: [README.md](./README.md)
 - **Status**: ✓ Resolved
 
 ### R2: Fix GOV-S7 Hub Freshness (Medium) — COMPLETED
 - **Action**: Sync copilot-instructions.md Preferred Skills with full current skill inventory
 - **Implementation**: Added 6 missing skills to preferred list: `curating-copilot-instructions`, `current-test-coverage`, `customization-authoring`, `sync-customizations`, `validate-customization`, `write-technical-docs`
-- **File**: [.github/copilot-instructions.md](.github/copilot-instructions.md)
+- **File**: [copilot-instructions.md](./copilot-instructions.md)
 - **Status**: ✓ Resolved
 
 ### R3: Add CI Schedule for Governance Cadence (Medium) — DEFERRED
 - **Scope**: CI workflow implementation is a separate work item and remains on backlog
-- **Interim**: Manual monthly cadence via `.github/prompts/governance-cadence.prompt.md` remains active
+- **Interim**: Manual monthly cadence via [governance-cadence.prompt.md](./../../.github/prompts/governance-cadence.prompt.md) remains active
 
 ## PowerShell Script Library Implementation
 
@@ -32,7 +32,7 @@
 - **Primary Lane**: Execution
 - **Secondary Lane**: Review
 - **Purpose**: Maintain reusable script catalog, prevent duplication, enforce single-purpose design
-- **Location**: [.github/skills/powershell-script-library/SKILL.md](.github/skills/powershell-script-library/SKILL.md)
+- **Location**: [SKILL.md](./SKILL.md)
 
 ### Script Library Created at `.github/scripts/powershell/`
 
@@ -57,28 +57,28 @@
    - Output: JSON report of divergences or exit 0 if synced
    - Usage: Governance audits (GOV-S7 hub freshness check)
 
-**Catalog Index**: [.github/scripts/powershell/README.md](.github/scripts/powershell/README.md)
+**Catalog Index**: [README.md](./README.md)
 
 ### Integration Points
 
-**audit-governance Skill** ([.github/skills/audit-governance/SKILL.md](.github/skills/audit-governance/SKILL.md))
+**audit-governance Skill** ([SKILL.md](./SKILL.md))
 - Updated to reference script library and reusable automation patterns
 - Added "Automation via Script Library" section describing script invocation workflow
 
-**powershell-reviewer Agent** ([.github/agents/powershell-reviewer.agent.md](.github/agents/powershell-reviewer.agent.md))
+**powershell-reviewer Agent** ([powershell-reviewer.agent.md](./powershell-reviewer.agent.md))
 - Added `powershell-script-library` to Preferred Companion Skills
 - Positioned library as catalog maintenance gate before script authoring
 
-**orchestrator Agent** ([.github/agents/orchestrator.agent.md](.github/agents/orchestrator.agent.md))
+**orchestrator Agent** ([orchestrator.agent.md](./orchestrator.agent.md))
 - Added routing rule for PowerShell script creation work
 - Enforces consultation of script catalog before creating new scripts
 - Coordinates with `powershell-reviewer` for consistency validation
 
-**copilot-instructions.md** ([.github/copilot-instructions.md](.github/copilot-instructions.md))
+**copilot-instructions.md** ([copilot-instructions.md](./copilot-instructions.md))
 - Added `powershell-script-library` to Preferred Skills list
 - Full skills list now synced with actual skill inventory (34 of 34 skills present)
 
-**Skills Catalog** ([.github/skills/README.md](.github/skills/README.md))
+**Skills Catalog** ([README.md](./README.md)
 - Registered `powershell-script-library` skill in discovery index
 - Assigned lane mappings: Execution (primary), Review (secondary)
 
@@ -95,19 +95,19 @@
 
 | Artifact | Type | Status |
 |---|---|---|
-| `.docs/changes/governance-audits/20260403-governance-audit.md` | Audit Report | Created |
-| `.github/scripts/powershell/README.md` | Script Catalog | Created |
+| [20260403-governance-audit.md](./governance-audits/20260403-governance-audit.md) | Audit Report | Created |
+| [README.md](./../../.github/scripts/powershell/README.md) | Script Catalog | Created |
 | `.github/scripts/powershell/get-lane-counts.ps1` | Script Asset | Created |
 | `.github/scripts/powershell/test-catalog-integrity.ps1` | Script Asset | Created |
 | `.github/scripts/powershell/test-frontmatter-validity.ps1` | Script Asset | Created |
 | `.github/scripts/powershell/test-hub-file-sync.ps1` | Script Asset | Created |
-| `.github/skills/powershell-script-library/SKILL.md` | New Skill | Created |
-| `.github/instructions/README.md` | Updated Catalog | Modified (GOV-M3 fix) |
-| `.github/copilot-instructions.md` | Updated Hub | Modified (GOV-S7 fix, added script-library skill) |
-| `.github/skills/README.md` | Updated Catalog | Modified (registered powershell-script-library) |
-| `.github/agents/powershell-reviewer.agent.md` | Updated Agent | Modified (added script-library reference) |
-| `.github/agents/orchestrator.agent.md` | Updated Agent | Modified (added script routing rule) |
-| `.github/skills/audit-governance/SKILL.md` | Updated Skill | Modified (added script library automation section) |
+| [SKILL.md](./../../.github/skills/powershell-script-library/SKILL.md) | New Skill | Created |
+| [README.md](./../../.github/instructions/README.md) | Updated Catalog | Modified (GOV-M3 fix) |
+| [copilot-instructions.md](./../../.github/copilot-instructions.md) | Updated Hub | Modified (GOV-S7 fix, added script-library skill) |
+| [README.md](./../../.github/skills/README.md) | Updated Catalog | Modified (registered powershell-script-library) |
+| [powershell-reviewer.agent.md](./../../.github/agents/powershell-reviewer.agent.md) | Updated Agent | Modified (added script-library reference) |
+| [orchestrator.agent.md](./../../.github/agents/orchestrator.agent.md) | Updated Agent | Modified (added script routing rule) |
+| [SKILL.md](./../../.github/skills/audit-governance/SKILL.md) | Updated Skill | Modified (added script library automation section) |
 
 ## Governance Status
 

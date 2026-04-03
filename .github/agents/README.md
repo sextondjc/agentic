@@ -21,6 +21,7 @@ This catalog assigns each agent to a primary lifecycle lane.
 | `sql-dba` | Execution | Review | Executes operational database work and schema changes. |
 | `workspace-scaffolder` | Execution | Planning | Scaffolds project structures and workspace artifacts. |
 | `powershell-reviewer` | Review | Execution | Evaluates PowerShell scripts for safety, automation readiness, and maintainability with corrective guidance. |
+| `governance-briefer` | Review | Planning | Produces one-page governance briefings by aggregating salient evidence, risks, and actions from existing artifacts. |
 | `code-reviewer` | Review | Planning | Reviews completed work against plans and standards. |
 | `security-researcher` | Review | Planning | Performs security assessment and report-first remediation guidance. |
 | `performance-assessor` | Review | Planning | Performs performance assessment and evidence-backed recommendations. |

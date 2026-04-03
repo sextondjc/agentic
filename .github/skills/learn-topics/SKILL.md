@@ -51,3 +51,12 @@ Always include:
 ## Done Criteria
 
 This skill is complete when the user receives a source-backed learning map that matches the requested depth and includes explicit next steps or asset-generation decisions.
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+

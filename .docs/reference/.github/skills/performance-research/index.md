@@ -1,13 +1,13 @@
-﻿# Directory Index: /.github/skills/performance-research
+# Directory Index: /.github/skills/performance-research
 
 ## Summary
 Mirrored directory landing page for source path /.github/skills/performance-research.
 
 ## Child Directories
-- [references](./references/index.md)
+- [index.md](./references/index.md)
 
 ## Files
-- [SKILL.md](./SKILL.md.ref.md)
+- [SKILL.md.ref.md](./SKILL.md.ref.md)
 
 ## See Also
-- [Reference Home](../../../index.md)
+- [index.md](./../../../index.md)

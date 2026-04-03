@@ -1,6 +1,6 @@
 ## Preferred Skills
 
-Skills discovery index: [.github/skills/README.md](../../README.md)
+Skills discovery index: [README.md](./../../../../../README.md)
 
 - `skill-1` - <short description>
 - `skill-2` - <short description>

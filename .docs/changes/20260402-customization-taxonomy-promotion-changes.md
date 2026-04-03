@@ -6,22 +6,22 @@
 
 ## Summary
 
-Promoted `.docs/reference/customization-taxonomy-v1.md` from draft to approved conceptual baseline, aligned it to current asset inventory, recorded precedence boundaries in ADR form, improved reference discoverability, and validated governance integrity.
+Promoted [customization-taxonomy-v1.md](./../reference/customization-taxonomy-v1.md) from draft to approved conceptual baseline, aligned it to current asset inventory, recorded precedence boundaries in ADR form, improved reference discoverability, and validated governance integrity.
 
 ## Changes
 
 ### Added
 
-- `.docs/changes/20260402-customization-taxonomy-promotion-changes.md` - Progressive execution log for taxonomy promotion work.
-- `.docs/adr/20260402-customization-taxonomy-promotion-boundary.md` - ADR for taxonomy promotion boundary and precedence model.
-- `.docs/changes/governance-audits/20260402-governance-audit.md` - Post-change governance validation report.
+- [20260402-customization-taxonomy-promotion-changes.md](./20260402-customization-taxonomy-promotion-changes.md) - Progressive execution log for taxonomy promotion work.
+- [20260402-customization-taxonomy-promotion-boundary.md](./../adr/20260402-customization-taxonomy-promotion-boundary.md) - ADR for taxonomy promotion boundary and precedence model.
+- [20260402-governance-audit.md](./governance-audits/20260402-governance-audit.md) - Post-change governance validation report.
 
 ### Modified
 
-- `.docs/reference/customization-taxonomy-v1.md` - Normalized taxonomy rows to current names/assets, added approved v1 family decisions, and made source-of-truth precedence explicit.
-- `.docs/adr/README.md` - Added ADR index entry for taxonomy promotion decision.
-- `.docs/reference/index.md` - Added direct link to taxonomy reference for discoverability.
-- `.docs/plans/20260402-customization-taxonomy-promotion-plan.md` - Transitioned from approval-pending to execution-complete state and aligned acceptance closure.
+- [customization-taxonomy-v1.md](./../reference/customization-taxonomy-v1.md) - Normalized taxonomy rows to current names/assets, added approved v1 family decisions, and made source-of-truth precedence explicit.
+- [README.md](./../adr/README.md) - Added ADR index entry for taxonomy promotion decision.
+- [index.md](./../reference/index.md) - Added direct link to taxonomy reference for discoverability.
+- [20260402-customization-taxonomy-promotion-plan.md](./../plans/20260402-customization-taxonomy-promotion-plan.md) - Transitioned from approval-pending to execution-complete state and aligned acceptance closure.
 
 ### Removed
 
@@ -38,16 +38,16 @@ Promoted `.docs/reference/customization-taxonomy-v1.md` from draft to approved c
 
 ### Files Created (3)
 
-- `.docs/changes/20260402-customization-taxonomy-promotion-changes.md` - Change traceability artifact.
-- `.docs/adr/20260402-customization-taxonomy-promotion-boundary.md` - Durable architecture/governance decision record.
-- `.docs/changes/governance-audits/20260402-governance-audit.md` - Governance standards validation evidence.
+- [20260402-customization-taxonomy-promotion-changes.md](./20260402-customization-taxonomy-promotion-changes.md) - Change traceability artifact.
+- [20260402-customization-taxonomy-promotion-boundary.md](./../adr/20260402-customization-taxonomy-promotion-boundary.md) - Durable architecture/governance decision record.
+- [20260402-governance-audit.md](./governance-audits/20260402-governance-audit.md) - Governance standards validation evidence.
 
 ### Files Modified (4)
 
-- `.docs/reference/customization-taxonomy-v1.md` - Promoted and normalized taxonomy baseline.
-- `.docs/adr/README.md` - Added ADR index row.
-- `.docs/reference/index.md` - Added taxonomy discoverability link.
-- `.docs/plans/20260402-customization-taxonomy-promotion-plan.md` - Updated status and closure markers.
+- [customization-taxonomy-v1.md](./../reference/customization-taxonomy-v1.md) - Promoted and normalized taxonomy baseline.
+- [README.md](./../adr/README.md) - Added ADR index row.
+- [index.md](./../reference/index.md) - Added taxonomy discoverability link.
+- [20260402-customization-taxonomy-promotion-plan.md](./../plans/20260402-customization-taxonomy-promotion-plan.md) - Updated status and closure markers.
 
 ### Files Removed (0)
 

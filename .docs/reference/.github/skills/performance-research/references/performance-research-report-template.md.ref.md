@@ -1,11 +1,11 @@
-﻿# Reference: .github/skills/performance-research/references/performance-research-report-template.md
+# Reference: [performance-research-report-template.md](./../../../../../../.github/skills/performance-research/references/performance-research-report-template.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/skills/performance-research/references/performance-research-report-template.md
-- Documented page: /.docs/reference/.github/skills/performance-research/references/performance-research-report-template.md.ref.md
+- Path: /[performance-research-report-template.md](./../../../../../../.github/skills/performance-research/references/performance-research-report-template.md)
+- Documented page: /[performance-research-report-template.md.ref.md](./performance-research-report-template.md.ref.md)
 - File type: Markdown
 - Line count: 87
 
@@ -56,6 +56,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../../../index.md)
-- [Coverage Report](../../../../coverage-report.md)
-- [Code Structure](../../../../code-structure.md)
+- [index.md](./../../../../index.md)
+- [coverage-report.md](./../../../../coverage-report.md)
+- [code-structure.md](./../../../../code-structure.md)

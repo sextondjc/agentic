@@ -1,4 +1,4 @@
-﻿# Directory Index: /.github/skills/adr-generator
+# Directory Index: /.github/skills/adr-generator
 
 ## Summary
 Mirrored directory landing page for source path /.github/skills/adr-generator.
@@ -7,7 +7,7 @@ Mirrored directory landing page for source path /.github/skills/adr-generator.
 - None
 
 ## Files
-- [SKILL.md](./SKILL.md.ref.md)
+- [SKILL.md.ref.md](./SKILL.md.ref.md)
 
 ## See Also
-- [Reference Home](../../../index.md)
+- [index.md](./../../../index.md)

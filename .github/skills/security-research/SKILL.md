@@ -90,4 +90,13 @@ If the task becomes multi-phase or ambiguous, route through `orchestrator`.
 
 ## Report Template
 
-Use the [template](./references/security-research-report-template.md) for every report. Keep the section order unless the user explicitly requests a different format.
+Use the [security-research-report-template.md](./references/security-research-report-template.md) for every report. Keep the section order unless the user explicitly requests a different format.
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+

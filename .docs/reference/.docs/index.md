@@ -4,10 +4,10 @@
 Mirrored directory landing page for source path /.docs.
 
 ## Child Directories
-- [plans](./plans/index.md)
+- [index.md](./plans/index.md)
 
 ## Files
-- [agent-routing-guide.md](./agent-routing-guide.md.ref.md)
+- [agent-routing-guide.md.ref.md](./agent-routing-guide.md.ref.md)
 
 ## See Also
-- [Reference Home](../index.md)
+- [index.md](./../index.md)

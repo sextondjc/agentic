@@ -18,10 +18,10 @@ Produce expert-level, source-backed learning decomposition for a requested topic
 ## Standards
 
 All standards are defined by workspace instructions and catalogs. Apply:
-- `.github/instructions/lifecycle-governance.instructions.md`
-- `.github/instructions/naming-conventions.instructions.md`
-- `.github/instructions/technical-docs.instructions.md`
-- `.github/instructions/security-and-secure-coding.instructions.md`
+- [lifecycle-governance.instructions.md](./../instructions/lifecycle-governance.instructions.md)
+- [naming-conventions.instructions.md](./../instructions/naming-conventions.instructions.md)
+- [technical-docs.instructions.md](./../instructions/technical-docs.instructions.md)
+- [security-and-secure-coding.instructions.md](./../instructions/security-and-secure-coding.instructions.md)
 
 ## Hard Constraints
 - Do not claim expertise without evidence and source traceability.

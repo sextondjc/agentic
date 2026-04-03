@@ -34,7 +34,7 @@ Batch `P1` is ordered to reduce routing ambiguity early, then move to higher-cou
 
 Execution checklist:
 
-- `.docs/changes/customization-renames/p1-execution-checklist.md`
+- [p1-execution-checklist.md](./p1-execution-checklist.md)
 - `.docs/changes/customization-renames/p1-01-execution-checklist.md`
 
 1. Review loop skills first (`request-review`, `apply-review`) to improve list scan clarity.
@@ -64,10 +64,10 @@ Use this table when aliases are temporarily maintained after a rename.
 
 ## Impact Audit Checklist
 
-- [x] `.github/agents/README.md` updated when agent names change
-- [x] `.github/instructions/README.md` updated when instruction names change
-- [x] `.github/prompts/README.md` updated when prompt names change
-- [x] `.github/skills/README.md` updated when skill names change
-- [x] `.github/copilot-instructions.md` preferred lists updated
+- [x] [README.md](./../../../README.md) updated when agent names change
+- [x] [README.md](./../../../README.md) updated when instruction names change
+- [x] [README.md](./../../../README.md) updated when prompt names change
+- [x] [README.md](./../../../README.md) updated when skill names change
+- [x] [copilot-instructions.md](./../../../.github/copilot-instructions.md) preferred lists updated
 - [x] Existing `.docs/changes/**` references reviewed for old names
 - [x] Legacy names added to Alias Registry when transition window is required

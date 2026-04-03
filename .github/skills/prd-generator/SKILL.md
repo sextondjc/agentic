@@ -84,4 +84,19 @@ Format: valid Markdown only. No horizontal rules. No disclaimers or footers. Tit
 
 ## PRD Template
 
-Use the [template](./references/prd-template.md) for all PRD documents. Add sub-sections as needed; do not remove any top-level sections. Remove placeholder instructions once filled with actual content.
+Use the [prd-template.md](./references/prd-template.md) for all PRD documents. Add sub-sections as needed; do not remove any top-level sections. Remove placeholder instructions once filled with actual content.
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
+

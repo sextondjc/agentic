@@ -287,9 +287,9 @@ with pdfplumber.open("file.pdf") as pdf:
 
 ## Advanced features
 
-**Form filling**: See [FORMS.md](FORMS.md) for complete guide
-**API reference**: See [REFERENCE.md](REFERENCE.md) for all methods
-**Examples**: See [EXAMPLES.md](EXAMPLES.md) for common patterns
+**Form filling**: See [FORMS.md](./FORMS.md) for complete guide
+**API reference**: See [REFERENCE.md](./REFERENCE.md) for all methods
+**Examples**: See [EXAMPLES.md](./EXAMPLES.md) for common patterns
 ````
 
 Claude loads FORMS.md, REFERENCE.md, or EXAMPLES.md only when needed.
@@ -313,10 +313,10 @@ bigquery-skill/
 
 ## Available datasets
 
-**Finance**: Revenue, ARR, billing → See [reference/finance.md](reference/finance.md)
-**Sales**: Opportunities, pipeline, accounts → See [reference/sales.md](reference/sales.md)
-**Product**: API usage, features, adoption → See [reference/product.md](reference/product.md)
-**Marketing**: Campaigns, attribution, email → See [reference/marketing.md](reference/marketing.md)
+**Finance**: Revenue, ARR, billing → See [finance.md](./reference/finance.md)
+**Sales**: Opportunities, pipeline, accounts → See [sales.md](./reference/sales.md)
+**Product**: API usage, features, adoption → See [product.md](./reference/product.md)
+**Marketing**: Campaigns, attribution, email → See [marketing.md](./reference/marketing.md)
 
 ## Quick search
 
@@ -338,14 +338,14 @@ Show basic content, link to advanced content:
 
 ## Creating documents
 
-Use docx-js for new documents. See [DOCX-JS.md](DOCX-JS.md).
+Use docx-js for new documents. See [DOCX-JS.md](./DOCX-JS.md).
 
 ## Editing documents
 
 For simple edits, modify the XML directly.
 
-**For tracked changes**: See [REDLINING.md](REDLINING.md)
-**For OOXML details**: See [OOXML.md](OOXML.md)
+**For tracked changes**: See [REDLINING.md](./REDLINING.md)
+**For OOXML details**: See [OOXML.md](./OOXML.md)
 ```
 
 Claude reads REDLINING.md or OOXML.md only when the user needs those features.
@@ -360,10 +360,10 @@ Claude may partially read files when they're referenced from other referenced fi
 
 ```markdown  theme={null}
 # SKILL.md
-See [advanced.md](advanced.md)...
+See [advanced.md](./advanced.md)...
 
 # advanced.md
-See [details.md](details.md)...
+See [details.md](./details.md)...
 
 # details.md
 Here's the actual information...
@@ -375,9 +375,9 @@ Here's the actual information...
 # SKILL.md
 
 **Basic usage**: [instructions in SKILL.md]
-**Advanced features**: See [advanced.md](advanced.md)
-**API reference**: See [reference.md](reference.md)
-**Examples**: See [examples.md](examples.md)
+**Advanced features**: See [advanced.md](./advanced.md)
+**API reference**: See [reference.md](./reference.md)
+**Examples**: See [examples.md](./examples.md)
 ```
 
 ### Structure longer reference files with table of contents
@@ -524,7 +524,7 @@ This pattern greatly improves output quality.
 5. Finalize and save the document
 ```
 
-This shows the validation loop pattern using reference documents instead of scripts. The "validator" is STYLE\_GUIDE.md, and Claude performs the check by reading and comparing.
+This shows the validation loop pattern using reference documents instead of scripts. The "validator" is STYLE/_GUIDE.md, and Claude performs the check by reading and comparing.
 
 **Example 2: Document editing process** (for Skills with code):
 
@@ -827,7 +827,7 @@ Iterate based on these observations rather than assumptions. The 'name' and 'des
 Always use forward slashes in file paths, even on Windows:
 
 * ✓ **Good**: `scripts/helper.py`, `reference/guide.md`
-* ✗ **Avoid**: `scripts\helper.py`, `reference\guide.md`
+* ✗ **Avoid**: `scripts/helper.py`, `reference/guide.md`
 
 Unix-style paths work across all platforms, while Windows-style paths cause errors on Unix systems.
 
@@ -999,7 +999,7 @@ When Claude performs complex, open-ended tasks, it can make mistakes. The "plan-
 
 **When to use**: Batch operations, destructive changes, complex validation rules, high-stakes operations.
 
-**Implementation tip**: Make validation scripts verbose with specific error messages like "Field 'signature\_date' not found. Available fields: customer\_name, order\_total, signature\_date\_signed" to help Claude fix issues.
+**Implementation tip**: Make validation scripts verbose with specific error messages like "Field 'signature/_date' not found. Available fields: customer/_name, order/_total, signature/_date/_signed" to help Claude fix issues.
 
 ### Package dependencies
 

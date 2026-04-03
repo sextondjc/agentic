@@ -1,41 +1,77 @@
-# Test-CatalogIntegrity.ps1: Compare cataloged assets to actual files
+# Test-CatalogIntegrity.ps1: Compare cataloged assets to actual files.
 # Usage: ./test-catalog-integrity.ps1 -AssetType 'agents'|'skills'|'instructions'|'prompts'
-# Output: PSCustomObject with MissingInCatalog and StaleInCatalog arrays
+# Output: PSCustomObject with MissingInCatalog and StaleInCatalog arrays.
 
 param(
-  [Parameter(Mandatory=$true)][ValidateSet('agents','skills','instructions','prompts')][string]$AssetType
+  [Parameter(Mandatory = $true)][ValidateSet('agents', 'skills', 'instructions', 'prompts')][string]$AssetType
 )
+
+function Get-ActualAssets {
+  param([string]$Type)
+
+  switch ($Type) {
+    'agents' {
+      Get-ChildItem '.github/agents/*.agent.md' -File |
+        ForEach-Object { $_.BaseName -replace '\.agent$', '' }
+      break
+    }
+    'skills' {
+      Get-ChildItem '.github/skills' -Directory |
+        Select-Object -ExpandProperty Name
+      break
+    }
+    'instructions' {
+      Get-ChildItem '.github/instructions/*.instructions.md' -File |
+        Select-Object -ExpandProperty Name
+      break
+    }
+    'prompts' {
+      Get-ChildItem '.github/prompts/*.prompt.md' -File |
+        ForEach-Object { $_.BaseName -replace '\.prompt$', '' }
+      break
+    }
+  }
+}
+
+function Get-CatalogAssets {
+  param([string]$Type)
+
+  $catalogPath = switch ($Type) {
+    'agents' { '.github/agents/README.md' }
+    'skills' { '.github/skills/README.md' }
+    'instructions' { '.github/instructions/README.md' }
+    'prompts' { '.github/prompts/README.md' }
+  }
+
+  $headerCell = switch ($Type) {
+    'agents' { 'Agent' }
+    'skills' { 'Skill' }
+    'instructions' { 'Instruction File' }
+    'prompts' { 'Prompt File' }
+  }
+
+  Get-Content $catalogPath |
+    Where-Object { $_ -match '^\|' -and $_ -notmatch '^\|\s*---' } |
+    ForEach-Object {
+      $cells = $_ -split '\|'
+      if ($cells.Count -lt 3) { return }
+
+      $name = $cells[1].Trim().Trim('`')
+      if (-not $name -or $name -eq $headerCell) { return }
+      $name
+    }
+}
 
 function Compare-Catalog {
   param([array]$Actual, [array]$Catalog)
+
   [pscustomobject]@{
     MissingInCatalog = @($Actual | Where-Object { $_ -notin $Catalog })
     StaleInCatalog = @($Catalog | Where-Object { $_ -notin $Actual })
   }
 }
 
-$assetMap = @{
-  'agents' = @{ ext = '*.agent.md'; pattern = '^\| `([^`]+)` \|'; catalog = '.github/agents/README.md' }
-  'skills' = @{ dir = $true; pattern = '^\| ([a-z0-9-]+) \| (Planning|Execution|Review) \|'; catalog = '.github/skills/README.md' }
-  'instructions' = @{ ext = '*.instructions.md'; pattern = '^\| `([^`]+\.instructions\.md)` \|'; catalog = '.github/instructions/README.md' }
-  'prompts' = @{ ext = '*.prompt.md'; pattern = '^\| `([^`]+)` \|'; catalog = '.github/prompts/README.md' }
-}
+$actual = @(Get-ActualAssets -Type $AssetType | Where-Object { $_ -and $_.Trim().Length -gt 0 } | Sort-Object -Unique)
+$catalog = @(Get-CatalogAssets -Type $AssetType | Where-Object { $_ -and $_.Trim().Length -gt 0 } | Sort-Object -Unique)
 
-$config = $assetMap[$AssetType]
-
-# Get actual assets
-if ($config.dir) {
-  $actual = Get-ChildItem ".github/$AssetType" -Directory | Select-Object -ExpandProperty Name
-} else {
-  $actual = Get-ChildItem ".github/$AssetType/$($config.ext)" | ForEach-Object {
-    if ($AssetType -eq 'instructions') { $_.Name } else { $_.BaseName -replace "\.($AssetType -replace 's$','')$", '' }
-  }
-}
-
-# Get cataloged assets
-$catalogRows = Get-Content $config.catalog | Where-Object { $_ -match '^\| ' }
-$catalog = foreach ($row in $catalogRows) {
-  if ($row -match $config.pattern) { $Matches[1] }
-}
-
-Compare-Catalog $actual $catalog
+Compare-Catalog -Actual $actual -Catalog $catalog

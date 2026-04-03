@@ -1,11 +1,11 @@
-﻿# Reference: .github/instructions/powershell.instructions.md
+# Reference: [powershell.instructions.md](./../../../../.github/instructions/powershell.instructions.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/instructions/powershell.instructions.md
-- Documented page: /.docs/reference/.github/instructions/powershell.instructions.md.ref.md
+- Path: /[powershell.instructions.md](./../../../../.github/instructions/powershell.instructions.md)
+- Documented page: /[powershell.instructions.md.ref.md](./powershell.instructions.md.ref.md)
 - File type: Markdown
 - Line count: 199
 
@@ -55,6 +55,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)

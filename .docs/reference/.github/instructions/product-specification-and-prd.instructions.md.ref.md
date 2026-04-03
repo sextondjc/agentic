@@ -1,11 +1,11 @@
-﻿# Reference: .github/instructions/product-specification-and-prd.instructions.md
+# Reference: .github/instructions/product-specification-and-prd.instructions.md
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
 - Path: /.github/instructions/product-specification-and-prd.instructions.md
-- Documented page: /.docs/reference/.github/instructions/product-specification-and-prd.instructions.md.ref.md
+- Documented page: /[product-specification-and-prd.instructions.md.ref.md](./product-specification-and-prd.instructions.md.ref.md)
 - File type: Markdown
 - Line count: 16
 
@@ -51,6 +51,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)

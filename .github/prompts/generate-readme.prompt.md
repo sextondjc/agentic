@@ -4,7 +4,7 @@ description: 'Prompt to build a consolidated README from repository documentatio
 ---
 # README Generation Prompt
 
-Generate a concise but useful `README.md` by aggregating the repository's documentation, architecture guidance, coding standards, testing strategy, and development workflow.
+Generate a concise but useful [README.md](./../../../README.md) by aggregating the repository's documentation, architecture guidance, coding standards, testing strategy, and development workflow.
 
 ## Content Goals
 
@@ -17,7 +17,7 @@ Generate a concise but useful `README.md` by aggregating the repository's docume
 
 ## Source Priorities
 
-- Prefer `.github/copilot-instructions.md` and `.github/instructions/*` for canonical standards.
+- Prefer [copilot-instructions.md](./../copilot-instructions.md) and `.github/instructions/*` for canonical standards.
 - Use repository docs and architecture files for implementation details.
 - Avoid inventing sections when the source material is missing.
 

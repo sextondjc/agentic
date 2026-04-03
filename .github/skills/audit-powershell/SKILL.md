@@ -26,9 +26,9 @@ Do not use this skill for general C# code review.
 
 Apply these workspace standards during review:
 
-- `.github/instructions/powershell.instructions.md`
-- `.github/instructions/security-and-secure-coding.instructions.md`
-- `.github/instructions/lifecycle-governance.instructions.md`
+- [powershell.instructions.md](./../../instructions/powershell.instructions.md)
+- [security-and-secure-coding.instructions.md](./../../instructions/security-and-secure-coding.instructions.md)
+- [lifecycle-governance.instructions.md](./../../instructions/lifecycle-governance.instructions.md)
 
 ## Inputs
 
@@ -110,3 +110,8 @@ Review is complete only when:
 - Findings are severity-ranked and include concrete corrections.
 - Standards references were applied.
 - Unverified areas are explicitly listed.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+

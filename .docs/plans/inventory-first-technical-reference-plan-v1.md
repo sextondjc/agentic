@@ -40,14 +40,14 @@ Validation: all 49 files have evidence cards; unresolved unknowns are explicitly
 
 ## Phase 3: Documentation Authoring And Update-In-Place
 - TASK-007: Create or update core docs.
-  - .docs/reference/index.md
-  - .docs/reference/code-structure.md
-  - .docs/reference/coverage-report.md
+  - [index.md](./../reference/index.md)
+  - [code-structure.md](./../reference/code-structure.md)
+  - [coverage-report.md](./../reference/coverage-report.md)
 - TASK-008: Create or update directory landing pages mirroring repo structure.
   - Generate index.md at each mirrored directory path in the file map section.
 - TASK-009: Create or update file-level reference pages.
   - Mapping rule: <source-path> -> .docs/reference/<source-path>.ref.md
-  - Example: .github/agents/defect-debugger.agent.md -> .docs/reference/.github/agents/defect-debugger.agent.md.ref.md
+  - Example: [defect-debugger.agent.md](./../../.github/agents/defect-debugger.agent.md) -> [defect-debugger.agent.md.ref.md](./../reference/.github/agents/defect-debugger.agent.md.ref.md)
 - TASK-010: Enforce evidence-only writing gate.
   - Unknown behavior text must use Not observed in code.
 Validation: each planned page is present and contains source-backed content or explicit unknowns.
@@ -75,7 +75,7 @@ Validation: no unresolved dead links; trust gates all pass.
 | Lane | Path segment | File count | Focus |
 |---|---|---:|---|
 | A | .docs | 1 | Existing internal docs context |
-| B | .github/agents and .github/copilot-instructions.md | 10 | Agent behavior and orchestration contracts |
+| B | .github/agents and [copilot-instructions.md](./../../.github/copilot-instructions.md) | 10 | Agent behavior and orchestration contracts |
 | C | .github/instructions | 13 | Policy constraints and standards |
 | D | .github/prompts | 8 | Prompt workflows and expected outputs |
 | E | .github/skills/*/SKILL.md | 10 | Skill contracts, scope, and invocation guidance |
@@ -88,32 +88,32 @@ Execution policy:
 
 ## Documentation File Map To Be Created Or Updated
 Core pages:
-- .docs/reference/index.md
-- .docs/reference/code-structure.md
-- .docs/reference/coverage-report.md
+- [index.md](./../reference/index.md)
+- [code-structure.md](./../reference/code-structure.md)
+- [coverage-report.md](./../reference/coverage-report.md)
 
 Directory indexes (mirror structure):
-- .docs/reference/.docs/index.md
-- .docs/reference/.github/index.md
-- .docs/reference/.github/agents/index.md
-- .docs/reference/.github/instructions/index.md
-- .docs/reference/.github/prompts/index.md
-- .docs/reference/.github/skills/index.md
-- .docs/reference/.github/skills/adr-generator/index.md
-- .docs/reference/.github/skills/api-design/index.md
-- .docs/reference/.github/skills/critical-thinking/index.md
+- [index.md](./../reference/.docs/index.md)
+- [index.md](./../reference/.github/index.md)
+- [index.md](./../reference/.github/agents/index.md)
+- [index.md](./../reference/.github/instructions/index.md)
+- [index.md](./../reference/.github/prompts/index.md)
+- [index.md](./../reference/.github/skills/index.md)
+- [index.md](./../reference/.github/skills/adr-generator/index.md)
+- [index.md](./../reference/.github/skills/api-design/index.md)
+- [index.md](./../reference/.github/skills/critical-thinking/index.md)
 - .docs/reference/.github/skills/dotnet-modernization/index.md
-- .docs/reference/.github/skills/technical-documentation/index.md
-- .docs/reference/.github/skills/technical-documentation/references/index.md
-- .docs/reference/.github/skills/performance-research/index.md
-- .docs/reference/.github/skills/performance-research/references/index.md
-- .docs/reference/.github/skills/prd-generator/index.md
-- .docs/reference/.github/skills/prd-generator/references/index.md
-- .docs/reference/.github/skills/security-research/index.md
-- .docs/reference/.github/skills/security-research/references/index.md
-- .docs/reference/.github/skills/syrx-data-access/index.md
-- .docs/reference/.github/skills/task-research/index.md
-- .docs/reference/.github/skills/task-research/references/index.md
+- [index.md](./../reference/.github/skills/technical-documentation/index.md)
+- [index.md](./../reference/.github/skills/technical-documentation/references/index.md)
+- [index.md](./../reference/.github/skills/performance-research/index.md)
+- [index.md](./../reference/.github/skills/performance-research/references/index.md)
+- [index.md](./../reference/.github/skills/prd-generator/index.md)
+- [index.md](./../reference/.github/skills/prd-generator/references/index.md)
+- [index.md](./../reference/.github/skills/security-research/index.md)
+- [index.md](./../reference/.github/skills/security-research/references/index.md)
+- [index.md](./../reference/.github/skills/syrx-data-access/index.md)
+- [index.md](./../reference/.github/skills/task-research/index.md)
+- [index.md](./../reference/.github/skills/task-research/references/index.md)
 
 File-level pages:
 - For every file path in .docs/_workspace-file-inventory.txt, create or update
@@ -148,7 +148,7 @@ Pass 2: anchor resolution
 - Record missing anchors separately from missing files.
 
 Pass 3: navigation sweep
-- Start at .docs/reference/index.md and traverse all linked docs.
+- Start at [index.md](./../reference/index.md) and traverse all linked docs.
 - Confirm coverage-report.md, code-structure.md, directory indexes, and file pages are reachable.
 
 Pass criteria:

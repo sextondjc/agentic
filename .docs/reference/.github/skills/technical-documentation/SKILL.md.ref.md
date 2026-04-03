@@ -1,11 +1,11 @@
-﻿# Reference: .github/skills/technical-documentation/SKILL.md
+# Reference: .github/skills/technical-documentation/SKILL.md
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
 - Path: /.github/skills/technical-documentation/SKILL.md
-- Documented page: /.docs/reference/.github/skills/technical-documentation/SKILL.md.ref.md
+- Documented page: /[SKILL.md.ref.md](./SKILL.md.ref.md)
 - File type: Markdown
 - Line count: 145
 
@@ -56,6 +56,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../../index.md)
-- [Coverage Report](../../../coverage-report.md)
-- [Code Structure](../../../code-structure.md)
+- [index.md](./../../../index.md)
+- [coverage-report.md](./../../../coverage-report.md)
+- [code-structure.md](./../../../code-structure.md)

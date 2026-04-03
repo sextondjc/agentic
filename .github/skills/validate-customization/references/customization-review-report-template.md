@@ -17,10 +17,10 @@
 
 | Metric | Value |
 |---|---|
-| Overall Outcome | Pass \| Pass With Advisories \| Fail \| Blocked |
+| Overall Outcome | Pass /| Pass With Advisories /| Fail /| Blocked |
 | MUST Failures | <count> |
 | SHOULD Advisories | <count> |
-| Conflict Status | None \| Detected \| Resolved \| Blocked |
+| Conflict Status | None /| Detected /| Resolved /| Blocked |
 
 ## Standards Evaluation
 
@@ -61,4 +61,4 @@ For agent files:
 
 | Artifact | Type | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---:|---|---|
-| <artifact-name> | Instruction \| Agent | Pass/Pass With Advisories/Fail/Blocked | <n> | <n> | None/Detected/Resolved/Blocked | <report-file> |
+| <artifact-name> | Instruction /| Agent | Pass/Pass With Advisories/Fail/Blocked | <n> | <n> | None/Detected/Resolved/Blocked | <report-file> |

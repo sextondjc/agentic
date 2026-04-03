@@ -7,7 +7,7 @@ Mirrored directory landing page for source path /.github/skills/dotnet-refactor.
 - None
 
 ## Files
-- [SKILL.md](./SKILL.md.ref.md)
+- [SKILL.md.ref.md](./SKILL.md.ref.md)
 
 ## See Also
-- [Reference Home](../../../index.md)
+- [index.md](./../../../index.md)

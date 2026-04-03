@@ -56,3 +56,8 @@ This skill run is complete only when:
 - Every candidate has a reference count.
 - Every candidate has a suggested action and confidence.
 - No files are deleted during discovery.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+

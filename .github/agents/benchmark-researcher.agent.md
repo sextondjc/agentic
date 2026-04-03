@@ -17,7 +17,7 @@ Design, review, and interpret BenchmarkDotNet experiments for .NET solutions and
 
 ## Mandatory Skill
 
-Load and follow the `benchmarkdotnet-performance-testing` skill for benchmark methodology, environment discipline, interpretation guardrails, and output expectations.
+Load and follow the `perf-benchmark` skill for benchmark methodology, environment discipline, interpretation guardrails, and output expectations.
 
 Use `performance-research` when the request expands beyond BenchmarkDotNet-specific benchmarking into broader performance investigation.
 
@@ -31,10 +31,17 @@ Hand-offs:
 - `csharp-engineer` as the implementation owner after benchmark conclusions are accepted.
 - `performance-assessor` when work shifts from benchmark-focused experiments to wider bottleneck investigations.
 
+## Preferred Companion Skills
+
+- `perf-benchmark`: Mandatory methodology skill for BenchmarkDotNet design and interpretation.
+- `task-research`: Use for codebase and evidence collection before benchmark design finalization.
+- `critical-thinking`: Use to challenge assumptions and avoid invalid benchmark conclusions.
+- `delivery-status-grid`: Use when reporting benchmark progress or completion status in grid form.
+
 ## Operating Procedure
 
 1. Confirm benchmark objective, success criteria, and decision being informed.
-2. Load `benchmarkdotnet-performance-testing` and apply its design and environment rules.
+2. Load `perf-benchmark` and apply its design and environment rules.
 3. Validate benchmark fairness: baseline, params, setup isolation, and repeatability controls.
 4. Interpret statistical output as distributions, including error and allocation impact.
 5. Produce a benchmark report with explicit confidence level and decision recommendation.
@@ -44,7 +51,7 @@ Hand-offs:
 
 Every benchmark engagement should end with a report containing these sections in order:
 
-Use the report template at `../skills/benchmarkdotnet-performance-testing/references/benchmarkdotnet-performance-report-template.md` as the default scaffold.
+Use the report template at `../skills/perf-benchmark/references/benchmarkdotnet-performance-report-template.md` as the default scaffold.
 
 1. Objective and Decision Context
 2. Benchmark Design (methods, params, baseline, diagnosers)

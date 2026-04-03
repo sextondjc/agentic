@@ -2,6 +2,12 @@
 
 This workspace is optimized for lean .NET application development.
 
+## Repository Intent
+
+- This repository is a customization and skills compendium.
+- It is not a host for product .NET applications.
+- Product C# project rules in this file apply to generated or target repositories where these customizations are applied.
+
 ## Canonical Standards
 
 - Use Syrx only for .NET data access. Do not introduce EF Core or alternate ORMs.
@@ -24,12 +30,12 @@ Use a three-lane operating model for all customization artifacts:
 
 Canonical governance and classification references:
 
-- `.docs/reference/planning-execution-review-governance.md`
-- `.github/agents/README.md`
-- `.github/instructions/README.md`
-- `.github/instructions/naming-conventions.instructions.md` ← Mandatory: review before creating new assets
-- `.github/prompts/README.md`
-- `.github/skills/README.md`
+- [planning-execution-review-governance.md](./../.docs/reference/planning-execution-review-governance.md)
+- [README.md](./agents/README.md)
+- [README.md](./instructions/README.md)
+- [naming-conventions.instructions.md](./instructions/naming-conventions.instructions.md) ← Mandatory: review before creating new assets
+- [README.md](./prompts/README.md)
+- [README.md](./skills/README.md)
 
 ## Preferred Agents
 
@@ -48,17 +54,19 @@ Each agent has a singular purpose. Go directly to the specialist for single-lane
 | `performance-assessor` | Performance bottleneck assessment; produces a report, does not implement fixes. |
 | `code-reviewer` | Reviewing a completed implementation step against the plan and workspace standards. |
 | `powershell-reviewer` | Reviewing PowerShell scripts for safety, automation readiness, and maintainability with remediation guidance. |
+| `governance-briefer` | Producing concise, single-page governance briefings from existing governance artifacts. |
 | `sql-dba` | Live SQL Server administration, schema inspection, or operational DBA work. |
 | `workspace-scaffolder` | Scaffolding a new project's workspace configuration and copilot instructions. |
 
 ## Preferred Skills
 
-Skills discovery index: [.github/skills/README.md](skills/README.md)
+Skills discovery index: [README.md](./skills/README.md)
 
 - `task-research`
 - `prd-generator`
 - `critical-thinking`
 - `learn-topics`
+- `refine-ideas`
 - `build-maui-apps`
 - `perf-benchmark`
 - `api-design`
@@ -68,13 +76,17 @@ Skills discovery index: [.github/skills/README.md](skills/README.md)
 - `syrx-data-access`
 - `audit-powershell`
 - `audit-governance`
+- `governance-health-overview`
+- `summarize-governance`
 - `security-research`
 - `performance-research`
 - `delivery-status-grid`
+- `design-mobile-ux`
 - `sync-skills`
 - `skills-authoring`
 - `skill-review`
 - `route-customization`
+- `scaffold-dotnet`
 - `test-driven-development`
 - `writing-plans`
 - `executing-plans`
@@ -87,6 +99,7 @@ Skills discovery index: [.github/skills/README.md](skills/README.md)
 - `curating-copilot-instructions`
 - `current-test-coverage`
 - `customization-authoring`
+- `sync-editorconfig`
 - `sync-customizations`
 - `validate-customization`
 - `write-technical-docs`

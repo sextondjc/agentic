@@ -15,10 +15,10 @@ applyTo: '**/*.md'
 ## Catalog Integrity
 
 - Keep lane mappings current in:
-  - `.github/agents/README.md`
-  - `.github/instructions/README.md`
-  - `.github/prompts/README.md`
-  - `.github/skills/README.md`
+  - [README.md](./../agents/README.md)
+  - [README.md](./README.md)
+  - [README.md](./../prompts/README.md)
+  - [README.md](./../skills/README.md)
 - Update the relevant catalog row in the same change when creating, deleting, or renaming any agent, instruction, prompt, or skill.
 - Include a one-line rationale for lane assignment in each catalog entry.
 
@@ -36,6 +36,8 @@ applyTo: '**/*.md'
 - Execution scope changes must be recorded as explicit decisions before implementation divergence.
 
 ## Execution Route Matrix
+
+Route matrix policy authority is defined in this instruction. The `orchestrator` agent must operationalize these rules without redefining lane ownership semantics.
 
 | Situation | Preferred Skill | Lane Rationale |
 |---|---|---|
@@ -55,3 +57,4 @@ applyTo: '**/*.md'
 - Maintain traceability across lanes from vision to plan to execution to review.
 - Prefer deterministic routing and explicit handoffs over ad-hoc mode switching.
 - Preserve high-throughput parallel work by keeping lane boundaries explicit and documented.
+- Treat this instruction as normative policy; treat agent routing tables as operational examples that must remain consistent with this file.

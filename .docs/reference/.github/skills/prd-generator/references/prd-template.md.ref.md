@@ -1,11 +1,11 @@
-﻿# Reference: .github/skills/prd-generator/references/prd-template.md
+# Reference: [prd-template.md](./../../../../../../.github/skills/prd-generator/references/prd-template.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/skills/prd-generator/references/prd-template.md
-- Documented page: /.docs/reference/.github/skills/prd-generator/references/prd-template.md.ref.md
+- Path: /[prd-template.md](./../../../../../../.github/skills/prd-generator/references/prd-template.md)
+- Documented page: /[prd-template.md.ref.md](./prd-template.md.ref.md)
 - File type: Markdown
 - Line count: 135
 
@@ -56,6 +56,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../../../index.md)
-- [Coverage Report](../../../../coverage-report.md)
-- [Code Structure](../../../../code-structure.md)
+- [index.md](./../../../../index.md)
+- [coverage-report.md](./../../../../coverage-report.md)
+- [code-structure.md](./../../../../code-structure.md)

@@ -1,11 +1,11 @@
-# Reference: .github/prompts/workspace-scaffolder.prompt.md
+# Reference: [workspace-scaffolder.prompt.md](./../../../../.github/prompts/workspace-scaffolder.prompt.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/prompts/workspace-scaffolder.prompt.md
-- Documented page: /.docs/reference/.github/prompts/workspace-scaffolder.prompt.md.ref.md
+- Path: /[workspace-scaffolder.prompt.md](./../../../../.github/prompts/workspace-scaffolder.prompt.md)
+- Documented page: /[workspace-scaffolder.prompt.md.ref.md](./workspace-scaffolder.prompt.md.ref.md)
 - File type: Markdown
 - Line count: 102
 
@@ -54,7 +54,7 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)
 

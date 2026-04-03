@@ -189,7 +189,7 @@ app.MapHealthChecks("/health");
 ```
 
 ```dockerfile
-HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 /
   CMD wget -qO- http://localhost:8080/health || exit 1
 ```
 
@@ -272,11 +272,11 @@ Use `runtime-deps` as the base for self-contained native AOT or trimmed publishe
 
 ```dockerfile
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-RUN dotnet publish src/MyApp/MyApp.csproj \
-    -c Release \
-    -r linux-musl-x64 \
-    --self-contained true \
-    -p:PublishAot=true \
+RUN dotnet publish src/MyApp/MyApp.csproj /
+    -c Release /
+    -r linux-musl-x64 /
+    --self-contained true /
+    -p:PublishAot=true /
     -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/runtime-deps:8.0-alpine AS runtime
@@ -380,8 +380,8 @@ jobs:
 
 ## Reference Assets
 
-- [`.dockerignore` template](references/dockerignore-template) — copy to your repo's build context root and trim as needed.
-- [Containerization pre-flight checklist](references/containerization-checklist.md) — structured MUST/SHOULD checklist covering Dockerfile, security, Compose, CI/CD, and Testcontainers.
+- [dockerignore-template](./references/dockerignore-template) — copy to your repo's build context root and trim as needed.
+- [containerization-checklist.md](./references/containerization-checklist.md) — structured MUST/SHOULD checklist covering Dockerfile, security, Compose, CI/CD, and Testcontainers.
 
 ---
 
@@ -405,3 +405,18 @@ Testcontainers package:
   Testcontainers.Redis  (Redis)
   Testcontainers        (generic)
 ```
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
+

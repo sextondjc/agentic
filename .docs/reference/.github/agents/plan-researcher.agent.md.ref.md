@@ -1,11 +1,11 @@
-# Reference: .github/agents/plan-researcher.agent.md
+# Reference: [plan-researcher.agent.md](./../../../../.github/agents/plan-researcher.agent.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/agents/plan-researcher.agent.md
-- Documented page: /.docs/reference/.github/agents/plan-researcher.agent.md.ref.md
+- Path: /[plan-researcher.agent.md](./../../../../.github/agents/plan-researcher.agent.md)
+- Documented page: /[plan-researcher.agent.md.ref.md](./plan-researcher.agent.md.ref.md)
 - File type: Markdown
 - Line count: 132
 
@@ -56,7 +56,7 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)
 

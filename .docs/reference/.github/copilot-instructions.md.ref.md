@@ -1,11 +1,11 @@
-﻿# Reference: .github/copilot-instructions.md
+# Reference: [copilot-instructions.md](./../../../.github/copilot-instructions.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/copilot-instructions.md
-- Documented page: /.docs/reference/.github/copilot-instructions.md.ref.md
+- Path: /[copilot-instructions.md](./../../../.github/copilot-instructions.md)
+- Documented page: /[copilot-instructions.md.ref.md](./copilot-instructions.md.ref.md)
 - File type: Markdown
 - Line count: 41
 
@@ -52,6 +52,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../index.md)
-- [Coverage Report](../coverage-report.md)
-- [Code Structure](../code-structure.md)
+- [index.md](./../index.md)
+- [coverage-report.md](./../coverage-report.md)
+- [code-structure.md](./../code-structure.md)

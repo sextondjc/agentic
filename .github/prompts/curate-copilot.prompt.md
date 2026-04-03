@@ -130,7 +130,7 @@ Before committing, validate:
 - [ ] Every listed agent/skill file exists in the workspace
 - [ ] Descriptions match the actual frontmatter (not paraphrased)
 - [ ] No duplicate asset entries across sections
-- [ ] Links to indices (`.github/skills/README.md`) are correct
+- [ ] Links to indices ([README.md](./../skills/README.md) are correct
 - [ ] The table formats render correctly in Markdown
 - [ ] Tone and terminology are consistent
 - [ ] No references to removed or renamed assets

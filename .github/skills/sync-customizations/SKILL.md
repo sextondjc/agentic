@@ -41,7 +41,7 @@ Optional:
 
 ## Maintenance Workflow
 
-1. Open [Source Catalog](./references/source-catalog.md).
+1. Open [source-catalog.md](./references/source-catalog.md).
 2. Re-evaluate each active source against current workspace behavior and spec guidance.
 3. Update In Use, Last Evaluated, and Current Status for each source.
 4. Record concrete deltas that affect workspace instruction or agent files.
@@ -74,8 +74,8 @@ Apply all checks for each instruction or agent file:
 
 ## Outputs
 
-- Updated [Source Catalog](./references/source-catalog.md).
-- Optional source evaluation artifact using [Source Evaluation Template](./references/source-evaluation-template.md).
+- Updated [source-catalog.md](./references/source-catalog.md).
+- Optional source evaluation artifact using [source-evaluation-template.md](./references/source-evaluation-template.md).
 - A concrete change list for `customization-authoring`.
 - A review request for `validate-customization` when updates were made.
 
@@ -87,3 +87,14 @@ This skill is complete for a run only when:
 - Any stale source is marked Needs Review or Deprecated.
 - All affected artifacts were routed to `customization-authoring`.
 - Post-update validation was routed to `validate-customization`.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
+

@@ -1,13 +1,13 @@
-﻿# Directory Index: /.github/skills/prd-generator
+# Directory Index: /.github/skills/prd-generator
 
 ## Summary
 Mirrored directory landing page for source path /.github/skills/prd-generator.
 
 ## Child Directories
-- [references](./references/index.md)
+- [index.md](./references/index.md)
 
 ## Files
-- [SKILL.md](./SKILL.md.ref.md)
+- [SKILL.md.ref.md](./SKILL.md.ref.md)
 
 ## See Also
-- [Reference Home](../../../index.md)
+- [index.md](./../../../index.md)

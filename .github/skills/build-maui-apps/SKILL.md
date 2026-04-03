@@ -106,3 +106,12 @@ The workflow is complete when:
 - The requested depth stop rule is met.
 - Quality and release gates are satisfied for the selected target.
 - Source-backed decisions are documented for future reuse.
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+

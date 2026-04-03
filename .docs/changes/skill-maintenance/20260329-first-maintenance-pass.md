@@ -4,7 +4,7 @@
 
 - Skill workflow: .github/skills/keeping-skills-current
 - Catalog: .github/skills/keeping-skills-current/references/source-catalog.md
-- Target set: workspace skills listed in .github/skills/README.md
+- Target set: workspace skills listed in [README.md](./../../../.github/skills/README.md)
 
 ## Maintenance Outcome
 

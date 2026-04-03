@@ -1,11 +1,11 @@
-﻿# Reference: .github/prompts/security-research.prompt.md
+# Reference: [security-research.prompt.md](./../../../../.github/prompts/security-research.prompt.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/prompts/security-research.prompt.md
-- Documented page: /.docs/reference/.github/prompts/security-research.prompt.md.ref.md
+- Path: /[security-research.prompt.md](./../../../../.github/prompts/security-research.prompt.md)
+- Documented page: /[security-research.prompt.md.ref.md](./security-research.prompt.md.ref.md)
 - File type: Markdown
 - Line count: 22
 
@@ -49,6 +49,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)

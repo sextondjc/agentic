@@ -1,11 +1,11 @@
-﻿# Reference: .github/instructions/validation-and-guards.instructions.md
+# Reference: [validation-and-guards.instructions.md](./../../../../.github/instructions/validation-and-guards.instructions.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/instructions/validation-and-guards.instructions.md
-- Documented page: /.docs/reference/.github/instructions/validation-and-guards.instructions.md.ref.md
+- Path: /[validation-and-guards.instructions.md](./../../../../.github/instructions/validation-and-guards.instructions.md)
+- Documented page: /[validation-and-guards.instructions.md.ref.md](./validation-and-guards.instructions.md.ref.md)
 - File type: Markdown
 - Line count: 19
 
@@ -51,6 +51,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)

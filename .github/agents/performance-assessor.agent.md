@@ -32,6 +32,13 @@ Hand-offs:
 - `defect-debugger` — when a hotspot must be reproduced or isolated before it can be reported precisely.
 - `sql-dba` — when bottlenecks are database-side or require live SQL Server analysis.
 
+## Preferred Companion Skills
+
+- `performance-research`: Mandatory methodology skill for investigation depth, evidence rules, and report format.
+- `task-research`: Use for broad workspace evidence gathering prior to bottleneck conclusions.
+- `critical-thinking`: Use to validate causality and prevent speculative optimization claims.
+- `delivery-status-grid`: Use to report assessment coverage and findings disposition.
+
 ## Operating Procedure
 
 1. Ask `orchestrator` to classify the request when scope is mixed or ambiguous.

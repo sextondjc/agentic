@@ -2,7 +2,7 @@
 
 Status: Completed execution tracker
 Date: 2026-04-02
-Source: `.docs/changes/customization-renames/rename-history.md`
+Source: [rename-history.md](./rename-history.md)
 
 ## Purpose
 Provide an exact pre-change file target list for each planned P1 rename before any names are changed.
@@ -23,22 +23,22 @@ Execution Status: Applied 2026-04-02
 
 | File | Scope |
 |---|---|
-| .github/copilot-instructions.md | required |
-| .github/prompts/curate-copilot.prompt.md | required |
-| .github/skills/README.md | required |
-| .github/skills/current-test-coverage/SKILL.md | required |
+| [copilot-instructions.md](./../../../.github/copilot-instructions.md) | required |
+| [curate-copilot.prompt.md](./../../../.github/prompts/curate-copilot.prompt.md) | required |
+| [README.md](./../../../.github/skills/README.md) | required |
+| [SKILL.md](./../../../.github/skills/current-test-coverage/SKILL.md) | required |
 | .github/skills/request-review/SKILL.md | required |
 | .github/skills/request-review/references/README.md | required |
-| .github/skills/task-execution/SKILL.md | required |
-| .github/skills/task-execution/code-quality-reviewer-prompt.md | required |
-| .github/skills/skill-review/references/history/index.md | required |
+| [SKILL.md](./../../../.github/skills/task-execution/SKILL.md) | required |
+| [code-quality-reviewer-prompt.md](./../../../.github/skills/task-execution/code-quality-reviewer-prompt.md) | required |
+| [index.md](./../../../.github/skills/skill-review/references/history/index.md) | required |
 | .github/skills/skill-review/references/history/request-review-history.md | required |
-| .docs/reference/customization-taxonomy-v1.md | required |
-| .docs/changes/skill-reviews/20260329-full-skill-review-grid.md | required |
-| .docs/changes/skill-reviews/20260401-full-skill-review-grid.md | required |
+| [customization-taxonomy-v1.md](./../../reference/customization-taxonomy-v1.md) | required |
+| [20260329-full-skill-review-grid.md](./../skill-reviews/20260329-full-skill-review-grid.md) | required |
+| [20260401-full-skill-review-grid.md](./../skill-reviews/20260401-full-skill-review-grid.md) | required |
 | .docs/changes/skill-reviews/request-review/20260329-review.md | required |
 | .docs/changes/skill-reviews/request-review/20260401-review.md | required |
-| .docs/changes/customization-renames/rename-history.md | required |
+| [rename-history.md](./rename-history.md) | required |
 
 ## P1-02 Skill Rename
 
@@ -50,20 +50,20 @@ Execution Status: Applied 2026-04-02
 
 | File | Scope |
 |---|---|
-| .github/copilot-instructions.md | required |
-| .github/prompts/curate-copilot.prompt.md | required |
-| .github/instructions/naming-conventions.instructions.md | required |
-| .github/skills/README.md | required |
+| [copilot-instructions.md](./../../../.github/copilot-instructions.md) | required |
+| [curate-copilot.prompt.md](./../../../.github/prompts/curate-copilot.prompt.md) | required |
+| [naming-conventions.instructions.md](./../../../.github/instructions/naming-conventions.instructions.md) | required |
+| [README.md](./../../../.github/skills/README.md) | required |
 | .github/skills/apply-review/SKILL.md | required |
 | .github/skills/apply-review/references/README.md | required |
-| .github/skills/skill-review/references/history/index.md | required |
+| [index.md](./../../../.github/skills/skill-review/references/history/index.md) | required |
 | .github/skills/skill-review/references/history/apply-review-history.md | required |
-| .docs/reference/customization-taxonomy-v1.md | required |
-| .docs/changes/skill-reviews/20260329-full-skill-review-grid.md | required |
-| .docs/changes/skill-reviews/20260401-full-skill-review-grid.md | required |
+| [customization-taxonomy-v1.md](./../../reference/customization-taxonomy-v1.md) | required |
+| [20260329-full-skill-review-grid.md](./../skill-reviews/20260329-full-skill-review-grid.md) | required |
+| [20260401-full-skill-review-grid.md](./../skill-reviews/20260401-full-skill-review-grid.md) | required |
 | .docs/changes/skill-reviews/apply-review/20260329-review.md | required |
 | .docs/changes/skill-reviews/apply-review/20260401-review.md | required |
-| .docs/changes/customization-renames/rename-history.md | required |
+| [rename-history.md](./rename-history.md) | required |
 
 ## P1-03 Skill Rename
 
@@ -75,22 +75,22 @@ Execution Status: Applied 2026-04-02
 
 | File | Scope |
 |---|---|
-| .github/copilot-instructions.md | required |
-| .github/instructions/naming-conventions.instructions.md | required |
-| .github/skills/README.md | required |
+| [copilot-instructions.md](./../../../.github/copilot-instructions.md) | required |
+| [naming-conventions.instructions.md](./../../../.github/instructions/naming-conventions.instructions.md) | required |
+| [README.md](./../../../.github/skills/README.md) | required |
 | .github/skills/complete-branch/SKILL.md | required |
 | .github/skills/complete-branch/references/README.md | required |
-| .github/skills/executing-plans/SKILL.md | required |
-| .github/skills/task-execution/SKILL.md | required |
-| .github/skills/skill-review/references/history/index.md | required |
+| [SKILL.md](./../../../.github/skills/executing-plans/SKILL.md) | required |
+| [SKILL.md](./../../../.github/skills/task-execution/SKILL.md) | required |
+| [index.md](./../../../.github/skills/skill-review/references/history/index.md) | required |
 | .github/skills/skill-review/references/history/complete-branch-history.md | required |
-| .docs/reference/customization-taxonomy-v1.md | required |
-| .docs/changes/skill-maintenance/20260401-maintenance.md | required |
-| .docs/changes/skill-reviews/20260329-full-skill-review-grid.md | required |
-| .docs/changes/skill-reviews/20260401-full-skill-review-grid.md | required |
+| [customization-taxonomy-v1.md](./../../reference/customization-taxonomy-v1.md) | required |
+| [20260401-maintenance.md](./../skill-maintenance/20260401-maintenance.md) | required |
+| [20260329-full-skill-review-grid.md](./../skill-reviews/20260329-full-skill-review-grid.md) | required |
+| [20260401-full-skill-review-grid.md](./../skill-reviews/20260401-full-skill-review-grid.md) | required |
 | .docs/changes/skill-reviews/complete-branch/20260329-review.md | required |
 | .docs/changes/skill-reviews/complete-branch/20260401-review.md | required |
-| .docs/changes/customization-renames/rename-history.md | required |
+| [rename-history.md](./rename-history.md) | required |
 
 ## P1-04 Agent Rename
 
@@ -102,25 +102,25 @@ Execution Status: Applied 2026-04-02
 
 | File | Scope |
 |---|---|
-| .github/copilot-instructions.md | required |
-| .github/agents/README.md | required |
-| .github/agents/benchmark-researcher.agent.md | required |
-| .github/agents/orchestrator.agent.md | required |
+| [copilot-instructions.md](./../../../.github/copilot-instructions.md) | required |
+| [README.md](./../../../.github/agents/README.md) | required |
+| [benchmark-researcher.agent.md](./../../../.github/agents/benchmark-researcher.agent.md) | required |
+| [orchestrator.agent.md](./../../../.github/agents/orchestrator.agent.md) | required |
 | .github/agents/performance-researcher.agent.md | required |
 | .github/agents/planning-research.agent.md | required |
-| .github/agents/security-researcher.agent.md | required |
-| .github/instructions/naming-conventions.instructions.md | required |
-| .github/prompts/curate-copilot.prompt.md | required |
-| .github/prompts/review-technical-docs.prompt.md | required |
-| .github/skills/curating-copilot-instructions/SKILL.md | required |
-| .github/skills/write-technical-docs/SKILL.md | required |
-| .github/skills/writing-plans/SKILL.md | required |
-| .docs/agent-routing-guide.md | required |
-| .docs/reference/customization-taxonomy-v1.md | required |
-| .docs/reference/coverage-report.md | required |
-| .docs/reference/.github/agents/index.md | required |
+| [security-researcher.agent.md](./../../../.github/agents/security-researcher.agent.md) | required |
+| [naming-conventions.instructions.md](./../../../.github/instructions/naming-conventions.instructions.md) | required |
+| [curate-copilot.prompt.md](./../../../.github/prompts/curate-copilot.prompt.md) | required |
+| [review-technical-docs.prompt.md](./../../../.github/prompts/review-technical-docs.prompt.md) | required |
+| [SKILL.md](./../../../.github/skills/curating-copilot-instructions/SKILL.md) | required |
+| [SKILL.md](./../../../.github/skills/write-technical-docs/SKILL.md) | required |
+| [SKILL.md](./../../../.github/skills/writing-plans/SKILL.md) | required |
+| [agent-routing-guide.md](./../../agent-routing-guide.md) | required |
+| [customization-taxonomy-v1.md](./../../reference/customization-taxonomy-v1.md) | required |
+| [coverage-report.md](./../../reference/coverage-report.md) | required |
+| [index.md](./../../reference/.github/agents/index.md) | required |
 | .docs/reference/.github/agents/planning-and-research.agent.md.ref.md | required |
-| .docs/changes/customization-renames/rename-history.md | required |
+| [rename-history.md](./rename-history.md) | required |
 
 ## P1-05 Agent Rename
 
@@ -132,20 +132,20 @@ Execution Status: Applied 2026-04-02
 
 | File | Scope |
 |---|---|
-| .github/copilot-instructions.md | required |
-| .github/agents/README.md | required |
+| [copilot-instructions.md](./../../../.github/copilot-instructions.md) | required |
+| [README.md](./../../../.github/agents/README.md) | required |
 | .github/agents/project-setup.agent.md | required |
-| .github/prompts/README.md | required |
+| [README.md](./../../../.github/prompts/README.md) | required |
 | .github/prompts/project-setup.prompt.md | required |
-| .github/skills/curating-copilot-instructions/SKILL.md | required |
+| [SKILL.md](./../../../.github/skills/curating-copilot-instructions/SKILL.md) | required |
 | .docs/_workspace-file-inventory.txt | required |
-| .docs/reference/customization-taxonomy-v1.md | required |
-| .docs/reference/coverage-report.md | required |
-| .docs/reference/.github/agents/index.md | required |
+| [customization-taxonomy-v1.md](./../../reference/customization-taxonomy-v1.md) | required |
+| [coverage-report.md](./../../reference/coverage-report.md) | required |
+| [index.md](./../../reference/.github/agents/index.md) | required |
 | .docs/reference/.github/agents/project-setup.agent.md.ref.md | required |
-| .docs/reference/.github/prompts/index.md | required |
+| [index.md](./../../reference/.github/prompts/index.md) | required |
 | .docs/reference/.github/prompts/project-setup.prompt.md.ref.md | required |
-| .docs/changes/customization-renames/rename-history.md | required |
+| [rename-history.md](./rename-history.md) | required |
 
 ## P1-06 Agent Rename
 
@@ -157,22 +157,22 @@ Execution Status: Applied 2026-04-02
 
 | File | Scope |
 |---|---|
-| .github/copilot-instructions.md | required |
-| .github/agents/README.md | required |
-| .github/agents/benchmark-researcher.agent.md | required |
-| .github/agents/orchestrator.agent.md | required |
+| [copilot-instructions.md](./../../../.github/copilot-instructions.md) | required |
+| [README.md](./../../../.github/agents/README.md) | required |
+| [benchmark-researcher.agent.md](./../../../.github/agents/benchmark-researcher.agent.md) | required |
+| [orchestrator.agent.md](./../../../.github/agents/orchestrator.agent.md) | required |
 | .github/agents/performance-researcher.agent.md | required |
-| .github/prompts/curate-copilot.prompt.md | required |
-| .github/prompts/performance-research.prompt.md | required |
-| .github/skills/performance-research/SKILL.md | required |
-| .github/skills/performance-research/references/performance-research-report-template.md | required |
+| [curate-copilot.prompt.md](./../../../.github/prompts/curate-copilot.prompt.md) | required |
+| [performance-research.prompt.md](./../../../.github/prompts/performance-research.prompt.md) | required |
+| [SKILL.md](./../../../.github/skills/performance-research/SKILL.md) | required |
+| [performance-research-report-template.md](./../../../.github/skills/performance-research/references/performance-research-report-template.md) | required |
 | .docs/_workspace-file-inventory.txt | required |
-| .docs/agent-routing-guide.md | required |
-| .docs/reference/customization-taxonomy-v1.md | required |
-| .docs/reference/coverage-report.md | required |
-| .docs/reference/.github/agents/index.md | required |
+| [agent-routing-guide.md](./../../agent-routing-guide.md) | required |
+| [customization-taxonomy-v1.md](./../../reference/customization-taxonomy-v1.md) | required |
+| [coverage-report.md](./../../reference/coverage-report.md) | required |
+| [index.md](./../../reference/.github/agents/index.md) | required |
 | .docs/reference/.github/agents/performance-researcher.agent.md.ref.md | required |
-| .docs/changes/customization-renames/rename-history.md | required |
+| [rename-history.md](./rename-history.md) | required |
 
 ## P1-07 Agent Rename
 
@@ -184,22 +184,22 @@ Execution Status: Applied 2026-04-02
 
 | File | Scope |
 |---|---|
-| .github/copilot-instructions.md | required |
-| .github/agents/README.md | required |
+| [copilot-instructions.md](./../../../.github/copilot-instructions.md) | required |
+| [README.md](./../../../.github/agents/README.md) | required |
 | .github/agents/debug.agent.md | required |
-| .github/agents/orchestrator.agent.md | required |
+| [orchestrator.agent.md](./../../../.github/agents/orchestrator.agent.md) | required |
 | .github/agents/performance-researcher.agent.md | required |
-| .github/agents/security-researcher.agent.md | required |
-| .github/instructions/naming-conventions.instructions.md | required |
-| .github/skills/writing-plans/SKILL.md | required |
+| [security-researcher.agent.md](./../../../.github/agents/security-researcher.agent.md) | required |
+| [naming-conventions.instructions.md](./../../../.github/instructions/naming-conventions.instructions.md) | required |
+| [SKILL.md](./../../../.github/skills/writing-plans/SKILL.md) | required |
 | .docs/_workspace-file-inventory.txt | required |
-| .docs/agent-routing-guide.md | required |
-| .docs/plans/inventory-first-technical-reference-plan-v1.md | required |
-| .docs/reference/customization-taxonomy-v1.md | required |
-| .docs/reference/coverage-report.md | required |
-| .docs/reference/.github/agents/index.md | required |
+| [agent-routing-guide.md](./../../agent-routing-guide.md) | required |
+| [inventory-first-technical-reference-plan-v1.md](./../../plans/inventory-first-technical-reference-plan-v1.md) | required |
+| [customization-taxonomy-v1.md](./../../reference/customization-taxonomy-v1.md) | required |
+| [coverage-report.md](./../../reference/coverage-report.md) | required |
+| [index.md](./../../reference/.github/agents/index.md) | required |
 | .docs/reference/.github/agents/debug.agent.md.ref.md | required |
-| .docs/changes/customization-renames/rename-history.md | required |
+| [rename-history.md](./rename-history.md) | required |
 
 ## P1-08 Agent Rename
 
@@ -211,27 +211,27 @@ Execution Status: Applied 2026-04-02
 
 | File | Scope |
 |---|---|
-| .github/copilot-instructions.md | required |
-| .github/agents/README.md | required |
+| [copilot-instructions.md](./../../../.github/copilot-instructions.md) | required |
+| [README.md](./../../../.github/agents/README.md) | required |
 | .github/agents/architecture.agent.md | required |
-| .github/agents/csharp-engineer.agent.md | required |
-| .github/agents/orchestrator.agent.md | required |
+| [csharp-engineer.agent.md](./../../../.github/agents/csharp-engineer.agent.md) | required |
+| [orchestrator.agent.md](./../../../.github/agents/orchestrator.agent.md) | required |
 | .github/agents/performance-researcher.agent.md | required |
 | .github/agents/project-setup.agent.md | required |
-| .github/agents/security-researcher.agent.md | required |
-| .github/instructions/naming-conventions.instructions.md | required |
-| .github/prompts/curate-copilot.prompt.md | required |
+| [security-researcher.agent.md](./../../../.github/agents/security-researcher.agent.md) | required |
+| [naming-conventions.instructions.md](./../../../.github/instructions/naming-conventions.instructions.md) | required |
+| [curate-copilot.prompt.md](./../../../.github/prompts/curate-copilot.prompt.md) | required |
 | .github/prompts/project-setup.prompt.md | required |
-| .github/prompts/review-technical-docs.prompt.md | required |
-| .github/skills/write-technical-docs/SKILL.md | required |
-| .docs/agent-routing-guide.md | required |
-| .docs/reference/customization-taxonomy-v1.md | required |
-| .docs/reference/coverage-report.md | required |
-| .docs/reference/.github/agents/index.md | required |
+| [review-technical-docs.prompt.md](./../../../.github/prompts/review-technical-docs.prompt.md) | required |
+| [SKILL.md](./../../../.github/skills/write-technical-docs/SKILL.md) | required |
+| [agent-routing-guide.md](./../../agent-routing-guide.md) | required |
+| [customization-taxonomy-v1.md](./../../reference/customization-taxonomy-v1.md) | required |
+| [coverage-report.md](./../../reference/coverage-report.md) | required |
+| [index.md](./../../reference/.github/agents/index.md) | required |
 | .docs/reference/.github/agents/architecture-and-ddd.agent.md.ref.md | required |
-| .docs/changes/customization-renames/rename-history.md | required |
-| .github/instructions/architecture.instructions.md | conditional: instruction asset name may remain unchanged |
-| .github/prompts/write-component-docs.prompt.md | conditional: contains generic tag example, not necessarily agent reference |
+| [rename-history.md](./rename-history.md) | required |
+| [architecture.instructions.md](./../../../.github/instructions/architecture.instructions.md) | conditional: instruction asset name may remain unchanged |
+| [write-component-docs.prompt.md](./../../../.github/prompts/write-component-docs.prompt.md) | conditional: contains generic tag example, not necessarily agent reference |
 
 ## Batch Totals
 

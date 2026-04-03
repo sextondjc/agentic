@@ -55,21 +55,21 @@ Optional inputs:
 
 ## Required Outputs
 
-- A per-skill review report in workspace docs using template path: `.github/skills/skill-review/references/skill-review-report-template.md`.
-- A conflict report when needed using template path: `.github/skills/skill-review/references/skill-conflict-report-template.md`.
-- Updated per-skill history using path: `.github/skills/skill-review/references/history/README.md`.
+- A per-skill review report in workspace docs using template path: [skill-review-report-template.md](./references/skill-review-report-template.md).
+- A conflict report when needed using template path: [skill-conflict-report-template.md](./references/skill-conflict-report-template.md).
+- Updated per-skill history using path: [README.md](./references/history/README.md).
 - Review result summaries MUST be returned in Markdown grid format (tables), not prose lists.
 - Aggregate multi-skill results MUST include at least one consolidated grid with per-skill outcomes.
 - Per-skill review files MUST be stored under .docs/changes/skill-reviews/<skill-name>/.
 
 ## Assets
 
-- Script assets are available at path: `.github/skills/skill-review/references/scripts/README.md`.
+- Script assets are available at path: [README.md](./references/scripts/README.md).
 - Use generate-baseline-skill-reviews.ps1 to run full baseline audits and history updates.
 - Use get-skill-metadata-audit.ps1 for quick frontmatter/trigger/reference checks.
 - Use generate-targeted-skill-reviews.ps1 for focused remediation reruns on selected skills.
 - Use refresh-history-index-and-grid.ps1 to rebuild history index and the date-scoped aggregate grid.
-- External copilot-skill mirrors used for evidence capture are stored at path: `.github/skills/skill-review/references/mirrors/README.md`.
+- External copilot-skill mirrors used for evidence capture are stored at path: [README.md](./references/mirrors/README.md).
 
 ## Workflow
 

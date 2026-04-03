@@ -14,11 +14,11 @@ This taxonomy is authoritative for conceptual classification and naming analysis
 
 Operational routing and lane ownership remain governed by:
 
-1. `.docs/reference/planning-execution-review-governance.md`
-2. `.github/agents/README.md`
-3. `.github/instructions/README.md`
-4. `.github/prompts/README.md`
-5. `.github/skills/README.md`
+1. [planning-execution-review-governance.md](./planning-execution-review-governance.md)
+2. [README.md](./../../.github/agents/README.md)
+3. [README.md](./../../.github/instructions/README.md)
+4. [README.md](./../../.github/prompts/README.md)
+5. [README.md](./../../.github/skills/README.md)
 
 ## Field Definitions
 
@@ -117,10 +117,10 @@ Operational routing and lane ownership remain governed by:
 
 Compared against:
 
-- `.github/agents/README.md`
-- `.github/instructions/README.md`
-- `.github/prompts/README.md`
-- `.github/skills/README.md`
+- [README.md](./../../.github/agents/README.md)
+- [README.md](./../../.github/instructions/README.md)
+- [README.md](./../../.github/prompts/README.md)
+- [README.md](./../../.github/skills/README.md)
 
 | Area | v1 Position | Current Catalog Position | Outcome | Follow-Up |
 |---|---|---|---|---|
@@ -140,9 +140,9 @@ The following topics are intentionally deferred to a separate v2 plan:
 
 ## Traceability
 
-- Plan: `.docs/plans/20260402-customization-taxonomy-promotion-plan.md`
-- ADR: `.docs/adr/20260402-customization-taxonomy-promotion-boundary.md`
-- Changes: `.docs/changes/20260402-customization-taxonomy-promotion-changes.md`
+- Plan: [20260402-customization-taxonomy-promotion-plan.md](./../plans/20260402-customization-taxonomy-promotion-plan.md)
+- ADR: [20260402-customization-taxonomy-promotion-boundary.md](./../adr/20260402-customization-taxonomy-promotion-boundary.md)
+- Changes: [20260402-customization-taxonomy-promotion-changes.md](./../changes/20260402-customization-taxonomy-promotion-changes.md)
 
 
 

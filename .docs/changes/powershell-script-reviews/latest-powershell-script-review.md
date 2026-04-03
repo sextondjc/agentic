@@ -1,7 +1,7 @@
 # PowerShell Script Review - 20260329 (Post-Fix)
 
 - GeneratedAtUtc: 2026-03-29T15:06:00Z
-- RootPath: c:\Projects\agentic_templates
+- RootPath: c:/Projects/agentic_templates
 - Review Scope: All .ps1 files in workspace
 - Analysis Sources: IDE Problems diagnostics, powershell-reviewer agent, direct ScriptAnalyzer validation
 

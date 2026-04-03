@@ -78,3 +78,18 @@ A routing decision is complete only when:
 - The decision includes rationale and a concrete target path.
 - Overlap with existing agents, instructions, and skills was checked.
 - The chosen artifact aligns with activation model and scope.
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
+

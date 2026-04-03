@@ -1,4 +1,4 @@
-﻿# Directory Index: /.github/skills/prd-generator/references
+# Directory Index: /.github/skills/prd-generator/references
 
 ## Summary
 Mirrored directory landing page for source path /.github/skills/prd-generator/references.
@@ -7,7 +7,7 @@ Mirrored directory landing page for source path /.github/skills/prd-generator/re
 - None
 
 ## Files
-- [prd-template.md](./prd-template.md.ref.md)
+- [prd-template.md.ref.md](./prd-template.md.ref.md)
 
 ## See Also
-- [Reference Home](../../../../index.md)
+- [index.md](./../../../../index.md)

@@ -23,3 +23,18 @@ Apply focused cleanup and modernization passes that improve maintainability, saf
 - Improve nullability annotations.
 - Reduce warnings and analyzer findings.
 - Replace legacy syntax with modern, readable C# where supported by the target framework.
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
+

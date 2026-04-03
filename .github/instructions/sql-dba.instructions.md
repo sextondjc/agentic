@@ -33,7 +33,7 @@ description: 'SQL Server standards for T-SQL files: parameterization, naming, sa
 
 ## Compatibility
 - Target SQL Server 2019 or later unless the project explicitly targets an earlier version.
-- Avoid deprecated features. Flag usage of `SET ROWCOUNT`, `\!= `, text/ntext/image types, and non-ANSI joins.
+- Avoid deprecated features. Flag usage of `SET ROWCOUNT`, `/!= `, text/ntext/image types, and non-ANSI joins.
 - Use `TRY_CAST` and `TRY_CONVERT` over `CAST`/`CONVERT` when input is untrusted.
 
 ## Security

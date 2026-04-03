@@ -1,11 +1,11 @@
-# Reference: .github/agents/performance-assessor.agent.md
+# Reference: [performance-assessor.agent.md](./../../../../.github/agents/performance-assessor.agent.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/agents/performance-assessor.agent.md
-- Documented page: /.docs/reference/.github/agents/performance-assessor.agent.md.ref.md
+- Path: /[performance-assessor.agent.md](./../../../../.github/agents/performance-assessor.agent.md)
+- Documented page: /[performance-assessor.agent.md.ref.md](./performance-assessor.agent.md.ref.md)
 - File type: Markdown
 - Line count: 138
 
@@ -56,7 +56,7 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)
 

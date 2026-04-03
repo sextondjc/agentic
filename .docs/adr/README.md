@@ -20,5 +20,5 @@ Example: `20260402-repository-pattern-for-data-access.md`
 
 ## References
 
-- Skill: [.github/skills/adr-generator/SKILL.md](../../.github/skills/adr-generator/SKILL.md)
-- Governance: [.docs/reference/planning-execution-review-governance.md](../reference/planning-execution-review-governance.md)
+- Skill: [SKILL.md](./../../SKILL.md)
+- Governance: [planning-execution-review-governance.md](./../reference/planning-execution-review-governance.md)

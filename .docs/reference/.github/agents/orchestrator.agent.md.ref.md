@@ -1,11 +1,11 @@
-﻿# Reference: .github/agents/orchestrator.agent.md
+# Reference: [orchestrator.agent.md](./../../../../.github/agents/orchestrator.agent.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/agents/orchestrator.agent.md
-- Documented page: /.docs/reference/.github/agents/orchestrator.agent.md.ref.md
+- Path: /[orchestrator.agent.md](./../../../../.github/agents/orchestrator.agent.md)
+- Documented page: /[orchestrator.agent.md.ref.md](./orchestrator.agent.md.ref.md)
 - File type: Markdown
 - Line count: 107
 
@@ -56,6 +56,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)

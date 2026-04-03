@@ -23,7 +23,7 @@
 ```
 
 ## Excluded During This Run
-- .docs/plans/inventory-first-technical-reference-plan-v1.md
+- [inventory-first-technical-reference-plan-v1.md](./../plans/inventory-first-technical-reference-plan-v1.md)
 - .docs/_workspace-file-inventory.txt
 
 ## Documentation Mapping

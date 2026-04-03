@@ -23,7 +23,7 @@
 | GOV-M4 | Governance instruction coverage | Pass | `lifecycle-governance.instructions.md` applies to `**/*.md`. | High |
 | GOV-S1 | Traceability ID usage | Pass | Promotion artifacts include `VIS-*`, `PLAN-*`, `DEC-*` references. | Medium |
 | GOV-S2 | ADR directory exists | Pass | `.docs/adr/` present with README and decision artifact. | Medium |
-| GOV-S3 | Change history is indexed | Pass | `.docs/changes/README.md` indexes change categories including governance audits. | Medium |
+| GOV-S3 | Change history is indexed | Pass | [README.md](./../../../README.md) indexes change categories including governance audits. | Medium |
 | GOV-S4 | Review cadence mechanism | Pass with advisory | Manual monthly cadence prompt exists; CI trigger intentionally deferred. | Low |
 | GOV-S5 | Taxonomy currency | Pass | Taxonomy updated to current names and governance assets; status promoted from draft to approved baseline. | Medium |
 | GOV-S6 | No orphaned governance documents | Pass | Taxonomy and routing guide are discoverable from reference surfaces. | Medium |

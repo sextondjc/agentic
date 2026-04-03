@@ -4,14 +4,14 @@
 Workspace reference set generated in review mode from a baseline snapshot of 49 source files.
 
 ## Core Pages
-- [Code Structure](./code-structure.md)
-- [Coverage Report](./coverage-report.md)
-- [Customization Taxonomy v1](./customization-taxonomy-v1.md)
-- [Agent and Skill Routing Guide](../agent-routing-guide.md)
+- [code-structure.md](./code-structure.md)
+- [coverage-report.md](./coverage-report.md)
+- [customization-taxonomy-v1.md](./customization-taxonomy-v1.md)
+- [agent-routing-guide.md](./../agent-routing-guide.md)
 
 ## Top-Level Areas
-- [.docs](./.docs/index.md)
-- [.github](./.github/index.md)
+- [index.md](./.docs/index.md)
+- [index.md](./.github/index.md)
 
 ## Reliability Gates
 - Evidence Gate: claims are sourced from file metadata and headings.

@@ -1,6 +1,6 @@
 ---
 name: powershell-script-library
-description: Maintain a catalog of reusable PowerShell scripts across automation, governance, and orchestration work with strict deduplication. Work with planning/orchestration so new scripts check the catalog first.
+description: Use when maintaining or adding reusable PowerShell scripts across automation, governance, and orchestration with strict deduplication and catalog-first reuse.
 ---
 
 # PowerShell Script Library
@@ -12,10 +12,29 @@ Prevent script duplication and maintain a discoverable, well-organized catalog o
 ## Trigger This Skill When
 
 - A skill or agent needs to write a new PowerShell script.
-- Before creating a new script, check the catalog at `.github/scripts/powershell/README.md`.
+- Before creating a new script, check the catalog at [README.md](./../../scripts/powershell/README.md).
 - Maintaining or refactoring existing scripts to reduce duplication.
 - Updating script dependencies or integrations with other customizations.
 - A new domain or automation task emerges that might benefit from a shared utility.
+
+## Required Inputs
+
+- Target task or automation need.
+- Candidate script name and intended scope.
+- Expected consumers (agents or skills) of the script.
+- Current catalog path: [README.md](./../../scripts/powershell/README.md).
+
+## Required Outputs
+
+- Reuse decision (`Reuse Existing`, `Extend Existing`, or `Create New`).
+- Updated script (if changed) under `.github/scripts/powershell/`.
+- Updated catalog entry in [README.md](./../../scripts/powershell/README.md).
+- Change tracking entry under `.docs/changes/` when scripts are added or materially changed.
+
+## References
+
+- [README.md](./../README.md)
+- [README.md](./../../scripts/powershell/README.md)
 
 ## Workflow
 
@@ -23,7 +42,7 @@ Prevent script duplication and maintain a discoverable, well-organized catalog o
 
 Before writing or requesting a new script:
 
-1. **Read** `.github/scripts/powershell/README.md` for the current catalog.
+1. **Read** [README.md](./../../scripts/powershell/README.md) for the current catalog.
 2. **Search** by function name, purpose, or asset type (agents, skills, instructions, etc.).
 3. **Propose reuse**: If a script partially exists, extend it rather than duplicate.
 4. **Justify new script**: If no existing script fits, document why and plan accordingly.
@@ -58,7 +77,7 @@ Push-Location c:/Projects/agentic_templates
 
 When a new script is ready:
 
-1. **Add to README**: Update `.github/scripts/powershell/README.md` Script Catalog table.
+1. **Add to README**: Update [README.md](./../../scripts/powershell/README.md) Script Catalog table.
 2. **Add metadata**: Script, Purpose, Usage example, Output format.
 3. **Update Workflow Integration section**: Note which skills/agents call it.
 4. **Create change artifact**: Log the new script addition in `.docs/changes/`.
@@ -130,7 +149,7 @@ Pop-Location
 
 When a new script is cataloged:
 
-- Update `.github/scripts/powershell/README.md` with entry.
+- Update [README.md](./../../scripts/powershell/README.md) with entry.
 - Document usage example and expected output format.
 - Record in change artifact logs.
 - Notify skills that might benefit from the new script.
@@ -146,7 +165,12 @@ A script is properly cataloged and ready for reuse when:
 - [ ] Script has correct header comment with usage and output docs.
 - [ ] Script uses `Push-Location` pattern or documents workspace root requirement.
 - [ ] Script evaluated by `powershell-reviewer` for consistency and safety.
-- [ ] Script is registered in `.github/scripts/powershell/README.md` catalog.
+- [ ] Script is registered in [README.md](./../../scripts/powershell/README.md) catalog.
 - [ ] Integration dependencies are updated (e.g., audit-governance, skills that use it).
 - [ ] Change artifact records the addition with link to new script.
 - [ ] At least one skill or agent references it in its guide.
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+

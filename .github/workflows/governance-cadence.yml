@@ -1,0 +1,41 @@
+name: Governance Cadence
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run monthly on the first day at 09:00 UTC.
+    - cron: '0 9 1 * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: governance-cadence
+  cancel-in-progress: false
+
+jobs:
+  governance-checks:
+    name: Governance Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run governance script checks
+        shell: pwsh
+        run: |
+          Set-StrictMode -Version Latest
+          $ErrorActionPreference = 'Stop'
+
+          Push-Location $env:GITHUB_WORKSPACE
+          try {
+            ./.github/scripts/powershell/test-frontmatter-validity.ps1 -AssetType instructions
+            ./.github/scripts/powershell/test-frontmatter-validity.ps1 -AssetType agents
+            ./.github/scripts/powershell/test-catalog-integrity.ps1 -AssetType agents | Out-Null
+            ./.github/scripts/powershell/test-catalog-integrity.ps1 -AssetType skills | Out-Null
+            ./.github/scripts/powershell/test-catalog-integrity.ps1 -AssetType instructions | Out-Null
+            ./.github/scripts/powershell/test-hub-file-sync.ps1 | Out-Null
+          }
+          finally {
+            Pop-Location
+          }

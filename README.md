@@ -1,6 +1,14 @@
 # Lean .NET Agentic Templates
 
-This workspace is a governance-first template for agent-assisted .NET delivery. It centralizes instructions, skills, prompts, and specialist agents so planning, implementation, and review remain traceable and consistent.
+This workspace is a governance-first compendium of reusable customizations and skills for agent-assisted .NET delivery. It centralizes instructions, skills, prompts, and specialist agents so planning, implementation, and review remain traceable and consistent.
+
+## Repository Scope (Authoritative)
+
+This repository is customization-only.
+
+- It is not an application or solution host.
+- It must not contain product C# projects (`*.csproj`) under normal operation.
+- Build/runtime assets such as `.editorconfig` and `Directory.Build.targets` are maintained as reusable skill reference/template artifacts and are intended to be applied to external target repositories.
 
 ## Workspace At A Glance
 
@@ -19,11 +27,11 @@ This workspace is a governance-first template for agent-assisted .NET delivery. 
 
 | Path | What You Keep Here |
 |---|---|
-| `.github/copilot-instructions.md` | Canonical workspace operating model, preferred agents, and preferred skills. |
-| `.github/instructions/README.md` | Lane catalog for instruction files and governance mapping. |
-| `.github/skills/README.md` | Skill discovery index with lane assignments and usage guidance. |
-| `.docs/agent-routing-guide.md` | Routing guidance for choosing the right agent/skill path. |
-| `.docs/reference/planning-execution-review-governance.md` | Lifecycle taxonomy and traceability model. |
+| [copilot-instructions.md](./.github/copilot-instructions.md) | Canonical workspace operating model, preferred agents, and preferred skills. |
+| [README.md](./.github/instructions/README.md) | Lane catalog for instruction files and governance mapping. |
+| [README.md](./.github/skills/README.md) | Skill discovery index with lane assignments and usage guidance. |
+| [agent-routing-guide.md](./.docs/agent-routing-guide.md) | Routing guidance for choosing the right agent/skill path. |
+| [planning-execution-review-governance.md](./.docs/reference/planning-execution-review-governance.md) | Lifecycle taxonomy and traceability model. |
 
 ## Lifecycle Routing
 
@@ -38,8 +46,8 @@ Use this matrix to select the correct execution route.
 
 ## Quick Start
 
-1. Review `.github/copilot-instructions.md`.
-2. Pick a route using `.docs/agent-routing-guide.md`.
+1. Review [copilot-instructions.md](./.github/copilot-instructions.md).
+2. Pick a route using [agent-routing-guide.md](./.docs/agent-routing-guide.md).
 3. If no plan exists, create one under `.docs/plans` before code changes.
 4. Execute with the appropriate skill/agent and update `.docs/changes` progressively.
 5. Run a review pass (`code-reviewer`, `security-researcher`, or `performance-assessor` as needed).
@@ -71,6 +79,7 @@ Use this matrix to select the correct execution route.
 | CON-001 | C# data access uses Syrx repositories only; do not introduce EF Core. |
 | CON-002 | Tests use xUnit and Moq; FluentAssertions is prohibited. |
 | CON-003 | Lifecycle lanes are limited to Planning, Execution, and Review. |
+| CON-004 | This repository is customization-only and does not host product C# projects. |
 
 ### Acceptance Criteria
 
@@ -89,8 +98,8 @@ Use this matrix to select the correct execution route.
 
 ## Related Indexes
 
-- `.github/instructions/README.md`
-- `.github/skills/README.md`
-- `.github/agents/README.md`
-- `.github/prompts/README.md`
-- `.docs/reference/planning-execution-review-governance.md`
+- [README.md](./.github/instructions/README.md)
+- [README.md](./.github/skills/README.md)
+- [README.md](./.github/agents/README.md)
+- [README.md](./.github/prompts/README.md)
+- [planning-execution-review-governance.md](./.docs/reference/planning-execution-review-governance.md)

@@ -1,7 +1,7 @@
 ---
 name: csharp
 description: 'Consolidated C# development, style, and engineering standards.'
-applyTo: '**/*.cs'
+applyTo: '**/*.cs,**/*.csproj'
 ---
 # C# Development & Standards
 
@@ -10,7 +10,10 @@ applyTo: '**/*.cs'
 - Enable nullable reference types; annotate strictly.
  - Treat compiler warnings as errors (enable `TreatWarningsAsErrors`).
  - Enable analyzers: StyleCop (style), Roslyn analyzers (safety), Security analyzers (credential leakage).
- - Use `global using` for ubiquitous framework namespaces; avoid overuse.
+ - For any `*.csproj` with more than one `*.cs` file, require a project-level `Usings.cs` file containing all import `global using` directives.
+ - `Usings.cs` is the only allowed file name for project-wide global imports.
+ - All other `*.cs` files must not contain import `using` directives; move imports to `Usings.cs`.
+ - Keep `global using` entries intentional; include only commonly required namespaces.
  - Prefer file-scoped namespaces.
  - Utilize raw string literals for multi-line JSON/SQL only when parameterization remains intact.
 
@@ -35,6 +38,9 @@ applyTo: '**/*.cs'
 ## Naming & Structure
 - PascalCase for types/methods; camelCase locals; interfaces prefixed `I`.
 - Namespace organization by feature/domain.
+- Exactly one top-level type per `*.cs` file (class, record, struct, enum, interface, delegate, etc.).
+- Nested types are the only allowed exception to the one-type-per-file rule.
+- Minimal API route mappings must be separated into dedicated files (for example endpoint modules or extension classes) rather than being declared inline in `Program.cs`.
 - Follow `.editorconfig` and local project conventions first.
 
 ## Comments & Documentation
@@ -148,7 +154,7 @@ public interface IStringParser { Task<int> ParseAsync(string value, Cancellation
 ```
 
 ```diff
-- var sb = new StringBuilder(); sb.AppendLine("{\"x\":1}");
+- var sb = new StringBuilder(); sb.AppendLine("{/"x/":1}");
 + var json = """
 {"x":1}
 """;

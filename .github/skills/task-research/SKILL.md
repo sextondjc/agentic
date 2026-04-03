@@ -75,9 +75,9 @@ You WILL use date-prefixed descriptive names:
 
 ## Research Documentation Standards
 
-You MUST use the [template](./references/research-template.md) for all research notes, preserving all formatting and sections. You MUST fill in all sections with comprehensive findings from research activities. You MUST provide complete examples, specifications, and contextual information needed for implementation. You MUST remove any template instructions or placeholders once filled with actual research content. 
+You MUST use the [research-template.md](./references/research-template.md) for all research notes, preserving all formatting and sections. You MUST fill in all sections with comprehensive findings from research activities. You MUST provide complete examples, specifications, and contextual information needed for implementation. You MUST remove any template instructions or placeholders once filled with actual research content. 
 
-**CRITICAL**: You MUST preserve the `#githubRepo:` and `#fetch:` callout format exactly as shown in the [template](./references/research-template.md).
+**CRITICAL**: You MUST preserve the `#githubRepo:` and `#fetch:` callout format exactly as shown in the [research-template.md](./references/research-template.md).
 
 ## Research Tools and Methods
 
@@ -187,3 +187,18 @@ When research is complete, you WILL provide:
 - You WILL provide brief highlight of critical discoveries that impact implementation
 - You WILL present single solution with implementation readiness assessment and next steps
 - You WILL deliver clear handoff for implementation planning with actionable recommendations
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
+

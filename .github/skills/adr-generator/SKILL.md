@@ -112,3 +112,18 @@ Do not save the ADR until all checklist items pass:
 - Precise, unambiguous language.
 - Both benefits and trade-offs represented honestly.
 - No vague consequences ("improved maintainability" must state what specifically changes).
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
+

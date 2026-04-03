@@ -71,8 +71,8 @@ Optional:
 
 ## Required Outputs
 
-- A per-artifact review report using [customization-review-report-template.md](references/customization-review-report-template.md).
-- A conflict report when needed using [customization-conflict-report-template.md](references/customization-conflict-report-template.md).
+- A per-artifact review report using [customization-review-report-template.md](./references/customization-review-report-template.md).
+- A conflict report when needed using [customization-conflict-report-template.md](./references/customization-conflict-report-template.md).
 - Review result summaries MUST be returned in Markdown grid format (tables), not prose lists.
 - Aggregate multi-artifact results MUST include at least one consolidated grid with per-artifact outcomes.
 - Per-artifact review files MUST be stored under `.docs/changes/customization-reviews/<artifact-name>/`.

@@ -1,11 +1,11 @@
-# Reference: .github/agents/architecture-designer.agent.md
+# Reference: [architecture-designer.agent.md](./../../../../.github/agents/architecture-designer.agent.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/agents/architecture-designer.agent.md
-- Documented page: /.docs/reference/.github/agents/architecture-designer.agent.md.ref.md
+- Path: /[architecture-designer.agent.md](./../../../../.github/agents/architecture-designer.agent.md)
+- Documented page: /[architecture-designer.agent.md.ref.md](./architecture-designer.agent.md.ref.md)
 - File type: Markdown
 - Line count: 144
 
@@ -56,7 +56,7 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)
 

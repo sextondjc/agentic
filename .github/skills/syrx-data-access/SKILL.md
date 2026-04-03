@@ -31,7 +31,7 @@ Read in this order when behavior is unclear:
    - `references/quick-reference.md`
    - `references/implementation-examples.md`
    - `references/review-checklist.md`
-2. Project instructions, when present (for example `/.github/instructions/syrx.instructions.md`).
+2. Project instructions, when present (for example `/[syrx.instructions.md](./../../instructions/syrx.instructions.md)`).
 3. Project reference docs, when present (for example `/.docs/reference/`).
 4. Syrx framework docs and package documentation available to the project.
 
@@ -101,3 +101,18 @@ See `references/review-checklist.md` for review criteria and `references/impleme
 - Returning unbounded result sets for large collections.
 - Mixing domain rules into repository persistence code.
 - Using complex mapping patterns without measured need.
+
+## Inputs
+
+- User request context and target scope for this skill invocation.
+
+## Required Outputs
+
+- A concrete, workspace-applicable result aligned with this skill purpose.
+
+## Workflow
+
+1. Gather required context and constraints from the workspace and user request.
+2. Execute the skill-specific steps and produce the required artifacts or decisions.
+3. Validate outputs for completeness and consistency with active workspace instructions.
+

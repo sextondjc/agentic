@@ -1,11 +1,11 @@
-﻿# Reference: .github/prompts/testing-xunit.prompt.md
+# Reference: [testing-xunit.prompt.md](./../../../../.github/prompts/testing-xunit.prompt.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /.github/prompts/testing-xunit.prompt.md
-- Documented page: /.docs/reference/.github/prompts/testing-xunit.prompt.md.ref.md
+- Path: /[testing-xunit.prompt.md](./../../../../.github/prompts/testing-xunit.prompt.md)
+- Documented page: /[testing-xunit.prompt.md.ref.md](./testing-xunit.prompt.md.ref.md)
 - File type: Markdown
 - Line count: 41
 
@@ -53,6 +53,6 @@ Advanced:
 - Cross-check this page from coverage-report.md to verify documentation traceability.
 
 ## See Also
-- [Workspace Reference Home](../../index.md)
-- [Coverage Report](../../coverage-report.md)
-- [Code Structure](../../code-structure.md)
+- [index.md](./../../index.md)
+- [coverage-report.md](./../../coverage-report.md)
+- [code-structure.md](./../../code-structure.md)

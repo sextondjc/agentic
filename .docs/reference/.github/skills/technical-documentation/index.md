@@ -1,13 +1,13 @@
-﻿# Directory Index: /.github/skills/technical-documentation
+# Directory Index: /.github/skills/technical-documentation
 
 ## Summary
 Mirrored directory landing page for source path /.github/skills/technical-documentation.
 
 ## Child Directories
-- [references](./references/index.md)
+- [index.md](./references/index.md)
 
 ## Files
-- [SKILL.md](./SKILL.md.ref.md)
+- [SKILL.md.ref.md](./SKILL.md.ref.md)
 
 ## See Also
-- [Reference Home](../../../index.md)
+- [index.md](./../../../index.md)
