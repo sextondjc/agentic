@@ -12,6 +12,7 @@ This catalog assigns each instruction file to a primary lifecycle lane.
 | `technical-docs.instructions.md` | Planning | Execution | Defines standards for durable planning and specification docs. |
 | `async-programming.instructions.md` | Execution | Review | Governs implementation behavior for async and concurrency. |
 | `csharp.instructions.md` | Execution | Review | Governs C# engineering implementation standards. |
+| `namespace-and-assembly-boundaries.instructions.md` | Execution | Review | Governs namespace and assembly layer separation rules in .NET projects. |
 | `syrx.instructions.md` | Execution | Review | Governs Syrx repository and SQL implementation patterns. |
 | `ci-cd.instructions.md` | Execution | Review | Governs CI/CD implementation and secure automation. |
 | `sql-dba.instructions.md` | Execution | Review | Governs SQL script implementation and operational safety. |

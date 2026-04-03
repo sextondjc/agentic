@@ -34,6 +34,7 @@ If a request spans multiple phases, break it into explicit phases and state whic
 | API integration design | `api-design` skill | Design resilient API clients and service integrations | Replace the primary implementation or planning agent |
 | ADR authoring | `adr-generator` skill with `architecture-designer` | Write ADRs in `.docs/adr` | Act as the main architecture decision-maker |
 | Product and PRD work | `prd-generator` skill | Create PRDs and requirements artifacts | Perform engineering implementation |
+| PowerShell script creation or catalog management | `powershell-script-library` skill | Check catalog first for reuse, deduplication; validate script consistency with `powershell-reviewer` | Write scripts without consulting the catalog or deduplication registry |
 
 ## Routing Rules
 

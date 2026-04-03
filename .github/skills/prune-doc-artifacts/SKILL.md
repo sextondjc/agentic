@@ -1,0 +1,58 @@
+---
+name: prune-doc-artifacts
+description: Use when auditing .docs planning and execution artifacts to identify stale, superseded, or generated leftovers and produce safe archive or removal candidates.
+---
+
+# Prune Doc Artifacts
+
+## Singular Purpose
+
+Find candidate documentation leftovers from completed plans and execution runs without deleting anything automatically.
+
+## Required Companion Skills
+
+- REQUIRED SUB-SKILL: Use `task-research` when stale status is uncertain and you need deeper evidence across plans and changes.
+- REQUIRED SUB-SKILL: Use `delivery-status-grid` when reporting cleanup progress to users who want grid-first updates.
+
+## Inputs
+
+Required:
+- Workspace root path.
+- Optional focus path (default: `.docs`).
+
+Optional:
+- Include generated reference snapshots (`.ref.md`) in the candidate set (default: true).
+- Include legacy skill-review directories based on rename aliases (default: true).
+- Include duplicate execution checklists (default: true).
+
+## Safety Rules
+
+- Never delete files in the first pass.
+- Always run reference checks before proposing removal.
+- Treat historical ledgers and ADR files as keep-by-default unless explicitly marked superseded.
+- Prefer `archive` recommendations before `delete` when confidence is medium.
+
+## Workflow
+
+1. Run `./references/scripts/Find-StaleDocs.ps1` from workspace root.
+2. Review output by category, reference count, and confidence.
+3. Keep files with active references in live indexes.
+4. Mark unreferenced generated snapshots as archive candidates.
+5. Mark duplicate checklists as keep-one/archive-rest candidates.
+6. Produce a recommendation table: Keep, Archive, Remove candidate.
+7. If approved by user, execute a separate change that updates links and removes/archives files.
+
+## Output Contract
+
+Return a grid-first report with:
+- Category summary with X of Y candidates.
+- Detailed candidate table (`Path`, `Category`, `ReferenceCount`, `Confidence`, `SuggestedAction`, `Reason`).
+- Explicit "No action without confirmation" line.
+
+## Done Criteria
+
+This skill run is complete only when:
+- Candidate list is produced.
+- Every candidate has a reference count.
+- Every candidate has a suggested action and confidence.
+- No files are deleted during discovery.

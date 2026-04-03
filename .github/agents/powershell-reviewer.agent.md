@@ -37,6 +37,7 @@ All standards are in the workspace instruction files. The active files for this 
 
 ## Preferred Companion Skills
 
+- `powershell-script-library` for catalog maintenance and deduplication before new scripts are written
 - `audit-powershell` for repeatable workspace script audits and recommendation patterns
 - `skill-review` when reviewing the quality of PowerShell-related skills
 - `critical-thinking` for trade-off analysis when remediation options conflict

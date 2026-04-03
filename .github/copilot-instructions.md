@@ -39,6 +39,7 @@ Each agent has a singular purpose. Go directly to the specialist for single-lane
 |---|---|
 | `csharp-engineer` | **Default for C# work.** Writing, modifying, or reviewing .NET code. |
 | `orchestrator` | Work spans planning + implementation + research, or the right specialist is unclear. |
+| `learning-agent` | Building deep topic mastery maps with depth control, specialist decomposition, and source-backed learning plans. |
 | `plan-researcher` | Researching options, producing research notes, or writing implementation plans. |
 | `architecture-designer` | Evaluating aggregate boundaries, producing blueprints, or identifying anti-patterns. |
 | `defect-debugger` | Reproducing, isolating, and fixing a specific defect. |
@@ -57,6 +58,8 @@ Skills discovery index: [.github/skills/README.md](skills/README.md)
 - `task-research`
 - `prd-generator`
 - `critical-thinking`
+- `learn-topics`
+- `build-maui-apps`
 - `perf-benchmark`
 - `api-design`
 - `adr-generator`
@@ -79,6 +82,14 @@ Skills discovery index: [.github/skills/README.md](skills/README.md)
 - `request-code-review`
 - `remediate-review`
 - `branch-completion`
+- `prune-doc-artifacts`
+- `powershell-script-library`
+- `curating-copilot-instructions`
+- `current-test-coverage`
+- `customization-authoring`
+- `sync-customizations`
+- `validate-customization`
+- `write-technical-docs`
 
 ## Imported Superpowers Assets
 

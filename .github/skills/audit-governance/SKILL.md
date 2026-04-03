@@ -88,6 +88,19 @@ Optional:
 
 ---
 
+## Automation via Script Library
+
+Use reusable scripts from `.github/scripts/powershell/` to avoid redundant audit code:
+
+- **`get-lane-counts.ps1`**: Count agents/skills per lane; use for GOV-M1 coverage verification.
+- **`test-catalog-integrity.ps1`**: Detect catalog mismatches; use for GOV-M3 integrity check.
+- **`test-frontmatter-validity.ps1`**: Validate instruction frontmatter; use for GOV-M2 check.
+- **`test-hub-file-sync.ps1`**: Verify copilot-instructions.md alignment; use for GOV-S7.
+
+All scripts must be invoked from workspace root. Use `Push-Location` before calling scripts.
+
+---
+
 ## Output Format Rules
 
 - MUST return results in Markdown grid format.

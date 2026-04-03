@@ -13,6 +13,7 @@ This catalog assigns each agent to a primary lifecycle lane.
 | Agent | Primary Lane | Secondary Lane | Rationale |
 |---|---|---|---|
 | `orchestrator` | Planning | Review | Classifies intent, decomposes phases, and routes work across lanes. |
+| `learning-agent` | Planning | Execution | Decomposes learning goals into specialist topic maps, calibrates depth, and routes skill/customization generation work. |
 | `plan-researcher` | Planning | Review | Produces research and executable plans before implementation starts. |
 | `architecture-designer` | Planning | Review | Defines architecture boundaries and ADR decisions before build work. |
 | `csharp-engineer` | Execution | Review | Implements .NET code, tests, and focused engineering artifacts. |
