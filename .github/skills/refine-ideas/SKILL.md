@@ -41,7 +41,7 @@ Use `./references/idea-refinement-session-template.md` for the session artifact.
 - If the host project has governance lanes, map outputs to its canonical planning/research location.
 - Reuse the same challenge loop and decision criteria even when output paths differ.
 
-## Refinement Workflow
+## Workflow
 
 1. Capture the raw idea in one paragraph plus constraints and desired outcome.
 2. Select learning depth (`L1` to `L4`) and invoke `learn-topics` for domain grounding.

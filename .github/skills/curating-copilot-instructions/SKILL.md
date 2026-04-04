@@ -181,7 +181,7 @@ This skill pairs naturally with:
 
 - [copilot-instructions.md](./../../copilot-instructions.md)
 - [README.md](./../../../README.md)
-- [planning-execution-review-governance.md](./../../../planning-execution-review-governance.md)
+- [planning-execution-review-governance.md](./../../../.docs/reference/planning-execution-review-governance.md)
 
 ## Inputs
 
