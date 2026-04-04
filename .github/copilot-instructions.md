@@ -72,6 +72,7 @@ Skills discovery index: [README.md](./skills/README.md)
 - `api-design`
 - `adr-generator`
 - `dotnet-refactor`
+- `dotnet-resilience`
 - `docker-dotnet`
 - `syrx-data-access`
 - `audit-powershell`
