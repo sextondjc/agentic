@@ -7,10 +7,10 @@ param(
 )
 
 $catalogMap = @{
-  'agents' = '.github/agents/README.md'
-  'skills' = '.github/skills/README.md'
-  'instructions' = '.github/instructions/README.md'
-  'prompts' = '.github/prompts/README.md'
+  'agents' = '.github/agents/agent-lifecycle-catalog.md'
+  'skills' = '.github/skills/skill-discovery-index.md'
+  'instructions' = '.github/instructions/instruction-lifecycle-catalog.md'
+  'prompts' = '.github/prompts/prompt-lifecycle-catalog.md'
 }
 
 $catalogFile = $catalogMap[$AssetType]
@@ -20,22 +20,17 @@ if (-not (Test-Path $catalogFile)) {
 }
 
 $content = Get-Content $catalogFile
-$rows = $content | Where-Object { $_ -match '^\| ' }
+$laneColumn = if ($AssetType -eq 'prompts') { 3 } else { 2 }
 
-if ($AssetType -eq 'skills' -or $AssetType -eq 'instructions') {
-  # Lane is column 2 (index 1)
-  $objs = foreach ($r in $rows) {
-    if ($r -match '^\| [a-z0-9-]+ \| (Planning|Execution|Review) \|') {
-      [pscustomobject]@{ Lane = $Matches[1] }
-    }
-  }
-} else {
-  # For agents and prompts, search for lane in column text
-  $objs = foreach ($r in $rows) {
-    if ($r -match '(Planning|Execution|Review)') {
-      [pscustomobject]@{ Lane = $Matches[1] }
-    }
-  }
+$objs = foreach ($r in ($content | Where-Object { $_ -match '^\|' -and $_ -notmatch '^\|\s*---' })) {
+  $cells = @($r -split '\|' | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne '' })
+  if ($cells.Count -lt $laneColumn) { continue }
+
+  $lane = $cells[$laneColumn - 1]
+  if ($lane -notin @('Planning', 'Execution', 'Review')) { continue }
+
+  [pscustomobject]@{ Lane = $lane }
 }
 
-$objs | Group-Object Lane | Select-Object @{N='Lane';E={$_.Name}}, @{N='Count';E={$_.Count}}
+$objs | Group-Object Lane | Sort-Object Name | Select-Object @{N='Lane';E={$_.Name}}, @{N='Count';E={$_.Count}}
+

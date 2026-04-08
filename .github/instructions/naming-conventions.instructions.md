@@ -89,7 +89,7 @@ Agents are specialist roles invoked explicitly by name. They apply deep expertis
 - `code-reviewer` ← Review specialist
 - `powershell-reviewer` ← Review specialist
 - `security-researcher` ← Research specialist
-- `architecture-designer` ← Unified specialist (compound domain acceptable when singular purpose)
+- `architecture-designer` ← Unified specialist (compound domain acceptable when specialization remains narrow)
 
 **Modern examples:**
 - `orchestrator` ← Router/dispatcher (no domain needed; meta-level)
@@ -118,6 +118,31 @@ Prompts are interaction templates for specific workflows. Keep names task-focuse
 - `syrx-validation` ← Domain-specific validation
 
 **Length guide:** Most prompts ≤ 30 characters (longer is acceptable for narrative clarity).
+
+---
+
+### Catalogs And Indexes (.md files)
+
+**Pattern:** `<domain>-catalog`, `<domain>-index`, or `<domain>-guide`
+
+Catalog and index documents are navigational assets. They must use filenames that describe their function.
+
+**Rules:**
+- Use `README.md` only for a true folder entry-point guide.
+- Use `*-catalog.md` for lifecycle mappings and canonical listings.
+- Use `*-index.md` for discovery surfaces and inventories.
+- Do not name a catalog or index `README.md` just because it lives at a folder root.
+
+**Examples:**
+- `agent-lifecycle-catalog.md`
+- `instruction-lifecycle-catalog.md`
+- `prompt-lifecycle-catalog.md`
+- `skill-discovery-index.md`
+
+**Anti-patterns:**
+- ❌ `README.md` for a lane catalog
+- ❌ `README.md` for a discovery index
+- ❌ `README.md` for an asset inventory table
 
 ---
 
@@ -154,7 +179,7 @@ When consolidating existing assets:
 1. **Rename files first.** Update folder and `.md` filename.
 2. **Update frontmatter.** Change `name:` field to match new filename.
 3. **Update all references.**
-   - README catalogs ([README.md](./../skills/README.md), [README.md](./README.md)
+   - catalog/index files ([skill-discovery-index.md](./../skills/skill-discovery-index.md), [instruction-lifecycle-catalog.md](./instruction-lifecycle-catalog.md), [agent-lifecycle-catalog.md](./../agents/agent-lifecycle-catalog.md), [prompt-lifecycle-catalog.md](./../prompts/prompt-lifecycle-catalog.md))
    - `copilot-instructions.md` preferred lists
    - Internal skill references and `applyTo` patterns
    - Documentation links
@@ -176,12 +201,42 @@ When consolidating existing assets:
 
 ---
 
+## Documentation Corpus Naming (`.docs/`)
+
+These rules apply to **all files and folders under `.docs/` and `.archive/`** in addition to `.github/` assets.
+
+### Absolute Prohibitions
+
+| Rule | Violation | Correct |
+|---|---|---|
+| **No date prefixes — ever** | `20260407-governance-audit.md` | `governance-audit.md` |
+| **No date prefixes in folder names** | `20260408-dated-condense/` | `condense/` |
+| **No hyphens in folder names** | `docs-archive/` | `archive/` |
+| **Single word per folder level** | `skill-reviews/` | `skill/reviews/` |
+| **File name must reflect content** | `README.md` used for a policy guide | `guide.md`, `policy.md`, or similar |
+
+Date metadata belongs **inside** the file (frontmatter `date:` field or first-line heading), never in the filename or folder name. This rule has no exceptions, including archive folders.
+
+### Reserved File Names
+
+| Name | Permitted use |
+|---|---|
+| `README.md` | Folder entry-point guide only (what this folder is for, how to use it). |
+| `INDEX.md` | Auto-generated corpus index. Do not edit manually. |
+
+Any file that is a report, policy, plan, audit, or research record must have a descriptive kebab-case name, not `README.md`.
+
+---
+
 ## References
 
-- Skill discovery: [README.md](./../skills/README.md)
-- Instruction catalog: [README.md](./README.md)
-- Agent catalog: [README.md](./../agents/README.md)
+- Skill discovery: [skill-discovery-index.md](./../skills/skill-discovery-index.md)
+- Instruction catalog: [instruction-lifecycle-catalog.md](./instruction-lifecycle-catalog.md)
+- Agent catalog: [agent-lifecycle-catalog.md](./../agents/agent-lifecycle-catalog.md)
+- Prompt catalog: [prompt-lifecycle-catalog.md](./../prompts/prompt-lifecycle-catalog.md)
 - Lifecycle governance: `lifecycle-governance.instructions.md`
+
+
 
 
 

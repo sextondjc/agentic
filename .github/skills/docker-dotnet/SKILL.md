@@ -5,6 +5,12 @@ description: Use when containerizing .NET applications, authoring or reviewing D
 
 # Docker & Containers in .NET
 
+## Specialization
+
+This skill is specialized for the workflow described in this file and should remain narrowly bounded to that responsibility.
+
+It should not absorb adjacent planning, execution, or review responsibilities that belong to other assets.
+
 ## Overview
 
 Expert guidance for containerizing .NET solutions with Docker: image authoring, build optimization, security hardening, Compose orchestration, and CI/CD integration.
@@ -303,7 +309,7 @@ public class OrderRepositoryTests : IAsyncLifetime
     public Task DisposeAsync() => _db.DisposeAsync().AsTask();
 
     [Fact]
-    public async Task GetById_ReturnsOrder_WhenExists()
+    public async Task RetrieveById_ReturnsOrder_WhenExists()
     {
         var connectionString = _db.GetConnectionString();
         // ... seed and assert

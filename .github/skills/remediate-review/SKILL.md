@@ -212,6 +212,14 @@ Verify. Question. Then implement.
 
 No performative agreement. Technical rigor always.
 
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- Code review feedback has been received and must be evaluated before implementation.
+- Findings appear ambiguous or technically questionable.
+- Review comments need rigorous validation before remediation work starts.
+
 ## Inputs
 
 - User request context and target scope for this skill invocation.

@@ -1,0 +1,74 @@
+---
+name: instructions-authoring
+description: Use when creating or editing .instructions.md files, including policy-domain scoping, applyTo correction, and deterministic rule tightening.
+---
+
+# Instructions Authoring
+
+## Specialization
+
+Author and maintain `.instructions.md` artifacts only.
+
+This skill is strictly for always-on policy assets. It does not author `.agent.md` files.
+
+## Prerequisites
+
+- REQUIRED SUB-SKILL: Use `route-customization` first when artifact type is not already confirmed as Instruction.
+- REQUIRED BACKGROUND: Understand that instructions are loaded automatically by `applyTo` scope and must contain policy rules only.
+
+## Frontmatter Rules
+
+All fields are required:
+
+```yaml
+---
+name: <policy-domain>
+description: '<One sentence describing the enforced policy area.>'
+applyTo: '<glob pattern from workspace root>'
+---
+```
+
+- `name`: lowercase kebab-case matching the policy domain.
+- `description`: concise policy-scope sentence.
+- `applyTo`: no broader than required by policy scope.
+
+## Content Rules
+
+- Use mandate language: `Use`, `Do not`, `Always`.
+- Keep one policy domain per file.
+- Do not embed multi-step workflows or routing logic.
+- Keep wording concise and deterministic.
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- A `.instructions.md` file must be created or edited.
+- `applyTo` or policy-domain scope needs correction.
+- Instruction wording needs deterministic tightening or brevity cleanup.
+
+## Inputs
+
+- User request context and target `.instructions.md` scope.
+
+## Required Outputs
+
+- A concrete `.instructions.md` result aligned with workspace standards and requested policy boundaries.
+
+## Workflow
+
+1. Confirm the target artifact is an instruction file.
+2. Apply frontmatter and scope requirements.
+3. Ensure content is policy-only and testable.
+4. Remove duplication and narrative padding.
+5. Route post-change quality checks to `validate-customization`.
+
+## Done Criteria
+
+Authoring is complete when:
+
+- The target `.instructions.md` file exists at the correct path.
+- Frontmatter is valid and complete.
+- `applyTo` scope matches policy intent.
+- Content is policy-only and passes deterministic checks.
+- `validate-customization` routing is included for post-change review.

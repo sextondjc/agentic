@@ -12,7 +12,7 @@ Perform a research-only security assessment of the requested .NET/C# scope. Use 
 Default output:
 
 - Report location: `/.docs/research/security/`
-- Filename: `<solution-or-project-or-namespace>-security-research-report-<yyyyMMdd>.md`
+- Filename: `<solution-or-project-or-namespace>-security-research-report.md`
 
 Requirements:
 

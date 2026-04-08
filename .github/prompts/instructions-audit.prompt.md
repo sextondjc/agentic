@@ -26,9 +26,9 @@ Review all `*.instructions.md` files and return a report that identifies:
 - Cross-check catalogs and active customizations:
   - `.github/agents/*.agent.md`
   - `.github/skills/*/SKILL.md`
-  - [README.md](./../instructions/README.md)
-  - [README.md](./../agents/README.md)
-  - [README.md](./../skills/README.md)
+  - [instruction-lifecycle-catalog.md](./../instructions/instruction-lifecycle-catalog.md)
+  - [agent-lifecycle-catalog.md](./../agents/agent-lifecycle-catalog.md)
+  - [skill-discovery-index.md](./../skills/skill-discovery-index.md)
 
 ## Required Actions
 
@@ -62,3 +62,5 @@ Return findings in Markdown grids first, then brief recommendations:
 
 - Do not include code changes.
 - If no issues are found, state that explicitly and list residual risks.
+
+

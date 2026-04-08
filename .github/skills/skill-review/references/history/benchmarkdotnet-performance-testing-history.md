@@ -13,7 +13,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill-reviews/benchmarkdotnet-performance-testing/20260329-review.md)
+- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill/reviews/benchmarkdotnet-performance-testing/review.md)
 
 #### Findings
 
@@ -43,7 +43,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill-reviews/benchmarkdotnet-performance-testing/20260329-review.md)
+- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill/reviews/benchmarkdotnet-performance-testing/review.md)
 
 #### Findings
 
@@ -73,7 +73,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill-reviews/benchmarkdotnet-performance-testing/20260329-review.md)
+- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill/reviews/benchmarkdotnet-performance-testing/review.md)
 
 #### Findings
 
@@ -97,3 +97,7 @@
 - Rejected IDs: None
 - Removed IDs: None
 - Illegitimate IDs: None
+
+
+
+

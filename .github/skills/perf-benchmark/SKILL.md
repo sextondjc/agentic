@@ -5,6 +5,12 @@ description: Use when designing, running, or reviewing BenchmarkDotNet performan
 
 # BenchmarkDotNet Performance Testing
 
+## Specialization
+
+This skill is specialized for the workflow described in this file and should remain narrowly bounded to that responsibility.
+
+It should not absorb adjacent planning, execution, or review responsibilities that belong to other assets.
+
 ## Overview
 
 Use this skill to produce reliable, repeatable, and decision-grade .NET performance benchmarks with BenchmarkDotNet.

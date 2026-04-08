@@ -5,6 +5,12 @@ description: Use when defining or improving mobile app UX for iOS and Android an
 
 # Design Mobile UX
 
+## Specialization
+
+This skill is specialized for the workflow described in this file and should remain narrowly bounded to that responsibility.
+
+It should not absorb adjacent planning, execution, or review responsibilities that belong to other assets.
+
 ## Scope
 
 Design and validate mobile UX for iOS and Android across phones and tablets, from discovery through tested handoff artifacts.
@@ -73,6 +79,14 @@ Validation loop:
 - Accessibility and usability issues are logged with severity and owner.
 - Handoff includes annotated wireframes, behavior rules, and analytics events.
 - Post-release validation cadence is scheduled.
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- The user asks for mobile UX design guidance rather than direct UI implementation.
+- Discovery, wireframing, validation, or handoff artifacts are needed for iOS or Android experiences.
+- UX work must be structured before engineering execution begins.
 
 ## Inputs
 

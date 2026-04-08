@@ -42,12 +42,85 @@ applyTo: '**/*.cs,**/*.csproj'
 - Nested types are the only allowed exception to the one-type-per-file rule.
 - Minimal API route mappings must be separated into dedicated files (for example endpoint modules or extension classes) rather than being declared inline in `Program.cs`.
 - Follow `.editorconfig` and local project conventions first.
+- **Namespace type aliases are prohibited.** `using Alias = Full.Namespace.Type` must never be used. Add the containing namespace to `Usings.cs` and reference the type name directly.
+- **Enum names must be domain-precise.** Do not abbreviate in a way that introduces ambiguity with a neighbouring domain concept. For example, `AuthProvider` is prohibited when the domain must distinguish authentication from authorization; prefer `IdentityProvider` or `AuthenticationProvider`.
 
 ## Comments & Documentation
-- Comments should explain WHY and design rationale when needed.
-- XML docs for all public members; use `<see cref>` / `<example>` appropriately.
- - Include rationale for non-trivial exceptions & guard decisions.
- - Avoid repeating obvious implementation details; focus on intent & constraints.
+- Comments must explain WHY and design rationale; do not describe what the code already shows.
+- **XML doc comments are mandatory on all public and internal types, constructors, methods, and properties.** Absence of XML docs is a review blocker.
+  - Use `///` triple-slash format with at minimum a `<summary>` element.
+  - Add `<param name="…">` for every parameter and `<returns>` for every non-void return.
+  - Add `<exception cref="…">` for every exception a method intentionally throws.
+  - Use `<see cref="…"/>` for cross-references and `<example>` for non-obvious usage.
+
+```csharp
+/// <summary>
+/// Creates a new location record after validating that the asset identifier exists.
+/// </summary>
+/// <param name="assetId">The unique identifier for the asset associated with the location event.</param>
+/// <param name="latitude">Geographic latitude of the location, in decimal degrees (-90 to 90).</param>
+/// <param name="longitude">Geographic longitude of the location, in decimal degrees (-180 to 180).</param>
+/// <param name="visibilityDelayMinutes">Number of minutes before the location becomes visible to other users.</param>
+/// <param name="cancellationToken">Token to observe for cancellation requests.</param>
+/// <returns>A <see cref="LocationOperation"/> summarising the created location record.</returns>
+/// <exception cref="ArgumentException">Thrown when <paramref name="assetId"/> does not exist in the registry.</exception>
+public Task<LocationOperation> CreateAsync(string assetId, decimal latitude, decimal longitude, int visibilityDelayMinutes, CancellationToken cancellationToken = default);
+```
+
+- Include rationale for non-trivial guard decisions.
+- Do not repeat obvious implementation details; focus on intent and constraints.
+
+## Model & Service Design Rules
+
+### Complex Logic in Models
+- Model constructors and record constructors must contain only guard calls (`Throw<T>`) and simple property assignments.
+- Parsing, normalization, multi-step calculation, or format conversion logic must be extracted to a **public static utility class** in the appropriate `*.Extensions` or `*.Utilities` assembly.
+- Extracted methods must be public and covered by unit tests.
+
+```csharp
+// Prohibited — complex logic inline in a model:
+public sealed record SeedRequest(string isbn)
+{
+    public string Isbn { get; } = NormalizeAndValidateIsbn(isbn); // private, untestable
+    private static string NormalizeAndValidateIsbn(string isbn) { /* ... */ }
+}
+
+// Required — logic in a testable utility:
+public sealed record SeedRequest
+{
+    public string Isbn { get; }
+    public SeedRequest(string isbn)
+    {
+        Isbn = IsbnValidator.NormalizeAndValidate(isbn); // public static, tested
+    }
+}
+```
+
+### Service Method Signatures
+- When a public service method has **more than two primitive parameters of the same type** that represent a single logical concept, replace them with a named input model in the appropriate `*.Models` assembly.
+- Example: `CreateAsync(string assetId, decimal latitude, decimal longitude, int visibilityDelayMinutes)` -> `CreateAsync(LocationInput input)`.
+- Named input models must be immutable records with guards in their constructors.
+- The API contract type (e.g., `LocationRequest`) must not cross the service boundary; create a distinct service-layer input type.
+
+### API Contract Placement
+- HTTP request and response types (API contracts/DTOs) must reside in a dedicated `*.Models` assembly, not co-located with the API host project.
+- Translation between API contracts and domain models happens exclusively at the API layer (endpoint/controller).
+- No domain service may accept or return an API contract type.
+
+### Domain Type Reuse in API Contracts
+- Do not mirror a domain enum or value type with a structurally identical contract-layer copy.
+- If a domain type already represents the concept with the correct semantics and values, use it directly in the API contract (e.g., as a property type on a response record).
+- Add a project reference from the `*.Api.Models` assembly to the domain `*.Models` assembly to make the type available.
+- Create a contract-layer copy **only** when the API surface must differ from the domain representation (different values, different naming, or intentional decoupling for versioning).
+
+```csharp
+// ✅ Reuse domain enum directly in API contract
+public sealed record WorkItemResponse(Guid WorkItemId, WorkItemState Status);
+
+// ❌ Mirror with an identical contract enum
+public enum WorkItemStatus { Pending, Active, Suspended, Completed } // same values — delete this
+public sealed record WorkItemResponse(Guid WorkItemId, WorkItemStatus Status);
+```
 
 ## Validation (Global Rule)
 Use `Syrx.Validation.Contract.Throw<T>(successCondition, message)` for all parameter guards.

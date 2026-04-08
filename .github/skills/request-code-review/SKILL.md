@@ -5,6 +5,8 @@ description: Use when completing tasks, implementing major features, or before m
 
 # Requesting Code Review
 
+## Specialization
+
 Dispatch code-reviewer subagent to catch issues before they cascade. The reviewer gets precisely crafted context for evaluation — never your session's history. This keeps the reviewer focused on the work product, not your thought process, and preserves your own context for continued work.
 
 **Core principle:** Review early, review often.
@@ -103,6 +105,14 @@ You: [Fix progress indicators]
 - Request clarification
 
 See template at: request-code-review/code-reviewer.md
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- A logical implementation step has completed and needs review.
+- A feature or bug fix should be reviewed before merge.
+- Additional review evidence is needed before branch completion.
 
 ## Inputs
 

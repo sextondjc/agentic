@@ -1,13 +1,15 @@
-# Directory Index: /.github/skills/critical-thinking
+# Index: critical-thinking
 
-## Summary
-Mirrored directory landing page for source path /.github/skills/critical-thinking.
+> Corpus index. Do not edit manually — refresh with invoke-index-refresh.ps1.
 
-## Child Directories
-- None
+## Subfolders
 
-## Files
-- [SKILL.md.ref.md](./SKILL.md.ref.md)
+| Folder | Description |
+|---|---|
+| (none) | - |
 
-## See Also
-- [index.md](./../../../index.md)
+## Documents
+
+| File | Title | Category | Summary |
+|---|---|---|---|
+| [SKILL.md.ref.md](./SKILL.md.ref.md) | Reference: [SKILL.md](./../../../../../.github/skills/critical-thinking/SKILL.md) | reference |  |

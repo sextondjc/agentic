@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to .docs/changes/skill-reviews/<skill-name>/YYYYMMDD-review.md
+- Save this file to .docs/changes/skill-reviews/<skill-name>/review.md
 
 ## Summary Outcome Grid
 
@@ -33,6 +33,7 @@
 | SKR-S2 | Pass/Advisory/Blocked | <evidence> | <notes> |
 | SKR-S3 | Pass/Advisory | <evidence> | <notes> |
 | SKR-S4 | Pass/Advisory | <evidence> | <notes> |
+| SKR-S5 | Pass/Advisory | <evidence> | <notes> |
 
 ## Recommendations
 

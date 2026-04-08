@@ -1,21 +1,19 @@
-# Directory Index: /.github/prompts
+# Index: prompts
 
-## Summary
-Mirrored directory landing page for source path /.github/prompts.
+> Corpus index. Do not edit manually — refresh with invoke-index-refresh.ps1.
 
-## Child Directories
-- None
+## Subfolders
 
-## Files
-- [write-component-docs.prompt.md.ref.md](./write-component-docs.prompt.md.ref.md)
-- [review-technical-docs.prompt.md.ref.md](./review-technical-docs.prompt.md.ref.md)
-- [performance-research.prompt.md.ref.md](./performance-research.prompt.md.ref.md)
-- [workspace-scaffolder.prompt.md.ref.md](./workspace-scaffolder.prompt.md.ref.md)
-- [generate-readme.prompt.md.ref.md](./generate-readme.prompt.md.ref.md)
-- [security-research.prompt.md.ref.md](./security-research.prompt.md.ref.md)
-- [syrx-validation.prompt.md.ref.md](./syrx-validation.prompt.md.ref.md)
-- [testing-xunit.prompt.md.ref.md](./testing-xunit.prompt.md.ref.md)
+| Folder | Description |
+|---|---|
+| (none) | - |
 
-## See Also
-- [index.md](./../../index.md)
+## Documents
 
+| File | Title | Category | Summary |
+|---|---|---|---|
+| [performance-research.prompt.md.ref.md](./performance-research.prompt.md.ref.md) | Reference: [performance-research.prompt.md](./../../../../.github/prompts/performance-research.prompt.md) | reference |  |
+| [security-research.prompt.md.ref.md](./security-research.prompt.md.ref.md) | Reference: [security-research.prompt.md](./../../../../.github/prompts/security-research.prompt.md) | reference |  |
+| [syrx-validation.prompt.md.ref.md](./syrx-validation.prompt.md.ref.md) | Reference: [syrx-validation.prompt.md](./../../../../.github/prompts/syrx-validation.prompt.md) | reference |  |
+| [testing-xunit.prompt.md.ref.md](./testing-xunit.prompt.md.ref.md) | Reference: [testing-xunit.prompt.md](./../../../../.github/prompts/testing-xunit.prompt.md) | reference |  |
+| [workspace-scaffolder.prompt.md.ref.md](./workspace-scaffolder.prompt.md.ref.md) | Reference: [workspace-scaffolder.prompt.md](./../../../../.github/prompts/workspace-scaffolder.prompt.md) | reference |  |

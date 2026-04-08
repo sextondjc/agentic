@@ -21,7 +21,7 @@ Use the `skill-review` skill to perform a deep review of every skill under `.git
    - Load its history file from `.github/skills/skill-review/references/history/<skill>-history.md`.
    - Build a deny-list from entries marked Rejected, Removed, or Illegitimate in the history.
    - Evaluate all SKR-M* (MUST) and SKR-S* (SHOULD) standards with evidence.
-   - Write a per-skill review report to `.docs/changes/skill-reviews/<skill-name>/YYYYMMDD-review.md` using the template at [skill-review-report-template.md](./../skills/skill-review/references/skill-review-report-template.md).
+   - Write a per-skill review report to `.docs/changes/skill-reviews/<skill-name>/review.md` using the template at [skill-review-report-template.md](./../skills/skill-review/references/skill-review-report-template.md).
    - Update the history file with findings.
 3. After all skills are reviewed, produce the aggregate Markdown grid output in chat.
 
@@ -55,8 +55,8 @@ Return the following in chat, in this order:
 
 | Artifact | Location |
 |---|---|
-| Per-skill reports | `.docs/changes/skill-reviews/<skill-name>/YYYYMMDD-review.md` |
-| Aggregate grid | `.docs/changes/skill-reviews/YYYYMMDD-full-skill-review-grid.md` |
+| Per-skill reports | `.docs/changes/skill-reviews/<skill-name>/review.md` |
+| Aggregate grid | `.docs/changes/skill-reviews/full-skill-review-grid.md` |
 | Skill histories | `.github/skills/skill-review/references/history/<skill>-history.md` |
 | History index | [index.md](./../skills/skill-review/references/history/index.md) |
 

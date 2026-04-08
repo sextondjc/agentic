@@ -8,17 +8,19 @@ Use the `adr-generator` skill to create new ADRs in the correct format with expl
 
 ## Naming
 
-Use the pattern: `YYYYMMDD-<short-decision-title>.md`
+Use the pattern: `adr-NNNN-<short-decision-title>.md` — sequential number, lowercase, hyphens only.
 
-Example: `20260402-repository-pattern-for-data-access.md`
+**Date prefixes are prohibited.** Date metadata belongs in the ADR frontmatter (`date:` field), never in the filename.
+
+Example: `adr-0001-repository-pattern-for-data-access.md`
 
 ## Index
 
 | File | Date | Decision | Status |
 |---|---|---|---|
-| [20260402-customization-taxonomy-promotion-boundary.md](./20260402-customization-taxonomy-promotion-boundary.md) | 2026-04-02 | Promote taxonomy v1 as conceptual governance reference; retain lifecycle catalogs as operational source-of-truth | Accepted |
+| [customization-taxonomy-promotion-boundary.md](./customization-taxonomy-promotion-boundary.md) | 2026-04-02 | Promote taxonomy v1 as conceptual governance reference; retain lifecycle catalogs as operational source-of-truth | Accepted |
 
 ## References
 
-- Skill: [SKILL.md](./../../SKILL.md)
+- Skill: [SKILL.md](./../../.github/skills/adr-generator/SKILL.md)
 - Governance: [planning-execution-review-governance.md](./../reference/planning-execution-review-governance.md)

@@ -1,16 +1,18 @@
-# Directory Index: /.github
+# Index: .github
 
-## Summary
-Mirrored directory landing page for source path /.github.
+> Corpus index. Do not edit manually — refresh with invoke-index-refresh.ps1.
 
-## Child Directories
-- [index.md](./agents/index.md)
-- [index.md](./instructions/index.md)
-- [index.md](./prompts/index.md)
-- [index.md](./skills/index.md)
+## Subfolders
 
-## Files
-- [copilot-instructions.md.ref.md](./copilot-instructions.md.ref.md)
+| Folder | Description |
+|---|---|
+| [agents/](./agents/INDEX.md) | Subfolder index. |
+| [instructions/](./instructions/INDEX.md) | Subfolder index. |
+| [prompts/](./prompts/INDEX.md) | Subfolder index. |
+| [skills/](./skills/INDEX.md) | Subfolder index. |
 
-## See Also
-- [index.md](./../index.md)
+## Documents
+
+| File | Title | Category | Summary |
+|---|---|---|---|
+| [copilot-instructions.md.ref.md](./copilot-instructions.md.ref.md) | Reference: [copilot-instructions.md](./../../../.github/copilot-instructions.md) | reference |  |

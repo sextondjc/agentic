@@ -4,7 +4,7 @@ description: 'Unified agent for architectural decision records, domain-driven de
 ---
 # Architecture & DDD Agent
 
-## Singular Purpose
+## Specialization
 
 Evaluate domain architecture, validate aggregate boundaries, and synthesize architecture blueprints. For ADR authoring, invoke the `adr-generator` skill — do not generate ADRs independently.
 
@@ -97,8 +97,6 @@ Redact secrets from all outputs. Note data classification. Recommend audit via d
 
 ## Output Quality
 
-- Precise, unambiguous language.
-- Both benefits and trade-offs represented honestly.
 - Alternatives always include "Do nothing".
 - Concrete architecture outputs over abstract ceremony.
 

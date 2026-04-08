@@ -13,7 +13,7 @@
 ## Included Files
 | Source File | Documentation Page | Status |
 |---|---|---|
-| [agent-routing-guide.md](./../agent-routing-guide.md) | [agent-routing-guide.md.ref.md](./.docs/agent-routing-guide.md.ref.md) | Created |
+| [agent-routing-guide.md](./agent-routing-guide.md) | [agent-routing-guide.md.ref.md](./.docs/agent-routing-guide.md.ref.md) | Created |
 | [architecture-designer.agent.md](./../../.github/agents/architecture-designer.agent.md) | [architecture-designer.agent.md.ref.md](./.github/agents/architecture-designer.agent.md.ref.md) | Created |
 | [csharp-engineer.agent.md](./../../.github/agents/csharp-engineer.agent.md) | /.docs/reference/.github/agents/csharp-engineer.agent.md.ref.md | Created |
 | [defect-debugger.agent.md](./../../.github/agents/defect-debugger.agent.md) | [defect-debugger.agent.md.ref.md](./.github/agents/defect-debugger.agent.md.ref.md) | Created |
@@ -71,6 +71,7 @@
 
 ## Link Validation
 Passed. Internal relative-link validation completed with 0 broken links across .docs/reference markdown files.
+
 
 
 

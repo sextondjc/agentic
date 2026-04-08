@@ -13,7 +13,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill-reviews/powershell-script-review/20260329-review.md)
+- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill/reviews/powershell-script-review/review.md)
 
 #### Findings
 
@@ -37,3 +37,7 @@
 - Rejected IDs: None
 - Removed IDs: None
 - Illegitimate IDs: None
+
+
+
+

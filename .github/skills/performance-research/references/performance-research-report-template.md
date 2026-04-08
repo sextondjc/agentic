@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Report name: `<solution-or-project-or-namespace>-performance-research-report-<yyyyMMdd>.md`
+- Report name: `<solution-or-project-or-namespace>-performance-research-report.md`
 - Generated on: `<yyyy-MM-dd>`
 - Assessor: `performance-assessor`
 - Scope: `<solution/project/namespace/component>`

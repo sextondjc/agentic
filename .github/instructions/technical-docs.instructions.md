@@ -13,6 +13,11 @@ Applies to technical reference and README-style documentation. PRD/specification
 - OO Component docs (C4 + mermaid)
 - Specification / PRD merged documents
 
+## File Naming
+- `README.md` is reserved for true folder entry-point guidance.
+- Catalogs, inventories, and discovery surfaces must use descriptive filenames such as `*-catalog.md` or `*-index.md`.
+- File names must reflect the document's function; do not publish a catalog or mapping table as `README.md`.
+
 ## Writing Principles
 Unambiguous, machine-parseable, explicit IDs (REQ-, SEC-, CON-, AC-). Provide examples + edge cases.
 

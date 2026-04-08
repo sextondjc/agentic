@@ -77,13 +77,15 @@ Planning output should prefer markdown grids over narrative text.
 
 Maintain lifecycle mappings in:
 
-- [README.md](./../../.github/agents/README.md)
-- [README.md](./../../.github/instructions/README.md)
-- [README.md](./../../.github/prompts/README.md)
-- [README.md](./../../.github/skills/README.md)
+- [agent-lifecycle-catalog.md](./../../.github/agents/agent-lifecycle-catalog.md)
+- [instruction-lifecycle-catalog.md](./../../.github/instructions/instruction-lifecycle-catalog.md)
+- [prompt-lifecycle-catalog.md](./../../.github/prompts/prompt-lifecycle-catalog.md)
+- [skill-discovery-index.md](./../../.github/skills/skill-discovery-index.md)
 
 Each catalog entry should include at least `Primary Lane`, `Secondary Lane`, and `Rationale`.
 
 ## Outcome
 
 This model enables high-speed, low-rework delivery by forcing explicit lane ownership, explicit handoffs, and auditable decisions.
+
+

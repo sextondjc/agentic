@@ -6,20 +6,23 @@ This directory records all implementation change artifacts produced during plann
 
 | Directory | Purpose |
 |---|---|
-| [customization-renames/](./customization-renames/) | Change artifacts from customization asset rename and consolidation work |
-| [governance-audits/](./governance-audits/) | Governance health audit reports produced by the `audit-governance` skill |
-| [powershell-script-reviews/](./powershell-script-reviews/) | Audit reports for PowerShell scripts produced by `audit-powershell` skill |
-| [skill-maintenance/](./skill-maintenance/) | Maintenance records from `sync-skills` and `sync-customizations` runs |
-| [skill-reviews/](./skill-reviews/) | Per-skill review artifacts produced by the `skill-review` skill |
+| [customization/](./customization/) | Customization-focused change artifacts, including rename and consolidation work |
+| [governance/](./governance/) | Governance change records and audit outputs; retention mode documented in [README.md](./governance/audits/README.md) |
+| [powershell/](./powershell/) | PowerShell review and script-maintenance change artifacts |
+| [skill/](./skill/) | Skill review, maintenance, and conflict analysis artifacts |
 
 ## Conventions
 
-- Change files use the naming format: `YYYYMMDD-<task-description>-changes.md`
+- Change files use descriptive kebab-case names that reflect content.
 - Each change file must reference an originating `PLAN-*` identifier.
 - Use the template defined in `task-implementation.instructions.md`.
 - Update progressively during implementation, not only at completion.
+- Governance audit retention is exception-focused: routine pass-only governance runs should update the rolling digest in `.docs/reference/governance-current-state.md` instead of creating daily dated audit files.
+- Create governance audit artifacts only for month-end baselines, milestone checkpoints, or exception events (for example, High findings or policy/ADR-impacting changes).
 
 ## References
 
-- Instruction: [task-implementation.instructions.md](./../../task-implementation.instructions.md)
+- Instruction: [task-implementation.instructions.md](./../../.github/instructions/task-implementation.instructions.md)
 - Governance: [planning-execution-review-governance.md](./../reference/planning-execution-review-governance.md)
+- Governance Digest: [governance-current-state.md](./../reference/governance-current-state.md)
+- Governance Retention: [governance-retention-policy.md](./../reference/governance-retention-policy.md)

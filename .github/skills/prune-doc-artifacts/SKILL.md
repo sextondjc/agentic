@@ -5,7 +5,7 @@ description: Use when auditing .docs planning and execution artifacts to identif
 
 # Prune Doc Artifacts
 
-## Singular Purpose
+## Specialization
 
 Find candidate documentation leftovers from completed plans and execution runs without deleting anything automatically.
 
@@ -13,6 +13,14 @@ Find candidate documentation leftovers from completed plans and execution runs w
 
 - REQUIRED SUB-SKILL: Use `task-research` when stale status is uncertain and you need deeper evidence across plans and changes.
 - REQUIRED SUB-SKILL: Use `delivery-status-grid` when reporting cleanup progress to users who want grid-first updates.
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- Planning or change artifacts need an audit for stale or superseded documents.
+- The docs tree may contain safe archive or removal candidates.
+- Documentation hygiene must be restored without deleting blindly.
 
 ## Inputs
 

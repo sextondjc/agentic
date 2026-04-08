@@ -1,24 +1,22 @@
-# Technical Reference Documentation
+# Index: reference
 
-## Summary
-Workspace reference set generated in review mode from a baseline snapshot of 49 source files.
+> Corpus index. Do not edit manually — refresh with invoke-index-refresh.ps1.
 
-## Core Pages
-- [code-structure.md](./code-structure.md)
-- [coverage-report.md](./coverage-report.md)
-- [customization-taxonomy-v1.md](./customization-taxonomy-v1.md)
-- [agent-routing-guide.md](./../agent-routing-guide.md)
+## Subfolders
 
-## Top-Level Areas
-- [index.md](./.docs/index.md)
-- [index.md](./.github/index.md)
+| Folder | Description |
+|---|---|
+| [.docs/](./.docs/INDEX.md) | Subfolder index. |
+| [.github/](./.github/INDEX.md) | Subfolder index. |
 
-## Reliability Gates
-- Evidence Gate: claims are sourced from file metadata and headings.
-- Drift Gate: policy labels are documented as standards guidance.
-- Coverage Gate: 49 of 49 baseline files documented, with 2 explicit exclusions outside baseline.
-- Link Gate: internal link validation completed with zero broken links.
-- Consistency Gate: canonical terminology follows orchestrator and instruction files.
+## Documents
 
-## Unresolved Evidence Gaps
-- Runtime behavior cannot be asserted from markdown-only assets and is marked as Not observed in code where applicable.
+| File | Title | Category | Summary |
+|---|---|---|---|
+| [agent-routing-guide.md](./agent-routing-guide.md) | Agent and Skill Routing Guide | reference | <!-- markdownlint-disable-file --> # Agent and Skill Routing Guide |
+| [code-structure.md](./code-structure.md) | Code Structure | reference |  |
+| [coverage-report.md](./coverage-report.md) | Coverage Report | reference |  |
+| [customization-taxonomy-v1.md](./customization-taxonomy-v1.md) | Customization Taxonomy v1 | reference | Status: Approved baseline (conceptual model, no catalog schema rewrites) Date: 2026-04-02 Related Plan: `PLAN-20260402-0... |
+| [governance-current-state.md](./governance-current-state.md) | Governance Current State | reference | This file is the single, rolling governance digest for current workspace health. |
+| [governance-retention-policy.md](./governance-retention-policy.md) | Governance Retention Policy | reference | Keep governance evidence durable and auditable while preventing daily revision sprawl. |
+| [planning-execution-review-governance.md](./planning-execution-review-governance.md) | Planning, Execution, Review Governance | reference | <!-- markdownlint-disable-file --> # Planning, Execution, Review Governance |

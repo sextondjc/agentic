@@ -5,7 +5,7 @@ description: Use when deciding whether a behavior should be implemented as a cus
 
 # Customization Routing Decision
 
-## Singular Purpose
+## Specialization
 
 Determine the correct customization artifact before implementation:
 
@@ -78,6 +78,14 @@ A routing decision is complete only when:
 - The decision includes rationale and a concrete target path.
 - Overlap with existing agents, instructions, and skills was checked.
 - The chosen artifact aligns with activation model and scope.
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- The user needs to decide between an agent, instruction, or skill.
+- A behavior request crosses customization boundaries and needs routing.
+- A new customization idea must be classified before authoring.
 
 ## Inputs
 

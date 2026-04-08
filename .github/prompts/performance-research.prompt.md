@@ -12,7 +12,7 @@ Perform a research-only performance assessment of the requested .NET/C# scope. U
 Default output:
 
 - Report location: `/.docs/research/performance/`
-- Filename: `<solution-or-project-or-namespace>-performance-research-report-<yyyyMMdd>.md`
+- Filename: `<solution-or-project-or-namespace>-performance-research-report.md`
 
 Requirements:
 

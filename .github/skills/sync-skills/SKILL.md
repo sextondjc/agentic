@@ -5,7 +5,7 @@ description: Use when maintaining a skill library over time and you need to eval
 
 # Keeping Skills Current
 
-## Singular Purpose
+## Specialization
 
 Maintain skill quality over time by continuously validating that skill guidance is aligned with current external standards and platform behavior.
 
@@ -13,6 +13,14 @@ Maintain skill quality over time by continuously validating that skill guidance 
 
 - REQUIRED SUB-SKILL: Use skills-authoring when creating or editing any skill content identified by this skill.
 - REQUIRED SUB-SKILL: Use skill-review after updates to confirm the resulting skills still pass quality standards.
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- Skills need maintenance against current standards or source freshness.
+- Skill guidance may be stale, misaligned, or under-adopted.
+- A maintenance pass is needed after governance or skill review findings.
 
 ## Inputs
 
@@ -59,6 +67,7 @@ Apply all checks for each source:
 - Authority: Is the source official, widely adopted, or actively maintained?
 - Freshness: Was it updated recently enough for the configured threshold?
 - Actionability: Does it provide concrete guidance that can change or validate skill behavior?
+- Brevity: Do affected skills remain economical for context efficiency without losing trigger clarity or execution fidelity?
 
 ## Outputs
 
@@ -74,6 +83,7 @@ This skill is complete for a run only when:
 - Every in-use source has an updated Last Evaluated date.
 - Any stale source is marked Needs Review or Deprecated.
 - Skill updates were routed to skills-authoring when needed.
+- Brevity expectations were evaluated for affected skills and included in any routed change list.
 - Post-update validation was routed to skill-review when needed.
 
 ## Required Outputs

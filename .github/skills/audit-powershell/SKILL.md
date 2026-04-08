@@ -5,7 +5,7 @@ description: Use when auditing PowerShell scripts for safety, reliability, and s
 
 # PowerShell Script Review
 
-## Singular Purpose
+## Specialization
 
 Review PowerShell scripts in the workspace, identify correctness and maintainability issues, and provide concrete recommendations for correction.
 
@@ -52,7 +52,7 @@ This skill publishes markdown reports for cross-agent consumption.
 
 - Export format: `Markdown` only
 - Default report path: `.docs/changes/audit-powershell-reviews/`
-- Default filename: `YYYYMMDD-audit-powershell.md`
+- Default filename: `audit-powershell.md`
 - Stable latest filename: `latest-audit-powershell.md` (written by default)
 
 ## Invocation Model

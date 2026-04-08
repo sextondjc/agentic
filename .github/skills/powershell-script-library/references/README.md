@@ -2,17 +2,20 @@
 
 ## Purpose
 
-Reference assets for `powershell-script-library` execution support.
+This references folder currently contains no local reference assets.
 
-## Assets
+Use this README as an index to shared PowerShell utilities under [README.md](./../../../scripts/powershell/README.md) that support the `powershell-script-library` skill.
 
-- Catalog Index: [README.md](./../../../../README.md)
-- Governance Utilities:
-  - `.github/scripts/powershell/get-lane-counts.ps1`
-  - `.github/scripts/powershell/test-catalog-integrity.ps1`
-  - `.github/scripts/powershell/test-frontmatter-validity.ps1`
-  - `.github/scripts/powershell/test-hub-file-sync.ps1`
+## Shared Utilities
+
+- [get-lane-counts.ps1](./../../../scripts/powershell/get-lane-counts.ps1)
+- [test-catalog-integrity.ps1](./../../../scripts/powershell/test-catalog-integrity.ps1)
+- [test-frontmatter-validity.ps1](./../../../scripts/powershell/test-frontmatter-validity.ps1)
+- [test-hub-file-sync.ps1](./../../../scripts/powershell/test-hub-file-sync.ps1)
+- [test-governance-link-graph.ps1](./../../../scripts/powershell/test-governance-link-graph.ps1)
 
 ## Usage
 
-Use these assets during Phase 1 (catalog check), Phase 3 (catalog registration), and remediation validation before publishing script updates.
+Use these shared utilities when validating catalog state, frontmatter, hub-file sync, and governance documentation links before publishing script-library updates.
+
+If this skill gains local templates or examples later, add them to this folder and update this README in the same change.

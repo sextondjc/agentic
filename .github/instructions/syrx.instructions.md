@@ -64,12 +64,38 @@ Use global `using static Syrx.Validation.Contract;` in project.
 
 ### Example Guard in Repository
 ```csharp
-public async Task<Order?> GetAsync(Guid id, CancellationToken ct)
+public async Task<Order?> RetrieveAsync(Guid id, CancellationToken ct)
 {
 	Throw<ArgumentOutOfRangeException>(id != Guid.Empty, "Id required");
 	var data = await _commander.QueryAsync<OrderData>(CommandStrings.Order.GetById, new { Id = id }, ct);
 	return data?.ToDomain();
 }
+```
+
+## No Exception Handling in Repositories
+Repositories must **not contain `try/catch` blocks**. Exception handling is a cross-cutting concern applied via an AOP pipeline at the composition root.
+
+- Do not catch `InvalidOperationException`, `SqlException`, or any other exception to adapt behavior inside a repository method.
+- If a query returns no rows, return `null` or `Enumerable.Empty<T>()` as appropriate; do not use exceptions for control flow.
+- If a caller needs to distinguish empty-result from failure, model that in the return type (e.g., `T?` vs. `Task<bool>`).
+
+## Stored Procedures for Atomic Multi-Entity Operations
+When a repository operation must validate preconditions involving other entities **and** write atomically in a single transaction, implement the logic as a stored procedure.
+
+- The repository calls the SP via a single `ExecuteAsync` or `QueryAsync` call.
+- The SP performs all validation and writes internally, returning a result set or row count.
+- Never substitute multiple sequential repository method calls for what should be one SP invocation.
+- Name SPs with a verb + noun pattern matching the repository method: `usp_WorkItem_Create`, `usp_Assignment_Create`.
+
+```csharp
+// Atomic create: SP validates referenced records and inserts the work item in one round trip.
+public async Task<WorkItem?> CreateAsync(WorkItem workItem, CancellationToken ct)
+{
+    Throw<ArgumentNullException>(workItem is not null, nameof(workItem));
+    return await _commander.ExecuteAsync(workItem!, ct) ? workItem : null;
+}
+
+// Incorrect: pre-validation in the repository by calling a separate repository.
 ```
 
 ## Performance
@@ -101,7 +127,7 @@ WHERE o.Id = @Id AND o.IsDeleted = 0;
 
 **Repository (using multi-map signature with Func<T1, T2, TResult>):**
 ```csharp
-public async Task<Order?> GetOrderWithLinesAsync(Guid id, CancellationToken ct)
+public async Task<Order?> RetrieveOrderWithLinesAsync(Guid id, CancellationToken ct)
 {
     var orders = await _commander.QueryAsync<Order, OrderLine, Order>(
         (order, line) =>
@@ -139,7 +165,7 @@ SELECT Id, OrderId, ProductId, Quantity, UnitPrice FROM dbo.OrderLines WHERE Ord
 
 **Repository (using Func<IEnumerable<T1>, IEnumerable<T2>, IEnumerable<TResult>>):**
 ```csharp
-public async Task<Order?> GetOrderWithLinesMultiAsync(Guid id, CancellationToken ct)
+public async Task<Order?> RetrieveOrderWithLinesMultiAsync(Guid id, CancellationToken ct)
 {
     var results = await _commander.QueryAsync<OrderData, OrderLineData, Order>(
         (orders, lines) =>
@@ -197,7 +223,7 @@ public static class OrderMaterializer
 ```json
 {
   "Commands": {
-    "GetOrderWithLinesAsync": {
+        "RetrieveOrderWithLinesAsync": {
       "CommandText": "SELECT o.Id, o.CustomerId, o.Status, o.Version, l.Id, l.ProductId, l.Quantity, l.UnitPrice FROM dbo.Orders o LEFT JOIN dbo.OrderLines l ON l.OrderId = o.Id WHERE o.Id = @Id",
       "ConnectionAlias": "Default",
       "SplitOn": "Id"
@@ -248,14 +274,14 @@ namespace Samples.Repositories.OrderRepositoryTests
         }
     }
 
-    public class GetAsync(OrderRepositoryTestsFixture fixture)
+    public class RetrieveAsync(OrderRepositoryTestsFixture fixture)
     {
         private readonly IOrderRepository _repository = fixture.Repository;
 
         [Fact]
         public async Task ReturnsNullWhenNotFound()
         {
-            var result = await _repository.GetAsync(Guid.NewGuid());
+            var result = await _repository.RetrieveAsync(Guid.NewGuid());
             Null(result);
         }
     }

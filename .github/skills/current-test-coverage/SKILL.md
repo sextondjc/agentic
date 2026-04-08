@@ -5,7 +5,7 @@ description: Use when a user asks for the current or latest test coverage and wa
 
 # Current Test Coverage
 
-## Singular Purpose
+## Specialization
 
 Run a fresh coverage pass for the current workspace and report current coverage in grid-first format with explicit X of Y metrics.
 

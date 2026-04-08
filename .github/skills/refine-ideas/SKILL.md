@@ -5,7 +5,7 @@ description: Use when capturing raw ideas and iteratively refining them through 
 
 # Refine Ideas
 
-## Singular Purpose
+## Specialization
 
 Turn an early idea into a refined, decision-ready concept by combining structured idea capture, topic learning, and disciplined challenge rounds.
 

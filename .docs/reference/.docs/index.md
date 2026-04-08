@@ -1,13 +1,15 @@
-# Directory Index: /.docs
+# Index: .docs
 
-## Summary
-Mirrored directory landing page for source path /.docs.
+> Corpus index. Do not edit manually - refresh with invoke-index-refresh.ps1.
 
-## Child Directories
-- [index.md](./plans/index.md)
+## Subfolders
 
-## Files
-- [agent-routing-guide.md.ref.md](./agent-routing-guide.md.ref.md)
+| Folder | Description |
+|---|---|
+| [plans/](./plans/INDEX.md) | Subfolder index. |
 
-## See Also
-- [index.md](./../index.md)
+## Documents
+
+| File | Title | Category | Summary |
+|---|---|---|---|
+| [agent-routing-guide.md.ref.md](./agent-routing-guide.md.ref.md) | Reference: agent-routing-guide.md | reference | Generated reference for the routing guide document. |

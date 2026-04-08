@@ -50,15 +50,21 @@ pwsh ./.github/skills/scaffold-dotnet/references/scripts/New-DotNetSolutionScaff
 
 ## Inputs
 
-- User request context and target scope for this skill invocation.
+- Target workspace root.
+- Solution and project naming intent.
+- Whether template overwrite behavior is allowed.
 
 ## Required Outputs
 
-- A concrete, workspace-applicable result aligned with this skill purpose.
+- Baseline .NET scaffold folders and placeholders.
+- Template build asset application status.
+- Follow-up checklist for first build and test run.
 
 ## Workflow
 
-1. Gather required context and constraints from the workspace and user request.
-2. Execute the skill-specific steps and produce the required artifacts or decisions.
-3. Validate outputs for completeness and consistency with active workspace instructions.
+1. Validate target workspace and naming inputs.
+2. Run scaffold script with explicit parameters.
+3. Apply templates and verify resulting structure.
+4. Return concise setup status and next actions.
+
 

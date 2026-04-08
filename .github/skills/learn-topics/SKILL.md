@@ -5,7 +5,7 @@ description: Use when building a specialist learning path that must decompose a 
 
 # Learn Topics
 
-## Singular Purpose
+## Specialization
 
 Build a depth-calibrated, specialist learning map for a requested domain and maintain a source ledger that justifies every major recommendation.
 
@@ -15,7 +15,8 @@ Build a depth-calibrated, specialist learning map for a requested domain and mai
 - `critical-thinking` for assumption checks and depth-right-sizing.
 - `route-customization` when a capability gap appears.
 - `skills-authoring` when the gap is a reusable workflow skill.
-- `customization-authoring` when the gap requires a new agent or instruction.
+- `agent-authoring` when the gap requires a new agent.
+- `instructions-authoring` when the gap requires a new instruction.
 
 ## Depth Levels
 
@@ -37,7 +38,9 @@ Use one level unless the user asks for mixed depth.
 5. Generate a final learning map with explicit stop points for "good enough" completion.
 6. Record all sources in a source ledger using `./references/source-ledger-template.md`.
 7. Identify capability gaps and route through `route-customization`.
-8. If approved, generate missing assets via `skills-authoring` or `customization-authoring`.
+8. If approved, generate missing assets via `skills-authoring`, `agent-authoring`, or `instructions-authoring`.
+9. Confirm deterministic coverage: map every requested outcome to a delivered artifact or explicit decision.
+10. If exploration is required, define hypothesis, boundary, time-box, success criteria, and closure decision.
 
 ## Output Contract
 
@@ -47,10 +50,19 @@ Always include:
 - Pragmatic stop rule defining what counts as sufficient mastery.
 - Source ledger with links and relevance notes.
 - Gap-to-artifact routing decision when new assets are needed.
+- Determinism status showing complete coverage or approved bounded exception.
 
 ## Done Criteria
 
 This skill is complete when the user receives a source-backed learning map that matches the requested depth and includes explicit next steps or asset-generation decisions.
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- The user wants a structured learning path for a topic.
+- A topic must be decomposed by depth with source-backed coverage.
+- Capability gaps need to be mapped before creating new skills or customizations.
 
 ## Inputs
 

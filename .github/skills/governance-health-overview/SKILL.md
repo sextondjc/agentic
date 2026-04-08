@@ -5,9 +5,11 @@ description: Use when you need a reconciled, cross-skill governance health view 
 
 # Governance Health Overview
 
-## Singular Purpose
+## Specialization
 
 Produce one reconciled governance health view across core governance, skill quality, and customization quality by synthesizing outputs from specialized review skills.
+
+This skill is hyper-specialized for governance health reconciliation only.
 
 This skill does not replace `audit-governance`, `skill-review`, or `validate-customization`; it only aggregates and reconciles their outputs.
 
@@ -22,13 +24,12 @@ Invoke this skill when any of the following is true:
 ## Required Inputs
 
 - Audit date (`YYYY-MM-DD`).
-- Core governance report path under `.docs/changes/governance-audits/`.
-- Skill review aggregate path under `.docs/changes/skill-reviews/`.
-- Customization review aggregate path under `.docs/changes/customization-reviews/`.
+- Target scope (full workspace or constrained scope when explicitly requested).
+- Optional override paths only when rerun is explicitly blocked; otherwise generate fresh artifacts in this invocation.
 
 ## Required Outputs
 
-- Reconciled report at `.docs/changes/governance-audits/YYYYMMDD-comprehensive-workspace-health-audit.md`.
+- Reconciled report at `.docs/changes/governance-audits/comprehensive-workspace-health-audit.md`.
 - Coverage Grid.
 - Standards Health Grid including GOV-M*, GOV-S*, plus aggregated GOV-SK and GOV-CUS outcomes.
 - Aggregate Metrics Grid.
@@ -37,12 +38,27 @@ Invoke this skill when any of the following is true:
 
 ## Workflow
 
-1. Read `audit-governance` output for GOV-M* and GOV-S* baseline.
-2. Read `skill-review` aggregate output for pass/fail/advisory totals and MUST failures.
-3. Read `validate-customization` aggregate output for MUST failures, advisories, and conflicts.
-4. Reconcile all three sources into one coherent set of metrics.
-5. If any MUST failures or open conflicts exist in any source, set disposition to `FAILED`.
-6. Produce ranked remediation recommendations mapped to evidence artifacts.
+0. Use `powershell-script-library` first and run `invoke-governance-health-overview.ps1` to collect evidence in one non-interactive execution when tooling permits.
+1. Run `audit-governance` first and produce a fresh core governance artifact under `.docs/changes/governance-audits/` for the audit date.
+2. Run `skill-review` second and produce a fresh aggregate skill review artifact under `.docs/changes/skill-reviews/` for the audit date.
+3. Run `validate-customization` third and produce a fresh aggregate customization review artifact under `.docs/changes/customization-reviews/` for the audit date.
+4. Verify all three artifacts are generated in the current invocation and capture their paths in the report metadata.
+5. Reconcile the three fresh sources into one coherent set of metrics.
+6. If any MUST failures or open conflicts exist in any source, set disposition to `FAILED`.
+7. Produce ranked remediation recommendations mapped to evidence artifacts.
+
+## Freshness Policy
+
+- Default behavior is `fresh-run required`.
+- Do not aggregate from previously existing artifacts when reruns are possible.
+- If reruns are blocked (tooling failure, permissions, or explicit user override), report `stale-input mode` in metadata and list the blocking reason.
+- In `stale-input mode`, prefer latest-dated artifacts and mark disposition as provisional until fresh routines complete.
+
+## Execution Efficiency Policy
+
+- Target one terminal approval for the full workflow by batching phase evidence collection.
+- Avoid interactive commands and prompts; pass required parameters explicitly.
+- If one-approval execution is blocked by environment limits, document the blocker and the minimal extra approvals required.
 
 ## Decision Rules
 
@@ -60,6 +76,8 @@ Invoke this skill when any of the following is true:
 
 ## Done Criteria
 
+- Core, skill, and customization governance routines were executed in this invocation.
+- Report metadata records the three freshly generated source artifact paths.
 - Report includes reconciled metrics from all three source skills.
 - All source paths are cited in evidence rows.
 - Final disposition matches MUST/conflict decision rules.

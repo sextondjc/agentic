@@ -3,7 +3,7 @@
 ## Metadata
 
 - Date: YYYY-MM-DD
-- Conflict ID: CON-SKILL-YYYYMMDD-001
+- Conflict ID: CON-SKILL-001
 - Skill A: <skill-a>
 - Skill B: <skill-b>
 - Reported By: skill-review

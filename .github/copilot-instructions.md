@@ -30,21 +30,28 @@ Use a three-lane operating model for all customization artifacts:
 
 Canonical governance and classification references:
 
-- [planning-execution-review-governance.md](./../.docs/reference/planning-execution-review-governance.md)
-- [README.md](./agents/README.md)
-- [README.md](./instructions/README.md)
+- [planning-execution-review-governance.md](./skills/audit-governance/references/planning-execution-review-governance.md)
+- [agent-lifecycle-catalog.md](./agents/agent-lifecycle-catalog.md)
+- [instruction-lifecycle-catalog.md](./instructions/instruction-lifecycle-catalog.md)
 - [naming-conventions.instructions.md](./instructions/naming-conventions.instructions.md) ← Mandatory: review before creating new assets
-- [README.md](./prompts/README.md)
-- [README.md](./skills/README.md)
+- [prompt-lifecycle-catalog.md](./prompts/prompt-lifecycle-catalog.md)
+- [skill-discovery-index.md](./skills/skill-discovery-index.md)
 
 ## Preferred Agents
 
-Each agent has a singular purpose. Go directly to the specialist for single-lane work. Use `orchestrator` only when work spans multiple phases or disciplines.
+Each agent is specialized for one narrowly bounded responsibility.
+
+## Mandatory Request Intake
+
+- Every request MUST be routed through `orchestrator` first.
+- `orchestrator` MUST classify scope, determine lane ownership, and choose the specialist handoff.
+- No direct specialist execution is allowed before `orchestrator` routing, including single-lane tasks.
+- If the assigned specialist is already obvious, `orchestrator` still performs intake and immediate handoff.
 
 | Agent | Use when... |
 |---|---|
 | `csharp-engineer` | **Default for C# work.** Writing, modifying, or reviewing .NET code. |
-| `orchestrator` | Work spans planning + implementation + research, or the right specialist is unclear. |
+| `orchestrator` | Mandatory first-hop for every request. Classifies scope and routes to the correct specialist. |
 | `learning-agent` | Building deep topic mastery maps with depth control, specialist decomposition, and source-backed learning plans. |
 | `plan-researcher` | Researching options, producing research notes, or writing implementation plans. |
 | `architecture-designer` | Evaluating aggregate boundaries, producing blueprints, or identifying anti-patterns. |
@@ -55,17 +62,19 @@ Each agent has a singular purpose. Go directly to the specialist for single-lane
 | `code-reviewer` | Reviewing a completed implementation step against the plan and workspace standards. |
 | `powershell-reviewer` | Reviewing PowerShell scripts for safety, automation readiness, and maintainability with remediation guidance. |
 | `governance-briefer` | Producing concise, single-page governance briefings from existing governance artifacts. |
+| `manual-code-reviewer` | Recording manual code review findings into structured review artifacts during source inspection. |
 | `sql-dba` | Live SQL Server administration, schema inspection, or operational DBA work. |
 | `workspace-scaffolder` | Scaffolding a new project's workspace configuration and copilot instructions. |
 
 ## Preferred Skills
 
-Skills discovery index: [README.md](./skills/README.md)
+Skills discovery index: [skill-discovery-index.md](./skills/skill-discovery-index.md)
 
 - `task-research`
 - `prd-generator`
 - `critical-thinking`
 - `learn-topics`
+- `mobile-ui-prototyping`
 - `refine-ideas`
 - `build-maui-apps`
 - `perf-benchmark`
@@ -89,6 +98,7 @@ Skills discovery index: [README.md](./skills/README.md)
 - `route-customization`
 - `scaffold-dotnet`
 - `test-driven-development`
+- `usability-testing-scripts`
 - `writing-plans`
 - `executing-plans`
 - `task-execution`
@@ -99,11 +109,14 @@ Skills discovery index: [README.md](./skills/README.md)
 - `powershell-script-library`
 - `curating-copilot-instructions`
 - `current-test-coverage`
-- `customization-authoring`
+- `agent-authoring`
+- `instructions-authoring`
 - `sync-editorconfig`
 - `sync-customizations`
 - `validate-customization`
 - `write-technical-docs`
+- `librarian`
+- `index-docs`
 
 ## Imported Superpowers Assets
 
@@ -119,10 +132,17 @@ Skills discovery index: [README.md](./skills/README.md)
 ## Workspace Design Rules
 
 - Prefer skills for narrow, reusable workflows over creating new agents.
-- Use `orchestrator` as the default entry point for mixed, ambiguous, or multi-phase work.
+- Use `orchestrator` as the mandatory entry point for all requests.
+- Operate in deterministic-by-default mode: define scope and required outputs before execution and avoid silent scope drift.
+- Allow exploration only as a rare bounded exception with explicit hypothesis, time-box, success criteria, and closure decision.
+- Batch automatable terminal work into a single non-interactive command whenever feasible.
+- Default approval budget is one terminal execution per user request unless a documented blocker requires more.
+- Never rely on manual terminal input when required parameters can be provided explicitly.
 - Avoid duplicate prompts that restate instruction or skill content.
 - Keep prompts task-specific and lightweight.
 - Align all planning and change tracking artifacts to `.docs` rather than legacy `.copilot-tracking` paths.
+
+
 
 
 

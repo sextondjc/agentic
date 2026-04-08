@@ -1,13 +1,15 @@
-# Directory Index: /.github/skills/task-research/references
+# Index: references
 
-## Summary
-Mirrored directory landing page for source path /.github/skills/task-research/references.
+> Corpus index. Do not edit manually — refresh with invoke-index-refresh.ps1.
 
-## Child Directories
-- None
+## Subfolders
 
-## Files
-- [research-template.md.ref.md](./research-template.md.ref.md)
+| Folder | Description |
+|---|---|
+| (none) | - |
 
-## See Also
-- [index.md](./../../../../index.md)
+## Documents
+
+| File | Title | Category | Summary |
+|---|---|---|---|
+| [research-template.md.ref.md](./research-template.md.ref.md) | Reference: [research-template.md](./../../../../../../.github/skills/task-research/references/research-template.md) | reference |  |

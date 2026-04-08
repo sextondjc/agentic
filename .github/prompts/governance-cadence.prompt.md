@@ -7,6 +7,8 @@ description: 'Periodic governance health check prompt. Run monthly to assess wor
 
 Use the `governance-health-overview` skill to run a reconciled workspace governance health assessment that synthesizes core governance, skill quality, and customization quality outputs.
 
+Execution Flag: `fresh-run required`
+
 > **Note:** A CI-based trigger for this prompt is on the backlog. Until a CI workflow is in place, run this prompt manually on a monthly cadence (first working day of each month is recommended).
 
 ## Purpose
@@ -18,17 +20,20 @@ Detect governance drift early: uncatalogued assets, stale instruction frontmatte
 - All assets in `.github/agents/`, `.github/instructions/`, `.github/prompts/`, `.github/skills/`.
 - Catalog READMEs for all four asset types.
 - `copilot-instructions.md` preferred lists.
-- [planning-execution-review-governance.md](./../../.docs/reference/planning-execution-review-governance.md) traceability model.
-- [customization-taxonomy-v1.md](./../../.docs/reference/customization-taxonomy-v1.md) classification reference.
+- [planning-execution-review-governance.md](./../skills/audit-governance/references/planning-execution-review-governance.md) traceability model.
+- [customization-taxonomy-v1.md](./../skills/audit-governance/references/customization-taxonomy-v1.md) classification reference.
 - `.docs/adr/` and `.docs/changes/` directory existence and index state.
 
 ## Required Actions
 
 1. Load and follow [SKILL.md](./../skills/governance-health-overview/SKILL.md) before starting.
-2. Use today's source artifacts from `audit-governance`, `skill-review`, and `validate-customization` (or run them first if missing).
-3. Supply today's date as the audit date in `YYYY-MM-DD` format.
-4. Write the reconciled governance health report to `.docs/changes/governance-audits/YYYYMMDD-comprehensive-workspace-health-audit.md`.
-5. Return results in chat as specified in the skill output format rules.
+2. Invoke the skill with execution flag `fresh-run required`.
+3. Run `audit-governance` first, `skill-review` second, and `validate-customization` third in the same invocation.
+4. Supply today's date as the audit date in `YYYY-MM-DD` format.
+5. Write the reconciled governance health report to `.docs/changes/governance-audits/comprehensive-workspace-health-audit.md`.
+6. Return results in chat as specified in the skill output format rules.
+7. Run `.github/scripts/powershell/test-governance-link-graph.ps1` and include its outcome as GOV-S6 evidence.
+8. Compare the new reconciled report with the latest prior report in `.docs/changes/governance-audits/` and summarize deltas.
 
 ## Output Requirements
 
@@ -84,3 +89,5 @@ Return the following in chat, in this order:
 Run on the first working day of each month.
 
 Compare output against the previous month's report stored in `.docs/changes/governance-audits/`.
+
+Treat this comparison as required unless no prior report exists.

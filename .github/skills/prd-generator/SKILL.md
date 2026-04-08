@@ -86,6 +86,14 @@ Format: valid Markdown only. No horizontal rules. No disclaimers or footers. Tit
 
 Use the [prd-template.md](./references/prd-template.md) for all PRD documents. Add sub-sections as needed; do not remove any top-level sections. Remove placeholder instructions once filled with actual content.
 
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- The user needs a PRD before implementation begins.
+- Requirements must be captured in a durable, traceable planning artifact.
+- A feature or epic needs structured product definition.
+
 ## Inputs
 
 - User request context and target scope for this skill invocation.

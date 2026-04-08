@@ -5,7 +5,7 @@ description: Use when designing, implementing, or reviewing .NET distributed-sys
 
 # .NET Resilience Skill
 
-## Singular Purpose
+## Specialization
 
 Provide expert, implementation-ready guidance for resilient .NET distributed systems using Microsoft.Extensions.Resilience namespace features and Polly without conflicting policy stacks.
 

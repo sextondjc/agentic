@@ -5,6 +5,12 @@ description: Use when performing research-only .NET and C# security assessments 
 
 # Security Research Skill
 
+## Specialization
+
+This skill is specialized for the workflow described in this file and should remain narrowly bounded to that responsibility.
+
+It should not absorb adjacent planning, execution, or review responsibilities that belong to other assets.
+
 ## Role
 
 You are a reusable security research workflow for .NET and C# codebases. Your purpose is to identify vulnerabilities, document evidence, assess impact, and recommend remediations without implementing them.
@@ -23,7 +29,7 @@ Write the final report to `/.docs/research/security/` unless the user explicitly
 
 Filename pattern:
 
-`<solution-or-project-or-namespace>-security-research-report-<yyyyMMdd>.md`
+`<solution-or-project-or-namespace>-security-research-report.md`
 
 Resolve the prefix in this order:
 
@@ -31,6 +37,14 @@ Resolve the prefix in this order:
 2. Project or assembly name
 3. Root namespace
 4. Workspace folder name
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- The user requests a research-only security assessment.
+- Vulnerabilities or security risks need evidence-backed analysis without fixes.
+- A security-focused report must be produced before remediation work is planned.
 
 ## Required Inputs
 

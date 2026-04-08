@@ -1,32 +1,13 @@
 # Mobile UI Prototyping — Reference Assets
 
-This directory contains design tokens, component libraries, and prototyping frameworks to support interactive mobile UI prototyping.
+This references folder is currently empty.
 
-## Contents
-
-### Design System
-- Component token definitions (colors, typography, spacing, shadows)
-- Component library (button, card, modal, list, form element variants)
-- Layout grid tokens and breakpoint definitions
-
-### Prototyping Frameworks
-- Interactive prototype templates
-- Animation specifications and easing guidelines
-- Responsive layout patterns
-
-### Annotation Artifacts
-- Handoff checklist for development
-- Specification annotation template
-- API integration documentation template
+Reserve it for concrete mobile-ui-prototyping assets such as design tokens, prototype templates, component references, and handoff artifacts when those files are added.
 
 ## Usage
 
-Reference these materials when:
-- Building high-fidelity interactive prototypes
-- Documenting component states and behaviors
-- Preparing prototypes for engineering handoff
-- Ensuring design system consistency
+Use this folder for reusable support assets that complement the main [SKILL.md](./../SKILL.md) workflow.
 
 ## Contributing
 
-Update design tokens and component definitions as the design system evolves.
+Add local reference assets only when they are reusable and directly support the skill. Update this README in the same change.

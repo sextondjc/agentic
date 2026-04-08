@@ -1,10 +1,10 @@
-# Reference: [agent-routing-guide.md](./../../agent-routing-guide.md)
+# Reference: [agent-routing-guide.md](./../agent-routing-guide.md)
 
 ## Summary
 This page documents one workspace artifact using only file-observed metadata and headings.
 
 ## Source
-- Path: /[agent-routing-guide.md](./../../agent-routing-guide.md)
+- Path: /[agent-routing-guide.md](./../agent-routing-guide.md)
 - Documented page: /[agent-routing-guide.md.ref.md](./agent-routing-guide.md.ref.md)
 - File type: Markdown
 - Line count: 325
@@ -57,3 +57,4 @@ Advanced:
 - [index.md](./../index.md)
 - [coverage-report.md](./../coverage-report.md)
 - [code-structure.md](./../code-structure.md)
+

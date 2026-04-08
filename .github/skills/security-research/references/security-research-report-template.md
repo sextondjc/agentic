@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Report name: `<solution-or-project-or-namespace>-security-research-report-<yyyyMMdd>.md`
+- Report name: `<solution-or-project-or-namespace>-security-research-report.md`
 - Generated on: `<yyyy-MM-dd>`
 - Assessor: `security-researcher`
 - Scope: `<solution/project/namespace/component>`

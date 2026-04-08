@@ -5,6 +5,12 @@ description: Use when creating, normalizing, or updating a workspace .editorconf
 
 # Sync EditorConfig
 
+## Specialization
+
+This skill is specialized for the workflow described in this file and should remain narrowly bounded to that responsibility.
+
+It should not absorb adjacent planning, execution, or review responsibilities that belong to other assets.
+
 ## Overview
 
 Use this skill to create or refresh a baseline `.editorconfig` in a target repository and run a deterministic policy validation for C# projects.

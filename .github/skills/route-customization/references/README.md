@@ -1,6 +1,6 @@
-# customization-routing-decision — References
+# Route Customization — References
 
-Supporting assets for the `customization-routing-decision` skill.
+Supporting assets for the `route-customization` skill.
 
 | File | Purpose |
 |---|---|

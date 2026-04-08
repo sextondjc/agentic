@@ -1,7 +1,7 @@
 param(
     [string]$RootPath = 'c:/Projects/agentic_templates',
     [string]$ReviewDate = '2026-03-29',
-    [switch]$IncludeAgentCustomizationMirror = $true
+    [bool]$IncludeAgentCustomizationMirror = $true
 )
 
 $ErrorActionPreference = 'Stop'
@@ -11,6 +11,7 @@ $reportsRoot = Join-Path $RootPath '.docs/changes/skill-reviews'
 $historyRoot = Join-Path $skillsRoot 'skill-review/references/history'
 $mirrorPath = Join-Path $skillsRoot 'skill-review/references/mirrors/agent-customization-SKILL.md'
 $compactDate = $ReviewDate -replace '-', ''
+$includeMirror = $IncludeAgentCustomizationMirror
 
 New-Item -ItemType Directory -Force -Path $reportsRoot | Out-Null
 New-Item -ItemType Directory -Force -Path $historyRoot | Out-Null
@@ -254,6 +255,8 @@ function Write-OrAppendHistory {
         [string]$S3Notes,
         [string]$S4Result,
         [string]$S4Notes,
+        [string]$S5Result,
+        [string]$S5Notes,
         [string[]]$LedgerRows,
         [string]$RejectedSnapshot,
         [string]$RemovedSnapshot,
@@ -289,6 +292,7 @@ function Write-OrAppendHistory {
 | SKR-S2 | $S2Result | $S2Notes |
 | SKR-S3 | $S3Result | $S3Notes |
 | SKR-S4 | $S4Result | $S4Notes |
+| SKR-S5 | $S5Result | $S5Notes |
 
 #### Recommendation Ledger
 
@@ -338,6 +342,7 @@ $ledger
 | SKR-S2 | $S2Result | $S2Notes |
 | SKR-S3 | $S3Result | $S3Notes |
 | SKR-S4 | $S4Result | $S4Notes |
+| SKR-S5 | $S5Result | $S5Notes |
 
 #### Recommendation Ledger
 
@@ -371,7 +376,7 @@ foreach ($skillDir in $workspaceSkills) {
     }
 }
 
-if ($IncludeAgentCustomizationMirror -and (Test-Path $mirrorPath)) {
+if ($includeMirror -and (Test-Path $mirrorPath)) {
     $skillInputs += [pscustomobject]@{
         SkillName = 'agent-customization'
         SkillPath = $mirrorPath
@@ -391,6 +396,8 @@ foreach ($skillInput in ($skillInputs | Sort-Object SkillName -Unique)) {
 
     $content = Get-Content $skillFile -Raw
     $frontmatter = Get-FrontmatterBlock -Content $content
+    $contentWithoutCode = [regex]::Replace($content, '(?s)```.*?```', ' ')
+    $wordCount = ([regex]::Matches($contentWithoutCode, '\b\S+\b')).Count
 
     $hasFrontmatter = $frontmatter.Length -gt 0
     $hasName = $frontmatter -match '(?im)^name\s*:'
@@ -413,8 +420,22 @@ foreach ($skillInput in ($skillInputs | Sort-Object SkillName -Unique)) {
 
     $hasTriggerSection = $content -match '(?im)^##\s+(When to Use|Trigger Conditions|Typical Use Cases|Use Cases)'
     $hasInputsSection = $content -match '(?im)^##\s+Inputs\s*$'
+    $hasInputsEquivalent =
+        ($content -match '(?im)^##\s+(Required|Mandatory)\s+Inputs?\s*$') -or
+        ($content -match '(?im)^Required\s+inputs\s*:\s*$')
+    $hasInputsContext = $hasInputsSection -or $hasInputsEquivalent
+
     $hasRequiredOutputsSection = $content -match '(?im)^##\s+Required Outputs\s*$'
+    $hasRequiredOutputsEquivalent =
+        ($content -match '(?im)^##\s+(Required Output|Outputs|Output Rules|Expected Outputs|Deliverables)\s*$') -or
+        ($content -match '(?im)^Required\s+outputs\s*:\s*$')
+    $hasOutputsContext = $hasRequiredOutputsSection -or $hasRequiredOutputsEquivalent
+
     $hasWorkflowSection = $content -match '(?im)^##\s+Workflow\s*$'
+    $hasWorkflowEquivalent =
+        ($content -match '(?im)^##\s+(Generation Flow|Execution Flow|Process|Design Model|Flow)\s*$') -or
+        ($content -match '(?im)^Workflow\s*:\s*$')
+    $hasWorkflowContext = $hasWorkflowSection -or $hasWorkflowEquivalent
     $hasReferences = if ($skill -eq 'agent-customization') { $true } else { Test-Path (Join-Path $skillRoot 'references') }
 
     $markdownFiles = Get-ChildItem $skillRoot -Recurse -File -Filter '*.md' |
@@ -504,21 +525,30 @@ foreach ($skillInput in ($skillInputs | Sort-Object SkillName -Unique)) {
         $s3Evidence = ($evidenceItems -join '; ')
     }
 
-    if ($hasInputsSection -and $hasRequiredOutputsSection -and $hasWorkflowSection) {
+    if ($hasInputsContext -and $hasOutputsContext -and $hasWorkflowContext) {
         $s4 = 'Pass'
-        $s4Notes = 'Skill is self-contained with explicit Inputs, Required Outputs, and Workflow execution context.'
+        $s4Notes = 'Skill is self-contained with explicit execution context for inputs, outputs, and process using canonical sections or equivalent labels.'
     }
     else {
         $s4 = 'Advisory'
         $missingSections = @()
-        if (-not $hasInputsSection) { $missingSections += 'Inputs' }
-        if (-not $hasRequiredOutputsSection) { $missingSections += 'Required Outputs' }
-        if (-not $hasWorkflowSection) { $missingSections += 'Workflow' }
-        $s4Notes = "Skill is not fully self-contained; missing section(s): $($missingSections -join ', ')."
+        if (-not $hasInputsContext) { $missingSections += 'input context' }
+        if (-not $hasOutputsContext) { $missingSections += 'output context' }
+        if (-not $hasWorkflowContext) { $missingSections += 'process/workflow context' }
+        $s4Notes = "Skill is not fully self-contained; missing explicit execution context: $($missingSections -join ', ')."
+    }
+
+    if ($wordCount -le 1200) {
+        $s5 = 'Pass'
+        $s5Notes = "Skill wording is within the conservative brevity baseline ($wordCount words) and shows no automatic verbosity concern."
+    }
+    else {
+        $s5 = 'Advisory'
+        $s5Notes = "Skill may be overly verbose for context efficiency ($wordCount words); review for duplication or narrative padding and condense where safe."
     }
 
     $mustFailures = @($m1, $m2, $m3, $m4 | Where-Object { $_ -eq 'Fail' }).Count
-    $shouldAdvisories = @($s1, $s2, $s3, $s4 | Where-Object { $_ -eq 'Advisory' }).Count
+    $shouldAdvisories = @($s1, $s2, $s3, $s4, $s5 | Where-Object { $_ -eq 'Advisory' }).Count
 
     if ($mustFailures -gt 0) {
         $outcome = 'Fail'
@@ -575,7 +605,17 @@ foreach ($skillInput in ($skillInputs | Sort-Object SkillName -Unique)) {
     if ($s4 -eq 'Advisory') {
         $recommendations.Add([pscustomobject]@{
             Id = 'REC-005'
-            Description = 'Make the skill self-contained by adding explicit Inputs, Required Outputs, and Workflow sections.'
+            Description = 'Make the skill self-contained by adding explicit input/output/process execution context using canonical sections or clearly labeled equivalents.'
+            Priority = 'Medium'
+            Status = 'Proposed'
+            Note = 'Generated by full audit.'
+        })
+    }
+
+    if ($s5 -eq 'Advisory') {
+        $recommendations.Add([pscustomobject]@{
+            Id = 'REC-006'
+            Description = 'Reduce verbosity by removing duplication or narrative padding while preserving trigger clarity and execution fidelity.'
             Priority = 'Medium'
             Status = 'Proposed'
             Note = 'Generated by full audit.'
@@ -653,6 +693,7 @@ foreach ($skillInput in ($skillInputs | Sort-Object SkillName -Unique)) {
 | SKR-S2 | $s2 | .github/skills/*/SKILL.md | $s2Notes |
 | SKR-S3 | $s3 | $s3Evidence | $s3Notes |
 | SKR-S4 | $s4 | $targetPathLabel | $s4Notes |
+| SKR-S5 | $s5 | $targetPathLabel | $s5Notes |
 
 ## Recommendations
 
@@ -681,7 +722,7 @@ $($recommendationTableRows -join "`n")
 
     Set-Content -Path $reportPath -Value $reportBody -NoNewline
 
-    Write-OrAppendHistory -HistoryPath $historyPath -Skill $skill -SkillPath $targetPathLabel -ReviewDate $ReviewDate -Outcome $outcome -ReportRelPath $reportRelPath -M1Result $m1 -M1Notes $m1Notes -M2Result $m2 -M2Notes $m2Notes -M3Result $m3 -M3Notes $m3Notes -M4Result $m4 -M4Notes $m4Notes -S1Result $s1 -S1Notes $s1Notes -S2Result $s2 -S2Notes $s2Notes -S3Result $s3 -S3Notes $s3Notes -S4Result $s4 -S4Notes $s4Notes -LedgerRows $ledgerRows -RejectedSnapshot $rejectedSnapshot -RemovedSnapshot $removedSnapshot -IllegitimateSnapshot $illegitimateSnapshot
+    Write-OrAppendHistory -HistoryPath $historyPath -Skill $skill -SkillPath $targetPathLabel -ReviewDate $ReviewDate -Outcome $outcome -ReportRelPath $reportRelPath -M1Result $m1 -M1Notes $m1Notes -M2Result $m2 -M2Notes $m2Notes -M3Result $m3 -M3Notes $m3Notes -M4Result $m4 -M4Notes $m4Notes -S1Result $s1 -S1Notes $s1Notes -S2Result $s2 -S2Notes $s2Notes -S3Result $s3 -S3Notes $s3Notes -S4Result $s4 -S4Notes $s4Notes -S5Result $s5 -S5Notes $s5Notes -LedgerRows $ledgerRows -RejectedSnapshot $rejectedSnapshot -RemovedSnapshot $removedSnapshot -IllegitimateSnapshot $illegitimateSnapshot
 
     $aggregateRows += [pscustomobject]@{
         Skill = $skill

@@ -5,7 +5,7 @@ description: Use when evaluating .instructions.md or .agent.md files against qua
 
 # Customization Review
 
-## Singular Purpose
+## Specialization
 
 Evaluate `.instructions.md` and `.agent.md` files against defined quality standards and produce review outcomes that determine whether an artifact passes, requires update, or enters conflict resolution.
 
@@ -34,17 +34,19 @@ This skill has one purpose: customization quality review and follow-up governanc
 | INR-S1 | No conflict with other instruction files | SHOULD NOT conflict | No harmful overlap or contradictory rules with other active instruction files. | Start conflict workflow; document resolution plan. |
 | INR-S2 | Rationale present for non-obvious rules | SHOULD | Non-obvious mandates include a brief rationale comment. | Record advisory finding; recommend rationale addition. |
 | INR-S3 | No conflict with agent or skill boundaries | SHOULD NOT conflict | Instruction behavior does not contradict active agent personas or skill boundaries. | Start conflict workflow; document boundary resolution options. |
+| INR-S4 | Brevity | SHOULD | Instruction wording is economical, avoids duplication, and does not include narrative padding beyond what policy clarity requires. | Record advisory finding; recommend concise reductions through `instructions-authoring`. |
 
 ## Review Standards — Agent Files
 
 | ID | Standard | Type | Pass Criteria | Failure Action |
 |---|---|---|---|---|
-| AGR-M1 | Singular purpose | MUST | Agent scope maps to one role lane only. | Mark failed; recommend scope split. |
+| AGR-M1 | Specialization | MUST | Agent scope is hyper-specialized to one role lane only. | Mark failed; recommend scope split. |
 | AGR-M2 | Valid frontmatter | MUST | `name` and `description` present; valid YAML. | Mark failed; provide exact frontmatter fix. |
-| AGR-M3 | Singular purpose section present | MUST | `## Singular Purpose` section exists and names what the agent does and does not do. | Mark failed; provide section guidance. |
+| AGR-M3 | Specialization section present | MUST | `## Specialization` section exists and names what the agent does and does not do. | Mark failed; provide section guidance. |
 | AGR-M4 | No instruction file restatement | MUST | Agent body references instruction files rather than restating their content inline. | Mark failed; recommend replacing inline rules with references. |
 | AGR-S1 | Companion skills declared | SHOULD | `## Preferred Companion Skills` is present with at least one entry. | Record advisory; recommend companion skill list. |
 | AGR-S2 | No conflict with other agents | SHOULD NOT conflict | No role overlap or contradictory routing boundaries with other agent files. | Start conflict workflow; document resolution plan. |
+| AGR-S3 | Brevity | SHOULD | Agent wording is economical, avoids duplication, and does not include narrative padding beyond what role clarity requires. | Record advisory finding; recommend concise reductions through `agent-authoring`. |
 
 ---
 
@@ -71,11 +73,12 @@ Optional:
 
 ## Required Outputs
 
-- A per-artifact review report using [customization-review-report-template.md](./references/customization-review-report-template.md).
+- A customization review report using [customization-review-report-template.md](./references/customization-review-report-template.md).
 - A conflict report when needed using [customization-conflict-report-template.md](./references/customization-conflict-report-template.md).
 - Review result summaries MUST be returned in Markdown grid format (tables), not prose lists.
 - Aggregate multi-artifact results MUST include at least one consolidated grid with per-artifact outcomes.
-- Per-artifact review files MUST be stored under `.docs/changes/customization-reviews/<artifact-name>/`.
+- Review reports MUST be stored at `.docs/changes/customization/reviews/audit.md`.
+- Review history MUST be appended to `.docs/changes/customization/reviews/audit-history.md` as one row per reviewed artifact.
 
 ## Workflow
 
@@ -83,13 +86,15 @@ Optional:
 2. Determine artifact type: instruction file or agent file.
 3. Apply the applicable INR-M* / INR-S* or AGR-M* / AGR-S* standards with evidence.
 4. Evaluate each standard against the file content; record pass, fail, or advisory outcome.
-5. For instruction-focused audits, perform cross-artifact checks:
+5. Validate brevity explicitly: wording should be economical, without obvious duplication or narrative padding.
+6. For instruction-focused audits, perform cross-artifact checks:
    - detect duplicate and conflicting instruction guidance,
    - verify alignment with active agent personas,
    - verify alignment with active skill boundaries.
-6. If conflict is detected:
+7. If conflict is detected:
    - Document conflict using the conflict report template.
    - Recommend one or more concrete resolution options.
    - Work with the user to choose and confirm the resolution.
-7. Produce the review report and store it at the required path.
-8. Route any required fixes to `customization-authoring`.
+8. Produce the review report and store it at `.docs/changes/customization/reviews/audit.md`.
+9. Append history rows for all reviewed artifacts to `.docs/changes/customization/reviews/audit-history.md`.
+10. Route any required fixes to `agent-authoring` or `instructions-authoring` based on artifact type.

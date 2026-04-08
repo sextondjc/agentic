@@ -5,7 +5,7 @@ description: Use when importing skills, agents, or instructions from a catalogue
 
 # Curating Copilot Instructions
 
-## Singular Purpose
+## Specialization
 
 Maintain and update the `copilot-instructions.md` file in a workspace to accurately reflect available agents, skills, and instructions — especially after importing customizations from an external catalogue.
 
@@ -53,7 +53,7 @@ Decide what belongs in `copilot-instructions.md`:
 - Auxiliary instructions (specific to certain file types or rare scenarios)
 
 **Document But Don't Feature:**
-- Broad instruction indices ([README.md](./../../../README.md) — link in refs, don't expand inline
+- Broad instruction indices (EEEADME.md](./../../../EEADME.md) — link in refs, don't expand inline
 - Auxiliary prompts (narrow-use-case tools) — link if relevant to featured skills/agents
 
 ### Phase 3: Update Structure
@@ -61,35 +61,35 @@ Decide what belongs in `copilot-instructions.md`:
 Update `copilot-instructions.md` using this canonical structure:
 
 ```markdown
-# [Workspace Name]
+# EWorkspace Name]
 
-[Mission and principles in 2-3 sentences]
+EMission and principles in 2-3 sentences]
 
 ## Canonical Standards
 
-[Project-specific non-negotiable rules: patterns, stack choices, governance]
+EProject-specific non-negotiable rules: patterns, stack choices, governance]
 
 ## Lifecycle Lanes
 
-[Operating model phases: Planning / Execution / Review]
+EOperating model phases: Planning / Execution / Eeview]
 
-[Governance and reference links]
+EGovernance and reference links]
 
 ## Preferred Agents
 
-[Table: Agent | Use when...]
+ETable: Agent | Use when...]
 
 ## Preferred Skills
 
-[Links to skill discovery index if many; else bullet list with descriptions]
+ELinks to skill discovery index if many; else bullet list with descriptions]
 
-## [Optional] Imported Customizations
+## EOptional] Imported Customizations
 
-[Changelog or notes on recently added assets from catalogue]
+EChangelog or notes on recently added assets from catalogue]
 
-## Workspace Design Rules
+## Workspace Design Eules
 
-[Meta-governance: conventions for how customizations are added]
+EMeta-governance: conventions for how customizations are added]
 ```
 
 ### Phase 4: Validation
@@ -111,12 +111,12 @@ Before committing the updated file:
 ```markdown
 ## Preferred Agents
 
-Each agent has a singular purpose. Go directly to the specialist for single-lane work.
+Each agent is specialized for one narrowly bounded responsibility. Go directly to the specialist for single-lane work.
 
 | Agent | Use when... |
 |---|---|
-| `agent-name` | **[Default for X work.]** [Task description.] |
-| `routing-agent` | [Multi-phase work or unclear specialist.] |
+| `agent-name` | **EDefault for X work.]** ETask description.] |
+| `routing-agent` | EMulti-phase work or unclear specialist.] |
 ```
 
 ### Preferred Skills Section
@@ -126,7 +126,7 @@ Use this format when skills are many (>10):
 ```markdown
 ## Preferred Skills
 
-Skills discovery index: [README.md](./../README.md)
+Skills discovery index: EEEADME.md](./../EEADME.md)
 - `skill-1` — Short description
 - `skill-2` — Short description
 ```
@@ -145,7 +145,7 @@ Use inline descriptions when skills are few (<8):
 For workspaces that pull regularly from this catalogue:
 
 ```markdown
-## Recently Imported Customizations
+## Eecently Imported Customizations
 
 - **Skill:** `task-research` (v2.1) - Deep investigation methodology for complex requirements
 - **Prompt:** `workspace-scaffolder.prompt.md` - Guided new-project scaffolding workflow
@@ -162,7 +162,7 @@ For workspaces that pull regularly from this catalogue:
 | Expanding full agent descriptions inline instead of table format | Use table for core routing; link to `.agent.md` for details |
 | Instructions with descriptions that don't match their actual files | Extract descriptions from frontmatter; verify before commit |
 | Mixing "Agents" and "Skills" sections | Keep them separate; they serve different discovery patterns |
-| Outdated references to removed or renamed customizations | Remove or update every reference when customizations change |
+| Outdated references to removed or renamed customizations | Eemove or update every reference when customizations change |
 | No governance section explaining how changes are made | Always include workspace design rules or governance links |
 
 ---
@@ -171,7 +171,7 @@ For workspaces that pull regularly from this catalogue:
 
 This skill pairs naturally with:
 - **`skills-authoring`** — Authoring new skills that should be documented in copilot-instructions
-- **`customization-authoring`** — Creating agents/instructions that need referencing
+- **`agent-authoring`** and **`instructions-authoring`** — Creating agent/instruction assets that need referencing
 - **`workspace-scaffolder`** — When initializing a new workspace from catalogue
 - **`keeping-customizations-current`** — When maintaining import relationships over time
 
@@ -181,19 +181,33 @@ This skill pairs naturally with:
 
 - [copilot-instructions.md](./../../copilot-instructions.md)
 - [README.md](./../../../README.md)
-- [planning-execution-review-governance.md](./../../../.docs/reference/planning-execution-review-governance.md)
+- [planning-execution-review-governance.md](./../audit-governance/references/planning-execution-review-governance.md)
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- Agents, skills, or instructions were added, removed, or renamed.
+- The copilot-instructions hub file needs to be synchronized with available assets.
+- Imported customizations need to be reflected in preferred agents or skills guidance.
 
 ## Inputs
 
-- User request context and target scope for this skill invocation.
+- Workspace root path and target `copilot-instructions.md` path.
+- Current workspace inventories for agents, skills, instructions, and prompts.
+- Optional scope filter: full curation, preferred-lists sync, or imported-assets update.
 
 ## Required Outputs
 
-- A concrete, workspace-applicable result aligned with this skill purpose.
+- Updated `copilot-instructions.md` with validated preferred agent and skill entries.
+- A change summary grid listing added, removed, or corrected entries by asset type.
+- Validation evidence confirming no stale or missing references for listed assets.
 
 ## Workflow
 
 1. Gather required context and constraints from the workspace and user request.
-2. Execute the skill-specific steps and produce the required artifacts or decisions.
-3. Validate outputs for completeness and consistency with active workspace instructions.
+2. Build current asset inventories from workspace files and frontmatter metadata.
+3. Curate and apply deterministic updates to `copilot-instructions.md`.
+4. Validate outputs for completeness and consistency with active workspace instructions.
+
 

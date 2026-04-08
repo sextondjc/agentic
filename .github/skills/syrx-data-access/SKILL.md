@@ -32,7 +32,7 @@ Read in this order when behavior is unclear:
    - `references/implementation-examples.md`
    - `references/review-checklist.md`
 2. Project instructions, when present (for example `/[syrx.instructions.md](./../../instructions/syrx.instructions.md)`).
-3. Project reference docs, when present (for example `/.docs/reference/`).
+3. Project reference docs, when present (for example `/.github/skills/<skill-name>/references/`).
 4. Syrx framework docs and package documentation available to the project.
 
 If guidance conflicts, prefer:
@@ -104,15 +104,20 @@ See `references/review-checklist.md` for review criteria and `references/impleme
 
 ## Inputs
 
-- User request context and target scope for this skill invocation.
+- Repository use case and method list.
+- Expected SQL operations and result shapes.
+- Active project constraints for Syrx configuration style.
 
 ## Required Outputs
 
-- A concrete, workspace-applicable result aligned with this skill purpose.
+- Repository implementation guidance aligned to Syrx patterns.
+- Parameterized SQL mapping approach per method.
+- Verification checklist for security, reliability, and tests.
 
 ## Workflow
 
-1. Gather required context and constraints from the workspace and user request.
-2. Execute the skill-specific steps and produce the required artifacts or decisions.
-3. Validate outputs for completeness and consistency with active workspace instructions.
+1. Confirm repository scope and command mapping style.
+2. Define parameterized SQL mappings and command resolution.
+3. Apply DI, async, and guard requirements.
+4. Validate with unit/integration testing guidance.
 

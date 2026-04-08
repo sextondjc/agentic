@@ -1,13 +1,15 @@
-# Directory Index: /.github/skills/api-design
+# Index: api-design
 
-## Summary
-Mirrored directory landing page for source path /.github/skills/api-design.
+> Corpus index. Do not edit manually — refresh with invoke-index-refresh.ps1.
 
-## Child Directories
-- None
+## Subfolders
 
-## Files
-- [SKILL.md.ref.md](./SKILL.md.ref.md)
+| Folder | Description |
+|---|---|
+| (none) | - |
 
-## See Also
-- [index.md](./../../../index.md)
+## Documents
+
+| File | Title | Category | Summary |
+|---|---|---|---|
+| [SKILL.md.ref.md](./SKILL.md.ref.md) | Reference: [SKILL.md](./../../../../../.github/skills/api-design/SKILL.md) | reference |  |

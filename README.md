@@ -28,8 +28,8 @@ This repository is customization-only.
 | Path | What You Keep Here |
 |---|---|
 | [copilot-instructions.md](./.github/copilot-instructions.md) | Canonical workspace operating model, preferred agents, and preferred skills. |
-| [README.md](./.github/instructions/README.md) | Lane catalog for instruction files and governance mapping. |
-| [README.md](./.github/skills/README.md) | Skill discovery index with lane assignments and usage guidance. |
+| [instruction-lifecycle-catalog.md](./.github/instructions/instruction-lifecycle-catalog.md) | Lane catalog for instruction files and governance mapping. |
+| [skill-discovery-index.md](./.github/skills/skill-discovery-index.md) | Skill discovery index with lane assignments and usage guidance. |
 | [agent-routing-guide.md](./.docs/agent-routing-guide.md) | Routing guidance for choosing the right agent/skill path. |
 | [planning-execution-review-governance.md](./.docs/reference/planning-execution-review-governance.md) | Lifecycle taxonomy and traceability model. |
 
@@ -59,7 +59,7 @@ Use this matrix to select the correct execution route.
 | ID | Requirement |
 |---|---|
 | REQ-001 | All implementation work must follow active instruction files in `.github/instructions`. |
-| REQ-002 | New or renamed customization assets must update the relevant catalog README in the same change. |
+| REQ-002 | New or renamed customization assets must update the relevant catalog/index file in the same change. |
 | REQ-003 | Execution work must link to an originating plan and record deviations in `.docs/changes`. |
 | REQ-004 | Repository data access in .NET implementations must follow Syrx repository constraints. |
 
@@ -98,8 +98,10 @@ Use this matrix to select the correct execution route.
 
 ## Related Indexes
 
-- [README.md](./.github/instructions/README.md)
-- [README.md](./.github/skills/README.md)
-- [README.md](./.github/agents/README.md)
-- [README.md](./.github/prompts/README.md)
+- [instruction-lifecycle-catalog.md](./.github/instructions/instruction-lifecycle-catalog.md)
+- [skill-discovery-index.md](./.github/skills/skill-discovery-index.md)
+- [agent-lifecycle-catalog.md](./.github/agents/agent-lifecycle-catalog.md)
+- [prompt-lifecycle-catalog.md](./.github/prompts/prompt-lifecycle-catalog.md)
 - [planning-execution-review-governance.md](./.docs/reference/planning-execution-review-governance.md)
+
+

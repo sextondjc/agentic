@@ -37,10 +37,10 @@ function Get-CatalogAssets {
   param([string]$Type)
 
   $catalogPath = switch ($Type) {
-    'agents' { '.github/agents/README.md' }
-    'skills' { '.github/skills/README.md' }
-    'instructions' { '.github/instructions/README.md' }
-    'prompts' { '.github/prompts/README.md' }
+    'agents' { '.github/agents/agent-lifecycle-catalog.md' }
+    'skills' { '.github/skills/skill-discovery-index.md' }
+    'instructions' { '.github/instructions/instruction-lifecycle-catalog.md' }
+    'prompts' { '.github/prompts/prompt-lifecycle-catalog.md' }
   }
 
   $headerCell = switch ($Type) {
@@ -75,3 +75,4 @@ $actual = @(Get-ActualAssets -Type $AssetType | Where-Object { $_ -and $_.Trim()
 $catalog = @(Get-CatalogAssets -Type $AssetType | Where-Object { $_ -and $_.Trim().Length -gt 0 } | Sort-Object -Unique)
 
 Compare-Catalog -Actual $actual -Catalog $catalog
+

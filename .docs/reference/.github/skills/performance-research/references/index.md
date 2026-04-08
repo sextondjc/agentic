@@ -1,13 +1,15 @@
-# Directory Index: /.github/skills/performance-research/references
+# Index: references
 
-## Summary
-Mirrored directory landing page for source path /.github/skills/performance-research/references.
+> Corpus index. Do not edit manually — refresh with invoke-index-refresh.ps1.
 
-## Child Directories
-- None
+## Subfolders
 
-## Files
-- [performance-research-report-template.md.ref.md](./performance-research-report-template.md.ref.md)
+| Folder | Description |
+|---|---|
+| (none) | - |
 
-## See Also
-- [index.md](./../../../../index.md)
+## Documents
+
+| File | Title | Category | Summary |
+|---|---|---|---|
+| [performance-research-report-template.md.ref.md](./performance-research-report-template.md.ref.md) | Reference: [performance-research-report-template.md](./../../../../../../.github/skills/performance-research/references/performance-research-report-template.md) | reference |  |

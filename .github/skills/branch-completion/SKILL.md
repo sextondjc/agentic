@@ -199,6 +199,14 @@ git worktree remove <worktree-path>
 **Pairs with:**
 - **using-git-worktrees** - Cleans up worktree created by that skill
 
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- Implementation is complete and the next decision is how to integrate or close out the branch.
+- Tests have passed and the user needs merge, PR, or cleanup options.
+- A completion workflow is needed after execution work finishes.
+
 ## Inputs
 
 - User request context and target scope for this skill invocation.

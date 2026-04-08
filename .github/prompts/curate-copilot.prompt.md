@@ -5,13 +5,9 @@ description: Prompt for discovering imported customizations and updating copilot
 
 # Curating Copilot Instructions
 
-Your goal is to update the `copilot-instructions.md` file in your workspace to reflect imported skills, agents, and instructions — ensuring every asset is discoverable and that new contributors understand which tools to use for their specific tasks.
+Update `copilot-instructions.md` so imported skills, agents, and instructions are discoverable and new contributors can pick the right tool quickly.
 
-This is typically run when:
-- You've imported skills/agents/instructions from a catalogue
-- You're setting up a new workspace with pulled-in customizations
-- You're maintaining copilot-instructions.md after adding new agents or skills
-- You're auditing the file to remove outdated or unused references
+Use this prompt when importing customizations, setting up a workspace, adding assets, or cleaning stale references.
 
 ## Pre-Flight
 
@@ -26,7 +22,7 @@ Gather these inputs:
 - `recently_imported` — List any agents/skills you've recently added (e.g., "syrx-data-access, api-design")
 - `unused_customizations` — Any imported assets you decided NOT to use (e.g., "sql-dba" if your project doesn't use databases)
 
-Request any missing required inputs before proceeding.
+Ask for any missing required inputs before continuing.
 
 ---
 
@@ -37,39 +33,31 @@ Request any missing required inputs before proceeding.
 Scan your workspace for all available customizations:
 
 **Agents** — Search `.github/agents/` for all `.agent.md` files
-```
-Expected output: filename, agent name (from frontmatter), description (from frontmatter)
-```
+Output: filename, agent name (from frontmatter), description (from frontmatter)
 
 **Skills** — Search `.github/skills/` for all `SKILL.md` files
-```
-Expected output: skill name (from frontmatter), description (from frontmatter), file path
-```
+Output: skill name (from frontmatter), description (from frontmatter), file path
 
 **Instructions** — Search `.github/instructions/` for all `.instructions.md` files
-```
-Expected output: instruction name (from frontmatter), policy domain, applyTo pattern
-```
+Output: instruction name (from frontmatter), policy domain, applyTo pattern
 
 **Prompts** — Search `.github/prompts/` for all `.prompt.md` files (for context only)
-```
-Expected output: prompt name, paired agent/skill (if any)
-```
+Output: prompt name, paired agent/skill (if any)
 
 Compile this into a master list showing what's available.
 
 ### Step 2: Categorize by Role
 
 Sort agents into categories:
-- **Routing/Orchestration:** Agents that dispatch work to specialists (e.g., `orchestrator`)
-- **Specialist:** Agents for specific domains (e.g., `csharp-engineer`, `architecture-designer`)
-- **Analysis/Research:** Agents that produce reports (e.g., `security-researcher`, `performance-assessor`)
+- **Routing/Orchestration:** Dispatches work to specialists (e.g., `orchestrator`)
+- **Specialist:** Handles a specific domain (e.g., `csharp-engineer`, `architecture-designer`)
+- **Analysis/Research:** Produces assessments or reports (e.g., `security-researcher`, `performance-assessor`)
 
 Sort skills into categories:
-- **Workflow/Methodology:** Skills that guide multi-step processes (e.g., `writing-plans`, `executing-plans`)
-- **Domain-Specific:** Skills for particular technologies/patterns (e.g., `syrx-data-access`, `api-design`)
-- **Authoring/Generation:** Skills for creating documentation/code (e.g., `adr-generator`, `prd-generator`)
-- **Analysis/Review:** Skills for evaluating work (e.g., `code-reviewer`, `security-research`)
+- **Workflow/Methodology:** Guides multi-step processes (e.g., `writing-plans`, `executing-plans`)
+- **Domain-Specific:** Targets technologies or patterns (e.g., `syrx-data-access`, `api-design`)
+- **Authoring/Generation:** Creates docs or code artifacts (e.g., `adr-generator`, `prd-generator`)
+- **Analysis/Review:** Evaluates quality, security, or performance (e.g., `code-reviewer`, `security-research`)
 
 ---
 
@@ -93,17 +81,10 @@ For each customization, ask:
 
 Identify dependencies and groupings:
 
-**Which agents are alternatives to each other?**
-- Example: `plan-researcher` vs. `orchestrator` — which is the default for ambiguous requests?
-
-**Which skills should always be mentioned together?**
-- Example: `test-driven-development` + `request-code-review` + `remediate-review` form a review workflow
-
-**Are there any skill/agent pairs that naturally execute together?**
-- Example: `critical-thinking` often pairs with `architecture-designer` for complex design decisions
-
-**Which instructions are foundational vs. advisory?**
-- Example: `validation-and-guards.instructions.md` (Syrx) vs. `docker-dotnet.instructions.md` (optional)
+- Alternatives: Which agents overlap, and which one is the default? (e.g., `plan-researcher` vs. `orchestrator`)
+- Bundles: Which skills should be listed together? (e.g., `test-driven-development` + `request-code-review` + `remediate-review`)
+- Pairings: Which skill and agent combinations naturally work together?
+- Instruction weight: Which instructions are foundational vs. advisory?
 
 Use these groupings to structure the sections of your updated copilot-instructions.md
 
@@ -130,7 +111,7 @@ Before committing, validate:
 - [ ] Every listed agent/skill file exists in the workspace
 - [ ] Descriptions match the actual frontmatter (not paraphrased)
 - [ ] No duplicate asset entries across sections
-- [ ] Links to indices ([README.md](./../skills/README.md) are correct
+- [ ] Links to indices ([skill-discovery-index.md](./../skills/skill-discovery-index.md)) are correct
 - [ ] The table formats render correctly in Markdown
 - [ ] Tone and terminology are consistent
 - [ ] No references to removed or renamed assets
@@ -162,26 +143,17 @@ If you're using version control:
 ### Scenario: "I'm setting up a new workspace and importing catalogue skills"
 
 **Your task:**
-1. Run **Step 1** to list what's available from the catalogue
-2. Run **Step 3** to decide what fits your project scope
-3. Run **Step 5** to create or update copilot-instructions.md with a curated list
-4. Run **Step 7** to validate the file as a "new contributor would see it"
+Run Steps **1, 3, 5, and 7**.
 
 ### Scenario: "I added a new skill/agent and need to reference it"
 
 **Your task:**
-1. Extract the name and description from the new customization's frontmatter
-2. Identify which section of copilot-instructions.md it belongs in (Agents vs. Skills, etc.)
-3. Insert the entry maintaining existing formatting and tone
-4. Run **Step 7** to verify the update doesn't break discoverability
+Extract the new asset frontmatter, place it in the correct section, maintain style, then run **Step 7**.
 
 ### Scenario: "I'm auditing copilot-instructions.md and found stale references"
 
 **Your task:**
-1. Run **Step 1** to get a fresh manifest of what actually exists
-2. Compare the current copilot-instructions.md against that manifest
-3. Remove or update any entries that don't match actual files
-4. Run **Step 8** to document the cleanup
+Run **Step 1**, compare against current entries, remove or update stale references, then run **Step 8**.
 
 ---
 
@@ -189,13 +161,13 @@ If you're using version control:
 
 Your updated `copilot-instructions.md` is ready when:
 
-✓ Every agent, skill, and instruction listed actually exists in the workspace  
-✓ Descriptions are accurate extracts from frontmatter (not paraphrased)  
-✓ New contributors can identify the right tool for their task within 30 seconds  
-✓ There are no duplicate asset references  
-✓ Links to indices and governance docs are correct  
-✓ Formatting is consistent and renders correctly  
-✓ The file reflects your project's actual scope and default choices
+✓ Every listed asset exists in the workspace  
+✓ Descriptions are accurate frontmatter extracts (not paraphrased)  
+✓ New contributors can identify the right tool within 30 seconds  
+✓ No duplicate references; links and formatting render correctly  
+✓ Content reflects project scope and intended defaults
+
+
 
 
 

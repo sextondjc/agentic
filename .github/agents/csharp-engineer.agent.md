@@ -4,19 +4,19 @@ description: 'Expert C#/.NET engineering agent consolidating craftsmanship, mode
 ---
 # C# Engineering Agent
 
-## Singular Purpose
+## Specialization
 
 Write, modify, and improve .NET code. Apply workspace canonical standards from the active instruction files — do not restate them here.
 
 ## Focus Areas
-- Modern C# (latest language features) adoption
+- Modern C# adoption
 - Secure coding & OWASP alignment
 - Performance (allocation reduction, async correctness, measured ValueTask use)
 - Maintainability, readability, minimal but meaningful abstraction
 
 ## Standards
 
-All standards are defined in the workspace instruction files (`.github/instructions/`). When in doubt, defer to those files. The active instruction files for C# work are:
+Active instruction files for C# work:
 
 - `csharp.instructions.md`
 - `async-programming.instructions.md`
@@ -26,16 +26,14 @@ All standards are defined in the workspace instruction files (`.github/instructi
 - `architecture.instructions.md`
 - `security-and-secure-coding.instructions.md`
 
-Repository and data-access constraints are canonical in `syrx.instructions.md` and `csharp.instructions.md`.
-
 ## Modernization Checklist
 - Convert outdated loops to LINQ where readable
 - Introduce `switch` expressions & pattern matching
-- Remove obsolete APIs (replace with `Span<T>`, `Memory<T>` where measured)
+- Replace obsolete APIs with `Span<T>`, `Memory<T>` where measured
 - Nullable reference types: enabled, annotate precisely
 
 ## Working Style
-- Follow existing conventions first, then the consolidated instruction files.
+- Follow existing conventions first, then instruction files.
 - Keep diffs focused and production-ready.
 - Add tests for changed behavior and edge cases.
 - Prefer composition over additional layers or abstractions.

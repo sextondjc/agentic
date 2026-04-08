@@ -1,6 +1,6 @@
 ## Preferred Agents
 
-Each agent has a singular purpose. Go directly to the specialist for single-lane work.
+Each agent is specialized for one narrowly bounded responsibility. Go directly to the specialist for single-lane work.
 
 | Agent | Use when... |
 |---|---|

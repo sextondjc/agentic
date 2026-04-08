@@ -142,8 +142,8 @@ Syrx explicit SQL only; each aggregate persistence via dedicated repository.
 ```csharp
 public interface IOrderRepository
 {
-	Task<Order?> GetAsync(Guid id, CancellationToken ct);
-	Task SaveAsync(Order order, CancellationToken ct);
+	Task<Order?> RetrieveAsync(Guid id, CancellationToken cancellationToken);
+	Task SaveAsync(Order order, CancellationToken cancellationToken);
 }
 
 public sealed class OrderRepository : IOrderRepository
@@ -151,19 +151,14 @@ public sealed class OrderRepository : IOrderRepository
 	private readonly ICommander<IOrderRepository> _commander;
 	public OrderRepository(ICommander<IOrderRepository> commander) => _commander = commander;
 
-	public async Task<Order?> GetAsync(Guid id, CancellationToken ct)
+	public async Task<Order?> RetrieveAsync(Guid id, CancellationToken cancellationToken)
 	{
-		var cmd = CommandStrings.Order.GetById;
-		var data = await _commander.QueryAsync<OrderData>(cmd, new { Id = id }, ct);
-		return data?.ToDomain();
+		return (await _commander.QueryAsync<OrderData>(new { Id = id }, cancellationToken).SingleOrDefault());
 	}
 
-	public async Task SaveAsync(Order order, CancellationToken ct)
+	public async Task SaveAsync(Order order, CancellationToken cancellationToken)
 	{
-		// Example: Upsert
-		var cmd = CommandStrings.Order.Upsert;
-		var dto = OrderData.FromDomain(order);
-		await _commander.ExecuteAsync(cmd, dto, ct);
+			return await _commander.ExecuteAsync(order, cancellationToken) ? order : null;
 	}
 }
 ```
@@ -176,6 +171,29 @@ public sealed class OrderRepository : IOrderRepository
 ### Multi-Mapping Strategy
 - Query multiple tables; map to simple DTO set; compose domain aggregate.
 - Avoid passing raw data structures past repository boundary.
+
+## Application Service Design Rules
+
+### Single Repository per Bounded Operation
+- A service class must inject **exactly one repository** per bounded operation it orchestrates.
+- Services must never inject multiple repositories to compose a cross-entity query or multi-step write at the application layer.
+- When an operation must validate and write across entity boundaries in a single atomic step, that logic belongs in a **stored procedure** invoked via the single owning repository.
+- Example: if creating an association requires validating both referenced records exist, the SP performs both validation and insertion atomically; the service calls one repository method.
+
+```
+Correct: AssociationService._associationRepository.CreateAsync(association)  // SP handles key validation + insert
+Incorrect: AssociationService._relatedEntityRepository.RetrieveAsync(relatedId) + _associationRepository.CreateAsync(association)
+```
+
+### No Exception Handling in Service or Repository Layers
+- Services and repositories must **not contain `try/catch` blocks**.
+- Cross-cutting exception handling (logging, translation, retries) is applied via an AOP pipeline at the composition root.
+- If a domain rule is violated, throw a typed domain exception and let it propagate — do not swallow or re-wrap inline.
+
+### Service Method Contract
+- Services accept and return domain model types from the owning bounded context's `*.Models` assembly.
+- Services must not accept or return API contract types (e.g., request/response records from a `*.Api.Models` assembly).
+- Services must not perform HTTP, serialization, or transport operations.
 
 ## Decision Records
 Use ADR workflow to document rationale in `.docs/adr`.

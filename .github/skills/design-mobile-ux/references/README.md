@@ -1,33 +1,13 @@
 # Design Mobile UX — Reference Assets
 
-This directory contains templates, checklists, and tools to support mobile UX design workflows.
+This references folder is currently empty.
 
-## Contents
-
-### Wireframe Templates
-- User flow diagram template
-- Screen layout templates (iOS and Android)
-- Navigation pattern templates
-
-### Research Templates
-- User research interview script template
-- User persona template
-- Competitive analysis template
-- Validation checklist
-
-### Guidance References
-- Mobile platform guidelines (iOS HIG, Material Design)
-- Accessibility standards (WCAG 2.1 mobile)
-- Performance considerations for mobile design
+Reserve it for concrete design-mobile-ux assets such as templates, checklists, guidance snapshots, or handoff material when those files are added.
 
 ## Usage
 
-Reference these materials when:
-- Defining user flows and interactions
-- Validating design decisions with user research
-- Ensuring platform-specific compliance
-- Documenting handoff to engineering teams
+Use this folder for reusable support assets that complement the main [SKILL.md](./../SKILL.md) workflow.
 
 ## Contributing
 
-Add new templates or examples as the workspace evolves mobile UX practices.
+Add local reference assets only when they are reusable and directly support the skill. Update this README in the same change.

@@ -11,7 +11,8 @@
 
 ## Storage
 
-- Save this file to `.docs/changes/customization-reviews/<artifact-name>/YYYYMMDD-review.md`
+- Save this file to `.docs/changes/customization/reviews/audit.md`
+- Append one history row per reviewed artifact to `.docs/changes/customization/reviews/audit-history.md`
 
 ## Summary Outcome Grid
 
@@ -34,6 +35,8 @@ For instruction files:
 | INR-M4 | Pass/Fail | <evidence> | <notes> |
 | INR-S1 | Pass/Advisory | <evidence> | <notes> |
 | INR-S2 | Pass/Advisory | <evidence> | <notes> |
+| INR-S3 | Pass/Advisory/Blocked | <evidence> | <notes> |
+| INR-S4 | Pass/Advisory | <evidence> | <notes> |
 
 For agent files:
 
@@ -45,6 +48,7 @@ For agent files:
 | AGR-M4 | Pass/Fail | <evidence> | <notes> |
 | AGR-S1 | Pass/Advisory | <evidence> | <notes> |
 | AGR-S2 | Pass/Advisory/Blocked | <evidence> | <notes> |
+| AGR-S3 | Pass/Advisory | <evidence> | <notes> |
 
 ## Recommendations
 

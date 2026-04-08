@@ -1,13 +1,15 @@
-# Directory Index: /.github/skills/security-research/references
+# Index: references
 
-## Summary
-Mirrored directory landing page for source path /.github/skills/security-research/references.
+> Corpus index. Do not edit manually — refresh with invoke-index-refresh.ps1.
 
-## Child Directories
-- None
+## Subfolders
 
-## Files
-- [security-research-report-template.md.ref.md](./security-research-report-template.md.ref.md)
+| Folder | Description |
+|---|---|
+| (none) | - |
 
-## See Also
-- [index.md](./../../../../index.md)
+## Documents
+
+| File | Title | Category | Summary |
+|---|---|---|---|
+| [security-research-report-template.md.ref.md](./security-research-report-template.md.ref.md) | Reference: [security-research-report-template.md](./../../../../../../.github/skills/security-research/references/security-research-report-template.md) | reference |  |

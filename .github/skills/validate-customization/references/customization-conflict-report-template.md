@@ -3,7 +3,7 @@
 ## Metadata
 
 - Date: YYYY-MM-DD
-- Conflict ID: CON-CUSTOM-YYYYMMDD-001
+- Conflict ID: CON-CUSTOM-001
 - Artifact A: <artifact-a>
 - Artifact B: <artifact-b>
 - Reported By: validate-customization
@@ -35,7 +35,7 @@ Describe the exact contradiction, overlap, or failure interaction.
 
 - Selected Option: <option>
 - Rationale: <rationale>
-- Implementation Owner: customization-authoring
+- Implementation Owner: agent-authoring or instructions-authoring (selected via route-customization)
 
 ## Resolution Status
 

@@ -5,6 +5,12 @@ description: Use when modernizing .NET code with safe, behavior-preserving impro
 
 # .NET Modernization Skill
 
+## Specialization
+
+This skill is specialized for the workflow described in this file and should remain narrowly bounded to that responsibility.
+
+It should not absorb adjacent planning, execution, or review responsibilities that belong to other assets.
+
 ## Scope
 
 Apply focused cleanup and modernization passes that improve maintainability, safety, and performance without introducing unnecessary layers.
@@ -23,6 +29,14 @@ Apply focused cleanup and modernization passes that improve maintainability, saf
 - Improve nullability annotations.
 - Reduce warnings and analyzer findings.
 - Replace legacy syntax with modern, readable C# where supported by the target framework.
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- The user wants safe, behavior-preserving .NET modernization work.
+- Nullable cleanup, obsolete API removal, or similar refactoring is required.
+- A focused modernization pass is needed without broader redesign.
 
 ## Inputs
 

@@ -5,7 +5,7 @@ description: Use when you need one concise, single-page governance briefing that
 
 # Summarize Governance
 
-## Singular Purpose
+## Specialization
 
 Produce a concise, single-page governance briefing that surfaces only the most salient findings, risks, decisions, and next actions from existing governance artifacts.
 
@@ -27,13 +27,14 @@ Invoke this skill when any of the following is true:
   - `.docs/changes/governance-audits/`
   - `.docs/changes/skill-reviews/`
   - `.docs/changes/customization-reviews/`
-  - `.docs/reference/`
+  - `.github/skills/audit-governance/references/`
+  - `.github/skills/validate-customization/references/`
   - [README.md](./../../../README.md), [README.md](./../../../README.md), [README.md](./../../../README.md)
 - Optional audience mode: `Executive`, `Engineering Leads`, or `Customization Maintainers`.
 
 ## Required Outputs
 
-- One markdown briefing at `.docs/changes/governance-audits/YYYYMMDD-governance-one-pager.md`.
+- One markdown briefing at `.docs/changes/governance-audits/governance-one-pager.md`.
 - Grid-first output with the sections below, in this order:
   1. `Disposition Snapshot`
   2. `Top Salient Findings`

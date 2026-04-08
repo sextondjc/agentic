@@ -3,8 +3,13 @@
 # Output: Array of validation errors or success message
 
 param(
-  [Parameter(Mandatory=$true)][ValidateSet('instructions','agents','prompts')][string]$AssetType
+  [ValidateSet('instructions','agents','prompts')][string]$AssetType
 )
+
+if (-not $PSBoundParameters.ContainsKey('AssetType') -or [string]::IsNullOrWhiteSpace($AssetType)) {
+  Write-Error "Missing required parameter: -AssetType. Allowed values: instructions, agents, prompts."
+  exit 1
+}
 
 $filePath = ".github/$AssetType"
 if (-not (Test-Path $filePath)) {

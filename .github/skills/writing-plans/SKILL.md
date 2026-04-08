@@ -15,7 +15,7 @@ Assume they are a skilled developer, but know almost nothing about our toolset o
 
 **Context:** This should be run in a dedicated worktree (created by brainstorming skill).
 
-**Save plans to:** `.docs/plans/YYYYMMDD-<feature-name>.md`
+**Save plans to:** `.docs/plans/<feature-name>.md`
 - (User preferences for plan location override this default)
 
 ## Scope Check
@@ -149,6 +149,14 @@ After saving the plan, offer execution choice:
 
 **If Inline Execution chosen:**
 - Follow this plan in order with explicit test and validation checkpoints after each task.
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- The user has a multi-step task or spec and needs an implementation plan.
+- Execution should not begin until a durable, traceable plan exists.
+- The work needs explicit task decomposition and handoff context.
 
 ## Inputs
 

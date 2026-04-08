@@ -1,13 +1,15 @@
-# Directory Index: /.github/skills/prd-generator/references
+# Index: references
 
-## Summary
-Mirrored directory landing page for source path /.github/skills/prd-generator/references.
+> Corpus index. Do not edit manually — refresh with invoke-index-refresh.ps1.
 
-## Child Directories
-- None
+## Subfolders
 
-## Files
-- [prd-template.md.ref.md](./prd-template.md.ref.md)
+| Folder | Description |
+|---|---|
+| (none) | - |
 
-## See Also
-- [index.md](./../../../../index.md)
+## Documents
+
+| File | Title | Category | Summary |
+|---|---|---|---|
+| [prd-template.md.ref.md](./prd-template.md.ref.md) | Reference: [prd-template.md](./../../../../../../.github/skills/prd-generator/references/prd-template.md) | reference |  |

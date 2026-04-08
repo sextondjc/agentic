@@ -37,7 +37,7 @@ This instruction defines policy constraints only. Procedural execution workflows
 
 ## Template Changes File
 
-Use the following template for `.docs/changes/YYYYMMDD-task-description-changes.md`.
+Use the following template for `.docs/changes/task-description-changes.md`.
 
 **IMPORTANT**: Update this file after EVERY task completion by appending to Added, Modified, or Removed sections.
 **MANDATORY**: Always include the following at the top of the changes file: `<!-- markdownlint-disable-file -->`

@@ -5,6 +5,12 @@ description: Use when generating or refreshing technical reference documentation
 
 # Technical Documentation Skill
 
+## Specialization
+
+This skill is specialized for the workflow described in this file and should remain narrowly bounded to that responsibility.
+
+It should not absorb adjacent planning, execution, or review responsibilities that belong to other assets.
+
 ## Role
 
 Use this skill to generate and maintain rich, developer-trustworthy documentation that mirrors the repository structure and stays aligned with real code behavior.
@@ -15,6 +21,7 @@ This skill is documentation-first and evidence-first:
 - Flag unknowns explicitly instead of guessing.
 - Keep links valid and navigable.
 - Prefer incremental updates over full rewrites when documents already exist.
+- Use descriptive filenames for catalogs and indexes; reserve `README.md` for true folder entry-point guides.
 
 ## Mandatory Inputs
 
@@ -57,6 +64,11 @@ Produce a technical reference documentation set under the selected root (default
 - `coverage-report.md` - documented vs undocumented file matrix.
 - One documentation page for each significant source file, type, or module.
 - Directory-level landing pages that mirror the code hierarchy.
+
+When creating landing pages:
+
+- Use `README.md` only if the page explains the folder's purpose, usage, and local conventions.
+- Use a descriptive filename such as `*-catalog.md` or `*-index.md` when the page is primarily navigational or tabular.
 
 Use the provided templates:
 
@@ -147,6 +159,7 @@ When invoked in review mode:
 
 - Markdown only, clear heading hierarchy, flat lists for scanability.
 - Keep style concise but technically complete.
+- Brevity is an explicit requirement: remove duplication and narrative padding while preserving evidence and developer trust.
 - Prefer exact symbol names and file-backed references.
 - Never invent behavior, defaults, ranges, or guarantees.
 - Use consistent requirement identifiers when writing specification-like sections.
@@ -161,6 +174,14 @@ Documentation work is complete only when:
 - Internal links resolve to existing docs.
 - No unresolved evidence gaps remain without explicit note.
 - [Get-DocumentationMetrics.ps1](./Get-DocumentationMetrics.ps1) passes at the configured minimum score (default: 80; CI enforces 85).
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- Technical reference documentation must be created or refreshed.
+- Documentation needs code-verified, evidence-backed content.
+- Link integrity and developer-trustworthy docs are required before publication.
 
 ## Inputs
 

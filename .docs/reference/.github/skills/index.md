@@ -1,22 +1,24 @@
-# Directory Index: /.github/skills
+# Index: skills
 
-## Summary
-Mirrored directory landing page for source path /.github/skills.
+> Corpus index. Do not edit manually — refresh with invoke-index-refresh.ps1.
 
-## Child Directories
-- [index.md](./adr-generator/index.md)
-- [index.md](./api-design/index.md)
-- [index.md](./critical-thinking/index.md)
-- [index.md](./dotnet-refactor/index.md)
-- [index.md](./technical-documentation/index.md)
-- [index.md](./performance-research/index.md)
-- [index.md](./prd-generator/index.md)
-- [index.md](./security-research/index.md)
-- [index.md](./syrx-data-access/index.md)
-- [index.md](./task-research/index.md)
+## Subfolders
 
-## Files
-- None
+| Folder | Description |
+|---|---|
+| [adr-generator/](./adr-generator/INDEX.md) | Subfolder index. |
+| [api-design/](./api-design/INDEX.md) | Subfolder index. |
+| [critical-thinking/](./critical-thinking/INDEX.md) | Subfolder index. |
+| [dotnet-refactor/](./dotnet-refactor/INDEX.md) | Subfolder index. |
+| [performance-research/](./performance-research/INDEX.md) | Subfolder index. |
+| [prd-generator/](./prd-generator/INDEX.md) | Subfolder index. |
+| [security-research/](./security-research/INDEX.md) | Subfolder index. |
+| [syrx-data-access/](./syrx-data-access/INDEX.md) | Subfolder index. |
+| [task-research/](./task-research/INDEX.md) | Subfolder index. |
+| [technical-documentation/](./technical-documentation/INDEX.md) | Subfolder index. |
 
-## See Also
-- [index.md](./../../index.md)
+## Documents
+
+| File | Title | Category | Summary |
+|---|---|---|---|
+| (none) | - | - | - |

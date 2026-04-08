@@ -5,14 +5,22 @@ description: Use when maintaining .instructions.md and .agent.md files over time
 
 # Keeping Customizations Current
 
-## Singular Purpose
+## Specialization
 
 Maintain quality of `.instructions.md` and `.agent.md` files over time by continuously validating that their guidance is aligned with current workspace conventions, upstream standards, and actual agent behavior.
 
 ## Required Companion Skills
 
-- REQUIRED SUB-SKILL: Use `customization-authoring` when creating or editing any customization content identified by this skill.
+- REQUIRED SUB-SKILL: Use `agent-authoring` or `instructions-authoring` when creating or editing customization content identified by this skill.
 - REQUIRED SUB-SKILL: Use `validate-customization` after updates to confirm the resulting artifacts still pass quality standards.
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- Instructions or agents need maintenance against current workspace standards.
+- Customization content may be stale, conflicting, or misaligned.
+- A maintenance pass is needed before or after governance review.
 
 ## Inputs
 
@@ -46,7 +54,7 @@ Optional:
 3. Update In Use, Last Evaluated, and Current Status for each source.
 4. Record concrete deltas that affect workspace instruction or agent files.
 5. For each affected artifact, assess against the evaluation criteria below.
-6. Route content changes to `customization-authoring`.
+6. Route content changes to `agent-authoring` or `instructions-authoring` based on artifact type.
 7. Route post-update validation to `validate-customization`.
 8. Publish a short maintenance summary in `.docs/changes/customization-maintenance/` with the date and impacted artifacts.
 
@@ -58,6 +66,7 @@ Apply all checks for each instruction or agent file:
 - **Accuracy:** Are referenced tools, skill names, instruction file paths, and agent names still correct?
 - **Completeness:** Are significant new workspace standards or conventions missing from the artifact?
 - **Lean:** Is the file free of redundancy with other instructions or agent files?
+- **Brevity:** Is wording economical for context efficiency without reducing clarity or boundary precision?
 - **Behavior Alignment:** Does the artifact produce the intended behavior when loaded or invoked?
 
 ### Instructions-Specific Checks
@@ -76,7 +85,7 @@ Apply all checks for each instruction or agent file:
 
 - Updated [source-catalog.md](./references/source-catalog.md).
 - Optional source evaluation artifact using [source-evaluation-template.md](./references/source-evaluation-template.md).
-- A concrete change list for `customization-authoring`.
+- A concrete change list for `agent-authoring` and/or `instructions-authoring`.
 - A review request for `validate-customization` when updates were made.
 
 ## Done Criteria
@@ -85,7 +94,8 @@ This skill is complete for a run only when:
 
 - Every in-use source has an updated Last Evaluated date.
 - Any stale source is marked Needs Review or Deprecated.
-- All affected artifacts were routed to `customization-authoring`.
+- All affected artifacts were routed to `agent-authoring` and/or `instructions-authoring`.
+- Brevity expectations were evaluated for affected artifacts and included in any routed change list.
 - Post-update validation was routed to `validate-customization`.
 
 ## Required Outputs

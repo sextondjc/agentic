@@ -5,9 +5,17 @@ description: Use when documenting architectural decisions in .docs/adr with expl
 
 # ADR Generator Skill
 
-## Singular Purpose
+## Specialization
 
 Author Architectural Decision Records. Nothing else.
+
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- The user explicitly asks for an ADR or architecture decision record.
+- The task requires documenting a decision with rationale, alternatives, and consequences.
+- An architecture change needs a durable decision artifact before or after implementation.
 
 ## Required Inputs
 
@@ -101,29 +109,12 @@ Do not save the ADR until all checklist items pass:
 - [ ] Security considerations stated explicitly.
 - [ ] Event or domain names follow `<Aggregate><PastTense>` where applicable.
 - [ ] "Do nothing" alternative is present.
+- [ ] Precise, unambiguous language throughout.
+- [ ] Both benefits and trade-offs represented honestly.
+- [ ] No vague consequences ("improved maintainability" must state what specifically changes).
 
 ## Consequence ID Format
 
 - Positive outcomes: `POS-001`, `POS-002`, ...
 - Negative outcomes: `NEG-001`, `NEG-002`, ...
-
-## Output Quality
-
-- Precise, unambiguous language.
-- Both benefits and trade-offs represented honestly.
-- No vague consequences ("improved maintainability" must state what specifically changes).
-
-## Inputs
-
-- User request context and target scope for this skill invocation.
-
-## Required Outputs
-
-- A concrete, workspace-applicable result aligned with this skill purpose.
-
-## Workflow
-
-1. Gather required context and constraints from the workspace and user request.
-2. Execute the skill-specific steps and produce the required artifacts or decisions.
-3. Validate outputs for completeness and consistency with active workspace instructions.
 

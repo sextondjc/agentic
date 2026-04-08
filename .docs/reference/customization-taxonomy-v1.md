@@ -15,10 +15,18 @@ This taxonomy is authoritative for conceptual classification and naming analysis
 Operational routing and lane ownership remain governed by:
 
 1. [planning-execution-review-governance.md](./planning-execution-review-governance.md)
-2. [README.md](./../../.github/agents/README.md)
-3. [README.md](./../../.github/instructions/README.md)
-4. [README.md](./../../.github/prompts/README.md)
-5. [README.md](./../../.github/skills/README.md)
+2. [agent-lifecycle-catalog.md](./../../.github/agents/agent-lifecycle-catalog.md)
+3. [instruction-lifecycle-catalog.md](./../../.github/instructions/instruction-lifecycle-catalog.md)
+4. [prompt-lifecycle-catalog.md](./../../.github/prompts/prompt-lifecycle-catalog.md)
+5. [skill-discovery-index.md](./../../.github/skills/skill-discovery-index.md)
+
+## Governing Assets
+
+The accepted taxonomy is maintained and applied through these governing assets:
+
+1. Agent: [agent-lifecycle-catalog.md](./../../.github/agents/agent-lifecycle-catalog.md) defines `orchestrator` as the mandatory intake and routing entry point.
+2. Instruction: [lifecycle-governance.instructions.md](./../../.github/instructions/lifecycle-governance.instructions.md) is the normative policy for lane ownership, routing, and traceable handoff.
+3. Skills: [customization-authoring SKILL.md](./../../.github/skills/customization-authoring/SKILL.md) governs taxonomy and customization edits, [write-technical-docs SKILL.md](./../../.github/skills/write-technical-docs/SKILL.md) governs documentation maintenance and link integrity, and [audit-governance SKILL.md](./../../.github/skills/audit-governance/SKILL.md) governs review of the resulting governance state.
 
 ## Field Definitions
 
@@ -117,10 +125,10 @@ Operational routing and lane ownership remain governed by:
 
 Compared against:
 
-- [README.md](./../../.github/agents/README.md)
-- [README.md](./../../.github/instructions/README.md)
-- [README.md](./../../.github/prompts/README.md)
-- [README.md](./../../.github/skills/README.md)
+- [agent-lifecycle-catalog.md](./../../.github/agents/agent-lifecycle-catalog.md)
+- [instruction-lifecycle-catalog.md](./../../.github/instructions/instruction-lifecycle-catalog.md)
+- [prompt-lifecycle-catalog.md](./../../.github/prompts/prompt-lifecycle-catalog.md)
+- [skill-discovery-index.md](./../../.github/skills/skill-discovery-index.md)
 
 | Area | v1 Position | Current Catalog Position | Outcome | Follow-Up |
 |---|---|---|---|---|
@@ -140,9 +148,11 @@ The following topics are intentionally deferred to a separate v2 plan:
 
 ## Traceability
 
-- Plan: [20260402-customization-taxonomy-promotion-plan.md](./../plans/20260402-customization-taxonomy-promotion-plan.md)
-- ADR: [20260402-customization-taxonomy-promotion-boundary.md](./../adr/20260402-customization-taxonomy-promotion-boundary.md)
-- Changes: [20260402-customization-taxonomy-promotion-changes.md](./../changes/20260402-customization-taxonomy-promotion-changes.md)
+- Plan: [customization-taxonomy-promotion-plan.md](./../plans/customization-taxonomy-promotion-plan.md)
+- ADR: [customization-taxonomy-promotion-boundary.md](./../adr/customization-taxonomy-promotion-boundary.md)
+- Changes: [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md)
+
+
 
 
 

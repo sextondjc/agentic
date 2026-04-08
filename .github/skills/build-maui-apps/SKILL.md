@@ -5,7 +5,7 @@ description: Use when building or upgrading .NET MAUI mobile apps and you need a
 
 # Build MAUI Apps
 
-## Singular Purpose
+## Specialization
 
 Provide a repeatable, source-backed workflow for delivering production-grade .NET MAUI mobile applications.
 

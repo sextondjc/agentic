@@ -4,7 +4,7 @@ description: Use this agent when you need focused review of PowerShell scripts f
 ---
 # PowerShell Reviewer Agent
 
-## Singular Purpose
+## Specialization
 
 Review PowerShell scripts and modules, identify issues that affect safety, reliability, and maintainability, and provide actionable remediation guidance.
 

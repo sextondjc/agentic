@@ -75,17 +75,32 @@ After all tasks complete and verified:
 - **writing-plans** - Creates the plan this skill executes
 - **branch-completion** - Complete development after all tasks
 
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- An approved plan exists and execution will happen through a dedicated or later session.
+- The work needs checkpointed progress against a saved plan.
+- Execution must preserve a durable handoff boundary between sessions.
+
 ## Inputs
 
-- User request context and target scope for this skill invocation.
+- Approved plan path.
+- Current execution constraints and branch context.
+- Any known blockers or pending decisions.
 
 ## Required Outputs
 
-- A concrete, workspace-applicable result aligned with this skill purpose.
+- Task-by-task execution status updates.
+- Verification outcomes for completed tasks.
+- Branch completion handoff once execution is done.
 
 ## Workflow
 
-1. Gather required context and constraints from the workspace and user request.
-2. Execute the skill-specific steps and produce the required artifacts or decisions.
-3. Validate outputs for completeness and consistency with active workspace instructions.
+1. Load and critically review the plan.
+2. Execute tasks in order with explicit verification.
+3. Stop and ask for guidance when blocked.
+4. Hand off to branch-completion after all tasks pass.
+
+
 

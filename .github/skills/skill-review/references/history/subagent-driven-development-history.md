@@ -13,7 +13,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill-reviews/subagent-driven-development/20260329-review.md)
+- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill/reviews/subagent-driven-development/history.md)
 
 #### Findings
 
@@ -43,7 +43,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill-reviews/subagent-driven-development/20260329-review.md)
+- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill/reviews/subagent-driven-development/history.md)
 
 #### Findings
 
@@ -67,3 +67,6 @@
 - Rejected IDs: None
 - Removed IDs: None
 - Illegitimate IDs: None
+
+
+
