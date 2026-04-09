@@ -29,7 +29,6 @@ Required:
 - Optional focus path (default: `.docs`).
 
 Optional:
-- Include generated reference snapshots (`.ref.md`) in the candidate set (default: true).
 - Include legacy skill-review directories based on rename aliases (default: true).
 - Include duplicate execution checklists (default: true).
 
@@ -37,15 +36,16 @@ Optional:
 
 - Never delete files in the first pass.
 - Always run reference checks before proposing removal.
+- Use git history (`git log`, `git show`, `git diff`) as the provenance source for superseded status; do not trust local snapshot mirrors as authoritative history.
 - Treat historical ledgers and ADR files as keep-by-default unless explicitly marked superseded.
 - Prefer `archive` recommendations before `delete` when confidence is medium.
 
 ## Workflow
 
-1. Run `./references/scripts/Find-StaleDocs.ps1` from workspace root.
+1. Run `./references/scripts/Find-StaleDocs.ps1 -IncludeRefSnapshots $false` from workspace root.
 2. Review output by category, reference count, and confidence.
 3. Keep files with active references in live indexes.
-4. Mark unreferenced generated snapshots as archive candidates.
+4. Verify stale or superseded claims against git history before recommending archive or removal.
 5. Mark duplicate checklists as keep-one/archive-rest candidates.
 6. Produce a recommendation table: Keep, Archive, Remove candidate.
 7. If approved by user, execute a separate change that updates links and removes/archives files.

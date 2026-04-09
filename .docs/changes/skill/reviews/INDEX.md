@@ -7,6 +7,7 @@
 | Folder | Description |
 |---|---|
 | [adr-generator/](./adr-generator/INDEX.md) | Subfolder index. |
+| [agent-authoring/](./agent-authoring/INDEX.md) | Subfolder index. |
 | [agent-customization/](./agent-customization/INDEX.md) | Subfolder index. |
 | [api-design/](./api-design/INDEX.md) | Subfolder index. |
 | [audit-governance/](./audit-governance/INDEX.md) | Subfolder index. |
@@ -31,6 +32,7 @@
 | [finishing-a-development-branch/](./finishing-a-development-branch/INDEX.md) | Subfolder index. |
 | [governance-health-overview/](./governance-health-overview/INDEX.md) | Subfolder index. |
 | [index-docs/](./index-docs/INDEX.md) | Subfolder index. |
+| [instructions-authoring/](./instructions-authoring/INDEX.md) | Subfolder index. |
 | [keeping-customizations-current/](./keeping-customizations-current/INDEX.md) | Subfolder index. |
 | [keeping-skills-current/](./keeping-skills-current/INDEX.md) | Subfolder index. |
 | [learn-topics/](./learn-topics/INDEX.md) | Subfolder index. |
@@ -71,5 +73,6 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
+| [20260409-full-skill-review-grid.md](./20260409-full-skill-review-grid.md) | Full Skill Review Grid | change | / Metric / Value / /---/---/ / Review Date / 2026-04-09 / / Total Skills Reviewed / 48 / / Pass / 48 / / Pass With Advis... |
 | [full-skill-review-grid.md](./full-skill-review-grid.md) | Full Skill Review Grid | change | / Metric / Value / /---/---/ / Review Date / 2026-04-08 / / Total Skills Reviewed / 47 / / Pass / 47 / / Pass With Advis... |
 | [full-skill-review-history.md](./full-skill-review-history.md) | Full Skill Review Grid History | change | Consolidated history for date-prefixed files previously kept individually. |

@@ -47,11 +47,11 @@ This record tracks closure of R3 advisories using the consolidated skill and cus
 
 ## Evidence Links
 
-- [history.md](./customization/reviews/lifecycle-governance.instructions/history.md)
-- [history.md](./customization/reviews/architecture-designer.agent/history.md)
-- [history.md](./customization/reviews/benchmark-researcher.agent/history.md)
-- [history.md](./customization/reviews/performance-assessor.agent/history.md)
-- [history.md](./customization/reviews/security-researcher.agent/history.md)
+- [audit-history.md](./customization/reviews/audit-history.md)
+- [INDEX.md](./customization/reviews/conflicts/INDEX.md)
+- [con-custom-20260403-001.md](./customization/reviews/conflicts/con-custom-20260403-001.md)
+- [con-custom-20260403-002.md](./customization/reviews/conflicts/con-custom-20260403-002.md)
+- [con-custom-20260403-003.md](./customization/reviews/conflicts/con-custom-20260403-003.md)
 - [full-skill-review-grid.md](./skill/reviews/full-skill-review-grid.md)
 - [audit-history.md](./customization/reviews/audit-history.md)
 - [audit.md](./customization/reviews/audit.md)

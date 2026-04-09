@@ -7,7 +7,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $skillsRoot = Join-Path $RootPath '.github/skills'
-$reportsRoot = Join-Path $RootPath '.docs/changes/skill-reviews'
+$reportsRoot = Join-Path $RootPath '.docs/changes/skill/reviews'
 $historyRoot = Join-Path $skillsRoot 'skill-review/references/history'
 $mirrorPath = Join-Path $skillsRoot 'skill-review/references/mirrors/agent-customization-SKILL.md'
 $compactDate = $ReviewDate -replace '-', ''
@@ -648,8 +648,8 @@ foreach ($skillInput in ($skillInputs | Sort-Object SkillName -Unique)) {
         }
     }
 
-    $reportRelPath = ".docs/changes/skill-reviews/$skill/$compactDate-review.md"
-    $reportPath = Join-Path $reportsRoot "$skill/$compactDate-review.md"
+    $reportRelPath = ".docs/changes/skill/reviews/$skill/review.md"
+    $reportPath = Join-Path $reportsRoot "$skill/review.md"
     New-Item -ItemType Directory -Force -Path (Split-Path $reportPath -Parent) | Out-Null
 
     $historyLoaded = if (Test-Path $historyPath) { 'yes' } else { 'no' }
@@ -751,7 +751,7 @@ $blocked = ($aggregateRows | Where-Object Outcome -eq 'Blocked').Count
 $mustTotal = ($aggregateRows | Measure-Object MustFailures -Sum).Sum
 $advisoryTotal = ($aggregateRows | Measure-Object ShouldAdvisories -Sum).Sum
 
-$gridPath = Join-Path $reportsRoot "$compactDate-full-skill-review-grid.md"
+$gridPath = Join-Path $reportsRoot 'full-skill-review-grid.md'
 $gridLines = @(
     '# Full Skill Review Grid',
     '',

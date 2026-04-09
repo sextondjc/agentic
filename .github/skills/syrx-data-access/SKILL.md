@@ -50,6 +50,18 @@ If guidance conflicts, prefer:
 3. Keep SQL explicit, parameterized, and method-mapped.
 4. Register DI and verify with unit tests that mock `ICommander<TRepository>`.
 
+## Detailed Guidance This Skill Owns
+
+This skill is the on-demand destination for Syrx detail that should not live in always-on instructions:
+
+- command mapping style selection,
+- multi-mapping and multiple-result-set choices,
+- materializer isolation,
+- observability and performance evidence,
+- repository testing workflow.
+
+Keep the instruction layer limited to mandatory policy. Keep deep implementation and review guidance here.
+
 ## Core Rules
 
 - Use explicit, parameterized SQL only.
@@ -80,6 +92,15 @@ Define interface -> inject `ICommander<TRepository>` -> call async query/execute
 - Multiple result sets: use when batching independent sets reduces round trips.
 - Avoid N+1 repository loops; batch when feasible.
 
+## Pattern Selection Grid
+
+| Scenario | Preferred Pattern | Why |
+|---|---|---|
+| Parent plus child rows from one join | Multi-mapping | Compose related objects in one round trip |
+| Independent result sets in one request | Multiple result sets | Avoid repeated repository calls |
+| Cross-entity validation plus write | Stored procedure | Preserve atomicity inside one owning repository call |
+| Reusable domain reconstruction | Materializer helper | Keeps persistence code thin and testable |
+
 ## Security and Reliability Checks
 
 - Validate all external input at repository boundaries.
@@ -91,6 +112,14 @@ Define interface -> inject `ICommander<TRepository>` -> call async query/execute
 
 - Unit tests: mock `ICommander<TRepository>`; no live DB calls.
 - Integration tests: use isolated test databases and deterministic fixtures.
+
+## Review Checklist
+
+- SQL is explicit and parameterized.
+- Repository contracts are immutable and guarded.
+- Query shape avoids N+1 patterns and unbounded reads.
+- Atomic multi-entity writes are not split across repository calls.
+- Logging and metrics capture command identity without leaking secrets.
 
 See `references/review-checklist.md` for review criteria and `references/implementation-examples.md` for concrete patterns.
 

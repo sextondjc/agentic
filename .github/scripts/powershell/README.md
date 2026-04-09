@@ -15,6 +15,7 @@ This folder contains reusable PowerShell utilities for governance audits, catalo
 | `test-frontmatter-validity.ps1` | Validate instruction/agent/prompt frontmatter structure | `.github/scripts/powershell/test-frontmatter-validity.ps1 -AssetType 'instructions'` | Validation errors or success message |
 | `test-hub-file-sync.ps1` | Verify copilot-instructions.md preferred lists match assets | `.github/scripts/powershell/test-hub-file-sync.ps1` | JSON report of divergences or exit 0 if synced |
 | `test-governance-link-graph.ps1` | Validate local markdown links and fragment anchors across governance docs | `.github/scripts/powershell/test-governance-link-graph.ps1 -RootPath c:/Projects/agentic` | Pass message or JSON list of broken link issues |
+| `test-governance-artifact-contract.ps1` | Detect forbidden legacy governance artifact paths and dated `.docs` review naming contracts in active governance assets | `.github/scripts/powershell/test-governance-artifact-contract.ps1` | PSCustomObject array of violations; exit 1 if any are found |
 | `get-corpus-manifest.ps1` | Build structured manifest of all markdown files in a document corpus | `./get-corpus-manifest.ps1 -RootPath .docs` | PSCustomObject array: Path, Title, Category, WordCount, Hash |
 | `invoke-index-refresh.ps1` | Generate or refresh INDEX.md files throughout a document corpus | `./invoke-index-refresh.ps1 -RootPath .docs` | PSCustomObject: FoldersIndexed, DocumentsIndexed |
 | `test-naming-conformance.ps1` | Check .docs file and folder naming policy conformance | `./test-naming-conformance.ps1 -RootPath .docs` | PSCustomObject array of violations; exit 1 if any found |
@@ -27,6 +28,7 @@ This folder contains reusable PowerShell utilities for governance audits, catalo
 - **validate-customization skill**: Uses `test-catalog-integrity.ps1` for catalog drift detection.
 - **governance routines**: Use `test-hub-file-sync.ps1` to verify preferred-list alignment as part of scheduled or on-demand governance audits.
 - **governance routines**: Use `test-governance-link-graph.ps1` during cadence runs to close GOV-S6 with executable link-graph evidence.
+- **governance routines**: Use `test-governance-artifact-contract.ps1` during cadence runs to close GOV-S8 and catch legacy `.docs` artifact contracts before they regenerate drift.
 - **librarian skill**: Uses `get-corpus-manifest.ps1` for evidence gathering, `invoke-index-refresh.ps1` for index step, `test-naming-conformance.ps1` for naming audit.
 
 ## Path Requirement

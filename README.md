@@ -21,7 +21,6 @@ This repository is customization-only.
 | `.docs/plans` | Implementation plans and planning artifacts. | Planning |
 | `.docs/changes` | Progressive implementation traceability and release deltas. | Execution |
 | `.docs/adr` | Architecture decision records with rationale and consequences. | Planning + Review |
-| `.docs/reference` | Durable reference guidance and governance docs. | Planning |
 
 ## Directory Map
 
@@ -31,7 +30,6 @@ This repository is customization-only.
 | [instruction-lifecycle-catalog.md](./.github/instructions/instruction-lifecycle-catalog.md) | Lane catalog for instruction files and governance mapping. |
 | [skill-discovery-index.md](./.github/skills/skill-discovery-index.md) | Skill discovery index with lane assignments and usage guidance. |
 | [agent-routing-guide.md](./.docs/agent-routing-guide.md) | Routing guidance for choosing the right agent/skill path. |
-| [planning-execution-review-governance.md](./.docs/reference/planning-execution-review-governance.md) | Lifecycle taxonomy and traceability model. |
 
 ## Lifecycle Routing
 
@@ -102,6 +100,5 @@ Use this matrix to select the correct execution route.
 - [skill-discovery-index.md](./.github/skills/skill-discovery-index.md)
 - [agent-lifecycle-catalog.md](./.github/agents/agent-lifecycle-catalog.md)
 - [prompt-lifecycle-catalog.md](./.github/prompts/prompt-lifecycle-catalog.md)
-- [planning-execution-review-governance.md](./.docs/reference/planning-execution-review-governance.md)
 
 

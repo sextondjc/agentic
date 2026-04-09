@@ -5,10 +5,10 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-$reportsDir = Join-Path $RootPath '.docs/changes/skill-reviews'
-$outFile = Join-Path $reportsDir ("{0}-full-skill-review-grid.md" -f ($ReviewDate -replace '-', ''))
+$reportsDir = Join-Path $RootPath '.docs/changes/skill/reviews'
+$outFile = Join-Path $reportsDir 'full-skill-review-grid.md'
 
-$rows = Get-ChildItem $reportsDir -Recurse -File -Filter '*-review.md' |
+$rows = Get-ChildItem $reportsDir -Recurse -File -Filter 'review.md' |
     ForEach-Object {
         if ($_.FullName -eq $outFile) { return }
 

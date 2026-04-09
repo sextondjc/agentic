@@ -3,375 +3,45 @@ name: syrx
 description: 'Definitive Syrx 2.4.1 repository and SQL Server usage instructions.'
 applyTo: '**/*.cs'
 ---
-# Data Access & Syrx Instructions
+# Syrx Policy
 
-## Mandatory Pattern
-Interface → Implementation → `CommandStrings` → Installer → DI registration.
+Keep this file policy-only. Use [SKILL.md](./../skills/syrx-data-access/SKILL.md) for detailed mapping patterns, command configuration choices, testing workflows, and performance trade-offs.
 
-## Mandatory Repository Placement
-- Data access MUST be implemented through Syrx-backed repositories only.
-- All repository interfaces and concrete repository types MUST live in a namespace ending with `.Repositories`.
-- Repository interfaces and concrete repository types MUST be defined in a `.Repositories` assembly.
-- Each concrete repository type MUST implement at least one repository interface.
-- The repository interface and its concrete implementation MUST live in the same namespace.
-- Do not place direct data access code in application services, handlers, controllers, or domain types.
+## Repository Placement
 
-## Mandatory Repository-Bound Model Contract
-- DTO/domain model objects passed into or returned from repositories MUST be immutable types.
-- Repository-bound models MAY expose getters but MUST NOT expose public setters.
-- Validation MUST run during instantiation (constructor or static factory) before assignment.
-- Validation MUST use `Syrx.Validation.Contract` guard methods (`Throw<TException>(...)`).
-- Repositories MUST reject mutable inbound contracts by design (method signatures and mapping types should enforce immutable models).
+- .NET data access must be implemented through Syrx-backed repositories only.
+- Repository interfaces and concrete implementations must live in `.Repositories` namespaces and `.Repositories` assemblies.
+- The repository interface and its concrete implementation must share the same namespace.
+- Do not place direct data access in services, handlers, controllers, or domain types.
 
-### Layer Responsibilities
-| Layer | Responsibility | Contains |
-|-------|----------------|----------|
-| Domain | Business rules & invariants | Aggregates, Value Objects, Domain Events |
-| Repository | Persistence mapping only | CRUD methods, SQL mapping helpers |
-| Application Service | Orchestrates transactions & domain operations | Use cases, coordination |
-| Infrastructure | Cross-cutting (logging, connection factory) | Diagnostics, policies |
+## Repository Contract Rules
 
-## CommandStrings
-Centralize all SQL. Explicit column lists; soft deletes preferred.
+- Models crossing repository boundaries must be immutable.
+- Validate repository-bound inputs at construction time using `Syrx.Validation.Contract` guards.
+- Repository methods must remain focused on persistence mapping, not business rules.
+- Repository methods must be async and accept `CancellationToken`.
 
-### Structure & Naming
-- One static partial class per aggregate: `public static partial class CommandStrings { public static class Order { ... } }`
-- Verb + Target pattern: `GetById`, `Insert`, `UpdateStatus`, `SoftDelete`.
-- No string interpolation; parameter tokens only (e.g., `@Id`).
+## SQL Rules
 
-### Example
-```csharp
-public static partial class CommandStrings
-{
-	public static class Order
-	{
-		public const string GetById = "SELECT Id, CustomerId, Status, Version FROM dbo.Orders WHERE Id = @Id AND IsDeleted = 0";
-		public const string Upsert = "MERGE dbo.Orders AS tgt USING (SELECT @Id AS Id) AS src ON tgt.Id = src.Id WHEN MATCHED THEN UPDATE SET CustomerId=@CustomerId, Status=@Status, Version=Version+1 WHEN NOT MATCHED THEN INSERT (Id, CustomerId, Status, Version) VALUES (@Id, @CustomerId, @Status, 0);";
-		public const string SoftDelete = "UPDATE dbo.Orders SET IsDeleted = 1, Version = Version + 1 WHERE Id = @Id";
-		public const string ListPaged = "SELECT Id, CustomerId, Status, Version FROM dbo.Orders WHERE IsDeleted=0 ORDER BY CreatedOn DESC OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY";
-	}
-}
-```
+- Use explicit, parameterized SQL only.
+- Centralize SQL in command mapping assets such as `CommandStrings` or approved configuration-driven command maps.
+- Use explicit column lists; do not use `SELECT *`.
+- Prefer soft-delete filtering where the model supports soft deletion.
 
-### Soft Delete Rules
-- Always include `IsDeleted = 0` in retrieval queries.
-- Consider filtered index on `IsDeleted`.
+## Atomicity and Error Handling
 
-## Guard & Null Safety
-Validate inputs with Syrx guard; coalesce query results: `await _commander.QueryAsync<T>(...) ?? Enumerable.Empty<T>();`
+- Repository methods must not contain local `try/catch` behavior when exception handling is provided cross-cutting.
+- When an operation must validate across entity boundaries and write atomically, use one stored procedure through the owning repository.
+- Do not replace one atomic repository operation with multiple sequential repository calls.
 
-Use global `using static Syrx.Validation.Contract;` in project.
+## Performance and Safety
 
-### Example Guard in Repository
-```csharp
-public async Task<Order?> RetrieveAsync(Guid id, CancellationToken ct)
-{
-	Throw<ArgumentOutOfRangeException>(id != Guid.Empty, "Id required");
-	var data = await _commander.QueryAsync<OrderData>(CommandStrings.Order.GetById, new { Id = id }, ct);
-	return data?.ToDomain();
-}
-```
+- Page large result sets and avoid unbounded reads.
+- Batch related queries to avoid N+1 access patterns.
+- Use optimistic concurrency when updates depend on versioned state.
+- Keep SQL injection defenses mandatory through parameterization and static command text.
 
-## No Exception Handling in Repositories
-Repositories must **not contain `try/catch` blocks**. Exception handling is a cross-cutting concern applied via an AOP pipeline at the composition root.
+## Routing Notes
 
-- Do not catch `InvalidOperationException`, `SqlException`, or any other exception to adapt behavior inside a repository method.
-- If a query returns no rows, return `null` or `Enumerable.Empty<T>()` as appropriate; do not use exceptions for control flow.
-- If a caller needs to distinguish empty-result from failure, model that in the return type (e.g., `T?` vs. `Task<bool>`).
-
-## Stored Procedures for Atomic Multi-Entity Operations
-When a repository operation must validate preconditions involving other entities **and** write atomically in a single transaction, implement the logic as a stored procedure.
-
-- The repository calls the SP via a single `ExecuteAsync` or `QueryAsync` call.
-- The SP performs all validation and writes internally, returning a result set or row count.
-- Never substitute multiple sequential repository method calls for what should be one SP invocation.
-- Name SPs with a verb + noun pattern matching the repository method: `usp_WorkItem_Create`, `usp_Assignment_Create`.
-
-```csharp
-// Atomic create: SP validates referenced records and inserts the work item in one round trip.
-public async Task<WorkItem?> CreateAsync(WorkItem workItem, CancellationToken ct)
-{
-    Throw<ArgumentNullException>(workItem is not null, nameof(workItem));
-    return await _commander.ExecuteAsync(workItem!, ct) ? workItem : null;
-}
-
-// Incorrect: pre-validation in the repository by calling a separate repository.
-```
-
-## Performance
-Use paging (`OFFSET/FETCH`), avoid SELECT *, profile before introducing multi-mapping.
-
-### Performance Checklist
-- Explicit column lists only.
-- Appropriate covering indexes (consider INCLUDE for non-key columns).
-- Avoid N+1: batch queries or multi-mapping.
-- Measure query duration & row count (log threshold > 200ms).
-- Prefer table-valued parameters for bulk operations.
-- Parameter sniffing issues: use OPTIMIZE FOR UNKNOWN only after evidence; avoid premature hints.
-
-### Multi-Mapping Patterns
-
-Syrx supports two distinct patterns for handling complex queries: **Multi-mapping** (row-by-row object composition) and **Multiple Result Sets** (collection-to-collection processing).
-
-#### A. Multi-Mapping (Row-by-Row Composition)
-Use when JOIN returns related rows that need to be composed into objects with relationships.
-
-**SQL (explicit columns + split-on point):**
-```sql
-SELECT o.Id, o.CustomerId, o.Status, o.Version,
-       l.Id, l.ProductId, l.Quantity, l.UnitPrice
-FROM dbo.Orders o
-LEFT JOIN dbo.OrderLines l ON l.OrderId = o.Id AND l.IsDeleted = 0
-WHERE o.Id = @Id AND o.IsDeleted = 0;
-```
-
-**Repository (using multi-map signature with Func<T1, T2, TResult>):**
-```csharp
-public async Task<Order?> RetrieveOrderWithLinesAsync(Guid id, CancellationToken ct)
-{
-    var orders = await _commander.QueryAsync<Order, OrderLine, Order>(
-        (order, line) =>
-        {
-            // Syrx invokes this per row; handle collection aggregation
-            if (line?.Id != Guid.Empty)
-            {
-                order.Lines ??= new List<OrderLine>();
-                if (!order.Lines.Any(l => l.Id == line.Id))
-                    order.Lines.Add(line);
-            }
-            return order;
-        },
-        new { Id = id },
-        ct);
-    
-    return orders.FirstOrDefault();
-}
-```
-
-**Rules:**
-- Mapping function invoked per row from result set.
-- Handle duplicate parent objects (group/deduplicate in mapping function or post-process).
-- Use `splitOn` configuration to tell Dapper where child columns begin (default: `Id`).
-- Nullable child properties indicate LEFT JOIN absence.
-
-#### B. Multiple Result Sets (Collection-to-Collection Mapping)
-Use when SQL returns multiple independent SELECT statements; process entire collections.
-
-**SQL (multiple SELECT statements):**
-```sql
-SELECT Id, CustomerId, Status, Version FROM dbo.Orders WHERE Id=@Id AND IsDeleted=0;
-SELECT Id, OrderId, ProductId, Quantity, UnitPrice FROM dbo.OrderLines WHERE OrderId=@Id AND IsDeleted=0;
-```
-
-**Repository (using Func<IEnumerable<T1>, IEnumerable<T2>, IEnumerable<TResult>>):**
-```csharp
-public async Task<Order?> RetrieveOrderWithLinesMultiAsync(Guid id, CancellationToken ct)
-{
-    var results = await _commander.QueryAsync<OrderData, OrderLineData, Order>(
-        (orders, lines) =>
-        {
-            var orderData = orders.FirstOrDefault();
-            if (orderData is null) return Enumerable.Empty<Order>();
-            
-            return new[] { OrderMaterializer.Materialize(orderData, lines) };
-        },
-        new { Id = id },
-        ct);
-    
-    return results.FirstOrDefault();
-}
-```
-
-**Rules:**
-- Mapping function receives full collections (not individual rows).
-- SQL must return multiple result sets (batched SELECTs or stored procedure).
-- Always validate first collection before processing subsequent ones.
-- Return `IEnumerable<TResult>` (typically single-item or empty).
-
-#### Pattern Selection Matrix
-| Scenario | Pattern | Signature | SQL Structure |
-|----------|---------|-----------|---------------|
-| Parent + children via JOIN | Multi-mapping | `Func<T1, T2, TResult>` | Single SELECT with JOIN |
-| Independent queries batch | Multiple Result Sets | `Func<IEnumerable<T1>, IEnumerable<T2>, IEnumerable<TResult>>` | Multiple SELECT statements |
-| Moderate child counts | Multi-mapping | Row-by-row | JOIN with splitOn |
-| Large child collections | Multiple Result Sets | Collection-based | Separate SELECTs |
-
-#### Anti-Patterns (Avoid)
-| Pattern | Problem | Corrective Action |
-|---------|---------|------------------|
-| Two separate `QueryAsync` calls | Extra round trips; inconsistency risk | Use multi-map or multiple result sets |
-| Mutating aggregate per row unsafely | Race conditions; partial state | Deduplicate in mapping or post-process |
-| SELECT * in joins | Schema coupling; unnecessary I/O | Explicit column lists |
-| N+1 queries (loop calling repo) | Latency explosion | Batch in single multi-map/multi-result-set |
-
-#### Materializer Isolation
-Keep domain reconstruction logic separate:
-```csharp
-public static class OrderMaterializer
-{
-    public static Order Materialize(OrderData data, IEnumerable<OrderLineData> lines)
-    {
-        var order = Order.CreateExisting(data.Id, data.CustomerId, data.Status, data.Version);
-        foreach (var l in lines)
-            order.AddLineExisting(l.Id, l.ProductId, l.Quantity, l.UnitPrice);
-        return order;
-    }
-}
-```
-
-#### Configuration Example (splitOn for multi-mapping)
-```json
-{
-  "Commands": {
-        "RetrieveOrderWithLinesAsync": {
-      "CommandText": "SELECT o.Id, o.CustomerId, o.Status, o.Version, l.Id, l.ProductId, l.Quantity, l.UnitPrice FROM dbo.Orders o LEFT JOIN dbo.OrderLines l ON l.OrderId = o.Id WHERE o.Id = @Id",
-      "ConnectionAlias": "Default",
-      "SplitOn": "Id"
-    }
-  }
-}
-```
-
-### High-Frequency Query Optimization
-- Benchmark with `dotnet-counters` (monitor `System.Runtime` allocations, GC).
-- Consider caching immutable lookup tables (in-memory with refresh interval).
-
-### Concurrency Control
-- Include `Version` column; compare before update.
-```sql
-UPDATE dbo.Orders SET Status=@Status, Version=Version+1 WHERE Id=@Id AND Version=@ExpectedVersion;
-```
-If affected rows = 0 → throw concurrency exception.
-
-## Testing
-Mock `ICommander<T>`; do not connect to DB in unit tests.
-
-### Repository Unit Test Example
-```csharp
-using static XUnit.Assert;
-
-namespace Samples.Repositories.OrderRepositoryTests 
-{
-    public class OrderRepositoryTestsFixture
-    {
-        public IOrderRepository Repository { get; }
-
-        public OrderRepositoryTestsFixture()
-        {
-            var commander = SetupCommander();
-            Repository = new OrderRepository(commander.Object);
-        }
-
-        private Mock<ICommander<IOrderRepository>> SetupCommander()
-        {
-            var commander = new Mock<ICommander<IOrderRepository>>();
-
-            commander.Setup(c => c.QueryAsync<OrderData>(
-                    It.IsAny<object>(), 
-                    It.IsAny<CancellationToken>())).ReturnsAsync((OrderData?)null);
-
-            return commander;        
-        }
-    }
-
-    public class RetrieveAsync(OrderRepositoryTestsFixture fixture)
-    {
-        private readonly IOrderRepository _repository = fixture.Repository;
-
-        [Fact]
-        public async Task ReturnsNullWhenNotFound()
-        {
-            var result = await _repository.RetrieveAsync(Guid.NewGuid());
-            Null(result);
-        }
-    }
-}
-```
-
-### Integration Testing Guidance
-- Use ephemeral test database (Docker SQL Server) seeded per test collection.
-- Wrap tests in transaction & rollback after test for isolation.
-- Validate SQL plan regression only for critical queries (capture execution statistics).
-
-### Test Naming Pattern
-`GetByIdReturnsNullWhenMissing`, `UpsertIncrementsVersionOnUpdate`.
-
-### Anti-Patterns (Avoid)
-| Anti-Pattern | Risk | Replacement |
-|--------------|------|-------------|
-| SELECT * | Schema drift, extra I/O | Explicit columns |
-| Dynamic table names | Injection vector | Static CommandStrings |
-| String concatenated SQL | Injection risk | Parameterized constants |
-| Business logic in repository | Leaky architecture | Move to domain/application layer |
-| Unbounded result sets | Memory pressure | Paging with OFFSET/FETCH |
-
-## Transactions
-Application service coordinates units of work.
-```csharp
-using var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
-await orderRepository.SaveAsync(order, ct);
-// publish events after commit
-scope.Complete();
-```
-Keep scopes small; never wrap read-only queries unless part of consistent snapshot requirement.
-
-### Event Dispatch Timing
-- Persist aggregate first.
-- Dispatch domain events post-commit to avoid phantom publishes.
-
-## Installer Pattern
-```csharp
-public static class RepositoryInstaller
-{
-	public static IServiceCollection AddRepositories(this IServiceCollection services)
-	{
-		services.AddScoped<IOrderRepository, OrderRepository>();
-		return services;
-	}
-}
-```
-
-## Mapping DTOs
-```csharp
-public sealed record OrderData(Guid Id, Guid CustomerId, string Status, int Version)
-{
-	public Order ToDomain(IEnumerable<OrderLineData> lines) => OrderMaterializer.Materialize(this, lines);
-}
-```
-Keep materialization isolated (`OrderMaterializer`) for testability.
-
-## Observability
-- Log command name, duration, row count.
-- Tag slow queries: `SlowQuery=true` in structured log.
-- Metrics: count executions, average duration, p95 latency.
-
-## Security Guidelines
-- Least privilege DB user (no DDL for runtime).
-- Parameterization mandatory; never concatenate inputs.
-- Avoid exposing raw SQL errors to callers; map to safe domain exceptions.
-
-## Cheat Sheet
-| Topic | Rule |
-|-------|------|
-| Column Lists | Always explicit |
-| Guards | `using static` + guard at entry |
-| Concurrency | Version column optimistic |
-| Soft Delete | Always filter IsDeleted=0 |
-| Paging | OFFSET/FETCH for large sets |
-| Multi-Mapping | Fetch parts then compose |
-| Transactions | Short-lived; commit before events |
-| Testing | Mock commander; integration uses ephemeral DB |
-
-## Review Checklist
-- No business rules in repository methods.
-- All SQL centralized & parameterized.
-- Guards for public method inputs present.
-- Concurrency handled on updates.
-- Logging & metrics instrumentation configured.
-- Soft delete adherence verified.
-
-## Evolution Strategy
-- Quarterly audit for unused queries.
-- ADR for introducing caching or new indexing strategies.
-- Benchmark changes before merging performance PRs.
+- Use [SKILL.md](./../skills/syrx-data-access/SKILL.md) for multi-mapping, multiple result sets, command configuration style, testing patterns, and review checklists.
 

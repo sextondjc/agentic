@@ -31,7 +31,7 @@ Review all existing documentation, detect drift against source code, update stal
 
 ## Output Requirements
 
-Generate or update documentation under `/.docs/reference/` with at least:
+Generate or update documentation under `/.docs/components/` with at least:
 
 - `index.md`
 - `code-structure.md`
@@ -42,6 +42,7 @@ Generate or update documentation under `/.docs/reference/` with at least:
 ## Quality Gates
 
 - Every technical claim must be traceable to code or existing verified docs.
+- Any historical comparison must be based on git history (`git log`, `git show`, `git diff`), not local snapshot mirrors.
 - No speculative statements.
 - All internal links must point to existing files.
 - Regenerate index and coverage report after any file additions or moves.

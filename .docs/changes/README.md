@@ -17,12 +17,12 @@ This directory records all implementation change artifacts produced during plann
 - Each change file must reference an originating `PLAN-*` identifier.
 - Use the template defined in `task-implementation.instructions.md`.
 - Update progressively during implementation, not only at completion.
-- Governance audit retention is exception-focused: routine pass-only governance runs should update the rolling digest in `.docs/reference/governance-current-state.md` instead of creating daily dated audit files.
+- Governance audit retention is exception-focused: routine pass-only governance runs should update the rolling digest in `.docs/changes/governance/audits/governance-one-pager.md` instead of creating daily dated audit files.
 - Create governance audit artifacts only for month-end baselines, milestone checkpoints, or exception events (for example, High findings or policy/ADR-impacting changes).
 
 ## References
 
 - Instruction: [task-implementation.instructions.md](./../../.github/instructions/task-implementation.instructions.md)
-- Governance: [planning-execution-review-governance.md](./../reference/planning-execution-review-governance.md)
-- Governance Digest: [governance-current-state.md](./../reference/governance-current-state.md)
-- Governance Retention: [governance-retention-policy.md](./../reference/governance-retention-policy.md)
+- Governance Audit: [governance-audit.md](./governance/audits/governance-audit.md)
+- Governance Digest: [governance-one-pager.md](./governance/audits/governance-one-pager.md)
+- Governance Retention Mode: [README.md](./governance/audits/README.md)

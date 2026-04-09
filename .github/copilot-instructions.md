@@ -18,7 +18,7 @@ This workspace is optimized for lean .NET application development.
 - Use the latest stable C# version supported by the target framework. Do not raise `LangVersion` beyond TFM support.
 - Use xUnit and Moq for tests. FluentAssertions is banned.
 - Use `.docs/plans`, `.docs/research`, `.docs/changes`, and `.docs/adr` as canonical documentation locations.
-- Keep security, architecture, CI/CD, and PowerShell guidance centralized in the consolidated instruction files under `.github/instructions`.
+- Keep mandatory policy guidance in concise instruction files under `.github/instructions` and move procedural depth into skills.
 
 ## Lifecycle Lanes
 
@@ -79,6 +79,7 @@ Skills discovery index: [skill-discovery-index.md](./skills/skill-discovery-inde
 - `build-maui-apps`
 - `perf-benchmark`
 - `api-design`
+- `domain-design`
 - `adr-generator`
 - `dotnet-refactor`
 - `dotnet-resilience`
@@ -132,6 +133,7 @@ Skills discovery index: [skill-discovery-index.md](./skills/skill-discovery-inde
 ## Workspace Design Rules
 
 - Prefer skills for narrow, reusable workflows over creating new agents.
+- Prefer concise instruction shims that route to skills for situational or procedural depth.
 - Use `orchestrator` as the mandatory entry point for all requests.
 - Operate in deterministic-by-default mode: define scope and required outputs before execution and avoid silent scope drift.
 - Allow exploration only as a rare bounded exception with explicit hypothesis, time-box, success criteria, and closure decision.

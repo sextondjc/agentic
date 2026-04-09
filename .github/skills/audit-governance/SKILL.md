@@ -23,7 +23,7 @@ Run a workspace-level governance assessment and return a single report with cove
 
 ## Required Outputs
 
-- Governance report at .docs/changes/governance-audits/governance-audit.md.
+- Governance report at .docs/changes/governance/audits/governance-audit.md.
 - Coverage grid by lane.
 - Standards grid for GOV-M* and GOV-S*.
 - Ranked recommendations with priority and evidence.
@@ -35,7 +35,7 @@ Core checks:
 - GOV-M2 frontmatter validity
 - GOV-M3 catalog integrity
 - GOV-M4 lifecycle-governance coverage
-- GOV-S1..GOV-S7 advisory checks
+- GOV-S1..GOV-S8 advisory checks
 
 Companion checks:
 - Use skill-review for GOV-SK outcomes.
@@ -57,6 +57,7 @@ Use these existing scripts:
 - test-frontmatter-validity.ps1
 - test-hub-file-sync.ps1
 - test-governance-link-graph.ps1
+- test-governance-artifact-contract.ps1
 
 ## Output Rules
 

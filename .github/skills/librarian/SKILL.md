@@ -68,6 +68,15 @@ Any workspace may vary from this model; the librarian recommends, not mandates, 
 - Defer to `prune-doc-artifacts` for `.docs/` planning artifact cleanup decisions; do not duplicate its logic.
 - Flag governance-sensitive documents (ADRs, decision records, ledgers) as keep-by-default.
 
+## Migration Notes
+
+When renaming or restructuring the document corpus:
+
+1. Update the path first.
+2. Update internal relative links that point to the old path.
+3. Refresh `INDEX.md` files after the move set is complete.
+4. Keep dates in document content or frontmatter, never in file or folder names.
+
 ## Required Collaborators
 
 | Skill | When to invoke |

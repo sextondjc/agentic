@@ -3,261 +3,42 @@ name: architecture
 description: 'Consolidated DDD, SOLID, and .NET architecture guidance for lean application development.'
 applyTo: '**/*.cs'
 ---
-# Architecture, DDD & Domain Guidelines
+# Architecture Policy
 
-## Pre-Implementation Analysis
-Enumerate aggregates, invariants, domain events; validate SOLID adherence; confirm ubiquitous language consistency before coding.
+Keep this file policy-only. Use [SKILL.md](./../skills/domain-design/SKILL.md) for aggregate discovery, domain-event patterns, ACL design, and other on-demand architecture workflows.
 
-### Analysis Checklist
-- Ubiquitous language glossary drafted & reviewed with domain experts.
-- Candidate aggregates listed with invariants per aggregate.
-- External systems identified; note integration style (events / ACL / direct API).
-- Cross-cutting concerns mapped (security, validation, logging, observability).
-- Hot path assumptions listed (later validated via profiling).
+## Domain Model Rules
 
-### Aggregate Discovery Steps
-1. List domain nouns; group by cohesive invariants.
-2. Identify transactional boundaries (what must commit atomically?).
-3. Detect lifecycle state machine (states + transitions).
-4. Validate invariants can be enforced within single aggregate root.
-5. If invariants span multiple groups → consider domain service or saga.
+- Model bounded contexts explicitly and keep ubiquitous language consistent within each boundary.
+- Aggregates own consistency boundaries and enforce invariants internally.
+- Value objects must be immutable and compare by value.
+- Cross-aggregate references should use identifiers unless a different consistency model is explicitly justified.
 
-## Aggregates & Entities
-- Aggregates enforce consistency boundaries.
-- Value Objects: immutable; equality by value.
+## Repository and Service Rules
 
-### Aggregate Design Checklist
-| Item | Rule |
-|------|------|
-| Invariants | Encapsulated in methods; never exposed for external enforcement |
-| Constructors | Private/protected; use static factory for complex creation |
-| Mutations | Methods express business language (e.g., `Ship()`, `Cancel(reason)`) |
-| References | Other aggregates referenced by ID only (avoid direct object coupling) |
-| Collections | Manage via intent methods (`AddLineItem`, `RemoveLineItem`) |
-| Concurrency | Include version field for optimistic concurrency |
+- Repositories persist and reconstruct aggregates; they do not host business rules.
+- Use Syrx-backed repositories only for .NET data access.
+- Application services orchestrate bounded operations and stay free of transport concerns.
+- A bounded write operation should inject one owning repository; cross-entity atomic validation belongs in one stored procedure invoked through that repository.
+- Services and repositories must not add local `try/catch` behavior when cross-cutting exception handling is provided at the composition root.
 
-### Value Object Pattern
-```csharp
-using static Syrx.Validation.Contract; // Prefer global using static in project-wide global usings
+## Domain Events and Integration Rules
 
-public sealed record Money(decimal Amount, string Currency)
-{
-	public static Money Of(decimal amount, string currency)
-	{
-		Throw<ArgumentOutOfRangeException>(amount >= 0, "Amount must be non-negative");
-		Throw<ArgumentException>(!string.IsNullOrWhiteSpace(currency), "Currency required");
-		return new Money(amount, currency.ToUpperInvariant());
-	}
+- Raise domain events only for meaningful state changes.
+- Persist state before dispatching domain events.
+- Keep event payloads minimal and prefer identifiers over full object graphs.
+- Isolate external or legacy integration translation behind an anti-corruption layer.
 
-	public Money Convert(decimal rate, string targetCurrency) => Of(Math.Round(Amount * rate, 2), targetCurrency);
-}
-```
+## Architecture Decisions
 
-### Invariant Enforcement Example
-```csharp
-public class Order
-{
-	private readonly List<OrderLine> _lines = new();
-	public Guid Id { get; }
-	public string Status { get; private set; } = "Draft";
-	public IReadOnlyCollection<OrderLine> Lines => _lines;
+- Significant architecture changes require an ADR in `.docs/adr`.
+- ADRs must record context, decision, consequences, alternatives, and security implications.
 
-	private Order(Guid id) => Id = id;
-	public static Order Create() => new Order(Guid.NewGuid());
+## Routing Notes
 
-	public void AddLine(Product product, int quantity)
-	{
-		Throw<ArgumentOutOfRangeException>(quantity > 0, "Quantity > 0");
-		_lines.Add(new OrderLine(product.Id, quantity, product.Price));
-		EnsureTotalNotNegative();
-	}
-
-	public void Ship()
-	{
-		Throw<InvalidOperationException>(Status == "Draft" || Status == "Packed", "Cannot ship from current state");
-		Status = "Shipped";
-		AddDomainEvent(new OrderShippedEvent(Id));
-	}
-
-	private void EnsureTotalNotNegative()
-	{
-		var total = _lines.Sum(l => l.UnitPrice * l.Quantity);
-		Throw<InvalidOperationException>(total >= 0, "Total cannot be negative");
-	}
-
-	private readonly List<IDomainEvent> _events = new();
-	public IReadOnlyCollection<IDomainEvent> DomainEvents => _events;
-	private void AddDomainEvent(IDomainEvent evt) => _events.Add(evt);
-}
-```
-
-## Domain Events
-Capture significant changes; facilitate audit & integration.
-
-### Event Lifecycle
-1. Aggregate method executes & invariants validated.
-2. Domain event instance created & appended to aggregate event collection.
-3. Unit of Work/Repository persists state + dispatches events post-commit.
-4. Handlers process event (synchronous or async) using ID only; avoid fetching entire graphs unnecessarily.
-
-### Naming Convention
-`<Aggregate><PastTense>` e.g., `OrderPlacedEvent`, `PaymentCapturedEvent`.
-
-### Event Handler Pattern
-```csharp
-public sealed class OrderShippedHandler : IDomainEventHandler<OrderShippedEvent>
-{
-	private readonly IShippingGateway _gateway;
-	public OrderShippedHandler(IShippingGateway gateway) => _gateway = gateway;
-	public async Task HandleAsync(OrderShippedEvent evt, CancellationToken ct)
-	{
-		await _gateway.NotifyShipmentAsync(evt.OrderId, ct);
-	}
-}
-```
-
-### Event Publishing (In-Process Dispatcher)
-```csharp
-public interface IDomainEventDispatcher
-{
-	Task DispatchAsync(IEnumerable<IDomainEvent> events, CancellationToken ct);
-}
-```
-
-### Avoid
-- Events for trivial state changes (noise).
-- Including large payloads (pass identifiers; fetch details if required).
-
-## Repositories
-Syrx explicit SQL only; each aggregate persistence via dedicated repository.
-
-### Repository Structure
-| Layer | Responsibility |
-|-------|----------------|
-| Repository | Convert aggregate to persisted representation & vice versa |
-| Application Service | Orchestrates repositories & domain logic |
-| Domain | Contains business rules & events |
-
-### Syrx Repository Example (Simplified)
-```csharp
-public interface IOrderRepository
-{
-	Task<Order?> RetrieveAsync(Guid id, CancellationToken cancellationToken);
-	Task SaveAsync(Order order, CancellationToken cancellationToken);
-}
-
-public sealed class OrderRepository : IOrderRepository
-{
-	private readonly ICommander<IOrderRepository> _commander;
-	public OrderRepository(ICommander<IOrderRepository> commander) => _commander = commander;
-
-	public async Task<Order?> RetrieveAsync(Guid id, CancellationToken cancellationToken)
-	{
-		return (await _commander.QueryAsync<OrderData>(new { Id = id }, cancellationToken).SingleOrDefault());
-	}
-
-	public async Task SaveAsync(Order order, CancellationToken cancellationToken)
-	{
-			return await _commander.ExecuteAsync(order, cancellationToken) ? order : null;
-	}
-}
-```
-
-### Transaction Guidance
-- Keep transactions short (write operations only).
-- Publish domain events after commit.
-- Use optimistic concurrency (version column) — on mismatch raise conflict exception.
-
-### Multi-Mapping Strategy
-- Query multiple tables; map to simple DTO set; compose domain aggregate.
-- Avoid passing raw data structures past repository boundary.
-
-## Application Service Design Rules
-
-### Single Repository per Bounded Operation
-- A service class must inject **exactly one repository** per bounded operation it orchestrates.
-- Services must never inject multiple repositories to compose a cross-entity query or multi-step write at the application layer.
-- When an operation must validate and write across entity boundaries in a single atomic step, that logic belongs in a **stored procedure** invoked via the single owning repository.
-- Example: if creating an association requires validating both referenced records exist, the SP performs both validation and insertion atomically; the service calls one repository method.
-
-```
-Correct: AssociationService._associationRepository.CreateAsync(association)  // SP handles key validation + insert
-Incorrect: AssociationService._relatedEntityRepository.RetrieveAsync(relatedId) + _associationRepository.CreateAsync(association)
-```
-
-### No Exception Handling in Service or Repository Layers
-- Services and repositories must **not contain `try/catch` blocks**.
-- Cross-cutting exception handling (logging, translation, retries) is applied via an AOP pipeline at the composition root.
-- If a domain rule is violated, throw a typed domain exception and let it propagate — do not swallow or re-wrap inline.
-
-### Service Method Contract
-- Services accept and return domain model types from the owning bounded context's `*.Models` assembly.
-- Services must not accept or return API contract types (e.g., request/response records from a `*.Api.Models` assembly).
-- Services must not perform HTTP, serialization, or transport operations.
-
-## Decision Records
-Use ADR workflow to document rationale in `.docs/adr`.
-
-### ADR Mandatory Sections
-- Context (drivers & constraints)
-- Decision (concise statement)
-- Consequences (POS/NEG with IDs)
-- Alternatives (include "Do Nothing")
-- Implementation Notes (monitoring, rollback)
-- References (links, tickets)
-
-### Example Consequence IDs
-- POS-001 Improved decoupling
-- POS-002 Better performance under load
-- NEG-001 Increased complexity
-- NEG-002 Additional maintenance overhead
-
-### Quality Gate
-- Minimum 2 alternatives.
-- At least 2 positive & 2 negative consequences.
-- Security consideration explicitly stated.
-
-## Anti-Corruption Layer (ACL)
-When integrating legacy/external systems:
-- Isolate translation logic in dedicated adapter.
-- Map external DTO → domain value objects (validate invariants).
-- Reject invalid external data early (guards + logging).
-
-### ACL Code Sketch
-```csharp
-public sealed class LegacyInvoiceAdapter
-{
-	public Invoice Map(LegacyInvoice dto)
-	{
-		Throw<ArgumentException>(dto.Total >= 0, "Total must be non-negative");
-		var money = Money.Of(dto.Total, dto.Currency);
-		return Invoice.Create(dto.Id, money, dto.IssuedOn);
-	}
-}
-```
-
-## Pattern Selection Matrix
-| Scenario | Pattern | Notes |
-|----------|---------|-------|
-| Complex process across aggregates | Saga / Process Manager | Keep domain events orchestration external |
-| Need read model optimization | CQRS (read projection) | Separate query model; domain remains rich |
-| External integration boundary | Anti-Corruption Layer | Prevent leaking external semantics |
-| High rate domain events | Event Batching / Debouncing | Aggregate or consolidate notifications |
-
-## Review Checklist (Architecture PR)
-- Aggregate invariants encapsulated (no leaking validation externally).
-- Domain events meaningful & named with past tense.
-- Repositories do not expose infrastructure types.
-- ADR attached or referenced for significant architectural shifts.
-- Anti-Corruption layers employed for legacy boundaries.
-- Security & performance considerations documented.
-
-## Common Pitfalls & Remedies
-| Pitfall | Symptom | Remedy |
-|---------|---------|--------|
-| Anemic Model | Services contain business logic | Move logic into aggregate methods |
-| Overusing Events | Hard to trace flow | Consolidate; audit necessity per event |
-| Repository Chatty Calls | Multiple round trips | Introduce bulk/multi-mapping query |
+- Use [SKILL.md](./../skills/domain-design/SKILL.md) for detailed domain-design workflow.
+- Use [SKILL.md](./../skills/adr-generator/SKILL.md) when recording architecture decisions.
+- Use [SKILL.md](./../skills/api-design/SKILL.md) for external integration boundary design.
 | Tight Coupling | Direct object dependency across aggregates | Use IDs + domain events |
 
 ## Evolution Strategy

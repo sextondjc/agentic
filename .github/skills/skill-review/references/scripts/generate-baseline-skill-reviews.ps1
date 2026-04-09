@@ -6,7 +6,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $skillsRoot = Join-Path $RootPath '.github/skills'
-$reportsDir = Join-Path $RootPath '.docs/changes/skill-reviews'
+$reportsDir = Join-Path $RootPath '.docs/changes/skill/reviews'
 $historyDir = Join-Path $skillsRoot 'skill-review/references/history'
 
 New-Item -ItemType Directory -Force -Path $reportsDir | Out-Null
@@ -245,7 +245,7 @@ foreach ($s in $skills) {
 
     $skillReportDir = Join-Path $reportsDir $skill
     New-Item -ItemType Directory -Force -Path $skillReportDir | Out-Null
-    $reportFileName = "{0}-review.md" -f ($ReviewDate -replace '-', '')
+    $reportFileName = 'review.md'
     $reportPath = Join-Path $skillReportDir $reportFileName
 
     $report = @"
@@ -336,7 +336,7 @@ $recommendationText
 
 - Outcome: $outcome
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill-reviews/$skill/$reportFileName
+- Source Report: .docs/changes/skill/reviews/$skill/$reportFileName
 
 #### Findings
 
@@ -375,6 +375,6 @@ $indexHeader = @(
 $indexContent = ($indexHeader + ($indexRows | Sort-Object)) -join "`n"
 Set-Content -Path (Join-Path $historyDir 'index.md') -Value $indexContent -NoNewline
 
-$reportCount = (Get-ChildItem $reportsDir -Recurse -Filter '*-review.md').Count
+$reportCount = (Get-ChildItem $reportsDir -Recurse -Filter 'review.md').Count
 $historyCount = (Get-ChildItem $historyDir -Filter '*-history.md').Count
 Write-Output "Generated $reportCount reports and $historyCount history files."

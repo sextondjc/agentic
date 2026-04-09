@@ -24,7 +24,7 @@ Implemented governance-alignment changes with durable traceability artifacts: no
 - .github/agents/*.agent.md - Standardized agent boundary headings to Specialization.
 - .github/skills/*/SKILL.md - Standardized remaining skill boundary headings to Specialization.
 - .github/copilot-instructions.md - Replaced singular-purpose wording with specialization-first guidance.
-- .github/skills/customization-authoring/** - Updated agent authoring templates and checks to require Specialization.
+- .github/skills/instructions-authoring/** and .github/skills/agent-authoring/** - Updated customization templates and checks to require Specialization.
 - .github/skills/audit-governance/SKILL.md - Updated governance review standards from singular-purpose wording to specialization wording.
 - .github/skills/validate-customization/SKILL.md - Updated customization review standards to require Specialization sections.
 - .github/agents/agent-lifecycle-catalog.md - Added the missing manual-code-reviewer catalog entry.
@@ -73,7 +73,7 @@ Implemented governance-alignment changes with durable traceability artifacts: no
 - .github/skills/*/SKILL.md - Standardization of boundary headings and related specialization terminology.
 - .github/copilot-instructions.md - Specialist routing language updated to specialization wording.
 - .github/instructions/naming-conventions.instructions.md - Terminology updated to specialization wording.
-- .github/skills/customization-authoring/** - Agent template and review checklist updated to Specialization.
+- .github/skills/instructions-authoring/** and .github/skills/agent-authoring/** - Agent template and review checklist updated to Specialization.
 - .github/agents/agent-lifecycle-catalog.md - Manual reviewer agent catalog entry added.
 - .github/prompts/prompt-lifecycle-catalog.md - Prompt catalog corrected and completed.
 - .github/skills/*/SKILL.md - Missing skill structure sections remediated.

@@ -53,7 +53,8 @@ try {
         @{ Name = 'frontmatter-prompts'; Command = { ./.github/scripts/powershell/test-frontmatter-validity.ps1 -AssetType prompts } },
         @{ Name = 'frontmatter-instructions'; Command = { ./.github/scripts/powershell/test-frontmatter-validity.ps1 -AssetType instructions } },
         @{ Name = 'hub-sync'; Command = { ./.github/scripts/powershell/test-hub-file-sync.ps1 } },
-        @{ Name = 'link-graph'; Command = { ./.github/scripts/powershell/test-governance-link-graph.ps1 } }
+        @{ Name = 'link-graph'; Command = { ./.github/scripts/powershell/test-governance-link-graph.ps1 } },
+        @{ Name = 'artifact-contract'; Command = { ./.github/scripts/powershell/test-governance-artifact-contract.ps1 } }
     )
 
     $coreResults = foreach ($check in $checks) {
@@ -62,26 +63,7 @@ try {
 
     $skillAuditScript = './.github/skills/skill-review/references/scripts/generate-full-skill-audit.ps1'
     & $skillAuditScript -RootPath $RootPath -ReviewDate $ReviewDate | Out-Null
-    $skillReviewDate = $ReviewDate -replace '-', ''
-    $datedSkillAggregatePath = ".docs/changes/skill-reviews/$skillReviewDate-full-skill-review-grid.md"
-    $skillAggregatePath = '.docs/changes/skill-reviews/full-skill-review-grid.md'
-
-    if (Test-Path $datedSkillAggregatePath) {
-        $lines = Get-Content -LiteralPath $datedSkillAggregatePath
-        $converted = foreach ($line in $lines) {
-            if ($line -match '^\| (?<skill>[^|]+) \| (?<outcome>[^|]+) \| (?<must>[^|]+) \| (?<should>[^|]+) \| (?<conflict>[^|]+) \| (?<report>\.docs/changes/skill-reviews/[^|]+) \|$') {
-                $report = $Matches.report.Trim()
-                $relativeReport = './' + ($report -replace '^\.docs/changes/skill-reviews/', '')
-                "| $($Matches.skill.Trim()) | $($Matches.outcome.Trim()) | $($Matches.must.Trim()) | $($Matches.should.Trim()) | $($Matches.conflict.Trim()) | [review.md]($relativeReport) |"
-            }
-            else {
-                $line
-            }
-        }
-
-        Set-Content -LiteralPath $skillAggregatePath -Value ($converted -join "`r`n") -Encoding UTF8
-        Remove-Item -LiteralPath $datedSkillAggregatePath -Force
-    }
+    $skillAggregatePath = '.docs/changes/skill/reviews/full-skill-review-grid.md'
 
     $agentFiles = @(Get-ChildItem '.github/agents' -File -Filter '*.agent.md')
     $instructionFiles = @(Get-ChildItem '.github/instructions' -File -Filter '*.instructions.md')
@@ -103,8 +85,8 @@ try {
     }
 
     $conflictFiles = @()
-    if (Test-Path '.docs/changes/customization-reviews/conflicts') {
-        $conflictFiles = @(Get-ChildItem '.docs/changes/customization-reviews/conflicts' -File -Filter '*.md' |
+    if (Test-Path '.docs/changes/customization/reviews/conflicts') {
+        $conflictFiles = @(Get-ChildItem '.docs/changes/customization/reviews/conflicts' -File -Filter '*.md' |
             Select-Object -ExpandProperty Name)
     }
 

@@ -21,6 +21,9 @@ $datePfxRx  = '^\d{4,8}-'
 $exemptFolderRx = '(\\|/)((customization|skill)\\reviews|reference\\\.)'
 # .ref.md double-extension files under reference/ are mirror artifacts - intentional by design
 $refMirrorRx    = '\.ref\.md$'
+# Skill review snapshots intentionally retain YYYYMMDD prefixes for historical chronology.
+$exemptDatedSkillReviewRx = '(^|\\|/)changes(\\|/)skill(\\|/)reviews(\\|/).+(\\|/)\d{8}-review\.md$'
+$exemptDatedSkillGridRx   = '(^|\\|/)changes(\\|/)skill(\\|/)reviews(\\|/)\d{8}-full-skill-review-grid\.md$'
 $violations = [System.Collections.Generic.List[PSCustomObject]]::new()
 
 function Add-Violation {
@@ -45,8 +48,11 @@ Get-ChildItem -LiteralPath $absRoot -Recurse -Directory | Sort-Object FullName |
 Get-ChildItem -LiteralPath $absRoot -Recurse -File | Sort-Object FullName | ForEach-Object {
     $rel  = $_.FullName.Substring($absRoot.Path.Length).TrimStart('\','/')
     $name = $_.Name
+    $normalizedRel = $rel -replace '/', '\\'
     if ($name -in $fileAllow)    { return }
     if ($rel  -match $refMirrorRx) { return }  # .ref.md mirror artifacts are intentional
+    if ($normalizedRel -match $exemptDatedSkillReviewRx) { return }  # intentional dated review snapshots
+    if ($normalizedRel -match $exemptDatedSkillGridRx)   { return }  # intentional dated aggregate snapshot
     if ($name -match $datePfxRx) {
         Add-Violation $rel File "Date prefix in filename" ($name -replace $datePfxRx, '')
     } elseif ($name -notmatch $fileRx) {

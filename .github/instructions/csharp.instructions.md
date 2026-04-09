@@ -3,241 +3,59 @@ name: csharp
 description: 'Consolidated C# development, style, and engineering standards.'
 applyTo: '**/*.cs,**/*.csproj'
 ---
-# C# Development & Standards
+# C# Policy
 
-## Language & Tooling
-- Always target latest stable C#; update `LangVersion` when feasible.
-- Enable nullable reference types; annotate strictly.
- - Treat compiler warnings as errors (enable `TreatWarningsAsErrors`).
- - Enable analyzers: StyleCop (style), Roslyn analyzers (safety), Security analyzers (credential leakage).
- - For any `*.csproj` with more than one `*.cs` file, require a project-level `Usings.cs` file containing all import `global using` directives.
- - `Usings.cs` is the only allowed file name for project-wide global imports.
- - All other `*.cs` files must not contain import `using` directives; move imports to `Usings.cs`.
- - Keep `global using` entries intentional; include only commonly required namespaces.
- - Prefer file-scoped namespaces.
- - Utilize raw string literals for multi-line JSON/SQL only when parameterization remains intact.
+Keep this file policy-only. Use [SKILL.md](./../skills/dotnet-refactor/SKILL.md) for modernization workflow and evidence gates, [SKILL.md](./../skills/test-driven-development/SKILL.md) for behavior-first implementation flow, and [syrx.instructions.md](./syrx.instructions.md) for data-access rules.
 
-### Feature Adoption Matrix (Assess Quarterly)
-| Feature | Adopt? | Criteria | Migration Pattern |
-|---------|--------|---------|-------------------|
-| Records | Yes | DTOs immutable, value semantics | Replace POCO + equality methods with `record` |
-| Primary Constructors | Conditional | Simplicity vs DI container needs | Refactor small data-centric classes |
-| Pattern Matching Enhancements | Yes | Improves clarity vs multiple `if` chains | Replace type + null checks |
-| Raw String Literals | Yes | Multi-line readability of test assets/config | Replace verbatim + concatenations |
-| `Span<T>`/Memory APIs | Conditional | Proven profiler hotspot & allocation pressure | Isolate in internal perf layer |
-| `ValueTask` | Conditional | Async method awaited synchronously frequently; high call volume | Replace `Task` + add benchmark |
+## Language and Tooling
 
-### Modernization Workflow
-1. Inventory legacy constructs (manual equality, explicit tuple types, verbose null checks).
-2. Benchmark allocation & CPU hotspots (dotnet-trace, PerfView).
-3. Create ADR for risky transformations (e.g., introducing `Span<T>`).
-4. Apply automated refactors (Rider/VS analyzers) in small PRs.
-5. Run test + performance delta (baseline vs candidate).
-6. Tag change set with performance label in PR description.
-
-## Naming & Structure
-- PascalCase for types/methods; camelCase locals; interfaces prefixed `I`.
-- Namespace organization by feature/domain.
-- Exactly one top-level type per `*.cs` file (class, record, struct, enum, interface, delegate, etc.).
-- Nested types are the only allowed exception to the one-type-per-file rule.
-- Minimal API route mappings must be separated into dedicated files (for example endpoint modules or extension classes) rather than being declared inline in `Program.cs`.
-- Follow `.editorconfig` and local project conventions first.
-- **Namespace type aliases are prohibited.** `using Alias = Full.Namespace.Type` must never be used. Add the containing namespace to `Usings.cs` and reference the type name directly.
-- **Enum names must be domain-precise.** Do not abbreviate in a way that introduces ambiguity with a neighbouring domain concept. For example, `AuthProvider` is prohibited when the domain must distinguish authentication from authorization; prefer `IdentityProvider` or `AuthenticationProvider`.
-
-## Comments & Documentation
-- Comments must explain WHY and design rationale; do not describe what the code already shows.
-- **XML doc comments are mandatory on all public and internal types, constructors, methods, and properties.** Absence of XML docs is a review blocker.
-  - Use `///` triple-slash format with at minimum a `<summary>` element.
-  - Add `<param name="…">` for every parameter and `<returns>` for every non-void return.
-  - Add `<exception cref="…">` for every exception a method intentionally throws.
-  - Use `<see cref="…"/>` for cross-references and `<example>` for non-obvious usage.
-
-```csharp
-/// <summary>
-/// Creates a new location record after validating that the asset identifier exists.
-/// </summary>
-/// <param name="assetId">The unique identifier for the asset associated with the location event.</param>
-/// <param name="latitude">Geographic latitude of the location, in decimal degrees (-90 to 90).</param>
-/// <param name="longitude">Geographic longitude of the location, in decimal degrees (-180 to 180).</param>
-/// <param name="visibilityDelayMinutes">Number of minutes before the location becomes visible to other users.</param>
-/// <param name="cancellationToken">Token to observe for cancellation requests.</param>
-/// <returns>A <see cref="LocationOperation"/> summarising the created location record.</returns>
-/// <exception cref="ArgumentException">Thrown when <paramref name="assetId"/> does not exist in the registry.</exception>
-public Task<LocationOperation> CreateAsync(string assetId, decimal latitude, decimal longitude, int visibilityDelayMinutes, CancellationToken cancellationToken = default);
-```
-
-- Include rationale for non-trivial guard decisions.
-- Do not repeat obvious implementation details; focus on intent and constraints.
-
-## Model & Service Design Rules
-
-### Complex Logic in Models
-- Model constructors and record constructors must contain only guard calls (`Throw<T>`) and simple property assignments.
-- Parsing, normalization, multi-step calculation, or format conversion logic must be extracted to a **public static utility class** in the appropriate `*.Extensions` or `*.Utilities` assembly.
-- Extracted methods must be public and covered by unit tests.
-
-```csharp
-// Prohibited — complex logic inline in a model:
-public sealed record SeedRequest(string isbn)
-{
-    public string Isbn { get; } = NormalizeAndValidateIsbn(isbn); // private, untestable
-    private static string NormalizeAndValidateIsbn(string isbn) { /* ... */ }
-}
-
-// Required — logic in a testable utility:
-public sealed record SeedRequest
-{
-    public string Isbn { get; }
-    public SeedRequest(string isbn)
-    {
-        Isbn = IsbnValidator.NormalizeAndValidate(isbn); // public static, tested
-    }
-}
-```
-
-### Service Method Signatures
-- When a public service method has **more than two primitive parameters of the same type** that represent a single logical concept, replace them with a named input model in the appropriate `*.Models` assembly.
-- Example: `CreateAsync(string assetId, decimal latitude, decimal longitude, int visibilityDelayMinutes)` -> `CreateAsync(LocationInput input)`.
-- Named input models must be immutable records with guards in their constructors.
-- The API contract type (e.g., `LocationRequest`) must not cross the service boundary; create a distinct service-layer input type.
-
-### API Contract Placement
-- HTTP request and response types (API contracts/DTOs) must reside in a dedicated `*.Models` assembly, not co-located with the API host project.
-- Translation between API contracts and domain models happens exclusively at the API layer (endpoint/controller).
-- No domain service may accept or return an API contract type.
-
-### Domain Type Reuse in API Contracts
-- Do not mirror a domain enum or value type with a structurally identical contract-layer copy.
-- If a domain type already represents the concept with the correct semantics and values, use it directly in the API contract (e.g., as a property type on a response record).
-- Add a project reference from the `*.Api.Models` assembly to the domain `*.Models` assembly to make the type available.
-- Create a contract-layer copy **only** when the API surface must differ from the domain representation (different values, different naming, or intentional decoupling for versioning).
-
-```csharp
-// ✅ Reuse domain enum directly in API contract
-public sealed record WorkItemResponse(Guid WorkItemId, WorkItemState Status);
-
-// ❌ Mirror with an identical contract enum
-public enum WorkItemStatus { Pending, Active, Suspended, Completed } // same values — delete this
-public sealed record WorkItemResponse(Guid WorkItemId, WorkItemStatus Status);
-```
-
-## Validation (Global Rule)
-Use `Syrx.Validation.Contract.Throw<T>(successCondition, message)` for all parameter guards.
-
-### Guard Taxonomy
-| Scenario | Guard Pattern | Exception |
-|----------|---------------|-----------|
-| Null reference | `Throw<ArgumentNullException>(obj is not null, nameof(obj))` | `ArgumentNullException` |
-| Empty string | `Throw<ArgumentException>(!string.IsNullOrWhiteSpace(name), "Name required")` | `ArgumentException` |
-| Range check | `Throw<ArgumentOutOfRangeException>(value >= min && value <= max, "Value out of range")` | `ArgumentOutOfRangeException` |
-| Enum validity | `Enum.IsDefined(typeof(TEnum), value)` then throw | `ArgumentOutOfRangeException` |
-| Collection non-empty | `Throw<ArgumentException>(items.Any(), "Items required")` | `ArgumentException` |
-| Business rule failure | Domain-specific condition | Custom domain exception |
-
-All guards occur at method entry; no partial state mutation before validation completes.
-
-## Async
-- Suffix Async; propagate `CancellationToken`.
-- Use `Task`; introduce `ValueTask` only for validated high-frequency hot paths.
-
-### Async Excellence Checklist
-- Avoid `async void` (except event handlers).
-- Do not block (`.Result`, `.Wait()`, `Task.Run` around sync code) — prevents deadlocks.
-- Leverage `ConfigureAwait(false)` in library/internal layers (not UI).
-- Cancellation token required in public async APIs.
-- Benchmark candidate for `ValueTask` (Track call count & allocation via dotnet-counters).
-
-### ValueTask Decision Flow
-1. Is method frequently called (>100k/sec in perf tests)? If no → keep `Task`.
-2. Does method complete synchronously often (>80%)? If no → keep `Task`.
-3. Profiling shows allocation benefit? If yes → migrate & document.
-4. Ensure consumer patterns (multiple awaits, `Task.WhenAll`) do not misuse `ValueTask`.
-
-## Data Access
-Syrx-only repositories; no EF Core or other ORMs.
-
-Detailed repository placement, model contracts, command patterns, and mapping guidance are canonical in `syrx.instructions.md`.
-
-### Dependency Rules
-- Do not introduce EF Core, FluentValidation, or alternate ORM abstractions.
-- Keep abstractions minimal and justified by testing, boundaries, or external dependencies.
-
-## Testing Interface Guidance
-Interfaces required for external dependencies & test seams; avoid redundant abstractions around already abstract frameworks.
-
-### Interface Creation Rules
-- Create interface when mocking required for unit test and dependency is concrete.
-- Do NOT create interface for data-only records or simple configuration objects.
-- Consolidate interface members around cohesive responsibility (ISP) — no placeholder methods.
-
-### Example Bad vs Good
-Bad:
-```csharp
-public interface IFooHelper { Task LogAsync(string message); Task<int> ParseAsync(string s); }
-```
-Good:
-```csharp
-public interface ILogWriter { Task WriteAsync(string message, CancellationToken ct); }
-public interface IStringParser { Task<int> ParseAsync(string value, CancellationToken ct); }
-```
-
-## Security & OWASP
-- Deny by default access control
-- No secrets in code (env or secret store)
-- Parameterized SQL only (Syrx explicit SQL)
-
-### Secure Coding Embeds
-- Always validate external inputs (length, range, format) before data access.
-- Use structured logging (no PII in messages; redact secrets).
-- Apply output encoding in any HTML generation contexts.
-- Prefer composition over inheritance for security-sensitive components.
-
-## Prohibited
-- FluentAssertions
-- Sync-over-async calls
- - Reflection-based performance micro-optimizations without benchmark
- - Implicit culture-dependent parsing (specify `CultureInfo.InvariantCulture`)
- - Silent catch blocks (must log & rethrow or wrap)
-
-## Practical Defaults
+- Target the latest stable C# version supported by the target framework.
+- Enable nullable reference types and treat warnings as errors.
+- For projects with more than one C# file, use a project-level `Usings.cs` for global imports.
+- `Usings.cs` is the only allowed file name for project-wide global imports.
 - Prefer file-scoped namespaces.
-- Prefer modern C# features when they improve clarity and are supported by the target framework.
-- Add tests for changed public behavior and important edge cases.
-- Keep documentation aligned with actual behavior and naming.
 
-## Performance Patterns
-- Minimize allocations in hot paths (avoid LINQ in tight loops; use `for`).
-- Use `ArrayPool<T>` only with clear lifetime & zeroing requirements.
-- Profile before optimizing (avoid speculative micro-optimizations).
-- Prefer structs only when size <= 16 bytes and copying cheaper than heap.
+## Structure and Naming
 
-## Code Review Checklist (Condensed)
-- Clear guard usage & exceptions mapped.
-- Async patterns: no blocking, proper cancellation.
-- No banned dependencies or patterns.
-- Documentation: WHY present for complex logic.
-- Security: parameterized queries, no secrets, input validation.
-- Performance: hotspots justified by benchmark if optimized.
+- Use PascalCase for types and methods, camelCase for locals, and `I`-prefixed interfaces.
+- Keep exactly one top-level type per `*.cs` file unless the extra type is nested inside the containing type.
+- Minimal API route mappings must live outside `Program.cs` in dedicated endpoint or extension files.
+- Namespace type aliases are prohibited.
+- Enum names must remain domain-precise and unambiguous.
 
-## Example Modernization Diff
-```diff
-- if (user != null && user.IsActive == true) { }
-+ if (user is { IsActive: true }) { }
-```
+## Documentation and Design
 
-```diff
-- var sb = new StringBuilder(); sb.AppendLine("{/"x/":1}");
-+ var json = """
-{"x":1}
-""";
-```
+- Comments must explain design intent, not restate obvious code.
+- XML documentation is mandatory on public and internal types, constructors, methods, and properties.
+- Model constructors and record constructors may contain only guards and simple assignments.
+- Complex parsing, normalization, or calculation logic must be extracted to public utility code with tests.
+- Service methods must not accept or return API contract types.
 
-## Benchmark Template
-```bash
-dotnet build -c Release
-dotnet run -c Release --project benchmarks/YourBenchmarks
-```
+## Validation and Async
 
-Record before/after metrics (allocs, mean, p95) in ADR.
+- Use `Syrx.Validation.Contract.Throw<TException>(...)` for guards.
+- Validate before state mutation.
+- Public async methods must end with `Async` and accept `CancellationToken`.
+- Do not block on async work.
+- Use `ValueTask` only when profiling proves it is warranted.
+
+## Dependencies and Testing
+
+- Syrx-only repositories for .NET data access; do not introduce EF Core or alternate ORMs.
+- Do not introduce FluentValidation or FluentAssertions.
+- Keep abstractions minimal and justified by testing or boundary needs.
+- Add or update tests for changed public behavior and important edge cases.
+
+## Security and Prohibited Patterns
+
+- No secrets in code.
+- Validate external inputs before persistence or integration work.
+- Use structured logging without leaking secrets or sensitive values.
+- Prohibited: sync-over-async, silent catches, culture-dependent parsing without explicit culture, speculative reflection micro-optimizations.
+
+## Routing Notes
+
+- Use [SKILL.md](./../skills/dotnet-refactor/SKILL.md) for modernization sequencing, evidence capture, and refactor depth.
+- Use [SKILL.md](./../skills/test-driven-development/SKILL.md) for behavior-first delivery flow.
+- Use [testing-strategy.instructions.md](./testing-strategy.instructions.md) for test policy specifics.
 

@@ -26,7 +26,7 @@ This skill is documentation-first and evidence-first:
 ## Mandatory Inputs
 
 - Documentation scope (default: entire workspace).
-- Documentation root output path (default: `/.docs/reference/`).
+- Documentation root output path (default: `/.docs/components/`).
 - Preferred audience (default: developers and maintainers).
 - Language/ecosystem hints when available (for API idioms and examples).
 
@@ -57,7 +57,7 @@ When scope is workspace-wide, split by top-level directory and run discovery in 
 
 ## Output Contract
 
-Produce a technical reference documentation set under the selected root (default `/.docs/reference/`) with this baseline:
+Produce a technical reference documentation set under the selected root (default `/.docs/components/`) with this baseline:
 
 - `index.md` - repository documentation home page.
 - `code-structure.md` - source tree mirror and navigation map.
@@ -100,6 +100,7 @@ Use "Not observed in code" when data is unavailable.
 Before finalizing documentation, enforce all gates:
 
 - Evidence Gate: Every technical claim maps to actual code or existing docs.
+- History Gate: When describing change history, superseded behavior, or prior state, use git history (`git log`, `git show`, `git diff`) as source of truth.
 - Drift Gate: Remove or correct stale statements contradicted by code.
 - Coverage Gate: Attempt to document every file in scope; explicitly justify exclusions. Run [Get-DocumentationMetrics.ps1](./Get-DocumentationMetrics.ps1) to measure XML doc coverage and README coverage objectively.
 - Link Gate: Validate that every internal link target exists.

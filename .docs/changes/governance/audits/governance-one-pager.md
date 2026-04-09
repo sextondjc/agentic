@@ -7,6 +7,7 @@ This one-page briefing summarizes current governance status and links to canonic
 | Metric | Current Value | Evidence |
 |---|---|---|
 | Disposition | PASSED | [governance-audit.md](./governance-audit.md) |
+| Validation Rerun Date | 2026-04-09 | [governance-audit.md](./governance-audit.md) |
 | Core MUST Failures | 0 of 4 GOV-M checks failing | [governance-audit.md](./governance-audit.md) |
 | Open Core Advisory | 0 | [governance-audit.md](./governance-audit.md) |
 | Customization MUST Failures | 0 (post-remediation) | [audit.md](./../../customization/reviews/audit.md) |
@@ -19,9 +20,9 @@ This one-page briefing summarizes current governance status and links to canonic
 |---|---|---|---|---|
 | F1 | No unresolved MUST failures across governance, skill quality, or customization quality. | High positive | Governance controls are currently non-blocking for delivery execution. | [comprehensive-workspace-health-audit.md](./comprehensive-workspace-health-audit.md) |
 | F2 | Governance cadence is now CI-scheduled and manually invocable. | High positive | Removes recurrence risk from prompt-only cadence and closes GOV-S4 advisory. | `.github/workflows/governance-cadence.yml`; [governance-audit.md](./governance-audit.md) |
-| F3 | Lifecycle governance and orchestrator routing authority boundary is explicit. | High positive | Eliminates prior overlap advisory and reduces future drift risk. | [lifecycle-governance.instructions.md](./../../../../.github/instructions/lifecycle-governance.instructions.md); [orchestrator.agent.md](./../../../../.github/agents/orchestrator.agent.md); [history.md](./../../customization/reviews/lifecycle-governance.instructions/history.md) |
+| F3 | Lifecycle governance and orchestrator routing authority boundary is explicit. | High positive | Eliminates prior overlap advisory and reduces future drift risk. | [lifecycle-governance.instructions.md](./../../../../.github/instructions/lifecycle-governance.instructions.md); [orchestrator.agent.md](./../../../../.github/agents/orchestrator.agent.md); [audit-history.md](./../../customization/reviews/audit-history.md) |
 | F4 | Skill review aggregate remains fully green. | High positive | All active skills pass with zero MUST failures and zero SHOULD advisories. | [full-skill-review-grid.md](./../../skill/reviews/full-skill-review-grid.md) |
-| F5 | Persona coverage expanded with governance briefer and reviewed cleanly. | High positive | New persona passed customization standards with no advisories. | [governance-briefer.agent.md](./../../../../.github/agents/governance-briefer.agent.md); [history.md](./../../customization/reviews/governance-briefer.agent/history.md) |
+| F5 | Persona coverage expanded with governance briefer and reviewed cleanly. | High positive | New persona passed customization standards with no advisories. | [governance-briefer.agent.md](./../../../../.github/agents/governance-briefer.agent.md); [audit-history.md](./../../customization/reviews/audit-history.md) |
 
 ## Risk and Impact
 

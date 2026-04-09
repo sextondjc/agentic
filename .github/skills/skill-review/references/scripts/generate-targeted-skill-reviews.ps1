@@ -3,7 +3,7 @@ param(
     [string]$ReviewDate = '2026-03-29',
     [string[]]$Skills = @(
         'curating-copilot-instructions',
-        'customization-authoring',
+        'instructions-authoring',
         'customization-routing-decision',
         'agent-customization'
     )
@@ -12,7 +12,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $skillsRoot = Join-Path $RootPath '.github/skills'
-$reportsRoot = Join-Path $RootPath '.docs/changes/skill-reviews'
+$reportsRoot = Join-Path $RootPath '.docs/changes/skill/reviews'
 $historyDir = Join-Path $skillsRoot 'skill-review/references/history'
 $mirrorPath = Join-Path $skillsRoot 'skill-review/references/mirrors/agent-customization-SKILL.md'
 
@@ -374,8 +374,8 @@ foreach ($skill in $Skills) {
     $front = Get-Frontmatter $content
 
     $targetPath = if ($isAgentMirror) { 'copilot-skill:/agent-customization/SKILL.md (mirrored at .github/skills/skill-review/references/mirrors/agent-customization-SKILL.md)' } else { ".github/skills/$skill/SKILL.md" }
-    $reportRelPath = ".docs/changes/skill-reviews/$skill/$($ReviewDate -replace '-','')-review.md"
-    $reportPath = Join-Path $reportsRoot "$skill/$($ReviewDate -replace '-','')-review.md"
+    $reportRelPath = ".docs/changes/skill/reviews/$skill/review.md"
+    $reportPath = Join-Path $reportsRoot "$skill/review.md"
     New-Item -ItemType Directory -Force -Path (Split-Path $reportPath -Parent) | Out-Null
 
     $hasName = $front -match '(?m)^name\s*:'

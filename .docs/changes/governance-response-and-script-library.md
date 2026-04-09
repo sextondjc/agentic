@@ -18,7 +18,7 @@
 
 ### R2: Fix GOV-S7 Hub Freshness (Medium) — COMPLETED
 - **Action**: Sync copilot-instructions.md Preferred Skills with full current skill inventory
-- **Implementation**: Added 6 missing skills to preferred list: `curating-copilot-instructions`, `current-test-coverage`, `customization-authoring`, `sync-customizations`, `validate-customization`, `write-technical-docs`
+- **Implementation**: Added missing skills to preferred list: `curating-copilot-instructions`, `current-test-coverage`, `sync-customizations`, `validate-customization`, `write-technical-docs`
 - **File**: [copilot-instructions.md](./../../.github/copilot-instructions.md)
 - **Status**: ✓ Resolved
 

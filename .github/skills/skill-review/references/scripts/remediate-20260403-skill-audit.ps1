@@ -5,7 +5,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-$reportRoot = Join-Path $RootPath '.docs/changes/skill-reviews'
+$reportRoot = Join-Path $RootPath '.docs/changes/skill/reviews'
 
 function Add-MissingSections {
     param(
@@ -42,8 +42,7 @@ function Add-MissingSections {
     }
 }
 
-$compactDate = $ReviewDate -replace '-', ''
-$reportPattern = "${compactDate}-review.md"
+$reportPattern = 'review.md'
 $reports = Get-ChildItem $reportRoot -Recurse -File -Filter $reportPattern
 
 foreach ($report in $reports) {

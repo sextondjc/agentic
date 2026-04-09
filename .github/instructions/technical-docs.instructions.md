@@ -1,7 +1,7 @@
 ---
 name: technical-docs
 description: 'Unified documentation, component, README, and specification generation standards.'
-applyTo: '.docs/reference/**/*.md,.docs/components/**/*.md,README.md,**/README.md'
+applyTo: '.docs/components/**/*.md,.docs/changes/**/*.md,.docs/plans/**/*.md,README.md,**/README.md'
 ---
 # Documentation & Specifications
 

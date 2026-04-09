@@ -61,7 +61,7 @@ Optional inputs:
 - Updated per-skill history using path: [README.md](./references/history/README.md).
 - Review result summaries MUST be returned in Markdown grid format (tables), not prose lists.
 - Aggregate multi-skill results MUST include at least one consolidated grid with per-skill outcomes.
-- Per-skill review files MUST be stored under .docs/changes/skill-reviews/<skill-name>/.
+- Per-skill review files MUST be stored under .docs/changes/skill/reviews/<skill-name>/.
 
 ## Assets
 
@@ -73,7 +73,7 @@ Optional inputs:
 - Use generate-baseline-skill-reviews.ps1 to run full baseline audits and history updates.
 - Use get-skill-metadata-audit.ps1 for quick frontmatter/trigger/reference checks.
 - Use generate-targeted-skill-reviews.ps1 for focused remediation reruns on selected skills.
-- Use refresh-history-index-and-grid.ps1 to rebuild history index and the date-scoped aggregate grid.
+- Use refresh-history-index-and-grid.ps1 to rebuild history index and the aggregate grid.
 - External copilot-skill mirrors used for evidence capture are stored at path: [README.md](./references/mirrors/README.md).
 
 ## Workflow
@@ -109,15 +109,15 @@ Optional inputs:
 
 ## Storage Rules
 
-- Store each skill review under .docs/changes/skill-reviews/<skill-name>/.
+- Store each skill review under .docs/changes/skill/reviews/<skill-name>/.
 - Use descriptive file names: `review.md`. Use versioned names (for example, `review-v2.md`) to disambiguate repeated runs.
-- Keep aggregate cross-skill summaries in .docs/changes/skill-reviews/.
+- Keep aggregate cross-skill summaries in .docs/changes/skill/reviews/.
 
 ## Conflict Workflow (Mandatory When Conflict Exists)
 
 When a conflict exists, this skill MUST:
 
-1. Document the conflict in a workspace document at .docs/changes/skill-conflicts/ using the conflict template.
+1. Document the conflict in a workspace document at .docs/changes/skill/conflicts/ using the conflict template.
 2. Provide recommendations to resolve the conflict.
 3. Collaborate with the human user to select and confirm the final resolution.
 

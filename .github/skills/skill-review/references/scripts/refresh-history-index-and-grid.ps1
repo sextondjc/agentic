@@ -6,8 +6,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $historyDir = Join-Path $RootPath '.github/skills/skill-review/references/history'
-$reportsRoot = Join-Path $RootPath '.docs/changes/skill-reviews'
-$compactDate = $ReviewDate -replace '-', ''
+$reportsRoot = Join-Path $RootPath '.docs/changes/skill/reviews'
 
 $historyFiles = Get-ChildItem $historyDir -File -Filter '*-history.md' | Sort-Object Name
 
@@ -45,7 +44,7 @@ $indexLines += $indexRows | ForEach-Object {
 
 Set-Content -Path (Join-Path $historyDir 'index.md') -Value ($indexLines -join "`n") -NoNewline
 
-$reportFiles = Get-ChildItem $reportsRoot -Recurse -File -Filter "$compactDate-review.md" | Sort-Object FullName
+$reportFiles = Get-ChildItem $reportsRoot -Recurse -File -Filter 'review.md' | Sort-Object FullName
 
 $reportRows = $reportFiles | ForEach-Object {
     $text = Get-Content $_.FullName -Raw
@@ -63,7 +62,7 @@ $reportRows = $reportFiles | ForEach-Object {
         MustFailures = $must
         ShouldAdvisories = $should
         ConflictStatus = $conflict
-        ReportPath = ".docs/changes/skill-reviews/$skill/$compactDate-review.md"
+        ReportPath = ".docs/changes/skill/reviews/$skill/review.md"
     }
 } | Sort-Object Skill
 
@@ -101,6 +100,6 @@ $gridLines += $reportRows | ForEach-Object {
     "| $($_.Skill) | $($_.Outcome) | $($_.MustFailures) | $($_.ShouldAdvisories) | $($_.ConflictStatus) | $($_.ReportPath) |"
 }
 
-Set-Content -Path (Join-Path $reportsRoot "$compactDate-full-skill-review-grid.md") -Value ($gridLines -join "`n") -NoNewline
+Set-Content -Path (Join-Path $reportsRoot 'full-skill-review-grid.md') -Value ($gridLines -join "`n") -NoNewline
 
 Write-Output 'Refreshed history metadata, history index, and aggregate full-skill review grid.'

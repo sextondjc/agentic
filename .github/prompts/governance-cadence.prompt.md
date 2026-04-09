@@ -30,10 +30,10 @@ Detect governance drift early: uncatalogued assets, stale instruction frontmatte
 2. Invoke the skill with execution flag `fresh-run required`.
 3. Run `audit-governance` first, `skill-review` second, and `validate-customization` third in the same invocation.
 4. Supply today's date as the audit date in `YYYY-MM-DD` format.
-5. Write the reconciled governance health report to `.docs/changes/governance-audits/comprehensive-workspace-health-audit.md`.
+5. Write the reconciled governance health report to `.docs/changes/governance/audits/comprehensive-workspace-health-audit.md`.
 6. Return results in chat as specified in the skill output format rules.
 7. Run `.github/scripts/powershell/test-governance-link-graph.ps1` and include its outcome as GOV-S6 evidence.
-8. Compare the new reconciled report with the latest prior report in `.docs/changes/governance-audits/` and summarize deltas.
+8. Compare the new reconciled report with the latest prior report in `.docs/changes/governance/audits/` and summarize deltas.
 
 ## Output Requirements
 
@@ -62,6 +62,7 @@ Return the following in chat, in this order:
 | GOV-S5 | Taxonomy currency | ... | ... | ... |
 | GOV-S6 | No orphaned docs | ... | ... | ... |
 | GOV-S7 | Hub file freshness | ... | ... | ... |
+| GOV-S8 | Governance artifact contract conformance | ... | ... | ... |
 | GOV-SK | Skill quality aggregate | ... | ... | ... |
 | GOV-CUS | Customization quality aggregate | ... | ... | ... |
 
@@ -88,6 +89,6 @@ Return the following in chat, in this order:
 
 Run on the first working day of each month.
 
-Compare output against the previous month's report stored in `.docs/changes/governance-audits/`.
+Compare output against the previous month's report stored in `.docs/changes/governance/audits/`.
 
 Treat this comparison as required unless no prior report exists.

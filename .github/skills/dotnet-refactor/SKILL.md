@@ -30,6 +30,20 @@ Apply focused cleanup and modernization passes that improve maintainability, saf
 - Reduce warnings and analyzer findings.
 - Replace legacy syntax with modern, readable C# where supported by the target framework.
 
+## Modernization Workflow
+
+1. Inventory the legacy construct or smell being targeted.
+2. Confirm the change is behavior-preserving unless the request explicitly says otherwise.
+3. Prefer automated or mechanical refactors in small batches.
+4. Re-run tests and compare warnings, analyzer output, or benchmark evidence as appropriate.
+5. Escalate to ADR or architecture review when the change stops being purely local modernization.
+
+## Evidence Gates
+
+- Do not introduce `ValueTask`, `Span<T>`, pooling, or similar performance-sensitive changes without measurement.
+- Keep before/after evidence when the change claims performance, warning reduction, or modernization benefit.
+- If a refactor touches public behavior, tests must prove the preserved contract.
+
 ## Trigger Conditions
 
 Invoke this skill when any of the following is true:

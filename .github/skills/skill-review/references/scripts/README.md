@@ -5,7 +5,7 @@ These scripts are reusable assets for the `skill-review` workflow.
 ## Scripts
 
 - generate-baseline-skill-reviews.ps1
-  - Purpose: Runs a baseline review across all workspace skills, generates per-skill reports in .docs/changes/skill-reviews/<skill-name>/review.md, and updates history files plus history index.
+  - Purpose: Runs a baseline review across all workspace skills, generates per-skill reports in .docs/changes/skill/reviews/<skill-name>/review.md, and updates history files plus history index.
   - Usage:
     - pwsh ./.github/skills/skill-review/references/scripts/generate-baseline-skill-reviews.ps1
     - pwsh ./.github/skills/skill-review/references/scripts/generate-baseline-skill-reviews.ps1 -RootPath c:/Projects/agentic -ReviewDate 2026-03-28
@@ -29,7 +29,7 @@ These scripts are reusable assets for the `skill-review` workflow.
     - pwsh ./.github/skills/skill-review/references/scripts/generate-targeted-skill-reviews.ps1 -ReviewDate 2026-03-29 -Skills curate-copilot,agent-authoring,instructions-authoring,route-customization,agent-customization
 
 - refresh-history-index-and-grid.ps1
-  - Purpose: Normalizes history metadata dates, rebuilds history index, and regenerates the date-scoped aggregate skill review grid.
+  - Purpose: Normalizes history metadata dates, rebuilds history index, and regenerates the aggregate skill review grid.
   - Usage:
     - pwsh ./.github/skills/skill-review/references/scripts/refresh-history-index-and-grid.ps1
     - pwsh ./.github/skills/skill-review/references/scripts/refresh-history-index-and-grid.ps1 -RootPath c:/Projects/agentic -ReviewDate 2026-03-29
@@ -49,5 +49,5 @@ These scripts are reusable assets for the `skill-review` workflow.
 ## Notes
 
 - These scripts are intended as review support assets (SKR-S1) and should be versioned with the skill.
-- Keep ad hoc run artifacts out of .docs/changes/skill-reviews; use only the versioned scripts in this folder for repeatable audits.
+- Keep ad hoc run artifacts out of .docs/changes/skill/reviews; use only the versioned scripts in this folder for repeatable audits.
 - Usage examples in this README should use the current workspace root and current skill names.

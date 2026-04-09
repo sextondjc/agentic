@@ -5,6 +5,8 @@ applyTo: '**/*.md'
 ---
 # Planning, Execution, Review Governance
 
+Keep this file policy-only. Use [SKILL.md](./../skills/route-customization/SKILL.md), [SKILL.md](./../skills/writing-plans/SKILL.md), [SKILL.md](./../skills/task-execution/SKILL.md), and [SKILL.md](./../skills/validate-customization/SKILL.md) for operational workflow detail.
+
 ## Lane Taxonomy
 
 - Use exactly three lifecycle lanes: `Planning`, `Execution`, `Review`.
@@ -59,17 +61,6 @@ applyTo: '**/*.md'
 - Execution scope changes must be recorded as explicit decisions before implementation divergence.
 - Execution outputs must satisfy all requested deliverables with explicit completion status and no omitted mandatory items.
 
-## Execution Route Matrix
-
-Route matrix policy authority is defined in this instruction. The `orchestrator` agent must operationalize these rules without redefining lane ownership semantics.
-
-| Situation | Preferred Skill | Lane Rationale |
-|---|---|---|
-| No approved implementation plan exists | `writing-plans` | Planning produces executable, traceable work items before execution starts |
-| Approved plan exists and execution stays in current session | `task-execution` | Execution lane favors same-session, task-level orchestration |
-| Approved plan exists and execution occurs in a separate or dedicated session | `executing-plans` | Execution lane favors explicit handoff and checkpointed progress |
-| Mixed request includes planning and implementation | `orchestrator` split into phases | Preserve lane boundaries and deterministic ownership |
-
 ## Review Output Requirements
 
 - Review outputs must evaluate artifacts against active instruction files and acceptance criteria.
@@ -84,5 +75,12 @@ Route matrix policy authority is defined in this instruction. The `orchestrator`
 - Prefer deterministic routing and explicit handoffs over ad-hoc mode switching.
 - Preserve high-throughput parallel work by keeping lane boundaries explicit and documented.
 - Treat this instruction as normative policy; treat agent routing tables as operational examples that must remain consistent with this file.
+
+## Routing Notes
+
+- Use [SKILL.md](./../skills/route-customization/SKILL.md) for lane and artifact-type routing decisions.
+- Use [SKILL.md](./../skills/writing-plans/SKILL.md) when planning output is missing.
+- Use [SKILL.md](./../skills/task-execution/SKILL.md) or [SKILL.md](./../skills/executing-plans/SKILL.md) for execution workflow.
+- Use [SKILL.md](./../skills/validate-customization/SKILL.md) for determinism and governance review checks.
 
 

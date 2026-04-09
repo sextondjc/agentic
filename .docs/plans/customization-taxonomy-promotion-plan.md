@@ -1,7 +1,7 @@
 <!-- markdownlint-disable-file -->
 # Customization Taxonomy Promotion Plan
 
-> **For agentic workers:** REQUIRED WORKFLOW: Use the `plan-researcher` agent for planning handoff, then use `orchestrator` to dispatch approved execution work to `task-execution` or `executing-plans` as appropriate. Use `customization-authoring` for taxonomy and governance asset edits, `write-technical-docs` for reference index promotion, and `audit-governance` for final validation. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED WORKFLOW: Use the `plan-researcher` agent for planning handoff, then use `orchestrator` to dispatch approved execution work to `task-execution` or `executing-plans` as appropriate. Use `instructions-authoring` for taxonomy and governance policy edits, `write-technical-docs` for reference index promotion, and `audit-governance` for final validation. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Promote the customization taxonomy from draft baseline to an approved conceptual governance reference without introducing catalog churn, routing ambiguity, or unclear source-of-truth precedence.
 
@@ -43,7 +43,7 @@
 | Workstream ID | Lane Owner | Agent/Skill/Prompt | Inputs | Outputs | Dependencies | Parallel Group |
 |---|---|---|---|---|---|---|
 | `WS-01` | Planning | `critical-thinking` + plan authoring | Current taxonomy draft, rename history, active catalogs | Resolved promotion boundary and explicit decisions | None | `P1` |
-| `WS-02` | Execution | `customization-authoring` | Approved decisions, taxonomy draft, current agent/instruction/prompt/skill catalogs, rename history | Updated taxonomy reference doc, progressive change log, and ADR | `WS-01` | `P2` |
+| `WS-02` | Execution | `instructions-authoring` | Approved decisions, taxonomy draft, current agent/instruction/prompt/skill catalogs, rename history | Updated taxonomy reference doc, progressive change log, and ADR | `WS-01` | `P2` |
 | `WS-03` | Execution | `write-technical-docs` | Updated taxonomy doc and ADR | Promoted links/index references for discoverability | `WS-02` | `P3` |
 | `WS-04` | Review | `audit-governance` | Updated docs, change log, catalogs, reference index | Governance validation report and approval-ready disposition | `WS-02`, `WS-03` | `P4` |
 

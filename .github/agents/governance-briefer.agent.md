@@ -24,7 +24,7 @@ Summarizes only; does not run full governance audits unless explicitly requested
 
 ## Output Contract
 
-- Write one briefing page to `.docs/changes/governance-audits/governance-one-pager.md`.
+- Write one briefing page to `.docs/changes/governance/audits/governance-one-pager.md`.
 - Use this grid-first order:
   1. `Disposition Snapshot`
   2. `Top Salient Findings`
