@@ -18,7 +18,10 @@ This folder contains reusable `.prompt.md` templates for repeatable governance a
 | `resume-execution` | `resume-execution.prompt.md` | Execution | Review | Resumes an active execution slice with traceability-first status and routing checks. |
 | `skill-audit` | `skill-audit.prompt.md` | Review | Planning | Audits workspace skills against quality standards. |
 | `instructions-audit` | `instructions-audit.prompt.md` | Review | Planning | Runs a deep, report-only audit of instruction files for duplication, conflicts, and boundary alignment with agents and skills. |
+| `agents-audit` | `agents-audit.prompt.md` | Review | Planning | Runs a deep, report-only audit of agent files against AGR standards with per-agent reports and aggregate grid. |
+| `prompts-audit` | `prompts-audit.prompt.md` | Review | Planning | Runs a deep, report-only audit of prompt files against PRR standards with per-prompt reports and aggregate grid. |
 | `governance-cadence` | `governance-cadence.prompt.md` | Review | Planning | Runs a monthly governance health check across all assets and catalogs and produces a ranked remediation report. |
+| `optimize-customizations` | `optimize-customizations.prompt.md` | Review | Execution | Runs an on-demand optimization-factor review for agents, instructions, skills, and prompts with ranked remediation output. |
 | `condense` | `condense.prompt.md` | Review | Execution | Invokes skills-authoring plus agent-authoring/instructions-authoring concision mode for one named artifact or a full artifact set and returns concise rewrite recommendations without applying edits. |
 | `librarian` | `librarian.prompt.md` | Execution | Review | Curates documentation corpus naming and structure with `.docs/` as default root and produces approval-gated recommendations. |
 | `security-research` | `security-research.prompt.md` | Review | Planning | Produces security assessment output without implementation. |

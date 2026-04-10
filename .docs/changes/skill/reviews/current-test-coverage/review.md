@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-08
+- Review Date: 2026-04-10
 - Reviewer Skill: skill-review
 - Target Skill: current-test-coverage
 - Target Path: .github/skills/current-test-coverage/SKILL.md
@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to .docs/changes/skill-reviews/current-test-coverage/20260408-review.md
+- Save this file to .docs/changes/skill/reviews/current-test-coverage/review.md
 
 ## Summary Outcome Grid
 
@@ -57,4 +57,4 @@
 
 | Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---|---|
-| current-test-coverage | Pass | 0 | 0 | None | .docs/changes/skill-reviews/current-test-coverage/20260408-review.md |
+| current-test-coverage | Pass | 0 | 0 | None | .docs/changes/skill/reviews/current-test-coverage/review.md |

@@ -66,58 +66,11 @@ Each agent is specialized for one narrowly bounded responsibility.
 | `sql-dba` | Live SQL Server administration, schema inspection, or operational DBA work. |
 | `workspace-scaffolder` | Scaffolding a new project's workspace configuration and copilot instructions. |
 
-## Preferred Skills
+## Skills Discovery
 
-Skills discovery index: [skill-discovery-index.md](./skills/skill-discovery-index.md)
+Use [skill-discovery-index.md](./skills/skill-discovery-index.md) as the single source of truth for the full skill inventory and lane mapping.
 
-- `task-research`
-- `prd-generator`
-- `critical-thinking`
-- `learn-topics`
-- `mobile-ui-prototyping`
-- `refine-ideas`
-- `build-maui-apps`
-- `perf-benchmark`
-- `api-design`
-- `domain-design`
-- `adr-generator`
-- `dotnet-refactor`
-- `dotnet-resilience`
-- `docker-dotnet`
-- `syrx-data-access`
-- `audit-powershell`
-- `audit-governance`
-- `governance-health-overview`
-- `summarize-governance`
-- `security-research`
-- `performance-research`
-- `delivery-status-grid`
-- `design-mobile-ux`
-- `sync-skills`
-- `skills-authoring`
-- `skill-review`
-- `route-customization`
-- `scaffold-dotnet`
-- `test-driven-development`
-- `usability-testing-scripts`
-- `writing-plans`
-- `executing-plans`
-- `task-execution`
-- `request-code-review`
-- `remediate-review`
-- `branch-completion`
-- `prune-doc-artifacts`
-- `powershell-script-library`
-- `curating-copilot-instructions`
-- `current-test-coverage`
-- `agent-authoring`
-- `instructions-authoring`
-- `sync-editorconfig`
-- `sync-customizations`
-- `validate-customization`
-- `write-technical-docs`
-- `librarian`
-- `index-docs`
+When requests route through `orchestrator`, discover and select relevant skills from the index instead of maintaining a duplicated skills list here.
 
 ## Imported Superpowers Assets
 

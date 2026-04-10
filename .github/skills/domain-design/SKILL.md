@@ -32,6 +32,19 @@ Use `architecture-designer` when the request needs a broader blueprint, ADR synt
 - Application-service boundary recommendations.
 - A concise pattern recommendation or anti-pattern warning when relevant.
 
+## Assets
+
+- Use [README.md](./references/README.md) for available reusable references.
+- Use [aggregate-boundary-checklist.md](./references/aggregate-boundary-checklist.md) during boundary evaluation.
+
+## Workflow
+
+1. Capture inputs and list domain nouns, use cases, and invariants.
+2. Run aggregate discovery and boundary checks using the checklist assets.
+3. Evaluate event strategy, repository ownership, and service boundaries.
+4. Evaluate ACL requirements for each external integration point.
+5. Return decisions and recommendations using the required outputs.
+
 ## Aggregate Discovery Workflow
 
 1. List the domain nouns and group them by invariants that must hold atomically.

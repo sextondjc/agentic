@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-08
+- Review Date: 2026-04-10
 - Reviewer Skill: skill-review
 - Target Skill: mobile-ui-prototyping
 - Target Path: .github/skills/mobile-ui-prototyping/SKILL.md
@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to .docs/changes/skill-reviews/mobile-ui-prototyping/20260408-review.md
+- Save this file to .docs/changes/skill/reviews/mobile-ui-prototyping/review.md
 
 ## Summary Outcome Grid
 
@@ -57,4 +57,4 @@
 
 | Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---|---|
-| mobile-ui-prototyping | Pass | 0 | 0 | None | .docs/changes/skill-reviews/mobile-ui-prototyping/20260408-review.md |
+| mobile-ui-prototyping | Pass | 0 | 0 | None | .docs/changes/skill/reviews/mobile-ui-prototyping/review.md |

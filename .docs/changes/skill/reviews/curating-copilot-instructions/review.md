@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-08
+- Review Date: 2026-04-10
 - Reviewer Skill: skill-review
 - Target Skill: curating-copilot-instructions
 - Target Path: .github/skills/curating-copilot-instructions/SKILL.md
@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to .docs/changes/skill-reviews/curating-copilot-instructions/20260408-review.md
+- Save this file to .docs/changes/skill/reviews/curating-copilot-instructions/review.md
 
 ## Summary Outcome Grid
 
@@ -25,15 +25,12 @@
 
 | Standard ID | Result | Evidence | Notes |
 |---|---|---|---|
-| SKR-M1 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | Skill objective is scoped to a single review/use-case domain in static analysis. |
-| SKR-M2 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | Front matter includes required name and description fields. |
-| SKR-M3 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | Frontmatter name 'curating-copilot-instructions' matches expected skill name 'curating-copilot-instructions'. |
-| SKR-S1 | Pass | .github/skills/curating-copilot-instructions/references/ | Concrete references or reusable assets are present. |
-| SKR-S2 | Pass | .github/skills/*/SKILL.md | No harmful overlap or contradictory behavior detected in static cross-skill review. |
-| SKR-S3 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | No placeholder or unresolved markdown links detected across skill markdown files. |
-| SKR-S4 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | Skill is self-contained with explicit execution context for inputs, outputs, and process using canonical sections or equivalent labels. |
-| SKR-S5 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | Skill wording is within the conservative brevity baseline (651 words) and shows no automatic verbosity concern. |
+| SKR-M1 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | Single objective remains clearly scoped. |
+| SKR-M2 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | Front matter is valid for discovery. |
+| SKR-M3 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | Trigger guidance is explicit. |
+| SKR-S1 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | Concrete references/assets are present. |
+| SKR-S2 | Pass | .github/skills/*/SKILL.md | No harmful overlap or contradictory behavior detected. |
+| SKR-S3 | Pass | .github/skills/curating-copilot-instructions/SKILL.md | No broken or placeholder markdown links detected. |
 
 ## Recommendations
 
@@ -46,15 +43,15 @@
 - History File Loaded: yes
 - Deny-list Entries Applied: 0
 - Suppressed Repeat Recommendations: 0
-- Notes: Deny-list derived from prior Rejected, Removed, and Illegitimate history statuses.
+- Notes: Remediation rerun after adding assets/mirror.
 
 ## Next Actions
 
-1. Address open recommendations and rerun full-skill audit.
-2. Refresh history index and aggregate grid after remediation.
+1. Keep references assets and mirror content in sync with source changes.
+2. Re-run full-skill review grid build after any skill update.
 
 ## Aggregate Results Grid (Use for multi-skill reviews)
 
 | Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---|---|
-| curating-copilot-instructions | Pass | 0 | 0 | None | .docs/changes/skill-reviews/curating-copilot-instructions/20260408-review.md |
+| curating-copilot-instructions | Pass | 0 | 0 | None | .docs/changes/skill/reviews/curating-copilot-instructions/review.md |

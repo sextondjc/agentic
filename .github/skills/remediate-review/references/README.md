@@ -2,11 +2,8 @@
 
 This folder contains concrete assets used by this skill.
 
-## Intended Assets
+## Assets
 
-- Templates
-- Checklists
-- Examples
-- Supporting scripts
+- [review-response-examples.md](./review-response-examples.md)
 
 Add artifacts here as this skill evolves.

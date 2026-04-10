@@ -9,7 +9,6 @@
 | [adr/](./adr/INDEX.md) | Subfolder index. |
 | [changes/](./changes/INDEX.md) | Subfolder index. |
 | [plans/](./plans/INDEX.md) | Subfolder index. |
-| [reference/](./reference/INDEX.md) | Subfolder index. |
 | [research/](./research/INDEX.md) | Subfolder index. |
 
 ## Documents

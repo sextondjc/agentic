@@ -21,6 +21,7 @@ This catalog assigns each instruction file to a primary lifecycle lane.
 | `testing-strategy.instructions.md` | Execution | Review | Governs test implementation and validation patterns. |
 | `validation-and-guards.instructions.md` | Execution | Review | Governs boundary validation in produced code. |
 | `security-and-secure-coding.instructions.md` | Execution | Review | Governs secure implementation defaults and review expectations. |
+| `request-economy.instructions.md` | Execution | Planning | Governs premium-request and context-window budgeting with deterministic escalation rules. |
 | `lifecycle-governance.instructions.md` | Planning | Review | Governs lane classification, handoffs, and lifecycle traceability. |
 
 ## Governance Notes

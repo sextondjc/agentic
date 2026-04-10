@@ -74,5 +74,14 @@ function Compare-Catalog {
 $actual = @(Get-ActualAssets -Type $AssetType | Where-Object { $_ -and $_.Trim().Length -gt 0 } | Sort-Object -Unique)
 $catalog = @(Get-CatalogAssets -Type $AssetType | Where-Object { $_ -and $_.Trim().Length -gt 0 } | Sort-Object -Unique)
 
-Compare-Catalog -Actual $actual -Catalog $catalog
+$result = Compare-Catalog -Actual $actual -Catalog $catalog
+
+if ($result.MissingInCatalog.Count -gt 0 -or $result.StaleInCatalog.Count -gt 0) {
+  Write-Error "Catalog integrity failed for '$AssetType': $($result.MissingInCatalog.Count) missing, $($result.StaleInCatalog.Count) stale."
+  $result
+  exit 1
+}
+
+Write-Output "Catalog integrity passed for '$AssetType': all entries match on-disk assets."
+$result
 

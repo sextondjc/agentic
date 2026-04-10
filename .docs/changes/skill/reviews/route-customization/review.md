@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-08
+- Review Date: 2026-04-10
 - Reviewer Skill: skill-review
 - Target Skill: route-customization
 - Target Path: .github/skills/route-customization/SKILL.md
@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to .docs/changes/skill-reviews/route-customization/20260408-review.md
+- Save this file to .docs/changes/skill/reviews/route-customization/review.md
 
 ## Summary Outcome Grid
 
@@ -57,4 +57,4 @@
 
 | Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---|---|
-| route-customization | Pass | 0 | 0 | None | .docs/changes/skill-reviews/route-customization/20260408-review.md |
+| route-customization | Pass | 0 | 0 | None | .docs/changes/skill/reviews/route-customization/review.md |

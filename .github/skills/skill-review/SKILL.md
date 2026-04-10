@@ -63,6 +63,14 @@ Optional inputs:
 - Aggregate multi-skill results MUST include at least one consolidated grid with per-skill outcomes.
 - Per-skill review files MUST be stored under .docs/changes/skill/reviews/<skill-name>/.
 
+#### Violation Code Legend
+
+| Code Prefix | Standard | Type | Skill Source |
+|---|---|---|---|
+| SKR-M* | Mandatory skill quality check | MUST | skill-review |
+| SKR-S* | Advisory skill quality check | SHOULD | skill-review |
+| GOV-SK | Skill quality aggregate | Aggregate | governance-health-overview |
+
 ## Assets
 
 - Script assets are available at path: [README.md](./references/scripts/README.md).
@@ -132,19 +140,6 @@ Do not auto-resolve without explicit user direction.
 - Before publishing recommendations, remove any item that matches prior Rejected or Removed entries unless the user explicitly re-opens it.
 
 ## Decision Gates
-
-- Gate 1 (MUST gate): Any SKR-M failure sets overall outcome to Fail.
-- Gate 2 (SHOULD gate): SHOULD failures set outcome to Pass With Advisories if all MUST checks pass.
-- Gate 3 (Conflict gate): Any unresolved conflict sets outcome to Blocked until user-confirmed resolution.
-
-## Review Cadence
-
-Recommended cadence:
-
-- On skill creation.
-- On skill update.
-- Monthly for active skill libraries.
-- Immediately after discovery or invocation failures.
 
 ## Done Criteria
 

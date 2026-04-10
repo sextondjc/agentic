@@ -19,7 +19,7 @@
 | Plan ID | `PLAN-20260402-001` |
 | Status | `Completed` |
 | Owner Lane | `Planning` |
-| Origin | Promotion of [customization-taxonomy-v1.md](./../reference/customization-taxonomy-v1.md) from draft to approved reference |
+| Origin | Promotion of [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md) from draft to approved reference |
 | Primary Decision | `DEC-01` |
 | Recommended Execution Route | `orchestrator` split into Execution then Review |
 
@@ -61,8 +61,8 @@
 | Workstream ID | Current State | Next Action | Blockers | Resume Command/Prompt | Artifact Links |
 |---|---|---|---|---|---|
 | `WS-01` | Planned | Obtain user approval on promotion boundary and execution route | Awaiting approval | Continue from this plan | [customization-taxonomy-promotion-plan.md](./customization-taxonomy-promotion-plan.md) |
-| `WS-02` | Not started | Update taxonomy content, create ADR, and maintain progressive change log after approval | `DEC-01` approval required | Use `task-execution` if approved in-session; else `executing-plans` | [customization-taxonomy-v1.md](./../reference/customization-taxonomy-v1.md), [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md) |
-| `WS-03` | Not started | Add discoverability links after taxonomy content is final | `WS-02` not complete | Use `write-technical-docs` workflow | [index.md](./../reference/index.md), [README.md](./../adr/README.md) |
+| `WS-02` | Not started | Update taxonomy content, create ADR, and maintain progressive change log after approval | `DEC-01` approval required | Use `task-execution` if approved in-session; else `executing-plans` | [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md), [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md) |
+| `WS-03` | Not started | Add discoverability links after taxonomy content is final | `WS-02` not complete | Use `write-technical-docs` workflow | `reference/index.md` (removed in prune pass), [README.md](./../adr/README.md) |
 | `WS-04` | Not started | Run governance audit and capture findings | `WS-02` and `WS-03` not complete | Use `audit-governance` skill (`governance-cadence` may be used only as a convenience prompt wrapper) | `.docs/changes/governance/audits/` |
 
 ## Critical Evaluation Grid
@@ -100,12 +100,12 @@
 
 | File | Action | Responsibility |
 |---|---|---|
-| [customization-taxonomy-v1.md](./../reference/customization-taxonomy-v1.md) | Modify | Normalize asset inventory, resolve family semantics, update status from draft to approved baseline, and remove stale statements. |
+| [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md) | Modify | Normalize asset inventory, resolve family semantics, update status from draft to approved baseline, and remove stale statements. |
 | [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md) | Create | Progressive execution log linking changes back to `PLAN-20260402-001`, affected workstreams, and any deviations. |
 | [README.md](./../adr/README.md) | Modify | Add the new ADR to the local ADR index. |
 | [customization-taxonomy-promotion-boundary.md](./../adr/customization-taxonomy-promotion-boundary.md) | Create | Record why v1 promotion is documentation-first and why catalog schema changes remain deferred. |
-| [index.md](./../reference/index.md) | Modify | Add an explicit link to the taxonomy reference if missing and keep the reference set discoverable. |
-| [planning-execution-review-governance.md](./../reference/planning-execution-review-governance.md) | Modify only if needed | Add a brief cross-reference to the promoted taxonomy only if a discoverability gap remains after index updates. |
+| `reference/index.md` (removed in prune pass) | Modify | Add an explicit link to the taxonomy reference if missing and keep the reference set discoverable. |
+| [planning-execution-review-governance.md](./../../.github/skills/audit-governance/references/planning-execution-review-governance.md) | Modify only if needed | Add a brief cross-reference to the promoted taxonomy only if a discoverability gap remains after index updates. |
 | `.docs/changes/governance/audits/governance-audit.md` | Create during execution | Capture post-change governance validation. |
 
 ## Approval Criteria
@@ -128,7 +128,7 @@
 
 **Files:**
 - Modify: [customization-taxonomy-promotion-plan.md](./customization-taxonomy-promotion-plan.md)
-- Review: [customization-taxonomy-v1.md](./../reference/customization-taxonomy-v1.md)
+- Review: [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md)
 - Review: [agent-lifecycle-catalog.md](./../../.github/agents/agent-lifecycle-catalog.md)
 - Review: [instruction-lifecycle-catalog.md](./../../.github/instructions/instruction-lifecycle-catalog.md)
 - Review: [prompt-lifecycle-catalog.md](./../../.github/prompts/prompt-lifecycle-catalog.md)
@@ -145,7 +145,7 @@
 ### Task 2: Normalize and Promote the Taxonomy Document
 
 **Files:**
-- Modify: [customization-taxonomy-v1.md](./../reference/customization-taxonomy-v1.md)
+- Modify: [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md)
 - Create: [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md)
 - Review: [rename-history.md](./../changes/customization/renames/rename-history.md)
 - Review: [agent-lifecycle-catalog.md](./../../.github/agents/agent-lifecycle-catalog.md)
@@ -177,8 +177,8 @@
 ### Task 4: Promote Discoverability
 
 **Files:**
-- Modify: [index.md](./../reference/index.md)
-- Modify only if needed: [planning-execution-review-governance.md](./../reference/planning-execution-review-governance.md)
+- Modify: `reference/index.md` (removed in prune pass)
+- Modify only if needed: [planning-execution-review-governance.md](./../../.github/skills/audit-governance/references/planning-execution-review-governance.md)
 
 - [ ] Add a direct reference-index link to the promoted taxonomy document.
 - [ ] Ensure the ADR is discoverable from [README.md](./../adr/README.md).

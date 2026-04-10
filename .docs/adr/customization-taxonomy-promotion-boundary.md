@@ -8,11 +8,11 @@
 
 ## Context
 
-The workspace had a taxonomy reference in draft state ([customization-taxonomy-v1.md](./../reference/customization-taxonomy-v1.md)) with stale renamed agent names and missing newer governance assets.
+The workspace had a taxonomy reference in draft state ([customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md)) with stale renamed agent names and missing newer governance assets.
 
 At the same time, operational governance already had clear routing authority through lifecycle governance guidance and lane catalogs:
 
-- [planning-execution-review-governance.md](./../reference/planning-execution-review-governance.md)
+- [planning-execution-review-governance.md](./../../.github/skills/audit-governance/references/planning-execution-review-governance.md)
 - [agent-lifecycle-catalog.md](./../../.github/agents/agent-lifecycle-catalog.md)
 - [instruction-lifecycle-catalog.md](./../../.github/instructions/instruction-lifecycle-catalog.md)
 - [prompt-lifecycle-catalog.md](./../../.github/prompts/prompt-lifecycle-catalog.md)

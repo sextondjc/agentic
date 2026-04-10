@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-08
+- Review Date: 2026-04-10
 - Reviewer Skill: skill-review
 - Target Skill: write-technical-docs
 - Target Path: .github/skills/write-technical-docs/SKILL.md
@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to .docs/changes/skill-reviews/write-technical-docs/20260408-review.md
+- Save this file to .docs/changes/skill/reviews/write-technical-docs/review.md
 
 ## Summary Outcome Grid
 
@@ -33,7 +33,7 @@
 | SKR-S2 | Pass | .github/skills/*/SKILL.md | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | .github/skills/write-technical-docs/SKILL.md | No placeholder or unresolved markdown links detected across skill markdown files. |
 | SKR-S4 | Pass | .github/skills/write-technical-docs/SKILL.md | Skill is self-contained with explicit execution context for inputs, outputs, and process using canonical sections or equivalent labels. |
-| SKR-S5 | Pass | .github/skills/write-technical-docs/SKILL.md | Skill wording is within the conservative brevity baseline (908 words) and shows no automatic verbosity concern. |
+| SKR-S5 | Pass | .github/skills/write-technical-docs/SKILL.md | Skill wording is within the conservative brevity baseline (981 words) and shows no automatic verbosity concern. |
 
 ## Recommendations
 
@@ -57,4 +57,4 @@
 
 | Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---|---|
-| write-technical-docs | Pass | 0 | 0 | None | .docs/changes/skill-reviews/write-technical-docs/20260408-review.md |
+| write-technical-docs | Pass | 0 | 0 | None | .docs/changes/skill/reviews/write-technical-docs/review.md |

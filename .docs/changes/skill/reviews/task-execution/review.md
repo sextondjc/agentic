@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-08
+- Review Date: 2026-04-10
 - Reviewer Skill: skill-review
 - Target Skill: task-execution
 - Target Path: .github/skills/task-execution/SKILL.md
@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to .docs/changes/skill-reviews/task-execution/20260408-review.md
+- Save this file to .docs/changes/skill/reviews/task-execution/review.md
 
 ## Summary Outcome Grid
 
@@ -57,4 +57,4 @@
 
 | Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---|---|
-| task-execution | Pass | 0 | 0 | None | .docs/changes/skill-reviews/task-execution/20260408-review.md |
+| task-execution | Pass | 0 | 0 | None | .docs/changes/skill/reviews/task-execution/review.md |

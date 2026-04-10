@@ -17,7 +17,7 @@ Provide a stable, post-execution checklist for the P1 rename batch and point mai
 ## Canonical References
 
 - [rename-history.md](./rename-history.md)
-- [customization-taxonomy-v1.md](./../../../reference/customization-taxonomy-v1.md)
+- [customization-taxonomy-v1.md](./../../../../.github/skills/audit-governance/references/customization-taxonomy-v1.md)
 - [full-skill-review-grid.md](./../../skill/reviews/full-skill-review-grid.md)
 - [audit.md](./../../customization/reviews/audit.md)
 - [copilot-instructions.md](./../../../../.github/copilot-instructions.md)

@@ -49,7 +49,7 @@ foreach ($dir in $allDirs) {
             $full    = $f.FullName.Replace('\','/').ToLowerInvariant()
             $cat     = if($full-match'/plans/'){'plan'}elseif($full-match'/research/'){'research'}elseif($full-match'/reference/'){'reference'}elseif($full-match'/changes/'){'change'}elseif($full-match'/adr/'){'adr'}elseif($full-match'/specs/'){'spec'}else{'other'}
             $paras   = ($raw -split "`r?`n`r?`n") | Where-Object { $_ -and ($_ -notmatch '^\s*#') }
-            $summary = if ($paras) { $s=($paras[0]-replace'\s+',' ').Trim(); if($s.Length-gt120){$s.Substring(0,120)+'...'}else{$s} } else { '' }
+            $summary = if ($paras) { $s=($paras[0]-replace'\s+',' ').Trim(); if($s.Length-gt120){$s=$s.Substring(0,120);$s=($s-replace'\[[^\]]*\]\([^\)]*$','').TrimEnd()+'...'};$s } else { '' }
             $lines  += "| [$($f.Name)](./$($f.Name)) | $title | $cat | $($summary.Replace('|','/')) |"
             $docsIndexed++
         }

@@ -2,7 +2,7 @@
 
 | Metric | Value |
 |---|---|
-| Review Date | 2026-04-08 |
+| Review Date | 2026-04-10 |
 | Scope | full workspace |
 | Execution Mode | fresh-run required |
 
@@ -10,9 +10,9 @@
 
 | Metric | Value |
 |---|---|
-| Artifacts Reviewed | 31 |
+| Artifacts Reviewed | 32 |
 | Agent Files | 15 |
-| Instruction Files | 16 |
+| Instruction Files | 17 |
 | MUST Failures | 0 |
 | SHOULD Advisories | 0 |
 | Open Conflicts | 0 |
@@ -30,9 +30,9 @@
 
 | Conflict File | Status | Notes |
 |---|---|---|
-| [CON-CUSTOM-20260403-001.md](./conflicts/CON-CUSTOM-20260403-001.md) | Resolved | Architecture agent naming conflict resolved; marked resolved in file |
-| [CON-CUSTOM-20260403-002.md](./conflicts/CON-CUSTOM-20260403-002.md) | Resolved | Defect debugger naming conflict resolved; marked resolved in file |
-| [CON-CUSTOM-20260403-003.md](./conflicts/CON-CUSTOM-20260403-003.md) | Resolved | Benchmark skill reference conflict resolved; marked resolved in file |
+| [con-custom-20260403-001.md](./conflicts/con-custom-20260403-001.md) | Resolved | Architecture agent naming conflict resolved; marked resolved in file |
+| [con-custom-20260403-002.md](./conflicts/con-custom-20260403-002.md) | Resolved | Defect debugger naming conflict resolved; marked resolved in file |
+| [con-custom-20260403-003.md](./conflicts/con-custom-20260403-003.md) | Resolved | Benchmark skill reference conflict resolved; marked resolved in file |
 
 ## Disposition
 

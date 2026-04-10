@@ -31,10 +31,30 @@ Invoke this skill when any of the following is true:
 
 - Reconciled report at `.docs/changes/governance/audits/comprehensive-workspace-health-audit.md`.
 - Coverage Grid.
-- Standards Health Grid including GOV-M*, GOV-S*, plus aggregated GOV-SK and GOV-CUS outcomes.
+- Standards Health Grid including GOV-M*, GOV-S*, plus aggregated GOV-SK, GOV-CUS, and GOV-OPT outcomes.
 - Aggregate Metrics Grid.
 - Ranked Recommendations Grid.
 - Explicit final disposition (`PASSED` or `FAILED`) based on MUST failures and open conflicts.
+
+#### Violation Code Legend
+
+| Code Prefix | Standard | Type | Skill Source |
+|---|---|---|---|
+| GOV-M* | Mandatory governance check | MUST | audit-governance |
+| GOV-S* | Advisory governance check | SHOULD | audit-governance |
+| GOV-SK | Skill quality aggregate | Aggregate | skill-review |
+| GOV-CUS | Customization quality aggregate | Aggregate | validate-customization |
+| GOV-OPT | Optimization factor coverage | Aggregate | optimize-customizations |
+| SKR-M* | Mandatory skill quality check | MUST | skill-review |
+| SKR-S* | Advisory skill quality check | SHOULD | skill-review |
+| INR-M* | Mandatory instruction quality check | MUST | validate-customization |
+| INR-S* | Advisory instruction quality check | SHOULD | validate-customization |
+| AGR-M* | Mandatory agent quality check | MUST | validate-customization |
+| AGR-S* | Advisory agent quality check | SHOULD | validate-customization |
+| PRR-M* | Mandatory prompt quality check | MUST | validate-customization |
+| PRR-S* | Advisory prompt quality check | SHOULD | validate-customization |
+| OPR-M* | Mandatory optimization quality check | MUST | optimize-customizations |
+| OPR-S* | Advisory optimization quality check | SHOULD | optimize-customizations |
 
 ## Workflow
 
@@ -42,10 +62,11 @@ Invoke this skill when any of the following is true:
 1. Run `audit-governance` first and produce a fresh core governance artifact under `.docs/changes/governance/audits/` for the audit date.
 2. Run `skill-review` second and produce a fresh aggregate skill review artifact under `.docs/changes/skill/reviews/` for the audit date.
 3. Run `validate-customization` third and produce a fresh aggregate customization review artifact under `.docs/changes/customization/reviews/` for the audit date.
-4. Verify all three artifacts are generated in the current invocation and capture their paths in the report metadata.
-5. Reconcile the three fresh sources into one coherent set of metrics.
-6. If any MUST failures or open conflicts exist in any source, set disposition to `FAILED`.
-7. Produce ranked remediation recommendations mapped to evidence artifacts.
+4. Run `optimize-customizations` fourth and produce a fresh optimization-factor artifact under `.docs/changes/customization/reviews/` for the audit date.
+5. Verify all four artifacts are generated in the current invocation and capture their paths in the report metadata.
+6. Reconcile the four fresh sources into one coherent set of metrics.
+7. If any MUST failures or open conflicts exist in any source, set disposition to `FAILED`.
+8. Produce ranked remediation recommendations mapped to evidence artifacts.
 
 ## Freshness Policy
 
@@ -66,19 +87,34 @@ Invoke this skill when any of the following is true:
 - Open conflict artifacts from customization review force overall `FAILED` until resolved.
 - If source artifacts disagree, cite each artifact and prefer latest-dated output.
 
+### Partial-Run Decision Table
+
+| Sub-Skills Completed | Disposition | Action Required |
+|---|---|---|
+| 4 of 4 | Normal PASSED or FAILED based on MUST/conflict rules | None |
+| 3 of 4 | PROVISIONAL-FAILED | Report which sub-skill failed; cite its blocker; do not aggregate from missing output |
+| 2 of 4 | PROVISIONAL-FAILED | Same as above; escalate if core governance (audit-governance) is the missing sub-skill |
+| 1 of 4 | PROVISIONAL-FAILED | Triage environment issue before retry |
+| 0 of 4 | Not reported | Abort run; report tool failure to user before producing any output |
+
+- A PROVISIONAL-FAILED disposition does not imply quality failure; it signals incomplete evidence.
+- Retry with `fresh-run required` after resolving the blocker before promoting to a final disposition.
+- If `audit-governance` fails, the overall run always emits PROVISIONAL-FAILED regardless of other sub-skill outcomes.
+
 ## Companion Skills
 
 - `audit-governance`
 - `skill-review`
 - `validate-customization`
+- `optimize-customizations`
 - `sync-customizations`
 - `sync-skills`
 
 ## Done Criteria
 
-- Core, skill, and customization governance routines were executed in this invocation.
-- Report metadata records the three freshly generated source artifact paths.
-- Report includes reconciled metrics from all three source skills.
+- Core, skill, customization, and optimization governance routines were executed in this invocation.
+- Report metadata records the four freshly generated source artifact paths.
+- Report includes reconciled metrics from all four source skills.
 - All source paths are cited in evidence rows.
 - Final disposition matches MUST/conflict decision rules.
 

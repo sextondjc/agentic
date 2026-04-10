@@ -1,13 +1,13 @@
 ---
 name: validate-customization
-description: Use when evaluating .instructions.md or .agent.md files against quality standards, detecting conflicts between customizations, and producing remediation recommendations.
+description: Use when evaluating .instructions.md, .agent.md, or .prompt.md files against quality standards, detecting conflicts between customizations, and producing remediation recommendations.
 ---
 
 # Customization Review
 
 ## Specialization
 
-Evaluate `.instructions.md` and `.agent.md` files against defined quality standards and produce review outcomes that determine whether an artifact passes, requires update, or enters conflict resolution.
+Evaluate `.instructions.md`, `.agent.md`, and `.prompt.md` files against defined quality standards and produce review outcomes that determine whether an artifact passes, requires update, or enters conflict resolution.
 
 This skill has one purpose: customization quality review and follow-up governance.
 
@@ -48,6 +48,17 @@ This skill has one purpose: customization quality review and follow-up governanc
 | AGR-S2 | No conflict with other agents | SHOULD NOT conflict | No role overlap or contradictory routing boundaries with other agent files. | Start conflict workflow; document resolution plan. |
 | AGR-S3 | Brevity | SHOULD | Agent wording is economical, avoids duplication, and does not include narrative padding beyond what role clarity requires. | Record advisory finding; recommend concise reductions through `agent-authoring`. |
 
+## Review Standards — Prompt Files
+
+| ID | Standard | Type | Pass Criteria | Failure Action |
+|---|---|---|---|---|
+| PRR-M1 | Singular purpose | MUST | Prompt targets one repeatable workflow task only. | Mark failed; recommend purpose split. |
+| PRR-M2 | Valid frontmatter | MUST | `name` and `description` present; valid YAML. | Mark failed; provide exact frontmatter fix. |
+| PRR-M3 | Output format declared | MUST | Required output structure is explicitly defined in the prompt body. | Mark failed; recommend adding output requirements section. |
+| PRR-M4 | Skill routing present | MUST | Prompt explicitly routes to a named skill via `Load and follow [SKILL.md]` or equivalent. | Mark failed; recommend adding a skill routing directive. |
+| PRR-S1 | No conflict with other prompts | SHOULD NOT conflict | No harmful overlap or duplicate trigger conditions with other active prompts. | Start conflict workflow; document resolution plan. |
+| PRR-S2 | Brevity | SHOULD | Wording is economical; no narrative padding beyond routing and output clarity. | Record advisory finding; recommend concise reductions. |
+
 ---
 
 ## Trigger Conditions
@@ -55,9 +66,12 @@ This skill has one purpose: customization quality review and follow-up governanc
 Invoke this skill when any of the following is true:
 
 - A new `.instructions.md` or `.agent.md` is created.
-- An existing instructions or agent file is modified.
+- A new `.prompt.md` file is created.
+- An existing instructions, agent, or prompt file is modified.
 - A periodic quality audit of customizations is requested.
+- A periodic quality audit of prompts is requested.
 - An instruction or agent fails discovery, invocation, or behavior expectations.
+- A prompt fails discovery, invocation, or behavior expectations.
 - Two customization artifacts appear to overlap or contradict each other.
 - A deep review of `*.instructions.md` files is requested for duplicates, contradictions, or boundary conflicts with agents and skills.
 
@@ -80,11 +94,23 @@ Optional:
 - Review reports MUST be stored at `.docs/changes/customization/reviews/audit.md`.
 - Review history MUST be appended to `.docs/changes/customization/reviews/audit-history.md` as one row per reviewed artifact.
 
+#### Violation Code Legend
+
+| Code Prefix | Standard | Type | Skill Source |
+|---|---|---|---|
+| INR-M* | Mandatory instruction quality check | MUST | validate-customization |
+| INR-S* | Advisory instruction quality check | SHOULD | validate-customization |
+| AGR-M* | Mandatory agent quality check | MUST | validate-customization |
+| AGR-S* | Advisory agent quality check | SHOULD | validate-customization |
+| PRR-M* | Mandatory prompt quality check | MUST | validate-customization |
+| PRR-S* | Advisory prompt quality check | SHOULD | validate-customization |
+| GOV-CUS | Customization quality aggregate | Aggregate | governance-health-overview |
+
 ## Workflow
 
 1. Resolve target artifact(s) and read current file content.
-2. Determine artifact type: instruction file or agent file.
-3. Apply the applicable INR-M* / INR-S* or AGR-M* / AGR-S* standards with evidence.
+2. Determine artifact type: instruction file, agent file, or prompt file.
+3. Apply the applicable INR-M* / INR-S*, AGR-M* / AGR-S*, or PRR-M* / PRR-S* standards with evidence.
 4. Evaluate each standard against the file content; record pass, fail, or advisory outcome.
 5. Validate brevity explicitly: wording should be economical, without obvious duplication or narrative padding.
 6. For instruction-focused audits, perform cross-artifact checks:

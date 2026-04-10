@@ -5,52 +5,15 @@ description: Use when implementation is complete, all tests pass, and you need t
 
 # Finishing a Development Branch
 
-## Overview
+## Core Principle
 
-Guide completion of development work by presenting clear options and handling chosen workflow.
+Verify tests, present structured options, execute exactly one path, then apply cleanup rules.
 
-**Core principle:** Verify tests → Present options → Execute choice → Clean up.
+## Required Prompt to User
 
-**Announce at start:** "I'm using the branch-completion skill to complete this work."
+Present exactly these options:
 
-## The Process
-
-### Step 1: Verify Tests
-
-**Before presenting options, verify tests pass:**
-
-```bash
-# Run project's test suite
-dotnet test
-```
-
-**If tests fail:**
-```
-Tests failing (<N> failures). Must fix before completing:
-
-[Show failures]
-
-Cannot proceed with merge/PR until tests pass.
-```
-
-Stop. Don't proceed to Step 2.
-
-**If tests pass:** Continue to Step 2.
-
-### Step 2: Determine Base Branch
-
-```bash
-# Try common base branches
-git merge-base HEAD main 2>/dev/null || git merge-base HEAD master 2>/dev/null
-```
-
-Or ask: "This branch split from main - is that correct?"
-
-### Step 3: Present Options
-
-Present exactly these 4 options:
-
-```
+```text
 Implementation complete. What would you like to do?
 
 1. Merge back to <base-branch> locally
@@ -61,163 +24,64 @@ Implementation complete. What would you like to do?
 Which option?
 ```
 
-**Don't add explanation** - keep options concise.
+## Preconditions
 
-### Step 4: Execute Choice
+- Run project test command before offering options.
+- If tests fail, stop and report failures.
+- Determine base branch using merge-base or explicit user confirmation.
 
-#### Option 1: Merge Locally
+## Outcome Matrix
 
-```bash
-# Switch to base branch
-git checkout <base-branch>
+| Option | Primary Action | Must Re-Test | Branch Cleanup | Worktree Cleanup |
+|---|---|---|---|---|
+| 1 | Merge into base locally | Yes | Delete feature branch after pass | Yes |
+| 2 | Push branch and open PR | No | Keep branch | Yes |
+| 3 | Keep branch unchanged | No | Keep branch | No |
+| 4 | Discard branch | No | Force-delete branch after explicit confirmation | Yes |
 
-# Pull latest
-git pull
+## Command Matrix
 
-# Merge feature branch
-git merge <feature-branch>
+| Option | Command Sequence |
+|---|---|
+| 1 | git checkout <base>; git pull; git merge <feature>; <test-command>; git branch -d <feature> |
+| 2 | git push -u origin <feature>; gh pr create --title "<title>" --body "<summary-and-test-plan>" |
+| 3 | No git mutation commands; report branch and worktree retained |
+| 4 | Confirm typed discard; git checkout <base>; git branch -D <feature> |
 
-# Verify tests on merged result
-<test command>
+## Confirmation Rule for Option 4
 
-# If tests pass
-git branch -d <feature-branch>
+Before deletion, require an explicit typed confirmation token:
+
+```text
+Type 'discard' to confirm permanent deletion.
 ```
 
-Then: Cleanup worktree (Step 5)
+## Safety Rules
 
-#### Option 2: Push and Create PR
-
-```bash
-# Push branch
-git push -u origin <feature-branch>
-
-# Create PR
-gh pr create --title "<title>" --body "$(cat <<'EOF'
-## Summary
-<2-3 bullets of what changed>
-
-## Test Plan
-- [ ] <verification steps>
-EOF
-)"
-```
-
-Then: Cleanup worktree (Step 5)
-
-#### Option 3: Keep As-Is
-
-Report: "Keeping branch <name>. Worktree preserved at <path>."
-
-**Don't cleanup worktree.**
-
-#### Option 4: Discard
-
-**Confirm first:**
-```
-This will permanently delete:
-- Branch <name>
-- All commits: <commit-list>
-- Worktree at <path>
-
-Type 'discard' to confirm.
-```
-
-Wait for exact confirmation.
-
-If confirmed:
-```bash
-git checkout <base-branch>
-git branch -D <feature-branch>
-```
-
-Then: Cleanup worktree (Step 5)
-
-### Step 5: Cleanup Worktree
-
-**For Options 1, 2, 4:**
-
-Check if in worktree:
-```bash
-git worktree list | grep $(git branch --show-current)
-```
-
-If yes:
-```bash
-git worktree remove <worktree-path>
-```
-
-**For Option 3:** Keep worktree.
-
-## Quick Reference
-
-| Option | Merge | Push | Keep Worktree | Cleanup Branch |
-|--------|-------|------|---------------|----------------|
-| 1. Merge locally | ✓ | - | - | ✓ |
-| 2. Create PR | - | ✓ | - | - |
-| 3. Keep as-is | - | - | ✓ | - |
-| 4. Discard | - | - | - | ✓ (force) |
-
-## Common Mistakes
-
-**Skipping test verification**
-- **Problem:** Merge broken code, create failing PR
-- **Fix:** Always verify tests before offering options
-
-**Open-ended questions**
-- **Problem:** "What should I do next?" → ambiguous
-- **Fix:** Present exactly 4 structured options
-
-**Automatic worktree cleanup**
-- **Problem:** Removing worktree when the user chose to keep the branch as-is (Option 3)
-- **Fix:** Cleanup for Options 1, 2, and 4 only
-
-**No confirmation for discard**
-- **Problem:** Accidentally delete work
-- **Fix:** Require typed "discard" confirmation
-
-## Red Flags
-
-**Never:**
-- Proceed with failing tests
-- Merge without verifying tests on result
-- Delete work without confirmation
-- Force-push without explicit request
-
-**Always:**
-- Verify tests before offering options
-- Present exactly 4 options
-- Get typed confirmation for Option 4
-- Clean up worktree for Options 1, 2, and 4 only
+- Do not proceed with failing tests.
+- Do not force-push unless explicitly requested.
+- Do not delete worktree for Option 3.
+- Do not delete branch for Option 4 without typed confirmation.
 
 ## Integration
 
-**Called by:**
-- **task-execution** (Step 7) - After all tasks complete
-- **executing-plans** (Step 5) - After all batches complete
+- Called by [SKILL.md](./../task-execution/SKILL.md).
+- Called by [SKILL.md](./../executing-plans/SKILL.md).
 
-**Pairs with:**
-- **using-git-worktrees** - Cleans up worktree created by that skill
+## Required Inputs
 
-## Trigger Conditions
-
-Invoke this skill when any of the following is true:
-
-- Implementation is complete and the next decision is how to integrate or close out the branch.
-- Tests have passed and the user needs merge, PR, or cleanup options.
-- A completion workflow is needed after execution work finishes.
-
-## Inputs
-
-- User request context and target scope for this skill invocation.
+- Current branch and expected base branch.
+- Test command and current pass/fail status.
 
 ## Required Outputs
 
-- A concrete, workspace-applicable result aligned with this skill purpose.
+- Selected completion path and execution result.
+- Explicit statement of branch/worktree post-state.
 
 ## Workflow
 
-1. Gather required context and constraints from the workspace and user request.
-2. Execute the skill-specific steps and produce the required artifacts or decisions.
-3. Validate outputs for completeness and consistency with active workspace instructions.
-
+1. Verify tests.
+2. Confirm base branch.
+3. Present four options.
+4. Execute chosen option using matrices.
+5. Apply cleanup rules and report final state.

@@ -25,6 +25,7 @@
 | [delivery-status-grid/](./delivery-status-grid/INDEX.md) | Subfolder index. |
 | [design-mobile-ux/](./design-mobile-ux/INDEX.md) | Subfolder index. |
 | [docker-dotnet/](./docker-dotnet/INDEX.md) | Subfolder index. |
+| [domain-design/](./domain-design/INDEX.md) | Subfolder index. |
 | [dotnet-modernization/](./dotnet-modernization/INDEX.md) | Subfolder index. |
 | [dotnet-refactor/](./dotnet-refactor/INDEX.md) | Subfolder index. |
 | [dotnet-resilience/](./dotnet-resilience/INDEX.md) | Subfolder index. |
@@ -38,6 +39,7 @@
 | [learn-topics/](./learn-topics/INDEX.md) | Subfolder index. |
 | [librarian/](./librarian/INDEX.md) | Subfolder index. |
 | [mobile-ui-prototyping/](./mobile-ui-prototyping/INDEX.md) | Subfolder index. |
+| [optimize-customizations/](./optimize-customizations/INDEX.md) | Subfolder index. |
 | [perf-benchmark/](./perf-benchmark/INDEX.md) | Subfolder index. |
 | [performance-research/](./performance-research/INDEX.md) | Subfolder index. |
 | [powershell-script-library/](./powershell-script-library/INDEX.md) | Subfolder index. |
@@ -74,5 +76,5 @@
 | File | Title | Category | Summary |
 |---|---|---|---|
 | [20260409-full-skill-review-grid.md](./20260409-full-skill-review-grid.md) | Full Skill Review Grid | change | / Metric / Value / /---/---/ / Review Date / 2026-04-09 / / Total Skills Reviewed / 48 / / Pass / 48 / / Pass With Advis... |
-| [full-skill-review-grid.md](./full-skill-review-grid.md) | Full Skill Review Grid | change | / Metric / Value / /---/---/ / Review Date / 2026-04-08 / / Total Skills Reviewed / 47 / / Pass / 47 / / Pass With Advis... |
+| [full-skill-review-grid.md](./full-skill-review-grid.md) | Full Skill Review Grid | change | / Metric / Value / /---/---/ / Review Date / 2026-04-10 / / Total Skills Reviewed / 50 / / Pass / 48 / / Pass With Advis... |
 | [full-skill-review-history.md](./full-skill-review-history.md) | Full Skill Review Grid History | change | Consolidated history for date-prefixed files previously kept individually. |

@@ -9,7 +9,7 @@ Use the `governance-health-overview` skill to run a reconciled workspace governa
 
 Execution Flag: `fresh-run required`
 
-> **Note:** A CI-based trigger for this prompt is on the backlog. Until a CI workflow is in place, run this prompt manually on a monthly cadence (first working day of each month is recommended).
+> **Note:** CI cadence is implemented via `.github/workflows/governance-cadence.yml`. Use this prompt for manual reruns, local investigations, and variance analysis between scheduled runs.
 
 ## Purpose
 
@@ -28,7 +28,7 @@ Detect governance drift early: uncatalogued assets, stale instruction frontmatte
 
 1. Load and follow [SKILL.md](./../skills/governance-health-overview/SKILL.md) before starting.
 2. Invoke the skill with execution flag `fresh-run required`.
-3. Run `audit-governance` first, `skill-review` second, and `validate-customization` third in the same invocation.
+3. Run `audit-governance` first, `skill-review` second, `validate-customization` third, and `optimize-customizations` fourth in the same invocation.
 4. Supply today's date as the audit date in `YYYY-MM-DD` format.
 5. Write the reconciled governance health report to `.docs/changes/governance/audits/comprehensive-workspace-health-audit.md`.
 6. Return results in chat as specified in the skill output format rules.
@@ -63,6 +63,9 @@ Return the following in chat, in this order:
 | GOV-S6 | No orphaned docs | ... | ... | ... |
 | GOV-S7 | Hub file freshness | ... | ... | ... |
 | GOV-S8 | Governance artifact contract conformance | ... | ... | ... |
+| GOV-S9 | Utilization coverage | ... | ... | ... |
+| GOV-S10 | Review recency | ... | ... | ... |
+| GOV-OPT | Optimization factor coverage | ... | ... | ... |
 | GOV-SK | Skill quality aggregate | ... | ... | ... |
 | GOV-CUS | Customization quality aggregate | ... | ... | ... |
 
