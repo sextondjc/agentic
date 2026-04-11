@@ -44,13 +44,13 @@ Every asset belongs to one primary domain category. Domain is inferred from the 
 
 | Domain | Keywords | Example Assets |
 |---|---|---|
-| Governance | governance, lifecycle, cadence, naming, taxonomy, audit, health | `audit-governance`, `governance-health-overview`, `taxonomy` |
-| Engineering | dotnet, csharp, syrx, resilience, refactor, test, tdd, scaffold | `execute-dotnet-refactor`, `execute-syrx-data-access`, `execute-test-driven-development`, `scaffold-dotnet` |
-| Mobile | maui, mobile, ux, ui, prototype, usability | `build-maui-apps`, `design-mobile-ux`, `design-mobile-ui-prototyping`, `design-usability-testing-scripts` |
-| Data | sql, dba, database, schema | `execute-syrx-data-access` (shared with Engineering) |
-| DevOps | docker, powershell, cicd, scripts, scripting, branch, editorconfig | `docker-dotnet`, `audit-powershell`, `execute-powershell-script-library`, `sync-editorconfig` |
-| Documentation | docs, readme, adr, technical, corpus, index, librarian, plan, prd | `write-technical-docs`, `index-docs`, `adr-generator`, `librarian`, `prd-generator` |
-| Meta-workflow | task, route, executing, skill, agent, prompt, critical, learn, refine, ideas | `task-execution`, `route-customization`, `critical-thinking`, `learn-topics`, `refine-ideas` |
+| Governance | governance, lifecycle, cadence, naming, taxonomy, audit, health | this skill, this skill, this skill |
+| Engineering | dotnet, csharp, syrx, resilience, refactor, test, tdd, scaffold | this skill, this skill, this skill, this skill |
+| Mobile | maui, mobile, ux, ui, prototype, usability | this skill, this skill, this skill, this skill |
+| Data | sql, dba, database, schema | this skill (shared with Engineering) |
+| DevOps | docker, powershell, cicd, scripts, scripting, branch, editorconfig | this skill, this skill, this skill, this skill |
+| Documentation | docs, readme, adr, technical, corpus, index, librarian, plan, prd | this skill, this skill, this skill, this skill, this skill |
+| Meta-workflow | task, route, executing, skill, agent, prompt, critical, learn, refine, ideas | this skill, this skill, this skill, this skill, this skill |
 
 ### Layer 4: Function Vocabulary
 

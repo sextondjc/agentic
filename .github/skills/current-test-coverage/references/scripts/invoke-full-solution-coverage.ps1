@@ -10,7 +10,7 @@ param(
 
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$ArtifactsDirectory = '.artifacts/full-solution-coverage',
+    [string]$ArtifactsDirectory = '.github/skills/governance-health-overview/references/.artifacts/full-solution-coverage',
 
     [Parameter()]
     [switch]$AllowTestFailures
@@ -22,7 +22,7 @@ $ErrorActionPreference = 'Stop'
 $resolvedWorkspaceRoot = [System.IO.Path]::GetFullPath((Resolve-Path -Path $WorkspaceRoot).Path)
 $resolvedSolutionPath = [System.IO.Path]::GetFullPath((Join-Path -Path $resolvedWorkspaceRoot -ChildPath $SolutionPath))
 $resolvedArtifactsDirectory = [System.IO.Path]::GetFullPath((Join-Path -Path $resolvedWorkspaceRoot -ChildPath $ArtifactsDirectory))
-$approvedArtifactsRoot = [System.IO.Path]::GetFullPath((Join-Path -Path $resolvedWorkspaceRoot -ChildPath '.artifacts'))
+$approvedArtifactsRoot = [System.IO.Path]::GetFullPath((Join-Path -Path $resolvedWorkspaceRoot -ChildPath '.github/skills/governance-health-overview/references/.artifacts'))
 
 if (-not $resolvedArtifactsDirectory.StartsWith($approvedArtifactsRoot, [System.StringComparison]::OrdinalIgnoreCase)) {
     throw "Artifacts directory must stay under $approvedArtifactsRoot. Resolved path: $resolvedArtifactsDirectory"

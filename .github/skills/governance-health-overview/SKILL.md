@@ -11,7 +11,7 @@ Produce one reconciled governance health view across core governance, skill qual
 
 This skill is hyper-specialized for governance health reconciliation only.
 
-This skill does not replace `audit-governance`, `skill-review`, or `validate-customization`; it only aggregates and reconciles their outputs.
+This skill does not replace this skill, this skill, or this skill; it only aggregates and reconciles their outputs.
 
 ## Trigger Conditions
 
@@ -40,7 +40,7 @@ Invoke this skill when any of the following is true:
 - Failure Detail Grid with one row per open failure (or explicit `None` row when all are closed).
 - Delta vs Prior Report Grid using standardized metrics with `Prior`, `Current`, `Delta`, and `Trend` columns (`Increase`, `Decrease`, `Flat`).
 - Responsibility overlap summary sourced from `test-responsibility-overlap.ps1` including duplicate-pair count, threshold, and top overlap pairs.
-- Docs Corpus Hygiene Grid sourced from `librarian` companion checks and `.docs` corpus metrics.
+- Docs Corpus Hygiene Grid sourced from this skill Self-containment checks and `.docs` corpus metrics.
 - Ranked Recommendations Grid.
 - Explicit final disposition (`PASSED` or `FAILED`) based on MUST failures and open conflicts.
 
@@ -66,18 +66,18 @@ Invoke this skill when any of the following is true:
 
 ## Workflow
 
-0. Use `execute-powershell-script-library` first and run `invoke-governance-health-overview.ps1` to collect evidence in one non-interactive execution when tooling permits.
-1. Run `audit-governance` first and produce a fresh core governance artifact under `.docs/changes/governance/audits/` for the audit date.
-2. Run `skill-review` second and produce a fresh aggregate skill review artifact under `.docs/changes/skill/reviews/` for the audit date.
-3. Run `validate-customization` third and produce a fresh aggregate customization review artifact under `.docs/changes/customization/reviews/` for the audit date.
-4. Run `optimize-customizations` fourth and produce a fresh optimization-factor artifact under `.docs/changes/customization/reviews/` for the audit date.
+0. Use this skill first and run `invoke-governance-health-overview.ps1` to collect evidence in one non-interactive execution when tooling permits.
+1. Run this skill first and produce a fresh core governance artifact under `.docs/changes/governance/audits/` for the audit date.
+2. Run this skill second and produce a fresh aggregate skill review artifact under `.docs/changes/skill/reviews/` for the audit date.
+3. Run this skill third and produce a fresh aggregate customization review artifact under `.docs/changes/customization/reviews/` for the audit date.
+4. Run this skill fourth and produce a fresh optimization-factor artifact under `.docs/changes/customization/reviews/` for the audit date.
 5. Verify all four artifacts are generated in the current invocation and capture their paths in the report metadata.
 6. Reconcile the four fresh sources into one coherent set of metrics.
 7. If any MUST failures or open conflicts exist in any source, set disposition to `FAILED`.
 8. Produce ranked remediation recommendations mapped to evidence artifacts.
 9. Include the routed `responsibility-overlap` output payload in the reconciled report metadata and standards evidence.
 10. Include the routed `Metrics` payload in report metadata and use it as the canonical source for aggregate metrics grids.
-11. Run `librarian` as a companion review to assess `.docs` corpus growth, redundancy candidates, and stale candidates; include results in Docs Corpus Hygiene Grid.
+11. Run this skill as a companion review to assess `.docs` corpus growth, redundancy candidates, and stale candidates; include results in Docs Corpus Hygiene Grid.
 12. Compute and publish a standardized Delta vs Prior Report Grid in the reconciled report.
 
 ## Freshness Policy
@@ -111,18 +111,18 @@ Invoke this skill when any of the following is true:
 
 - A PROVISIONAL-FAILED disposition does not imply quality failure; it signals incomplete evidence.
 - Retry with `fresh-run required` after resolving the blocker before promoting to a final disposition.
-- If `audit-governance` fails, the overall run always emits PROVISIONAL-FAILED regardless of other sub-skill outcomes.
+- If this skill fails, the overall run always emits PROVISIONAL-FAILED regardless of other sub-skill outcomes.
 
 ## Companion Skills
 
-- `audit-governance`
-- `skill-review`
-- `validate-customization`
-- `optimize-customizations`
-- `execute-sync-customizations`
-- `execute-sync-skills`
-- `librarian`
-- `prune-doc-artifacts`
+- this skill
+- this skill
+- this skill
+- this skill
+- this skill
+- this skill
+- this skill
+- this skill
 
 ## Done Criteria
 

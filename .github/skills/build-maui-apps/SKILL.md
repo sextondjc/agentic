@@ -24,10 +24,10 @@ Provide a repeatable, source-backed workflow for delivering production-grade .NE
 
 ## Required Collaborators
 
-- `task-research` for source validation and current platform guidance.
-- `critical-thinking` for architecture and trade-off decisions.
-- `route-customization` for identifying true capability gaps.
-- `skills-authoring` for iterative workflow refinement.
+- this skill for source validation and current platform guidance.
+- this skill for architecture and trade-off decisions.
+- this skill for identifying true capability gaps.
+- this skill for iterative workflow refinement.
 
 ## Depth Modes
 

@@ -144,6 +144,11 @@ Invoke this skill when any of the following is true:
 - Execution should not begin until a durable, traceable plan exists.
 - The work needs explicit task decomposition and handoff context.
 
+## Hard Constraint
+
+- Never create root-level folders in any workspace.
+- Never create top-level reference folders; keep references under owning asset paths.
+
 ## Inputs
 
 - User request context and target scope for this skill invocation.

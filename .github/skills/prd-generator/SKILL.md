@@ -80,6 +80,11 @@ Save the PRD as `prd.md`. If the user does not specify a location, propose the p
 
 Format: valid Markdown only. No horizontal rules. No disclaimers or footers. Title case for the document title only; all other headings in sentence case.
 
+## Hard Constraint
+
+- Never create root-level folders in any workspace.
+- Never create top-level reference folders; keep references under the owning asset path.
+
 ---
 
 ## PRD Template

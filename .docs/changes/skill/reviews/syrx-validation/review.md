@@ -33,7 +33,7 @@
 | SKR-S2 | Pass | .github/skills/*/SKILL.md | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | .github/skills/syrx-validation/SKILL.md | No placeholder or unresolved markdown links detected across skill markdown files. |
 | SKR-S4 | Advisory | .github/skills/syrx-validation/SKILL.md | Skill is not fully self-contained; missing explicit execution context: input context. |
-| SKR-S5 | Pass | .github/skills/syrx-validation/SKILL.md | Skill wording is within the conservative brevity baseline (238 words) and shows no automatic verbosity concern. |
+| SKR-S5 | Pass | .github/skills/syrx-validation/SKILL.md | Skill wording is within the conservative brevity baseline (240 words) and shows no automatic verbosity concern. |
 
 ## Recommendations
 

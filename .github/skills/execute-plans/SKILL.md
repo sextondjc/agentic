@@ -11,14 +11,14 @@ Load plan, review critically, execute all tasks, report when complete.
 
 **Announce at start:** "I'm using the execute-plans skill to implement this plan."
 
-**When to use this skill vs `task-execution`:**
+**When to use this skill vs this skill:**
 
 | Situation | Use |
 |---|---|
-| Subagents are available in the current session | `task-execution` (preferred) |
-| Working in a environment without subagent support | `execute-plans` |
-| Executing the plan in a separate, dedicated session | `execute-plans` |
-| Requires a human-in-loop checkpoint between tasks | `execute-plans` |
+| Subagents are available in the current session | this skill (preferred) |
+| Working in a environment without subagent support | this skill |
+| Executing the plan in a separate, dedicated session | this skill |
+| Requires a human-in-loop checkpoint between tasks | this skill |
 
 ## The Process
 
@@ -40,7 +40,7 @@ For each task:
 
 After all tasks complete and verified:
 - Announce: "I'm using the branch-completion skill to complete this work."
-- **REQUIRED SUB-SKILL:** Use `branch-completion`
+- **REQUIRED:** Keep execution self-contained within this skill. Do not delegate execution to sibling skills.
 - Follow that skill to verify tests, present options, execute choice
 
 ## When to Stop and Ask for Help

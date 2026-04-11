@@ -46,6 +46,9 @@ Author and maintain high-quality SKILL.md assets that are discoverable, concise,
 - Use lowercase hyphenated skill names.
 - Default to deterministic behavior and explicit output contracts.
 - Treat exploration as an explicit, rare exception pattern, not a default execution mode.
+- Never create root-level folders in any workspace.
+- Never create top-level reference folders; keep references under the owning asset path (for example `.github/skills/<skill>/references/`).
+- **Skills MUST NOT reference, invoke, or delegate to other named skills within their guidance body.** All execution content must be entirely self-contained. Cross-referencing between skills is a SKR-M4 violation and a governance fail. If two skills genuinely require shared logic, introduce a dedicated orchestrator skill as the indirection layer rather than referencing from either skill.
 
 ## Done Criteria
 

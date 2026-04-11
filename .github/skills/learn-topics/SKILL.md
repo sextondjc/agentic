@@ -11,12 +11,12 @@ Build a depth-calibrated, specialist learning map for a requested domain and mai
 
 ## Required Collaborators
 
-- `task-research` for broad and deep source-backed research.
-- `critical-thinking` for assumption checks and depth-right-sizing.
-- `route-customization` when a capability gap appears.
-- `skills-authoring` when the gap is a reusable workflow skill.
-- `agent-authoring` when the gap requires a new agent.
-- `instructions-authoring` when the gap requires a new instruction.
+- this skill for broad and deep source-backed research.
+- this skill for assumption checks and depth-right-sizing.
+- this skill when a capability gap appears.
+- this skill when the gap is a reusable workflow skill.
+- this skill when the gap requires a new agent.
+- this skill when the gap requires a new instruction.
 
 ## Depth Levels
 
@@ -33,12 +33,12 @@ Use one level unless the user asks for mixed depth.
 
 1. Confirm topic, outcome, and target depth (`L1` to `L4`).
 2. Produce an initial topic tree (domain -> subdomain -> specialization).
-3. Run `task-research` to validate each branch with authoritative sources.
-4. Run `critical-thinking` to remove over-specialization that does not serve the stated outcome.
+3. Run this skill to validate each branch with authoritative sources.
+4. Run this skill to remove over-specialization that does not serve the stated outcome.
 5. Generate a final learning map with explicit stop points for "good enough" completion.
 6. Record all sources in a source ledger using `./references/source-ledger-template.md`.
-7. Identify capability gaps and route through `route-customization`.
-8. If approved, generate missing assets via `skills-authoring`, `agent-authoring`, or `instructions-authoring`.
+7. Identify capability gaps and route through this skill.
+8. If approved, generate missing assets via this skill, this skill, or this skill.
 9. Confirm deterministic coverage: map every requested outcome to a delivered artifact or explicit decision.
 10. If exploration is required, define hypothesis, boundary, time-box, success criteria, and closure decision.
 

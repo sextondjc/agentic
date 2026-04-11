@@ -41,9 +41,9 @@ Use these collaborators intentionally:
 - `Explore` for fast parallel codebase analysis by path segment.
 - `architecture-designer` for domain boundaries, aggregate context, and ADR-aware rationale.
 - `csharp-engineer` for detailed API/member interpretation in .NET projects.
-- `task-research` skill for deep evidence collection and source-backed findings.
-- `critical-thinking` skill for ambiguity pressure tests before publication.
-- `api-design` skill when documenting external integrations and resilience policies.
+- this skill skill for deep evidence collection and source-backed findings.
+- this skill skill for ambiguity pressure tests before publication.
+- this skill skill when documenting external integrations and resilience policies.
 
 ### Parallelization Policy
 
@@ -164,6 +164,8 @@ When invoked in review mode:
 - Prefer exact symbol names and file-backed references.
 - Never invent behavior, defaults, ranges, or guarantees.
 - Use consistent requirement identifiers when writing specification-like sections.
+- Never create root-level folders in any workspace.
+- Never create top-level reference folders; keep references under owning asset paths.
 
 ## Completion Checklist
 

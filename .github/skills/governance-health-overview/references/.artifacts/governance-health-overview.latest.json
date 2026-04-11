@@ -113,10 +113,10 @@
     "DryRun": false
   },
   "ResponsibilityOverlap": {
-    "ArtifactPath": ".artifacts/responsibility-overlap.routing.json",
+    "ArtifactPath": ".github/skills/governance-health-overview/references/.artifacts/responsibility-overlap.routing.json",
     "ArtifactExists": true,
     "Summary": {
-      "ArtifactPath": ".artifacts/responsibility-overlap.routing.json",
+      "ArtifactPath": ".github/skills/governance-health-overview/references/.artifacts/responsibility-overlap.routing.json",
       "DuplicatePairCount": 1,
       "MaxAllowedDuplicatePairs": 8,
       "ThresholdBreached": false,

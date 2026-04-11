@@ -46,6 +46,8 @@ Scan `/.docs/adr/` for the highest existing `adr-NNNN-` prefix. Increment by one
 - Save in `.docs/adr/`.
 - Filename: `adr-NNNN-title-slug.md` (lowercase, hyphens, no special chars).
 - Include all mandatory sections in order.
+- Never create root-level folders in any workspace.
+- Never create top-level reference folders; keep references under owning asset paths only.
 
 ## ADR Template
 

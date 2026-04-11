@@ -22,14 +22,14 @@ Use this skill when one or more are true:
 
 Do not use this skill for updating historical trend docs unless the user asks for that as a separate follow-up.
 
-## Required Skills
+## Self-Containment Requirement
 
 Apply these skills as part of this workflow:
 
-- `delivery-status-grid`
-- `task-execution`
-- `critical-thinking`
-- `request-code-review`
+- this skill
+- this skill
+- this skill
+- this skill
 
 ## Built-In First Rule
 
@@ -41,7 +41,7 @@ Execution order:
 2. Use the skill-contained quality gate first:
    - `references/scripts/invoke-quality-gate.ps1`
 3. If the standard path fails or does not satisfy the full-run request, use the built-in full-solution command:
-   - `dotnet test ./Rook.sln --collect:"XPlat Code Coverage" --results-directory ./.artifacts/full-solution-coverage --nologo --verbosity minimal`
+   - `dotnet test ./Rook.sln --collect:"XPlat Code Coverage" --results-directory ./.github/skills/governance-health-overview/references/.artifacts/full-solution-coverage --nologo --verbosity minimal`
 4. Use helper scripts only for repeatable artifact aggregation and formatting after the run.
 
 ## Inputs

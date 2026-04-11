@@ -87,7 +87,7 @@ Use `architecture-designer` when the request needs a broader blueprint, ADR synt
 | Cross-aggregate workflow | Saga or process manager | Keeps orchestration out of aggregate internals |
 | Legacy or external boundary | Anti-corruption layer | Prevents foreign semantics from polluting the domain |
 | Read-heavy optimization | CQRS read model | Preserves a rich write model while scaling reads |
-| Significant architecture change | ADR via `adr-generator` | Captures durable rationale and trade-offs |
+| Significant architecture change | ADR via this skill | Captures durable rationale and trade-offs |
 
 ## Anti-Patterns
 
@@ -101,4 +101,4 @@ Use `architecture-designer` when the request needs a broader blueprint, ADR synt
 - Aggregate boundaries and invariants are explicit.
 - Repository and service ownership is clear.
 - Event and ACL decisions are justified.
-- Significant architecture choices are routed to `adr-generator` when needed.
+- Significant architecture choices are routed to this skill when needed.

@@ -35,9 +35,17 @@ Keep this file policy-only. Use [SKILL.md](./../skills/route-customization/SKILL
 
 - Determinism is mandatory by default for all requests.
 - `orchestrator` MUST produce explicit intake fields before execution: objective, scope boundaries, primary lane, owner, and required outputs.
+- `orchestrator` MUST include deterministic candidate selection fields before execution: candidate capabilities, candidate skills, selected target, and rejected candidates with reason codes.
 - Specialists and skills MUST execute only the approved scope and required outputs; no silent additions or omissions are allowed.
 - Any scope change MUST be recorded as an explicit decision before implementation divergence.
 - Rare bounded exploration is allowed only when novelty, ambiguity, or conflicting constraints make deterministic execution likely suboptimal.
+
+## Composition Gate Policy
+
+- Requests that require more than one capability MUST pass a composition gate before execution.
+- The composition gate MUST include a phase-output ownership matrix.
+- Every required output MUST map to exactly one owning phase.
+- If any required output is unowned or multiply owned, execution MUST stop until ownership is corrected.
 
 ## Bounded Exploration Requirements
 

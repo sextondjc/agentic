@@ -12,5 +12,5 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| [governance-audit.md](./governance-audit.md) | Governance Audit | change | / Metric / Value / /---/---/ / Review Date / 2026-04-11 / / Outcome / Pass / / Total Checks / 16 / / Passed Checks / 16... |
-| [governance-executive-audit.md](./governance-executive-audit.md) | Governance Executive Audit | change | / Metric / Value / /---/---/ / Audit Date / 2026-04-11 / / Scope / Full workspace deep scan across agents, instructions,... |
+| [governance-audit.md](./governance-audit.md) | Governance Audit | change | / Metric / Value / /---/---/ / Review Date / 2026-04-11 / / Outcome / Pass With Advisories / / Total Checks / 21 / / Pas... |
+| [governance-executive-audit.md](./governance-executive-audit.md) | Governance Executive Audit | change | / Level / Artifact / Status / Link / /---/---/---/---/ / Level 1 / Executive workspace disposition / Fresh / [governance... |

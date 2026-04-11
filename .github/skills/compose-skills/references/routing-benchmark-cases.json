@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "id": "C1-composition-and-coverage",
+      "request": "Introduce orchestration indirection for multi-skill requests and ensure complete output coverage.",
+      "requiredSkills": ["compose-skills"]
+    },
+    {
+      "id": "C2-implementation-request",
+      "request": "Implement code changes and execute the plan tasks.",
+      "requiredSkills": ["task-execution"]
+    },
+    {
+      "id": "C3-learning-and-analysis",
+      "request": "Learn this topic, decompose it, and challenge assumptions before we implement.",
+      "requiredSkills": ["learn-topics", "critical-thinking"]
+    },
+    {
+      "id": "C4-review-request",
+      "request": "Review all skills and produce an audit with remediation recommendations.",
+      "requiredSkills": ["skill-review"]
+    }
+  ]
+}

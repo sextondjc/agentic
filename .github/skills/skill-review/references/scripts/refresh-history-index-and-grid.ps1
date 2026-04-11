@@ -97,7 +97,8 @@ $gridLines = @(
 )
 
 $gridLines += $reportRows | ForEach-Object {
-    "| $($_.Skill) | $($_.Outcome) | $($_.MustFailures) | $($_.ShouldAdvisories) | $($_.ConflictStatus) | $($_.ReportPath) |"
+    $reportLink = "[review.md](./$($_.Skill)/review.md)"
+    "| $($_.Skill) | $($_.Outcome) | $($_.MustFailures) | $($_.ShouldAdvisories) | $($_.ConflictStatus) | $reportLink |"
 }
 
 Set-Content -Path (Join-Path $reportsRoot 'governance-type-audit-skills.md') -Value ($gridLines -join "`n") -NoNewline

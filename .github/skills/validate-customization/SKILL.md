@@ -34,7 +34,7 @@ This skill has one purpose: customization quality review and follow-up governanc
 | INR-S1 | No conflict with other instruction files | SHOULD NOT conflict | No harmful overlap or contradictory rules with other active instruction files. | Start conflict workflow; document resolution plan. |
 | INR-S2 | Rationale present for non-obvious rules | SHOULD | Non-obvious mandates include a brief rationale comment. | Record advisory finding; recommend rationale addition. |
 | INR-S3 | No conflict with agent or skill boundaries | SHOULD NOT conflict | Instruction behavior does not contradict active agent personas or skill boundaries. | Start conflict workflow; document boundary resolution options. |
-| INR-S4 | Brevity | SHOULD | Instruction wording is economical, avoids duplication, and does not include narrative padding beyond what policy clarity requires. | Record advisory finding; recommend concise reductions through `instructions-authoring`. |
+| INR-S4 | Brevity | SHOULD | Instruction wording is economical, avoids duplication, and does not include narrative padding beyond what policy clarity requires. | Record advisory finding; recommend concise reductions through this skill. |
 
 ## Review Standards — Agent Files
 
@@ -44,9 +44,9 @@ This skill has one purpose: customization quality review and follow-up governanc
 | AGR-M2 | Valid frontmatter | MUST | `name` and `description` present; valid YAML. | Mark failed; provide exact frontmatter fix. |
 | AGR-M3 | Specialization section present | MUST | `## Specialization` section exists and names what the agent does and does not do. | Mark failed; provide section guidance. |
 | AGR-M4 | No instruction file restatement | MUST | Agent body references instruction files rather than restating their content inline. | Mark failed; recommend replacing inline rules with references. |
-| AGR-S1 | Companion skills declared | SHOULD | `## Preferred Companion Skills` is present with at least one entry. | Record advisory; recommend companion skill list. |
+| AGR-S1 | Companion skills declared | SHOULD | `## Preferred Companion Skills` is present with at least one entry. Companion skill entries are declarative only; agents MUST NOT embed cross-skill workflow steps that delegate execution to a named skill inside `## Preferred Companion Skills` or any other section. | Record advisory; recommend companion skill list and verified declarative-only pattern. |
 | AGR-S2 | No conflict with other agents | SHOULD NOT conflict | No role overlap or contradictory routing boundaries with other agent files. | Start conflict workflow; document resolution plan. |
-| AGR-S3 | Brevity | SHOULD | Agent wording is economical, avoids duplication, and does not include narrative padding beyond what role clarity requires. | Record advisory finding; recommend concise reductions through `agent-authoring`. |
+| AGR-S3 | Brevity | SHOULD | Agent wording is economical, avoids duplication, and does not include narrative padding beyond what role clarity requires. | Record advisory finding; recommend concise reductions through this skill. |
 
 ## Review Standards — Prompt Files
 
@@ -117,11 +117,12 @@ Optional:
    - detect duplicate and conflicting instruction guidance,
    - verify alignment with active agent personas,
    - verify alignment with active skill boundaries.
+   - flag any skill referenced in an agent or instruction file that itself violates SKR-M4 (cross-skill references); route the finding to skill-review.
 7. If conflict is detected:
    - Document conflict using the conflict report template.
    - Recommend one or more concrete resolution options.
    - Work with the user to choose and confirm the resolution.
 8. Produce the review report and store it at `.docs/changes/customization/reviews/governance-type-audit-customizations.md`.
 9. Append history rows for all reviewed artifacts to `.docs/changes/customization/reviews/audit-history.md`.
-10. Route any required fixes to `agent-authoring` or `instructions-authoring` based on artifact type.
+10. Route any required fixes to this skill or this skill based on artifact type.
 

@@ -54,6 +54,7 @@ Routing behavior in this agent must align with policy authority in [lifecycle-go
 | ADR authoring | `adr-generator` skill with `architecture-designer` | Write ADRs in `.docs/adr` | Act as the main architecture decision-maker |
 | Product and PRD work | `prd-generator` skill | Create PRDs and requirements artifacts | Perform engineering implementation |
 | PowerShell script creation or catalog management | `execute-powershell-script-library` skill | Check catalog first for reuse, deduplication; validate script consistency with `powershell-reviewer` | Write scripts without consulting the catalog or deduplication registry |
+| Multi-skill composition under self-containment policy | `compose-skills` skill | Build explicit composition contract, phase ownership, and output coverage before execution | Allow implicit capability selection or direct skill-to-skill delegation |
 
 ## Routing Rules
 
@@ -85,6 +86,11 @@ Routing behavior in this agent must align with policy authority in [lifecycle-go
 - Live SQL Server administration, schema inspection, query execution → `sql-dba`.
 - Separate application repository coding from live DBA operations explicitly.
 
+### 6. Composition Indirection
+- When a request requires multiple capabilities, run `compose-skills` first to define phase ownership and output coverage.
+- Do not allow direct skill-to-skill execution chains.
+- If required outputs are not fully mapped to owning phases, stop and resolve intake gaps before execution.
+
 ## Multi-Phase Workflow
 
 When a request spans multiple concerns, split into explicit phases:
@@ -109,6 +115,41 @@ For each routed request, include a compact intake contract:
 - Handoff target
 - Determinism status (default or bounded exploration)
 - If bounded exploration: hypothesis, time-box, success criteria, closure decision owner
+
+## Deterministic Intake Schema
+
+Before any specialist or skill execution, routing output MUST include these fields:
+
+- Objective
+- In-scope
+- Out-of-scope
+- Required outputs
+- Primary lane
+- Owner
+- Handoff target
+- Candidate capabilities
+- Candidate skills
+- Selected skill or specialist
+- Rejected candidates with reason codes
+
+If any required field is missing, routing is invalid and execution must stop.
+
+### Rejection Reason Codes
+
+- `R1`: lane mismatch
+- `R2`: out-of-scope capability
+- `R3`: missing required output coverage
+- `R4`: conflicts with deterministic policy
+- `R5`: duplicate or lower-priority candidate after tie-break
+
+### Tie-Break Rules
+
+Apply in order:
+
+1. Primary-lane match beats secondary-lane match.
+2. Explicit task-type mapping in the canonical routing table beats generic mapping.
+3. Candidate with full required-output coverage beats partial coverage.
+4. If still tied, prefer the lower-risk option that minimizes cross-phase expansion.
 
 ## Guardrails
 

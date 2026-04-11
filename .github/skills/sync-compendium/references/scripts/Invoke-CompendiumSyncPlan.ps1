@@ -15,8 +15,8 @@ param(
     [Parameter()]
     [string]$SourceCommit,
 
-    [Parameter()]
-    [string]$PlanOutPath = '.artifacts/compendium-sync-plan.json',
+    [Parameter(Mandatory = $true)]
+    [string]$PlanOutPath,
 
     [Parameter()]
     [switch]$AsTable

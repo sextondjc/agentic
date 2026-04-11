@@ -10,7 +10,7 @@ param(
 
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$ArtifactsDirectory = '.artifacts/full-solution-coverage',
+    [string]$ArtifactsDirectory = '.github/skills/governance-health-overview/references/.artifacts/full-solution-coverage',
 
     [Parameter()]
     [ValidateRange(0, 100)]
@@ -27,7 +27,7 @@ $ErrorActionPreference = 'Stop'
 $resolvedWorkspaceRoot = [System.IO.Path]::GetFullPath((Resolve-Path -Path $WorkspaceRoot).Path)
 $resolvedSolutionPath = [System.IO.Path]::GetFullPath((Join-Path -Path $resolvedWorkspaceRoot -ChildPath $SolutionPath))
 $resolvedArtifactsDirectory = [System.IO.Path]::GetFullPath((Join-Path -Path $resolvedWorkspaceRoot -ChildPath $ArtifactsDirectory))
-$approvedArtifactsRoot = [System.IO.Path]::GetFullPath((Join-Path -Path $resolvedWorkspaceRoot -ChildPath '.artifacts'))
+$approvedArtifactsRoot = [System.IO.Path]::GetFullPath((Join-Path -Path $resolvedWorkspaceRoot -ChildPath '.github/skills/governance-health-overview/references/.artifacts'))
 
 if (-not (Test-Path -Path $resolvedSolutionPath)) {
     throw "Solution file not found: $resolvedSolutionPath"

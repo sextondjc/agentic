@@ -48,7 +48,7 @@ This skill is on-demand and review-focused. It does not run continuously and doe
 2. Evaluate each artifact for optimization quality using OPR-M* and OPR-S* checks.
 3. Record findings in a consolidated grid (pass, fail, advisory).
 4. Produce remediation actions with exact target files and expected outcome.
-5. Route follow-up edits to `agent-authoring`, `instructions-authoring`, or `skills-authoring` when needed.
+5. Route follow-up edits to this skill, this skill, or this skill when needed.
 
 ## Optimization Review Standards
 
@@ -57,6 +57,7 @@ This skill is on-demand and review-focused. It does not run continuously and doe
 | OPR-M1 | Scope purity | MUST | Artifact keeps one primary objective and avoids role bleed. | Mark failed and split or refocus scope. |
 | OPR-M2 | Deterministic wording | MUST | Guidance uses testable, concrete directives without ambiguity. | Mark failed and provide replacement wording. |
 | OPR-M3 | Non-contradiction | MUST | Artifact does not conflict with active governance instructions or catalogs. | Mark failed and route conflict remediation. |
+| OPR-M4 | No cross-skill delegation | MUST | SKILL.md bodies contain no invocations, required-sub-skill directives, or workflow steps that delegate execution to another named skill. | Mark failed; inline required content or introduce a dedicated orchestrator skill as the indirection layer. |
 | OPR-S1 | Brevity | SHOULD | Wording is economical and avoids repeated sections or narrative padding. | Record advisory and propose concise reductions. |
 | OPR-S2 | Reuse over duplication | SHOULD | Reusable references are preferred when they improve clarity and maintainability. | Record advisory and suggest reference consolidation. |
 | OPR-S3 | Output clarity | SHOULD | Required outputs are explicit, complete, and easy to validate. | Record advisory and propose output contract tightening. |

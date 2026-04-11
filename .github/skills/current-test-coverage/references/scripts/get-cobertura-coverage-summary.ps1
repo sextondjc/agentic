@@ -2,7 +2,7 @@
 param(
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$CoverageRoot = (Join-Path -Path $PSScriptRoot -ChildPath '..\..\..\..\..\.artifacts\full-solution-coverage')
+    [string]$CoverageRoot = (Join-Path -Path $PSScriptRoot -ChildPath '..\..\..\..\..\.github\skills\governance-health-overview\references\.artifacts\full-solution-coverage')
 )
 
 Set-StrictMode -Version Latest

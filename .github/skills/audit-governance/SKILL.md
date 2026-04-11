@@ -55,6 +55,7 @@ Core checks:
 - GOV-M2 frontmatter validity
 - GOV-M3 catalog integrity
 - GOV-M4 lifecycle-governance coverage
+- GOV-M5 skill self-containment: no cross-skill references (aligned with SKR-M4); each SKILL.md body must contain no invocations, delegations, or required-sub-skill directives pointing to other named skills
 - GOV-S1..GOV-S11 advisory checks
 - GOV-OPT optimization factor coverage across authoring and review routines
 - GOV-S9 utilization coverage across skills, agents, and prompts

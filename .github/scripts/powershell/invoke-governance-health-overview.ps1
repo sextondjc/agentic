@@ -124,11 +124,15 @@ try {
         @{ Name = 'artifact-contract'; Command = { ./.github/scripts/powershell/test-governance-artifact-contract.ps1 } },
         @{ Name = 'artifact-reference-hygiene'; Command = { ./.github/scripts/powershell/test-artifact-reference-hygiene.ps1 } },
         @{ Name = 'docs-naming'; Command = { ./.github/scripts/powershell/test-naming-conformance.ps1 -RootPath .docs } },
+        @{ Name = 'index-refresh'; Command = { ./.github/scripts/powershell/invoke-index-refresh.ps1 -RootPath .docs | ConvertTo-Json -Depth 4 -Compress } },
         @{ Name = 'asset-naming'; Command = { ./.github/scripts/powershell/test-asset-naming.ps1 -AssetType all } },
         @{ Name = 'utilization-coverage'; Command = { ./.github/scripts/powershell/test-utilization-coverage.ps1 } },
         @{ Name = 'review-recency'; Command = { ./.github/scripts/powershell/test-review-recency.ps1 -ThresholdDays 90 } },
         @{ Name = 'source-catalog-freshness'; Command = { ./.github/scripts/powershell/test-source-catalog-freshness.ps1 -ThresholdDays 30 } },
-        @{ Name = 'responsibility-overlap'; Command = { ./.github/scripts/powershell/test-responsibility-overlap.ps1 -SimilarityThreshold 0.82 -MinimumSharedTokens 6 -MaxAllowedDuplicatePairs 8 -OutputPath ./.artifacts/responsibility-overlap.routing.json } }
+        @{ Name = 'responsibility-overlap'; Command = { ./.github/scripts/powershell/test-responsibility-overlap.ps1 -SimilarityThreshold 0.82 -MinimumSharedTokens 6 -MaxAllowedDuplicatePairs 8 -OutputPath ./.github/skills/governance-health-overview/references/.artifacts/responsibility-overlap.routing.json } },
+        @{ Name = 'overlap-watchlist'; Command = { ./.github/scripts/powershell/test-overlap-watchlist.ps1 } },
+        @{ Name = 'count-consistency'; Command = { ./.github/scripts/powershell/test-governance-count-consistency.ps1 } },
+        @{ Name = 'global-applyto-rationale'; Command = { ./.github/scripts/powershell/test-global-applyto-rationale.ps1 } }
     )
 
     $coreResults = foreach ($check in $checks) {
@@ -186,7 +190,7 @@ try {
         }
     }
 
-    $overlapArtifactPath = '.artifacts/responsibility-overlap.routing.json'
+    $overlapArtifactPath = '.github/skills/governance-health-overview/references/.artifacts/responsibility-overlap.routing.json'
     $overlapArtifactExists = Test-Path $overlapArtifactPath
     $overlapSummary = $null
     if ($overlapArtifactExists) {
@@ -261,14 +265,14 @@ try {
         }
     }
 
-    $indexRefreshScript = './.github/scripts/powershell/invoke-index-refresh.ps1'
     $indexRefresh = $null
-    if (Test-Path $indexRefreshScript) {
+    $indexRefreshCheck = @($coreResults | Where-Object { $_.Check -eq 'index-refresh' } | Select-Object -First 1)
+    if ($indexRefreshCheck.Count -gt 0 -and $indexRefreshCheck[0].Passed) {
         try {
-            $indexRefresh = & $indexRefreshScript -RootPath .docs
+            $indexRefresh = $indexRefreshCheck[0].Output | ConvertFrom-Json
         }
         catch {
-            Write-Warning "Index refresh failed: $($_.Exception.Message)"
+            Write-Warning "Index refresh output parsing failed: $($_.Exception.Message)"
         }
     }
 
@@ -342,7 +346,7 @@ try {
 
 | Artifact | Type | Outcome | MUST Failures | SHOULD Advisories | Evidence |
 |---|---|---|---:|---:|---|
-| Governance checks | workflow | $optimizationOutcome | 0 | $($metrics.FailedChecks) | .artifacts/governance-health-overview.latest.json |
+| Governance checks | workflow | $optimizationOutcome | 0 | $($metrics.FailedChecks) | .github/skills/governance-health-overview/references/.artifacts/governance-health-overview.latest.json |
 
 ## Ranked Remediation Grid
 

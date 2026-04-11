@@ -1,0 +1,448 @@
+{
+  "version": "2.0.0",
+  "lastUpdated": "2026-04-11",
+  "description": "Comprehensive capability routing registry mapping user intents to skill compositions. Used by orchestrator to automatically invoke relevant skills based on request keywords and context.",
+  "capabilities": [
+    {
+      "id": "planning-and-specification",
+      "name": "Planning & Specification",
+      "keywords": ["plan", "planning", "strategy", "roadmap", "prd", "product requirements", "specification", "spec", "requirements"],
+      "requiredSkills": ["writing-plans"],
+      "optionalSkills": ["prd-generator", "critical-thinking", "task-research"],
+      "excludedSkills": ["task-execution"],
+      "description": "Planning, requirement gathering, PRD authoring, and strategy development before implementation."
+    },
+    {
+      "id": "research",
+      "name": "Research & Discovery",
+      "keywords": ["research", "investigate", "discovery", "explore", "learn", "learning", "curriculum", "deep learning", "topic"],
+      "requiredSkills": ["task-research"],
+      "optionalSkills": ["learn-topics", "critical-thinking"],
+      "excludedSkills": [],
+      "description": "Research-focused work including investigation, exploration, and learning path development."
+    },
+    {
+      "id": "implementation",
+      "name": "Implementation & Execution",
+      "keywords": ["implement", "code", "build", "write", "execute", "change", "modify", "create"],
+      "requiredSkills": ["task-execution"],
+      "optionalSkills": ["execute-test-driven-development", "execute-plans"],
+      "excludedSkills": ["writing-plans"],
+      "description": "Code implementation, feature building, and execution of approved plans."
+    },
+    {
+      "id": "testing-and-coverage",
+      "name": "Testing & Coverage",
+      "keywords": ["test", "testing", "tdd", "test-driven", "coverage", "unit test", "integration test"],
+      "requiredSkills": ["execute-test-driven-development"],
+      "optionalSkills": ["current-test-coverage"],
+      "excludedSkills": [],
+      "description": "Test-driven development, test-first authoring, and coverage assessment."
+    },
+    {
+      "id": "benchmarking-and-perf",
+      "name": "Performance Benchmarking",
+      "keywords": ["benchmark", "benchmarking", "performance", "perf", "timing", "throughput"],
+      "requiredSkills": ["perf-benchmark"],
+      "optionalSkills": ["performance-research"],
+      "excludedSkills": [],
+      "description": "BenchmarkDotNet design, benchmarking strategy, and performance testing."
+    },
+    {
+      "id": "performance-assessment",
+      "name": "Performance Assessment",
+      "keywords": ["performance-assess", "performance issue", "bottleneck", "optimize", "slow", "latency"],
+      "requiredSkills": ["performance-research"],
+      "optionalSkills": ["perf-benchmark"],
+      "excludedSkills": [],
+      "description": "Research-only performance analysis, bottleneck identification, and remediation reporting."
+    },
+    {
+      "id": "security-assessment",
+      "name": "Security Assessment",
+      "keywords": ["security", "vulnerability", "exploit", "threat", "compliance", "secure"],
+      "requiredSkills": ["security-research"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Research-only security analysis, vulnerability identification, and remediation reporting."
+    },
+    {
+      "id": "bug-and-defect",
+      "name": "Debugging & Defect Resolution",
+      "keywords": ["debug", "debugging", "bug", "defect", "error", "issue", "reproduce", "fix bug"],
+      "requiredSkills": ["defect-debugger"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Bug reproduction, root cause analysis, and defect fixing."
+    },
+    {
+      "id": "refactoring",
+      "name": "Refactoring & Modernization",
+      "keywords": ["refactor", "refactoring", "modernize", "modernization", "upgrade", "migrate", "nullable"],
+      "requiredSkills": ["execute-dotnet-refactor"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": ".NET code modernization, nullable adoption, obsolete API cleanup, and behavior-preserving improvements."
+    },
+    {
+      "id": "resilience-and-patterns",
+      "name": "Resilience & Patterns",
+      "keywords": ["resilience", "resilient", "retry", "circuit-breaker", "polly", "fallback", "timeout"],
+      "requiredSkills": ["execute-dotnet-resilience"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Distributed system resilience, pattern composition, and failure-mode validation."
+    },
+    {
+      "id": "data-access",
+      "name": "Data Access & Repositories",
+      "keywords": ["data-access", "repository", "syrx", "sql", "database", "query", "command"],
+      "requiredSkills": ["execute-syrx-data-access"],
+      "optionalSkills": ["syrx-validation"],
+      "excludedSkills": [],
+      "description": "Syrx-based repository implementation, SQL parameterization, and data access patterns."
+    },
+    {
+      "id": "validation-and-guards",
+      "name": "Validation & Guards",
+      "keywords": ["validate", "validation", "guard", "contract", "constraint", "input validation"],
+      "requiredSkills": ["syrx-validation"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Syrx.Validation.Contract guard patterns, deterministic validation, and boundary checks."
+    },
+    {
+      "id": "skill-authoring",
+      "name": "Skill Authoring",
+      "keywords": ["skill", "skill author", "skill create", "skill writing", "reusable skill"],
+      "requiredSkills": ["skills-authoring"],
+      "optionalSkills": ["validate-customization", "skill-review"],
+      "excludedSkills": [],
+      "description": "Skill creation, documentation, discoverability, and cross-project portability."
+    },
+    {
+      "id": "agent-authoring",
+      "name": "Agent Authoring",
+      "keywords": ["agent", "agent author", "agent tailoring", ".agent.md"],
+      "requiredSkills": ["agent-authoring"],
+      "optionalSkills": ["validate-customization", "skill-review"],
+      "excludedSkills": [],
+      "description": "Agent creation, role definition, boundary tightening, and companion-skill alignment."
+    },
+    {
+      "id": "instruction-authoring",
+      "name": "Instruction Authoring",
+      "keywords": ["instruction", "instruction author", ".instructions.md", "policy", "guidance"],
+      "requiredSkills": ["instructions-authoring"],
+      "optionalSkills": ["validate-customization", "skill-review"],
+      "excludedSkills": [],
+      "description": "Instruction file creation, policy-domain scoping, and deterministic rule definition."
+    },
+    {
+      "id": "customization-curation",
+      "name": "Customization Curation",
+      "keywords": ["curate", "curation", "copilot-instructions", "import", "catalog"],
+      "requiredSkills": ["curating-copilot-instructions"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Importing and curating agents, instructions, and skills from catalogs."
+    },
+    {
+      "id": "customization-validation",
+      "name": "Customization Validation",
+      "keywords": ["customization validate", "validate custom", "conflict detection"],
+      "requiredSkills": ["validate-customization"],
+      "optionalSkills": ["skill-review"],
+      "excludedSkills": [],
+      "description": "Validation of agents, instructions, and skills against quality standards."
+    },
+    {
+      "id": "skill-review",
+      "name": "Skill Review",
+      "keywords": ["skill review", "review skill", "skill assessment", "skill evaluation"],
+      "requiredSkills": ["skill-review"],
+      "optionalSkills": ["validate-customization"],
+      "excludedSkills": [],
+      "description": "Skill quality assessment, review history tracking, and remediation recommendations."
+    },
+    {
+      "id": "customization-optimization",
+      "name": "Customization Optimization",
+      "keywords": ["optimize custom", "customization optimize", "concise", "deterministic"],
+      "requiredSkills": ["optimize-customizations"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Agent, instruction, and skill optimization with conciseness and determinism checks."
+    },
+    {
+      "id": "skill-composition",
+      "name": "Skill Composition",
+      "keywords": ["compose", "composition", "orchestration", "orchestrate", "multi-skill", "indirection"],
+      "requiredSkills": ["compose-skills"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Multi-skill composition through explicit orchestration contracts."
+    },
+    {
+      "id": "routing-customization",
+      "name": "Routing Customization",
+      "keywords": ["routing", "route", "routing customization", "router"],
+      "requiredSkills": ["route-customization"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Determining whether behavior should be agent, instruction, or skill."
+    },
+    {
+      "id": "critical-analysis",
+      "name": "Critical Analysis",
+      "keywords": ["critical", "criticism", "trade-off", "assumption", "challenge", "pressure-test"],
+      "requiredSkills": ["critical-thinking"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Assumption pressure-testing, requirement clarification, and trade-off evaluation."
+    },
+    {
+      "id": "architecture-design",
+      "name": "Architecture & Design",
+      "keywords": ["architecture", "design", "blueprint", "aggregate", "ddd", "domain-driven", "boundary"],
+      "requiredSkills": ["architecture-designer"],
+      "optionalSkills": ["domain-design"],
+      "excludedSkills": [],
+      "description": "Architectural decisions, DDD guidance, and blueprint synthesis."
+    },
+    {
+      "id": "domain-modeling",
+      "name": "Domain Modeling",
+      "keywords": ["domain", "aggregate", "event", "ddd", "domain-driven", "application service"],
+      "requiredSkills": ["domain-design"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Aggregate design, domain events, and anti-corruption layer patterns."
+    },
+    {
+      "id": "api-integration",
+      "name": "API Design & Integration",
+      "keywords": ["api", "integration", "client", "resilience", "dto", "contract"],
+      "requiredSkills": ["api-design"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "External API integration, resilient client patterns, and DTO contracts."
+    },
+    {
+      "id": "governance-audit",
+      "name": "Governance Audit",
+      "keywords": ["audit", "governance audit", "governance assess", "health"],
+      "requiredSkills": ["audit-governance"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Workspace governance assessment, ranked remediation reporting."
+    },
+    {
+      "id": "governance-health",
+      "name": "Governance Health Overview",
+      "keywords": ["governance health", "governance overview", "health overview"],
+      "requiredSkills": ["governance-health-overview"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Reconciled cross-skill governance health synthesis."
+    },
+    {
+      "id": "governance-summary",
+      "name": "Governance Briefing",
+      "keywords": ["governance brief", "governance summary", "governance brief"],
+      "requiredSkills": ["summarize-governance"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Concise single-page governance briefings from existing artifacts."
+    },
+    {
+      "id": "mobile-development",
+      "name": "Mobile Development (.NET MAUI)",
+      "keywords": ["mobile", "maui", ".net maui", "ios", "android", "app development"],
+      "requiredSkills": ["build-maui-apps"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "MAUI mobile app architecture, navigation, data, security, testing, and release readiness."
+    },
+    {
+      "id": "mobile-ux",
+      "name": "Mobile UX Design",
+      "keywords": ["ux", "user experience", "mobile ux", "flow", "wireframe"],
+      "requiredSkills": ["design-mobile-ux"],
+      "optionalSkills": ["design-mobile-ui-prototyping"],
+      "excludedSkills": [],
+      "description": "Mobile UX definition, flow wireframing, validation, and engineering handoff."
+    },
+    {
+      "id": "ui-prototyping",
+      "name": "UI Prototyping",
+      "keywords": ["prototype", "prototyping", "ui", "high-fidelity", "design handoff"],
+      "requiredSkills": ["design-mobile-ui-prototyping"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Wireframe-to-prototype evolution, annotation, and engineering handoff."
+    },
+    {
+      "id": "usability-testing",
+      "name": "Usability Testing",
+      "keywords": ["usability", "testing script", "ux testing", "user test"],
+      "requiredSkills": ["design-usability-testing-scripts"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Usability test script design, scoring rubrics, and findings templates."
+    },
+    {
+      "id": "docker-containerization",
+      "name": "Docker & Containerization",
+      "keywords": ["docker", "container", "containerization", "dockerfile", "image"],
+      "requiredSkills": ["docker-dotnet"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": ".NET containerization, Dockerfile authoring, image optimization, and container security."
+    },
+    {
+      "id": "documentation",
+      "name": "Technical Documentation",
+      "keywords": ["document", "documentation", "tech-doc", "readme", "guide"],
+      "requiredSkills": ["write-technical-docs"],
+      "optionalSkills": ["index-docs"],
+      "excludedSkills": [],
+      "description": "Technical reference documentation with code verification and link integrity."
+    },
+    {
+      "id": "documentation-indexing",
+      "name": "Documentation Indexing",
+      "keywords": ["index", "indexing", "catalog", "toc", "table of contents"],
+      "requiredSkills": ["index-docs"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Navigable INDEX.md files for document corpus discovery and navigation."
+    },
+    {
+      "id": "information-architecture",
+      "name": "Information Architecture",
+      "keywords": ["librarian", "organization", "structure", "taxonomy", "hierarchy"],
+      "requiredSkills": ["librarian"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Document corpus organization, naming consistency, and deduplication analysis."
+    },
+    {
+      "id": "naming-conventions",
+      "name": "Naming & Taxonomy",
+      "keywords": ["naming", "convention", "taxonomy", "standard", "consistent", "nomenclature"],
+      "requiredSkills": ["taxonomy"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Consistent naming taxonomy across governance, customizations, documentation, and code."
+    },
+    {
+      "id": "branch-management",
+      "name": "Branch Completion",
+      "keywords": ["branch", "completion", "merge", "pr", "pull request", "release"],
+      "requiredSkills": ["branch-completion"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Development work completion, merge strategy, PR preparation, and cleanup."
+    },
+    {
+      "id": "code-review-request",
+      "name": "Code Review Request",
+      "keywords": ["code review", "review request", "request review"],
+      "requiredSkills": ["request-code-review"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Implementation completion and structured code review initiation."
+    },
+    {
+      "id": "review-remediation",
+      "name": "Review Remediation",
+      "keywords": ["remediate", "remediation", "address feedback", "review feedback"],
+      "requiredSkills": ["remediate-review"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Code review feedback evaluation and technical remediation."
+    },
+    {
+      "id": "delivery-tracking",
+      "name": "Delivery Status Tracking",
+      "keywords": ["status", "progress", "delivery", "tracking", "completion", "metric"],
+      "requiredSkills": ["delivery-status-grid"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Delivery status reporting with table-first, X of Y measure format."
+    },
+    {
+      "id": "artifact-pruning",
+      "name": "Artifact Pruning",
+      "keywords": ["prune", "cleanup", "archive", "remove", "deprecate", "stale"],
+      "requiredSkills": ["prune-doc-artifacts"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Stale artifact identification and safe removal/archive recommendations."
+    },
+    {
+      "id": "idea-refinement",
+      "name": "Idea Refinement",
+      "keywords": ["refine", "idea", "brainstorm", "challenge", "validate"],
+      "requiredSkills": ["refine-ideas"],
+      "optionalSkills": ["critical-thinking"],
+      "excludedSkills": [],
+      "description": "Structured idea iteration and validation before commitment."
+    },
+    {
+      "id": "synchronization",
+      "name": "Synchronization & Maintenance",
+      "keywords": ["sync", "synchronize", "update", "maintain", "upgrade", "freshness"],
+      "requiredSkills": ["execute-sync-customizations"],
+      "optionalSkills": ["execute-sync-skills", "sync-compendium", "sync-editorconfig"],
+      "excludedSkills": [],
+      "description": "Customization and skill library maintenance, source freshness, and alignment."
+    },
+    {
+      "id": "compendium-sync",
+      "name": "Compendium Synchronization",
+      "keywords": ["compendium", "sync compendium", "import compendium"],
+      "requiredSkills": ["sync-compendium"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Compendium import/update with approval gates, source attribution, and merge behavior."
+    },
+    {
+      "id": "editorconfig-sync",
+      "name": "EditorConfig Synchronization",
+      "keywords": ["editorconfig", "editor config", "using", "type-file"],
+      "requiredSkills": ["sync-editorconfig"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Workspace .editorconfig creation and C# policy compliance validation."
+    },
+    {
+      "id": "dotnet-scaffolding",
+      "name": ".NET Project Scaffolding",
+      "keywords": ["scaffold", "scaffolding", "new project", "template", "setup", "initialization"],
+      "requiredSkills": ["scaffold-dotnet"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Lean .NET project structure, standard folders, and reusable build assets."
+    },
+    {
+      "id": "powershell-automation",
+      "name": "PowerShell Automation",
+      "keywords": ["powershell", "script", "automation", "cmdlet", "module"],
+      "requiredSkills": ["execute-powershell-script-library"],
+      "optionalSkills": ["audit-powershell"],
+      "excludedSkills": [],
+      "description": "Reusable PowerShell script library maintenance and catalog-first reuse."
+    },
+    {
+      "id": "powershell-review",
+      "name": "PowerShell Review",
+      "keywords": ["powershell review", "script review", "ps1 audit"],
+      "requiredSkills": ["audit-powershell"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "PowerShell script safety, reliability, and style auditing with corrections."
+    }
+  ]
+}

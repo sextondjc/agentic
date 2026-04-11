@@ -1,4 +1,4 @@
-# test-artifact-reference-hygiene.ps1: Flag unreferenced top-level .artifacts files.
+# test-artifact-reference-hygiene.ps1: Flag unreferenced governance artifact files.
 # Usage: ./.github/scripts/powershell/test-artifact-reference-hygiene.ps1 [-RootPath <path>] [-ArtifactsPath <path>]
 # Output: PSCustomObject rows with artifact path and reference evidence. Exits 1 if stale artifacts are found.
 
@@ -10,7 +10,7 @@ param(
 
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$ArtifactsPath = '.artifacts'
+    [string]$ArtifactsPath = '.github/skills/governance-health-overview/references/.artifacts'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -33,12 +33,12 @@ $searchFiles = @(
     Get-ChildItem -LiteralPath $resolvedRoot -Recurse -File |
         Where-Object {
             $_.FullName -notlike '*\.git\*' -and
-            $_.FullName -notlike '*\.artifacts\*'
+            $_.FullName -notlike '*\.github\skills\governance-health-overview\references\.artifacts\*'
         }
 )
 
 $results = foreach ($artifact in $artifactFiles) {
-    $matches = @(
+    $referenceHits = @(
         $searchFiles |
             Select-String -Pattern $artifact.Name -SimpleMatch |
             ForEach-Object { ($_.Path.Substring($resolvedRoot.Length + 1)) -replace '\\', '/' } |
@@ -46,10 +46,10 @@ $results = foreach ($artifact in $artifactFiles) {
     )
 
     [PSCustomObject]@{
-        ArtifactPath = '.artifacts/' + $artifact.Name
-        ReferenceCount = $matches.Count
-        ReferencedBy = ($matches -join '; ')
-        Status = if ($matches.Count -gt 0) { 'Referenced' } else { 'Unreferenced' }
+        ArtifactPath = '.github/skills/governance-health-overview/references/.artifacts/' + $artifact.Name
+        ReferenceCount = $referenceHits.Count
+        ReferencedBy = ($referenceHits -join '; ')
+        Status = if ($referenceHits.Count -gt 0) { 'Referenced' } else { 'Unreferenced' }
     }
 }
 
@@ -61,5 +61,5 @@ if ($unreferenced.Count -gt 0) {
     exit 1
 }
 
-Write-Output 'Artifact reference hygiene passed: all top-level .artifacts files are referenced by governance or skill assets.'
+Write-Output 'Artifact reference hygiene passed: all governance artifact files are referenced by governance or skill assets.'
 exit 0

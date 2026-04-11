@@ -3,7 +3,7 @@ param(
     [Parameter()]
     [string]$RootPath = (Get-Location).Path,
     [Parameter()]
-    [string]$OutputPath = '.artifacts/local-governance-run.json'
+    [string]$OutputPath = '.github/skills/governance-health-overview/references/.artifacts/local-governance-run.json'
 )
 
 $ErrorActionPreference = 'Stop'

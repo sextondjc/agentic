@@ -82,12 +82,12 @@ If evidence is incomplete, explicitly record the gap and what would be needed to
 
 Use these when they improve the quality of the assessment:
 
-- `task-research` for broad evidence gathering
-- `critical-thinking` to challenge assumptions and reduce false positives
-- `api-design` for HTTP, authentication, and integration-boundary analysis
-- `execute-syrx-data-access` for repository and explicit SQL review
-- `execute-dotnet-refactor` for obsolete API or legacy-pattern risk context
-- `adr-generator` when the recommended remediation should become an ADR
+- this skill for broad evidence gathering
+- this skill to challenge assumptions and reduce false positives
+- this skill for HTTP, authentication, and integration-boundary analysis
+- this skill for repository and explicit SQL review
+- this skill for obsolete API or legacy-pattern risk context
+- this skill when the recommended remediation should become an ADR
 
 Recommended coordinating agent: `security-researcher`
 

@@ -9,10 +9,10 @@ description: Use when maintaining .instructions.md and .agent.md files over time
 
 Maintain quality of `.instructions.md` and `.agent.md` files over time by continuously validating that their guidance is aligned with current workspace conventions, upstream standards, and actual agent behavior.
 
-## Required Companion Skills
+## Self-Containment Requirement
 
-- REQUIRED SUB-SKILL: Use `agent-authoring` or `instructions-authoring` when creating or editing customization content identified by this skill.
-- REQUIRED SUB-SKILL: Use `validate-customization` after updates to confirm the resulting artifacts still pass quality standards.
+- REQUIRED: Keep execution self-contained within this skill. Do not delegate execution to sibling skills.
+- REQUIRED: Keep execution self-contained within this skill. Do not delegate execution to sibling skills.
 
 ## Trigger Conditions
 
@@ -54,8 +54,8 @@ Optional:
 3. Update In Use, Last Evaluated, and Current Status for each source.
 4. Record concrete deltas that affect workspace instruction or agent files.
 5. For each affected artifact, assess against the evaluation criteria below.
-6. Route content changes to `agent-authoring` or `instructions-authoring` based on artifact type.
-7. Route post-update validation to `validate-customization`.
+6. Route content changes to this skill or this skill based on artifact type.
+7. Route post-update validation to this skill.
 8. Publish a short maintenance summary in `.docs/changes/customization-maintenance/` with the date and impacted artifacts.
 
 ## Evaluation Criteria
@@ -85,8 +85,8 @@ Apply all checks for each instruction or agent file:
 
 - Updated [source-catalog.md](./references/source-catalog.md).
 - Optional source evaluation artifact using [source-evaluation-template.md](./references/source-evaluation-template.md).
-- A concrete change list for `agent-authoring` and/or `instructions-authoring`.
-- A review request for `validate-customization` when updates were made.
+- A concrete change list for this skill and/or this skill.
+- A review request for this skill when updates were made.
 
 ## Done Criteria
 
@@ -94,9 +94,9 @@ This skill is complete for a run only when:
 
 - Every in-use source has an updated Last Evaluated date.
 - Any stale source is marked Needs Review or Deprecated.
-- All affected artifacts were routed to `agent-authoring` and/or `instructions-authoring`.
+- All affected artifacts were routed to this skill and/or this skill.
 - Brevity expectations were evaluated for affected artifacts and included in any routed change list.
-- Post-update validation was routed to `validate-customization`.
+- Post-update validation was routed to this skill.
 
 ## Required Outputs
 

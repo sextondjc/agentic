@@ -15,6 +15,7 @@
 | [benchmarkdotnet-performance-testing/](./benchmarkdotnet-performance-testing/INDEX.md) | Subfolder index. |
 | [branch-completion/](./branch-completion/INDEX.md) | Subfolder index. |
 | [build-maui-apps/](./build-maui-apps/INDEX.md) | Subfolder index. |
+| [compose-skills/](./compose-skills/INDEX.md) | Subfolder index. |
 | [condense-skill/](./condense-skill/INDEX.md) | Subfolder index. |
 | [critical-thinking/](./critical-thinking/INDEX.md) | Subfolder index. |
 | [curating-copilot-instructions/](./curating-copilot-instructions/INDEX.md) | Subfolder index. |
@@ -62,6 +63,7 @@
 | [skills-authoring/](./skills-authoring/INDEX.md) | Subfolder index. |
 | [subagent-driven-development/](./subagent-driven-development/INDEX.md) | Subfolder index. |
 | [summarize-governance/](./summarize-governance/INDEX.md) | Subfolder index. |
+| [sync-compendium/](./sync-compendium/INDEX.md) | Subfolder index. |
 | [sync-editorconfig/](./sync-editorconfig/INDEX.md) | Subfolder index. |
 | [syrx-validation/](./syrx-validation/INDEX.md) | Subfolder index. |
 | [task-execution/](./task-execution/INDEX.md) | Subfolder index. |
@@ -76,4 +78,4 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| [governance-type-audit-skills.md](./governance-type-audit-skills.md) | Full Skill Review Grid | change | / Metric / Value / /---/---/ / Review Date / 2026-04-11 / / Total Skills Reviewed / 52 / / Pass / 50 / / Pass With Advis... |
+| [governance-type-audit-skills.md](./governance-type-audit-skills.md) | Full Skill Review Grid | change | / Metric / Value / /---/---/ / Review Date / 2026-04-11 / / Total Skills Reviewed / 54 / / Pass / 51 / / Pass With Advis... |

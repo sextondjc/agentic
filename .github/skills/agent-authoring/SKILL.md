@@ -13,7 +13,7 @@ This skill is strictly for agent persona assets. It does not author `.instructio
 
 ## Prerequisites
 
-- REQUIRED SUB-SKILL: Use `route-customization` first when artifact type is not already confirmed as Agent.
+- REQUIRED: Keep execution self-contained within this skill. Do not delegate execution to sibling skills.
 - REQUIRED BACKGROUND: Understand that agents are explicitly invoked and must keep a singular specialist boundary.
 
 ## Frontmatter Rules
@@ -60,7 +60,14 @@ Invoke this skill when any of the following is true:
 2. Apply frontmatter and section requirements.
 3. Keep role scope singular and deterministic.
 4. Reference instruction standards instead of restating them.
-5. Route post-change quality checks to `validate-customization`.
+5. Route post-change quality checks to this skill.
+
+## Hard Constraint
+
+- Never create root-level folders in any workspace.
+- Never create top-level reference folders; keep references under the owning asset path (for example `.github/skills/<skill>/references/`).
+- `## Preferred Companion Skills` entries are **declarative only**. Do not embed cross-skill invocation directives inside an agent file. Cross-skill execution steps are a governance violation.
+- Skills referenced from agents must themselves be self-contained (SKR-M4). Flag skills that are not.
 
 ## Done Criteria
 
@@ -69,4 +76,4 @@ Authoring is complete when:
 - The target `.agent.md` file exists at the correct path.
 - Frontmatter is valid and complete.
 - Required sections are present with non-overlapping boundaries.
-- `validate-customization` routing is included for post-change review.
+- this skill routing is included for post-change review.

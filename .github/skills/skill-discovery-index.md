@@ -26,6 +26,7 @@ This index helps you quickly find the right workspace skill before implementatio
 | branch-completion | Execution | Review | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup | [SKILL.md](./branch-completion/SKILL.md) |
 | critical-thinking | Planning | Review | Use when pressure-testing assumptions, clarifying requirements, and evaluating trade-offs before implementation. | [SKILL.md](./critical-thinking/SKILL.md) |
 | learn-topics | Planning | Execution | Use when building a specialist learning path that decomposes a topic by depth and produces a source-backed learning map with optional skill/customization generation. | [SKILL.md](./learn-topics/SKILL.md) |
+| compose-skills | Planning | Execution | Use when a request needs deterministic multi-skill composition through an explicit orchestration contract while preserving skill self-containment. | [SKILL.md](./compose-skills/SKILL.md) |
 | design-mobile-ui-prototyping | Planning | Execution | Use when evolving low-fidelity wireframes into high-fidelity interactive prototypes with production-ready visual systems, component tokens, and annotated handoff artifacts. | [SKILL.md](./design-mobile-ui-prototyping/SKILL.md) |
 | curating-copilot-instructions | Execution | Planning | Use when importing skills, agents, or instructions from a catalogue and updating copilot-instructions.md to leverage them. | [SKILL.md](./curating-copilot-instructions/SKILL.md) |
 | current-test-coverage | Review | Execution | Use when a user asks for the current or latest test coverage and wants fresh coverage metrics from this session instead of previously recorded numbers. | [SKILL.md](./current-test-coverage/SKILL.md) |
@@ -71,4 +72,5 @@ This index helps you quickly find the right workspace skill before implementatio
 - If a skill is added, removed, or renamed, update this file in the same change.
 - Maintain `Primary Lane` and `Secondary Lane` values using the taxonomy in [planning-execution-review-governance.md](./audit-governance/references/planning-execution-review-governance.md).
 - For economical customization generation, use [customization-generation-template.md](./instructions-authoring/references/customization-generation-template.md) as the canonical optional scaffold.
+- Deterministic capability mapping and routing benchmarks are maintained in [capability-routing-registry.json](./compose-skills/references/capability-routing-registry.json) and [routing-benchmark-cases.json](./compose-skills/references/routing-benchmark-cases.json).
 

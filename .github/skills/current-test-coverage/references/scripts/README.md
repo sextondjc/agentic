@@ -14,14 +14,14 @@ These scripts are reusable assets for the `current-test-coverage` skill.
   - Purpose: runs the built-in full-solution fallback coverage command against `Rook.sln`, writes artifacts under a deterministic directory, captures console output to a log, and returns run metadata.
   - Usage:
     - `pwsh ./.github/skills/current-test-coverage/references/scripts/invoke-full-solution-coverage.ps1`
-    - `pwsh ./.github/skills/current-test-coverage/references/scripts/invoke-full-solution-coverage.ps1 -WorkspaceRoot c:/Projects/Rook -ArtifactsDirectory .artifacts/full-solution-coverage`
+    - `pwsh ./.github/skills/current-test-coverage/references/scripts/invoke-full-solution-coverage.ps1 -WorkspaceRoot c:/Projects/Rook -ArtifactsDirectory .github/skills/governance-health-overview/references/.artifacts/full-solution-coverage`
     - `pwsh ./.github/skills/current-test-coverage/references/scripts/invoke-full-solution-coverage.ps1 -AllowTestFailures`
 
 - `get-cobertura-coverage-summary.ps1`
   - Purpose: aggregates Cobertura files from a coverage artifact root, deduplicates line and branch counts, and produces aggregate plus per-package coverage objects.
   - Usage:
     - `pwsh ./.github/skills/current-test-coverage/references/scripts/get-cobertura-coverage-summary.ps1`
-    - `pwsh ./.github/skills/current-test-coverage/references/scripts/get-cobertura-coverage-summary.ps1 -CoverageRoot c:/Projects/Rook/.artifacts/full-solution-coverage`
+    - `pwsh ./.github/skills/current-test-coverage/references/scripts/get-cobertura-coverage-summary.ps1 -CoverageRoot c:/Projects/Rook/.github/skills/governance-health-overview/references/.artifacts/full-solution-coverage`
 
 ## Notes
 

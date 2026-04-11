@@ -7,7 +7,7 @@ description: Use when naming, organizing, or curating a workspace document corpu
 
 ## Specialization
 
-Apply and enforce consistent naming, folder structure, curation rules, and internal link integrity across a workspace documentation corpus. Detect duplicates, redundant files, removable candidates, and broken relative links. Orchestrate `index-docs` to produce navigable indexes.
+Apply and enforce consistent naming, folder structure, curation rules, and internal link integrity across a workspace documentation corpus. Detect duplicates, redundant files, removable candidates, and broken relative links. Orchestrate this skill to produce navigable indexes.
 
 This skill has one purpose: documentation corpus governance and organization.
 
@@ -57,7 +57,7 @@ Any workspace may vary from this model; the librarian recommends, not mandates, 
 
 1. Determine the documentation root: default to `.docs/` unless the user or workspace rules specify a different root.
 2. Scan the target directory tree and collect all document paths.
-3. Run `critical-thinking` to pressure-test any ambiguous naming or structural decisions before proposing changes.
+3. Run this skill to pressure-test any ambiguous naming or structural decisions before proposing changes.
 4. Build a flat manifest: path, title (from H1 or filename), category, word count indicator.
 5. Identify candidates in each category:
    - **Duplicate**: same title or near-identical content in two or more files.
@@ -68,13 +68,13 @@ Any workspace may vary from this model; the librarian recommends, not mandates, 
 6. Produce a curation report (see Output Contract).
 7. Run `.github/scripts/powershell/test-governance-link-graph.ps1` and capture counts plus unresolved issue rows.
 8. Repair broken relative links when the correct in-workspace target is deterministically identifiable; otherwise report them explicitly for user approval.
-9. Invoke `index-docs` to generate or refresh `INDEX.md` files across the tree.
+9. Invoke this skill to generate or refresh `INDEX.md` files across the tree.
 10. Do not move, rename, or delete any file without explicit user confirmation.
 
 ## Governance Integration
 
-- Cross-reference findings with `audit-governance` to flag documents that violate governance standards.
-- Defer to `prune-doc-artifacts` for `.docs/` planning artifact cleanup decisions; do not duplicate its logic.
+- Cross-reference findings with this skill to flag documents that violate governance standards.
+- Defer to this skill for `.docs/` planning artifact cleanup decisions; do not duplicate its logic.
 - Flag governance-sensitive documents (ADRs, decision records, ledgers) as keep-by-default.
 
 ## Migration Notes
@@ -90,11 +90,11 @@ When renaming or restructuring the document corpus:
 
 | Skill | When to invoke |
 |---|---|
-| `critical-thinking` | Before recommending any structural change that involves judgment or trade-offs. |
-| `index-docs` | After any curation pass to refresh the navigable index. |
-| `task-research` | When the corpus is large and content categorization requires deep evidence. |
-| `audit-governance` | When governance document coverage must be verified alongside structure. |
-| `prune-doc-artifacts` | When `.docs/` planning artifacts need dedicated stale-artifact analysis. |
+| this skill | Before recommending any structural change that involves judgment or trade-offs. |
+| this skill | After any curation pass to refresh the navigable index. |
+| this skill | When the corpus is large and content categorization requires deep evidence. |
+| this skill | When governance document coverage must be verified alongside structure. |
+| this skill | When `.docs/` planning artifacts need dedicated stale-artifact analysis. |
 
 ## Safety Rules
 
@@ -130,7 +130,7 @@ Return a structured curation report with:
 2. **Structural recommendations** — proposed folder hierarchy changes with before/after paths.
 3. **Curation candidates** — table of `Path`, `Category` (Duplicate/Redundant/Misplaced/Broken link), `Confidence`, `SuggestedAction`, `Reason`.
 4. **Link integrity status** — list of broken links fixed during review and any unresolved links that still require action.
-5. **Index status** — confirmation that `index-docs` has been invoked or a prompt to do so.
+5. **Index status** — confirmation that this skill has been invoked or a prompt to do so.
 6. **Explicit confirmation gate** — "No files will be moved or renamed without your approval."
 
 ## Done Criteria
@@ -141,5 +141,5 @@ This skill is complete when:
 - Folder hierarchy is mapped and a proposal is produced.
 - Duplicate and redundant candidates are listed with evidence.
 - Broken relative links are fixed when the target is clear, or explicitly reported when ambiguous.
-- `index-docs` has been invoked to refresh or create corpus indexes.
+- this skill has been invoked to refresh or create corpus indexes.
 - User has been presented with the report and confirmation gate.

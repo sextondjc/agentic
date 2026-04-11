@@ -82,11 +82,11 @@ Exclude low-impact detail unless required to explain a top finding.
 
 ## Companion Skills
 
-- `audit-governance`
-- `governance-health-overview`
-- `skill-review`
-- `validate-customization`
-- `delivery-status-grid`
+- this skill
+- this skill
+- this skill
+- this skill
+- this skill
 
 ## Done Criteria
 

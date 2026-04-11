@@ -11,9 +11,9 @@ Turn an early idea into a refined, decision-ready concept by combining structure
 
 ## Required Collaborators
 
-- `critical-thinking` for assumption pressure tests, trade-off challenge, and decision-quality checks.
-- `learn-topics` for depth-calibrated topic learning and source-backed context.
-- `task-research` when claims need external validation before final recommendation.
+- this skill for assumption pressure tests, trade-off challenge, and decision-quality checks.
+- this skill for depth-calibrated topic learning and source-backed context.
+- this skill when claims need external validation before final recommendation.
 
 ## When to Use
 
@@ -44,8 +44,8 @@ Use `./references/idea-refinement-session-template.md` for the session artifact.
 ## Workflow
 
 1. Capture the raw idea in one paragraph plus constraints and desired outcome.
-2. Select learning depth (`L1` to `L4`) and invoke `learn-topics` for domain grounding.
-3. Run iterative challenge rounds using `critical-thinking` one focused question at a time.
+2. Select learning depth (`L1` to `L4`) and invoke this skill for domain grounding.
+3. Run iterative challenge rounds using this skill one focused question at a time.
 4. After each round, update the challenge log with:
    - challenge question
    - current answer

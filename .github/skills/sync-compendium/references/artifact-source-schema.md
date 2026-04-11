@@ -59,7 +59,7 @@ Use this schema in target repositories to classify imported assets and preserve 
 
 ## Companion Lock File (per target repository)
 
-Store one lock file that tracks the currently approved compendium baseline, for example `.compendium/lock.json`.
+Store one lock file that tracks the currently approved compendium baseline, for example `.github/skills/sync-compendium/references/.compendium/lock.json`.
 
 ```json
 {

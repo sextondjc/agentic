@@ -9,10 +9,10 @@ description: Use when maintaining a skill library over time and you need to eval
 
 Maintain skill quality over time by continuously validating that skill guidance is aligned with current external standards and platform behavior.
 
-## Required Companion Skills
+## Self-Containment Requirement
 
-- REQUIRED SUB-SKILL: Use skills-authoring when creating or editing any skill content identified by this skill.
-- REQUIRED SUB-SKILL: Use skill-review after updates to confirm the resulting skills still pass quality standards.
+- REQUIRED: Keep execution self-contained within this skill. Do not delegate execution to sibling skills.
+- REQUIRED: Keep execution self-contained within this skill. Do not delegate execution to sibling skills.
 
 ## Trigger Conditions
 

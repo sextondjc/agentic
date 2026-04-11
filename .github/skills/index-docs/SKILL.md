@@ -18,7 +18,7 @@ Each `INDEX.md` is placed at the root of its folder and follows this structure:
 ```markdown
 # Index: <folder-name>
 
-> Corpus index. Do not edit manually — refresh with `index-docs`.
+> Corpus index. Do not edit manually — refresh with this skill.
 
 ## Subfolders
 
@@ -59,14 +59,16 @@ Each `INDEX.md` is placed at the root of its folder and follows this structure:
 - Overwrite existing `INDEX.md` files on each refresh run.
 - Preserve any manually authored sections marked with `<!-- preserve -->` comment blocks.
 - Never index files excluded by a `.librarianignore` file in the folder (if present).
+- Never create root-level folders in any workspace.
+- Never create top-level reference folders; keep references under owning asset paths.
 
 ## `.librarianignore` Support
 
 If a folder contains a `.librarianignore` file, exclude paths matching its patterns from the index. Format is one glob pattern per line (same syntax as `.gitignore`).
 
-## Integration with `librarian`
+## Integration with this skill
 
-- This skill is invoked by `librarian` after any curation pass.
+- This skill is invoked by this skill after any curation pass.
 - Can also be run independently to refresh stale indexes without triggering full curation.
 
 ## Trigger Conditions
@@ -75,7 +77,7 @@ Invoke this skill when any of the following is true:
 
 - A document corpus needs a navigable index for agentic workflows.
 - Existing `INDEX.md` files are stale after documents were added, moved, or renamed.
-- `librarian` invokes this skill as part of its output contract.
+- this skill invokes this skill as part of its output contract.
 - A new workspace is being structured and initial indexes are required.
 
 ## Inputs

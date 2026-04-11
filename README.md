@@ -37,7 +37,7 @@ This repository is customization-only.
 |---|---|---|
 | `.github/skills/<skill>/references` | Reusable, versioned skill assets (scripts, templates, checklists, examples). | Keep skill-contained assets here. |
 | `.github/scripts/powershell` | Shared cross-skill automation scripts. | Use only when reuse scope spans multiple skills. |
-| `.artifacts` | Runtime-generated execution outputs (coverage runs, governance payloads, temporary evidence snapshots). | Do not treat these as reusable skill assets; retain only actively referenced evidence files. |
+| `.github/skills/governance-health-overview/references/.artifacts` | Runtime-generated execution outputs (coverage runs, governance payloads, temporary evidence snapshots). | Keep runtime artifacts in this governance-owned references path; do not create root-level artifact folders. |
 
 ## Prompt Entry Points
 
@@ -64,7 +64,7 @@ The root README now includes a direct prompt index so operational prompts are di
 | workspace-scaffolder | [workspace-scaffolder.prompt.md](./.github/prompts/workspace-scaffolder.prompt.md) | Execution |
 | write-component-docs | [write-component-docs.prompt.md](./.github/prompts/write-component-docs.prompt.md) | Execution |
 
-## Compendium Maintenance Entry Points
+## Compendium Maintenance Entry Points 
 
 Use these assets when keeping this repository synchronized for downstream reuse.
 

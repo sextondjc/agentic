@@ -10,6 +10,7 @@
 | audit-powershell | audit-powershell-history.md | 2026-04-11 | Pass |
 | branch-completion | branch-completion-history.md | 2026-04-11 | Pass |
 | build-maui-apps | build-maui-apps-history.md | 2026-04-11 | Pass |
+| compose-skills | compose-skills-history.md | 2026-04-11 | Pass |
 | critical-thinking | critical-thinking-history.md | 2026-04-11 | Pass |
 | curating-copilot-instructions | curating-copilot-instructions-history.md | 2026-04-11 | Pass |
 | current-test-coverage | current-test-coverage-history.md | 2026-04-11 | Pass |
@@ -46,6 +47,7 @@
 | skill-review | skill-review-history.md | 2026-04-11 | Pass |
 | skills-authoring | skills-authoring-history.md | 2026-04-11 | Pass |
 | summarize-governance | summarize-governance-history.md | 2026-04-11 | Pass |
+| sync-compendium | sync-compendium-history.md | 2026-04-11 | Pass With Advisories |
 | sync-editorconfig | sync-editorconfig-history.md | 2026-04-11 | Pass |
 | syrx-validation | syrx-validation-history.md | 2026-04-11 | Pass With Advisories |
 | task-execution | task-execution-history.md | 2026-04-11 | Pass With Advisories |

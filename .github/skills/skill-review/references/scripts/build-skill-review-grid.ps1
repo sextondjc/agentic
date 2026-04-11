@@ -57,7 +57,8 @@ $lines += '| Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Stat
 $lines += '|---|---|---:|---:|---|---|'
 
 foreach ($row in $rows) {
-    $lines += "| $($row.Skill) | $($row.Outcome) | $($row.MustFailures) | $($row.ShouldAdvisories) | $($row.ConflictStatus) | $($row.ReportPath) |"
+    $reportLink = "[review.md](./$($row.Skill)/review.md)"
+    $lines += "| $($row.Skill) | $($row.Outcome) | $($row.MustFailures) | $($row.ShouldAdvisories) | $($row.ConflictStatus) | $reportLink |"
 }
 
 Set-Content -Path $outFile -Value ($lines -join "`n") -NoNewline

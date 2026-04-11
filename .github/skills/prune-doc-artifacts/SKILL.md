@@ -9,10 +9,10 @@ description: Use when auditing .docs planning and execution artifacts to identif
 
 Find candidate documentation leftovers from completed plans and execution runs without deleting anything automatically.
 
-## Required Companion Skills
+## Self-Containment Requirement
 
-- REQUIRED SUB-SKILL: Use `task-research` when stale status is uncertain and you need deeper evidence across plans and changes.
-- REQUIRED SUB-SKILL: Use `delivery-status-grid` when reporting cleanup progress to users who want grid-first updates.
+- REQUIRED: Keep execution self-contained within this skill. Do not delegate execution to sibling skills.
+- REQUIRED: Keep execution self-contained within this skill. Do not delegate execution to sibling skills.
 
 ## Trigger Conditions
 

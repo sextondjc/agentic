@@ -14,4 +14,4 @@
 |---|---:|---|
 | Agents | 15 | Specialized sections validated |
 | Instructions | 17 | applyTo values validated |
-| Prompts | 17 | Included in governance core checks |
+| Prompts | 18 | Included in governance core checks |

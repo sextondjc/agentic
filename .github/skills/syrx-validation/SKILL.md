@@ -18,7 +18,7 @@ Use this skill to standardize boundary validation with `Syrx.Validation.Contract
 
 ## When Not to Use
 
-- Replacing repository SQL/data-access patterns (use `execute-syrx-data-access` for that).
+- Replacing repository SQL/data-access patterns (use this skill for that).
 - General non-Syrx validation strategy decisions.
 - Domain behavior changes unrelated to input validation guards.
 
@@ -66,4 +66,4 @@ Throw<ArgumentException>(count > 0, "Count must be positive, got {0}", count);
 
 ## Related Skills
 
-- `execute-syrx-data-access` for repository SQL/data-access implementation patterns.
+- this skill for repository SQL/data-access implementation patterns.

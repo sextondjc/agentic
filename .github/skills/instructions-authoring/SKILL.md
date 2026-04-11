@@ -13,7 +13,7 @@ This skill is strictly for always-on policy assets. It does not author `.agent.m
 
 ## Prerequisites
 
-- REQUIRED SUB-SKILL: Use `route-customization` first when artifact type is not already confirmed as Instruction.
+- REQUIRED: Keep execution self-contained within this skill. Do not delegate execution to sibling skills.
 - REQUIRED BACKGROUND: Understand that instructions are loaded automatically by `applyTo` scope and must contain policy rules only.
 
 ## Frontmatter Rules
@@ -61,7 +61,13 @@ Invoke this skill when any of the following is true:
 2. Apply frontmatter and scope requirements.
 3. Ensure content is policy-only and testable.
 4. Remove duplication and narrative padding.
-5. Route post-change quality checks to `validate-customization`.
+5. Route post-change quality checks to this skill.
+
+## Hard Constraint
+
+- Never create root-level folders in any workspace.
+- Never create top-level reference folders; keep references under the owning asset path (for example `.github/skills/<skill>/references/`).
+- Instruction files MUST NOT embed skill names or cross-skill delegation in their policy content. Policy scope is rules only; no execution routing to skills.
 
 ## Done Criteria
 
@@ -71,4 +77,4 @@ Authoring is complete when:
 - Frontmatter is valid and complete.
 - `applyTo` scope matches policy intent.
 - Content is policy-only and passes deterministic checks.
-- `validate-customization` routing is included for post-change review.
+- this skill routing is included for post-change review.

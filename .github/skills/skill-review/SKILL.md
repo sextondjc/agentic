@@ -25,6 +25,7 @@ Use these standards exactly:
 | SKR-M1 | Specialization | MUST | Skill scope is hyper-specialized to one objective only. | Mark as failed and recommend scope split or refocus. |
 | SKR-M2 | Valid format | MUST | Valid YAML front matter and valid Markdown structure for Copilot skill loading. | Mark as failed and provide exact formatting fix. |
 | SKR-M3 | Triggers | MUST | Clear discovery triggers in description and body with concrete use conditions. | Mark as failed and provide trigger rewrite guidance. |
+| SKR-M4 | No cross-skill references | MUST | Skill guidance body contains no invocations, delegations, required-sub-skill directives, or workflow steps that call a named sibling skill. All execution content must be self-contained. | Mark as failed; inline required content directly or introduce a dedicated orchestrator skill as the indirection layer. Do not cross-reference to resolve shared logic. |
 | SKR-S1 | Assets | SHOULD | Skill uses concrete references or reusable assets when they materially improve execution support; a `references/` directory is optional when the skill is already self-contained. | Record advisory finding only when missing assets cause ambiguity, duplication, or weak reuse. |
 | SKR-S2 | No conflict | SHOULD NOT conflict | No harmful overlap or contradictory behavior with other skills. | Start conflict workflow and document resolution plan. |
 | SKR-S3 | Link integrity | SHOULD | Markdown links are resolvable, non-placeholder, and aligned with referenced assets/docs, including valid fragment anchors when present. Validate from the on-disk workspace file context. | Record advisory finding and recommend target fixes or valid replacements. |
@@ -75,8 +76,8 @@ Optional inputs:
 
 - Script assets are available at path: [README.md](./references/scripts/README.md).
 - A dedicated `references/` folder is optional for reviewed skills; do not recommend it by default when the artifact is already self-contained.
-- For skill artifacts, use `skills-authoring` for concision-focused remediation when wording reductions are needed.
-- For non-skill customization artifacts, use `agent-authoring` or `instructions-authoring` for concision-focused remediation when wording reductions are needed.
+- For skill artifacts, use this skill for concision-focused remediation when wording reductions are needed.
+- For non-skill customization artifacts, use this skill or this skill for concision-focused remediation when wording reductions are needed.
 - Use [customization-generation-template.md](./../instructions-authoring/references/customization-generation-template.md) as an optional reference for concision baselines, while verifying reviewed skills remain self-contained.
 - Use generate-baseline-skill-reviews.ps1 to run full baseline audits and history updates.
 - Use get-skill-metadata-audit.ps1 for quick frontmatter/trigger/reference checks.
@@ -95,7 +96,7 @@ Optional inputs:
 7. Validate self-containedness semantically: required execution context must be explicit and not rely on unstated assumptions, using canonical section names or clearly labeled equivalent sections.
 8. Validate brevity: wording should be economical for context efficiency, without obvious duplication or narrative padding.
 9. Produce pass or fail for MUST standards and advisory outcome for SHOULD standards.
-10. If advisory findings are primarily concision-related, route rewrite recommendations through `skills-authoring`, `agent-authoring`, or `instructions-authoring` based on artifact type before finalizing remediation wording.
+10. If advisory findings are primarily concision-related, route rewrite recommendations through this skill, this skill, or this skill based on artifact type before finalizing remediation wording.
 11. If conflict is detected:
    - Document conflict using workspace documentation standards.
    - Recommend one or more concrete resolution options.
