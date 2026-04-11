@@ -31,6 +31,14 @@ This repository is customization-only.
 | [skill-discovery-index.md](./.github/skills/skill-discovery-index.md) | Skill discovery index with lane assignments and usage guidance. |
 | [agent-routing-guide.md](./.docs/agent-routing-guide.md) | Routing guidance for choosing the right agent/skill path. |
 
+## Artifact Boundary Policy
+
+| Location | Content Type | Rule |
+|---|---|---|
+| `.github/skills/<skill>/references` | Reusable, versioned skill assets (scripts, templates, checklists, examples). | Keep skill-contained assets here. |
+| `.github/scripts/powershell` | Shared cross-skill automation scripts. | Use only when reuse scope spans multiple skills. |
+| `.artifacts` | Runtime-generated execution outputs (coverage runs, governance payloads, temporary evidence snapshots). | Do not treat these as reusable skill assets; retain only actively referenced evidence files. |
+
 ## Prompt Entry Points
 
 The root README now includes a direct prompt index so operational prompts are discoverable without opening the lifecycle catalog first.

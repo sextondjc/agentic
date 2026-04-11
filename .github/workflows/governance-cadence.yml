@@ -53,6 +53,9 @@ jobs:
             # Governance artifact path contracts (exits 1 on legacy path violations)
             ./.github/scripts/powershell/test-governance-artifact-contract.ps1
 
+            # Artifact reference hygiene (exits 1 on stale unreferenced .artifacts files)
+            ./.github/scripts/powershell/test-artifact-reference-hygiene.ps1 | Tee-Object -FilePath ./.artifacts/artifact-reference-hygiene.txt
+
             # .docs naming conformance
             ./.github/scripts/powershell/test-naming-conformance.ps1 -RootPath .docs
 

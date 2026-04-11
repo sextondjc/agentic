@@ -122,6 +122,7 @@ try {
         @{ Name = 'optimization-factor'; Command = { ./.github/scripts/powershell/test-governance-optimization-factor.ps1 } },
         @{ Name = 'link-graph'; Command = { ./.github/scripts/powershell/test-governance-link-graph.ps1 } },
         @{ Name = 'artifact-contract'; Command = { ./.github/scripts/powershell/test-governance-artifact-contract.ps1 } },
+        @{ Name = 'artifact-reference-hygiene'; Command = { ./.github/scripts/powershell/test-artifact-reference-hygiene.ps1 } },
         @{ Name = 'docs-naming'; Command = { ./.github/scripts/powershell/test-naming-conformance.ps1 -RootPath .docs } },
         @{ Name = 'asset-naming'; Command = { ./.github/scripts/powershell/test-asset-naming.ps1 -AssetType all } },
         @{ Name = 'utilization-coverage'; Command = { ./.github/scripts/powershell/test-utilization-coverage.ps1 } },

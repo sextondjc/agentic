@@ -36,6 +36,7 @@ try {
         @{ Name='optimization-factor-check'; Cmd={ ./.github/scripts/powershell/test-governance-optimization-factor.ps1 } },
         @{ Name='link-graph'; Cmd={ ./.github/scripts/powershell/test-governance-link-graph.ps1 } },
         @{ Name='artifact-contract'; Cmd={ ./.github/scripts/powershell/test-governance-artifact-contract.ps1 } },
+        @{ Name='artifact-reference-hygiene'; Cmd={ ./.github/scripts/powershell/test-artifact-reference-hygiene.ps1 } },
         @{ Name='docs-naming'; Cmd={ ./.github/scripts/powershell/test-naming-conformance.ps1 -RootPath .docs } },
         @{ Name='asset-naming'; Cmd={ ./.github/scripts/powershell/test-asset-naming.ps1 -AssetType all } },
         @{ Name='utilization-coverage'; Cmd={ ./.github/scripts/powershell/test-utilization-coverage.ps1 } },
