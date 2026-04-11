@@ -19,17 +19,23 @@
 | [critical-thinking/](./critical-thinking/INDEX.md) | Subfolder index. |
 | [curating-copilot-instructions/](./curating-copilot-instructions/INDEX.md) | Subfolder index. |
 | [current-test-coverage/](./current-test-coverage/INDEX.md) | Subfolder index. |
-| [customization-authoring/](./customization-authoring/INDEX.md) | Subfolder index. |
 | [customization-review/](./customization-review/INDEX.md) | Subfolder index. |
 | [customization-routing-decision/](./customization-routing-decision/INDEX.md) | Subfolder index. |
 | [delivery-status-grid/](./delivery-status-grid/INDEX.md) | Subfolder index. |
+| [design-mobile-ui-prototyping/](./design-mobile-ui-prototyping/INDEX.md) | Subfolder index. |
 | [design-mobile-ux/](./design-mobile-ux/INDEX.md) | Subfolder index. |
+| [design-usability-testing-scripts/](./design-usability-testing-scripts/INDEX.md) | Subfolder index. |
 | [docker-dotnet/](./docker-dotnet/INDEX.md) | Subfolder index. |
 | [domain-design/](./domain-design/INDEX.md) | Subfolder index. |
 | [dotnet-modernization/](./dotnet-modernization/INDEX.md) | Subfolder index. |
-| [dotnet-refactor/](./dotnet-refactor/INDEX.md) | Subfolder index. |
-| [dotnet-resilience/](./dotnet-resilience/INDEX.md) | Subfolder index. |
-| [executing-plans/](./executing-plans/INDEX.md) | Subfolder index. |
+| [execute-dotnet-refactor/](./execute-dotnet-refactor/INDEX.md) | Subfolder index. |
+| [execute-dotnet-resilience/](./execute-dotnet-resilience/INDEX.md) | Subfolder index. |
+| [execute-plans/](./execute-plans/INDEX.md) | Subfolder index. |
+| [execute-powershell-script-library/](./execute-powershell-script-library/INDEX.md) | Subfolder index. |
+| [execute-sync-customizations/](./execute-sync-customizations/INDEX.md) | Subfolder index. |
+| [execute-sync-skills/](./execute-sync-skills/INDEX.md) | Subfolder index. |
+| [execute-syrx-data-access/](./execute-syrx-data-access/INDEX.md) | Subfolder index. |
+| [execute-test-driven-development/](./execute-test-driven-development/INDEX.md) | Subfolder index. |
 | [finishing-a-development-branch/](./finishing-a-development-branch/INDEX.md) | Subfolder index. |
 | [governance-health-overview/](./governance-health-overview/INDEX.md) | Subfolder index. |
 | [index-docs/](./index-docs/INDEX.md) | Subfolder index. |
@@ -38,11 +44,9 @@
 | [keeping-skills-current/](./keeping-skills-current/INDEX.md) | Subfolder index. |
 | [learn-topics/](./learn-topics/INDEX.md) | Subfolder index. |
 | [librarian/](./librarian/INDEX.md) | Subfolder index. |
-| [mobile-ui-prototyping/](./mobile-ui-prototyping/INDEX.md) | Subfolder index. |
 | [optimize-customizations/](./optimize-customizations/INDEX.md) | Subfolder index. |
 | [perf-benchmark/](./perf-benchmark/INDEX.md) | Subfolder index. |
 | [performance-research/](./performance-research/INDEX.md) | Subfolder index. |
-| [powershell-script-library/](./powershell-script-library/INDEX.md) | Subfolder index. |
 | [powershell-script-review/](./powershell-script-review/INDEX.md) | Subfolder index. |
 | [prd-generator/](./prd-generator/INDEX.md) | Subfolder index. |
 | [prune-doc-artifacts/](./prune-doc-artifacts/INDEX.md) | Subfolder index. |
@@ -58,15 +62,12 @@
 | [skills-authoring/](./skills-authoring/INDEX.md) | Subfolder index. |
 | [subagent-driven-development/](./subagent-driven-development/INDEX.md) | Subfolder index. |
 | [summarize-governance/](./summarize-governance/INDEX.md) | Subfolder index. |
-| [sync-customizations/](./sync-customizations/INDEX.md) | Subfolder index. |
 | [sync-editorconfig/](./sync-editorconfig/INDEX.md) | Subfolder index. |
-| [sync-skills/](./sync-skills/INDEX.md) | Subfolder index. |
-| [syrx-data-access/](./syrx-data-access/INDEX.md) | Subfolder index. |
+| [syrx-validation/](./syrx-validation/INDEX.md) | Subfolder index. |
 | [task-execution/](./task-execution/INDEX.md) | Subfolder index. |
 | [task-research/](./task-research/INDEX.md) | Subfolder index. |
+| [taxonomy/](./taxonomy/INDEX.md) | Subfolder index. |
 | [technical-documentation/](./technical-documentation/INDEX.md) | Subfolder index. |
-| [test-driven-development/](./test-driven-development/INDEX.md) | Subfolder index. |
-| [usability-testing-scripts/](./usability-testing-scripts/INDEX.md) | Subfolder index. |
 | [validate-customization/](./validate-customization/INDEX.md) | Subfolder index. |
 | [write-technical-docs/](./write-technical-docs/INDEX.md) | Subfolder index. |
 | [writing-plans/](./writing-plans/INDEX.md) | Subfolder index. |
@@ -75,6 +76,4 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| [20260409-full-skill-review-grid.md](./20260409-full-skill-review-grid.md) | Full Skill Review Grid | change | / Metric / Value / /---/---/ / Review Date / 2026-04-09 / / Total Skills Reviewed / 48 / / Pass / 48 / / Pass With Advis... |
-| [full-skill-review-grid.md](./full-skill-review-grid.md) | Full Skill Review Grid | change | / Metric / Value / /---/---/ / Review Date / 2026-04-10 / / Total Skills Reviewed / 50 / / Pass / 48 / / Pass With Advis... |
-| [full-skill-review-history.md](./full-skill-review-history.md) | Full Skill Review Grid History | change | Consolidated history for date-prefixed files previously kept individually. |
+| [governance-type-audit-skills.md](./governance-type-audit-skills.md) | Full Skill Review Grid | change | / Metric / Value / /---/---/ / Review Date / 2026-04-11 / / Total Skills Reviewed / 52 / / Pass / 50 / / Pass With Advis... |

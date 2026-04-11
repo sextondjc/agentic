@@ -11,6 +11,14 @@ Apply and enforce consistent naming, folder structure, curation rules, and inter
 
 This skill has one purpose: documentation corpus governance and organization.
 
+## Link Integrity Ownership
+
+- Librarian is the designated owner for documentation link integrity across `.docs` and governance-facing markdown references.
+- Every librarian curation pass MUST execute `.github/scripts/powershell/test-governance-link-graph.ps1` and include the result in the Link integrity status output.
+- When deterministic repairs are available, librarian MUST apply or propose exact replacements and rerun link validation before closing the pass.
+- When deterministic repairs are not available, librarian MUST publish an unresolved-link ledger with owner, target path, and required follow-up action.
+- Governance routines should treat unresolved librarian link-integrity findings as blocking for a `PASSED` disposition.
+
 ## Naming Rules
 
 These rules apply to all documents and folders recommended or created by this skill.
@@ -58,9 +66,10 @@ Any workspace may vary from this model; the librarian recommends, not mandates, 
    - **Name violation**: file or folder name breaks the naming rules above.
   - **Broken link**: relative internal link target does not exist or still points to a superseded path.
 6. Produce a curation report (see Output Contract).
-7. Repair broken relative links when the correct in-workspace target is deterministically identifiable; otherwise report them explicitly for user approval.
-8. Invoke `index-docs` to generate or refresh `INDEX.md` files across the tree.
-9. Do not move, rename, or delete any file without explicit user confirmation.
+7. Run `.github/scripts/powershell/test-governance-link-graph.ps1` and capture counts plus unresolved issue rows.
+8. Repair broken relative links when the correct in-workspace target is deterministically identifiable; otherwise report them explicitly for user approval.
+9. Invoke `index-docs` to generate or refresh `INDEX.md` files across the tree.
+10. Do not move, rename, or delete any file without explicit user confirmation.
 
 ## Governance Integration
 

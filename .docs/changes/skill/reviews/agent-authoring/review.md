@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-10
+- Review Date: 2026-04-11
 - Reviewer Skill: skill-review
 - Target Skill: agent-authoring
 - Target Path: .github/skills/agent-authoring/SKILL.md

@@ -24,12 +24,7 @@ Keep this skill focused on containerization decisions and execution guidance for
 
 ## Fast Rules
 
-- Use Microsoft base images from mcr.microsoft.com and pin image versions.
-- Use multi-stage builds and keep SDK out of runtime images.
-- Run runtime containers as non-root.
-- Never bake secrets into image layers.
-- Keep build context lean with a .dockerignore file.
-- Gate push pipelines with vulnerability scanning.
+Use the canonical fast-rule checklist in [fast-rules.md](./references/fast-rules.md) to avoid duplicating security and build guidance inline.
 
 ## Required Inputs
 
@@ -55,6 +50,7 @@ Keep this skill focused on containerization decisions and execution guidance for
 ## References
 
 - [containerization-checklist.md](./references/containerization-checklist.md)
+- [fast-rules.md](./references/fast-rules.md)
 - [dockerignore-template](./references/dockerignore-template)
 - [dockerfile-playbook.md](./references/dockerfile-playbook.md)
 - [compose-ci-testcontainers-playbook.md](./references/compose-ci-testcontainers-playbook.md)

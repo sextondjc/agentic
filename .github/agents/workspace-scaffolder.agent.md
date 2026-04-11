@@ -72,7 +72,7 @@ Before writing application code:
 - [ ] Confirm Syrx dependency and version in `.csproj`.
 - [ ] Review [csharp.instructions.md](./../instructions/csharp.instructions.md) as a team.
 - [ ] Create first ADR in `.docs/adr/0001-domain-model.md` documenting core aggregates.
-- [ ] Scaffold initial repository structure in `Infrastructure/` using `syrx-data-access` skill guidance.
+- [ ] Scaffold initial repository structure in `Infrastructure/` using `execute-syrx-data-access` skill guidance.
 - [ ] Create `.docs/plans/phase-1-implementation.md` with detailed tasks.
 
 ## Next Steps (Phase 2)

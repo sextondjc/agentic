@@ -7,7 +7,7 @@ description: 'Prompt to run a full technical documentation review, update stale 
 
 Route this request to `orchestrator`.
 
-Use the `technical-documentation` skill as the primary workflow.
+Use the `write-technical-docs` skill as the primary workflow.
 
 ## Goal
 

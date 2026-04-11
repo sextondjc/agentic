@@ -5,6 +5,7 @@ This folder contains reusable playbooks and templates referenced by the docker-d
 ## Assets
 
 - [containerization-checklist.md](./containerization-checklist.md)
+- [fast-rules.md](./fast-rules.md)
 - [dockerignore-template](./dockerignore-template)
 - [dockerfile-playbook.md](./dockerfile-playbook.md)
 - [compose-ci-testcontainers-playbook.md](./compose-ci-testcontainers-playbook.md)

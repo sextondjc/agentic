@@ -39,7 +39,7 @@ Use this matrix to select the correct execution route.
 |---|---|---|
 | No approved plan exists | `writing-plans` skill | A traceable plan with scoped tasks and IDs. |
 | Approved plan, same-session implementation | `task-execution` skill | Implemented artifacts with ongoing `.docs/changes` updates. |
-| Approved plan, separate/dedicated execution session | `executing-plans` skill | Checkpointed progress and explicit handoff continuity. |
+| Approved plan, separate/dedicated execution session | `execute-plans` skill | Checkpointed progress and explicit handoff continuity. |
 | Multi-phase or ambiguous request | `orchestrator` agent | Phase-split assignment to the correct specialist. |
 
 ## Quick Start

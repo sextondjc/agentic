@@ -91,7 +91,7 @@ Optional:
 - A conflict report when needed using [customization-conflict-report-template.md](./references/customization-conflict-report-template.md).
 - Review result summaries MUST be returned in Markdown grid format (tables), not prose lists.
 - Aggregate multi-artifact results MUST include at least one consolidated grid with per-artifact outcomes.
-- Review reports MUST be stored at `.docs/changes/customization/reviews/audit.md`.
+- Review reports MUST be stored at `.docs/changes/customization/reviews/governance-type-audit-customizations.md`.
 - Review history MUST be appended to `.docs/changes/customization/reviews/audit-history.md` as one row per reviewed artifact.
 
 #### Violation Code Legend
@@ -121,6 +121,7 @@ Optional:
    - Document conflict using the conflict report template.
    - Recommend one or more concrete resolution options.
    - Work with the user to choose and confirm the resolution.
-8. Produce the review report and store it at `.docs/changes/customization/reviews/audit.md`.
+8. Produce the review report and store it at `.docs/changes/customization/reviews/governance-type-audit-customizations.md`.
 9. Append history rows for all reviewed artifacts to `.docs/changes/customization/reviews/audit-history.md`.
 10. Route any required fixes to `agent-authoring` or `instructions-authoring` based on artifact type.
+

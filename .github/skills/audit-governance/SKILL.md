@@ -55,10 +55,11 @@ Core checks:
 - GOV-M2 frontmatter validity
 - GOV-M3 catalog integrity
 - GOV-M4 lifecycle-governance coverage
-- GOV-S1..GOV-S10 advisory checks
+- GOV-S1..GOV-S11 advisory checks
 - GOV-OPT optimization factor coverage across authoring and review routines
 - GOV-S9 utilization coverage across skills, agents, and prompts
 - GOV-S10 review recency threshold coverage for tracked assets
+- GOV-S11 responsibility overlap threshold coverage across agents, instructions, prompts, and skills
 
 Companion checks:
 - Use skill-review for GOV-SK outcomes.
@@ -85,6 +86,7 @@ Use these existing scripts:
 - test-utilization-coverage.ps1
 - test-review-recency.ps1
 - test-source-catalog-freshness.ps1
+- test-responsibility-overlap.ps1
 
 ## Output Rules
 
@@ -97,4 +99,6 @@ Use these existing scripts:
 - All GOV-M* and GOV-S* checks executed with evidence.
 - Report saved at required path.
 - Recommendations mapped to specific failures or advisories.
-- Source catalogs for sync-customizations and sync-skills are checked for freshness threshold drift.
+- Source catalogs for execute-sync-customizations and execute-sync-skills are checked for freshness threshold drift.
+
+

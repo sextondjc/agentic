@@ -8,9 +8,9 @@ This file catalogs the active customization assets under `.github` and summarize
 |---|---:|---|---|
 | Workspace hub | 1 | Defines workspace-wide behavior, routing preferences, and preferred assets. | [copilot-instructions.md](./copilot-instructions.md) |
 | Agents | 15 | Specialist agent modes invoked explicitly for narrow responsibilities. | [agent-lifecycle-catalog.md](./agents/agent-lifecycle-catalog.md) |
-| Skills | 47 | Reusable workflows and domain playbooks used before or during implementation. | [skill-discovery-index.md](./skills/skill-discovery-index.md) |
+| Skills | 51 | Reusable workflows and domain playbooks used before or during implementation. | [skill-discovery-index.md](./skills/skill-discovery-index.md) |
 | Instructions | 16 | Always-on policy files applied by `applyTo` scope. | [instruction-lifecycle-catalog.md](./instructions/instruction-lifecycle-catalog.md) |
-| Prompts | 16 | Reusable prompt templates for repeatable governance and delivery workflows. | [prompt-lifecycle-catalog.md](./prompts/prompt-lifecycle-catalog.md) |
+| Prompts | 17 | Reusable prompt templates for repeatable governance and delivery workflows. | [prompt-lifecycle-catalog.md](./prompts/prompt-lifecycle-catalog.md) |
 | PowerShell scripts | 5 | Reusable automation helpers for governance validation and inventory checks. | [README.md](./scripts/powershell/README.md) |
 | GitHub workflows | 1 | Scheduled or on-demand automation that enforces governance checks. | [governance-cadence.yml](./workflows/governance-cadence.yml) |
 
@@ -62,15 +62,15 @@ Skills are reusable workflows. Lane ownership and deeper usage guidance are main
 | `delivery-status-grid` | [SKILL.md](./skills/delivery-status-grid/SKILL.md) | Produces grid-first delivery status reporting with explicit completion and remaining scope. |
 | `design-mobile-ux` | [SKILL.md](./skills/design-mobile-ux/SKILL.md) | Defines or improves mobile UX from research through implementation handoff. |
 | `docker-dotnet` | [SKILL.md](./skills/docker-dotnet/SKILL.md) | Containerizes .NET applications and applies container-focused security and build practices. |
-| `dotnet-refactor` | [SKILL.md](./skills/dotnet-refactor/SKILL.md) | Modernizes .NET code with safe, behavior-preserving refactors. |
-| `dotnet-resilience` | [SKILL.md](./skills/dotnet-resilience/SKILL.md) | Designs and reviews .NET resiliency using Microsoft.Extensions.Resilience and Polly. |
-| `executing-plans` | [SKILL.md](./skills/executing-plans/SKILL.md) | Executes approved implementation plans in a dedicated or later session. |
+| `execute-dotnet-refactor` | [SKILL.md](./skills/execute-dotnet-refactor/SKILL.md) | Modernizes .NET code with safe, behavior-preserving refactors. |
+| `execute-dotnet-resilience` | [SKILL.md](./skills/execute-dotnet-resilience/SKILL.md) | Designs and reviews .NET resiliency using Microsoft.Extensions.Resilience and Polly. |
+| `execute-plans` | [SKILL.md](./skills/execute-plans/SKILL.md) | Executes approved implementation plans in a dedicated or later session. |
 | `governance-health-overview` | [SKILL.md](./skills/governance-health-overview/SKILL.md) | Synthesizes governance audit outputs into a reconciled governance disposition. |
 | `learn-topics` | [SKILL.md](./skills/learn-topics/SKILL.md) | Builds source-backed learning paths that decompose topics by depth. |
-| `mobile-ui-prototyping` | [SKILL.md](./skills/mobile-ui-prototyping/SKILL.md) | Evolves low-fidelity mobile concepts into high-fidelity prototypes and handoff assets. |
+| `design-mobile-ui-prototyping` | [SKILL.md](./skills/design-mobile-ui-prototyping/SKILL.md) | Evolves low-fidelity mobile concepts into high-fidelity prototypes and handoff assets. |
 | `perf-benchmark` | [SKILL.md](./skills/perf-benchmark/SKILL.md) | Designs, runs, or reviews BenchmarkDotNet performance tests. |
 | `performance-research` | [SKILL.md](./skills/performance-research/SKILL.md) | Performs research-only .NET and C# performance assessments with evidence-backed reporting. |
-| `powershell-script-library` | [SKILL.md](./skills/powershell-script-library/SKILL.md) | Maintains the reusable PowerShell script catalog with deduplication and catalog-first reuse. |
+| `execute-powershell-script-library` | [SKILL.md](./skills/execute-powershell-script-library/SKILL.md) | Maintains the reusable PowerShell script catalog with deduplication and catalog-first reuse. |
 | `prd-generator` | [SKILL.md](./skills/prd-generator/SKILL.md) | Produces comprehensive, traceable PRDs before implementation begins. |
 | `prune-doc-artifacts` | [SKILL.md](./skills/prune-doc-artifacts/SKILL.md) | Audits `.docs` artifacts to identify stale, superseded, or removable documentation. |
 | `refine-ideas` | [SKILL.md](./skills/refine-ideas/SKILL.md) | Refines raw ideas through structured challenge loops and targeted topic learning. |
@@ -82,14 +82,15 @@ Skills are reusable workflows. Lane ownership and deeper usage guidance are main
 | `skill-review` | [SKILL.md](./skills/skill-review/SKILL.md) | Evaluates skills against quality standards and records remediation recommendations. |
 | `skills-authoring` | [SKILL.md](./skills/skills-authoring/SKILL.md) | Creates, edits, and verifies reusable skills before deployment. |
 | `summarize-governance` | [SKILL.md](./skills/summarize-governance/SKILL.md) | Produces a concise governance briefing from existing governance artifacts. |
-| `sync-customizations` | [SKILL.md](./skills/sync-customizations/SKILL.md) | Maintains instruction and agent customizations over time and checks alignment. |
+| `execute-sync-customizations` | [SKILL.md](./skills/execute-sync-customizations/SKILL.md) | Maintains instruction and agent customizations over time and checks alignment. |
 | `sync-editorconfig` | [SKILL.md](./skills/sync-editorconfig/SKILL.md) | Creates or normalizes `.editorconfig` and validates policy compliance. |
-| `sync-skills` | [SKILL.md](./skills/sync-skills/SKILL.md) | Maintains the skill library by evaluating source freshness, relevance, and adoption. |
-| `syrx-data-access` | [SKILL.md](./skills/syrx-data-access/SKILL.md) | Implements or reviews Syrx-based repository data access with explicit SQL patterns. |
+| `execute-sync-skills` | [SKILL.md](./skills/execute-sync-skills/SKILL.md) | Maintains the skill library by evaluating source freshness, relevance, and adoption. |
+| `execute-syrx-data-access` | [SKILL.md](./skills/execute-syrx-data-access/SKILL.md) | Implements or reviews Syrx-based repository data access with explicit SQL patterns. |
+| `syrx-validation` | [SKILL.md](./skills/syrx-validation/SKILL.md) | Applies or reviews Syrx.Validation.Contract guard patterns at public boundaries with deterministic outcomes. |
 | `task-execution` | [SKILL.md](./skills/task-execution/SKILL.md) | Executes implementation plans as independent tasks within the current session. |
 | `task-research` | [SKILL.md](./skills/task-research/SKILL.md) | Performs comprehensive project research before planning or implementation decisions. |
-| `test-driven-development` | [SKILL.md](./skills/test-driven-development/SKILL.md) | Applies a TDD workflow before writing feature or bugfix implementation code. |
-| `usability-testing-scripts` | [SKILL.md](./skills/usability-testing-scripts/SKILL.md) | Prepares usability test scenarios, task scripts, and scoring rubrics for mobile UX validation. |
+| `execute-test-driven-development` | [SKILL.md](./skills/execute-test-driven-development/SKILL.md) | Applies a TDD workflow before writing feature or bugfix implementation code. |
+| `design-usability-testing-scripts` | [SKILL.md](./skills/design-usability-testing-scripts/SKILL.md) | Prepares usability test scenarios, task scripts, and scoring rubrics for mobile UX validation. |
 | `validate-customization` | [SKILL.md](./skills/validate-customization/SKILL.md) | Evaluates instructions and agents for quality, overlap, and alignment with active boundaries. |
 | `write-technical-docs` | [SKILL.md](./skills/write-technical-docs/SKILL.md) | Generates or refreshes technical reference documentation with code-verified content. |
 | `writing-plans` | [SKILL.md](./skills/writing-plans/SKILL.md) | Produces implementation plans from specs or requirements before execution starts. |
@@ -123,20 +124,19 @@ Prompt lane mappings and rationales are maintained in [prompt-lifecycle-catalog.
 
 | Asset | Purpose |
 |---|---|
-| [condense.prompt.md](./prompts/condense.prompt.md) | Returns concise rewrite recommendations for one artifact or a full artifact set without applying edits. |
+| [execute-condense.prompt.md](./prompts/execute-condense.prompt.md) | Returns concise rewrite recommendations for one artifact or a full artifact set without applying edits. |
 | [curate-copilot.prompt.md](./prompts/curate-copilot.prompt.md) | Discovers imported customizations and updates the workspace hub file accordingly. |
 | [execute-manual-review.prompt.md](./prompts/execute-manual-review.prompt.md) | Applies recorded manual review findings and validates remediation work. |
 | [generate-readme.prompt.md](./prompts/generate-readme.prompt.md) | Produces consolidated repository README output. |
-| [governance-cadence.prompt.md](./prompts/governance-cadence.prompt.md) | Runs a recurring governance health check and produces ranked remediation output. |
-| [instructions-audit.prompt.md](./prompts/instructions-audit.prompt.md) | Audits instruction files for duplication, conflicts, and boundary alignment. |
+| [governance-executive-audit.prompt.md](./prompts/governance-executive-audit.prompt.md) | Canonical Level 1 deep-scan governance report for full-workspace executive disposition. |
+| [governance-type-audit.prompt.md](./prompts/governance-type-audit.prompt.md) | Canonical Level 2 deep-scan governance report by customization type. |
+| [governance-item-audit.prompt.md](./prompts/governance-item-audit.prompt.md) | Canonical Level 3 deep-scan governance report for one customization item. |
 | [performance-research.prompt.md](./prompts/performance-research.prompt.md) | Produces performance assessment output without implementation. |
-| [project-checkpoint.prompt.md](./prompts/project-checkpoint.prompt.md) | Verifies plan alignment, artifact hygiene, and scope integrity before another execution wave. |
-| [resume-execution.prompt.md](./prompts/resume-execution.prompt.md) | Resumes an active execution slice with traceability-first status and routing checks. |
+| [review-project.prompt.md](./prompts/review-project.prompt.md) | Verifies plan alignment, artifact hygiene, and scope integrity before another execution wave. |
+| [execute-delivery.prompt.md](./prompts/execute-delivery.prompt.md) | Resumes an active execution slice with traceability-first status and routing checks. |
 | [review-technical-docs.prompt.md](./prompts/review-technical-docs.prompt.md) | Evaluates and remediates technical documentation quality and completeness. |
 | [security-research.prompt.md](./prompts/security-research.prompt.md) | Produces security assessment output without implementation. |
-| [skill-audit.prompt.md](./prompts/skill-audit.prompt.md) | Audits workspace skills against quality standards. |
-| [syrx-validation.prompt.md](./prompts/syrx-validation.prompt.md) | Generates implementation-ready validation patterns and examples for Syrx scenarios. |
-| [testing-xunit.prompt.md](./prompts/testing-xunit.prompt.md) | Produces xUnit-aligned test artifacts and guidance. |
+| [execute-testing-xunit.prompt.md](./prompts/execute-testing-xunit.prompt.md) | Produces xUnit-aligned test artifacts and guidance. |
 | [workspace-scaffolder.prompt.md](./prompts/workspace-scaffolder.prompt.md) | Produces workspace scaffolding and setup artifacts. |
 | [write-component-docs.prompt.md](./prompts/write-component-docs.prompt.md) | Produces technical component documentation artifacts. |
 

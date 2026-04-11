@@ -42,7 +42,7 @@ $rows = foreach ($skill in $skills) {
     }
     [PSCustomObject]@{
         Skill = $skill
-        ReferenceCount = ($refs | Sort-Object -Unique).Count
+        ReferenceCount = @($refs | Sort-Object -Unique).Count
         ReferencedBy = (($refs | Sort-Object -Unique) -join '; ')
         Status = if ($refs.Count -gt 0) { 'In Use' } else { 'Orphaned' }
     }

@@ -100,6 +100,6 @@ $gridLines += $reportRows | ForEach-Object {
     "| $($_.Skill) | $($_.Outcome) | $($_.MustFailures) | $($_.ShouldAdvisories) | $($_.ConflictStatus) | $($_.ReportPath) |"
 }
 
-Set-Content -Path (Join-Path $reportsRoot 'full-skill-review-grid.md') -Value ($gridLines -join "`n") -NoNewline
+Set-Content -Path (Join-Path $reportsRoot 'governance-type-audit-skills.md') -Value ($gridLines -join "`n") -NoNewline
 
 Write-Output 'Refreshed history metadata, history index, and aggregate full-skill review grid.'

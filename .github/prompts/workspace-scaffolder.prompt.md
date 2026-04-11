@@ -5,6 +5,10 @@ description: 'Prompt for scaffolding lean .NET project workspace configuration a
 
 # Project Setup Workflow
 
+Route this request to `orchestrator`.
+
+Use the `scaffold-dotnet` skill as the primary workflow.
+
 Your goal is to create tailored workspace configuration for a new lean .NET project. Gather deep context via a questionnaire, audit the workspace for canonical patterns, curate agent and skill recommendations, and generate a complete project initialization package.
 
 ## Pre-Flight
@@ -16,37 +20,17 @@ Confirm these inputs before starting:
 
 Request any missing inputs before proceeding.
 
-## Questionnaire (12 Questions)
+## Questionnaire
 
-**Phase 1: Goals & Domain**
-1. Problem statement and business goal — what success looks like
-2. Core aggregates and domain entities — key invariants and relationships
-3. External integrations — payment, queues, APIs, other services
+Use the canonical questionnaire in [workspace-scaffolder-questionnaire.md](./references/workspace-scaffolder-questionnaire.md).
 
-**Phase 2: Architecture & Data**
-4. Data model — relational, document, hybrid? Any auditing or temporal needs?
-5. Concurrency and scale assumptions — throughput, batch, latency targets?
-6. Boundary strategy — monolith, layered, services? Domain events or sagas?
-
-**Phase 3: Security & Compliance**
-7. Auth/authz model — internal, multi-tenant, customer-facing, role vs. permission-based?
-8. Data sensitivity — PII, financial, regulated? Audit or retention requirements?
-
-**Phase 4: Tooling & Constraints**
-9. Team expertise — experience with Syrx, Moq, xUnit, ADR discipline?
-10. Performance SLAs — P99 latency, throughput, error rate, availability targets?
-11. Deployment strategy — Azure App Service, Kubernetes, on-premises? Secrets management?
-
-**Phase 5: Scope**
-12. Explicit non-goals — what is NOT in Phase 1? Where is the boundary?
-
-**Key:** Follow up on vague answers. Do not proceed to analysis until all answers are concrete.
+Key rule: do not proceed to analysis until all 12 answers are concrete and implementation-ready.
 
 ## Analysis
 
 1. **Audit workspace** — extract Syrx patterns, guard semantics, test naming, documentation structure from existing projects
-2. **Curate agents** — match project needs to: `csharp-engineer`, `architecture-designer`, `syrx-data-access`, `api-design`, `critical-thinking`, etc.
-3. **Curate skills** — prioritize: `syrx-data-access`, `adr-generator`, `api-design` by phase
+2. **Curate agents** — match project needs to: `csharp-engineer`, `architecture-designer`, `execute-syrx-data-access`, `api-design`, `critical-thinking`, etc.
+3. **Curate skills** — prioritize: `execute-syrx-data-access`, `adr-generator`, `api-design` by phase
 4. **Identify instruction scope** — which canonical `.github/instructions/*.md` files are essential vs. optional/deferred
 
 ## Outputs (Save to `.docs/setup/` + `.github/agents/`)

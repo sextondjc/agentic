@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-10
+- Review Date: 2026-04-11
 - Reviewer Skill: skill-review
 - Target Skill: write-technical-docs
 - Target Path: .github/skills/write-technical-docs/SKILL.md

@@ -66,9 +66,9 @@ try {
         Coverage = $coverage
         Checks = $results
         ArtifactSummary = [pscustomobject]@{
-            SkillAggregateExists = (Test-Path '.docs/changes/skill/reviews/full-skill-review-grid.md')
-            CustomizationAuditExists = (Test-Path '.docs/changes/customization/reviews/audit.md')
-            OptimizationArtifactExists = (Test-Path '.docs/changes/customization/reviews/optimization-factor.md')
+            SkillAggregateExists = (Test-Path '.docs/changes/skill/reviews/governance-type-audit-skills.md')
+            CustomizationAuditExists = (Test-Path '.docs/changes/customization/reviews/governance-type-audit-customizations.md')
+            OptimizationArtifactExists = (Test-Path '.docs/changes/customization/reviews/governance-type-audit-optimization.md')
         }
         Metrics = [pscustomobject]@{
             TotalChecks = $results.Count
@@ -84,3 +84,4 @@ try {
 finally {
     Pop-Location
 }
+

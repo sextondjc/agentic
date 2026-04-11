@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-10
+- Review Date: 2026-04-11
 - Reviewer Skill: skill-review
 - Target Skill: summarize-governance
 - Target Path: .github/skills/summarize-governance/SKILL.md

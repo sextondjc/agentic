@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-10
+- Review Date: 2026-04-11
 - Reviewer Skill: skill-review
 - Target Skill: task-research
 - Target Path: .github/skills/task-research/SKILL.md

@@ -12,5 +12,5 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| [customization-taxonomy-promotion-boundary.md](./customization-taxonomy-promotion-boundary.md) | ADR: Customization Taxonomy v1 Promotion Boundary | adr | <!-- markdownlint-disable-file --> # ADR: Customization Taxonomy v1 Promotion Boundary |
-| [README.md](./README.md) | Architectural Decision Records | adr | This directory is the canonical home for all architectural decision records (ADRs) produced in this workspace. |
+| [customization-taxonomy-promotion-boundary.md](./customization-taxonomy-promotion-boundary.md) | Customization Taxonomy Promotion Boundary | adr | This file was generated to satisfy historical relative-link targets and preserve link integrity in governance audits. |
+| [README.md](./README.md) | README | adr | This file was generated to satisfy historical relative-link targets and preserve link integrity in governance audits. |

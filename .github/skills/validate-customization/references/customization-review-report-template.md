@@ -11,7 +11,7 @@
 
 ## Storage
 
-- Save this file to `.docs/changes/customization/reviews/audit.md`
+- Save this file to `.docs/changes/customization/reviews/governance-type-audit-customizations.md`
 - Append one history row per reviewed artifact to `.docs/changes/customization/reviews/audit-history.md`
 
 ## Summary Outcome Grid
@@ -66,3 +66,4 @@ For agent files:
 | Artifact | Type | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---:|---|---|
 | <artifact-name> | Instruction /| Agent | Pass/Pass With Advisories/Fail/Blocked | <n> | <n> | None/Detected/Resolved/Blocked | <report-file> |
+

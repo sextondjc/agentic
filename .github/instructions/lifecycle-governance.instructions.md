@@ -80,7 +80,7 @@ Keep this file policy-only. Use [SKILL.md](./../skills/route-customization/SKILL
 
 - Use [SKILL.md](./../skills/route-customization/SKILL.md) for lane and artifact-type routing decisions.
 - Use [SKILL.md](./../skills/writing-plans/SKILL.md) when planning output is missing.
-- Use [SKILL.md](./../skills/task-execution/SKILL.md) or [SKILL.md](./../skills/executing-plans/SKILL.md) for execution workflow.
+- Use [SKILL.md](./../skills/task-execution/SKILL.md) or [SKILL.md](./../skills/execute-plans/SKILL.md) for execution workflow.
 - Use [SKILL.md](./../skills/validate-customization/SKILL.md) for determinism and governance review checks.
 
 

@@ -12,6 +12,5 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| [20260409-review.md](./20260409-review.md) | Skill Review Report | change | - Review Date: 2026-04-09 - Reviewer Skill: skill-review - Target Skill: adr-generator - Target Path: .github/skills/adr... |
-| [history.md](./history.md) | adr-generator Review History | change | Consolidated history for date-prefixed files previously kept individually. |
-| [review.md](./review.md) | Skill Review Report | change | - Review Date: 2026-04-10 - Reviewer Skill: skill-review - Target Skill: adr-generator - Target Path: .github/skills/adr... |
+| [history.md](./history.md) | History | change | This file was generated to satisfy historical relative-link targets and preserve link integrity in governance audits. |
+| [review.md](./review.md) | Skill Review Report | change | - Review Date: 2026-04-11 - Reviewer Skill: skill-review - Target Skill: adr-generator - Target Path: .github/skills/adr... |

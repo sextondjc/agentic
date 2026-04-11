@@ -5,6 +5,11 @@ applyTo: '**'
 ---
 # Request Economy Policy
 
+## Global Scope Rationale
+
+- This policy intentionally uses `applyTo: '**'` because request economy controls are cross-cutting guardrails for all agent interactions, regardless of file type.
+- Localized applyTo narrowing would create inconsistent behavior and reduce determinism for tool usage and context budget controls.
+
 ## Scope
 
 - Do not plan or claim actions that depend on controlling model routing, billing, backend token budgets, or internal orchestration.

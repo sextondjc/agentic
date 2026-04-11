@@ -8,4 +8,5 @@ Reusable assets for `optimize-customizations` execution support.
 
 ## Usage
 
-Use the template when creating `.docs/changes/customization/reviews/optimization-factor.md`.
+Use the template when creating `.docs/changes/customization/reviews/governance-type-audit-optimization.md`.
+

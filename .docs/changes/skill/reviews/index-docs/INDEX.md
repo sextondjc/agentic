@@ -12,5 +12,5 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| [20260409-review.md](./20260409-review.md) | Skill Review Report | change | - Review Date: 2026-04-09 - Reviewer Skill: skill-review - Target Skill: index-docs - Target Path: .github/skills/index-... |
-| [review.md](./review.md) | Skill Review Report | change | - Review Date: 2026-04-10 - Reviewer Skill: skill-review - Target Skill: index-docs - Target Path: .github/skills/index-... |
+| [history.md](./history.md) | Skill Review Report | change | --- Merged snapshot from .docs/changes/skill/reviews/index-docs/20260409-review.md --- |
+| [review.md](./review.md) | Skill Review Report | change | - Review Date: 2026-04-11 - Reviewer Skill: skill-review - Target Skill: index-docs - Target Path: .github/skills/index-... |

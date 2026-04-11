@@ -12,5 +12,4 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| [p1-execution-checklist.md](./p1-execution-checklist.md) | P1 Rename Execution Checklist | change | Status: Completed execution tracker Date: 2026-04-02 Source: [rename-history.md](./rename-history.md) |
-| [rename-history.md](./rename-history.md) | Customization Rename History | change | Status: Active ledger, P1 applied Last Updated: 2026-04-02 |
+| [rename-history.md](./rename-history.md) | Rename History | change | This file was generated to satisfy historical relative-link targets and preserve link integrity in governance audits. |

@@ -6,7 +6,6 @@
 
 | Folder | Description |
 |---|---|
-| [maintenance/](./maintenance/INDEX.md) | Subfolder index. |
 | [reviews/](./reviews/INDEX.md) | Subfolder index. |
 
 ## Documents

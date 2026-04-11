@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-10
+- Review Date: 2026-04-11
 - Reviewer Skill: skill-review
 - Target Skill: skills-authoring
 - Target Path: .github/skills/skills-authoring/SKILL.md

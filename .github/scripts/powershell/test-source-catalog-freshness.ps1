@@ -17,8 +17,8 @@ $ErrorActionPreference = 'Stop'
 $resolvedRoot = Resolve-Path -LiteralPath $RootPath -ErrorAction Stop
 $today = Get-Date
 $catalogs = @(
-    '.github/skills/sync-customizations/references/source-catalog.md',
-    '.github/skills/sync-skills/references/source-catalog.md'
+    '.github/skills/execute-sync-customizations/references/source-catalog.md',
+    '.github/skills/execute-sync-skills/references/source-catalog.md'
 )
 $results = [System.Collections.Generic.List[PSCustomObject]]::new()
 

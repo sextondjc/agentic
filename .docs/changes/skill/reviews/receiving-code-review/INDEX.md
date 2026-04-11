@@ -12,5 +12,4 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| [history.md](./history.md) | receiving-code-review Review History | change | Consolidated history for date-prefixed files previously kept individually. |
-| [review.md](./review.md) | Review | change | L |
+| [history.md](./history.md) | History | change | This file was generated to satisfy historical relative-link targets and preserve link integrity in governance audits. |

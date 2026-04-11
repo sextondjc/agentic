@@ -1,0 +1,269 @@
+{
+  "RootPath": "c:\\Projects\\agentic",
+  "ReviewDate": "2026-04-11",
+  "CoreChecks": [
+    {
+      "Check": "catalog-agents",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "Catalog integrity passed for 'agents': all entries match on-disk assets.\r\n\r\nMissingInCatalog StaleInCatalog\r\n---------------- --------------\r\n{}               {}"
+    },
+    {
+      "Check": "catalog-prompts",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "Catalog integrity passed for 'prompts': all entries match on-disk assets.\r\n\r\nMissingInCatalog StaleInCatalog\r\n---------------- --------------\r\n{}               {}"
+    },
+    {
+      "Check": "catalog-instructions",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "Catalog integrity passed for 'instructions': all entries match on-disk assets.\r\n\r\nMissingInCatalog StaleInCatalog\r\n---------------- --------------\r\n{}               {}"
+    },
+    {
+      "Check": "frontmatter-agents",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "All agents files passed frontmatter validation."
+    },
+    {
+      "Check": "frontmatter-prompts",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "All prompts files passed frontmatter validation."
+    },
+    {
+      "Check": "frontmatter-instructions",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "All instructions files passed frontmatter validation."
+    },
+    {
+      "Check": "hub-sync",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "Hub file is synced: preferred agents and prompt/instruction catalogs match assets."
+    },
+    {
+      "Check": "optimization-factor",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "Governance optimization factor validation passed."
+    },
+    {
+      "Check": "link-graph",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "Governance link graph validation passed. Files: 477; Links: 1189"
+    },
+    {
+      "Check": "artifact-contract",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": ""
+    },
+    {
+      "Check": "docs-naming",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": ""
+    },
+    {
+      "Check": "asset-naming",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "AssetType : agents\r\nAssetName : architecture-designer\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : benchmark-researcher\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : code-reviewer\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : csharp-engineer\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : defect-debugger\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : governance-briefer\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : learning-agent\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : manual-code-reviewer\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : orchestrator\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : performance-assessor\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : plan-researcher\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : powershell-reviewer\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : security-researcher\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : sql-dba\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : agents\r\nAssetName : workspace-scaffolder\r\nPattern   : ^(orchestrator|[a-z]+(-[a-z]+)*)$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : architecture.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : async-programming.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : ci-cd.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : csharp.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : lifecycle-governance.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : namespace-and-assembly-boundaries.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : naming-conventions.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : powershell.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : prd.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : request-economy.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : security-and-secure-coding.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : sql-dba.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : syrx.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : task-implementation.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : technical-docs.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : testing-strategy.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : instructions\r\nAssetName : validation-and-guards.instructions.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.instructions\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : curate-copilot.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : execute-condense.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : execute-delivery.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : execute-manual-review.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : execute-testing-xunit.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : generate-readme.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : governance-executive-audit.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : governance-item-audit.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : governance-type-audit.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : librarian.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : optimize-customizations.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : performance-research.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : review-project.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : review-technical-docs.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : security-research.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : workspace-scaffolder.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : prompts\r\nAssetName : write-component-docs.prompt.md\r\nPattern   : ^[a-z]+(-[a-z]+)*\\.prompt\\.md$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : adr-generator\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : agent-authoring\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : api-design\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : audit-governance\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : audit-powershell\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : branch-completion\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : build-maui-apps\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : critical-thinking\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : curating-copilot-instructions\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : current-test-coverage\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : delivery-status-grid\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : design-mobile-ui-prototyping\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : design-mobile-ux\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : design-usability-testing-scripts\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : docker-dotnet\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : domain-design\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : execute-dotnet-refactor\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : execute-dotnet-resilience\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : execute-plans\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : execute-powershell-script-library\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : execute-sync-customizations\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : execute-sync-skills\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : execute-syrx-data-access\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : execute-test-driven-development\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : governance-health-overview\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : index-docs\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : instructions-authoring\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : learn-topics\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : librarian\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : optimize-customizations\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : perf-benchmark\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : performance-research\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : prd-generator\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : prune-doc-artifacts\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : refine-ideas\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : remediate-review\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : request-code-review\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : route-customization\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : scaffold-dotnet\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : security-research\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : skill-review\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : skills-authoring\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : summarize-governance\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : sync-editorconfig\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : syrx-validation\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : task-execution\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : task-research\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : taxonomy\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : validate-customization\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : write-technical-docs\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAssetType : skills\r\nAssetName : writing-plans\r\nPattern   : ^[a-z]+(-[a-z]+)*$\r\nStatus    : Pass\r\nViolation : \r\n\r\nAsset naming conformance passed."
+    },
+    {
+      "Check": "utilization-coverage",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "Skill                             ReferenceCount ReferencedBy\r\n-----                             -------------- ------------                   \r\nadr-generator                                  9 .github/agents/architecture-de…\r\nagent-authoring                                9 .github/agents/learning-agent.…\r\napi-design                                     9 .github/agents/architecture-de…\r\naudit-governance                               7 .github/agents/governance-brie…\r\naudit-powershell                               4 .github/agents/powershell-revi…\r\nbranch-completion                              3 .github/skills/branch-completi…\r\nbuild-maui-apps                                2 .github/skills/build-maui-apps…\r\ncritical-thinking                             27 .github/agents/architecture-de…\r\ncurating-copilot-instructions                  3 .github/agents/workspace-scaff…\r\ncurrent-test-coverage                          1 .github/skills/current-test-co…\r\ndelivery-status-grid                           9 .github/agents/benchmark-resea…\r\ndesign-mobile-ui-prototyping                   2 .github/skills/design-mobile-u…\r\ndesign-mobile-ux                               4 .github/skills/design-mobile-u…\r\ndesign-usability-testing-scripts               2 .github/skills/design-usabilit…\r\ndocker-dotnet                                  2 .github/skills/docker-dotnet/S…\r\ndomain-design                                  1 .github/skills/domain-design/S…\r\nexecute-dotnet-refactor                        5 .github/agents/csharp-engineer…\r\nexecute-dotnet-resilience                      1 .github/skills/execute-dotnet-…\r\nexecute-plans                                  3 .github/prompts/review-project…\r\nexecute-powershell-script-library              5 .github/agents/orchestrator.ag…\r\nexecute-sync-customizations                    3 .github/skills/audit-governanc…\r\nexecute-sync-skills                            3 .github/skills/audit-governanc…\r\nexecute-syrx-data-access                       9 .github/agents/csharp-engineer…\r\nexecute-test-driven-development                8 .github/agents/csharp-engineer…\r\ngovernance-health-overview                    10 .github/agents/governance-brie…\r\nindex-docs                                     4 .github/prompts/librarian.prom…\r\ninstructions-authoring                         9 .github/agents/learning-agent.…\r\nlearn-topics                                   5 .github/agents/learning-agent.…\r\nlibrarian                                      6 .github/prompts/governance-exe…\r\noptimize-customizations                        5 .github/prompts/governance-ite…\r\nperf-benchmark                                 2 .github/agents/benchmark-resea…\r\nperformance-research                           5 .github/agents/benchmark-resea…\r\nprd-generator                                  3 .github/agents/orchestrator.ag…\r\nprune-doc-artifacts                            3 .github/skills/governance-heal…\r\nrefine-ideas                                   2 .github/skills/refine-ideas/SK…\r\nremediate-review                               4 .github/agents/code-reviewer.a…\r\nrequest-code-review                            6 .github/agents/code-reviewer.a…\r\nroute-customization                            9 .github/agents/learning-agent.…\r\nscaffold-dotnet                                4 .github/agents/workspace-scaff…\r\nsecurity-research                              4 .github/agents/orchestrator.ag…\r\nskill-review                                  10 .github/agents/powershell-revi…\r\nskills-authoring                               9 .github/agents/learning-agent.…\r\nsummarize-governance                           2 .github/agents/governance-brie…\r\nsync-editorconfig                              3 .github/agents/workspace-scaff…\r\nsyrx-validation                                1 .github/skills/syrx-validation…\r\ntask-execution                                 8 .github/agents/orchestrator.ag…\r\ntask-research                                 17 .github/agents/architecture-de…\r\ntaxonomy                                       1 .github/skills/taxonomy/SKILL.…\r\nvalidate-customization                        10 .github/agents/governance-brie…\r\nwrite-technical-docs                           6 .github/agents/workspace-scaff…\r\nwriting-plans                                  5 .github/agents/orchestrator.ag…\r\nUtilization coverage passed: all indexed skills are referenced by at least one non-self artifact."
+    },
+    {
+      "Check": "review-recency",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "Asset           : adr-generator\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : agent-authoring\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : agent-customization\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : api-design\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : audit-governance\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : audit-powershell\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : benchmarkdotnet-performance-testing\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : branch-completion\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : build-maui-apps\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : condense-skill\r\nType            : Skill\r\nLastReviewDate  : 2026-04-07\r\nDaysSinceReview : 5\r\nStatus          : Current\r\n\r\nAsset           : critical-thinking\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : curating-copilot-instructions\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : current-test-coverage\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : customization-review\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : customization-routing-decision\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : delivery-status-grid\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : design-mobile-ui-prototyping\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : design-mobile-ux\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : design-usability-testing-scripts\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : docker-dotnet\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : domain-design\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : dotnet-modernization\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : dotnet-refactor\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : dotnet-resilience\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : execute-dotnet-refactor\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : execute-dotnet-resilience\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : execute-plans\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : execute-powershell-script-library\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : execute-sync-customizations\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : execute-sync-skills\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : execute-syrx-data-access\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : execute-test-driven-development\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : executing-plans\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : finishing-a-development-branch\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : governance-health-overview\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : index-docs\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : instructions-authoring\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : keeping-customizations-current\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : keeping-skills-current\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : learn-topics\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : librarian\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : mobile-ui-prototyping\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : optimize-customizations\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : perf-benchmark\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : performance-research\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : powershell-script-library\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : powershell-script-review\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : prd-generator\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : prune-doc-artifacts\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : receiving-code-review\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : refine-ideas\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : remediate-review\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : request-code-review\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : requesting-code-review\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : route-customization\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : scaffold-dotnet\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : security-research\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : skill-review\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : skills-authoring\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : subagent-driven-development\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : summarize-governance\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : sync-customizations\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : sync-editorconfig\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : sync-skills\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : syrx-data-access\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : syrx-validation\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : task-execution\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : task-research\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : taxonomy\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : technical-documentation\r\nType            : Skill\r\nLastReviewDate  : 2026-03-29\r\nDaysSinceReview : 14\r\nStatus          : Current\r\n\r\nAsset           : test-driven-development\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : usability-testing-scripts\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : validate-customization\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : write-technical-docs\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nAsset           : writing-plans\r\nType            : Skill\r\nLastReviewDate  : 2026-04-11\r\nDaysSinceReview : 1\r\nStatus          : Current\r\n\r\nReview recency passed: all tracked artifacts are within 90 days."
+    },
+    {
+      "Check": "source-catalog-freshness",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "Catalog       : .github/skills/execute-sync-customizations/references/source-catalog.md\r\nSource        : [GitHub Copilot Customization Docs](https://docs.github.com/en/copilot/customizing-copilot)\r\nLastEvaluated : 2026-04-07\r\nDaysOverdue   : 0\r\nStatus        : Current\r\n\r\nCatalog       : .github/skills/execute-sync-customizations/references/source-catalog.md\r\nSource        : [VS Code Copilot Chat Agents](https://code.visualstudio.com/docs/copilot/chat/chat-agents)\r\nLastEvaluated : 2026-04-07\r\nDaysOverdue   : 0\r\nStatus        : Current\r\n\r\nCatalog       : .github/skills/execute-sync-customizations/references/source-catalog.md\r\nSource        : [VS Code Copilot Instructions](https://code.visualstudio.com/docs/copilot/copilot-customization)\r\nLastEvaluated : 2026-04-07\r\nDaysOverdue   : 0\r\nStatus        : Current\r\n\r\nCatalog       : .github/skills/execute-sync-skills/references/source-catalog.md\r\nSource        : [Agent Skills](https://agentskills.io/home)\r\nLastEvaluated : 2026-04-01\r\nDaysOverdue   : 0\r\nStatus        : Current\r\n\r\nCatalog       : .github/skills/execute-sync-skills/references/source-catalog.md\r\nSource        : [Anthropic Skills Repository](https://github.com/anthropics/skills)\r\nLastEvaluated : 2026-04-01\r\nDaysOverdue   : 0\r\nStatus        : Current\r\n\r\nCatalog       : .github/skills/execute-sync-skills/references/source-catalog.md\r\nSource        : [Claude Support: How to Create Custom Skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)\r\nLastEvaluated : 2026-04-01\r\nDaysOverdue   : 0\r\nStatus        : Current\r\n\r\nCatalog       : .github/skills/execute-sync-skills/references/source-catalog.md\r\nSource        : [VS Code Agent Skills Documentation](https://code.visualstudio.com/docs/copilot/customization/agent-skills)\r\nLastEvaluated : 2026-04-01\r\nDaysOverdue   : 0\r\nStatus        : Current\r\n\r\nSource catalog freshness passed."
+    },
+    {
+      "Check": "responsibility-overlap",
+      "ExitCode": 0,
+      "Passed": true,
+      "Output": "RootPath                       : C:\\Projects\\agentic\r\nSimilarityThreshold            : 0.82\r\nMinimumSharedTokens            : 6\r\nMaxAllowedDuplicatePairs       : 8\r\nAssetCounts                    : @{Agents=15; Instructions=17; Prompts=17; Skills=51; Total=100}\r\nDuplicatePairCount             : 1\r\nDuplicatePairThresholdBreached : False\r\nTypePairCounts                 : {[skills-skills, 1]}\r\nOverlapPairs                   : {@{Signal=HighTokenSimilarity; SimilarityScore=0.9091; SharedTokenCount=20; SharedTokens=absorb, adjacent, assessments, assets, belong, bounded, described, evidence-backed, execution, narrowly, other, performing, planning, remain, remediation, reporting, research-only, responsibilities, responsibility, specialized; AssetAType=skills; AssetAName=performance-research; AssetAPath=.github/skills/performance-research/SKILL.md; AssetBType=skills; AssetBName=security-research; AssetBPath=.github/skills/security-research/SKILL.md}}\r\n\r\nResponsibility overlap passed: 1 duplicate pair(s) within threshold 8."
+    }
+  ],
+  "SkillReviewAggregatePath": ".docs/changes/skill/reviews/governance-type-audit-skills.md",
+  "SkillReviewAggregateExists": true,
+  "GovernanceAggregatePath": ".docs/changes/governance/audits/governance-audit.md",
+  "GovernanceAggregateExists": true,
+  "CustomizationAggregatePath": ".docs/changes/customization/reviews/governance-type-audit-customizations.md",
+  "CustomizationAggregateExists": true,
+  "OptimizationAggregatePath": ".docs/changes/customization/reviews/governance-type-audit-optimization.md",
+  "OptimizationAggregateExists": true,
+  "IndexRefresh": {
+    "FoldersIndexed": 76,
+    "DocumentsIndexed": 119,
+    "DryRun": false
+  },
+  "ResponsibilityOverlap": {
+    "ArtifactPath": ".artifacts/responsibility-overlap.routing.json",
+    "ArtifactExists": true,
+    "Summary": {
+      "ArtifactPath": ".artifacts/responsibility-overlap.routing.json",
+      "DuplicatePairCount": 1,
+      "MaxAllowedDuplicatePairs": 8,
+      "ThresholdBreached": false,
+      "TypePairCounts": {
+        "skills-skills": 1
+      },
+      "TopPairs": [
+        {
+          "Signal": "HighTokenSimilarity",
+          "SimilarityScore": 0.9091,
+          "SharedTokenCount": 20,
+          "SharedTokens": "absorb, adjacent, assessments, assets, belong, bounded, described, evidence-backed, execution, narrowly, other, performing, planning, remain, remediation, reporting, research-only, responsibilities, responsibility, specialized",
+          "AssetAType": "skills",
+          "AssetAName": "performance-research",
+          "AssetAPath": ".github/skills/performance-research/SKILL.md",
+          "AssetBType": "skills",
+          "AssetBName": "security-research",
+          "AssetBPath": ".github/skills/security-research/SKILL.md"
+        }
+      ]
+    }
+  },
+  "Metrics": {
+    "TotalChecks": 16,
+    "PassedChecks": 16,
+    "FailedChecks": 0,
+    "FailedCheckNames": [],
+    "AssetCount": {
+      "Agents": 15,
+      "Instructions": 17,
+      "Prompts": 17,
+      "Skills": 51,
+      "Total": 100
+    },
+    "Overlap": {
+      "DuplicatePairCount": 1,
+      "MaxAllowedDuplicatePairs": 8,
+      "ThresholdBreached": false
+    },
+    "DocsCorpus": {
+      "FileCount": 194,
+      "MarkdownFileCount": 194,
+      "RedundancyCandidateCount": 3,
+      "RedundancyCandidates": [
+        {
+          "Name": "history.md",
+          "Count": 50
+        },
+        {
+          "Name": "INDEX.md",
+          "Count": 75
+        },
+        {
+          "Name": "review.md",
+          "Count": 59
+        }
+      ],
+      "StaleCandidateCount": 0,
+      "StaleCandidates": [],
+      "NavigationIntegrity": "Pass"
+    }
+  },
+  "PriorReport": {
+    "Path": ".docs/changes/governance/audits/governance-executive-audit.md",
+    "Metrics": {
+      "TotalChecks": 16,
+      "PassedChecks": 15,
+      "FailedChecks": null,
+      "CustomizationMustFailures": null,
+      "OptimizationMustFailures": null,
+      "SkillMustFailures": null,
+      "OpenConflicts": 0,
+      "AssetTotal": 100,
+      "DocsCorpusFiles": null,
+      "DocsRedundancyCandidates": null
+    },
+    "Delta": {
+      "TotalChecks": {
+        "Prior": 16,
+        "Current": 16,
+        "Delta": 0,
+        "Trend": "Flat"
+      },
+      "PassedChecks": {
+        "Prior": 15,
+        "Current": 16,
+        "Delta": 1,
+        "Trend": "Increase"
+      },
+      "FailedChecks": {
+        "Prior": null,
+        "Current": 0,
+        "Delta": null,
+        "Trend": "Flat"
+      },
+      "CustomizationMustFailures": {
+        "Prior": null,
+        "Current": 0,
+        "Delta": null,
+        "Trend": "Flat"
+      },
+      "OptimizationMustFailures": {
+        "Prior": null,
+        "Current": 0,
+        "Delta": null,
+        "Trend": "Flat"
+      },
+      "SkillMustFailures": {
+        "Prior": null,
+        "Current": 0,
+        "Delta": null,
+        "Trend": "Flat"
+      },
+      "OpenConflicts": {
+        "Prior": 0,
+        "Current": 0,
+        "Delta": 0,
+        "Trend": "Flat"
+      },
+      "AssetTotal": {
+        "Prior": 100,
+        "Current": 100,
+        "Delta": 0,
+        "Trend": "Flat"
+      },
+      "DocsCorpusFiles": {
+        "Prior": null,
+        "Current": 194,
+        "Delta": null,
+        "Trend": "Unknown"
+      },
+      "DocsRedundancyCandidates": {
+        "Prior": null,
+        "Current": 3,
+        "Delta": null,
+        "Trend": "Unknown"
+      }
+    }
+  },
+  "Customization": {
+    "AgentCount": 15,
+    "InstructionCount": 17,
+    "MissingSpecializationCount": 0,
+    "MissingApplyToCount": 0,
+    "ConflictFileCount": 0,
+    "MissingSpecialization": [],
+    "MissingApplyTo": [],
+    "ConflictFiles": []
+  }
+}

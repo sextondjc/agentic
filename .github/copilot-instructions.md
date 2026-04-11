@@ -75,10 +75,10 @@ When requests route through `orchestrator`, discover and select relevant skills 
 ## Imported Superpowers Assets
 
 - `skills-authoring` (imported from Superpowers `writing-skills` and renamed)
-- `test-driven-development` (supporting workflow dependency)
+- `execute-test-driven-development` (supporting workflow dependency)
 - `writing-plans` (plan authoring workflow adapted to `.docs/plans`)
 - `code-reviewer` (review specialist agent)
-- `executing-plans` (plan execution workflow)
+- `execute-plans` (plan execution workflow)
 - `task-execution` (same-session per-task implementation workflow)
 - `request-code-review` and `remediate-review` (review loop workflow)
 - `branch-completion` (completion and branch integration workflow)

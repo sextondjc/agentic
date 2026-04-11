@@ -17,7 +17,7 @@ $checks = @(
     @{ Name = 'copilot skills discovery pointer'; Path = '.github/copilot-instructions.md'; Pattern = '\[skill-discovery-index\.md\]\(\./skills/skill-discovery-index\.md\)' },
     @{ Name = 'audit-governance includes GOV-OPT'; Path = '.github/skills/audit-governance/SKILL.md'; Pattern = 'GOV-OPT' },
     @{ Name = 'governance-health-overview includes optimization skill'; Path = '.github/skills/governance-health-overview/SKILL.md'; Pattern = 'optimize-customizations' },
-    @{ Name = 'governance cadence prompt includes GOV-OPT'; Path = '.github/prompts/governance-cadence.prompt.md'; Pattern = '\|\s*GOV-OPT\s*\|' },
+    @{ Name = 'governance executive prompt references overview workflow'; Path = '.github/prompts/governance-executive-audit.prompt.md'; Pattern = 'governance-health-overview' },
     @{ Name = 'on-demand optimization prompt exists'; Path = '.github/prompts/optimize-customizations.prompt.md'; Pattern = '^---' },
     @{ Name = 'optimization prompt catalog registration'; Path = '.github/prompts/prompt-lifecycle-catalog.md'; Pattern = '\|\s*`optimize-customizations`\s*\|\s*`optimize-customizations\.prompt\.md`\s*\|' }
 )

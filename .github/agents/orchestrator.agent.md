@@ -46,14 +46,14 @@ Routing behavior in this agent must align with policy authority in [lifecycle-go
 | Architecture, DDD, ADRs | `architecture-designer` | Boundary design, ADRs, aggregate analysis, refactoring guidance | Drift into general feature implementation |
 | Bug fixing and regression diagnosis | `defect-debugger` | Reproduce, isolate, fix, verify | Become a planning-only advisor |
 | SQL Server DBA work | `sql-dba` | Database inspection, query execution, schema analysis, operational DBA guidance | Perform general application coding |
-| Syrx repository and data-access specialization | `syrx-data-access` skill with `csharp-engineer` | Apply Syrx-specific repository, `CommandStrings`, installer, and commander patterns | Replace the primary implementation agent for non-data-access work |
+| Syrx repository and data-access specialization | `execute-syrx-data-access` skill with `csharp-engineer` | Apply Syrx-specific repository, `CommandStrings`, installer, and commander patterns | Replace the primary implementation agent for non-data-access work |
 | Critical review / assumption challenge | `critical-thinking` skill | Pressure-test decisions and assumptions | Take over implementation |
 | Security research workflow | `security-research` skill with `security-researcher` | Apply the standard security investigation workflow and report template | Replace the primary research agent for mixed-scope work |
 | Performance research workflow | `performance-research` skill with `performance-assessor` | Apply the standard performance investigation workflow and report template | Replace the primary research agent for mixed-scope work |
 | API integration design | `api-design` skill | Design resilient API clients and service integrations | Replace the primary implementation or planning agent |
 | ADR authoring | `adr-generator` skill with `architecture-designer` | Write ADRs in `.docs/adr` | Act as the main architecture decision-maker |
 | Product and PRD work | `prd-generator` skill | Create PRDs and requirements artifacts | Perform engineering implementation |
-| PowerShell script creation or catalog management | `powershell-script-library` skill | Check catalog first for reuse, deduplication; validate script consistency with `powershell-reviewer` | Write scripts without consulting the catalog or deduplication registry |
+| PowerShell script creation or catalog management | `execute-powershell-script-library` skill | Check catalog first for reuse, deduplication; validate script consistency with `powershell-reviewer` | Write scripts without consulting the catalog or deduplication registry |
 
 ## Routing Rules
 
@@ -78,7 +78,7 @@ Routing behavior in this agent must align with policy authority in [lifecycle-go
 - Root cause pointing to refactoring or architecture: note it separately rather than silently switching modes.
 
 ### 4. Data Access Specialization
-- Repositories, `CommandStrings`, installer wiring, `ICommander<TRepository>`, paging, or explicit SQL → invoke `syrx-data-access` skill within the implementation workflow.
+- Repositories, `CommandStrings`, installer wiring, `ICommander<TRepository>`, paging, or explicit SQL → invoke `execute-syrx-data-access` skill within the implementation workflow.
 - Enforce repository placement: `.Repositories` namespace, `.Repositories` assembly, interface + implementation in same namespace.
 
 ### 5. DBA Separation

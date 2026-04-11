@@ -11,7 +11,7 @@ Reproduce, isolate, fix, and verify a concrete software defect with minimal, tes
 ## Preferred Companion Skills
 
 - `critical-thinking`
-- `test-driven-development`
+- `execute-test-driven-development`
 - `request-code-review`
 
 ## Workflow

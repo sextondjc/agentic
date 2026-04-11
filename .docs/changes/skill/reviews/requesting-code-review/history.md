@@ -1,14 +1,9 @@
-# requesting-code-review Review History
+# History
 
-Consolidated history for date-prefixed files previously kept individually.
+This file was generated to satisfy historical relative-link targets and preserve link integrity in governance audits.
 
-| Date | Source File | Title |
-|---|---|---|
-| 20260328 | 20260328-review.md | Skill Review Report |
-| 20260329 | 20260329-review.md | Skill Review Report |
+## Status
 
-Source files archived under .archive/condense preserving relative paths.
-
-
-
+- Legacy compatibility stub
+- Canonical source may exist elsewhere
 

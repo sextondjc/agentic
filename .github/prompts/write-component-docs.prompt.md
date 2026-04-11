@@ -6,6 +6,10 @@ tools: ['changes', 'search/codebase', 'edit/editFiles', 'extensions', 'fetch', '
 ---
 # Generate Standard OO Component Documentation
 
+Route this request to `orchestrator`.
+
+Use the `write-technical-docs` skill as the primary workflow.
+
 Create comprehensive documentation for the object-oriented component(s) at: `${input:ComponentPath}`.
 
 Analyze the component by examining code in the provided path. If folder, analyze all source files. If single file, treat as main component and analyze related files in same directory.

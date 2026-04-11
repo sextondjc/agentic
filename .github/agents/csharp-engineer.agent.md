@@ -39,12 +39,12 @@ Active instruction files for C# work:
 - Prefer composition over additional layers or abstractions.
 
 ## Preferred Companion Skills
-- `syrx-data-access` for repository and data access implementation
-- `test-driven-development` for feature and bugfix work
+- `execute-syrx-data-access` for repository and data access implementation
+- `execute-test-driven-development` for feature and bugfix work
 - `task-research` for deep evidence gathering
 - `critical-thinking` for design challenge and option pressure-testing
 - `api-design` for resilient client or service integrations
 - `adr-generator` (via `architecture-designer`) for decision documentation
-- `dotnet-refactor` for cleanup and modernization passes
+- `execute-dotnet-refactor` for cleanup and modernization passes
 
 

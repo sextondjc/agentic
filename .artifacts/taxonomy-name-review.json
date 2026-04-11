@@ -1,0 +1,902 @@
+[
+  {
+    "Type": "agent",
+    "CurrentName": "architecture-designer",
+    "Lane": "Planning",
+    "SuggestedName": "architecture-designer",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\architecture-designer.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "benchmark-researcher",
+    "Lane": "Review",
+    "SuggestedName": "benchmark-researcher",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\benchmark-researcher.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "code-reviewer",
+    "Lane": "Review",
+    "SuggestedName": "code-reviewer",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\code-reviewer.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "csharp-engineer",
+    "Lane": "Execution",
+    "SuggestedName": "csharp-engineer",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\csharp-engineer.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "defect-debugger",
+    "Lane": "Execution",
+    "SuggestedName": "defect-debugger",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\defect-debugger.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "governance-briefer",
+    "Lane": "Review",
+    "SuggestedName": "governance-briefer",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\governance-briefer.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "learning-agent",
+    "Lane": "Planning",
+    "SuggestedName": "learning-agent",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\learning-agent.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "manual-code-reviewer",
+    "Lane": "Review",
+    "SuggestedName": "manual-code-reviewer",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\manual-code-reviewer.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "orchestrator",
+    "Lane": "Planning",
+    "SuggestedName": "orchestrator",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\orchestrator.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "performance-assessor",
+    "Lane": "Review",
+    "SuggestedName": "performance-assessor",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\performance-assessor.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "plan-researcher",
+    "Lane": "Planning",
+    "SuggestedName": "plan-researcher",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\plan-researcher.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "powershell-reviewer",
+    "Lane": "Review",
+    "SuggestedName": "powershell-reviewer",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\powershell-reviewer.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "security-researcher",
+    "Lane": "Review",
+    "SuggestedName": "security-researcher",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\security-researcher.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "sql-dba",
+    "Lane": "Execution",
+    "SuggestedName": "sql-dba",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\sql-dba.agent.md"
+  },
+  {
+    "Type": "agent",
+    "CurrentName": "workspace-scaffolder",
+    "Lane": "Execution",
+    "SuggestedName": "workspace-scaffolder",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\agents\\workspace-scaffolder.agent.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "architecture.instructions.md",
+    "Lane": "Planning",
+    "SuggestedName": "architecture.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\architecture.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "async-programming.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "async-programming.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\async-programming.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "ci-cd.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "ci-cd.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\ci-cd.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "csharp.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "csharp.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\csharp.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "lifecycle-governance.instructions.md",
+    "Lane": "Planning",
+    "SuggestedName": "lifecycle-governance.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\lifecycle-governance.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "namespace-and-assembly-boundaries.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "namespace-and-assembly-boundaries.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\namespace-and-assembly-boundaries.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "naming-conventions.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "naming-conventions.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\naming-conventions.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "powershell.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "powershell.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\powershell.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "prd.instructions.md",
+    "Lane": "Planning",
+    "SuggestedName": "prd.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\prd.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "request-economy.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "request-economy.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\request-economy.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "security-and-secure-coding.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "security-and-secure-coding.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\security-and-secure-coding.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "sql-dba.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "sql-dba.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\sql-dba.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "syrx.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "syrx.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\syrx.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "task-implementation.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "task-implementation.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\task-implementation.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "technical-docs.instructions.md",
+    "Lane": "Planning",
+    "SuggestedName": "technical-docs.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\technical-docs.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "testing-strategy.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "testing-strategy.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\testing-strategy.instructions.md"
+  },
+  {
+    "Type": "instruction",
+    "CurrentName": "validation-and-guards.instructions.md",
+    "Lane": "Execution",
+    "SuggestedName": "validation-and-guards.instructions.md",
+    "Status": "Conformant",
+    "Reason": "Type convention uses domain/specialist naming",
+    "Path": "C:\\Projects\\agentic\\.github\\instructions\\validation-and-guards.instructions.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "condense",
+    "Lane": "Review",
+    "SuggestedName": "audit-condense",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\execute-condense.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "curate-copilot",
+    "Lane": "Execution",
+    "SuggestedName": "curate-copilot",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\curate-copilot.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "execute-manual-review",
+    "Lane": "Execution",
+    "SuggestedName": "execute-manual-review",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\execute-manual-review.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "generate-readme",
+    "Lane": "Execution",
+    "SuggestedName": "generate-readme",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\generate-readme.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "governance-executive-audit",
+    "Lane": "Review",
+    "SuggestedName": "governance-executive-audit",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\governance-executive-audit.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "governance-item-audit",
+    "Lane": "Review",
+    "SuggestedName": "governance-item-audit",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\governance-item-audit.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "governance-type-audit",
+    "Lane": "Review",
+    "SuggestedName": "governance-type-audit",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\governance-type-audit.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "librarian",
+    "Lane": "Execution",
+    "SuggestedName": "librarian",
+    "Status": "Conformant",
+    "Reason": "Known taxonomy exception",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\librarian.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "optimize-customizations",
+    "Lane": "Review",
+    "SuggestedName": "optimize-customizations",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\optimize-customizations.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "performance-research",
+    "Lane": "Review",
+    "SuggestedName": "performance-research",
+    "Status": "Conformant",
+    "Reason": "Allowed noun-form for lane",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\performance-research.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "review-project",
+    "Lane": "Review",
+    "SuggestedName": "audit-review-project",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\review-project.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "execute-delivery",
+    "Lane": "Execution",
+    "SuggestedName": "execute-delivery",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\execute-delivery.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "review-technical-docs",
+    "Lane": "Review",
+    "SuggestedName": "review-technical-docs",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\review-technical-docs.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "security-research",
+    "Lane": "Review",
+    "SuggestedName": "security-research",
+    "Status": "Conformant",
+    "Reason": "Allowed noun-form for lane",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\security-research.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "syrx-validation",
+    "Lane": "Execution",
+    "SuggestedName": "execute-syrx-validation",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\syrx-validation.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "execute-testing-xunit",
+    "Lane": "Execution",
+    "SuggestedName": "execute-testing-xunit",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\execute-testing-xunit.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "workspace-scaffolder",
+    "Lane": "Execution",
+    "SuggestedName": "workspace-scaffolder",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\workspace-scaffolder.prompt.md"
+  },
+  {
+    "Type": "prompt",
+    "CurrentName": "write-component-docs",
+    "Lane": "Execution",
+    "SuggestedName": "write-component-docs",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\prompts\\write-component-docs.prompt.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "adr-generator",
+    "Lane": "Planning",
+    "SuggestedName": "adr-generator",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\adr-generator\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "agent-authoring",
+    "Lane": "Execution",
+    "SuggestedName": "agent-authoring",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\agent-authoring\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "api-design",
+    "Lane": "Planning",
+    "SuggestedName": "api-design",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\api-design\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "audit-governance",
+    "Lane": "Review",
+    "SuggestedName": "audit-governance",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\audit-governance\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "audit-powershell",
+    "Lane": "Review",
+    "SuggestedName": "audit-powershell",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\audit-powershell\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "branch-completion",
+    "Lane": "Execution",
+    "SuggestedName": "branch-completion",
+    "Status": "Conformant",
+    "Reason": "Known taxonomy exception",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\branch-completion\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "build-maui-apps",
+    "Lane": "Execution",
+    "SuggestedName": "build-maui-apps",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\build-maui-apps\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "critical-thinking",
+    "Lane": "Planning",
+    "SuggestedName": "critical-thinking",
+    "Status": "Conformant",
+    "Reason": "Allowed noun-form for lane",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\critical-thinking\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "curating-copilot-instructions",
+    "Lane": "Execution",
+    "SuggestedName": "curating-copilot-instructions",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\curating-copilot-instructions\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "current-test-coverage",
+    "Lane": "Review",
+    "SuggestedName": "current-test-coverage",
+    "Status": "Conformant",
+    "Reason": "Known taxonomy exception",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\current-test-coverage\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "delivery-status-grid",
+    "Lane": "Review",
+    "SuggestedName": "delivery-status-grid",
+    "Status": "Conformant",
+    "Reason": "Known taxonomy exception",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\delivery-status-grid\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "design-mobile-ux",
+    "Lane": "Planning",
+    "SuggestedName": "design-mobile-ux",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\design-mobile-ux\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "docker-dotnet",
+    "Lane": "Execution",
+    "SuggestedName": "docker-dotnet",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\docker-dotnet\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "domain-design",
+    "Lane": "Planning",
+    "SuggestedName": "domain-design",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\domain-design\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "execute-dotnet-refactor",
+    "Lane": "Execution",
+    "SuggestedName": "execute-dotnet-refactor",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\execute-dotnet-refactor\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "execute-dotnet-resilience",
+    "Lane": "Execution",
+    "SuggestedName": "execute-dotnet-resilience",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\execute-dotnet-resilience\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "execute-plans",
+    "Lane": "Execution",
+    "SuggestedName": "execute-plans",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\execute-plans\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "governance-health-overview",
+    "Lane": "Review",
+    "SuggestedName": "governance-health-overview",
+    "Status": "Conformant",
+    "Reason": "Allowed noun-form for lane",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\governance-health-overview\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "index-docs",
+    "Lane": "Execution",
+    "SuggestedName": "index-docs",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\index-docs\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "instructions-authoring",
+    "Lane": "Execution",
+    "SuggestedName": "instructions-authoring",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\instructions-authoring\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "learn-topics",
+    "Lane": "Planning",
+    "SuggestedName": "learn-topics",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\learn-topics\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "librarian",
+    "Lane": "Execution",
+    "SuggestedName": "librarian",
+    "Status": "Conformant",
+    "Reason": "Known taxonomy exception",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\librarian\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "design-mobile-ui-prototyping",
+    "Lane": "Planning",
+    "SuggestedName": "design-mobile-ui-prototyping",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\design-mobile-ui-prototyping\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "optimize-customizations",
+    "Lane": "Review",
+    "SuggestedName": "optimize-customizations",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\optimize-customizations\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "perf-benchmark",
+    "Lane": "Review",
+    "SuggestedName": "perf-benchmark",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\perf-benchmark\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "performance-research",
+    "Lane": "Review",
+    "SuggestedName": "performance-research",
+    "Status": "Conformant",
+    "Reason": "Allowed noun-form for lane",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\performance-research\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "execute-powershell-script-library",
+    "Lane": "Execution",
+    "SuggestedName": "execute-powershell-script-library",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\execute-powershell-script-library\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "prd-generator",
+    "Lane": "Planning",
+    "SuggestedName": "prd-generator",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\prd-generator\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "prune-doc-artifacts",
+    "Lane": "Review",
+    "SuggestedName": "prune-doc-artifacts",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\prune-doc-artifacts\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "refine-ideas",
+    "Lane": "Planning",
+    "SuggestedName": "refine-ideas",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\refine-ideas\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "remediate-review",
+    "Lane": "Review",
+    "SuggestedName": "remediate-review",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\remediate-review\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "request-code-review",
+    "Lane": "Review",
+    "SuggestedName": "request-code-review",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\request-code-review\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "route-customization",
+    "Lane": "Planning",
+    "SuggestedName": "route-customization",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\route-customization\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "scaffold-dotnet",
+    "Lane": "Execution",
+    "SuggestedName": "scaffold-dotnet",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\scaffold-dotnet\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "security-research",
+    "Lane": "Review",
+    "SuggestedName": "security-research",
+    "Status": "Conformant",
+    "Reason": "Allowed noun-form for lane",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\security-research\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "skill-review",
+    "Lane": "Review",
+    "SuggestedName": "skill-review",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\skill-review\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "skills-authoring",
+    "Lane": "Execution",
+    "SuggestedName": "skills-authoring",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\skills-authoring\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "summarize-governance",
+    "Lane": "Review",
+    "SuggestedName": "summarize-governance",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\summarize-governance\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "execute-sync-customizations",
+    "Lane": "Review",
+    "SuggestedName": "audit-execute-sync-customizations",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\execute-sync-customizations\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "sync-editorconfig",
+    "Lane": "Execution",
+    "SuggestedName": "sync-editorconfig",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\sync-editorconfig\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "execute-sync-skills",
+    "Lane": "Review",
+    "SuggestedName": "audit-execute-sync-skills",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\execute-sync-skills\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "execute-syrx-data-access",
+    "Lane": "Execution",
+    "SuggestedName": "execute-syrx-data-access",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\execute-syrx-data-access\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "task-execution",
+    "Lane": "Execution",
+    "SuggestedName": "task-execution",
+    "Status": "Conformant",
+    "Reason": "Allowed noun-form for lane",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\task-execution\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "task-research",
+    "Lane": "Planning",
+    "SuggestedName": "task-research",
+    "Status": "Conformant",
+    "Reason": "Allowed noun-form for lane",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\task-research\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "taxonomy",
+    "Lane": "Execution",
+    "SuggestedName": "taxonomy",
+    "Status": "Conformant",
+    "Reason": "Allowed noun-form for lane",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\taxonomy\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "execute-test-driven-development",
+    "Lane": "Execution",
+    "SuggestedName": "execute-test-driven-development",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\execute-test-driven-development\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "design-usability-testing-scripts",
+    "Lane": "Planning",
+    "SuggestedName": "design-usability-testing-scripts",
+    "Status": "Drift",
+    "Reason": "No lane-aligned function token found in current name",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\design-usability-testing-scripts\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "validate-customization",
+    "Lane": "Review",
+    "SuggestedName": "validate-customization",
+    "Status": "Conformant",
+    "Reason": "Name contains lane-aligned function token",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\validate-customization\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "write-technical-docs",
+    "Lane": "Execution",
+    "SuggestedName": "write-technical-docs",
+    "Status": "Conformant",
+    "Reason": "Known taxonomy exception",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\write-technical-docs\\SKILL.md"
+  },
+  {
+    "Type": "skill",
+    "CurrentName": "writing-plans",
+    "Lane": "Planning",
+    "SuggestedName": "writing-plans",
+    "Status": "Conformant",
+    "Reason": "Allowed noun-form for lane",
+    "Path": "C:\\Projects\\agentic\\.github\\skills\\writing-plans\\SKILL.md"
+  }
+]

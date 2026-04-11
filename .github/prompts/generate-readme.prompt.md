@@ -4,6 +4,10 @@ description: 'Prompt to build a consolidated README from repository documentatio
 ---
 # README Generation Prompt
 
+Route this request to `orchestrator`.
+
+Use the `write-technical-docs` skill as the primary workflow.
+
 Generate a concise but useful [README.md](./../../../README.md) by aggregating the repository's documentation, architecture guidance, coding standards, testing strategy, and development workflow.
 
 ## Content Goals
@@ -26,4 +30,13 @@ Generate a concise but useful [README.md](./../../../README.md) by aggregating t
 - Keep the README readable for new contributors.
 - Prefer clear headings, short paragraphs, and flat lists.
 - Link to deeper docs instead of duplicating large internal guidance.
+
+## Output Contract
+
+Return output in this order:
+
+1. Source inventory used for generation.
+2. Coverage notes for missing information.
+3. Final README content.
+4. Follow-up gaps that require user input.
 

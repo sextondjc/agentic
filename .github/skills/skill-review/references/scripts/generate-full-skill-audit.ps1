@@ -10,7 +10,6 @@ $skillsRoot = Join-Path $RootPath '.github/skills'
 $reportsRoot = Join-Path $RootPath '.docs/changes/skill/reviews'
 $historyRoot = Join-Path $skillsRoot 'skill-review/references/history'
 $mirrorPath = Join-Path $skillsRoot 'skill-review/references/mirrors/agent-customization-SKILL.md'
-$compactDate = $ReviewDate -replace '-', ''
 $includeMirror = $IncludeAgentCustomizationMirror
 
 New-Item -ItemType Directory -Force -Path $reportsRoot | Out-Null
@@ -741,17 +740,17 @@ $($recommendationTableRows -join "`n")
     }
 }
 
-$aggregateRows = $aggregateRows | Sort-Object Skill
+$aggregateRows = @($aggregateRows | Sort-Object Skill)
 
-$total = $aggregateRows.Count
-$pass = ($aggregateRows | Where-Object Outcome -eq 'Pass').Count
-$passWithAdvisories = ($aggregateRows | Where-Object Outcome -eq 'Pass With Advisories').Count
-$fail = ($aggregateRows | Where-Object Outcome -eq 'Fail').Count
-$blocked = ($aggregateRows | Where-Object Outcome -eq 'Blocked').Count
+$total = @($aggregateRows).Count
+$pass = @($aggregateRows | Where-Object Outcome -eq 'Pass').Count
+$passWithAdvisories = @($aggregateRows | Where-Object Outcome -eq 'Pass With Advisories').Count
+$fail = @($aggregateRows | Where-Object Outcome -eq 'Fail').Count
+$blocked = @($aggregateRows | Where-Object Outcome -eq 'Blocked').Count
 $mustTotal = ($aggregateRows | Measure-Object MustFailures -Sum).Sum
 $advisoryTotal = ($aggregateRows | Measure-Object ShouldAdvisories -Sum).Sum
 
-$gridPath = Join-Path $reportsRoot 'full-skill-review-grid.md'
+$gridPath = Join-Path $reportsRoot 'governance-type-audit-skills.md'
 $gridLines = @(
     '# Full Skill Review Grid',
     '',
@@ -799,3 +798,4 @@ Set-Content -Path $historyIndexPath -Value ($historyIndexLines -join "`n") -NoNe
 Write-Output "Completed full skill audit for $total skills."
 Write-Output "Aggregate grid: $gridPath"
 Write-Output "History index: $historyIndexPath"
+

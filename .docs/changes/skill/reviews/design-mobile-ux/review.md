@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-10
+- Review Date: 2026-04-11
 - Reviewer Skill: skill-review
 - Target Skill: design-mobile-ux
 - Target Path: .github/skills/design-mobile-ux/SKILL.md

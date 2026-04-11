@@ -25,7 +25,7 @@ This skill is on-demand and review-focused. It does not run continuously and doe
 
 ## Required Outputs
 
-- Optimization review artifact at `.docs/changes/customization/reviews/optimization-factor.md`.
+- Optimization review artifact at `.docs/changes/customization/reviews/governance-type-audit-optimization.md`.
 - Consolidated results grid with one row per reviewed artifact.
 - Ranked remediation grid with concrete edits and priority.
 
@@ -66,3 +66,4 @@ This skill is on-demand and review-focused. It does not run continuously and doe
 - Reviewed artifacts are documented in the optimization-factor report.
 - MUST failures are explicit, evidence-backed, and prioritized.
 - Recommended remediations are actionable and routed to the correct authoring skill.
+

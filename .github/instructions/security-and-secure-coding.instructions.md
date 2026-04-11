@@ -5,6 +5,11 @@ applyTo: '**'
 ---
 # Security & Secure Coding
 
+## Global Scope Rationale
+
+- This policy intentionally uses `applyTo: '**'` because secure-coding constraints must apply to all artifacts and execution paths, including docs, scripts, and code.
+- Security control gaps created by narrower applyTo patterns are treated as unacceptable drift.
+
 ## Core Principles
 - Least privilege.
 - Deny by default.

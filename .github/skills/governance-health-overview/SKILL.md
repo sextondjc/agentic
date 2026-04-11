@@ -29,10 +29,18 @@ Invoke this skill when any of the following is true:
 
 ## Required Outputs
 
-- Reconciled report at `.docs/changes/governance/audits/comprehensive-workspace-health-audit.md`.
+- Reconciled report at `.docs/changes/governance/audits/governance-executive-audit.md`.
+- Report Navigation Grid with three levels and drill-down links:
+	- Level 1 Executive (workspace summary)
+	- Level 2 Type (skills/prompts/agents/instructions aggregates)
+	- Level 3 Item (individual customization findings)
 - Coverage Grid.
 - Standards Health Grid including GOV-M*, GOV-S*, plus aggregated GOV-SK, GOV-CUS, and GOV-OPT outcomes.
-- Aggregate Metrics Grid.
+- Aggregate Metrics Grid including check pass/fail totals, asset counts, and overlap-threshold metrics.
+- Failure Detail Grid with one row per open failure (or explicit `None` row when all are closed).
+- Delta vs Prior Report Grid using standardized metrics with `Prior`, `Current`, `Delta`, and `Trend` columns (`Increase`, `Decrease`, `Flat`).
+- Responsibility overlap summary sourced from `test-responsibility-overlap.ps1` including duplicate-pair count, threshold, and top overlap pairs.
+- Docs Corpus Hygiene Grid sourced from `librarian` companion checks and `.docs` corpus metrics.
 - Ranked Recommendations Grid.
 - Explicit final disposition (`PASSED` or `FAILED`) based on MUST failures and open conflicts.
 
@@ -58,7 +66,7 @@ Invoke this skill when any of the following is true:
 
 ## Workflow
 
-0. Use `powershell-script-library` first and run `invoke-governance-health-overview.ps1` to collect evidence in one non-interactive execution when tooling permits.
+0. Use `execute-powershell-script-library` first and run `invoke-governance-health-overview.ps1` to collect evidence in one non-interactive execution when tooling permits.
 1. Run `audit-governance` first and produce a fresh core governance artifact under `.docs/changes/governance/audits/` for the audit date.
 2. Run `skill-review` second and produce a fresh aggregate skill review artifact under `.docs/changes/skill/reviews/` for the audit date.
 3. Run `validate-customization` third and produce a fresh aggregate customization review artifact under `.docs/changes/customization/reviews/` for the audit date.
@@ -67,6 +75,10 @@ Invoke this skill when any of the following is true:
 6. Reconcile the four fresh sources into one coherent set of metrics.
 7. If any MUST failures or open conflicts exist in any source, set disposition to `FAILED`.
 8. Produce ranked remediation recommendations mapped to evidence artifacts.
+9. Include the routed `responsibility-overlap` output payload in the reconciled report metadata and standards evidence.
+10. Include the routed `Metrics` payload in report metadata and use it as the canonical source for aggregate metrics grids.
+11. Run `librarian` as a companion review to assess `.docs` corpus growth, redundancy candidates, and stale candidates; include results in Docs Corpus Hygiene Grid.
+12. Compute and publish a standardized Delta vs Prior Report Grid in the reconciled report.
 
 ## Freshness Policy
 
@@ -107,8 +119,10 @@ Invoke this skill when any of the following is true:
 - `skill-review`
 - `validate-customization`
 - `optimize-customizations`
-- `sync-customizations`
-- `sync-skills`
+- `execute-sync-customizations`
+- `execute-sync-skills`
+- `librarian`
+- `prune-doc-artifacts`
 
 ## Done Criteria
 
@@ -121,4 +135,6 @@ Invoke this skill when any of the following is true:
 ## Inputs
 
 - User request context and target scope for this skill invocation.
+
+
 

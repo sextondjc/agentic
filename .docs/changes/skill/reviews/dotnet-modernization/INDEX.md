@@ -13,4 +13,3 @@
 | File | Title | Category | Summary |
 |---|---|---|---|
 | [history.md](./history.md) | dotnet-modernization Review History | change | Consolidated history for date-prefixed files previously kept individually. |
-| [review.md](./review.md) | Review | change | L |

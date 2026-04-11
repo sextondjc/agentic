@@ -48,7 +48,7 @@ Provide a concise summary of the dominant bottlenecks, the likely business or op
 - Recommended remediation:
   - `<clear remediation guidance without implementation>`
 - Recommended validating agent or skill:
-  - `<csharp-engineer / architecture / syrx-data-access / etc.>`
+  - `<csharp-engineer / architecture / execute-syrx-data-access / etc.>`
 - Validation or benchmark recommendation:
   - `<specific benchmark, counter, trace, or load-test follow-up>`
 - Implementation status:

@@ -22,9 +22,9 @@ $historyDir = Join-Path $resolvedRoot '.github/skills/skill-review/references/hi
 if (Test-Path -LiteralPath $historyDir) {
     foreach ($file in Get-ChildItem -LiteralPath $historyDir -Filter '*-history.md' -File) {
         $content = Get-Content -LiteralPath $file.FullName -Raw
-        $dates = [regex]::Matches($content, '(?m)^###\s+(\d{4}-\d{2}-\d{2})\s+-\s+Review') | ForEach-Object { [datetime]::Parse($_.Groups[1].Value) }
+        $dates = @([regex]::Matches($content, '(?m)^###\s+(\d{4}-\d{2}-\d{2})\s+-\s+Review') | ForEach-Object { [datetime]::Parse($_.Groups[1].Value) })
         if (-not $dates -or $dates.Count -eq 0) {
-            $dates = [regex]::Matches($content, '(?m)^-\s+Last Reviewed:\s+(\d{4}-\d{2}-\d{2})\s*$') | ForEach-Object { [datetime]::Parse($_.Groups[1].Value) }
+            $dates = @([regex]::Matches($content, '(?m)^-\s+Last Reviewed:\s+(\d{4}-\d{2}-\d{2})\s*$') | ForEach-Object { [datetime]::Parse($_.Groups[1].Value) })
         }
         $last = if ($dates.Count -gt 0) { ($dates | Sort-Object -Descending | Select-Object -First 1) } else { $null }
         $days = if ($null -ne $last) { [int]($today - $last).TotalDays } else { $null }

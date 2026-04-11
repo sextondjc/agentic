@@ -6,7 +6,7 @@ description: 'Consolidated PowerShell scripting and cmdlet guidance for safe, id
 
 # PowerShell Policy
 
-Keep this file policy-only. Use [SKILL.md](./../skills/powershell-script-library/SKILL.md) for detailed script and cmdlet authoring patterns, and [SKILL.md](./../skills/audit-powershell/SKILL.md) for review workflow and correction guidance.
+Keep this file policy-only. Use [SKILL.md](./../skills/execute-powershell-script-library/SKILL.md) for detailed script and cmdlet authoring patterns, and [SKILL.md](./../skills/audit-powershell/SKILL.md) for review workflow and correction guidance.
 
 ## Naming and Parameters
 
@@ -38,5 +38,5 @@ Keep this file policy-only. Use [SKILL.md](./../skills/powershell-script-library
 
 ## Routing Notes
 
-- Use [SKILL.md](./../skills/powershell-script-library/SKILL.md) for cmdlet patterns, reuse decisions, and script-catalog workflow.
+- Use [SKILL.md](./../skills/execute-powershell-script-library/SKILL.md) for cmdlet patterns, reuse decisions, and script-catalog workflow.
 - Use [SKILL.md](./../skills/audit-powershell/SKILL.md) for safety and maintainability review.

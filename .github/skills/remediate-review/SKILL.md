@@ -41,6 +41,8 @@ Push back when feedback:
 - Adds unused complexity (YAGNI).
 - Depends on assumptions not supported by repository evidence.
 
+For edge-case triage patterns and pushback templates, use [remediation-edge-cases.md](./references/remediation-edge-cases.md).
+
 ## Required Inputs
 
 - Review comments or findings.
@@ -65,3 +67,4 @@ Push back when feedback:
 
 - [README.md](./references/README.md)
 - [review-response-examples.md](./references/review-response-examples.md)
+- [remediation-edge-cases.md](./references/remediation-edge-cases.md)

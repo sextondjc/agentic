@@ -85,8 +85,8 @@ Use these when they improve the quality of the assessment:
 - `task-research` for broad evidence gathering
 - `critical-thinking` to challenge assumptions and reduce false positives
 - `api-design` for HTTP, authentication, and integration-boundary analysis
-- `syrx-data-access` for repository and explicit SQL review
-- `dotnet-refactor` for obsolete API or legacy-pattern risk context
+- `execute-syrx-data-access` for repository and explicit SQL review
+- `execute-dotnet-refactor` for obsolete API or legacy-pattern risk context
 - `adr-generator` when the recommended remediation should become an ADR
 
 Recommended coordinating agent: `security-researcher`

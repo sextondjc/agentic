@@ -50,7 +50,7 @@ Provide a concise summary of the overall security posture, the highest-risk find
 - Recommended remediation:
   - `<clear remediation guidance without implementation>`
 - Recommended validating agent or skill:
-  - `<csharp-engineer / architecture / api-design / syrx-data-access / etc.>`
+  - `<csharp-engineer / architecture / api-design / execute-syrx-data-access / etc.>`
 - Implementation status:
   - `Not implemented by security-researcher`
 

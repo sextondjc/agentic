@@ -30,23 +30,14 @@ Which option?
 - If tests fail, stop and report failures.
 - Determine base branch using merge-base or explicit user confirmation.
 
-## Outcome Matrix
+## Decision Matrix
 
-| Option | Primary Action | Must Re-Test | Branch Cleanup | Worktree Cleanup |
-|---|---|---|---|---|
-| 1 | Merge into base locally | Yes | Delete feature branch after pass | Yes |
-| 2 | Push branch and open PR | No | Keep branch | Yes |
-| 3 | Keep branch unchanged | No | Keep branch | No |
-| 4 | Discard branch | No | Force-delete branch after explicit confirmation | Yes |
-
-## Command Matrix
-
-| Option | Command Sequence |
-|---|---|
-| 1 | git checkout <base>; git pull; git merge <feature>; <test-command>; git branch -d <feature> |
-| 2 | git push -u origin <feature>; gh pr create --title "<title>" --body "<summary-and-test-plan>" |
-| 3 | No git mutation commands; report branch and worktree retained |
-| 4 | Confirm typed discard; git checkout <base>; git branch -D <feature> |
+| Option | Primary Action | Command Sequence | Must Re-Test | Branch Cleanup | Worktree Cleanup |
+|---|---|---|---|---|---|
+| 1 | Merge into base locally | `git checkout <base>; git pull; git merge <feature>; <test-command>; git branch -d <feature>` | Yes | Delete feature branch after pass | Yes |
+| 2 | Push branch and open PR | `git push -u origin <feature>; gh pr create --title "<title>" --body "<summary-and-test-plan>"` | No | Keep branch | Yes |
+| 3 | Keep branch unchanged | No git mutation commands; report branch/worktree retained | No | Keep branch | No |
+| 4 | Discard branch | Confirm token; `git checkout <base>; git branch -D <feature>` | No | Force-delete after explicit confirmation | Yes |
 
 ## Confirmation Rule for Option 4
 
@@ -66,7 +57,7 @@ Type 'discard' to confirm permanent deletion.
 ## Integration
 
 - Called by [SKILL.md](./../task-execution/SKILL.md).
-- Called by [SKILL.md](./../executing-plans/SKILL.md).
+- Called by [SKILL.md](./../execute-plans/SKILL.md).
 
 ## Required Inputs
 

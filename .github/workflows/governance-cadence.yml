@@ -67,6 +67,9 @@ jobs:
 
             # Source catalog freshness threshold
             ./.github/scripts/powershell/test-source-catalog-freshness.ps1 -ThresholdDays 30 | Tee-Object -FilePath ./.artifacts/source-catalog-freshness.txt
+
+            # Responsibility overlap threshold across agents/instructions/prompts/skills
+            ./.github/scripts/powershell/test-responsibility-overlap.ps1 -SimilarityThreshold 0.82 -MinimumSharedTokens 6 -MaxAllowedDuplicatePairs 8 -OutputPath ./.artifacts/responsibility-overlap.json | Tee-Object -FilePath ./.artifacts/responsibility-overlap.txt
           }
           finally {
             Pop-Location

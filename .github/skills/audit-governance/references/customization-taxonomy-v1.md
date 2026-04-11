@@ -81,8 +81,8 @@ The accepted taxonomy is maintained and applied through these governing assets:
 | write-component-docs | execution | standards | prompt | component-docs-template |
 | curate-copilot | execution | governance | prompt | catalog-curation-template |
 | generate-readme | execution | standards | prompt | readme-template |
-| syrx-validation | execution | standards | prompt | syrx-validation-template |
-| testing-xunit | execution | test | prompt | xunit-template |
+| syrx-validation | review | standards | skill | input-validation-pattern |
+| execute-testing-xunit | execution | test | prompt | xunit-template |
 | review-technical-docs | review | standards | prompt | docs-review-template |
 | skill-audit | review | governance | prompt | skill-audit-template |
 | instructions-audit | review | governance | prompt | instruction-audit-template |
@@ -97,15 +97,15 @@ The accepted taxonomy is maintained and applied through these governing assets:
 | adr-generator | planning | standards | skill | adr-author |
 | api-design | planning | standards | skill | interface-designer |
 | task-execution | execution | execution | skill | task-implementer |
-| executing-plans | execution | execution | skill | checkpoint-executor |
-| test-driven-development | execution | test | skill | test-first-implementer |
+| execute-plans | execution | execution | skill | checkpoint-executor |
+| execute-test-driven-development | execution | test | skill | test-first-implementer |
 | agent-authoring | execution | governance | skill | agent-author |
 | instructions-authoring | execution | governance | skill | instruction-author |
 | skills-authoring | execution | governance | skill | skill-author |
 | curating-copilot-instructions | execution | governance | skill | catalog-curator |
-| dotnet-refactor | execution | standards | skill | refactorer |
+| execute-dotnet-refactor | execution | standards | skill | refactorer |
 | docker-dotnet | execution | standards | skill | containerizer |
-| syrx-data-access | execution | standards | skill | repository-implementer |
+| execute-syrx-data-access | execution | standards | skill | repository-implementer |
 | branch-completion | execution | delivery | skill | completion-coordinator |
 | write-technical-docs | execution | standards | skill | technical-writer |
 | request-code-review | review | review | skill | review-requester |
@@ -119,8 +119,8 @@ The accepted taxonomy is maintained and applied through these governing assets:
 | security-research | review | security | skill | security-analyst |
 | skill-review | review | governance | skill | skill-auditor |
 | validate-customization | review | governance | skill | customization-validator |
-| sync-customizations | review | synchronization | skill | customization-maintainer |
-| sync-skills | review | synchronization | skill | skill-maintainer |
+| execute-sync-customizations | review | synchronization | skill | customization-maintainer |
+| execute-sync-skills | review | synchronization | skill | skill-maintainer |
 
 ## Catalog Cross-Check Snapshot
 

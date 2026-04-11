@@ -6,7 +6,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $reportsDir = Join-Path $RootPath '.docs/changes/skill/reviews'
-$outFile = Join-Path $reportsDir 'full-skill-review-grid.md'
+$outFile = Join-Path $reportsDir 'governance-type-audit-skills.md'
 
 $rows = Get-ChildItem $reportsDir -Recurse -File -Filter 'review.md' |
     ForEach-Object {
@@ -62,3 +62,4 @@ foreach ($row in $rows) {
 
 Set-Content -Path $outFile -Value ($lines -join "`n") -NoNewline
 Write-Output "Updated $outFile"
+

@@ -48,6 +48,8 @@ Fresh subagent per task plus ordered review gates equals low-context, high-confi
 7. If quality review fails, fix and re-run quality review.
 8. Mark task complete and move to the next task.
 
+Use [command-patterns.md](./references/command-patterns.md) for canonical dispatch, status-handling, and gate-sequencing patterns.
+
 ## Gate Order
 
 - Always run spec compliance before code quality.
@@ -68,7 +70,7 @@ Fresh subagent per task plus ordered review gates equals low-context, high-confi
 
 ## Integration
 
-- Uses [SKILL.md](./../test-driven-development/SKILL.md) for implementation discipline.
+- Uses [SKILL.md](./../execute-test-driven-development/SKILL.md) for implementation discipline.
 - Uses [SKILL.md](./../request-code-review/SKILL.md) for reviewer routing.
 - Finishes through [SKILL.md](./../branch-completion/SKILL.md).
 
@@ -76,3 +78,4 @@ Fresh subagent per task plus ordered review gates equals low-context, high-confi
 
 - [README.md](./references/README.md)
 - [subagent-dispatch-patterns.md](./references/subagent-dispatch-patterns.md)
+- [command-patterns.md](./references/command-patterns.md)

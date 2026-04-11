@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-10
+- Review Date: 2026-04-11
 - Reviewer Skill: skill-review
 - Target Skill: task-execution
 - Target Path: .github/skills/task-execution/SKILL.md
@@ -16,9 +16,9 @@
 
 | Metric | Value |
 |---|---|
-| Overall Outcome | Pass |
+| Overall Outcome | Pass With Advisories |
 | MUST Failures | 0 |
-| SHOULD Advisories | 0 |
+| SHOULD Advisories | 1 |
 | Conflict Status | None |
 
 ## Standards Evaluation
@@ -32,14 +32,14 @@
 | SKR-S1 | Pass | .github/skills/task-execution/references/ | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | .github/skills/*/SKILL.md | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | .github/skills/task-execution/SKILL.md | No placeholder or unresolved markdown links detected across skill markdown files. |
-| SKR-S4 | Pass | .github/skills/task-execution/SKILL.md | Skill is self-contained with explicit execution context for inputs, outputs, and process using canonical sections or equivalent labels. |
-| SKR-S5 | Pass | .github/skills/task-execution/SKILL.md | Skill wording is within the conservative brevity baseline (814 words) and shows no automatic verbosity concern. |
+| SKR-S4 | Advisory | .github/skills/task-execution/SKILL.md | Skill is not fully self-contained; missing explicit execution context: process/workflow context. |
+| SKR-S5 | Pass | .github/skills/task-execution/SKILL.md | Skill wording is within the conservative brevity baseline (305 words) and shows no automatic verbosity concern. |
 
 ## Recommendations
 
 | Recommendation ID | Description | Priority | Status |
 |---|---|---|---|
-| REC-000 | No recommendations. | Low | Implemented |
+| REC-005 | Make the skill self-contained by adding explicit input/output/process execution context using canonical sections or clearly labeled equivalents. | Medium | Proposed |
 
 ## History Guard Check
 
@@ -57,4 +57,4 @@
 
 | Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---|---|
-| task-execution | Pass | 0 | 0 | None | .docs/changes/skill/reviews/task-execution/review.md |
+| task-execution | Pass With Advisories | 0 | 1 | None | .docs/changes/skill/reviews/task-execution/review.md |

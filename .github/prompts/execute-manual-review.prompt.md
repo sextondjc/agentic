@@ -5,6 +5,10 @@ description: 'Applies saved manual review findings only after explicit invocatio
 
 # Execute Manual Review Prompt
 
+Route this request to `orchestrator`.
+
+Use the `remediate-review` skill as the primary workflow.
+
 ## Purpose
 
 Use this prompt only after a manual review pass is complete and findings are saved.
