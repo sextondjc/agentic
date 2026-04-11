@@ -38,3 +38,4 @@ Self-contained, approval-gated compendium synchronization.
 - `source: local` and `ownershipMode: local` are never overwritten.
 - `ownershipMode: extended` changes always require manual review.
 - Non-compendium sources are preserved by default.
+- `hold` / `missing-in-source` outcomes are not deleted by this skill; decommission runs in a separate approved workflow.

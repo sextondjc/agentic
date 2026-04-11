@@ -78,6 +78,7 @@ Use [sync-decision-matrix.md](./references/sync-decision-matrix.md) to classify 
 - Group by action type: update-candidate, add-candidate, manual-review, hold, preserve, noop
 - For each group: decide approve, request-info, or reject
 - Identify manual-review items requiring human merge (ownership_mode=extended + source-changed, or managed + local-drift)
+- Treat `hold` + `missing-in-source` items as decommission candidates for a separate removal workflow (no deletion in this skill)
 
 ### Step 4: Explicit Approval Checkpoint
 Record approval evidence:
@@ -113,6 +114,7 @@ Confirm applied state matches plan:
 | managed + local-drift detected | manual-review | Local changes present; requires merge review |
 | managed + source-changed | update-candidate | Eligible for update after approval |
 | ownershipMode=extended + source-changed | manual-review | Extended mode + source change requires manual merge |
+| missing-in-source | hold | Removal is out-of-scope for this skill and requires separate approved decommission workflow |
 | new-in-source | add-candidate | New artifact from source; eligible for add after approval |
 
 ## Companion Scripts
