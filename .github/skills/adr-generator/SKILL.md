@@ -39,12 +39,14 @@ Add Implementation Notes → Inject References → Quality Gate → Save File
 
 ## Numbering
 
-Scan `/.docs/adr/` for the highest existing `adr-NNNN-` prefix. Increment by one. Use zero-padded four-digit format.
+Scan `/.docs/adr/` recursively for the highest existing `adr-NNNN-` prefix. Increment by one. Use zero-padded four-digit format.
 
 ## Output Rules
 
-- Save in `.docs/adr/`.
+- Save in `.docs/adr/<domain>/`.
 - Filename: `adr-NNNN-title-slug.md` (lowercase, hyphens, no special chars).
+- Keep `<domain>` lowercase and one word.
+- Do not place ADR files directly under `.docs/adr/` unless explicitly requested by the user.
 - Include all mandatory sections in order.
 - Never create root-level folders in any workspace.
 - Never create top-level reference folders; keep references under owning asset paths only.

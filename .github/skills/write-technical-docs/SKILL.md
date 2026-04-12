@@ -26,7 +26,7 @@ This skill is documentation-first and evidence-first:
 ## Mandatory Inputs
 
 - Documentation scope (default: entire workspace).
-- Documentation root output path (default: `/.docs/components/`).
+- Documentation root output path (default: `/.docs/components/<domain>/`).
 - Preferred audience (default: developers and maintainers).
 - Language/ecosystem hints when available (for API idioms and examples).
 
@@ -57,13 +57,20 @@ When scope is workspace-wide, split by top-level directory and run discovery in 
 
 ## Output Contract
 
-Produce a technical reference documentation set under the selected root (default `/.docs/components/`) with this baseline:
+Produce a technical reference documentation set under the selected root (default `/.docs/components/<domain>/`) with this baseline:
 
 - `index.md` - repository documentation home page.
 - `code-structure.md` - source tree mirror and navigation map.
 - `coverage-report.md` - documented vs undocumented file matrix.
 - One documentation page for each significant source file, type, or module.
 - Directory-level landing pages that mirror the code hierarchy.
+
+Folder granularity rules:
+
+- Use at least three levels for generated docs when scope is non-trivial: `<domain>/<subdomain>/<artifact-type>/`.
+- Keep folder names lowercase and one word per level.
+- Avoid flat dumps of many files into a single folder.
+- Do not place module documentation files directly in `.docs/components/` unless the user explicitly requests a flat structure.
 
 When creating landing pages:
 
@@ -166,6 +173,14 @@ When invoked in review mode:
 - Use consistent requirement identifiers when writing specification-like sections.
 - Never create root-level folders in any workspace.
 - Never create top-level reference folders; keep references under owning asset paths.
+
+## Core Documentation Types
+
+This skill addresses three core documentation patterns:
+
+- **README blueprint** - folder entry-point guidance explaining purpose, usage, and local conventions.
+- **OO Component docs** - C4 architecture diagrams plus mermaid visualizations with detailed member/interface documentation.
+- **Specification / PRD merged documents** - unified documents combining goals, personas, requirements, and acceptance criteria using explicit IDs (REQ-, SEC-, CON-, AC-).
 
 ## Completion Checklist
 

@@ -7,7 +7,7 @@ description: Use when comprehensive project research is needed before planning o
 
 ## Specialization
 
-Research-only specialist. Create and edit files in `./.docs/research/` only. Do not modify source code, configurations, or other project files.
+Research-only specialist. Create and edit files in `./.docs/research/<domain>/<topic>/` only. Do not modify source code, configurations, or other project files.
 
 ## Core Constraints
 
@@ -33,6 +33,8 @@ Per research activity: execute tool → update research file immediately → doc
 ## File Standards
 
 Use descriptive names: `task-description-research.md`.
+Use granular paths: `.docs/research/<domain>/<topic>/<artifact>.md`.
+Do not place research files directly in `.docs/research/` unless the user explicitly requests a flat structure.
 Use [research-template.md](./references/research-template.md) for all research notes. Preserve `#githubRepo:` and `#fetch:` callout formats exactly.
 
 ## User Interaction
@@ -57,7 +59,7 @@ On completion: state exact filename, highlight critical findings, confirm single
 
 ## Required Outputs
 
-- Source-backed research artifact under `.docs/research/`.
+- Source-backed research artifact under `.docs/research/<domain>/<topic>/`.
 - Clear alternatives with trade-offs.
 - Recommended path with implementation-ready handoff notes.
 

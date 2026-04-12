@@ -13,8 +13,21 @@ Assume they are a skilled developer, but know almost nothing about our toolset o
 
 **Announce at start:** "I'm using the writing-plans skill to create the implementation plan."
 
-**Save plans to:** `.docs/plans/<feature-name>.md`
+**Save plans to:** `.docs/plans/<domain>/<workstream>/<plan-name>.md`
 - (User preferences for plan location override this default)
+
+## Plan Folder Granularity
+
+Plan artifacts must use granular folder hierarchy, not flat placement.
+
+- Required minimum hierarchy: `.docs/plans/<domain>/<workstream>/<artifact>.md`
+- Optional deeper hierarchy for large initiatives: `.docs/plans/<domain>/<program>/<workstream>/<artifact>.md`
+- Keep each folder level lowercase and one word.
+- Do not place plan files directly under `.docs/plans/` unless the user explicitly overrides this policy.
+
+Examples:
+- `.docs/plans/payments/reconciliation/retry-window-plan.md`
+- `.docs/plans/governance/catalog/lane-mapping-remediation.md`
 
 ## Scope Check
 
@@ -121,7 +134,7 @@ If you find issues, fix them inline. No need to re-review — just fix and move 
 
 After saving the plan, offer execution choice:
 
-**"Plan complete and saved to `.docs/plans/<filename>.md`. Two execution options:**
+**"Plan complete and saved to `.docs/plans/<domain>/<workstream>/<filename>.md`. Two execution options:**
 
 **1. Agent-Routed (recommended)** - Route each task through `orchestrator` to the right specialist and review between tasks.
 

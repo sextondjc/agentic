@@ -76,7 +76,13 @@ Present the draft and explicitly ask for approval before proceeding. Only after 
 
 ## Output
 
-Save the PRD as `prd.md`. If the user does not specify a location, propose the project root and confirm before saving.
+Save the PRD as `.docs/specs/<domain>/<workstream>/prd.md` by default.
+If the user does not specify a location, propose this granular path and confirm before saving.
+
+Folder policy:
+- Use at least two granular levels under `.docs/specs/` (`<domain>/<workstream>`).
+- Keep folder names lowercase and one word per level.
+- Do not save PRDs directly at repository root unless the user explicitly requests it.
 
 Format: valid Markdown only. No horizontal rules. No disclaimers or footers. Title case for the document title only; all other headings in sentence case.
 
@@ -86,6 +92,14 @@ Format: valid Markdown only. No horizontal rules. No disclaimers or footers. Tit
 - Never create top-level reference folders; keep references under the owning asset path.
 
 ---
+
+## Document Structure
+
+All PRD and specification documents must follow this canonical structure. Do not skip or reorder:
+
+**Overview → Goals → Personas → Functional Requirements → User Stories (GH-###) → Interfaces/Data Contracts → Acceptance Criteria (AC-###) → Metrics → Risks → Dependencies**
+
+If a section is not applicable, mark it "N/A — [reason]" rather than omitting it.
 
 ## PRD Template
 
