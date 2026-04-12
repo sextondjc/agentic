@@ -23,13 +23,16 @@ Use this skill when:
 
 ## Required Inputs
 
-- `target_repo_root`: Absolute path to target repository (must contain `.github/skills/sync-compendium/references/.compendium/lock.json` after first import)
-- `target_index_path`: Path to artifact index in target repo (typically `.github/skills/sync-compendium/references/.compendium/artifact-index.json`, relative to target_repo_root)
-- `source_manifest_path`: Path to source manifest JSON in source repo (typically `.github/skills/sync-compendium/references/.compendium/manifest.json`)
+- `source_repository_url`: GitHub URL for the source compendium (for example `https://github.com/sextondjc/agentic`)
 
-**Note**: `source_repo` (always `sextondjc/agentic`), `source_version`, and `source_commit` are derived automatically by checking GitHub API; user does not supply these.
+Derived automatically (user does not supply):
+- `target_repo_root`: current workspace root
+- `target_index_path`: `.github/skills/sync-compendium/references/.compendium/artifact-index.json`
+- `plan_out_path`: `.github/skills/sync-compendium/references/.compendium/latest-plan.json`
+- `sync_report_path`: `.github/skills/sync-compendium/references/.compendium/latest-sync-report.json`
+- `source_repo`, `source_version`, `source_commit`: from GitHub API and source `version.json`
 
-The skill reads `.github/skills/sync-compendium/references/.compendium/version.json` internally to determine stored commit hash and compare with latest on GitHub main branch.
+The skill reads `.github/skills/sync-compendium/references/.compendium/version.json` to compare stored commit hash with latest source hash.
 
 ## Required Outputs
 
@@ -45,6 +48,7 @@ The skill reads `.github/skills/sync-compendium/references/.compendium/version.j
 - **External source preserved**: Any artifact with `source != sextondjc/agentic` is preserved by default (excluded from overwrite)
 - **Extended mode requires manual review**: `ownershipMode=extended` with source changes must trigger manual-merge, not blind replace
 - **Plan-first, no blind apply**: No apply step permitted until dry-run plan exists, has been reviewed, and approval is recorded
+- **Mandatory same-flow cleanup**: If plan contains `hold + missing-in-source`, apply must include approved prune removals in the same run
 - **Lock immutability**: Lock file serves as proof of import state and enables idempotent re-runs
 
 ## Workflow (7 Steps)
@@ -60,17 +64,17 @@ Before any user input collection, the agent checks GitHub sextondjc/agentic main
 ### Step 1: Initialize (First Import Only)
 Execute `Initialize-CompendiumImport.ps1` in target repository.
 - Creates `.github/skills/sync-compendium/references/.compendium/lock.json` with source metadata
-- Creates `.github/skills/sync-compendium/references/.compendium/artifact-index.json` stub (user populates with real artifacts after import)
+- Creates `.github/skills/sync-compendium/references/.compendium/artifact-index.json` as an empty array when missing
 - Idempotent; safe to re-run
 - Required: `source_repo`, `source_version`, `source_commit`
 
 ### Step 2: Generate Dry-Run Plan
 Execute `Invoke-CompendiumSyncPlan.ps1` with:
 - `TargetIndexPath`: Path to `.github/skills/sync-compendium/references/.compendium/artifact-index.json` in target repo
-- `SourceManifestPath`: Path to manifest in source repo (at source_commit)
-- `SourceRepository`: Always `sextondjc/agentic`
+- `SourceManifestPath`: Optional local manifest path. If omitted/unavailable, the script builds source items directly from GitHub repository tree.
+- `SourceRepository`: Repository slug or GitHub URL
 - `SourceVersion`, `SourceCommit`: From GitHub API (automated, not user-supplied)
-- `PlanOutPath`: Caller-specified path where the plan JSON will be written (required; no default)
+- `PlanOutPath`: `.github/skills/sync-compendium/references/.compendium/latest-plan.json`
 - Output: JSON plan written to caller-specified path
 
 ### Step 3: Review Dry-Run with Decision Matrix
@@ -78,7 +82,7 @@ Use [sync-decision-matrix.md](./references/sync-decision-matrix.md) to classify 
 - Group by action type: update-candidate, add-candidate, manual-review, hold, preserve, noop
 - For each group: decide approve, request-info, or reject
 - Identify manual-review items requiring human merge (ownership_mode=extended + source-changed, or managed + local-drift)
-- Treat `hold` + `missing-in-source` items as decommission candidates for a separate removal workflow (no deletion in this skill)
+- Treat `hold` + `missing-in-source` items as mandatory decommission actions that must be approved and executed in the same sync apply flow
 
 ### Step 4: Explicit Approval Checkpoint
 Record approval evidence:
@@ -92,9 +96,10 @@ Execute `Apply-CompendiumSync.ps1` with:
 - `PlanPath`: Path to JSON dry-run plan (from Step 2)
 - `TargetRepoRoot`: Target repo root
 - `ApprovedActions`: Comma-separated list of approved artifact IDs or action groups
-- `SyncReportPath`: Caller-specified path where the sync report JSON will be written (required; no default)
-- Output: Updates lock file, updates artifact index, writes sync report to caller-specified path
-- Safety: Rejects unapproved actions; records not-approved in sync report
+- `ApprovedRemovals`: Comma-separated list of approved `hold + missing-in-source` artifact IDs (required when hold items exist)
+- `SyncReportPath`: `.github/skills/sync-compendium/references/.compendium/latest-sync-report.json`
+- Output: Downloads and writes approved `add-candidate`/`update-candidate` artifacts from source, updates lock file and artifact index, writes sync report
+- Safety: Rejects unapproved actions; records not-approved in sync report; hard-fails apply when hold items exist without same-flow prune approvals
 
 ### Step 6: Validation
 Confirm applied state matches plan:
@@ -114,14 +119,27 @@ Confirm applied state matches plan:
 | managed + local-drift detected | manual-review | Local changes present; requires merge review |
 | managed + source-changed | update-candidate | Eligible for update after approval |
 | ownershipMode=extended + source-changed | manual-review | Extended mode + source change requires manual merge |
-| missing-in-source | hold | Removal is out-of-scope for this skill and requires separate approved decommission workflow |
+| missing-in-source | hold | Candidate for explicit prune workflow (`prune-sync-assets`) |
 | new-in-source | add-candidate | New artifact from source; eligible for add after approval |
 
 ## Companion Scripts
 
+- [Bootstrap-CompendiumSyncEngine.ps1](./references/scripts/Bootstrap-CompendiumSyncEngine.ps1): One-time bootstrap for legacy callers; updates sync engine files from source so subsequent sync runs are fully automated.
+- [Invoke-CompendiumSync.ps1](./references/scripts/Invoke-CompendiumSync.ps1): URL-first orchestration wrapper; generates plan and enforces mandatory same-flow prune cleanup when hold items exist.
 - [Initialize-CompendiumImport.ps1](./references/scripts/Initialize-CompendiumImport.ps1): First-import setup; creates lock + artifact index stub
 - [Invoke-CompendiumSyncPlan.ps1](./references/scripts/Invoke-CompendiumSyncPlan.ps1): Non-interactive; generates deterministic dry-run plan
 - [Apply-CompendiumSync.ps1](./references/scripts/Apply-CompendiumSync.ps1): Executes approved actions; updates lock + index; writes audit report
+
+### Legacy Bootstrap Path
+
+If a target repository still uses an older sync engine that cannot apply source file updates, run bootstrap once:
+
+```powershell
+./.github/skills/sync-compendium/references/scripts/Bootstrap-CompendiumSyncEngine.ps1 \
+	-SourceRepositoryUrl https://github.com/sextondjc/agentic
+```
+
+Then execute normal sync using `Invoke-CompendiumSync.ps1`.
 
 ## Schemas & Reference Docs
 

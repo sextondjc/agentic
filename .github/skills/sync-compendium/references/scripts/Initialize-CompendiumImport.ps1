@@ -46,21 +46,9 @@ if ($PSCmdlet.ShouldProcess($lockFile, 'Write lock file')) {
 # Create artifact index stub if it doesn't exist
 $artifactIndexPath = Join-Path -Path $lockDir -ChildPath 'artifact-index.json'
 if (-not (Test-Path -LiteralPath $artifactIndexPath)) {
-    $artifactIndexContent = @(
-        @{
-            artifactId    = 'placeholder'
-            path          = 'placeholder'
-            artifactType  = 'other'
-            source        = 'local'
-            ownershipMode = 'local'
-            contentHash   = ''
-            lastSyncedAt  = (Get-Date).ToUniversalTime().ToString('o')
-        }
-    )
-
     if ($PSCmdlet.ShouldProcess($artifactIndexPath, 'Initialize artifact index')) {
-        $artifactIndexContent | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $artifactIndexPath -NoNewline
-        Write-Host "Artifact index initialized: $artifactIndexPath (placeholder only; replace with real index after first import)"
+        Set-Content -LiteralPath $artifactIndexPath -Value '[]' -NoNewline
+        Write-Host "Artifact index initialized: $artifactIndexPath"
     }
 }
 
