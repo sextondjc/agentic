@@ -1,0 +1,13 @@
+# Template: NuGet package caching via setup-dotnet
+# Use when: Restoring NuGet dependencies and you want deterministic cache keying.
+# cache-dependency-path must target packages.lock.json; enable lock files with
+# <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile> in your .csproj.
+
+steps:
+  - uses: actions/checkout@v4
+  - name: Setup .NET with NuGet cache
+    uses: actions/setup-dotnet@v4
+    with:
+      dotnet-version: '8.x'
+      cache: true
+      cache-dependency-path: '**/packages.lock.json'

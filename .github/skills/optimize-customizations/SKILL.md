@@ -35,7 +35,7 @@ This skill is on-demand and review-focused. It does not run continuously and doe
 |---|---|---|---|
 | OPR-M* | Mandatory optimization quality check | MUST | optimize-customizations |
 | OPR-S* | Advisory optimization quality check | SHOULD | optimize-customizations |
-| GOV-OPT | Optimization factor coverage | Aggregate | governance-health-overview |
+| GOV-OPT | Optimization factor coverage | Aggregate | consolidated governance reporting |
 
 ## Assets
 
@@ -48,7 +48,7 @@ This skill is on-demand and review-focused. It does not run continuously and doe
 2. Evaluate each artifact for optimization quality using OPR-M* and OPR-S* checks.
 3. Record findings in a consolidated grid (pass, fail, advisory).
 4. Produce remediation actions with exact target files and expected outcome.
-5. Route follow-up edits to this skill, this skill, or this skill when needed.
+5. Document follow-up edits directly in the ranked remediation grid with explicit target files and priorities.
 
 ## Optimization Review Standards
 
@@ -66,5 +66,5 @@ This skill is on-demand and review-focused. It does not run continuously and doe
 
 - Reviewed artifacts are documented in the optimization-factor report.
 - MUST failures are explicit, evidence-backed, and prioritized.
-- Recommended remediations are actionable and routed to the correct authoring skill.
+- Recommended remediations are actionable and mapped to concrete artifact edits.
 

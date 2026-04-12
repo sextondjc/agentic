@@ -22,12 +22,9 @@ Provide a repeatable, source-backed workflow for delivering production-grade .NE
 - Pure backend engineering tasks with no MAUI client.
 - Global coding policy enforcement across the repository.
 
-## Required Collaborators
+## Self-Containment
 
-- this skill for source validation and current platform guidance.
-- this skill for architecture and trade-off decisions.
-- this skill for identifying true capability gaps.
-- this skill for iterative workflow refinement.
+This workflow is self-contained and includes source validation, architecture decisions, capability-gap assessment, and iterative refinement within this skill.
 
 ## Depth Modes
 

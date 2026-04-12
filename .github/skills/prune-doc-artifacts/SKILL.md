@@ -29,7 +29,7 @@ Required:
 - Optional focus path (default: `.docs`).
 
 Optional:
-- Include legacy skill-review directories based on rename aliases (default: true).
+- Include legacy review directories based on rename aliases (default: true).
 - Include duplicate execution checklists (default: true).
 
 ## Safety Rules

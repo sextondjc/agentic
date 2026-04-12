@@ -55,9 +55,9 @@ Optional inputs:
 2. Re-evaluate each active source against current platform behavior and spec guidance.
 3. Update In Use, Last Evaluated, and Current Status for each source.
 4. Record concrete deltas that affect workspace skills.
-5. Route implementation changes to skills-authoring.
-6. Route governance validation to skill-review.
-7. Publish a short maintenance summary in .docs/changes/skill-maintenance/ with the date and impacted skills.
+5. Prepare implementation-ready change instructions for impacted skill files.
+6. Validate the updated skill files against this skill's quality and self-containment rules.
+7. Publish a short maintenance summary in `.docs/changes/skill/maintenance/` with the date and impacted skills.
 
 ## Evaluation Criteria
 
@@ -73,8 +73,8 @@ Apply all checks for each source:
 
 - Updated [source-catalog.md](./references/source-catalog.md).
 - Optional source evaluation artifact using [source-evaluation-template.md](./references/source-evaluation-template.md).
-- A concrete change list for skills-authoring.
-- A review request for skill-review when updates were made.
+- A concrete change list for impacted skill files.
+- A validation checklist and outcome summary when updates were made.
 
 ## Done Criteria
 
@@ -82,9 +82,9 @@ This skill is complete for a run only when:
 
 - Every in-use source has an updated Last Evaluated date.
 - Any stale source is marked Needs Review or Deprecated.
-- Skill updates were routed to skills-authoring when needed.
+- Skill updates include implementation-ready edits and rationale.
 - Brevity expectations were evaluated for affected skills and included in any routed change list.
-- Post-update validation was routed to skill-review when needed.
+- Post-update validation outcomes are captured in the maintenance summary.
 
 ## Required Outputs
 

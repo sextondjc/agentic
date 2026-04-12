@@ -72,9 +72,9 @@ Use [skill-discovery-index.md](./skills/skill-discovery-index.md) as the single 
 
 When requests route through `orchestrator`, discover and select relevant skills from the index instead of maintaining a duplicated skills list here.
 
-## Imported Superpowers Assets
+## Imported Customization Assets
 
-- `skills-authoring` (imported from Superpowers `writing-skills` and renamed)
+- `skills-authoring` (imported from an upstream skill set and renamed)
 - `execute-test-driven-development` (supporting workflow dependency)
 - `writing-plans` (plan authoring workflow adapted to `.docs/plans`)
 - `code-reviewer` (review specialist agent)

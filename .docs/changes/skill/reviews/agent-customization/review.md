@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-11
+- Review Date: 2026-04-12
 - Reviewer Skill: skill-review
 - Target Skill: agent-customization
 - Target Path: copilot-skill:/agent-customization/SKILL.md (mirrored at .github/skills/skill-review/references/mirrors/agent-customization-SKILL.md)

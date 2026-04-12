@@ -57,7 +57,7 @@ Any workspace may vary from this model; the librarian recommends, not mandates, 
 
 1. Determine the documentation root: default to `.docs/` unless the user or workspace rules specify a different root.
 2. Scan the target directory tree and collect all document paths.
-3. Run this skill to pressure-test any ambiguous naming or structural decisions before proposing changes.
+3. Pressure-test ambiguous naming or structural decisions against these naming and hierarchy rules before proposing changes.
 4. Build a flat manifest: path, title (from H1 or filename), category, word count indicator.
 5. Identify candidates in each category:
    - **Duplicate**: same title or near-identical content in two or more files.
@@ -68,13 +68,13 @@ Any workspace may vary from this model; the librarian recommends, not mandates, 
 6. Produce a curation report (see Output Contract).
 7. Run `.github/scripts/powershell/test-governance-link-graph.ps1` and capture counts plus unresolved issue rows.
 8. Repair broken relative links when the correct in-workspace target is deterministically identifiable; otherwise report them explicitly for user approval.
-9. Invoke this skill to generate or refresh `INDEX.md` files across the tree.
+9. Generate or refresh `INDEX.md` files across the tree.
 10. Do not move, rename, or delete any file without explicit user confirmation.
 
 ## Governance Integration
 
-- Cross-reference findings with this skill to flag documents that violate governance standards.
-- Defer to this skill for `.docs/` planning artifact cleanup decisions; do not duplicate its logic.
+- Cross-reference findings with active governance standards to flag violations.
+- Keep `.docs/` planning artifact cleanup decisions explicit in the curation report.
 - Flag governance-sensitive documents (ADRs, decision records, ledgers) as keep-by-default.
 
 ## Migration Notes
@@ -85,16 +85,6 @@ When renaming or restructuring the document corpus:
 2. Update internal relative links that point to the old path.
 3. Refresh `INDEX.md` files after the move set is complete.
 4. Keep dates in document content or frontmatter, never in file or folder names.
-
-## Required Collaborators
-
-| Skill | When to invoke |
-|---|---|
-| this skill | Before recommending any structural change that involves judgment or trade-offs. |
-| this skill | After any curation pass to refresh the navigable index. |
-| this skill | When the corpus is large and content categorization requires deep evidence. |
-| this skill | When governance document coverage must be verified alongside structure. |
-| this skill | When `.docs/` planning artifacts need dedicated stale-artifact analysis. |
 
 ## Safety Rules
 
@@ -130,7 +120,7 @@ Return a structured curation report with:
 2. **Structural recommendations** — proposed folder hierarchy changes with before/after paths.
 3. **Curation candidates** — table of `Path`, `Category` (Duplicate/Redundant/Misplaced/Broken link), `Confidence`, `SuggestedAction`, `Reason`.
 4. **Link integrity status** — list of broken links fixed during review and any unresolved links that still require action.
-5. **Index status** — confirmation that this skill has been invoked or a prompt to do so.
+5. **Index status** — confirmation that index files were generated or refreshed in this pass, or a clear reason they were deferred.
 6. **Explicit confirmation gate** — "No files will be moved or renamed without your approval."
 
 ## Done Criteria
@@ -141,5 +131,5 @@ This skill is complete when:
 - Folder hierarchy is mapped and a proposal is produced.
 - Duplicate and redundant candidates are listed with evidence.
 - Broken relative links are fixed when the target is clear, or explicitly reported when ambiguous.
-- this skill has been invoked to refresh or create corpus indexes.
+- Indexes are refreshed or created as part of this workflow.
 - User has been presented with the report and confirmation gate.

@@ -103,6 +103,63 @@ function Invoke-Check {
     }
 }
 
+function Update-ExecutiveRecommendationGrid {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$ReportPath,
+
+        [Parameter(Mandatory = $true)]
+        [string]$ReviewDate,
+
+        [Parameter(Mandatory = $true)]
+        [int]$TotalChecks,
+
+        [Parameter(Mandatory = $true)]
+        [int]$PassedChecks,
+
+        [Parameter(Mandatory = $false)]
+        [array]$FailedChecks = @()
+    )
+
+    if (-not (Test-Path -LiteralPath $ReportPath)) {
+        return
+    }
+
+    $failedCheckNames = @($FailedChecks | Select-Object -ExpandProperty Check)
+    $runSensitiveRecommendation = if ($failedCheckNames.Count -gt 0) {
+        "Address run-specific failing checks: $($failedCheckNames -join ', ')."
+    }
+    else {
+        "No run-specific remediation actions in this pass ($PassedChecks/$TotalChecks checks passed on $ReviewDate)."
+    }
+
+    $runSensitiveExpectedOutcome = if ($failedCheckNames.Count -gt 0) {
+        'Close current run failures and restore full check pass state'
+    }
+    else {
+        'Maintain all checks in pass state with no run-specific remediation needed'
+    }
+
+    $newGrid = @"
+## Ranked Recommendations Grid
+
+| Rank | Priority | Recommendation | Evidence | Expected Outcome |
+|---|---:|---|---|---|
+| 1 | 1 | $runSensitiveRecommendation | [governance-audit.md](./governance-audit.md) | $runSensitiveExpectedOutcome |
+| 2 | 2 | Maintain executive MUST findings restricted to canonical check IDs with script-backed evidence only. | [governance-must-check-registry.json](./../../../../.github/scripts/powershell/governance-must-check-registry.json), [test-governance-must-traceability.ps1](./../../../../.github/scripts/powershell/test-governance-must-traceability.ps1) | Preserve governance trust and prevent non-canonical MUST claims |
+| 3 | 3 | Continue full fresh governance invocations for each remediation cycle to preserve Level 1/2/3 alignment. | [invoke-governance-health-overview.ps1](./../../../../.github/scripts/powershell/invoke-governance-health-overview.ps1) | Consistent cross-level freshness and traceability |
+
+"@
+
+    $content = Get-Content -LiteralPath $ReportPath -Raw
+    $pattern = '(?ms)^## Ranked Recommendations Grid\s*.*?(?=^## Final Disposition\s*$)'
+
+    if ([regex]::IsMatch($content, $pattern)) {
+        $updated = [regex]::Replace($content, $pattern, $newGrid)
+        Set-Content -LiteralPath $ReportPath -Value $updated -Encoding UTF8
+    }
+}
+
 Push-Location $RootPath
 try {
     # Validate workspace root is a .github workspace before running checks
@@ -132,11 +189,18 @@ try {
         @{ Name = 'responsibility-overlap'; Command = { ./.github/scripts/powershell/test-responsibility-overlap.ps1 -SimilarityThreshold 0.82 -MinimumSharedTokens 6 -MaxAllowedDuplicatePairs 8 -OutputPath ./.github/skills/governance-health-overview/references/.artifacts/responsibility-overlap.routing.json } },
         @{ Name = 'overlap-watchlist'; Command = { ./.github/scripts/powershell/test-overlap-watchlist.ps1 } },
         @{ Name = 'count-consistency'; Command = { ./.github/scripts/powershell/test-governance-count-consistency.ps1 } },
-        @{ Name = 'global-applyto-rationale'; Command = { ./.github/scripts/powershell/test-global-applyto-rationale.ps1 } }
+        @{ Name = 'global-applyto-rationale'; Command = { ./.github/scripts/powershell/test-global-applyto-rationale.ps1 } },
+        @{ Name = 'must-finding-traceability'; Command = { ./.github/scripts/powershell/test-governance-must-traceability.ps1 -ReportPath .docs/changes/governance/audits/governance-executive-audit.md -RegistryPath .github/scripts/powershell/governance-must-check-registry.json } }
     )
 
     $coreResults = foreach ($check in $checks) {
         Invoke-Check -Name $check.Name -Command $check.Command
+    }
+
+    $mustTraceabilityCheck = @($coreResults | Where-Object { $_.Check -eq 'must-finding-traceability' } | Select-Object -First 1)
+    if ($mustTraceabilityCheck.Count -gt 0 -and -not $mustTraceabilityCheck[0].Passed) {
+        Write-Error "Governance report generation blocked: MUST findings failed canonical traceability mapping (check: must-finding-traceability)."
+        exit 1
     }
 
     $skillAuditScript = './.github/skills/skill-review/references/scripts/generate-full-skill-audit.ps1'
@@ -329,6 +393,12 @@ try {
     Set-Content -LiteralPath $customizationAggregatePath -Value $customizationReport -Encoding UTF8
 
     $optimizationOutcome = if ($failedChecks.Count -eq 0) { 'Pass' } else { 'Pass With Advisories' }
+    $optimizationRemediationRow = if ($failedChecks.Count -eq 0) {
+        '| R0 | No open optimization remediation actions for this run. | None | None |'
+    }
+    else {
+        "| R1 | Resolve all failing advisory checks from governance scripts | $failedCheckText | High |"
+    }
     $optimizationReport = @"
 # Optimization Factor Review
 
@@ -352,7 +422,7 @@ try {
 
 | ID | Action | Target | Priority |
 |---|---|---|---|
-| R1 | Resolve all failing advisory checks from governance scripts | $failedCheckText | High |
+$optimizationRemediationRow
 "@
     Set-Content -LiteralPath $optimizationAggregatePath -Value $optimizationReport -Encoding UTF8
 
@@ -416,6 +486,11 @@ try {
         RootPath = $RootPath
         ReviewDate = $ReviewDate
         CoreChecks = $coreResults
+        FrontmatterContract = [pscustomobject]@{
+            Agents = ((& ./.github/scripts/powershell/test-frontmatter-validity.ps1 -AssetType agents -ShowContract) | ConvertFrom-Json)
+            Prompts = ((& ./.github/scripts/powershell/test-frontmatter-validity.ps1 -AssetType prompts -ShowContract) | ConvertFrom-Json)
+            Instructions = ((& ./.github/scripts/powershell/test-frontmatter-validity.ps1 -AssetType instructions -ShowContract) | ConvertFrom-Json)
+        }
         SkillReviewAggregatePath = $skillAggregatePath
         SkillReviewAggregateExists = $skillAggregateExists
         GovernanceAggregatePath = $governanceAggregatePath
@@ -443,6 +518,13 @@ try {
             ConflictFiles = $conflictFiles
         }
     }
+
+    Update-ExecutiveRecommendationGrid `
+        -ReportPath '.docs/changes/governance/audits/governance-executive-audit.md' `
+        -ReviewDate $ReviewDate `
+        -TotalChecks $metrics.TotalChecks `
+        -PassedChecks $metrics.PassedChecks `
+        -FailedChecks @($failedChecks)
 
     $result | ConvertTo-Json -Depth 8
 }

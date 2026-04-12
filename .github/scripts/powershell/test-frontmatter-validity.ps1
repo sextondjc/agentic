@@ -3,7 +3,8 @@
 # Output: Validation errors (exit 1) or success message (exit 0).
 
 param(
-  [ValidateSet('instructions','agents','prompts')][string]$AssetType
+  [ValidateSet('instructions','agents','prompts')][string]$AssetType,
+  [switch]$ShowContract
 )
 
 if (-not $PSBoundParameters.ContainsKey('AssetType') -or [string]::IsNullOrWhiteSpace($AssetType)) {
@@ -24,6 +25,45 @@ function Get-FrontmatterValue {
   ($line -replace "^$Key\s*:\s*", '').Trim().Trim("'").Trim('"')
 }
 
+function Get-FrontmatterContract {
+  param([string]$Type)
+
+  switch ($Type) {
+    'instructions' {
+      return [pscustomobject]@{
+        RequiredKeys = @('name', 'description', 'applyTo')
+        AllowedKeys = @('name', 'description', 'applyTo', 'mode', 'tools')
+      }
+    }
+    'agents' {
+      return [pscustomobject]@{
+        RequiredKeys = @('name', 'description')
+        AllowedKeys = @('name', 'description', 'applyTo', 'mode', 'tools')
+      }
+    }
+    'prompts' {
+      return [pscustomobject]@{
+        RequiredKeys = @('name', 'description')
+        AllowedKeys = @('name', 'description', 'applyTo', 'mode', 'tools', 'agent')
+      }
+    }
+    default {
+      throw "Unsupported asset type '$Type'"
+    }
+  }
+}
+
+$frontmatterContract = Get-FrontmatterContract -Type $AssetType
+if ($ShowContract) {
+  [pscustomobject]@{
+    AssetType = $AssetType
+    RequiredKeys = $frontmatterContract.RequiredKeys
+    OptionalKeys = @($frontmatterContract.AllowedKeys | Where-Object { $_ -notin $frontmatterContract.RequiredKeys })
+    AllowedKeys = $frontmatterContract.AllowedKeys
+  } | ConvertTo-Json -Depth 4
+  exit 0
+}
+
 $ext = @{'instructions'='*.instructions.md'; 'agents'='*.agent.md'; 'prompts'='*.prompt.md'}[$AssetType]
 $files = Get-ChildItem $filePath/$ext
 $bad = @()
@@ -41,7 +81,7 @@ foreach ($f in $files) {
   $fm = $lines[($first + 1)..($second - 1)]
 
   # Semantic: required keys must be present and non-empty
-  foreach ($key in @('name', 'description')) {
+  foreach ($key in $frontmatterContract.RequiredKeys) {
     $val = Get-FrontmatterValue -Lines $fm -Key $key
     if ([string]::IsNullOrWhiteSpace($val)) {
       $bad += "$($f.Name): '$key' is missing or has an empty value"
@@ -50,21 +90,14 @@ foreach ($f in $files) {
 
   if ($AssetType -eq 'instructions') {
     $applyTo = Get-FrontmatterValue -Lines $fm -Key 'applyTo'
-    if ([string]::IsNullOrWhiteSpace($applyTo)) {
-      $bad += "$($f.Name): 'applyTo' is missing or has an empty value"
-    } elseif ($applyTo -eq '**' -or $applyTo -eq '**/*') {
+    if ($applyTo -eq '**' -or $applyTo -eq '**/*') {
       # Warn on global catch-all only — not an automatic failure, but flagged for review
       Write-Warning "$($f.Name): 'applyTo' is set to global '$applyTo' — confirm this is intentional"
     }
   }
 
   # Detect unknown top-level keys (advisory — keys beyond the required set are flagged)
-  $allowedKeys = switch ($AssetType) {
-    'prompts'      { @('name', 'description', 'applyTo', 'mode', 'tools', 'agent') }
-    'agents'       { @('name', 'description', 'applyTo', 'mode', 'tools') }
-    'instructions' { @('name', 'description', 'applyTo', 'mode', 'tools') }
-    default        { @('name', 'description', 'applyTo', 'mode', 'tools') }
-  }
+  $allowedKeys = $frontmatterContract.AllowedKeys
   foreach ($line in ($fm | Where-Object { $_ -match '^\w[\w-]*\s*:' })) {
     $key = ($line -split ':')[0].Trim()
     if ($key -notin $allowedKeys) {

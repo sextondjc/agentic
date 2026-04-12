@@ -104,7 +104,7 @@ Optional:
 | AGR-S* | Advisory agent quality check | SHOULD | validate-customization |
 | PRR-M* | Mandatory prompt quality check | MUST | validate-customization |
 | PRR-S* | Advisory prompt quality check | SHOULD | validate-customization |
-| GOV-CUS | Customization quality aggregate | Aggregate | governance-health-overview |
+| GOV-CUS | Customization quality aggregate | Aggregate | consolidated governance reporting |
 
 ## Workflow
 
@@ -117,12 +117,12 @@ Optional:
    - detect duplicate and conflicting instruction guidance,
    - verify alignment with active agent personas,
    - verify alignment with active skill boundaries.
-   - flag any skill referenced in an agent or instruction file that itself violates SKR-M4 (cross-skill references); route the finding to skill-review.
+   - flag any skill referenced in an agent or instruction file that violates SKR-M4 and record it as a linked governance risk.
 7. If conflict is detected:
    - Document conflict using the conflict report template.
    - Recommend one or more concrete resolution options.
    - Work with the user to choose and confirm the resolution.
 8. Produce the review report and store it at `.docs/changes/customization/reviews/governance-type-audit-customizations.md`.
 9. Append history rows for all reviewed artifacts to `.docs/changes/customization/reviews/audit-history.md`.
-10. Route any required fixes to this skill or this skill based on artifact type.
+10. Include required fixes as explicit, artifact-targeted remediation actions in the report.
 

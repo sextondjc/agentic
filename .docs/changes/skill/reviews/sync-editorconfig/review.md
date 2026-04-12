@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-11
+- Review Date: 2026-04-12
 - Reviewer Skill: skill-review
 - Target Skill: sync-editorconfig
 - Target Path: .github/skills/sync-editorconfig/SKILL.md

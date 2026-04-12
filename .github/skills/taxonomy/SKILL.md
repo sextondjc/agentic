@@ -44,13 +44,13 @@ Every asset belongs to one primary domain category. Domain is inferred from the 
 
 | Domain | Keywords | Example Assets |
 |---|---|---|
-| Governance | governance, lifecycle, cadence, naming, taxonomy, audit, health | this skill, this skill, this skill |
-| Engineering | dotnet, csharp, syrx, resilience, refactor, test, tdd, scaffold | this skill, this skill, this skill, this skill |
-| Mobile | maui, mobile, ux, ui, prototype, usability | this skill, this skill, this skill, this skill |
-| Data | sql, dba, database, schema | this skill (shared with Engineering) |
-| DevOps | docker, powershell, cicd, scripts, scripting, branch, editorconfig | this skill, this skill, this skill, this skill |
-| Documentation | docs, readme, adr, technical, corpus, index, librarian, plan, prd | this skill, this skill, this skill, this skill, this skill |
-| Meta-workflow | task, route, executing, skill, agent, prompt, critical, learn, refine, ideas | this skill, this skill, this skill, this skill, this skill |
+| Governance | governance, lifecycle, cadence, naming, taxonomy, audit, health | Use the workspace catalogs to map governance assets deterministically. |
+| Engineering | dotnet, csharp, syrx, resilience, refactor, test, tdd, scaffold | Use keyword-to-lane matching and verify with catalog metadata. |
+| Mobile | maui, mobile, ux, ui, prototype, usability | Use mobile-focused keywords and confirm ownership in catalogs. |
+| Data | sql, dba, database, schema | Use data-domain keywords and validate lane/type in catalogs. |
+| DevOps | docker, powershell, cicd, scripts, scripting, branch, editorconfig | Use automation/tooling keywords and resolve via catalog entries. |
+| Documentation | docs, readme, adr, technical, corpus, index, librarian, plan, prd | Use docs-oriented keywords and confirm artifact type and lane. |
+| Meta-workflow | task, route, executing, skill, agent, prompt, critical, learn, refine, ideas | Use workflow keywords and classify via lane-intent and catalogs. |
 
 ### Layer 4: Function Vocabulary
 

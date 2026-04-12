@@ -13,4 +13,4 @@
 | File | Title | Category | Summary |
 |---|---|---|---|
 | [history.md](./history.md) | History | change | This file was generated to satisfy historical relative-link targets and preserve link integrity in governance audits. |
-| [review.md](./review.md) | Skill Review Report | change | - Review Date: 2026-04-11 - Reviewer Skill: skill-review - Target Skill: adr-generator - Target Path: .github/skills/adr... |
+| [review.md](./review.md) | Skill Review Report | change | - Review Date: 2026-04-12 - Reviewer Skill: skill-review - Target Skill: adr-generator - Target Path: .github/skills/adr... |

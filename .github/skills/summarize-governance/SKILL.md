@@ -27,8 +27,8 @@ Invoke this skill when any of the following is true:
   - `.docs/changes/governance/audits/`
   - `.docs/changes/skill/reviews/`
   - `.docs/changes/customization/reviews/`
-  - `.github/skills/audit-governance/references/`
-  - `.github/skills/validate-customization/references/`
+  - `.github/instructions/`
+  - `.github/agents/`
   - [README.md](./../../../README.md), [README.md](./../../../README.md), [README.md](./../../../README.md)
 - Optional audience mode: `Executive`, `Engineering Leads`, or `Customization Maintainers`.
 
@@ -80,13 +80,9 @@ Exclude low-impact detail unless required to explain a top finding.
 6. Validate that word count and limits satisfy single-page constraints.
 7. Publish briefing to the required output path.
 
-## Companion Skills
+## Self-Containment
 
-- this skill
-- this skill
-- this skill
-- this skill
-- this skill
+This workflow is self-contained and performs evidence collection, ranking, and briefing generation without delegating to other skills.
 
 ## Done Criteria
 

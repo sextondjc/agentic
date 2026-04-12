@@ -3,29 +3,18 @@ name: async-programming
 description: 'Consolidated async/await and concurrency guidance with ValueTask policy.'
 applyTo: '**/*.cs'
 ---
-# Async Programming Guidelines
+# Async Programming Policy
+
+Keep this file policy-only. Use [SKILL.md](./../skills/execute-async-programming/SKILL.md) for async/concurrency implementation workflow, streaming/backpressure decisions, and verification execution detail.
 
 ## Scope
-This file defines advanced async and concurrency policy. Baseline async conventions (method suffixes, cancellation, and blocking prohibitions) are canonical in `csharp.instructions.md`.
 
-## Concurrency Patterns
-- Prefer `Task.WhenAll` for independent I/O operations when failure semantics are acceptable.
-- Use bounded concurrency (`SemaphoreSlim` or channel-based worker limits) for high-fanout workloads.
-- Avoid unbounded task creation in loops over external inputs.
+This file governs async and concurrency policy for C# code. Baseline C# conventions are governed by `csharp.instructions.md`.
 
-## Fire-and-Forget Policy
-- Fire-and-forget tasks are disallowed unless explicitly supervised by a managed background service.
-- Any detached task execution requires structured exception handling and observable lifecycle signaling.
+## Mandatory Policy
 
-## ValueTask Policy
-- Consider `ValueTask` only after measured allocation or throughput evidence.
-- Document benchmark evidence in ADR or change notes before broad `Task` to `ValueTask` migration.
-- Do not expose `ValueTask` in APIs where consumers are likely to await multiple times.
-
-## Streaming and Backpressure
-- Prefer `IAsyncEnumerable<T>` for large result streaming when consumer-side backpressure is required.
-- Ensure cancellation is honored during async enumeration.
-
-## Verification
-- Validate concurrency changes with repeatable tests that cover cancellation, timeout, and exception propagation.
+- Use bounded concurrency for high-fanout work and prohibit unbounded task creation over external inputs.
+- Fire-and-forget execution is disallowed unless supervised by managed background services.
+- Introduce `ValueTask` only with measured evidence.
+- Concurrency changes must include verification for cancellation, timeout, and exception propagation.
 

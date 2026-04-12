@@ -19,6 +19,46 @@
       "id": "C4-review-request",
       "request": "Review all skills and produce an audit with remediation recommendations.",
       "requiredSkills": ["skill-review"]
+    },
+    {
+      "id": "C5-doc-corpus-curation-and-index",
+      "request": "Reorganize our documentation corpus, normalize naming, and regenerate a navigable INDEX across folders.",
+      "requiredSkills": ["librarian", "index-docs"]
+    },
+    {
+      "id": "C6-tech-doc-authoring-with-index",
+      "request": "Write technical reference docs from code and then refresh the documentation index and catalog structure.",
+      "requiredSkills": ["write-technical-docs", "index-docs", "librarian"]
+    },
+    {
+      "id": "C7-prd-and-doc-navigation",
+      "request": "Generate a PRD and ensure the docs corpus structure and index make it easy to discover.",
+      "requiredSkills": ["prd-generator", "librarian", "index-docs"]
+    },
+    {
+      "id": "C8-adr-and-doc-catalog",
+      "request": "Create an ADR with alternatives and consequences, then update document taxonomy and indexes.",
+      "requiredSkills": ["adr-generator", "librarian", "index-docs"]
+    },
+    {
+      "id": "C9-plan-and-spec-doc-flow",
+      "request": "Build a multi-step implementation plan and prepare the resulting planning docs for discoverability.",
+      "requiredSkills": ["writing-plans", "index-docs", "librarian"]
+    },
+    {
+      "id": "C10-debug-route-priority",
+      "request": "We have a regression with stack traces and exceptions; perform root-cause analysis and fix it.",
+      "requiredSkills": ["task-execution", "task-research", "critical-thinking"]
+    },
+    {
+      "id": "C11-architecture-vs-domain-tie-break",
+      "request": "Draft a system boundary blueprint and decision record, then pressure-test the trade-offs.",
+      "requiredSkills": ["domain-design", "adr-generator", "critical-thinking"]
+    },
+    {
+      "id": "C12-review-remediation-loop",
+      "request": "Request a structured code review and then remediate accepted findings.",
+      "requiredSkills": ["request-code-review", "remediate-review"]
     }
   ]
 }

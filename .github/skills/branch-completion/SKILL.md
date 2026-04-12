@@ -54,11 +54,6 @@ Type 'discard' to confirm permanent deletion.
 - Do not delete worktree for Option 3.
 - Do not delete branch for Option 4 without typed confirmation.
 
-## Integration
-
-- Called by [SKILL.md](./../task-execution/SKILL.md).
-- Called by [SKILL.md](./../execute-plans/SKILL.md).
-
 ## Required Inputs
 
 - Current branch and expected base branch.

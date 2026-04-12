@@ -36,12 +36,9 @@ Convert approved mobile wireframes into high-fidelity prototype deliverables wit
 4. Add accessibility and platform-specific annotations.
 5. Prepare handoff package and readiness checklist.
 
-## Required Collaborators
+## Self-Containment
 
-- design-mobile-ux
-- critical-thinking
-- api-design
-- execute-test-driven-development
+This workflow is self-contained and includes design evolution, annotation, and handoff readiness checks within this skill.
 
 ## Done Criteria
 

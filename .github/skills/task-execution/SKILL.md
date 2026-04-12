@@ -70,9 +70,9 @@ Use [command-patterns.md](./references/command-patterns.md) for canonical dispat
 
 ## Integration
 
-- Uses [SKILL.md](./../execute-test-driven-development/SKILL.md) for implementation discipline.
-- Uses [SKILL.md](./../request-code-review/SKILL.md) for reviewer routing.
-- Finishes through [SKILL.md](./../branch-completion/SKILL.md).
+- Use this skill's execution loop for implementation discipline and review gates.
+- Keep reviewer routing decisions explicit in task-level status updates.
+- Finish by reporting branch completion recommendations in the required outputs.
 
 ## References
 

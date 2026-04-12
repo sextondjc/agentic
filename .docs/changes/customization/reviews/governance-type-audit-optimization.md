@@ -4,8 +4,8 @@
 
 | Metric | Value |
 |---|---|
-| Review Date | 2026-04-11 |
-| Artifacts Reviewed | 103 |
+| Review Date | 2026-04-12 |
+| Artifacts Reviewed | 108 |
 | MUST Failures | 0 |
 | SHOULD Advisories | 0 |
 | Overall Outcome | Pass |
@@ -20,4 +20,4 @@
 
 | ID | Action | Target | Priority |
 |---|---|---|---|
-| R1 | Resolve all failing advisory checks from governance scripts | None | High |
+| R0 | No open optimization remediation actions for this run. | None | None |

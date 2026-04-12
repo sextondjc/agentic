@@ -1,0 +1,111 @@
+{
+  "version": "2026-04-12",
+  "description": "Canonical MUST checks allowed in governance reports. Every MUST finding must map to one checkId below.",
+  "mustChecks": [
+    {
+      "checkId": "catalog-agents",
+      "sourceScript": ".github/scripts/powershell/test-catalog-integrity.ps1",
+      "assetType": "agents"
+    },
+    {
+      "checkId": "catalog-prompts",
+      "sourceScript": ".github/scripts/powershell/test-catalog-integrity.ps1",
+      "assetType": "prompts"
+    },
+    {
+      "checkId": "catalog-instructions",
+      "sourceScript": ".github/scripts/powershell/test-catalog-integrity.ps1",
+      "assetType": "instructions"
+    },
+    {
+      "checkId": "frontmatter-agents",
+      "sourceScript": ".github/scripts/powershell/test-frontmatter-validity.ps1",
+      "assetType": "agents"
+    },
+    {
+      "checkId": "frontmatter-prompts",
+      "sourceScript": ".github/scripts/powershell/test-frontmatter-validity.ps1",
+      "assetType": "prompts"
+    },
+    {
+      "checkId": "frontmatter-instructions",
+      "sourceScript": ".github/scripts/powershell/test-frontmatter-validity.ps1",
+      "assetType": "instructions"
+    },
+    {
+      "checkId": "hub-sync",
+      "sourceScript": ".github/scripts/powershell/test-hub-file-sync.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "optimization-factor",
+      "sourceScript": ".github/scripts/powershell/test-governance-optimization-factor.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "link-graph",
+      "sourceScript": ".github/scripts/powershell/test-governance-link-graph.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "artifact-contract",
+      "sourceScript": ".github/scripts/powershell/test-governance-artifact-contract.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "artifact-reference-hygiene",
+      "sourceScript": ".github/scripts/powershell/test-artifact-reference-hygiene.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "docs-naming",
+      "sourceScript": ".github/scripts/powershell/test-naming-conformance.ps1",
+      "assetType": "docs"
+    },
+    {
+      "checkId": "asset-naming",
+      "sourceScript": ".github/scripts/powershell/test-asset-naming.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "utilization-coverage",
+      "sourceScript": ".github/scripts/powershell/test-utilization-coverage.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "review-recency",
+      "sourceScript": ".github/scripts/powershell/test-review-recency.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "source-catalog-freshness",
+      "sourceScript": ".github/scripts/powershell/test-source-catalog-freshness.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "responsibility-overlap",
+      "sourceScript": ".github/scripts/powershell/test-responsibility-overlap.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "overlap-watchlist",
+      "sourceScript": ".github/scripts/powershell/test-overlap-watchlist.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "count-consistency",
+      "sourceScript": ".github/scripts/powershell/test-governance-count-consistency.ps1",
+      "assetType": "workspace"
+    },
+    {
+      "checkId": "global-applyto-rationale",
+      "sourceScript": ".github/scripts/powershell/test-global-applyto-rationale.ps1",
+      "assetType": "instructions"
+    },
+    {
+      "checkId": "must-finding-traceability",
+      "sourceScript": ".github/scripts/powershell/test-governance-must-traceability.ps1",
+      "assetType": "workspace"
+    }
+  ]
+}

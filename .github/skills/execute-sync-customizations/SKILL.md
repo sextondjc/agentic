@@ -54,8 +54,8 @@ Optional:
 3. Update In Use, Last Evaluated, and Current Status for each source.
 4. Record concrete deltas that affect workspace instruction or agent files.
 5. For each affected artifact, assess against the evaluation criteria below.
-6. Route content changes to this skill or this skill based on artifact type.
-7. Route post-update validation to this skill.
+6. Produce implementation-ready content changes for each affected artifact based on artifact type.
+7. Run post-update validation checks within this workflow and record outcomes.
 8. Publish a short maintenance summary in `.docs/changes/customization-maintenance/` with the date and impacted artifacts.
 
 ## Evaluation Criteria
@@ -77,7 +77,7 @@ Apply all checks for each instruction or agent file:
 
 ### Agent-Specific Checks
 
-- All referenced companion skills still exist and are correctly named.
+- All referenced collaborators and related assets are current and correctly named.
 - All referenced instruction file names are current.
 - Role boundary still matches what the orchestrator routes to this agent.
 
@@ -85,8 +85,8 @@ Apply all checks for each instruction or agent file:
 
 - Updated [source-catalog.md](./references/source-catalog.md).
 - Optional source evaluation artifact using [source-evaluation-template.md](./references/source-evaluation-template.md).
-- A concrete change list for this skill and/or this skill.
-- A review request for this skill when updates were made.
+- A concrete change list for impacted instructions and agents.
+- A post-update validation summary when updates were made.
 
 ## Done Criteria
 
@@ -94,9 +94,9 @@ This skill is complete for a run only when:
 
 - Every in-use source has an updated Last Evaluated date.
 - Any stale source is marked Needs Review or Deprecated.
-- All affected artifacts were routed to this skill and/or this skill.
+- All affected artifacts include explicit update instructions with rationale.
 - Brevity expectations were evaluated for affected artifacts and included in any routed change list.
-- Post-update validation was routed to this skill.
+- Post-update validation results are recorded in the maintenance summary.
 
 ## Required Outputs
 

@@ -12,5 +12,5 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| [governance-type-audit-customizations.md](./governance-type-audit-customizations.md) | Customization Type Audit | change | / Metric / Value / /---/---/ / Review Date / 2026-04-11 / / Outcome / Pass / / Missing Agent Specialization / 0 / / Miss... |
-| [governance-type-audit-optimization.md](./governance-type-audit-optimization.md) | Optimization Factor Review | change | / Metric / Value / /---/---/ / Review Date / 2026-04-11 / / Artifacts Reviewed / 103 / / MUST Failures / 0 / / SHOULD Ad... |
+| [governance-type-audit-customizations.md](./governance-type-audit-customizations.md) | Customization Type Audit | change | / Metric / Value / /---/---/ / Review Date / 2026-04-12 / / Outcome / Pass / / Missing Agent Specialization / 0 / / Miss... |
+| [governance-type-audit-optimization.md](./governance-type-audit-optimization.md) | Optimization Factor Review | change | / Metric / Value / /---/---/ / Review Date / 2026-04-12 / / Artifacts Reviewed / 108 / / MUST Failures / 0 / / SHOULD Ad... |

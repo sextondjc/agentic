@@ -24,12 +24,7 @@ Do not use this skill for updating historical trend docs unless the user asks fo
 
 ## Self-Containment Requirement
 
-Apply these skills as part of this workflow:
-
-- this skill
-- this skill
-- this skill
-- this skill
+Keep all execution, aggregation, and reporting steps inside this workflow.
 
 ## Built-In First Rule
 
@@ -37,12 +32,11 @@ Always prefer built-in workspace tools before helper scripts.
 
 Execution order:
 
-1. Route through `orchestrator` first.
-2. Use the skill-contained quality gate first:
+1. Use the skill-contained quality gate first:
    - `references/scripts/invoke-quality-gate.ps1`
-3. If the standard path fails or does not satisfy the full-run request, use the built-in full-solution command:
-   - `dotnet test ./Rook.sln --collect:"XPlat Code Coverage" --results-directory ./.github/skills/governance-health-overview/references/.artifacts/full-solution-coverage --nologo --verbosity minimal`
-4. Use helper scripts only for repeatable artifact aggregation and formatting after the run.
+2. If the standard path fails or does not satisfy the full-run request, use the built-in full-solution command:
+   - `dotnet test ./Rook.sln --collect:"XPlat Code Coverage" --results-directory ./.artifacts/full-solution-coverage --nologo --verbosity minimal`
+3. Use helper scripts only for repeatable artifact aggregation and formatting after the run.
 
 ## Inputs
 

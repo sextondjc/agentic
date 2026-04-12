@@ -34,19 +34,19 @@ Run a workspace-level governance assessment and return a single report with cove
 |---|---|---|---|
 | GOV-M* | Mandatory governance check | MUST | audit-governance |
 | GOV-S* | Advisory governance check | SHOULD | audit-governance |
-| GOV-SK | Skill quality aggregate | Aggregate | skill-review |
-| GOV-CUS | Customization quality aggregate | Aggregate | validate-customization |
-| GOV-OPT | Optimization factor coverage | Aggregate | optimize-customizations |
-| SKR-M* | Mandatory skill quality check | MUST | skill-review |
-| SKR-S* | Advisory skill quality check | SHOULD | skill-review |
-| INR-M* | Mandatory instruction quality check | MUST | validate-customization |
-| INR-S* | Advisory instruction quality check | SHOULD | validate-customization |
-| AGR-M* | Mandatory agent quality check | MUST | validate-customization |
-| AGR-S* | Advisory agent quality check | SHOULD | validate-customization |
-| PRR-M* | Mandatory prompt quality check | MUST | validate-customization |
-| PRR-S* | Advisory prompt quality check | SHOULD | validate-customization |
-| OPR-M* | Mandatory optimization quality check | MUST | optimize-customizations |
-| OPR-S* | Advisory optimization quality check | SHOULD | optimize-customizations |
+| GOV-SK | Skill quality aggregate | Aggregate | governance aggregate source |
+| GOV-CUS | Customization quality aggregate | Aggregate | governance aggregate source |
+| GOV-OPT | Optimization factor coverage | Aggregate | governance aggregate source |
+| SKR-M* | Mandatory skill quality check | MUST | governance aggregate source |
+| SKR-S* | Advisory skill quality check | SHOULD | governance aggregate source |
+| INR-M* | Mandatory instruction quality check | MUST | governance aggregate source |
+| INR-S* | Advisory instruction quality check | SHOULD | governance aggregate source |
+| AGR-M* | Mandatory agent quality check | MUST | governance aggregate source |
+| AGR-S* | Advisory agent quality check | SHOULD | governance aggregate source |
+| PRR-M* | Mandatory prompt quality check | MUST | governance aggregate source |
+| PRR-S* | Advisory prompt quality check | SHOULD | governance aggregate source |
+| OPR-M* | Mandatory optimization quality check | MUST | governance aggregate source |
+| OPR-S* | Advisory optimization quality check | SHOULD | governance aggregate source |
 
 ## Standards
 
@@ -63,16 +63,16 @@ Core checks:
 - GOV-S11 responsibility overlap threshold coverage across agents, instructions, prompts, and skills
 
 Companion checks:
-- Use skill-review for GOV-SK outcomes.
-- Use validate-customization for GOV-CUS outcomes.
-- Use optimize-customizations for GOV-OPT outcomes.
+- Collect and reconcile GOV-SK outcomes from skill-quality evidence.
+- Collect and reconcile GOV-CUS outcomes from customization-quality evidence.
+- Collect and reconcile GOV-OPT outcomes from optimization evidence.
 
 ## Workflow
 
 1. Inventory assets and read governance catalogs.
 2. Run script-based checks from .github/scripts/powershell.
 3. Evaluate GOV-M* first, then GOV-S*.
-4. Pull GOV-SK, GOV-CUS, and GOV-OPT outcomes from companion skills.
+4. Pull GOV-SK, GOV-CUS, and GOV-OPT outcomes from available governance evidence artifacts.
 5. Produce grids and prioritized remediation actions.
 
 ## Script Integration

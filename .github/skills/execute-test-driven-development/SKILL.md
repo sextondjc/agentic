@@ -9,6 +9,48 @@ description: Use when implementing any feature or bugfix, before writing impleme
 
 No production code without a failing test first.
 
+## Testing Standards
+
+- Use xUnit and Moq only. FluentAssertions is banned.
+- Test method names must follow `{Scenario}{ExpectedBehaviour}`.
+- Use AAA pattern and keep one assertion concept per test method.
+- Unit test projects must use `{Domain}.Tests.Unit` naming and live under `tests/unit/`.
+
+Examples:
+
+- `<Product>.Orders.Tests.Unit`
+- `<Product>.Quality.Tests.Unit`
+- `<Product>.Repositories.Tests.Unit`
+
+## Test Folder Structure
+
+Use exactly these category folder names when organizing test projects:
+
+| Folder pattern | Purpose |
+|---|---|
+| `{Subject}BehaviorTests` | Happy-path integration of domain + endpoint behavior; validates that the full flow produces the correct output for valid inputs. |
+| `{Subject}RedPhaseTests` | Contract and invariant tests written red-first; validates guard clauses, error conditions, and state-machine transitions. |
+| `{Subject}ModelGuardTests` | Isolation tests for model constructor guards; one test per invalid parameter per model type. |
+| `QualityHappyPathTests` | Cross-cutting quality gates for happy-path behaviors (for example, response shape and HTTP status codes). |
+| `QualityRedPhaseTests` | Cross-cutting quality gates for error conditions and authorization (for example, RBAC and authentication). |
+| `QualityArchitectureTests` | Architecture boundary enforcement: project references, namespace rules, and assembly constraints. |
+
+## Coverage Priorities
+
+Prioritize tests in this order:
+
+1. Domain invariants (model guards).
+2. Repository behavior using mocked `ICommander<TRepository>` with no live database calls.
+3. Service state-machine transitions and error paths.
+4. Endpoint authorization and RBAC gates in quality red-phase tests.
+
+## Guard and Architecture Test Rules
+
+- For invalid input tests, use `Assert.Throws<TException>(() => ...)`.
+- Assert exception type only; do not assert exception message text.
+- Quality architecture tests must verify stable project reference contracts and namespace rules.
+- Update expected architecture-reference sets only when a project-reference change is intentional and reviewed.
+
 ## When to Use
 
 - New features.

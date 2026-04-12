@@ -30,6 +30,39 @@ Use this skill to standardize boundary validation with `Syrx.Validation.Contract
 - Keep guard usage consistent with `.github/instructions/validation-and-guards.instructions.md`.
 - Keep recommendations aligned with `.github/instructions/csharp.instructions.md` and `.github/instructions/security-and-secure-coding.instructions.md`.
 
+## Repository-Bound Model Rules
+
+- Models crossing repository boundaries (DTO/domain types passed to or returned from repositories) must be immutable.
+- Use get-only properties or equivalent immutable record semantics; no public setters.
+- Run required guard validation at instantiation time (constructor or static factory).
+- Use Syrx guard methods from `Syrx.Validation.Contract` (`Throw` or `Require`) for all repository-bound model validation.
+
+## Null-Forgiving Operator Idiom
+
+After a guard validates a reference as non-null, use the null-forgiving operator (`!`) when assigning or passing the validated value. This suppresses nullable warnings without introducing redundant null-coalescing expressions.
+
+```csharp
+// Guard then null-forgive
+public OrderService(IOrderRepository orderRepository)
+{
+   Throw<ArgumentNullException>(orderRepository is not null, nameof(orderRepository));
+   _orderRepository = orderRepository!;
+}
+
+public async Task<Order> CreateAsync(Order order, CancellationToken cancellationToken = default)
+{
+   Throw<ArgumentNullException>(order is not null, nameof(order));
+   var created = await _orderRepository.CreateAsync(order!, cancellationToken);
+   Throw<InvalidOperationException>(created is not null, nameof(created));
+   return created!;
+}
+
+// Redundant null-coalescing after guard
+_orderRepository = orderRepository ?? throw new ArgumentNullException(nameof(orderRepository));
+```
+
+The pattern is: guard asserts the condition holds; `!` communicates that verification to the compiler.
+
 ## Contract.Throw Usage
 
 ```csharp
@@ -39,6 +72,12 @@ Throw<ArgumentNullException>(user != null, nameof(user));
 Throw<ArgumentException>(!string.IsNullOrWhiteSpace(email), nameof(email));
 Throw<ArgumentException>(count > 0, "Count must be positive, got {0}", count);
 ```
+
+`Require<TException>(successCondition, message)` is permitted as an equivalent semantic alias from `Syrx.Validation.Contract`.
+
+## Rationale
+
+Use fail-fast validation to centralize semantics and maintain a consistent exception taxonomy.
 
 ## Workflow
 

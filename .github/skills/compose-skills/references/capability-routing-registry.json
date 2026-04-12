@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "lastUpdated": "2026-04-11",
+  "lastUpdated": "2026-04-12",
   "description": "Comprehensive capability routing registry mapping user intents to skill compositions. Used by orchestrator to automatically invoke relevant skills based on request keywords and context.",
   "capabilities": [
     {
@@ -8,7 +8,7 @@
       "name": "Planning & Specification",
       "keywords": ["plan", "planning", "strategy", "roadmap", "prd", "product requirements", "specification", "spec", "requirements"],
       "requiredSkills": ["writing-plans"],
-      "optionalSkills": ["prd-generator", "critical-thinking", "task-research"],
+      "optionalSkills": ["prd-generator", "adr-generator", "critical-thinking", "task-research"],
       "excludedSkills": ["task-execution"],
       "description": "Planning, requirement gathering, PRD authoring, and strategy development before implementation."
     },
@@ -26,7 +26,7 @@
       "name": "Implementation & Execution",
       "keywords": ["implement", "code", "build", "write", "execute", "change", "modify", "create"],
       "requiredSkills": ["task-execution"],
-      "optionalSkills": ["execute-test-driven-development", "execute-plans"],
+      "optionalSkills": ["execute-test-driven-development", "execute-plans", "execute-async-programming", "request-code-review"],
       "excludedSkills": ["writing-plans"],
       "description": "Code implementation, feature building, and execution of approved plans."
     },
@@ -69,11 +69,11 @@
     {
       "id": "bug-and-defect",
       "name": "Debugging & Defect Resolution",
-      "keywords": ["debug", "debugging", "bug", "defect", "error", "issue", "reproduce", "fix bug"],
-      "requiredSkills": ["defect-debugger"],
-      "optionalSkills": [],
-      "excludedSkills": [],
-      "description": "Bug reproduction, root cause analysis, and defect fixing."
+      "keywords": ["debug", "debugging", "bug", "defect", "error", "issue", "reproduce", "fix bug", "exception", "stack trace", "root cause", "regression"],
+      "requiredSkills": ["task-execution"],
+      "optionalSkills": ["task-research", "critical-thinking"],
+      "excludedSkills": ["writing-plans"],
+      "description": "Bug reproduction, root cause analysis, and defect remediation through targeted execution."
     },
     {
       "id": "refactoring",
@@ -98,7 +98,7 @@
       "name": "Data Access & Repositories",
       "keywords": ["data-access", "repository", "syrx", "sql", "database", "query", "command"],
       "requiredSkills": ["execute-syrx-data-access"],
-      "optionalSkills": ["syrx-validation"],
+      "optionalSkills": ["syrx-validation", "sql-server-standards"],
       "excludedSkills": [],
       "description": "Syrx-based repository implementation, SQL parameterization, and data access patterns."
     },
@@ -179,7 +179,7 @@
       "name": "Skill Composition",
       "keywords": ["compose", "composition", "orchestration", "orchestrate", "multi-skill", "indirection"],
       "requiredSkills": ["compose-skills"],
-      "optionalSkills": [],
+      "optionalSkills": ["critical-thinking", "route-customization"],
       "excludedSkills": [],
       "description": "Multi-skill composition through explicit orchestration contracts."
     },
@@ -188,7 +188,7 @@
       "name": "Routing Customization",
       "keywords": ["routing", "route", "routing customization", "router"],
       "requiredSkills": ["route-customization"],
-      "optionalSkills": [],
+      "optionalSkills": ["critical-thinking", "compose-skills"],
       "excludedSkills": [],
       "description": "Determining whether behavior should be agent, instruction, or skill."
     },
@@ -204,9 +204,9 @@
     {
       "id": "architecture-design",
       "name": "Architecture & Design",
-      "keywords": ["architecture", "design", "blueprint", "aggregate", "ddd", "domain-driven", "boundary"],
-      "requiredSkills": ["architecture-designer"],
-      "optionalSkills": ["domain-design"],
+      "keywords": ["architecture", "design", "blueprint", "system design", "system boundary", "adr", "decision record"],
+      "requiredSkills": ["domain-design"],
+      "optionalSkills": ["adr-generator", "critical-thinking"],
       "excludedSkills": [],
       "description": "Architectural decisions, DDD guidance, and blueprint synthesis."
     },
@@ -215,7 +215,7 @@
       "name": "Domain Modeling",
       "keywords": ["domain", "aggregate", "event", "ddd", "domain-driven", "application service"],
       "requiredSkills": ["domain-design"],
-      "optionalSkills": [],
+      "optionalSkills": ["critical-thinking"],
       "excludedSkills": [],
       "description": "Aggregate design, domain events, and anti-corruption layer patterns."
     },
@@ -305,7 +305,7 @@
       "name": "Technical Documentation",
       "keywords": ["document", "documentation", "tech-doc", "readme", "guide"],
       "requiredSkills": ["write-technical-docs"],
-      "optionalSkills": ["index-docs"],
+      "optionalSkills": ["index-docs", "librarian", "writing-plans", "prd-generator", "adr-generator"],
       "excludedSkills": [],
       "description": "Technical reference documentation with code verification and link integrity."
     },
@@ -314,7 +314,7 @@
       "name": "Documentation Indexing",
       "keywords": ["index", "indexing", "catalog", "toc", "table of contents"],
       "requiredSkills": ["index-docs"],
-      "optionalSkills": [],
+      "optionalSkills": ["librarian", "write-technical-docs"],
       "excludedSkills": [],
       "description": "Navigable INDEX.md files for document corpus discovery and navigation."
     },
@@ -323,7 +323,7 @@
       "name": "Information Architecture",
       "keywords": ["librarian", "organization", "structure", "taxonomy", "hierarchy"],
       "requiredSkills": ["librarian"],
-      "optionalSkills": [],
+      "optionalSkills": ["index-docs", "write-technical-docs"],
       "excludedSkills": [],
       "description": "Document corpus organization, naming consistency, and deduplication analysis."
     },
@@ -350,7 +350,7 @@
       "name": "Code Review Request",
       "keywords": ["code review", "review request", "request review"],
       "requiredSkills": ["request-code-review"],
-      "optionalSkills": [],
+      "optionalSkills": ["remediate-review"],
       "excludedSkills": [],
       "description": "Implementation completion and structured code review initiation."
     },
@@ -359,7 +359,7 @@
       "name": "Review Remediation",
       "keywords": ["remediate", "remediation", "address feedback", "review feedback"],
       "requiredSkills": ["remediate-review"],
-      "optionalSkills": [],
+      "optionalSkills": ["request-code-review"],
       "excludedSkills": [],
       "description": "Code review feedback evaluation and technical remediation."
     },
@@ -395,7 +395,7 @@
       "name": "Synchronization & Maintenance",
       "keywords": ["sync", "synchronize", "update", "maintain", "upgrade", "freshness"],
       "requiredSkills": ["execute-sync-customizations"],
-      "optionalSkills": ["execute-sync-skills", "sync-compendium", "sync-editorconfig"],
+      "optionalSkills": ["execute-sync-skills", "sync-compendium", "sync-editorconfig", "prune-sync-assets"],
       "excludedSkills": [],
       "description": "Customization and skill library maintenance, source freshness, and alignment."
     },
@@ -422,7 +422,7 @@
       "name": ".NET Project Scaffolding",
       "keywords": ["scaffold", "scaffolding", "new project", "template", "setup", "initialization"],
       "requiredSkills": ["scaffold-dotnet"],
-      "optionalSkills": [],
+      "optionalSkills": ["ci-cd-workflows", "layer-boundaries"],
       "excludedSkills": [],
       "description": "Lean .NET project structure, standard folders, and reusable build assets."
     },

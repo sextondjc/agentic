@@ -9,8 +9,6 @@ description: Use when designing aggregates, domain events, application service b
 
 Design rich domain models and architecture-level boundaries for DDD-oriented .NET work without drifting into implementation-unrelated workflow or generic coding standards.
 
-Use `architecture-designer` when the request needs a broader blueprint, ADR synthesis, or multi-subsystem architectural arbitration. Use this skill when the need is the reusable domain-design workflow itself.
-
 ## Trigger Conditions
 
 - Aggregate boundaries need to be identified or pressure-tested.
@@ -87,7 +85,7 @@ Use `architecture-designer` when the request needs a broader blueprint, ADR synt
 | Cross-aggregate workflow | Saga or process manager | Keeps orchestration out of aggregate internals |
 | Legacy or external boundary | Anti-corruption layer | Prevents foreign semantics from polluting the domain |
 | Read-heavy optimization | CQRS read model | Preserves a rich write model while scaling reads |
-| Significant architecture change | ADR via this skill | Captures durable rationale and trade-offs |
+| Significant architecture change | ADR with explicit rationale record | Captures durable rationale and trade-offs |
 
 ## Anti-Patterns
 
@@ -101,4 +99,4 @@ Use `architecture-designer` when the request needs a broader blueprint, ADR synt
 - Aggregate boundaries and invariants are explicit.
 - Repository and service ownership is clear.
 - Event and ACL decisions are justified.
-- Significant architecture choices are routed to this skill when needed.
+- Significant architecture choices include a durable rationale record when needed.

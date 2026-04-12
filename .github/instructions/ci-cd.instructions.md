@@ -5,36 +5,12 @@ description: 'Consolidated GitHub Actions guidance for secure, efficient CI/CD p
 ---
 # GitHub Actions CI/CD Policy
 
-This instruction is policy-only. Workflow tutorials, examples, and stepwise implementation guidance belong in skills or reference docs.
+Keep this file policy-only. Use [SKILL.md](./../skills/ci-cd-workflows/SKILL.md) for workflow implementation playbooks, security hardening steps, and reliability execution detail.
 
-## Workflow Governance
+## Mandatory Policy
 
-- Workflows must have explicit triggers and descriptive names.
-- Workflow and job permissions must be explicitly declared and least-privilege by default.
-- Shared-environment workflows must use `concurrency` to avoid overlapping runs.
-- Duplicate workflow logic should be extracted into reusable workflows.
-
-## Security Requirements
-
-- Prefer OIDC over long-lived credentials.
-- Secrets must come from approved secret stores only; never hardcode sensitive values.
-- Pin third-party actions to stable versions (prefer immutable SHAs when feasible).
-- CI must include dependency and static security scanning for protected branches.
-
-## Quality Gates
-
-- Restore, build, lint, and tests must pass before deployment stages run.
-- Release workflows must fail fast on security and quality gate failures.
-- .NET workflows must validate the supported SDK/runtime matrix when applicable.
-
-## Artifact and Reliability Policy
-
-- Use deterministic caching keyed from lockfiles or equivalent dependency manifests.
-- Use artifacts to pass build outputs across jobs rather than rebuilding.
-- Production deployments must use environment protections and explicit approval controls.
-- Deployment workflows must define rollback and post-deployment health validation gates.
-
-## Ownership and Routing
-
-- Keep this file focused on enforceable policy.
-- Route execution how-to and implementation walkthroughs to skills and reference docs.
+- Workflows must define explicit triggers, least-privilege permissions, and concurrency controls where shared environments exist.
+- CI/CD pipelines must use approved secret handling, prefer OIDC, and include dependency/static security scanning on protected branches.
+- Quality gates (restore/build/lint/tests) must pass before deployment stages.
+- Release and production workflows must fail fast on gate failures and enforce environment protections and approvals.
+- Cache and artifact behavior must be deterministic, and deployments must include rollback and health validation gates.

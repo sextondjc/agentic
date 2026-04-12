@@ -11,14 +11,14 @@ Load plan, review critically, execute all tasks, report when complete.
 
 **Announce at start:** "I'm using the execute-plans skill to implement this plan."
 
-**When to use this skill vs this skill:**
+**Execution mode selection:**
 
-| Situation | Use |
+| Situation | Mode |
 |---|---|
-| Subagents are available in the current session | this skill (preferred) |
-| Working in a environment without subagent support | this skill |
-| Executing the plan in a separate, dedicated session | this skill |
-| Requires a human-in-loop checkpoint between tasks | this skill |
+| Subagents are available in the current session | Use per-task subagent dispatch (preferred) |
+| Working in an environment without subagent support | Execute tasks directly in-session |
+| Executing the plan in a separate, dedicated session | Use checkpointed task execution with explicit status updates |
+| Requires a human-in-loop checkpoint between tasks | Pause between tasks for explicit confirmation |
 
 ## The Process
 
@@ -39,9 +39,8 @@ For each task:
 ### Step 3: Complete Development
 
 After all tasks complete and verified:
-- Announce: "I'm using the branch-completion skill to complete this work."
 - **REQUIRED:** Keep execution self-contained within this skill. Do not delegate execution to sibling skills.
-- Follow that skill to verify tests, present options, execute choice
+- Verify tests, present completion options, and execute the selected choice
 
 ## When to Stop and Ask for Help
 
@@ -71,9 +70,7 @@ After all tasks complete and verified:
 
 ## Integration
 
-**Required workflow skills:**
-- **writing-plans** - Creates the plan this skill executes
-- **branch-completion** - Complete development after all tasks
+This skill is fully self-contained and includes its own review, verification, and completion handoff process.
 
 ## Trigger Conditions
 
@@ -100,7 +97,7 @@ Invoke this skill when any of the following is true:
 1. Load and critically review the plan.
 2. Execute tasks in order with explicit verification.
 3. Stop and ask for guidance when blocked.
-4. Hand off to branch-completion after all tasks pass.
+4. Complete branch handoff actions after all tasks pass.
 
 
 

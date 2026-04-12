@@ -9,11 +9,11 @@ description: Use when capturing raw ideas and iteratively refining them through 
 
 Turn an early idea into a refined, decision-ready concept by combining structured idea capture, topic learning, and disciplined challenge rounds.
 
-## Required Collaborators
+## Supporting Activities
 
-- this skill for assumption pressure tests, trade-off challenge, and decision-quality checks.
-- this skill for depth-calibrated topic learning and source-backed context.
-- this skill when claims need external validation before final recommendation.
+- Run assumption pressure tests, trade-off challenges, and decision-quality checks.
+- Perform depth-calibrated topic learning with source-backed context.
+- Validate high-impact claims with external evidence before final recommendation.
 
 ## When to Use
 
@@ -44,8 +44,8 @@ Use `./references/idea-refinement-session-template.md` for the session artifact.
 ## Workflow
 
 1. Capture the raw idea in one paragraph plus constraints and desired outcome.
-2. Select learning depth (`L1` to `L4`) and invoke this skill for domain grounding.
-3. Run iterative challenge rounds using this skill one focused question at a time.
+2. Select learning depth (`L1` to `L4`) and build domain grounding from authoritative sources.
+3. Run iterative challenge rounds one focused question at a time.
 4. After each round, update the challenge log with:
    - challenge question
    - current answer

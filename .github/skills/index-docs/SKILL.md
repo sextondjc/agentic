@@ -68,7 +68,7 @@ If a folder contains a `.librarianignore` file, exclude paths matching its patte
 
 ## Integration with this skill
 
-- This skill is invoked by this skill after any curation pass.
+- This skill can run after any curation pass to refresh index files.
 - Can also be run independently to refresh stale indexes without triggering full curation.
 
 ## Trigger Conditions
@@ -77,7 +77,7 @@ Invoke this skill when any of the following is true:
 
 - A document corpus needs a navigable index for agentic workflows.
 - Existing `INDEX.md` files are stale after documents were added, moved, or renamed.
-- this skill invokes this skill as part of its output contract.
+- Index refresh is required as part of documentation curation output contracts.
 - A new workspace is being structured and initial indexes are required.
 
 ## Inputs

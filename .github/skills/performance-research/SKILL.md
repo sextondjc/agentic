@@ -79,20 +79,9 @@ Each finding must be backed by one or more of:
 
 If evidence is incomplete, explicitly record the gap and what would be needed to validate it.
 
-## Companion Skills And Agents
+## Self-Containment
 
-Use these when they improve the quality of the assessment:
-
-- this skill for broad evidence gathering
-- this skill to challenge assumptions and avoid cargo-cult tuning
-- this skill for obsolete API or legacy-pattern performance context
-- this skill for external integration latency and retry behavior
-- this skill for query-shape, paging, and explicit SQL review
-- this skill when the recommended remediation should become an ADR
-
-Recommended coordinating agent: `performance-assessor`
-
-If the task becomes multi-phase or ambiguous, route through `orchestrator`.
+This workflow is self-contained and includes evidence gathering, bottleneck validation, and remediation recommendation framing within this skill.
 
 ## Workflow
 

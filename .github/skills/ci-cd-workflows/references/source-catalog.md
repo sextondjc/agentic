@@ -1,0 +1,11 @@
+# Source Catalog — ci-cd-workflows
+
+Maintained per `execute-sync-skills` governance. Mark a source as **Needs Review** when `Last Evaluated` exceeds the freshness threshold (default: 30 days). Mark **Deprecated** when no longer maintained or relevant.
+
+| Source | What It Provides | Why It Is Valuable | In Use | Last Evaluated | Current Status | Notes |
+|---|---|---|---|---|---|---|
+| [Writing workflows](https://docs.github.com/en/actions/how-tos/write-workflows) | Workflow authoring how-tos: templates, trigger selection, runner selection, job composition | Official GitHub Actions authoring reference; covers all structural workflow decisions | Yes | 2026-04-12 | Current | |
+| [Building and testing .NET](https://docs.github.com/en/actions/tutorials/build-and-test-code/net) | .NET-specific CI/CD: `setup-dotnet@v4`, NuGet caching, canonical dotnet CLI sequence, matrix strategy, TRX artifact upload, GitHub Packages publishing | Official GitHub tutorial with concrete YAML templates for .NET integration | Yes | 2026-04-12 | Current | Covers free-pro-team edition |
+| [Reuse workflows](https://docs.github.com/en/actions/sharing-automations/reusing-workflows) | `workflow_call` with typed inputs/secrets/outputs, nesting limits (10 levels), secret inheritance (`inherit` vs named), matrix + reusable composition | Official reference for reusable workflow authoring; covers permission chain constraints | Yes | 2026-04-12 | Current | |
+| [Control workflow concurrency](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency) | Concurrency groups, `cancel-in-progress`, branch-aware conditional cancellation, multi-event fallback keys, deployment queue serialisation | Official guide covering all concurrency scenarios including release branch protection edge cases | Yes | 2026-04-12 | Current | |
+| [OpenID Connect](https://docs.github.com/en/actions/concepts/security/openid-connect) | OIDC token structure and claims, environment-scoped subjects, cloud trust configuration, `repo_property_*` ABAC claims, Dependabot OIDC for private registries | Official OIDC security reference; authoritative source for `id-token: write` and trust scope guidance | Yes | 2026-04-12 | Current | |

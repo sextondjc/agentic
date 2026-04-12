@@ -7,9 +7,20 @@ description: Use when evaluating one or more workspace skills against mandatory 
 
 ## Specialization
 
-Evaluate skills against defined quality standards and produce review outcomes that determine whether a skill passes, requires update, or enters conflict resolution.
+Evaluate skills against defined quality standards and produce review outcomes (Pass, Pass With Advisories, Fail, Blocked) for skill governance. Scope is singular: skill quality review and follow-up governance.
 
-This skill has one purpose only: skill quality review and follow-up governance.
+## L4 Copilot Target
+
+L4 quality requires three passing dimensions:
+
+- Maintenance: freshness-check standards and source assumptions before final recommendations.
+- Learning: decompose coverage across format, triggers, self-containment, links, conflicts, and history.
+- Reasoning: include assumptions, trade-offs, blockers, and one recommendation per failed or advisory standard.
+
+Copilot compatibility is mandatory:
+
+- Keep frontmatter minimal and valid (`name`, `description`).
+- Keep output tables deterministic and machine-scannable.
 
 ## Normative Language
 
@@ -34,7 +45,7 @@ Use these standards exactly:
 
 ## Trigger Conditions
 
-Invoke this skill when any of the following is true:
+Invoke this skill when any condition below is true:
 
 - A new skill is created.
 - An existing skill is modified.
@@ -54,6 +65,7 @@ Optional inputs:
 
 - Previous review artifact path if already known.
 - Change request or incident context.
+- Evaluation date in ISO format (`YYYY-MM-DD`) for review freshness tracking.
 
 ## Required Outputs
 
@@ -63,6 +75,9 @@ Optional inputs:
 - Review result summaries MUST be returned in Markdown grid format (tables), not prose lists.
 - Aggregate multi-skill results MUST include at least one consolidated grid with per-skill outcomes.
 - Per-skill review files MUST be stored under .docs/changes/skill/reviews/<skill-name>/.
+- L4 coverage matrix that maps requested review outcomes to produced artifacts and decisions.
+- Reasoning package per reviewed skill: assumptions, trade-offs, blockers, and one recommendation.
+- Source-governance summary when maintenance validation is requested.
 
 #### Violation Code Legend
 
@@ -70,19 +85,14 @@ Optional inputs:
 |---|---|---|---|
 | SKR-M* | Mandatory skill quality check | MUST | skill-review |
 | SKR-S* | Advisory skill quality check | SHOULD | skill-review |
-| GOV-SK | Skill quality aggregate | Aggregate | governance-health-overview |
+| GOV-SK | Skill quality aggregate | Aggregate | consolidated governance reporting |
 
 ## Assets
 
 - Script assets are available at path: [README.md](./references/scripts/README.md).
 - A dedicated `references/` folder is optional for reviewed skills; do not recommend it by default when the artifact is already self-contained.
-- For skill artifacts, use this skill for concision-focused remediation when wording reductions are needed.
-- For non-skill customization artifacts, use this skill or this skill for concision-focused remediation when wording reductions are needed.
-- Use [customization-generation-template.md](./../instructions-authoring/references/customization-generation-template.md) as an optional reference for concision baselines, while verifying reviewed skills remain self-contained.
-- Use generate-baseline-skill-reviews.ps1 to run full baseline audits and history updates.
-- Use get-skill-metadata-audit.ps1 for quick frontmatter/trigger/reference checks.
-- Use generate-targeted-skill-reviews.ps1 for focused remediation reruns on selected skills.
-- Use refresh-history-index-and-grid.ps1 to rebuild history index and the aggregate grid.
+- For concision-focused remediation, include exact rewrite recommendations directly in the report.
+- Use script assets as follows: `generate-baseline-skill-reviews.ps1` (full baseline + history), `get-skill-metadata-audit.ps1` (quick metadata checks), `generate-targeted-skill-reviews.ps1` (targeted reruns), `refresh-history-index-and-grid.ps1` (history index + aggregate grid).
 - External copilot-skill mirrors used for evidence capture are stored at path: [README.md](./references/mirrors/README.md).
 
 ## Workflow
@@ -90,18 +100,22 @@ Optional inputs:
 1. Resolve target skills and collect current SKILL.md files and related assets.
 2. Load the per-skill history file from references/history before analysis.
 3. Build a recommendation deny-list from history entries marked Rejected, Removed, or Illegitimate.
-4. Evaluate all SKR-M* and SKR-S* standards with evidence.
-5. Validate markdown link integrity in SKILL.md from the on-disk workspace file context (for example, reject placeholder `#` links and unresolved local paths).
-6. Prefer workspace-root-relative markdown links to reduce virtual-buffer resolution mismatch in IDE diagnostics.
-7. Validate self-containedness semantically: required execution context must be explicit and not rely on unstated assumptions, using canonical section names or clearly labeled equivalent sections.
-8. Validate brevity: wording should be economical for context efficiency, without obvious duplication or narrative padding.
-9. Produce pass or fail for MUST standards and advisory outcome for SHOULD standards.
-10. If advisory findings are primarily concision-related, route rewrite recommendations through this skill, this skill, or this skill based on artifact type before finalizing remediation wording.
-11. If conflict is detected:
-   - Document conflict using workspace documentation standards.
+4. Build coverage across mandatory branches: format, triggers, self-containedness, links, conflict risk, and history alignment.
+5. Re-evaluate maintenance assumptions against active standards and source context when requested.
+6. Evaluate all SKR-M* and SKR-S* checks with evidence.
+7. Validate markdown link integrity in SKILL.md from on-disk context (reject placeholder `#` and unresolved local paths).
+8. Prefer workspace-root-relative markdown links to reduce virtual-buffer resolution mismatch in IDE diagnostics.
+9. Validate self-containedness semantically: required execution context must be explicit and not rely on unstated assumptions, using canonical sections or clearly labeled equivalents.
+10. Validate brevity: wording should be economical, without obvious duplication or narrative padding.
+11. Produce pass or fail for MUST standards and advisory outcome for SHOULD standards.
+12. For each failed or advisory check, record assumptions, trade-offs, blockers, and one recommendation.
+13. If advisory findings are primarily concision-related, include rewrite-ready text in the report before finalizing remediation wording.
+14. If conflict is detected:
+   - Document conflict per workspace documentation standards.
    - Recommend one or more concrete resolution options.
-   - Work with the human user to choose and confirm the resolution.
-12. Update the skill history file with findings, decisions, and recommendation statuses.
+   - Collaborate with the human user to choose and confirm resolution.
+15. Update the skill history file with findings, decisions, and recommendation statuses.
+16. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
 
 ## Output Format Rules
 
@@ -140,8 +154,6 @@ Do not auto-resolve without explicit user direction.
 - Track each recommendation with status: Proposed, Accepted, Rejected, Removed, Implemented.
 - Before publishing recommendations, remove any item that matches prior Rejected or Removed entries unless the user explicitly re-opens it.
 
-## Decision Gates
-
 ## Done Criteria
 
 A review is complete only when:
@@ -150,3 +162,6 @@ A review is complete only when:
 - Required report artifacts were written.
 - History was updated for every reviewed skill.
 - Conflicts were either resolved with user confirmation or explicitly marked Blocked.
+- L4 coverage mapping is complete with no unaddressed requested outcomes.
+- Reasoning package entries are present for failed and advisory findings.
+- Maintenance assumptions are freshness-checked when maintenance validation is in scope.

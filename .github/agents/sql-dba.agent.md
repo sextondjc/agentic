@@ -23,6 +23,7 @@ Perform Microsoft SQL Server operational administration, schema inspection, and 
 
 ## Preferred Companion Skills
 
+- `sql-server-standards`
 - `audit-powershell`
 - `critical-thinking`
 

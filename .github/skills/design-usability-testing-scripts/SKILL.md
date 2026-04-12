@@ -35,12 +35,9 @@ Create structured usability test scripts and scoring materials for mobile flows,
 4. Add scoring rubric and accessibility checklist.
 5. Run sessions, aggregate findings, and prioritize actions.
 
-## Required Collaborators
+## Self-Containment
 
-- design-mobile-ux
-- critical-thinking
-- execute-test-driven-development
-- learn-topics (optional)
+This workflow is self-contained and includes planning, facilitation, scoring, and prioritization within this skill.
 
 ## Done Criteria
 

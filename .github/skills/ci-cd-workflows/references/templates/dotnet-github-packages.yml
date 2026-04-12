@@ -1,0 +1,35 @@
+# Template: Publish .NET NuGet package to GitHub Packages
+# Use when: A release is created and CI tests have already passed.
+# Requires 'packages: write' permission. NUGET_AUTH_TOKEN must be GITHUB_TOKEN;
+# never substitute a PAT unless scoped to the minimum required permissions.
+
+name: publish-package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+          source-url: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build
+        run: dotnet build --configuration Release
+
+      - name: Pack
+        run: dotnet pack --configuration Release --no-build --output ./artifacts
+
+      - name: Push
+        run: dotnet nuget push ./artifacts/*.nupkg

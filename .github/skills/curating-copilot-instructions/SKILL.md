@@ -169,11 +169,7 @@ For workspaces that pull regularly from this catalogue:
 
 ## Workflow Integration
 
-This skill pairs naturally with:
-- **this skill** — Authoring new skills that should be documented in copilot-instructions
-- **this skill** and **this skill** — Creating agent/instruction assets that need referencing
-- **`workspace-scaffolder`** — When initializing a new workspace from catalogue
-- **`keeping-customizations-current`** — When maintaining import relationships over time
+This workflow is self-contained and includes inventorying, curation, and synchronization of copilot-instructions content.
 
 ---
 
@@ -181,7 +177,6 @@ This skill pairs naturally with:
 
 - [copilot-instructions.md](./../../copilot-instructions.md)
 - [README.md](./../../../README.md)
-- [planning-execution-review-governance.md](./../audit-governance/references/planning-execution-review-governance.md)
 
 ## Trigger Conditions
 

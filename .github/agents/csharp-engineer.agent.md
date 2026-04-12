@@ -39,12 +39,19 @@ Active instruction files for C# work:
 - Prefer composition over additional layers or abstractions.
 
 ## Preferred Companion Skills
-- `execute-syrx-data-access` for repository and data access implementation
-- `execute-test-driven-development` for feature and bugfix work
-- `task-research` for deep evidence gathering
-- `critical-thinking` for design challenge and option pressure-testing
-- `api-design` for resilient client or service integrations
-- `adr-generator` (via `architecture-designer`) for decision documentation
-- `execute-dotnet-refactor` for cleanup and modernization passes
+
+Use these skills explicitly when the trigger is present:
+
+- `execute-async-programming`: any async/concurrency, `IAsyncEnumerable<T>`, fanout, or `ValueTask` change.
+- `syrx-validation`: boundary validation, guard semantics, nullability guard idioms, and immutable repository-bound model checks.
+- `execute-test-driven-development`: feature/bugfix implementation requiring red-green-refactor execution.
+- `execute-syrx-data-access`: repository and SQL/data-access implementation using approved patterns.
+- `layer-boundaries`: namespace/assembly boundary changes, project-reference direction updates, and layered-architecture refactors.
+- `execute-dotnet-refactor`: behavior-preserving modernization and cleanup passes.
+- `execute-dotnet-resilience`: retries/timeouts/circuit-breakers/rate-limits and Polly or Microsoft resilience pipeline changes.
+- `api-design`: external API integrations, DTO contracts, client boundaries, and resilient integration behavior.
+- `request-code-review`: completion-stage implementation validation before merge.
+
+When multiple triggers apply, compose the relevant skills deterministically and report which skill governed each major decision.
 
 

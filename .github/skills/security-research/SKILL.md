@@ -78,20 +78,9 @@ Each finding must be backed by one or more of:
 
 If evidence is incomplete, explicitly record the gap and what would be needed to validate it.
 
-## Companion Skills And Agents
+## Self-Containment
 
-Use these when they improve the quality of the assessment:
-
-- this skill for broad evidence gathering
-- this skill to challenge assumptions and reduce false positives
-- this skill for HTTP, authentication, and integration-boundary analysis
-- this skill for repository and explicit SQL review
-- this skill for obsolete API or legacy-pattern risk context
-- this skill when the recommended remediation should become an ADR
-
-Recommended coordinating agent: `security-researcher`
-
-If the task becomes multi-phase or ambiguous, route through `orchestrator`.
+This workflow is self-contained and includes evidence gathering, assumption checks, boundary analysis, and remediation recommendation framing within this skill.
 
 ## Workflow
 
