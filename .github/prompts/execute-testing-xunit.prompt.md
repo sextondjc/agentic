@@ -6,7 +6,7 @@ description: 'Prompt for XUnit test generation aligned with project standards an
 
 Route this request to `orchestrator`.
 
-Use the `execute-test-driven-development` skill as the primary workflow.
+Use the `test-driven-development` skill as the primary workflow.
 
 Generate tests named `{Scenario}{ExpectedBehavior}` using xUnit and Moq, aligned with workspace rules.
 

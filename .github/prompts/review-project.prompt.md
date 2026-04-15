@@ -64,6 +64,6 @@ Answer each question. If any answer is No, record the corrective action before p
 
 ## Next Steps After Checkpoint
 
-- If GO: proceed with `execute-plans` skill against the wave ticket backlog.
+- If GO: proceed with `plans` skill against the wave ticket backlog.
 - If NO-GO: apply corrective actions, re-run this checklist, confirm GO before executing.
 - Record the checkpoint outcome (GO/NO-GO + any corrective actions taken) in the active `.docs/changes/` traceability artifact for the wave.

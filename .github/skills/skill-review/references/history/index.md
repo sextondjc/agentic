@@ -21,15 +21,15 @@
 | design-usability-testing-scripts | design-usability-testing-scripts-history.md | 2026-04-12 | Pass |
 | docker-dotnet | docker-dotnet-history.md | 2026-04-12 | Pass |
 | domain-design | domain-design-history.md | 2026-04-12 | Pass |
-| execute-async-programming | execute-async-programming-history.md | 2026-04-12 | Pass With Advisories |
-| execute-dotnet-refactor | execute-dotnet-refactor-history.md | 2026-04-12 | Pass |
-| execute-dotnet-resilience | execute-dotnet-resilience-history.md | 2026-04-12 | Pass |
-| execute-plans | execute-plans-history.md | 2026-04-12 | Pass |
-| execute-powershell-script-library | execute-powershell-script-library-history.md | 2026-04-12 | Pass |
-| execute-sync-customizations | execute-sync-customizations-history.md | 2026-04-12 | Pass |
-| execute-sync-skills | execute-sync-skills-history.md | 2026-04-12 | Pass |
-| execute-syrx-data-access | execute-syrx-data-access-history.md | 2026-04-12 | Pass |
-| execute-test-driven-development | execute-test-driven-development-history.md | 2026-04-12 | Pass |
+| async-programming | async-programming-history.md | 2026-04-12 | Pass With Advisories |
+| dotnet-refactor | dotnet-refactor-history.md | 2026-04-12 | Pass |
+| dotnet-resilience | dotnet-resilience-history.md | 2026-04-12 | Pass |
+| plans | plans-history.md | 2026-04-12 | Pass |
+| powershell-script-library | powershell-script-library-history.md | 2026-04-12 | Pass |
+| sync-customizations | sync-customizations-history.md | 2026-04-12 | Pass |
+| sync-skills | sync-skills-history.md | 2026-04-12 | Pass |
+| syrx-data-access | syrx-data-access-history.md | 2026-04-12 | Pass |
+| test-driven-development | test-driven-development-history.md | 2026-04-12 | Pass |
 | governance-health-overview | governance-health-overview-history.md | 2026-04-12 | Pass |
 | index-docs | index-docs-history.md | 2026-04-12 | Pass |
 | instructions-authoring | instructions-authoring-history.md | 2026-04-12 | Pass |

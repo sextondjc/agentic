@@ -1,6 +1,6 @@
 # Source Catalog — ci-cd-workflows
 
-Maintained per `execute-sync-skills` governance. Mark a source as **Needs Review** when `Last Evaluated` exceeds the freshness threshold (default: 30 days). Mark **Deprecated** when no longer maintained or relevant.
+Maintained per `sync-skills` governance. Mark a source as **Needs Review** when `Last Evaluated` exceeds the freshness threshold (default: 30 days). Mark **Deprecated** when no longer maintained or relevant.
 
 | Source | What It Provides | Why It Is Valuable | In Use | Last Evaluated | Current Status | Notes |
 |---|---|---|---|---|---|---|

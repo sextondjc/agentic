@@ -19,6 +19,7 @@ This folder contains reusable `.prompt.md` templates for repeatable governance a
 | `governance-type-audit` | `governance-type-audit.prompt.md` | Review | Planning | Canonical Level 2 deep-scan governance report by customization type with normalized deltas and failure IDs. |
 | `governance-item-audit` | `governance-item-audit.prompt.md` | Review | Execution | Canonical Level 3 deep-scan governance report for one customization item with evidence-backed findings. |
 | `optimize-customizations` | `optimize-customizations.prompt.md` | Review | Execution | Runs an on-demand optimization-factor review for agents, instructions, skills, and prompts with ranked remediation output. |
+| `agent-review` | `agent-review.prompt.md` | Review | Execution | Runs an on-demand quality review of one or more `.agent.md` files with platform-currency-aware evaluation and ranked remediation recommendations. |
 | `execute-condense` | `execute-condense.prompt.md` | Review | Execution | Invokes skills-authoring plus agent-authoring/instructions-authoring concision mode for one named artifact or a full artifact set and returns concise rewrite recommendations without applying edits. |
 | `librarian` | `librarian.prompt.md` | Execution | Review | Curates documentation corpus naming and structure with `.docs/` as default root and produces approval-gated recommendations. |
 | `sync-compendium` | `sync-compendium.prompt.md` | Execution | Review | Runs explicit-approval compendium sync with source attribution, conflict classification, and bespoke-safe merge constraints. |

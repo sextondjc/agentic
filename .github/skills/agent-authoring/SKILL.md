@@ -48,19 +48,45 @@ Invoke this skill when any of the following is true:
 
 ## Inputs
 
+Required inputs:
+
 - User request context and target `.agent.md` scope.
+- Evaluation date in ISO format (YYYY-MM-DD).
+- Source catalog file path (default: ./references/source-catalog.md).
+
+Optional inputs:
+
+- Scope filters (naming, domain, or owner).
+- Maximum age threshold in days for source freshness (default: 30).
+
+## Source Governance Rules
+
+- Keep the source catalog in Markdown grid format.
+- Every source row MUST include:
+	- Source
+	- What It Provides
+	- Why It Is Valuable
+	- In Use (Yes or No)
+	- Last Evaluated (YYYY-MM-DD)
+	- Current Status (Current, Needs Review, Deprecated)
+- Mark a source as Needs Review when Last Evaluated is older than the freshness threshold.
+- Mark a source as Deprecated when it is no longer maintained or no longer relevant to agent authoring.
+- Do not remove historical sources without adding a short deprecation note in the Notes column.
 
 ## Required Outputs
 
 - A concrete `.agent.md` result aligned with workspace standards and the requested role boundary.
+- Updated [source-catalog.md](./references/source-catalog.md) when source tracking changes are requested.
 
 ## Workflow
 
 1. Confirm the target artifact is an agent file.
 2. Apply frontmatter and section requirements.
 3. Keep role scope singular and deterministic.
-4. Reference instruction standards instead of restating them.
-5. Route post-change quality checks to this skill.
+4. Re-evaluate tracked sources in [source-catalog.md](./references/source-catalog.md) when the request includes source governance updates.
+5. Update In Use, Last Evaluated, and Current Status for affected sources.
+6. Reference instruction standards instead of restating them.
+7. Route post-change quality checks to this skill.
 
 ## Hard Constraint
 
@@ -76,4 +102,5 @@ Authoring is complete when:
 - The target `.agent.md` file exists at the correct path.
 - Frontmatter is valid and complete.
 - Required sections are present with non-overlapping boundaries.
+- Any source-tracking updates are reflected in [source-catalog.md](./references/source-catalog.md) with freshness fields populated.
 - this skill routing is included for post-change review.

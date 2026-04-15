@@ -30,7 +30,7 @@ Keep this file policy-only. Use [SKILL.md](./../skills/instructions-authoring/SK
 ## `.docs` and `.archive` Naming Rules
 
 - Date prefixes in file or folder names are prohibited.
-- Folder names must be lowercase and one word per level.
+- Folder names must be lowercase kebab-case. Folders that mirror a skill, agent, instruction, or prompt name must exactly match that asset's canonical name.
 - `README.md` is reserved for true folder entry-point guidance only.
 - `INDEX.md` is reserved for generated indexes.
 - File names must reflect the actual content domain.

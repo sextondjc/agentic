@@ -77,7 +77,7 @@ Planning output should prefer markdown grids over narrative text.
 
 Maintain lifecycle mappings in:
 
-- [agent-lifecycle-catalog.md](./../../../agents/agent-lifecycle-catalog.md)
+- [agent-lifecycle-catalog.md](./../../../agent-lifecycle-catalog.md)
 - [instruction-lifecycle-catalog.md](./../../../instructions/instruction-lifecycle-catalog.md)
 - [prompt-lifecycle-catalog.md](./../../../prompts/prompt-lifecycle-catalog.md)
 - [skill-discovery-index.md](./../../../skills/skill-discovery-index.md)

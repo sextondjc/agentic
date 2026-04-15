@@ -29,8 +29,8 @@ Key rule: do not proceed to analysis until all 12 answers are concrete and imple
 ## Analysis
 
 1. **Audit workspace** — extract Syrx patterns, guard semantics, test naming, documentation structure from existing projects
-2. **Curate agents** — match project needs to: `csharp-engineer`, `architecture-designer`, `execute-syrx-data-access`, `api-design`, `critical-thinking`, etc.
-3. **Curate skills** — prioritize: `execute-syrx-data-access`, `adr-generator`, `api-design` by phase
+2. **Curate agents** — match project needs to: `csharp-engineer`, `architecture-designer`, `syrx-data-access`, `api-design`, `critical-thinking`, etc.
+3. **Curate skills** — prioritize: `syrx-data-access`, `adr-generator`, `api-design` by phase
 4. **Identify instruction scope** — which canonical `.github/instructions/*.md` files are essential vs. optional/deferred
 
 ## Outputs (Save to `.docs/setup/` + `.github/agents/`)

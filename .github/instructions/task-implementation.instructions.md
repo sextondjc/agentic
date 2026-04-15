@@ -6,7 +6,7 @@ description: 'Policy boundaries for executing approved plans and maintaining cha
 
 # Task Plan Implementation Instructions
 
-Keep this file policy-only. Use [SKILL.md](./../skills/task-execution/SKILL.md) for same-session execution workflow and [SKILL.md](./../skills/execute-plans/SKILL.md) for dedicated-session execution checkpoints.
+Keep this file policy-only. Use [SKILL.md](./../skills/task-execution/SKILL.md) for same-session execution workflow and [SKILL.md](./../skills/plans/SKILL.md) for dedicated-session execution checkpoints.
 
 ## Scope
 
@@ -25,7 +25,7 @@ Keep this file policy-only. Use [SKILL.md](./../skills/task-execution/SKILL.md) 
 
 - Use skill workflows for execution procedure details:
    - `task-execution` for same-session execution with task-level orchestration.
-   - `execute-plans` for dedicated-session execution and checkpointed handoff.
+   - `plans` for dedicated-session execution and checkpointed handoff.
    - `writing-plans` when an implementation-ready plan does not yet exist.
 - This instruction does not define step-by-step task execution flows or templates.
 
@@ -38,5 +38,5 @@ Keep this file policy-only. Use [SKILL.md](./../skills/task-execution/SKILL.md) 
 ## Routing Notes
 
 - Use [SKILL.md](./../skills/task-execution/SKILL.md) for same-session plan execution.
-- Use [SKILL.md](./../skills/execute-plans/SKILL.md) for dedicated-session execution with explicit checkpoints.
+- Use [SKILL.md](./../skills/plans/SKILL.md) for dedicated-session execution with explicit checkpoints.
 - Use [SKILL.md](./../skills/write-technical-docs/SKILL.md) when change artifact quality or formatting guidance is needed.

@@ -1,6 +1,18 @@
----
 name: csharp-engineer
 description: 'Expert C#/.NET engineering agent consolidating craftsmanship, modernization, and performance guidance.'
+handoffs:
+	- label: Review Implementation
+		agent: code-reviewer
+		prompt: 'Implementation is complete. Review the changed artifacts against the originating plan and active workspace instruction files. Produce severity-ranked findings with remediation guidance.'
+		send: false
+	- label: Debug Regression
+		agent: defect-debugger
+		prompt: 'A defect or regression was identified during this implementation. Reproduce, isolate, and fix the issue using the symptom and reproduction context noted above.'
+		send: false
+	- label: Route Security Follow-Up
+		agent: orchestrator
+		prompt: 'Implementation touches a security-sensitive path. Classify the follow-up assessment and route it to the correct specialist using the concerns surfaced above.'
+		send: false
 ---
 # C# Engineering Agent
 
@@ -26,6 +38,13 @@ Active instruction files for C# work:
 - `architecture.instructions.md`
 - `security-and-secure-coding.instructions.md`
 
+## Hard Constraints
+
+- No architecture boundary decisions without routing through `architecture-designer`.
+- No live DBA or SQL Server administration; route to `sql-dba`.
+- No scope expansion into planning or research mode unless user explicitly requests it.
+- No silent omission of tests for changed behavior.
+
 ## Modernization Checklist
 - Convert outdated loops to LINQ where readable
 - Introduce `switch` expressions & pattern matching
@@ -42,13 +61,13 @@ Active instruction files for C# work:
 
 Use these skills explicitly when the trigger is present:
 
-- `execute-async-programming`: any async/concurrency, `IAsyncEnumerable<T>`, fanout, or `ValueTask` change.
+- `async-programming`: any async/concurrency, `IAsyncEnumerable<T>`, fanout, or `ValueTask` change.
 - `syrx-validation`: boundary validation, guard semantics, nullability guard idioms, and immutable repository-bound model checks.
-- `execute-test-driven-development`: feature/bugfix implementation requiring red-green-refactor execution.
-- `execute-syrx-data-access`: repository and SQL/data-access implementation using approved patterns.
+- `test-driven-development`: feature/bugfix implementation requiring red-green-refactor execution.
+- `syrx-data-access`: repository and SQL/data-access implementation using approved patterns.
 - `layer-boundaries`: namespace/assembly boundary changes, project-reference direction updates, and layered-architecture refactors.
-- `execute-dotnet-refactor`: behavior-preserving modernization and cleanup passes.
-- `execute-dotnet-resilience`: retries/timeouts/circuit-breakers/rate-limits and Polly or Microsoft resilience pipeline changes.
+- `dotnet-refactor`: behavior-preserving modernization and cleanup passes.
+- `dotnet-resilience`: retries/timeouts/circuit-breakers/rate-limits and Polly or Microsoft resilience pipeline changes.
 - `api-design`: external API integrations, DTO contracts, client boundaries, and resilient integration behavior.
 - `request-code-review`: completion-stage implementation validation before merge.
 

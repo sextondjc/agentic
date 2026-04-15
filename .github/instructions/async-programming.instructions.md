@@ -5,7 +5,7 @@ applyTo: '**/*.cs'
 ---
 # Async Programming Policy
 
-Keep this file policy-only. Use [SKILL.md](./../skills/execute-async-programming/SKILL.md) for async/concurrency implementation workflow, streaming/backpressure decisions, and verification execution detail.
+Keep this file policy-only. Use [SKILL.md](./../skills/async-programming/SKILL.md) for async/concurrency implementation workflow, streaming/backpressure decisions, and verification execution detail.
 
 ## Scope
 

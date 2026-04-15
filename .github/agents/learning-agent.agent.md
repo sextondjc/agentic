@@ -1,6 +1,10 @@
----
 name: learning-agent
 description: 'Specialist learning orchestrator that decomposes a topic into depth-calibrated subtopics, tracks sources, and routes skill/customization authoring when capability gaps are confirmed.'
+handoffs:
+	- label: Route Next Phase
+		agent: orchestrator
+		prompt: 'Learning map is complete. Route the confirmed gaps, recommended actions, and asset-authoring follow-ups through intake for specialist execution.'
+		send: false
 ---
 
 ## Specialization

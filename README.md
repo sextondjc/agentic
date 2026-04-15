@@ -70,8 +70,8 @@ Use these assets when keeping this repository synchronized for downstream reuse.
 
 | Artifact | Type | Use |
 |---|---|---|
-| [execute-sync-customizations](./.github/skills/execute-sync-customizations/SKILL.md) | Skill | Keep instructions and agents aligned with workspace policy and routing standards. |
-| [execute-sync-skills](./.github/skills/execute-sync-skills/SKILL.md) | Skill | Keep skill inventory and skill guidance fresh against approved sources. |
+| [sync-customizations](./.github/skills/sync-customizations/SKILL.md) | Skill | Keep instructions and agents aligned with workspace policy and routing standards. |
+| [sync-skills](./.github/skills/sync-skills/SKILL.md) | Skill | Keep skill inventory and skill guidance fresh against approved sources. |
 | [validate-customization](./.github/skills/validate-customization/SKILL.md) | Skill | Detect policy conflicts, stale mappings, and drift before publishing. |
 | [sync-compendium.prompt.md](./.github/prompts/sync-compendium.prompt.md) | Prompt | Run explicit-approval compendium synchronization for downstream repositories. |
 
@@ -83,7 +83,7 @@ Use this matrix to select the correct execution route.
 |---|---|---|
 | No approved plan exists | `writing-plans` skill | A traceable plan with scoped tasks and IDs. |
 | Approved plan, same-session implementation | `task-execution` skill | Implemented artifacts with ongoing `.docs/changes` updates. |
-| Approved plan, separate/dedicated execution session | `execute-plans` skill | Checkpointed progress and explicit handoff continuity. |
+| Approved plan, separate/dedicated execution session | `plans` skill | Checkpointed progress and explicit handoff continuity. |
 | Multi-phase or ambiguous request | `orchestrator` agent | Phase-split assignment to the correct specialist. |
 
 ## Quick Start
@@ -142,7 +142,7 @@ Use this matrix to select the correct execution route.
 
 - [instruction-lifecycle-catalog.md](./.github/instructions/instruction-lifecycle-catalog.md)
 - [skill-discovery-index.md](./.github/skills/skill-discovery-index.md)
-- [agent-lifecycle-catalog.md](./.github/agents/agent-lifecycle-catalog.md)
+- [agent-lifecycle-catalog.md](./.github/agent-lifecycle-catalog.md)
 - [prompt-lifecycle-catalog.md](./.github/prompts/prompt-lifecycle-catalog.md)
 
 

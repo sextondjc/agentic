@@ -1,9 +1,9 @@
-# execute-dotnet-resilience History
+# dotnet-resilience History
 
 ## Skill Metadata
 
-- Skill Name: execute-dotnet-resilience
-- Skill Path: .github/skills/execute-dotnet-resilience/SKILL.md
+- Skill Name: dotnet-resilience
+- Skill Path: .github/skills/dotnet-resilience/SKILL.md
 - Created: 2026-04-11
 - Last Reviewed: 2026-04-12
 
@@ -13,7 +13,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -45,7 +45,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -54,7 +54,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -78,7 +78,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -87,7 +87,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -111,7 +111,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -120,7 +120,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -144,7 +144,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -153,7 +153,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -177,7 +177,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -186,7 +186,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -210,7 +210,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -219,7 +219,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -243,7 +243,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -252,7 +252,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -276,7 +276,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -285,7 +285,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -309,7 +309,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -318,7 +318,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -342,7 +342,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -351,7 +351,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -375,7 +375,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -384,7 +384,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -408,7 +408,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-dotnet-resilience/review.md
+- Source Report: .docs/changes/skill/reviews/dotnet-resilience/review.md
 
 #### Findings
 
@@ -417,7 +417,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-dotnet-resilience' matches expected skill name 'execute-dotnet-resilience'. |
+| SKR-M4 | Pass | Frontmatter name 'dotnet-resilience' matches expected skill name 'dotnet-resilience'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |

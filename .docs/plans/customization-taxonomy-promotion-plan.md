@@ -129,7 +129,7 @@
 **Files:**
 - Modify: [customization-taxonomy-promotion-plan.md](./customization-taxonomy-promotion-plan.md)
 - Review: [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md)
-- Review: [agent-lifecycle-catalog.md](./../../.github/agents/agent-lifecycle-catalog.md)
+- Review: [agent-lifecycle-catalog.md](./../../.github/agent-lifecycle-catalog.md)
 - Review: [instruction-lifecycle-catalog.md](./../../.github/instructions/instruction-lifecycle-catalog.md)
 - Review: [prompt-lifecycle-catalog.md](./../../.github/prompts/prompt-lifecycle-catalog.md)
 - Review: [skill-discovery-index.md](./../../.github/skills/skill-discovery-index.md)
@@ -148,7 +148,7 @@
 - Modify: [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md)
 - Create: [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md)
 - Review: [rename-history.md](./../changes/customization/renames/rename-history.md)
-- Review: [agent-lifecycle-catalog.md](./../../.github/agents/agent-lifecycle-catalog.md)
+- Review: [agent-lifecycle-catalog.md](./../../.github/agent-lifecycle-catalog.md)
 - Review: [instruction-lifecycle-catalog.md](./../../.github/instructions/instruction-lifecycle-catalog.md)
 - Review: [skill-discovery-index.md](./../../.github/skills/skill-discovery-index.md)
 - Review: [copilot-instructions.md](./../../.github/copilot-instructions.md)

@@ -5,7 +5,7 @@ applyTo: '**/*.cs'
 ---
 # Syrx Policy
 
-Keep this file policy-only. Use [SKILL.md](./../skills/execute-syrx-data-access/SKILL.md) for detailed mapping patterns, command configuration choices, testing workflows, and performance trade-offs.
+Keep this file policy-only. Use [SKILL.md](./../skills/syrx-data-access/SKILL.md) for detailed mapping patterns, command configuration choices, testing workflows, and performance trade-offs.
 
 ## Repository Placement
 
@@ -43,5 +43,5 @@ Keep this file policy-only. Use [SKILL.md](./../skills/execute-syrx-data-access/
 
 ## Routing Notes
 
-- Use [SKILL.md](./../skills/execute-syrx-data-access/SKILL.md) for multi-mapping, multiple result sets, command configuration style, testing patterns, and review checklists.
+- Use [SKILL.md](./../skills/syrx-data-access/SKILL.md) for multi-mapping, multiple result sets, command configuration style, testing patterns, and review checklists.
 

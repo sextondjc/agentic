@@ -19,9 +19,11 @@ Verbs and noun-form equivalents that signal Planning intent.
 | `learn` | Build structured mastery of a topic with source traceability | `learn-topics` |
 | `draft` | Produce an initial, non-final version | _(use as modifier)_ |
 | `define` | Establish authoritative rules or contracts | _(use as modifier)_ |
-| `generate` (ADR/PRD) | Produce a structured planning document | `adr-generator`, `prd-generator` |
+| `generate` / `-generator` suffix | Produce a structured planning document; `-generator` suffix is acceptable when the skill's primary output is a structured document artifact (ADR, PRD, or equivalent) | `adr-generator`, `prd-generator` |
 
 **Noun-form Planning names** (no explicit verb): `critical-thinking`, `writing-plans`, `task-research`
+
+**Recognized suffix**: `-generator` is an accepted Planning suffix for document-generation skills. Justify any new `-generator` skill in [lane-intent.md](./lane-intent.md) under Known Vocabulary Exceptions.
 
 ---
 
@@ -32,9 +34,9 @@ Verbs and noun-form equivalents that signal Execution intent.
 | Verb / Noun-form | Meaning in context | Example usage |
 |---|---|---|
 | `build` | Construct an end-to-end artifact or system | `build-maui-apps` |
-| `execute` | Run an approved plan or procedure | `execute-plans`, `task-execution` |
+| `execute` | Run an approved plan or procedure | `plans`, `task-execution` |
 | `scaffold` | Generate a standard project or folder skeleton | `scaffold-dotnet` |
-| `sync` | Bring one artifact to match another authoritative source | `execute-sync-customizations`, `execute-sync-skills`, `sync-editorconfig` |
+| `sync` | Bring one artifact to match another authoritative source | `sync-customizations`, `sync-skills`, `sync-editorconfig` |
 | `author` | Create or substantially rewrite a structured artifact | `agent-authoring`, `skills-authoring`, `instructions-authoring` |
 | `index` | Build or refresh a navigable catalogue artifact | `index-docs` |
 | `implement` | Translate a specification into working code | _(use as modifier)_ |

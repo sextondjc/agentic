@@ -1,9 +1,9 @@
-# execute-syrx-data-access History
+# syrx-data-access History
 
 ## Skill Metadata
 
-- Skill Name: execute-syrx-data-access
-- Skill Path: .github/skills/execute-syrx-data-access/SKILL.md
+- Skill Name: syrx-data-access
+- Skill Path: .github/skills/syrx-data-access/SKILL.md
 - Created: 2026-04-11
 - Last Reviewed: 2026-04-12
 
@@ -13,7 +13,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -45,7 +45,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -54,7 +54,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -78,7 +78,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -87,7 +87,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -111,7 +111,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -120,7 +120,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -144,7 +144,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -153,7 +153,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -177,7 +177,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -186,7 +186,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -210,7 +210,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -219,7 +219,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -243,7 +243,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -252,7 +252,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -276,7 +276,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -285,7 +285,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -309,7 +309,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -318,7 +318,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -342,7 +342,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -351,7 +351,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -375,7 +375,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -384,7 +384,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -408,7 +408,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-syrx-data-access/review.md
+- Source Report: .docs/changes/skill/reviews/syrx-data-access/review.md
 
 #### Findings
 
@@ -417,7 +417,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-syrx-data-access' matches expected skill name 'execute-syrx-data-access'. |
+| SKR-M4 | Pass | Frontmatter name 'syrx-data-access' matches expected skill name 'syrx-data-access'. |
 | SKR-S1 | Pass | Concrete references or reusable assets are present. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |

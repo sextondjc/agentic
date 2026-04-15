@@ -33,7 +33,7 @@ Each asset type has a fixed structural identity determined by path and file exte
 
 Every asset has exactly one primary lane and optionally one secondary lane. Lane assignment is authoritative in:
 - [skill-discovery-index.md](../skill-discovery-index.md) for skills
-- [agent-lifecycle-catalog.md](../../agents/agent-lifecycle-catalog.md) for agents
+- [agent-lifecycle-catalog.md](../../agent-lifecycle-catalog.md) for agents
 - Prompt and instruction lifecycle catalogs
 
 For canonical lane definitions, clarification prompts, synonyms, and known vocabulary exceptions use **[lane-intent.md](./references/lane-intent.md)**. Keep lane guidance centralized there to avoid drift.

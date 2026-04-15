@@ -36,15 +36,15 @@
 | design-usability-testing-scripts | Pass | 0 | 0 | None | [review.md](./design-usability-testing-scripts/review.md) |
 | docker-dotnet | Pass | 0 | 0 | None | [review.md](./docker-dotnet/review.md) |
 | domain-design | Pass | 0 | 0 | None | [review.md](./domain-design/review.md) |
-| execute-async-programming | Pass With Advisories | 0 | 1 | None | [review.md](./execute-async-programming/review.md) |
-| execute-dotnet-refactor | Pass | 0 | 0 | None | [review.md](./execute-dotnet-refactor/review.md) |
-| execute-dotnet-resilience | Pass | 0 | 0 | None | [review.md](./execute-dotnet-resilience/review.md) |
-| execute-plans | Pass | 0 | 0 | None | [review.md](./execute-plans/review.md) |
-| execute-powershell-script-library | Pass | 0 | 0 | None | [review.md](./execute-powershell-script-library/review.md) |
-| execute-sync-customizations | Pass | 0 | 0 | None | [review.md](./execute-sync-customizations/review.md) |
-| execute-sync-skills | Pass | 0 | 0 | None | [review.md](./execute-sync-skills/review.md) |
-| execute-syrx-data-access | Pass | 0 | 0 | None | [review.md](./execute-syrx-data-access/review.md) |
-| execute-test-driven-development | Pass | 0 | 0 | None | [review.md](./execute-test-driven-development/review.md) |
+| async-programming | Pass With Advisories | 0 | 1 | None | [review.md](./async-programming/review.md) |
+| dotnet-refactor | Pass | 0 | 0 | None | [review.md](./dotnet-refactor/review.md) |
+| dotnet-resilience | Pass | 0 | 0 | None | [review.md](./dotnet-resilience/review.md) |
+| plans | Pass | 0 | 0 | None | [review.md](./plans/review.md) |
+| powershell-script-library | Pass | 0 | 0 | None | [review.md](./powershell-script-library/review.md) |
+| sync-customizations | Pass | 0 | 0 | None | [review.md](./sync-customizations/review.md) |
+| sync-skills | Pass | 0 | 0 | None | [review.md](./sync-skills/review.md) |
+| syrx-data-access | Pass | 0 | 0 | None | [review.md](./syrx-data-access/review.md) |
+| test-driven-development | Pass | 0 | 0 | None | [review.md](./test-driven-development/review.md) |
 | governance-health-overview | Pass | 0 | 0 | None | [review.md](./governance-health-overview/review.md) |
 | index-docs | Pass | 0 | 0 | None | [review.md](./index-docs/review.md) |
 | instructions-authoring | Pass | 0 | 0 | None | [review.md](./instructions-authoring/review.md) |

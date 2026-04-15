@@ -5,7 +5,7 @@ applyTo: '**/*.cs,**/*.csproj'
 ---
 # C# Policy
 
-Keep this file policy-only. Use [SKILL.md](./../skills/execute-dotnet-refactor/SKILL.md) for modernization workflow and evidence gates, [SKILL.md](./../skills/execute-test-driven-development/SKILL.md) for behavior-first implementation flow, and [syrx.instructions.md](./syrx.instructions.md) for data-access rules.
+Keep this file policy-only. Use [SKILL.md](./../skills/dotnet-refactor/SKILL.md) for modernization workflow and evidence gates, [SKILL.md](./../skills/test-driven-development/SKILL.md) for behavior-first implementation flow, and [syrx.instructions.md](./syrx.instructions.md) for data-access rules.
 
 ## Language and Tooling
 
@@ -55,7 +55,7 @@ Keep this file policy-only. Use [SKILL.md](./../skills/execute-dotnet-refactor/S
 
 ## Routing Notes
 
-- Use [SKILL.md](./../skills/execute-dotnet-refactor/SKILL.md) for modernization sequencing, evidence capture, and refactor depth.
-- Use [SKILL.md](./../skills/execute-test-driven-development/SKILL.md) for behavior-first delivery flow.
+- Use [SKILL.md](./../skills/dotnet-refactor/SKILL.md) for modernization sequencing, evidence capture, and refactor depth.
+- Use [SKILL.md](./../skills/test-driven-development/SKILL.md) for behavior-first delivery flow.
 - Use [testing-strategy.instructions.md](./testing-strategy.instructions.md) for test policy specifics.
 

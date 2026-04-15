@@ -1,9 +1,9 @@
-# execute-async-programming History
+# async-programming History
 
 ## Skill Metadata
 
-- Skill Name: execute-async-programming
-- Skill Path: .github/skills/execute-async-programming/SKILL.md
+- Skill Name: async-programming
+- Skill Path: .github/skills/async-programming/SKILL.md
 - Created: 2026-04-12
 - Last Reviewed: 2026-04-12
 
@@ -13,7 +13,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-async-programming/review.md
+- Source Report: .docs/changes/skill/reviews/async-programming/review.md
 
 #### Findings
 
@@ -45,7 +45,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-async-programming/review.md
+- Source Report: .docs/changes/skill/reviews/async-programming/review.md
 
 #### Findings
 
@@ -54,7 +54,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-async-programming' matches expected skill name 'execute-async-programming'. |
+| SKR-M4 | Pass | Frontmatter name 'async-programming' matches expected skill name 'async-programming'. |
 | SKR-S1 | Advisory | No references/assets folder detected for execution support. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -78,7 +78,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-async-programming/review.md
+- Source Report: .docs/changes/skill/reviews/async-programming/review.md
 
 #### Findings
 
@@ -87,7 +87,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-async-programming' matches expected skill name 'execute-async-programming'. |
+| SKR-M4 | Pass | Frontmatter name 'async-programming' matches expected skill name 'async-programming'. |
 | SKR-S1 | Advisory | No references/assets folder detected for execution support. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -111,7 +111,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-async-programming/review.md
+- Source Report: .docs/changes/skill/reviews/async-programming/review.md
 
 #### Findings
 
@@ -120,7 +120,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-async-programming' matches expected skill name 'execute-async-programming'. |
+| SKR-M4 | Pass | Frontmatter name 'async-programming' matches expected skill name 'async-programming'. |
 | SKR-S1 | Advisory | No references/assets folder detected for execution support. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -144,7 +144,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-async-programming/review.md
+- Source Report: .docs/changes/skill/reviews/async-programming/review.md
 
 #### Findings
 
@@ -153,7 +153,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-async-programming' matches expected skill name 'execute-async-programming'. |
+| SKR-M4 | Pass | Frontmatter name 'async-programming' matches expected skill name 'async-programming'. |
 | SKR-S1 | Advisory | No references/assets folder detected for execution support. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -177,7 +177,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-async-programming/review.md
+- Source Report: .docs/changes/skill/reviews/async-programming/review.md
 
 #### Findings
 
@@ -186,7 +186,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-async-programming' matches expected skill name 'execute-async-programming'. |
+| SKR-M4 | Pass | Frontmatter name 'async-programming' matches expected skill name 'async-programming'. |
 | SKR-S1 | Advisory | No references/assets folder detected for execution support. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |
@@ -210,7 +210,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: .docs/changes/skill/reviews/execute-async-programming/review.md
+- Source Report: .docs/changes/skill/reviews/async-programming/review.md
 
 #### Findings
 
@@ -219,7 +219,7 @@
 | SKR-M1 | Pass | Skill objective is scoped to a single review/use-case domain in static analysis. |
 | SKR-M2 | Pass | Front matter includes required name and description fields. |
 | SKR-M3 | Pass | Trigger guidance is explicit in description and/or heading sections. |
-| SKR-M4 | Pass | Frontmatter name 'execute-async-programming' matches expected skill name 'execute-async-programming'. |
+| SKR-M4 | Pass | Frontmatter name 'async-programming' matches expected skill name 'async-programming'. |
 | SKR-S1 | Advisory | No references/assets folder detected for execution support. |
 | SKR-S2 | Pass | No harmful overlap or contradictory behavior detected in static cross-skill review. |
 | SKR-S3 | Pass | No placeholder or unresolved markdown links detected across skill markdown files. |

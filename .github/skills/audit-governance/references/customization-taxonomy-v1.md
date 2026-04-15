@@ -15,7 +15,7 @@ This taxonomy is authoritative for conceptual classification and naming analysis
 Operational routing and lane ownership remain governed by:
 
 1. [planning-execution-review-governance.md](./planning-execution-review-governance.md)
-2. [agent-lifecycle-catalog.md](./../../../agents/agent-lifecycle-catalog.md)
+2. [agent-lifecycle-catalog.md](./../../../agent-lifecycle-catalog.md)
 3. [instruction-lifecycle-catalog.md](./../../../instructions/instruction-lifecycle-catalog.md)
 4. [prompt-lifecycle-catalog.md](./../../../prompts/prompt-lifecycle-catalog.md)
 5. [skill-discovery-index.md](./../../../skills/skill-discovery-index.md)
@@ -24,7 +24,7 @@ Operational routing and lane ownership remain governed by:
 
 The accepted taxonomy is maintained and applied through these governing assets:
 
-1. Agent: [agent-lifecycle-catalog.md](./../../../agents/agent-lifecycle-catalog.md) defines `orchestrator` as the mandatory intake and routing entry point.
+1. Agent: [agent-lifecycle-catalog.md](./../../../agent-lifecycle-catalog.md) defines `orchestrator` as the mandatory intake and routing entry point.
 2. Instruction: [lifecycle-governance.instructions.md](./../../../instructions/lifecycle-governance.instructions.md) is the normative policy for lane ownership, routing, and traceable handoff.
 3. Skills: [agent-authoring SKILL.md](./../../../skills/agent-authoring/SKILL.md) and [instructions-authoring SKILL.md](./../../../skills/instructions-authoring/SKILL.md) govern taxonomy-adjacent customization edits by artifact type, [write-technical-docs SKILL.md](./../../../skills/write-technical-docs/SKILL.md) governs documentation maintenance and link integrity, and [audit-governance SKILL.md](./../../../skills/audit-governance/SKILL.md) governs review of the resulting governance state.
 
@@ -97,15 +97,15 @@ The accepted taxonomy is maintained and applied through these governing assets:
 | adr-generator | planning | standards | skill | adr-author |
 | api-design | planning | standards | skill | interface-designer |
 | task-execution | execution | execution | skill | task-implementer |
-| execute-plans | execution | execution | skill | checkpoint-executor |
-| execute-test-driven-development | execution | test | skill | test-first-implementer |
+| plans | execution | execution | skill | checkpoint-executor |
+| test-driven-development | execution | test | skill | test-first-implementer |
 | agent-authoring | execution | governance | skill | agent-author |
 | instructions-authoring | execution | governance | skill | instruction-author |
 | skills-authoring | execution | governance | skill | skill-author |
 | curating-copilot-instructions | execution | governance | skill | catalog-curator |
-| execute-dotnet-refactor | execution | standards | skill | refactorer |
+| dotnet-refactor | execution | standards | skill | refactorer |
 | docker-dotnet | execution | standards | skill | containerizer |
-| execute-syrx-data-access | execution | standards | skill | repository-implementer |
+| syrx-data-access | execution | standards | skill | repository-implementer |
 | branch-completion | execution | delivery | skill | completion-coordinator |
 | write-technical-docs | execution | standards | skill | technical-writer |
 | request-code-review | review | review | skill | review-requester |
@@ -119,14 +119,14 @@ The accepted taxonomy is maintained and applied through these governing assets:
 | security-research | review | security | skill | security-analyst |
 | skill-review | review | governance | skill | skill-auditor |
 | validate-customization | review | governance | skill | customization-validator |
-| execute-sync-customizations | review | synchronization | skill | customization-maintainer |
-| execute-sync-skills | review | synchronization | skill | skill-maintainer |
+| sync-customizations | review | synchronization | skill | customization-maintainer |
+| sync-skills | review | synchronization | skill | skill-maintainer |
 
 ## Catalog Cross-Check Snapshot
 
 Compared against:
 
-- [agent-lifecycle-catalog.md](./../../../agents/agent-lifecycle-catalog.md)
+- [agent-lifecycle-catalog.md](./../../../agent-lifecycle-catalog.md)
 - [instruction-lifecycle-catalog.md](./../../../instructions/instruction-lifecycle-catalog.md)
 - [prompt-lifecycle-catalog.md](./../../../prompts/prompt-lifecycle-catalog.md)
 - [skill-discovery-index.md](./../../../skills/skill-discovery-index.md)

@@ -5,7 +5,7 @@ applyTo: '**/*.cs'
 ---
 # Testing Strategy Policy
 
-Keep this file policy-only. Use [SKILL.md](./../skills/execute-test-driven-development/SKILL.md) for canonical testing workflow, naming rules, structure patterns, and coverage guidance.
+Keep this file policy-only. Use [SKILL.md](./../skills/test-driven-development/SKILL.md) for canonical testing workflow, naming rules, structure patterns, and coverage guidance.
 
 ## Mandatory Policy
 

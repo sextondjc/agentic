@@ -7,7 +7,7 @@ This file catalogs the active customization assets under `.github` and summarize
 | Category | Count | Purpose | Canonical Catalog |
 |---|---:|---|---|
 | Workspace hub | 1 | Defines workspace-wide behavior, routing preferences, and preferred assets. | [copilot-instructions.md](./copilot-instructions.md) |
-| Agents | 15 | Specialist agent modes invoked explicitly for narrow responsibilities. | [agent-lifecycle-catalog.md](./agents/agent-lifecycle-catalog.md) |
+| Agents | 15 | Specialist agent modes invoked explicitly for narrow responsibilities. | [agent-lifecycle-catalog.md](./agent-lifecycle-catalog.md) |
 | Skills | 51 | Reusable workflows and domain playbooks used before or during implementation. | [skill-discovery-index.md](./skills/skill-discovery-index.md) |
 | Instructions | 16 | Always-on policy files applied by `applyTo` scope. | [instruction-lifecycle-catalog.md](./instructions/instruction-lifecycle-catalog.md) |
 | Prompts | 17 | Reusable prompt templates for repeatable governance and delivery workflows. | [prompt-lifecycle-catalog.md](./prompts/prompt-lifecycle-catalog.md) |
@@ -22,7 +22,7 @@ This file catalogs the active customization assets under `.github` and summarize
 
 ## Agents
 
-Agents are explicit specialist entry points. Lane ownership and rationale are maintained in [agent-lifecycle-catalog.md](./agents/agent-lifecycle-catalog.md).
+Agents are explicit specialist entry points. Lane ownership and rationale are maintained in [agent-lifecycle-catalog.md](./agent-lifecycle-catalog.md).
 
 | Asset | Purpose |
 |---|---|
@@ -62,15 +62,15 @@ Skills are reusable workflows. Lane ownership and deeper usage guidance are main
 | `delivery-status-grid` | [SKILL.md](./skills/delivery-status-grid/SKILL.md) | Produces grid-first delivery status reporting with explicit completion and remaining scope. |
 | `design-mobile-ux` | [SKILL.md](./skills/design-mobile-ux/SKILL.md) | Defines or improves mobile UX from research through implementation handoff. |
 | `docker-dotnet` | [SKILL.md](./skills/docker-dotnet/SKILL.md) | Containerizes .NET applications and applies container-focused security and build practices. |
-| `execute-dotnet-refactor` | [SKILL.md](./skills/execute-dotnet-refactor/SKILL.md) | Modernizes .NET code with safe, behavior-preserving refactors. |
-| `execute-dotnet-resilience` | [SKILL.md](./skills/execute-dotnet-resilience/SKILL.md) | Designs and reviews .NET resiliency using Microsoft.Extensions.Resilience and Polly. |
-| `execute-plans` | [SKILL.md](./skills/execute-plans/SKILL.md) | Executes approved implementation plans in a dedicated or later session. |
+| `dotnet-refactor` | [SKILL.md](./skills/dotnet-refactor/SKILL.md) | Modernizes .NET code with safe, behavior-preserving refactors. |
+| `dotnet-resilience` | [SKILL.md](./skills/dotnet-resilience/SKILL.md) | Designs and reviews .NET resiliency using Microsoft.Extensions.Resilience and Polly. |
+| `plans` | [SKILL.md](./skills/plans/SKILL.md) | Executes approved implementation plans in a dedicated or later session. |
 | `governance-health-overview` | [SKILL.md](./skills/governance-health-overview/SKILL.md) | Synthesizes governance audit outputs into a reconciled governance disposition. |
 | `learn-topics` | [SKILL.md](./skills/learn-topics/SKILL.md) | Builds source-backed learning paths that decompose topics by depth. |
 | `design-mobile-ui-prototyping` | [SKILL.md](./skills/design-mobile-ui-prototyping/SKILL.md) | Evolves low-fidelity mobile concepts into high-fidelity prototypes and handoff assets. |
 | `perf-benchmark` | [SKILL.md](./skills/perf-benchmark/SKILL.md) | Designs, runs, or reviews BenchmarkDotNet performance tests. |
 | `performance-research` | [SKILL.md](./skills/performance-research/SKILL.md) | Performs research-only .NET and C# performance assessments with evidence-backed reporting. |
-| `execute-powershell-script-library` | [SKILL.md](./skills/execute-powershell-script-library/SKILL.md) | Maintains the reusable PowerShell script catalog with deduplication and catalog-first reuse. |
+| `powershell-script-library` | [SKILL.md](./skills/powershell-script-library/SKILL.md) | Maintains the reusable PowerShell script catalog with deduplication and catalog-first reuse. |
 | `prd-generator` | [SKILL.md](./skills/prd-generator/SKILL.md) | Produces comprehensive, traceable PRDs before implementation begins. |
 | `prune-doc-artifacts` | [SKILL.md](./skills/prune-doc-artifacts/SKILL.md) | Audits `.docs` artifacts to identify stale, superseded, or removable documentation. |
 | `refine-ideas` | [SKILL.md](./skills/refine-ideas/SKILL.md) | Refines raw ideas through structured challenge loops and targeted topic learning. |
@@ -82,14 +82,14 @@ Skills are reusable workflows. Lane ownership and deeper usage guidance are main
 | `skill-review` | [SKILL.md](./skills/skill-review/SKILL.md) | Evaluates skills against quality standards and records remediation recommendations. |
 | `skills-authoring` | [SKILL.md](./skills/skills-authoring/SKILL.md) | Creates, edits, and verifies reusable skills before deployment. |
 | `summarize-governance` | [SKILL.md](./skills/summarize-governance/SKILL.md) | Produces a concise governance briefing from existing governance artifacts. |
-| `execute-sync-customizations` | [SKILL.md](./skills/execute-sync-customizations/SKILL.md) | Maintains instruction and agent customizations over time and checks alignment. |
+| `sync-customizations` | [SKILL.md](./skills/sync-customizations/SKILL.md) | Maintains instruction and agent customizations over time and checks alignment. |
 | `sync-editorconfig` | [SKILL.md](./skills/sync-editorconfig/SKILL.md) | Creates or normalizes `.editorconfig` and validates policy compliance. |
-| `execute-sync-skills` | [SKILL.md](./skills/execute-sync-skills/SKILL.md) | Maintains the skill library by evaluating source freshness, relevance, and adoption. |
-| `execute-syrx-data-access` | [SKILL.md](./skills/execute-syrx-data-access/SKILL.md) | Implements or reviews Syrx-based repository data access with explicit SQL patterns. |
+| `sync-skills` | [SKILL.md](./skills/sync-skills/SKILL.md) | Maintains the skill library by evaluating source freshness, relevance, and adoption. |
+| `syrx-data-access` | [SKILL.md](./skills/syrx-data-access/SKILL.md) | Implements or reviews Syrx-based repository data access with explicit SQL patterns. |
 | `syrx-validation` | [SKILL.md](./skills/syrx-validation/SKILL.md) | Applies or reviews Syrx.Validation.Contract guard patterns at public boundaries with deterministic outcomes. |
 | `task-execution` | [SKILL.md](./skills/task-execution/SKILL.md) | Executes implementation plans as independent tasks within the current session. |
 | `task-research` | [SKILL.md](./skills/task-research/SKILL.md) | Performs comprehensive project research before planning or implementation decisions. |
-| `execute-test-driven-development` | [SKILL.md](./skills/execute-test-driven-development/SKILL.md) | Applies a TDD workflow before writing feature or bugfix implementation code. |
+| `test-driven-development` | [SKILL.md](./skills/test-driven-development/SKILL.md) | Applies a TDD workflow before writing feature or bugfix implementation code. |
 | `design-usability-testing-scripts` | [SKILL.md](./skills/design-usability-testing-scripts/SKILL.md) | Prepares usability test scenarios, task scripts, and scoring rubrics for mobile UX validation. |
 | `validate-customization` | [SKILL.md](./skills/validate-customization/SKILL.md) | Evaluates instructions and agents for quality, overlap, and alignment with active boundaries. |
 | `write-technical-docs` | [SKILL.md](./skills/write-technical-docs/SKILL.md) | Generates or refreshes technical reference documentation with code-verified content. |

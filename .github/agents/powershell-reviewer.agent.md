@@ -1,6 +1,10 @@
----
 name: powershell-reviewer
-description: Use this agent when you need focused review of PowerShell scripts for safety, automation readiness, and maintainability with concrete correction recommendations.
+description: 'Reviews PowerShell scripts and modules for safety, automation readiness, and maintainability. Use when focused PowerShell review with actionable findings and correction recommendations is needed.'
+handoffs:
+	- label: Route Remediation
+		agent: orchestrator
+		prompt: 'PowerShell review is complete. Route the severity-ranked findings below to the appropriate specialist for correction.'
+		send: false
 ---
 # PowerShell Reviewer Agent
 
@@ -37,7 +41,7 @@ All standards are in the workspace instruction files. The active files for this 
 
 ## Preferred Companion Skills
 
-- `execute-powershell-script-library` for catalog maintenance and deduplication before new scripts are written
+- `powershell-script-library` for catalog maintenance and deduplication before new scripts are written
 - `audit-powershell` for repeatable workspace script audits and recommendation patterns
 - `skill-review` when reviewing the quality of PowerShell-related skills
 - `critical-thinking` for trade-off analysis when remediation options conflict

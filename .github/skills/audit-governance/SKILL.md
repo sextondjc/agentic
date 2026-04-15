@@ -100,6 +100,6 @@ Use these existing scripts:
 - All GOV-M* and GOV-S* checks executed with evidence.
 - Report saved at required path.
 - Recommendations mapped to specific failures or advisories.
-- Source catalogs for execute-sync-customizations and execute-sync-skills are checked for freshness threshold drift.
+- Source catalogs for sync-customizations and sync-skills are checked for freshness threshold drift.
 
 

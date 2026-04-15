@@ -26,7 +26,7 @@
       "name": "Implementation & Execution",
       "keywords": ["implement", "code", "build", "write", "execute", "change", "modify", "create"],
       "requiredSkills": ["task-execution"],
-      "optionalSkills": ["execute-test-driven-development", "execute-plans", "execute-async-programming", "request-code-review"],
+      "optionalSkills": ["test-driven-development", "plans", "async-programming", "request-code-review"],
       "excludedSkills": ["writing-plans"],
       "description": "Code implementation, feature building, and execution of approved plans."
     },
@@ -34,7 +34,7 @@
       "id": "testing-and-coverage",
       "name": "Testing & Coverage",
       "keywords": ["test", "testing", "tdd", "test-driven", "coverage", "unit test", "integration test"],
-      "requiredSkills": ["execute-test-driven-development"],
+      "requiredSkills": ["test-driven-development"],
       "optionalSkills": ["current-test-coverage"],
       "excludedSkills": [],
       "description": "Test-driven development, test-first authoring, and coverage assessment."
@@ -79,7 +79,7 @@
       "id": "refactoring",
       "name": "Refactoring & Modernization",
       "keywords": ["refactor", "refactoring", "modernize", "modernization", "upgrade", "migrate", "nullable"],
-      "requiredSkills": ["execute-dotnet-refactor"],
+      "requiredSkills": ["dotnet-refactor"],
       "optionalSkills": [],
       "excludedSkills": [],
       "description": ".NET code modernization, nullable adoption, obsolete API cleanup, and behavior-preserving improvements."
@@ -88,7 +88,7 @@
       "id": "resilience-and-patterns",
       "name": "Resilience & Patterns",
       "keywords": ["resilience", "resilient", "retry", "circuit-breaker", "polly", "fallback", "timeout"],
-      "requiredSkills": ["execute-dotnet-resilience"],
+      "requiredSkills": ["dotnet-resilience"],
       "optionalSkills": [],
       "excludedSkills": [],
       "description": "Distributed system resilience, pattern composition, and failure-mode validation."
@@ -97,7 +97,7 @@
       "id": "data-access",
       "name": "Data Access & Repositories",
       "keywords": ["data-access", "repository", "syrx", "sql", "database", "query", "command"],
-      "requiredSkills": ["execute-syrx-data-access"],
+      "requiredSkills": ["syrx-data-access"],
       "optionalSkills": ["syrx-validation", "sql-server-standards"],
       "excludedSkills": [],
       "description": "Syrx-based repository implementation, SQL parameterization, and data access patterns."
@@ -394,8 +394,8 @@
       "id": "synchronization",
       "name": "Synchronization & Maintenance",
       "keywords": ["sync", "synchronize", "update", "maintain", "upgrade", "freshness"],
-      "requiredSkills": ["execute-sync-customizations"],
-      "optionalSkills": ["execute-sync-skills", "sync-compendium", "sync-editorconfig", "prune-sync-assets"],
+      "requiredSkills": ["sync-customizations"],
+      "optionalSkills": ["sync-skills", "sync-compendium", "sync-editorconfig", "prune-sync-assets"],
       "excludedSkills": [],
       "description": "Customization and skill library maintenance, source freshness, and alignment."
     },
@@ -430,7 +430,7 @@
       "id": "powershell-automation",
       "name": "PowerShell Automation",
       "keywords": ["powershell", "script", "automation", "cmdlet", "module"],
-      "requiredSkills": ["execute-powershell-script-library"],
+      "requiredSkills": ["powershell-script-library"],
       "optionalSkills": ["audit-powershell"],
       "excludedSkills": [],
       "description": "Reusable PowerShell script library maintenance and catalog-first reuse."

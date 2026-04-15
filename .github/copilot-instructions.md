@@ -31,7 +31,7 @@ Use a three-lane operating model for all customization artifacts:
 Canonical governance and classification references:
 
 - [planning-execution-review-governance.md](./skills/audit-governance/references/planning-execution-review-governance.md)
-- [agent-lifecycle-catalog.md](./agents/agent-lifecycle-catalog.md)
+- [agent-lifecycle-catalog.md](./agent-lifecycle-catalog.md)
 - [instruction-lifecycle-catalog.md](./instructions/instruction-lifecycle-catalog.md)
 - [naming-conventions.instructions.md](./instructions/naming-conventions.instructions.md) ← Mandatory: review before creating new assets
 - [prompt-lifecycle-catalog.md](./prompts/prompt-lifecycle-catalog.md)
@@ -65,6 +65,9 @@ Each agent is specialized for one narrowly bounded responsibility.
 | `manual-code-reviewer` | Recording manual code review findings into structured review artifacts during source inspection. |
 | `sql-dba` | Live SQL Server administration, schema inspection, or operational DBA work. |
 | `workspace-scaffolder` | Scaffolding a new project's workspace configuration and copilot instructions. |
+| `ux-designer` | UX research, wireframes, prototype definition, usability validation, and engineering handoff across web and mobile surfaces. |
+| `web-frontend-engineer` | Implementing and reviewing web frontend code: HTML, CSS, TypeScript, component architecture, accessibility, Core Web Vitals, and frontend security. |
+| `mobile-frontend-engineer` | Cross-platform mobile frontend engineering using MAUI or React Native: architecture, navigation, offline data, security, testing, and release readiness. |
 
 ## Skills Discovery
 
@@ -75,13 +78,16 @@ When requests route through `orchestrator`, discover and select relevant skills 
 ## Imported Customization Assets
 
 - `skills-authoring` (imported from an upstream skill set and renamed)
-- `execute-test-driven-development` (supporting workflow dependency)
+- `test-driven-development` (supporting workflow dependency)
 - `writing-plans` (plan authoring workflow adapted to `.docs/plans`)
 - `code-reviewer` (review specialist agent)
-- `execute-plans` (plan execution workflow)
+- `plans` (plan execution workflow)
 - `task-execution` (same-session per-task implementation workflow)
 - `request-code-review` and `remediate-review` (review loop workflow)
 - `branch-completion` (completion and branch integration workflow)
+- `design-web-ux` (web UX flow from research to handoff)
+- `build-web-frontend` (web frontend implementation and review workflow)
+- `build-mobile-apps` (cross-platform mobile build workflow)
 
 ## Workspace Design Rules
 

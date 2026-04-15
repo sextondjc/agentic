@@ -17,7 +17,7 @@ Keep this file policy-only. Use [SKILL.md](./../skills/route-customization/SKILL
 ## Catalog Integrity
 
 - Keep lane mappings current in:
-  - [agent-lifecycle-catalog.md](./../agents/agent-lifecycle-catalog.md)
+  - [agent-lifecycle-catalog.md](./../agent-lifecycle-catalog.md)
   - [instruction-lifecycle-catalog.md](./instruction-lifecycle-catalog.md)
   - [prompt-lifecycle-catalog.md](./../prompts/prompt-lifecycle-catalog.md)
   - [skill-discovery-index.md](./../skills/skill-discovery-index.md)
@@ -88,7 +88,7 @@ Keep this file policy-only. Use [SKILL.md](./../skills/route-customization/SKILL
 
 - Use [SKILL.md](./../skills/route-customization/SKILL.md) for lane and artifact-type routing decisions.
 - Use [SKILL.md](./../skills/writing-plans/SKILL.md) when planning output is missing.
-- Use [SKILL.md](./../skills/task-execution/SKILL.md) or [SKILL.md](./../skills/execute-plans/SKILL.md) for execution workflow.
+- Use [SKILL.md](./../skills/task-execution/SKILL.md) or [SKILL.md](./../skills/plans/SKILL.md) for execution workflow.
 - Use [SKILL.md](./../skills/validate-customization/SKILL.md) for determinism and governance review checks.
 
 
