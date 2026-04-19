@@ -9,7 +9,7 @@ description: Use when containerizing .NET applications, authoring or reviewing D
 
 Keep this skill focused on containerization decisions and execution guidance for .NET applications. Keep orchestration-specific implementation details in references.
 
-## When to Use
+## Trigger Conditions
 
 - Writing or reviewing a Dockerfile for .NET applications.
 - Setting up or auditing docker-compose files for local and CI workflows.

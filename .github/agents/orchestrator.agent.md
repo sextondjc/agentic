@@ -1,34 +1,6 @@
+---
 name: orchestrator
 description: 'Routing and scope-control agent that assigns work to the correct specialist and prevents role bleed across planning, implementation, architecture, debugging, and DBA tasks.'
-handoffs:
-	- label: Research & Plan
-		agent: plan-researcher
-		prompt: 'Intake complete. Execute the research and planning phase using the scope boundaries, required outputs, and phase ownership defined in this intake.'
-		send: false
-	- label: Design Architecture
-		agent: architecture-designer
-		prompt: 'Intake complete. Evaluate domain boundaries and synthesise an architecture blueprint constrained by the scope and requirements classified here.'
-		send: false
-	- label: Implement
-		agent: csharp-engineer
-		prompt: 'Intake complete. Implement the code changes using the plan, architecture decisions, and scope boundaries defined here.'
-		send: false
-	- label: Debug Defect
-		agent: defect-debugger
-		prompt: 'Intake complete. Reproduce, isolate, and fix the defect described using the reproduction context established in this intake.'
-		send: false
-	- label: Security Assessment
-		agent: security-researcher
-		prompt: 'Intake complete. Conduct a security vulnerability assessment for the codebase and scope identified here.'
-		send: false
-	- label: Performance Assessment
-		agent: performance-assessor
-		prompt: 'Intake complete. Conduct a performance bottleneck assessment for the codebase and scope identified here.'
-		send: false
-	- label: DBA Work
-		agent: sql-dba
-		prompt: 'Intake complete. Proceed with the SQL Server administration or schema work defined in this scope.'
-		send: false
 ---
 # Orchestrator Agent
 
@@ -48,7 +20,7 @@ Your primary value is **task routing and boundary control**, not domain speciali
 
 ## Standards
 
-- [lifecycle-governance.instructions.md](./../instructions/lifecycle-governance.instructions.md)
+- [governance-lifecycle.instructions.md](./../instructions/governance-lifecycle.instructions.md)
 
 ## Hard Constraints
 
@@ -80,7 +52,7 @@ Bounded exploration is a rare exception and must pass an explicit gate: novelty/
 
 If a request spans multiple phases, break it into explicit phases and state which specialist should own each phase.
 
-Routing behavior in this agent must align with policy authority in [lifecycle-governance.instructions.md](./../instructions/lifecycle-governance.instructions.md).
+Routing behavior in this agent must align with policy authority in [governance-lifecycle.instructions.md](./../instructions/governance-lifecycle.instructions.md).
 
 ## Canonical Routing Table
 

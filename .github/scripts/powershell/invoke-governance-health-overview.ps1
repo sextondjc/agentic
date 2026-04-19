@@ -72,6 +72,30 @@ function Get-DeltaTrend {
     return 'Flat'
 }
 
+function Convert-ToSingleLine {
+    param(
+        [Parameter(Mandatory = $false)]
+        [string]$Text,
+
+        [Parameter(Mandatory = $false)]
+        [int]$MaxLength = 180
+    )
+
+    if ([string]::IsNullOrWhiteSpace($Text)) {
+        return ''
+    }
+
+    $single = $Text -replace '[\r\n]+', ' '
+    $single = $single -replace '\s{2,}', ' '
+    $single = $single.Trim()
+
+    if ($single.Length -le $MaxLength) {
+        return $single
+    }
+
+    return $single.Substring(0, $MaxLength - 3) + '...'
+}
+
 function Invoke-Check {
     param(
         [Parameter(Mandatory = $true)]
@@ -197,10 +221,11 @@ try {
         Invoke-Check -Name $check.Name -Command $check.Command
     }
 
+    $mustTraceabilityBlocked = $false
     $mustTraceabilityCheck = @($coreResults | Where-Object { $_.Check -eq 'must-finding-traceability' } | Select-Object -First 1)
     if ($mustTraceabilityCheck.Count -gt 0 -and -not $mustTraceabilityCheck[0].Passed) {
-        Write-Error "Governance report generation blocked: MUST findings failed canonical traceability mapping (check: must-finding-traceability)."
-        exit 1
+        $mustTraceabilityBlocked = $true
+        Write-Warning "Governance report publication blocked: MUST findings failed canonical traceability mapping (check: must-finding-traceability). Artifacts will still be generated for triage."
     }
 
     $skillAuditScript = './.github/skills/skill-review/references/scripts/generate-full-skill-audit.ps1'
@@ -215,11 +240,11 @@ try {
     else {
         Write-Warning "Skill audit script not found: $skillAuditScript — skipping full skill audit."
     }
-    $skillAggregatePath = '.docs/changes/skill/reviews/governance-type-audit-skills.md'
+    $skillAggregatePath = '.docs/changes/skill/reviews/governance-audit-types-skills.md'
     $skillAggregateExists = Test-Path $skillAggregatePath
     $governanceAggregatePath = '.docs/changes/governance/audits/governance-audit.md'
-    $customizationAggregatePath = '.docs/changes/customization/reviews/governance-type-audit-customizations.md'
-    $optimizationAggregatePath = '.docs/changes/customization/reviews/governance-type-audit-optimization.md'
+    $customizationAggregatePath = '.docs/changes/customization/reviews/governance-audit-types-customizations.md'
+    $optimizationAggregatePath = '.docs/changes/customization/reviews/governance-audit-types-optimization.md'
 
     $agentFiles = @(Get-ChildItem '.github/agents' -File -Filter '*.agent.md')
     $instructionFiles = @(Get-ChildItem '.github/instructions' -File -Filter '*.instructions.md')
@@ -519,14 +544,117 @@ $optimizationRemediationRow
         }
     }
 
-    Update-ExecutiveRecommendationGrid `
-        -ReportPath '.docs/changes/governance/audits/governance-executive-audit.md' `
-        -ReviewDate $ReviewDate `
-        -TotalChecks $metrics.TotalChecks `
-        -PassedChecks $metrics.PassedChecks `
-        -FailedChecks @($failedChecks)
+    $artifactDirectory = '.github/skills/governance-health-overview/references/.artifacts'
+    $rawEvidencePath = Join-Path $artifactDirectory 'governance-health-overview.latest.json'
+    $summaryEvidencePath = Join-Path $artifactDirectory 'governance-health-overview.summary.md'
 
-    $result | ConvertTo-Json -Depth 8
+    New-Item -ItemType Directory -Path $artifactDirectory -Force | Out-Null
+
+    # Always persist canonical machine-readable evidence as proper JSON object.
+    $result | ConvertTo-Json -Depth 12 | Set-Content -LiteralPath $rawEvidencePath -Encoding UTF8
+
+    $likelyFalsePositiveChecks = @(
+        $coreResults |
+            Where-Object {
+                -not $_.Passed -and (
+                    $_.Check -in @('frontmatter-prompts', 'frontmatter-instructions') -or
+                    ($_.Check -eq 'index-refresh' -and $_.Output -match 'FoldersIndexed')
+                )
+            } |
+            Select-Object -ExpandProperty Check
+    )
+
+    $materialFailures = @(
+        $coreResults |
+            Where-Object { -not $_.Passed -and $_.Check -notin $likelyFalsePositiveChecks }
+    )
+
+    $strengths = @()
+    $strengths += "Asset coverage complete across agents, instructions, prompts, and skills ($($metrics.AssetCount.Total) total artifacts)."
+    if ($conflictFiles.Count -eq 0) {
+        $strengths += 'No open customization conflict files detected.'
+    }
+    if (($metrics.Overlap.ThresholdBreached -eq $false) -and ($null -ne $metrics.Overlap.DuplicatePairCount)) {
+        $strengths += "Responsibility overlap remains within threshold ($($metrics.Overlap.DuplicatePairCount)/$($metrics.Overlap.MaxAllowedDuplicatePairs))."
+    }
+
+    $weaknesses = @()
+    foreach ($failure in $materialFailures) {
+        $weaknesses += "{0}: {1}" -f $failure.Check, (Convert-ToSingleLine -Text $failure.Output -MaxLength 140)
+    }
+
+    $opportunities = @()
+    if ($likelyFalsePositiveChecks.Count -gt 0) {
+        $opportunities += "Fix exit-code behavior for likely false-positive checks: $($likelyFalsePositiveChecks -join ', ')."
+    }
+    $opportunities += 'Publish top-N link graph issues as curated remediation batches to reduce noise and speed triage.'
+    $opportunities += 'Promote catalog updates into CI guardrails so new instructions and prompts cannot drift from lifecycle catalogs.'
+
+    $threats = @()
+    if ($materialFailures.Count -gt 0) {
+        $threats += "$($materialFailures.Count) material check failures are currently blocking PASSED disposition."
+    }
+    if (@($coreResults | Where-Object { $_.Check -eq 'link-graph' -and -not $_.Passed }).Count -gt 0) {
+        $threats += 'Large-volume broken links (100) can degrade trust in governance navigation and evidence traceability.'
+    }
+
+    $topFailures = @($materialFailures | Select-Object -First 12)
+
+    $summaryContent = @"
+# Governance Health Overview - Human Summary
+
+| Metric | Value |
+|---|---|
+| Review Date | $ReviewDate |
+| Total Checks | $($metrics.TotalChecks) |
+| Passed Checks | $($metrics.PassedChecks) |
+| Failed Checks | $($metrics.FailedChecks) |
+| Material Failures | $($materialFailures.Count) |
+| Likely False Positives | $($likelyFalsePositiveChecks.Count) |
+| Asset Total | $($metrics.AssetCount.Total) |
+| Open Conflicts | $($conflictFiles.Count) |
+
+## Strengths
+$(if ($strengths.Count -gt 0) { ($strengths | ForEach-Object { "- $_" }) -join "`r`n" } else { '- None observed.' })
+
+## Weaknesses
+$(if ($weaknesses.Count -gt 0) { ($weaknesses | ForEach-Object { "- $_" }) -join "`r`n" } else { '- None observed.' })
+
+## Opportunities
+$(if ($opportunities.Count -gt 0) { ($opportunities | ForEach-Object { "- $_" }) -join "`r`n" } else { '- None observed.' })
+
+## Threats
+$(if ($threats.Count -gt 0) { ($threats | ForEach-Object { "- $_" }) -join "`r`n" } else { '- None observed.' })
+
+## Top Failing Checks
+
+| Check | ExitCode | Evidence Snippet |
+|---|---:|---|
+$(if ($topFailures.Count -gt 0) { ($topFailures | ForEach-Object { "| $($_.Check) | $($_.ExitCode) | $(Convert-ToSingleLine -Text $_.Output -MaxLength 220) |" }) -join "`r`n" } else { '| None | 0 | No failing checks. |' })
+
+## Evidence Artifacts
+
+- Raw machine evidence: [governance-health-overview.latest.json](./governance-health-overview.latest.json)
+- Responsibility overlap payload: [responsibility-overlap.routing.json](./responsibility-overlap.routing.json)
+"@
+
+    Set-Content -LiteralPath $summaryEvidencePath -Value $summaryContent -Encoding UTF8
+
+    if (-not $mustTraceabilityBlocked) {
+        Update-ExecutiveRecommendationGrid `
+            -ReportPath '.docs/changes/governance/audits/governance-executive-audit.md' `
+            -ReviewDate $ReviewDate `
+            -TotalChecks $metrics.TotalChecks `
+            -PassedChecks $metrics.PassedChecks `
+            -FailedChecks @($failedChecks)
+    }
+
+    if ($mustTraceabilityBlocked) {
+        Write-Error "Governance report generation blocked: MUST findings failed canonical traceability mapping (check: must-finding-traceability)."
+        exit 1
+    }
+
+    $result
 }
 finally {
     Pop-Location

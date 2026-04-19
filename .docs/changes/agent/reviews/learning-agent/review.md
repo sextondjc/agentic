@@ -5,7 +5,7 @@
 - Review Date: 2026-04-15
 - Reviewer Skill: agent-review
 - Target Agent: learning-agent
-- Target Path: .github/agents/learning-agent.agent.md
+- Target Path: .github/agents/topic-learner.agent.md
 - Review Scope: Full
 
 ## Summary Outcome Grid

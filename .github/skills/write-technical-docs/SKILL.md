@@ -32,20 +32,7 @@ This skill is documentation-first and evidence-first:
 
 If required input is missing, ask focused questions before writing.
 
-## Companion Agent and Skill Orchestration
-
-Use these collaborators intentionally:
-
-- `orchestrator` for phase routing, boundary control, and parallel sub-task fan-out.
-- `plan-researcher` for inventory, evidence gathering, and phased plan creation.
-- `Explore` for fast parallel codebase analysis by path segment.
-- `architecture-designer` for domain boundaries, aggregate context, and ADR-aware rationale.
-- `csharp-engineer` for detailed API/member interpretation in .NET projects.
-- this skill skill for deep evidence collection and source-backed findings.
-- this skill skill for ambiguity pressure tests before publication.
-- this skill skill when documenting external integrations and resilience policies.
-
-### Parallelization Policy
+## Parallelization Policy
 
 When scope is workspace-wide, split by top-level directory and run discovery in parallel where safe:
 
@@ -125,10 +112,10 @@ Usage:
 
 ```powershell
 # Check current coverage (default minimum: 80)
-./.github/skills/technical-documentation/Get-DocumentationMetrics.ps1
+./.github/skills/write-technical-docs/Get-DocumentationMetrics.ps1
 
 # Enforce a minimum score and export metrics as JSON
-./.github/skills/technical-documentation/Get-DocumentationMetrics.ps1 -MinimumScore 85 -EnforceMinimum -OutputJsonPath ./.docs/reports/doc-metrics.json
+./.github/skills/write-technical-docs/Get-DocumentationMetrics.ps1 -MinimumScore 85 -EnforceMinimum -OutputJsonPath ./.docs/reports/doc-metrics.json
 ```
 
 The CI/CD pipeline runs this script with `-EnforceMinimum` on every push and pull request. Documentation work is blocked from merging if the composite score falls below the configured threshold.

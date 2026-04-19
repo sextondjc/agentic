@@ -26,7 +26,7 @@ jobs:
         run: |
           Set-StrictMode -Version Latest
           $ErrorActionPreference = 'Stop'
-          New-Item -ItemType Directory -Path ./.github/skills/governance-health-overview/references/.artifacts -Force | Out-Null
+          New-Item -ItemType Directory -Path ./.github/skills/execute-customization-audit/references/.artifacts -Force | Out-Null
 
           Push-Location $env:GITHUB_WORKSPACE
           try {
@@ -54,40 +54,40 @@ jobs:
             ./.github/scripts/powershell/test-governance-artifact-contract.ps1
 
             # Artifact reference hygiene (exits 1 on stale unreferenced governance artifacts)
-            ./.github/scripts/powershell/test-artifact-reference-hygiene.ps1 -ArtifactsPath ./.github/skills/governance-health-overview/references/.artifacts | Tee-Object -FilePath ./.github/skills/governance-health-overview/references/.artifacts/artifact-reference-hygiene.txt
+            ./.github/scripts/powershell/test-artifact-reference-hygiene.ps1 -ArtifactsPath ./.github/skills/execute-customization-audit/references/.artifacts | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/artifact-reference-hygiene.txt
 
             # .docs naming conformance
             ./.github/scripts/powershell/test-naming-conformance.ps1 -RootPath .docs
 
             # Index refresh companion check (librarian hygiene)
-            ./.github/scripts/powershell/invoke-index-refresh.ps1 -RootPath .docs | Tee-Object -FilePath ./.github/skills/governance-health-overview/references/.artifacts/index-refresh.txt
+            ./.github/scripts/powershell/invoke-index-refresh.ps1 -RootPath .docs | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/index-refresh.txt
 
             # .github asset naming conformance
             ./.github/scripts/powershell/test-asset-naming.ps1 -AssetType all
 
             # Skill utilization coverage (GOV-S9)
-            ./.github/scripts/powershell/test-utilization-coverage.ps1 | Tee-Object -FilePath ./.github/skills/governance-health-overview/references/.artifacts/utilization-coverage.txt
+            ./.github/scripts/powershell/test-utilization-coverage.ps1 | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/utilization-coverage.txt
 
             # Review recency threshold (GOV-S10)
-            ./.github/scripts/powershell/test-review-recency.ps1 -ThresholdDays 90 | Tee-Object -FilePath ./.github/skills/governance-health-overview/references/.artifacts/review-recency.txt
+            ./.github/scripts/powershell/test-review-recency.ps1 -ThresholdDays 90 | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/review-recency.txt
 
             # Source catalog freshness threshold
-            ./.github/scripts/powershell/test-source-catalog-freshness.ps1 -ThresholdDays 30 | Tee-Object -FilePath ./.github/skills/governance-health-overview/references/.artifacts/source-catalog-freshness.txt
+            ./.github/scripts/powershell/test-source-catalog-freshness.ps1 -ThresholdDays 30 | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/source-catalog-freshness.txt
 
             # Responsibility overlap threshold across agents/instructions/prompts/skills
-            ./.github/scripts/powershell/test-responsibility-overlap.ps1 -SimilarityThreshold 0.82 -MinimumSharedTokens 6 -MaxAllowedDuplicatePairs 8 -OutputPath ./.github/skills/governance-health-overview/references/.artifacts/responsibility-overlap.routing.json | Tee-Object -FilePath ./.github/skills/governance-health-overview/references/.artifacts/responsibility-overlap.txt
+            ./.github/scripts/powershell/test-responsibility-overlap.ps1 -SimilarityThreshold 0.82 -MinimumSharedTokens 6 -MaxAllowedDuplicatePairs 8 -OutputPath ./.github/skills/execute-customization-audit/references/.artifacts/responsibility-overlap.routing.json | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/responsibility-overlap.txt
 
             # Overlap watchlist monitoring for known high-similarity pair
-            ./.github/scripts/powershell/test-overlap-watchlist.ps1 | Tee-Object -FilePath ./.github/skills/governance-health-overview/references/.artifacts/overlap-watchlist.txt
+            ./.github/scripts/powershell/test-overlap-watchlist.ps1 | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/overlap-watchlist.txt
 
             # Count normalization and consistency check across generated artifacts
-            ./.github/scripts/powershell/test-governance-count-consistency.ps1 | Tee-Object -FilePath ./.github/skills/governance-health-overview/references/.artifacts/count-consistency.txt
+            ./.github/scripts/powershell/test-governance-count-consistency.ps1 | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/count-consistency.txt
 
             # Preserve explicit rationale for intentional global applyTo scope
-            ./.github/scripts/powershell/test-global-applyto-rationale.ps1 | Tee-Object -FilePath ./.github/skills/governance-health-overview/references/.artifacts/global-applyto-rationale.txt
+            ./.github/scripts/powershell/test-global-applyto-rationale.ps1 | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/global-applyto-rationale.txt
 
             # Deterministic routing coverage and required-skill recall
-            ./.github/scripts/powershell/test-routing-determinism.ps1 | Tee-Object -FilePath ./.github/skills/governance-health-overview/references/.artifacts/routing-determinism.txt
+            ./.github/scripts/powershell/test-routing-determinism.ps1 | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/routing-determinism.txt
           }
           finally {
             Pop-Location
@@ -97,4 +97,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: governance-report
-          path: ./.github/skills/governance-health-overview/references/.artifacts/*
+          path: ./.github/skills/execute-customization-audit/references/.artifacts/*

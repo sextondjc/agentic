@@ -7,7 +7,7 @@ description: Prompt for discovering imported customizations and updating copilot
 
 Route this request to `orchestrator`.
 
-Use the `curating-copilot-instructions` skill as the primary workflow.
+Use the `curate-copilot-instructions` skill as the primary workflow.
 
 Update `copilot-instructions.md` so imported skills, agents, and instructions are discoverable and new contributors can pick the right tool quickly.
 
@@ -27,7 +27,7 @@ Ask for missing required inputs before continuing.
 
 ## Execution Contract
 
-Run the full curation workflow from [SKILL.md](./../skills/curating-copilot-instructions/SKILL.md) and keep this prompt as a routing and output contract only.
+Run the full curation workflow from [SKILL.md](./../skills/curate-copilot-instructions/SKILL.md) and keep this prompt as a routing and output contract only.
 
 Required outputs:
 
@@ -49,6 +49,7 @@ Required outputs:
 - `copilot-instructions.md` reflects current workspace scope and defaults.
 - Curated assets are discoverable and non-duplicative.
 - All verification checks pass.
+
 
 
 

@@ -15,7 +15,7 @@ Provide expert, implementation-ready guidance for resilient .NET distributed sys
 - Primary framework 2: Polly.
 - Scope boundary: favor first-party integration points in Microsoft.Extensions.* for application wiring, and use Polly strategy composition where explicit pipeline control is needed.
 
-## When to Use
+## Trigger Conditions
 
 - You are adding or reviewing retries, timeouts, circuit breakers, rate limiting, fallback, or hedging.
 - You are registering resilience behavior via DI, HttpClientFactory, or named/keyed pipelines.

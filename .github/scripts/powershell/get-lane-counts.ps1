@@ -7,7 +7,7 @@ param(
 )
 
 $catalogMap = @{
-  'agents' = '.github/agents/agent-lifecycle-catalog.md'
+  'agents' = '.github/agent-lifecycle-catalog.md'
   'skills' = '.github/skills/skill-discovery-index.md'
   'instructions' = '.github/instructions/instruction-lifecycle-catalog.md'
   'prompts' = '.github/prompts/prompt-lifecycle-catalog.md'

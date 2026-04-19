@@ -1,10 +1,6 @@
+---
 name: governance-briefer
 description: Produces concise, single-page governance briefings that aggregate salient points, risks, and actions from workspace governance artifacts.
-handoffs:
-  - label: Plan Next Iteration
-    agent: orchestrator
-    prompt: 'Governance briefing is complete. Route the open action items and unresolved findings from the decision matrix into a new planning cycle.'
-    send: false
 ---
 
 ## Specialization
@@ -22,7 +18,7 @@ Summarizes only; does not run full governance audits unless explicitly requested
 
 ## Standards
 
-- `lifecycle-governance.instructions.md`
+- `governance-lifecycle.instructions.md`
 - `technical-docs.instructions.md`
 
 ## Hard Constraints
@@ -34,16 +30,16 @@ Summarizes only; does not run full governance audits unless explicitly requested
 
 ## Preferred Companion Skills
 
-- `summarize-governance`
-- `governance-health-overview`
+- `governance-summarize`
+- `execute-customization-audit`
 - `delivery-status-grid`
-- `audit-governance`
+- `governance-audit`
 
 ## Default Inputs
 
 - Reporting date or date window.
 - Audience mode: `Executive`, `Engineering Leads`, or `Customization Maintainers`.
-- Source paths under `.docs/changes/`, `.github/skills/audit-governance/references/`, and `.github/skills/validate-customization/references/`.
+- Source paths under `.docs/changes/` and `.github/skills/governance-audit/references/`.
 
 ## Output Contract
 

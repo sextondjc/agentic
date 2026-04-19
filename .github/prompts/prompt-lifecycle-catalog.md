@@ -15,12 +15,13 @@ This folder contains reusable `.prompt.md` templates for repeatable governance a
 | `execute-manual-review` | `execute-manual-review.prompt.md` | Execution | Review | Applies previously recorded manual review findings and validates the resulting remediation work. |
 | `review-project` | `review-project.prompt.md` | Review | Execution | Verifies plan alignment, artifact hygiene, and scope integrity before a new execution wave begins. |
 | `execute-delivery` | `execute-delivery.prompt.md` | Execution | Review | Resumes an active execution slice with traceability-first status and routing checks. |
-| `governance-executive-audit` | `governance-executive-audit.prompt.md` | Review | Planning | Canonical Level 1 deep-scan governance report for full-workspace executive disposition. |
-| `governance-type-audit` | `governance-type-audit.prompt.md` | Review | Planning | Canonical Level 2 deep-scan governance report by customization type with normalized deltas and failure IDs. |
-| `governance-item-audit` | `governance-item-audit.prompt.md` | Review | Execution | Canonical Level 3 deep-scan governance report for one customization item with evidence-backed findings. |
+| `execute-customization-audit` | `execute-customization-audit.prompt.md` | Review | Planning | Canonical executive aggregation report that consolidates all governance source audits into one disposition. |
+| `governance-audit-types` | `governance-audit-types.prompt.md` | Review | Planning | Canonical type deep-scan governance report across and between customization types with normalized deltas and failure IDs. |
+| `audit-customization-types` | `audit-customization-types.prompt.md` | Review | Execution | Runs a deterministic, grid-first type and cross-type customization interaction audit with severity-mapped findings. |
+| `governance-item-audit` | `governance-item-audit.prompt.md` | Review | Execution | Canonical item deep-scan governance report for one customization item with evidence-backed findings. |
 | `optimize-customizations` | `optimize-customizations.prompt.md` | Review | Execution | Runs an on-demand optimization-factor review for agents, instructions, skills, and prompts with ranked remediation output. |
-| `agent-review` | `agent-review.prompt.md` | Review | Execution | Runs an on-demand quality review of one or more `.agent.md` files with platform-currency-aware evaluation and ranked remediation recommendations. |
-| `execute-condense` | `execute-condense.prompt.md` | Review | Execution | Invokes skills-authoring plus agent-authoring/instructions-authoring concision mode for one named artifact or a full artifact set and returns concise rewrite recommendations without applying edits. |
+| `audit-agent` | `audit-agent.prompt.md` | Review | Execution | Runs an on-demand quality review of one or more `.agent.md` files with platform-currency-aware evaluation and ranked remediation recommendations. |
+| `execute-artifact-condense` | `execute-artifact-condense.prompt.md` | Review | Execution | Invokes skills-authoring plus agent-authoring/instructions-authoring concision mode for one named artifact or a full artifact set and returns concise rewrite recommendations without applying edits. |
 | `librarian` | `librarian.prompt.md` | Execution | Review | Curates documentation corpus naming and structure with `.docs/` as default root and produces approval-gated recommendations. |
 | `sync-compendium` | `sync-compendium.prompt.md` | Execution | Review | Runs explicit-approval compendium sync with source attribution, conflict classification, and bespoke-safe merge constraints. |
 | `security-research` | `security-research.prompt.md` | Review | Planning | Produces security assessment output without implementation. |
@@ -32,4 +33,5 @@ This folder contains reusable `.prompt.md` templates for repeatable governance a
 - The `Prompt` column is the canonical prompt identifier used by workspace integrity checks.
 - The `File` column should match the actual `.prompt.md` files in this folder.
 - Mixed-lane requests should be split into distinct prompt runs per lane.
-- Canonical governance entrypoints are `governance-executive-audit`, `governance-type-audit`, and `governance-item-audit`.
+- Canonical governance entrypoints are `execute-customization-audit`, `governance-audit-types`, and `governance-item-audit`.
+

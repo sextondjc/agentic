@@ -9,6 +9,14 @@ description: Use when implementing or reviewing namespace, assembly, and project
 
 Define and enforce stable namespace, assembly, and dependency boundaries across models, services, and repositories in .NET solutions.
 
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- Implementing or reviewing namespace and assembly organization in a .NET solution.
+- A dependency direction violation is suspected between layers.
+- A new project or assembly is being added and boundary placement needs validation.
+
 ## Namespace Pattern
 
 - Use feature-first namespaces with explicit layer suffixes:

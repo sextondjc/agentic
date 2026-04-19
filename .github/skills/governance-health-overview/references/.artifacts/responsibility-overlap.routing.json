@@ -4,18 +4,30 @@
   "MinimumSharedTokens": 6,
   "MaxAllowedDuplicatePairs": 8,
   "AssetCounts": {
-    "Agents": 15,
-    "Instructions": 17,
-    "Prompts": 18,
-    "Skills": 58,
-    "Total": 108
+    "Agents": 18,
+    "Instructions": 21,
+    "Prompts": 19,
+    "Skills": 68,
+    "Total": 126
   },
-  "DuplicatePairCount": 1,
+  "DuplicatePairCount": 2,
   "DuplicatePairThresholdBreached": false,
   "TypePairCounts": {
-    "skills-skills": 1
+    "skills-skills": 2
   },
   "OverlapPairs": [
+    {
+      "Signal": "HighTokenSimilarity",
+      "SimilarityScore": 0.9524,
+      "SharedTokenCount": 20,
+      "SharedTokens": "advisories, blocked, defined, evaluate, evaluating, fail, follow-up, governance, history, mandatory, more, outcomes, pass, recommendations, remediation, scope, singular, standards, tracking, workspace",
+      "AssetAType": "skills",
+      "AssetAName": "agent-review",
+      "AssetAPath": ".github/skills/agent-review/SKILL.md",
+      "AssetBType": "skills",
+      "AssetBName": "skill-review",
+      "AssetBPath": ".github/skills/skill-review/SKILL.md"
+    },
     {
       "Signal": "HighTokenSimilarity",
       "SimilarityScore": 0.9091,

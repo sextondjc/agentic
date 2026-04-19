@@ -4,7 +4,7 @@
 
 param(
     [Parameter(Mandatory = $false)]
-    [string]$ReportPath = '.docs/changes/governance/audits/governance-executive-audit.md',
+    [string]$ReportPath = '.docs/changes/governance/audits/execute-customization-audit.md',
 
     [Parameter(Mandatory = $false)]
     [string]$RegistryPath = '.github/scripts/powershell/governance-must-check-registry.json'

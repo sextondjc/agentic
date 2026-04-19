@@ -17,7 +17,7 @@ Use this skill to produce reliable, repeatable, and decision-grade .NET performa
 
 Core principle: benchmark for decisions, not vanity numbers.
 
-## When to Use
+## Trigger Conditions
 
 Use this skill when you need to:
 - Validate whether a code change is actually faster

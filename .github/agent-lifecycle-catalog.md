@@ -13,7 +13,7 @@ This catalog assigns each agent to a primary lifecycle lane.
 | Agent | Primary Lane | Secondary Lane | Rationale |
 |---|---|---|---|
 | `orchestrator` | Planning | Review | Classifies intent, decomposes phases, and routes work across lanes. |
-| `learning-agent` | Planning | Execution | Decomposes learning goals into specialist topic maps, calibrates depth, and routes skill/customization generation work. |
+| `topic-learner` | Planning | Execution | Decomposes learning goals into specialist topic maps, calibrates depth, and routes skill/customization generation work. |
 | `plan-researcher` | Planning | Review | Produces research and executable plans before implementation starts. |
 | `architecture-designer` | Planning | Review | Defines architecture boundaries and ADR decisions before build work. |
 | `csharp-engineer` | Execution | Review | Implements .NET code, tests, and focused engineering artifacts. |
@@ -39,3 +39,4 @@ This catalog assigns each agent to a primary lifecycle lane.
 - Any lane conflict should be resolved by `orchestrator` with explicit phase split.
 - Routing is deterministic by default with explicit intake fields and required outputs before specialist execution.
 - Bounded exploration is permitted only as a rare exception with explicit hypothesis, boundary, time-box, success criteria, and closure decision.
+- PDL coverage map: agent routing context is informed by the Phase / Discipline / Lane matrix at [phase-discipline-lane-agentic-delivery-matrix.md](../.docs/plans/governance/taxonomy-tag-registry/phase-discipline-lane-agentic-delivery-matrix.md). Bundle codes X01–X12 identify which agents are included in each coverage cluster.

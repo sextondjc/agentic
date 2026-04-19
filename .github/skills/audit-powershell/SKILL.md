@@ -27,8 +27,8 @@ Do not use this skill for general C# code review.
 Apply these workspace standards during review:
 
 - [powershell.instructions.md](./../../instructions/powershell.instructions.md)
-- [security-and-secure-coding.instructions.md](./../../instructions/security-and-secure-coding.instructions.md)
-- [lifecycle-governance.instructions.md](./../../instructions/lifecycle-governance.instructions.md)
+- [secure-coding.instructions.md](./../../instructions/secure-coding.instructions.md)
+- [governance-lifecycle.instructions.md](./../../instructions/governance-lifecycle.instructions.md)
 
 ## Inputs
 

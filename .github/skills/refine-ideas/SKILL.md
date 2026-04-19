@@ -15,7 +15,7 @@ Turn an early idea into a refined, decision-ready concept by combining structure
 - Perform depth-calibrated topic learning with source-backed context.
 - Validate high-impact claims with external evidence before final recommendation.
 
-## When to Use
+## Trigger Conditions
 
 - You have a rough concept and need to shape it before planning or implementation.
 - You want explicit back-and-forth traceability for how the idea evolved.

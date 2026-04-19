@@ -1,7 +1,7 @@
 <!-- markdownlint-disable-file -->
 # Customization Taxonomy Promotion Plan
 
-> **For agentic workers:** REQUIRED WORKFLOW: Use the `plan-researcher` agent for planning handoff, then use `orchestrator` to dispatch approved execution work to `task-execution` or `executing-plans` as appropriate. Use `instructions-authoring` for taxonomy and governance policy edits, `write-technical-docs` for reference index promotion, and `audit-governance` for final validation. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED WORKFLOW: Use the `plan-researcher` agent for planning handoff, then use `orchestrator` to dispatch approved execution work to `task-execution` or `executing-plans` as appropriate. Use `instructions-authoring` for taxonomy and governance policy edits, `write-technical-docs` for reference index promotion, and `governance-audit` for final validation. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Promote the customization taxonomy from draft baseline to an approved conceptual governance reference without introducing catalog churn, routing ambiguity, or unclear source-of-truth precedence.
 
@@ -19,7 +19,7 @@
 | Plan ID | `PLAN-20260402-001` |
 | Status | `Completed` |
 | Owner Lane | `Planning` |
-| Origin | Promotion of [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md) from draft to approved reference |
+| Origin | Promotion of [customization-taxonomy-v1.md](./../../.github/skills/governance-audit/references/customization-taxonomy-v1.md) from draft to approved reference |
 | Primary Decision | `DEC-01` |
 | Recommended Execution Route | `orchestrator` split into Execution then Review |
 
@@ -45,7 +45,7 @@
 | `WS-01` | Planning | `critical-thinking` + plan authoring | Current taxonomy draft, rename history, active catalogs | Resolved promotion boundary and explicit decisions | None | `P1` |
 | `WS-02` | Execution | `instructions-authoring` | Approved decisions, taxonomy draft, current agent/instruction/prompt/skill catalogs, rename history | Updated taxonomy reference doc, progressive change log, and ADR | `WS-01` | `P2` |
 | `WS-03` | Execution | `write-technical-docs` | Updated taxonomy doc and ADR | Promoted links/index references for discoverability | `WS-02` | `P3` |
-| `WS-04` | Review | `audit-governance` | Updated docs, change log, catalogs, reference index | Governance validation report and approval-ready disposition | `WS-02`, `WS-03` | `P4` |
+| `WS-04` | Review | `governance-audit` | Updated docs, change log, catalogs, reference index | Governance validation report and approval-ready disposition | `WS-02`, `WS-03` | `P4` |
 
 ## Acceptance and Governance
 
@@ -61,20 +61,20 @@
 | Workstream ID | Current State | Next Action | Blockers | Resume Command/Prompt | Artifact Links |
 |---|---|---|---|---|---|
 | `WS-01` | Planned | Obtain user approval on promotion boundary and execution route | Awaiting approval | Continue from this plan | [customization-taxonomy-promotion-plan.md](./customization-taxonomy-promotion-plan.md) |
-| `WS-02` | Not started | Update taxonomy content, create ADR, and maintain progressive change log after approval | `DEC-01` approval required | Use `task-execution` if approved in-session; else `executing-plans` | [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md), [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md) |
+| `WS-02` | Not started | Update taxonomy content, create ADR, and maintain progressive change log after approval | `DEC-01` approval required | Use `task-execution` if approved in-session; else `executing-plans` | [customization-taxonomy-v1.md](./../../.github/skills/governance-audit/references/customization-taxonomy-v1.md), [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md) |
 | `WS-03` | Not started | Add discoverability links after taxonomy content is final | `WS-02` not complete | Use `write-technical-docs` workflow | `reference/index.md` (removed in prune pass), [README.md](./../adr/README.md) |
-| `WS-04` | Not started | Run governance audit and capture findings | `WS-02` and `WS-03` not complete | Use `audit-governance` skill (`governance-cadence` may be used only as a convenience prompt wrapper) | `.docs/changes/governance/audits/` |
+| `WS-04` | Not started | Run governance audit and capture findings | `WS-02` and `WS-03` not complete | Use `governance-audit` skill (`governance-cadence` may be used only as a convenience prompt wrapper) | `.docs/changes/governance/audits/` |
 
 ## Critical Evaluation Grid
 
 | Risk ID | Weakness / Risk | Impact | Likelihood | Why It Matters | Mitigation Applied In Plan |
 |---|---|---|---|---|---|
-| `RISK-01` | Promote a stale taxonomy document | High | High | The current draft still contains outdated agent tokens such as `architecture` and `debug`, and it predates `audit-governance` and `governance-cadence`. Promoting it as-is would codify incorrect governance state. | Force a normalization pass in `WS-02` before any promotion language is applied. |
+| `RISK-01` | Promote a stale taxonomy document | High | High | The current draft still contains outdated agent tokens such as `architecture` and `debug`, and it predates `governance-audit` and `governance-cadence`. Promoting it as-is would codify incorrect governance state. | Force a normalization pass in `WS-02` before any promotion language is applied. |
 | `RISK-02` | Over-scope promotion into full catalog schema rewrite | High | Medium | Adding `FAMILY` to all catalog/index files in the same change set multiplies edit surface and raises drift risk before family semantics are settled. | Keep `FAMILY` conceptual in v1 and defer catalog schema changes to a future v2 plan. |
 | `RISK-03` | Family model remains ambiguous | High | Medium | `delivery` vs `execution`, `performance` vs `test`, and `architecture-designer` placement are unresolved and can produce inconsistent classification. | Require explicit decisions in `WS-01` and reflect them in the promoted taxonomy document and ADR. |
 | `RISK-04` | Promotion without discoverability | Medium | High | An approved taxonomy that is not linked from the reference index remains effectively hidden and fails governance adoption. | Add discoverability updates in `WS-03`. |
 | `RISK-05` | Promotion without durable decision record | Medium | Medium | Future maintainers will not know why v1 stayed conceptual or why catalog schema changes were deferred. | Create an ADR in `WS-02` documenting promotion boundary and deferred work. |
-| `RISK-06` | No post-change integrity check | High | Medium | Taxonomy and index edits can still leave orphaned docs or mismatched governance claims. | Require `audit-governance` validation in `WS-04` before completion. |
+| `RISK-06` | No post-change integrity check | High | Medium | Taxonomy and index edits can still leave orphaned docs or mismatched governance claims. | Require `governance-audit` validation in `WS-04` before completion. |
 | `RISK-07` | Promotion creates overlapping governance authority | High | Medium | If the taxonomy is called authoritative without a narrow boundary, it can conflict with lifecycle governance and the four operational catalogs that already govern routing and lane ownership. | Make non-precedence explicit: lifecycle governance plus the four catalogs remain operational source of truth; taxonomy v1 is authoritative for conceptual classification only. |
 | `RISK-08` | Execution lacks required traceability | Medium | Medium | Without a `.docs/changes` artifact linked to the plan and workstreams, execution would violate the change-tracking policy and make deviations hard to audit. | Add a dedicated progressive change log to `WS-02` and `WS-04`. |
 
@@ -85,7 +85,7 @@
 | `DEC-01` | Promote the taxonomy as an approved reference, not as an operational catalog schema mandate. | This preserves stable lane-based routing catalogs while making the taxonomy authoritative as conceptual governance guidance. |
 | `DEC-02` | Normalize the taxonomy document to current asset inventory before changing status language. | Promotion must follow correctness, not precede it. |
 | `DEC-03` | Record the promotion boundary and deferred v2 work in an ADR. | The conceptual-vs-operational boundary is a governance decision that should survive sessions and future debates. |
-| `DEC-04` | Require final validation by `audit-governance` before marking the work complete. | Promotion without review would leave governance drift unchecked. |
+| `DEC-04` | Require final validation by `governance-audit` before marking the work complete. | Promotion without review would leave governance drift unchecked. |
 | `DEC-05` | Lifecycle governance plus the four catalog/index files remain the operational source of truth for routing and lane ownership. | This prevents the promoted taxonomy from creating a second operational authority. |
 
 ## Family Resolution Output Grid
@@ -100,12 +100,12 @@
 
 | File | Action | Responsibility |
 |---|---|---|
-| [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md) | Modify | Normalize asset inventory, resolve family semantics, update status from draft to approved baseline, and remove stale statements. |
+| [customization-taxonomy-v1.md](./../../.github/skills/governance-audit/references/customization-taxonomy-v1.md) | Modify | Normalize asset inventory, resolve family semantics, update status from draft to approved baseline, and remove stale statements. |
 | [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md) | Create | Progressive execution log linking changes back to `PLAN-20260402-001`, affected workstreams, and any deviations. |
 | [README.md](./../adr/README.md) | Modify | Add the new ADR to the local ADR index. |
 | [customization-taxonomy-promotion-boundary.md](./../adr/customization-taxonomy-promotion-boundary.md) | Create | Record why v1 promotion is documentation-first and why catalog schema changes remain deferred. |
 | `reference/index.md` (removed in prune pass) | Modify | Add an explicit link to the taxonomy reference if missing and keep the reference set discoverable. |
-| [planning-execution-review-governance.md](./../../.github/skills/audit-governance/references/planning-execution-review-governance.md) | Modify only if needed | Add a brief cross-reference to the promoted taxonomy only if a discoverability gap remains after index updates. |
+| [planning-execution-review-governance.md](./../../.github/skills/governance-audit/references/planning-execution-review-governance.md) | Modify only if needed | Add a brief cross-reference to the promoted taxonomy only if a discoverability gap remains after index updates. |
 | `.docs/changes/governance/audits/governance-audit.md` | Create during execution | Capture post-change governance validation. |
 
 ## Approval Criteria
@@ -128,7 +128,7 @@
 
 **Files:**
 - Modify: [customization-taxonomy-promotion-plan.md](./customization-taxonomy-promotion-plan.md)
-- Review: [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md)
+- Review: [customization-taxonomy-v1.md](./../../.github/skills/governance-audit/references/customization-taxonomy-v1.md)
 - Review: [agent-lifecycle-catalog.md](./../../.github/agent-lifecycle-catalog.md)
 - Review: [instruction-lifecycle-catalog.md](./../../.github/instructions/instruction-lifecycle-catalog.md)
 - Review: [prompt-lifecycle-catalog.md](./../../.github/prompts/prompt-lifecycle-catalog.md)
@@ -145,7 +145,7 @@
 ### Task 2: Normalize and Promote the Taxonomy Document
 
 **Files:**
-- Modify: [customization-taxonomy-v1.md](./../../.github/skills/audit-governance/references/customization-taxonomy-v1.md)
+- Modify: [customization-taxonomy-v1.md](./../../.github/skills/governance-audit/references/customization-taxonomy-v1.md)
 - Create: [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md)
 - Review: [rename-history.md](./../changes/customization/renames/rename-history.md)
 - Review: [agent-lifecycle-catalog.md](./../../.github/agent-lifecycle-catalog.md)
@@ -156,7 +156,7 @@
 
 - [ ] Create the execution change log with `PLAN-20260402-001`, planned workstream mapping, and deviation section.
 - [ ] Replace stale asset names from pre-rename state with current canonical names.
-- [ ] Add missing current governance assets that now exist, including `audit-governance` and `governance-cadence`.
+- [ ] Add missing current governance assets that now exist, including `governance-audit` and `governance-cadence`.
 - [ ] Reconcile every taxonomy row against the current agent, instruction, prompt, and skill catalogs.
 - [ ] Update cross-check text so it reflects the current catalogs and current governance state.
 - [ ] Replace draft status language with approved-baseline language once normalization is complete.
@@ -178,7 +178,7 @@
 
 **Files:**
 - Modify: `reference/index.md` (removed in prune pass)
-- Modify only if needed: [planning-execution-review-governance.md](./../../.github/skills/audit-governance/references/planning-execution-review-governance.md)
+- Modify only if needed: [planning-execution-review-governance.md](./../../.github/skills/governance-audit/references/planning-execution-review-governance.md)
 
 - [ ] Add a direct reference-index link to the promoted taxonomy document.
 - [ ] Ensure the ADR is discoverable from [README.md](./../adr/README.md).
@@ -191,7 +191,7 @@
 - Modify: [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md)
 - Create: `.docs/changes/governance/audits/governance-audit.md`
 
-- [ ] Run `audit-governance` after edits complete.
+- [ ] Run `governance-audit` after edits complete.
 - [ ] Update the progressive change log with final modified and created files plus any deviations.
 - [ ] Confirm no unresolved High findings remain for taxonomy currency, orphaned docs, catalog integrity, or precedence conflicts.
 - [ ] Capture any Medium/Low advisories as explicit deferred work.
@@ -203,7 +203,7 @@
 |---|---|---|
 | Approval granted in this session | `orchestrator` -> `task-execution` | Same-session execution fits the execution route matrix and keeps the work checkpointed. |
 | Approval granted in a later or dedicated session | `orchestrator` -> `executing-plans` | Preserves handoff integrity and durable checkpointed progress. |
-| Post-execution review | `audit-governance` | This is a governance-layer change; the governance audit is the required review gate. |
+| Post-execution review | `governance-audit` | This is a governance-layer change; the governance audit is the required review gate. |
 
 ## Recommendation
 

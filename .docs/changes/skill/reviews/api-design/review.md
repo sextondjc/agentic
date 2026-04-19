@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-12
+- Review Date: 2026-04-18
 - Reviewer Skill: skill-review
 - Target Skill: api-design
 - Target Path: .github/skills/api-design/SKILL.md

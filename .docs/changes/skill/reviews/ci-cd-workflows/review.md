@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-12
+- Review Date: 2026-04-18
 - Reviewer Skill: skill-review
 - Target Skill: ci-cd-workflows
 - Target Path: .github/skills/ci-cd-workflows/SKILL.md

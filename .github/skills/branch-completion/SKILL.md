@@ -7,6 +7,16 @@ description: Use when implementation is complete, all tests pass, and you need t
 
 ## Core Principle
 
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- Implementation work is complete and all tests pass.
+- A decision is needed on how to integrate a development branch (merge, PR, or discard).
+- A prompt to the user for integration path selection is required.
+
+## Core Principle
+
 Verify tests, present structured options, execute exactly one path, then apply cleanup rules.
 
 ## Required Prompt to User

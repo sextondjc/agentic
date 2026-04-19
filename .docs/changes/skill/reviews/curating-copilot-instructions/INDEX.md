@@ -13,4 +13,4 @@
 | File | Title | Category | Summary |
 |---|---|---|---|
 | [history.md](./history.md) | curating-copilot-instructions Review History | change | Consolidated history for date-prefixed files previously kept individually. |
-| [review.md](./review.md) | Skill Review Report | change | - Review Date: 2026-04-12 - Reviewer Skill: skill-review - Target Skill: curating-copilot-instructions - Target Path: .g... |
+| [review.md](./review.md) | Skill Review Report | change | - Review Date: 2026-04-18 - Reviewer Skill: skill-review - Target Skill: curating-copilot-instructions - Target Path: .g... |

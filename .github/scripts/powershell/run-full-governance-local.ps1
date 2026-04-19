@@ -3,7 +3,7 @@ param(
     [Parameter()]
     [string]$RootPath = (Get-Location).Path,
     [Parameter()]
-    [string]$OutputPath = '.github/skills/governance-health-overview/references/.artifacts/local-governance-run.json'
+    [string]$OutputPath = '.github/skills/execute-customization-audit/references/.artifacts/local-governance-run.json'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -67,9 +67,9 @@ try {
         Coverage = $coverage
         Checks = $results
         ArtifactSummary = [pscustomobject]@{
-            SkillAggregateExists = (Test-Path '.docs/changes/skill/reviews/governance-type-audit-skills.md')
-            CustomizationAuditExists = (Test-Path '.docs/changes/customization/reviews/governance-type-audit-customizations.md')
-            OptimizationArtifactExists = (Test-Path '.docs/changes/customization/reviews/governance-type-audit-optimization.md')
+            SkillAggregateExists = (Test-Path '.docs/changes/skill/reviews/governance-audit-types-skills.md')
+            CustomizationAuditExists = (Test-Path '.docs/changes/customization/reviews/governance-audit-types-customizations.md')
+            OptimizationArtifactExists = (Test-Path '.docs/changes/customization/reviews/governance-audit-types-optimization.md')
         }
         Metrics = [pscustomobject]@{
             TotalChecks = $results.Count

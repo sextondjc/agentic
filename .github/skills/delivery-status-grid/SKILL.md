@@ -11,7 +11,7 @@ Provide delivery updates in grid-first format so progress is scannable, comparab
 
 This skill is generic and can be applied to any repository, stack, or delivery model.
 
-## When to Use
+## Trigger Conditions
 
 Use this skill when the user asks for:
 - Delivery status

@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-12
+- Review Date: 2026-04-18
 - Reviewer Skill: skill-review
 - Target Skill: design-usability-testing-scripts
 - Target Path: .github/skills/design-usability-testing-scripts/SKILL.md

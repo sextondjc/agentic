@@ -17,11 +17,11 @@ $scanTargets = @(
     '.github/skills/skill-review/references/skill-review-report-template.md',
     '.github/skills/skill-review/references/skill-conflict-report-template.md',
     '.github/skills/skill-review/references/scripts',
-    '.github/skills/audit-governance/SKILL.md',
-    '.github/skills/governance-health-overview/SKILL.md',
-    '.github/skills/summarize-governance/SKILL.md',
-    '.github/prompts/governance-type-audit.prompt.md',
-    '.github/prompts/governance-executive-audit.prompt.md',
+    '.github/skills/governance-audit/SKILL.md',
+    '.github/skills/execute-customization-audit/SKILL.md',
+    '.github/skills/governance-summarize/SKILL.md',
+    '.github/prompts/governance-audit-types.prompt.md',
+    '.github/prompts/execute-customization-audit.prompt.md',
     '.github/prompts/governance-item-audit.prompt.md',
     '.github/scripts/powershell'
 )
@@ -55,27 +55,27 @@ $rules = @(
     @{
         Id = 'DatedSkillAggregateArtifact'
         Pattern = '\.docs/changes/skill/reviews/\d{8}-full-skill-review-grid\.md'
-        Recommendation = '.docs/changes/skill/reviews/governance-type-audit-skills.md'
+        Recommendation = '.docs/changes/skill/reviews/governance-audit-types-skills.md'
     },
     @{
         Id = 'LegacyExecutiveAuditReportName'
         Pattern = '(?<![A-Za-z0-9_-])comprehensive-workspace-health-audit\.md(?![A-Za-z0-9_-])'
-        Recommendation = 'governance-executive-audit.md'
+        Recommendation = 'execute-customization-audit.md'
     },
     @{
         Id = 'LegacySkillAggregateReportName'
         Pattern = '(?<![A-Za-z0-9_-])full-skill-review-grid\.md(?![A-Za-z0-9_-])'
-        Recommendation = 'governance-type-audit-skills.md'
+        Recommendation = 'governance-audit-types-skills.md'
     },
     @{
         Id = 'LegacyOptimizationReportName'
         Pattern = '(?<![A-Za-z0-9_-])optimization-factor\.md(?![A-Za-z0-9_-])'
-        Recommendation = 'governance-type-audit-optimization.md'
+        Recommendation = 'governance-audit-types-optimization.md'
     },
     @{
         Id = 'LegacyCustomizationAggregateReportPath'
         Pattern = '(?<![A-Za-z0-9_-])\.docs/changes/customization/reviews/audit\.md(?![A-Za-z0-9_-])'
-        Recommendation = '.docs/changes/customization/reviews/governance-type-audit-customizations.md'
+        Recommendation = '.docs/changes/customization/reviews/governance-audit-types-customizations.md'
     }
 )
 

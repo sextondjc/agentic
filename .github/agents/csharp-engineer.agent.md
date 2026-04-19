@@ -1,18 +1,6 @@
+---
 name: csharp-engineer
 description: 'Expert C#/.NET engineering agent consolidating craftsmanship, modernization, and performance guidance.'
-handoffs:
-	- label: Review Implementation
-		agent: code-reviewer
-		prompt: 'Implementation is complete. Review the changed artifacts against the originating plan and active workspace instruction files. Produce severity-ranked findings with remediation guidance.'
-		send: false
-	- label: Debug Regression
-		agent: defect-debugger
-		prompt: 'A defect or regression was identified during this implementation. Reproduce, isolate, and fix the issue using the symptom and reproduction context noted above.'
-		send: false
-	- label: Route Security Follow-Up
-		agent: orchestrator
-		prompt: 'Implementation touches a security-sensitive path. Classify the follow-up assessment and route it to the correct specialist using the concerns surfaced above.'
-		send: false
 ---
 # C# Engineering Agent
 
@@ -33,10 +21,10 @@ Active instruction files for C# work:
 - `csharp.instructions.md`
 - `async-programming.instructions.md`
 - `testing-strategy.instructions.md`
-- `validation-and-guards.instructions.md`
+- `validation.instructions.md`
 - `syrx.instructions.md`
 - `architecture.instructions.md`
-- `security-and-secure-coding.instructions.md`
+- `secure-coding.instructions.md`
 
 ## Hard Constraints
 

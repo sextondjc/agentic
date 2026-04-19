@@ -45,7 +45,7 @@
 | Recommendation ID | Description | Priority | Status |
 |---|---|---|---|
 | REC-001 | Add `## Hard Constraints` section: no production code by default, no silent mode switch, no architecture decisions. | High | Proposed |
-| REC-002 | Add `## Standards` section referencing `lifecycle-governance.instructions.md` and `technical-docs.instructions.md`. | Low | Proposed |
+| REC-002 | Add `## Standards` section referencing `governance-lifecycle.instructions.md` and `technical-docs.instructions.md`. | Low | Proposed |
 | REC-003 | Rename `## Operating Modes` → `## Focus Areas` or retain it and add a separate `## Focus Areas` section. | Low | Proposed |
 
 ## History Guard Check

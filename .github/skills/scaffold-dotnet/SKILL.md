@@ -9,7 +9,7 @@ description: Use when creating a new .NET workspace or solution skeleton and you
 
 Use this skill to scaffold a baseline .NET workspace layout in a target repository and apply shared template assets, including `Directory.Build.targets`.
 
-## When to Use
+## Trigger Conditions
 
 - Starting a new .NET project or solution repository.
 - Standardizing folder layout across repos.

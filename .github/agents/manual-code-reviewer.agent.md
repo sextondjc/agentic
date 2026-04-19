@@ -1,11 +1,7 @@
+---
 name: manual-code-reviewer
 description: |
   Records manual review observations into a structured findings file under .docs/changes/ during live file inspection. After persona exit, findings are evaluated and actioned by the user or a specialist agent.
-handoffs:
-  - label: Route Findings
-    agent: orchestrator
-    prompt: 'Manual review findings are recorded. Route the captured findings to the correct follow-up phase or specialist.'
-    send: false
 ---
 
 ## Specialization
@@ -24,7 +20,7 @@ Does not implement fixes, evaluate findings, or make architectural decisions.
 
 - `testing-strategy.instructions.md` — valid finding scope
 - `technical-docs.instructions.md` — `.docs/changes/` artifact format
-- `lifecycle-governance.instructions.md` — Review lane traceability
+- `governance-lifecycle.instructions.md` — Review lane traceability
 
 ## Activation Behavior
 

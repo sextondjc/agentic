@@ -10,14 +10,14 @@ $ErrorActionPreference = 'Stop'
 
 $checks = @(
     @{ Name = 'skill-review brevity standard'; Path = '.github/skills/skill-review/SKILL.md'; Pattern = 'SKR-S5\s*\|\s*Brevity' },
-    @{ Name = 'validate-customization instruction brevity'; Path = '.github/skills/validate-customization/SKILL.md'; Pattern = 'INR-S4\s*\|\s*Brevity' },
-    @{ Name = 'validate-customization agent brevity'; Path = '.github/skills/validate-customization/SKILL.md'; Pattern = 'AGR-S3\s*\|\s*Brevity' },
+    @{ Name = 'governance-validate-customization instruction brevity'; Path = '.github/skills/governance-validate-customization/SKILL.md'; Pattern = 'INR-S4\s*\|\s*Brevity' },
+    @{ Name = 'governance-validate-customization agent brevity'; Path = '.github/skills/governance-validate-customization/SKILL.md'; Pattern = 'AGR-S3\s*\|\s*Brevity' },
     @{ Name = 'optimization skill exists'; Path = '.github/skills/optimize-customizations/SKILL.md'; Pattern = '^---' },
     @{ Name = 'skill discovery registration'; Path = '.github/skills/skill-discovery-index.md'; Pattern = '\|\s*optimize-customizations\s*\|' },
     @{ Name = 'copilot skills discovery pointer'; Path = '.github/copilot-instructions.md'; Pattern = '\[skill-discovery-index\.md\]\(\./skills/skill-discovery-index\.md\)' },
-    @{ Name = 'audit-governance includes GOV-OPT'; Path = '.github/skills/audit-governance/SKILL.md'; Pattern = 'GOV-OPT' },
-    @{ Name = 'governance-health-overview includes optimization skill'; Path = '.github/skills/governance-health-overview/SKILL.md'; Pattern = 'optimize-customizations' },
-    @{ Name = 'governance executive prompt references overview workflow'; Path = '.github/prompts/governance-executive-audit.prompt.md'; Pattern = 'governance-health-overview' },
+    @{ Name = 'governance-audit includes GOV-OPT'; Path = '.github/skills/governance-audit/SKILL.md'; Pattern = 'GOV-OPT' },
+    @{ Name = 'execute-customization-audit includes optimization skill'; Path = '.github/skills/execute-customization-audit/SKILL.md'; Pattern = 'governance-audit-types-optimization' },
+    @{ Name = 'executive prompt references execute customization audit workflow'; Path = '.github/prompts/execute-customization-audit.prompt.md'; Pattern = 'execute-customization-audit' },
     @{ Name = 'on-demand optimization prompt exists'; Path = '.github/prompts/optimize-customizations.prompt.md'; Pattern = '^---' },
     @{ Name = 'optimization prompt catalog registration'; Path = '.github/prompts/prompt-lifecycle-catalog.md'; Pattern = '\|\s*`optimize-customizations`\s*\|\s*`optimize-customizations\.prompt\.md`\s*\|' }
 )
@@ -49,3 +49,4 @@ try {
 finally {
     Pop-Location
 }
+

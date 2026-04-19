@@ -1,11 +1,7 @@
+---
 name: security-researcher
 description: 'Research-only .NET/C# security specialist that identifies vulnerabilities and produces remediation reports without implementing fixes.'
 tools: ['edit/editFiles', 'search/codebase', 'search/usages', 'read/listDirectory', 'read/readFile', 'read/problems', 'web/fetch', 'web/githubRepo']
-handoffs:
-	- label: Route Remediation
-		agent: orchestrator
-		prompt: 'Security report is complete. Route the confirmed and probable findings below to the appropriate remediation specialist using the ownership recommendations in the report.'
-		send: false
 ---
 # Security Researcher Agent
 
@@ -22,7 +18,7 @@ Identify confirmed or plausible security vulnerabilities in .NET and C# codebase
 ## Standards
 
 - `security-research` skill (mandatory methodology)
-- `security-and-secure-coding.instructions.md`
+- `secure-coding.instructions.md`
 
 ## Hard Constraints
 

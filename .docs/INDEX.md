@@ -7,6 +7,7 @@
 | Folder | Description |
 |---|---|
 | [adr/](./adr/INDEX.md) | Subfolder index. |
+| [archive/](./archive/INDEX.md) | Subfolder index. |
 | [changes/](./changes/INDEX.md) | Subfolder index. |
 | [plans/](./plans/INDEX.md) | Subfolder index. |
 

@@ -9,8 +9,6 @@ description: Use when building or reviewing cross-platform mobile apps (MAUI or 
 
 Provide a repeatable, standards-aligned workflow for delivering production-grade cross-platform mobile applications on .NET MAUI and React Native targets.
 
-For MAUI-specific depth, use `build-maui-apps` in addition to this skill.
-
 ## When to Use
 
 - Starting or modernizing a cross-platform mobile app.
@@ -20,10 +18,20 @@ For MAUI-specific depth, use `build-maui-apps` in addition to this skill.
 
 ## When Not to Use
 
-- UX research and wireframe design (use `design-mobile-ux`).
-- Web frontend implementation (use `build-web-frontend`).
-- Pure backend engineering tasks with no mobile client (route to `csharp-engineer`).
-- Global coding policy enforcement across the repository (use `mobile-frontend.instructions.md`).
+- UX research and wireframe design.
+- Web frontend implementation.
+- Pure backend engineering tasks with no mobile client.
+- Global coding policy enforcement across the repository.
+
+## Required Outputs
+
+| Output | Description |
+|---|---|
+| Platform selection rationale | Documented decision for MAUI or React Native with criteria evidence |
+| Architecture baseline | Navigation structure, MVVM/component-state boundaries, DI registration |
+| Working application build | Multi-screen app passing quality and security checklists at the selected depth mode |
+| Test coverage | Unit tests for ViewModels/services or components/hooks; one end-to-end flow test |
+| Release readiness report | Signed build, environment configuration, telemetry hooks, risks, and next improvements |
 
 ## Platform Selection Guidance
 
@@ -43,7 +51,7 @@ Document the selection rationale before implementation begins.
 |---|---|---|
 | L1 Orientation | Understand platform foundations | Build a multi-screen app with navigation and explain core architecture |
 | L2 Practical Delivery | Ship one app safely | Deliver a release-ready app with navigation, local data, secure storage, and tests |
-| L3 Specialist Hardening | Improve reliability and performance | Demonstrate measured startup/frame-rate improvement and security audit pass |
+| L3 Specialist Hardening | Improve reliability and performance | Demonstrate measured startup/frame-rate improvement and security audit pass. For MAUI, include .NET runtime profiling and platform binding review. |
 | L4 Expert Standardization | Define reusable team standards | Produce reusable patterns, templates, and governance for repeated delivery |
 
 ## Workflow

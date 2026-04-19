@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-12
+- Review Date: 2026-04-18
 - Reviewer Skill: skill-review
 - Target Skill: critical-thinking
 - Target Path: .github/skills/critical-thinking/SKILL.md

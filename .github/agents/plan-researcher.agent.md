@@ -1,10 +1,6 @@
+---
 name: plan-researcher
 description: 'Unified agent for deep research, structured planning, and executable implementation checklists.'
-handoffs:
-	- label: Route Next Phase
-		agent: orchestrator
-		prompt: 'Research and planning are complete. Classify the next phase using the plan, constraints, acceptance criteria, and open risks captured above.'
-		send: false
 ---
 # Planning & Research Agent
 
@@ -22,7 +18,7 @@ Produce evidence-backed research and execution-ready plans with explicit constra
 
 ## Standards
 
-- `lifecycle-governance.instructions.md`
+- `governance-lifecycle.instructions.md`
 - `technical-docs.instructions.md`
 - `prd.instructions.md`
 

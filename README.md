@@ -37,7 +37,7 @@ This repository is customization-only.
 |---|---|---|
 | `.github/skills/<skill>/references` | Reusable, versioned skill assets (scripts, templates, checklists, examples). | Keep skill-contained assets here. |
 | `.github/scripts/powershell` | Shared cross-skill automation scripts. | Use only when reuse scope spans multiple skills. |
-| `.github/skills/governance-health-overview/references/.artifacts` | Runtime-generated execution outputs (coverage runs, governance payloads, temporary evidence snapshots). | Keep runtime artifacts in this governance-owned references path; do not create root-level artifact folders. |
+| `.github/skills/execute-customization-audit/references/.artifacts` | Runtime-generated execution outputs (coverage runs, governance payloads, temporary evidence snapshots). | Keep runtime artifacts in this governance-owned references path; do not create root-level artifact folders. |
 
 ## Prompt Entry Points
 
@@ -46,16 +46,16 @@ The root README now includes a direct prompt index so operational prompts are di
 | Prompt | File | Primary Lane |
 |---|---|---|
 | curate-copilot | [curate-copilot.prompt.md](./.github/prompts/curate-copilot.prompt.md) | Execution |
-| execute-condense | [execute-condense.prompt.md](./.github/prompts/execute-condense.prompt.md) | Review |
+| execute-condense | [execute-artifact-condense.prompt.md](./.github/prompts/execute-artifact-condense.prompt.md) | Review |
 | execute-delivery | [execute-delivery.prompt.md](./.github/prompts/execute-delivery.prompt.md) | Execution |
 | execute-manual-review | [execute-manual-review.prompt.md](./.github/prompts/execute-manual-review.prompt.md) | Execution |
 | execute-testing-xunit | [execute-testing-xunit.prompt.md](./.github/prompts/execute-testing-xunit.prompt.md) | Execution |
 | generate-readme | [generate-readme.prompt.md](./.github/prompts/generate-readme.prompt.md) | Execution |
-| governance-executive-audit | [governance-executive-audit.prompt.md](./.github/prompts/governance-executive-audit.prompt.md) | Review |
+| execute-customization-audit | [execute-customization-audit.prompt.md](./.github/prompts/execute-customization-audit.prompt.md) | Review |
+| governance-audit-types | [governance-audit-types.prompt.md](./.github/prompts/governance-audit-types.prompt.md) | Review |
 | governance-item-audit | [governance-item-audit.prompt.md](./.github/prompts/governance-item-audit.prompt.md) | Review |
-| governance-type-audit | [governance-type-audit.prompt.md](./.github/prompts/governance-type-audit.prompt.md) | Review |
 | librarian | [librarian.prompt.md](./.github/prompts/librarian.prompt.md) | Execution |
-| optimize-customizations | [optimize-customizations.prompt.md](./.github/prompts/optimize-customizations.prompt.md) | Review |
+| governance-optimize-customizations | [governance-optimize-customizations.prompt.md](./.github/prompts/governance-optimize-customizations.prompt.md) | Review |
 | performance-research | [performance-research.prompt.md](./.github/prompts/performance-research.prompt.md) | Review |
 | review-project | [review-project.prompt.md](./.github/prompts/review-project.prompt.md) | Review |
 | review-technical-docs | [review-technical-docs.prompt.md](./.github/prompts/review-technical-docs.prompt.md) | Review |
@@ -70,9 +70,9 @@ Use these assets when keeping this repository synchronized for downstream reuse.
 
 | Artifact | Type | Use |
 |---|---|---|
-| [sync-customizations](./.github/skills/sync-customizations/SKILL.md) | Skill | Keep instructions and agents aligned with workspace policy and routing standards. |
+| [governance-sync-customizations](./.github/skills/governance-sync-customizations/SKILL.md) | Skill | Keep instructions and agents aligned with workspace policy and routing standards. |
 | [sync-skills](./.github/skills/sync-skills/SKILL.md) | Skill | Keep skill inventory and skill guidance fresh against approved sources. |
-| [validate-customization](./.github/skills/validate-customization/SKILL.md) | Skill | Detect policy conflicts, stale mappings, and drift before publishing. |
+| [governance-validate-customization](./.github/skills/governance-validate-customization/SKILL.md) | Skill | Detect policy conflicts, stale mappings, and drift before publishing. |
 | [sync-compendium.prompt.md](./.github/prompts/sync-compendium.prompt.md) | Prompt | Run explicit-approval compendium synchronization for downstream repositories. |
 
 ## Lifecycle Routing

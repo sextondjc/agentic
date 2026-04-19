@@ -1,0 +1,61 @@
+# Skill Review Report
+
+## Metadata
+
+- Review Date: 2026-04-18
+- Reviewer Skill: skill-review
+- Target Skill: release-readiness
+- Target Path: .github/skills/release-readiness/SKILL.md
+- Review Scope: Full
+
+## Storage
+
+- Save this file to .docs/changes/skill/reviews/release-readiness/review.md
+
+## Summary Outcome Grid
+
+| Metric | Value |
+|---|---|
+| Overall Outcome | Pass With Advisories |
+| MUST Failures | 0 |
+| SHOULD Advisories | 1 |
+| Conflict Status | None |
+
+## Standards Evaluation
+
+| Standard ID | Result | Evidence | Notes |
+|---|---|---|---|
+| SKR-M1 | Pass | .github/skills/release-readiness/SKILL.md | Skill objective is scoped to a single review/use-case domain in static analysis. |
+| SKR-M2 | Pass | .github/skills/release-readiness/SKILL.md | Front matter includes required name and description fields. |
+| SKR-M3 | Pass | .github/skills/release-readiness/SKILL.md | Trigger guidance is explicit in description and/or heading sections. |
+| SKR-M4 | Pass | .github/skills/release-readiness/SKILL.md | Frontmatter name 'release-readiness' matches expected skill name 'release-readiness'. |
+| SKR-S1 | Advisory | .github/skills/release-readiness/ | No references/assets folder detected for execution support. |
+| SKR-S2 | Pass | .github/skills/*/SKILL.md | No harmful overlap or contradictory behavior detected in static cross-skill review. |
+| SKR-S3 | Pass | .github/skills/release-readiness/SKILL.md | No placeholder or unresolved markdown links detected across skill markdown files. |
+| SKR-S4 | Pass | .github/skills/release-readiness/SKILL.md | Skill is self-contained with explicit execution context for inputs, outputs, and process using canonical sections or equivalent labels. |
+| SKR-S5 | Pass | .github/skills/release-readiness/SKILL.md | Skill wording is within the conservative brevity baseline (482 words) and shows no automatic verbosity concern. |
+
+## Recommendations
+
+| Recommendation ID | Description | Priority | Status |
+|---|---|---|---|
+| REC-001 | Add references assets (templates/examples/tools) for this skill. | Medium | Proposed |
+| REC-002 | Normalize description to start with "Use when..." for discovery consistency. | Low | Proposed |
+
+## History Guard Check
+
+- History File Loaded: yes
+- Deny-list Entries Applied: 0
+- Suppressed Repeat Recommendations: 0
+- Notes: Deny-list derived from prior Rejected, Removed, and Illegitimate history statuses.
+
+## Next Actions
+
+1. Address open recommendations and rerun full-skill audit.
+2. Refresh history index and aggregate grid after remediation.
+
+## Aggregate Results Grid (Use for multi-skill reviews)
+
+| Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
+|---|---|---:|---:|---|---|
+| release-readiness | Pass With Advisories | 0 | 1 | None | .docs/changes/skill/reviews/release-readiness/review.md |

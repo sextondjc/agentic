@@ -103,9 +103,9 @@ description: Use when <specific trigger conditions>
 
 ## Step 4: Validation Route
 
-- For skills: run concision passes in `skills-authoring` as needed, then `skill-review`.
-- For agents: run concision passes in `agent-authoring` as needed, then `validate-customization`.
-- For instructions: run concision passes in `instructions-authoring` as needed, then `validate-customization`.
+- For skills: run concision passes in `skills-authoring` as needed, then `audit-skill`.
+- For agents: run concision passes in `agent-authoring` as needed, then `audit-agent`.
+- For instructions: run concision passes in `instructions-authoring` as needed, then `audit-instructions`.
 
 ## Suggested Budget Targets
 

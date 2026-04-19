@@ -31,6 +31,14 @@ Collect all inputs before writing. Block generation and ask if any are missing.
 
 ## Generation Flow
 
+## Required Outputs
+
+| Output | Description |
+|---|---|
+| ADR file | Saved to `.docs/adr/<domain>/adr-NNNN-title-slug.md` with all mandatory sections |
+
+## Workflow
+
 ```
 Gather Inputs → Validate → Determine Next Number → Draft Sections →
 Enumerate Consequences → Document Alternatives with Rejection Rationale →

@@ -1,32 +1,39 @@
 ---
 name: governance-item-audit
-description: 'Canonical Level 3 governance prompt for individual customization evidence and remediation tracking.'
+description: 'Canonical item governance prompt for one customization item against workspace and type-specific standards.'
 ---
 
 # Governance Item Audit Prompt
 
 Route this request to `orchestrator`.
 
-Use `governance-health-overview` to gather full-workspace evidence and use `validate-customization` / `skill-review` / `optimize-customizations` for item-level findings as applicable.
+Use `execute-customization-audit` to gather full-workspace evidence and use `audit-agent` / `audit-instructions` / `audit-prompts` / `audit-skill` / `optimize-customizations` for item-level findings as applicable.
 
 ## Purpose
 
-Produce a Level 3 item report for one specific customization with evidence-backed findings linked from Level 2 and Level 1 reports.
+Produce an item report for one specific customization where the item is evaluated against:
+
+- workspace-wide standards, and
+- standards applicable to the item's customization type.
+
+The report must provide evidence-backed findings that roll up into type and executive reports.
 
 ## Required Input
 
 - `Item Path`: path to one customization file under `.github/agents`, `.github/instructions`, `.github/prompts`, or `.github/skills`
+- `Item Type`: `agents` | `instructions` | `prompts` | `skills` (derive from path when omitted)
 
-## Deep-Scan Requirement (Mandatory)
+## Source Audit Requirement (Mandatory)
 
-Do not run isolated item-only checks. First collect full-workspace deep-scan evidence across all customization roots, then focus the report on the requested item.
+Do not run isolated item-only checks. First aggregate from current source audits, then focus the report on the requested item.
 
 ## Required Actions
 
 1. Run full-workspace governance evidence collection (`fresh-run required`).
 2. Evaluate the item against all applicable MUST/SHOULD standards.
 3. Emit normalized failure IDs and remediation actions.
-4. Link the item report to its Level 2 aggregate and Level 1 executive report.
+4. Link each finding to the corresponding type or cross-type aggregate.
+5. Link the item report to its type aggregate and executive report.
 
 ## Output Contract
 
@@ -44,3 +51,4 @@ Return sections in this order:
 Use normalized IDs in the form `GOV-<DOMAIN>-NNN` where `<DOMAIN>` is one of:
 
 - `M`, `S`, `SK`, `CUS`, `OPT`
+

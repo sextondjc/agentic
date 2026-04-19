@@ -9,7 +9,7 @@ description: Use when applying or reviewing Syrx.Validation.Contract guard patte
 
 Use this skill to standardize boundary validation with `Syrx.Validation.Contract.Throw<TException>` across repository and application entry points.
 
-## When to Use
+## Trigger Conditions
 
 - Auditing existing .NET code for missing or incorrect Syrx guards.
 - Adding boundary validation to new methods before any state mutation.
@@ -27,8 +27,8 @@ Use this skill to standardize boundary validation with `Syrx.Validation.Contract
 - Use success-condition guard semantics: `true` means proceed, `false` throws.
 - Validate at method entry before any state mutation.
 - Use precise exception types and parameter names.
-- Keep guard usage consistent with `.github/instructions/validation-and-guards.instructions.md`.
-- Keep recommendations aligned with `.github/instructions/csharp.instructions.md` and `.github/instructions/security-and-secure-coding.instructions.md`.
+- Keep guard usage consistent with `.github/instructions/validation.instructions.md`.
+- Keep recommendations aligned with `.github/instructions/csharp.instructions.md` and `.github/instructions/secure-coding.instructions.md`.
 
 ## Repository-Bound Model Rules
 

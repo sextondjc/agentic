@@ -10,7 +10,7 @@ param(
 
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$ArtifactsPath = '.github/skills/governance-health-overview/references/.artifacts'
+    [string]$ArtifactsPath = '.github/skills/execute-customization-audit/references/.artifacts'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -33,7 +33,7 @@ $searchFiles = @(
     Get-ChildItem -LiteralPath $resolvedRoot -Recurse -File |
         Where-Object {
             $_.FullName -notlike '*\.git\*' -and
-            $_.FullName -notlike '*\.github\skills\governance-health-overview\references\.artifacts\*'
+            $_.FullName -notlike '*\.github\skills\execute-customization-audit\references\.artifacts\*'
         }
 )
 
@@ -46,7 +46,7 @@ $results = foreach ($artifact in $artifactFiles) {
     )
 
     [PSCustomObject]@{
-        ArtifactPath = '.github/skills/governance-health-overview/references/.artifacts/' + $artifact.Name
+        ArtifactPath = '.github/skills/execute-customization-audit/references/.artifacts/' + $artifact.Name
         ReferenceCount = $referenceHits.Count
         ReferencedBy = ($referenceHits -join '; ')
         Status = if ($referenceHits.Count -gt 0) { 'Referenced' } else { 'Unreferenced' }

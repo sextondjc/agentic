@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-12
+- Review Date: 2026-04-18
 - Reviewer Skill: skill-review
 - Target Skill: async-programming
 - Target Path: .github/skills/async-programming/SKILL.md

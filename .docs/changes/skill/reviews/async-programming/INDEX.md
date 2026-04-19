@@ -12,4 +12,4 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| [review.md](./review.md) | Skill Review Report | change | - Review Date: 2026-04-12 - Reviewer Skill: skill-review - Target Skill: async-programming - Target Path: .githu... |
+| [review.md](./review.md) | Skill Review Report | change | - Review Date: 2026-04-18 - Reviewer Skill: skill-review - Target Skill: async-programming - Target Path: .github/skills... |

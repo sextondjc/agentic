@@ -7,6 +7,16 @@ description: Use when receiving code review feedback, before implementing sugges
 
 ## Core Principle
 
+## Trigger Conditions
+
+Invoke this skill when any of the following is true:
+
+- Code review feedback has been received and needs evaluation before implementation.
+- Review suggestions appear unclear or technically questionable.
+- Implementation of review feedback is about to begin and verification is needed first.
+
+## Core Principle
+
 Validate review feedback against codebase reality before implementation.
 
 ## Response Sequence

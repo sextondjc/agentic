@@ -1,15 +1,7 @@
+---
 name: performance-assessor
 description: 'Research-only .NET/C# performance specialist that identifies bottlenecks and produces remediation reports without implementing fixes.'
 tools: ['edit/editFiles', 'search/codebase', 'search/usages', 'read/listDirectory', 'read/readFile', 'read/problems', 'web/fetch', 'web/githubRepo']
-handoffs:
-	- label: Benchmark Deep Dive
-		agent: benchmark-researcher
-		prompt: 'Performance findings require statistical BenchmarkDotNet validation. Design benchmarks to confirm the throughput and allocation impact of the hotspots identified above.'
-		send: false
-	- label: Route Remediation
-		agent: orchestrator
-		prompt: 'Performance assessment is complete. Route the bottleneck findings and remediation ownership recommendations to the appropriate specialist.'
-		send: false
 ---
 # Performance Researcher Agent
 
@@ -26,7 +18,7 @@ Identify bottlenecks, scalability risks, and inefficiencies in .NET and C# codeb
 ## Standards
 
 - `performance-research` skill (mandatory methodology)
-- `security-and-secure-coding.instructions.md`
+- `secure-coding.instructions.md`
 
 ## Hard Constraints
 

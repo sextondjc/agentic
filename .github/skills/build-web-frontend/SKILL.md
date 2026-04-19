@@ -22,6 +22,17 @@ Provide a repeatable, standards-aligned workflow for delivering production-grade
 - Backend or API implementation (route to `csharp-engineer`).
 - Global coding policy enforcement across the repository (use `web-frontend.instructions.md`).
 
+## Required Outputs
+
+| Output | Description |
+|---|---|
+| Component implementation | All components built to UX spec with co-located tests |
+| Test coverage | Unit tests for logic-bearing components/hooks; integration tests for key user flows |
+| Accessibility audit result | Zero critical/serious axe violations; keyboard navigation and screen reader verified |
+| Core Web Vitals baseline | LCP, CLS, INP measured and within targets; bundle size delta reviewed |
+| Security review sign-off | CSP, token storage, input encoding, and third-party script integrity confirmed |
+| Readiness summary | Open risks, deferred items, and next improvement actions documented |
+
 ## Depth Modes
 
 | Level | Intent | Stop Rule |

@@ -9,7 +9,7 @@ description: Use when implementing or reviewing .NET repository data access that
 
 Use this skill to implement and review Syrx repository data access in a reusable way across projects, even when repository-specific docs are unavailable.
 
-## When to Use
+## Trigger Conditions
 
 - Implementing or reviewing repositories that depend on Syrx.
 - Mapping repository methods to SQL commands.

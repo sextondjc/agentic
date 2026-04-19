@@ -1,11 +1,7 @@
+---
 name: defect-debugger
 description: 'Reproduces, isolates, and fixes concrete software defects with minimal, testable changes. Use when a specific bug must be diagnosed and resolved.'
 tools: ['edit/editFiles', 'search', 'execute/getTerminalOutput', 'execute/runInTerminal', 'read/terminalLastCommand', 'read/terminalSelection', 'search/usages', 'read/problems', 'execute/testFailure', 'web/fetch', 'web/githubRepo']
-handoffs:
-	- label: Review Fix
-		agent: code-reviewer
-		prompt: 'Defect is resolved. Review the fix against workspace standards. Verify root cause is addressed and no regressions were introduced.'
-		send: false
 ---
 
 ## Specialization
@@ -24,7 +20,7 @@ Reproduce, isolate, fix, and verify a concrete software defect with minimal, tes
 
 - `csharp.instructions.md`
 - `testing-strategy.instructions.md`
-- `security-and-secure-coding.instructions.md`
+- `secure-coding.instructions.md`
 
 ## Hard Constraints
 

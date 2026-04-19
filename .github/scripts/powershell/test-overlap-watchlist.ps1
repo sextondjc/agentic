@@ -10,7 +10,7 @@ param(
 
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$OverlapArtifactPath = '.github/skills/governance-health-overview/references/.artifacts/responsibility-overlap.routing.json'
+    [string]$OverlapArtifactPath = '.github/skills/execute-customization-audit/references/.artifacts/responsibility-overlap.routing.json'
 )
 
 $ErrorActionPreference = 'Stop'

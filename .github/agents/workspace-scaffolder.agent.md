@@ -1,10 +1,6 @@
+---
 name: workspace-scaffolder
 description: 'Comprehensive agent for scaffolding lean .NET project structures, generating tailored copilot instructions, and curating workspace configuration for domain-specific development.'
-handoffs:
-    - label: Route Next Phase
-        agent: orchestrator
-        prompt: 'Project scaffolding is complete. Route the next phase using the generated workspace baseline, setup decisions, and unresolved follow-up items above.'
-        send: false
 ---
 
 # Project Setup Agent
@@ -22,9 +18,9 @@ Project initialization and configuration specialist for lean .NET applications. 
 
 ## Standards
 
-- `lifecycle-governance.instructions.md`
+- `governance-lifecycle.instructions.md`
 - `technical-docs.instructions.md`
-- `namespace-and-assembly-boundaries.instructions.md`
+- `namespace-boundaries.instructions.md`
 
 ## Hard Constraints
 
@@ -36,7 +32,7 @@ Project initialization and configuration specialist for lean .NET applications. 
 ## Preferred Companion Skills
 
 - `scaffold-dotnet`
-- `curating-copilot-instructions`
+- `curate-copilot-instructions`
 - `sync-editorconfig`
 - `write-technical-docs`
 
@@ -156,5 +152,6 @@ If the user specifies different locations, honor their request and document the 
 | Vague non-goals | "Phase 2" is too ambiguous | Ask: "By phase 1 cutover, what features will NOT exist?" Be explicit. |
 | Missing domain context | Team doesn't understand aggregates | Ask follow-up questions on Phase 2 questionnaire items to clarify entity boundaries. |
 | Outdated references | Instructions point to non-existent files | Always audit workspace structure before generating paths. |
+
 
 

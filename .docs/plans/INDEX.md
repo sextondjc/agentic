@@ -6,7 +6,7 @@
 
 | Folder | Description |
 |---|---|
-| (none) | - |
+| [governance/](./governance/INDEX.md) | Subfolder index. |
 
 ## Documents
 

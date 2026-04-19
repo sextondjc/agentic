@@ -1,10 +1,6 @@
+---
 name: powershell-reviewer
 description: 'Reviews PowerShell scripts and modules for safety, automation readiness, and maintainability. Use when focused PowerShell review with actionable findings and correction recommendations is needed.'
-handoffs:
-	- label: Route Remediation
-		agent: orchestrator
-		prompt: 'PowerShell review is complete. Route the severity-ranked findings below to the appropriate specialist for correction.'
-		send: false
 ---
 # PowerShell Reviewer Agent
 
@@ -28,8 +24,8 @@ This agent is review-only by default. It should not edit scripts unless the user
 All standards are in the workspace instruction files. The active files for this lane are:
 
 - `powershell.instructions.md`
-- `security-and-secure-coding.instructions.md`
-- `lifecycle-governance.instructions.md`
+- `secure-coding.instructions.md`
+- `governance-lifecycle.instructions.md`
 
 ## Hard Constraints
 
@@ -43,5 +39,5 @@ All standards are in the workspace instruction files. The active files for this 
 
 - `powershell-script-library` for catalog maintenance and deduplication before new scripts are written
 - `audit-powershell` for repeatable workspace script audits and recommendation patterns
-- `skill-review` when reviewing the quality of PowerShell-related skills
+- `audit-skill` when reviewing the quality of PowerShell-related skills
 - `critical-thinking` for trade-off analysis when remediation options conflict

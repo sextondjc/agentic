@@ -23,7 +23,7 @@ Invoke this prompt when you are authoring or reviewing any of the following:
 1. Load and follow [SKILL.md](./../skills/optimize-customizations/SKILL.md).
 2. Set scope explicitly to full workspace for governance runs.
 3. Evaluate with OPR-M* (MUST) and OPR-S* (SHOULD) standards.
-4. Produce an optimization-factor report at `.docs/changes/customization/reviews/governance-type-audit-optimization.md`.
+4. Produce an optimization-factor report at `.docs/changes/customization/reviews/governance-audit-types-optimization.md`.
 5. Return a consolidated outcomes grid and a ranked remediation grid.
 6. Do not apply edits unless the user explicitly asks for remediation.
 
@@ -54,4 +54,5 @@ Return results in chat in this order:
 | R1 | <change> | <artifact path> | High/Medium/Low |
 
 - If there are no findings, state that explicitly and include residual risks or watch-items.
+
 

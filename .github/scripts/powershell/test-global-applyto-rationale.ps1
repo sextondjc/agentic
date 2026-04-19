@@ -14,7 +14,7 @@ $resolvedRoot = Resolve-Path -LiteralPath $RootPath -ErrorAction Stop
 
 $requiredFiles = @(
     '.github/instructions/request-economy.instructions.md',
-    '.github/instructions/security-and-secure-coding.instructions.md'
+    '.github/instructions/secure-coding.instructions.md'
 )
 
 $rows = foreach ($relativePath in $requiredFiles) {

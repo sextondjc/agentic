@@ -30,10 +30,10 @@ Use a three-lane operating model for all customization artifacts:
 
 Canonical governance and classification references:
 
-- [planning-execution-review-governance.md](./skills/audit-governance/references/planning-execution-review-governance.md)
+- [planning-execution-review-governance.md](./skills/governance-audit/references/planning-execution-review-governance.md)
 - [agent-lifecycle-catalog.md](./agent-lifecycle-catalog.md)
 - [instruction-lifecycle-catalog.md](./instructions/instruction-lifecycle-catalog.md)
-- [naming-conventions.instructions.md](./instructions/naming-conventions.instructions.md) ← Mandatory: review before creating new assets
+- [governance-naming-conventions.instructions.md](./instructions/governance-naming-conventions.instructions.md) ← Mandatory: review before creating new assets
 - [prompt-lifecycle-catalog.md](./prompts/prompt-lifecycle-catalog.md)
 - [skill-discovery-index.md](./skills/skill-discovery-index.md)
 
@@ -52,7 +52,7 @@ Each agent is specialized for one narrowly bounded responsibility.
 |---|---|
 | `csharp-engineer` | **Default for C# work.** Writing, modifying, or reviewing .NET code. |
 | `orchestrator` | Mandatory first-hop for every request. Classifies scope and routes to the correct specialist. |
-| `learning-agent` | Building deep topic mastery maps with depth control, specialist decomposition, and source-backed learning plans. |
+| `topic-learner` | Building deep topic mastery maps with depth control, specialist decomposition, and source-backed learning plans. |
 | `plan-researcher` | Researching options, producing research notes, or writing implementation plans. |
 | `architecture-designer` | Evaluating aggregate boundaries, producing blueprints, or identifying anti-patterns. |
 | `defect-debugger` | Reproducing, isolating, and fixing a specific defect. |

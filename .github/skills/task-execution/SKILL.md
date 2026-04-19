@@ -13,7 +13,7 @@ Execute an existing implementation plan in the same session using a fresh implem
 
 Fresh subagent per task plus ordered review gates equals low-context, high-confidence delivery.
 
-## When to Use
+## Trigger Conditions
 
 - A concrete implementation plan already exists.
 - Tasks are mostly independent.

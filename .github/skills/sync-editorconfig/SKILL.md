@@ -15,7 +15,7 @@ It should not absorb adjacent planning, execution, or review responsibilities th
 
 Use this skill to create or refresh a baseline `.editorconfig` in a target repository and run a deterministic policy validation for C# projects.
 
-## When to Use
+## Trigger Conditions
 
 - A workspace is missing `.editorconfig`.
 - EditorConfig rules have drifted from current C# standards.

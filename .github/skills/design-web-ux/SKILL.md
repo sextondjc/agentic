@@ -9,13 +9,13 @@ description: Use when defining or improving web application UX and you need a pr
 
 This skill is specialized for the workflow described in this file and should remain narrowly bounded to that responsibility.
 
-It does not cover mobile UX (use `design-mobile-ux`), high-fidelity prototyping (use `design-mobile-ui-prototyping`), or usability test scripting (use `design-usability-testing-scripts`).
+It does not cover mobile UX (use `design-mobile-ux`), high-fidelity prototyping (use `prototype-mobile-ui`), or usability test scripting (use `usability-test-scripts`).
 
 ## Scope
 
 Design and validate UX for web applications across desktop, tablet, and mobile breakpoints, from discovery through implementation-ready handoff artifacts.
 
-## Outcomes
+## Required Outputs
 
 - Problem statement, user goals, and prioritized experience risks.
 - Task flows and low-to-mid fidelity wireframes for core and edge journeys.
@@ -72,3 +72,4 @@ Before routing to `web-frontend-engineer`:
 - [ ] Accessibility annotations: roles, labels, focus order, and state announcements.
 - [ ] Acceptance cues for each acceptance scenario.
 - [ ] Usability findings summary with severity ratings and dispositions.
+

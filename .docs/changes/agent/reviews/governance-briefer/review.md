@@ -27,7 +27,7 @@
 | AGR-M4 | Pass | `## Guardrails` section present and defines explicit prohibitions (never hide MUST failures, prefer most recent artifacts, flag drift). | Functionally equivalent to `## Hard Constraints`. Name is non-canonical — see AGR-S1. |
 | AGR-S1 | Advisory | `## Guardrails` present (not `## Hard Constraints`). Missing `## Focus Areas` and `## Standards`. `## Preferred Companion Skills` present. | Rename `## Guardrails` → `## Hard Constraints` and add missing sections for schema compliance. |
 | AGR-S2 | Pass | No hardcoded agent invocations. Companion skills listed declaratively only. | Clean. |
-| AGR-S3 | Pass | No harmful overlap with `audit-governance` or `governance-health-overview` — role is summarizer, not auditor. | Distinct by design. |
+| AGR-S3 | Pass | No harmful overlap with `governance-audit` or `governance-health-overview` — role is summarizer, not auditor. | Distinct by design. |
 | AGR-S4 | Pass | No markdown links. | Nothing to validate. |
 | AGR-S5 | Pass | Only `name` and `description`. No deprecated fields. | Platform currency confirmed 2026-04-15. |
 

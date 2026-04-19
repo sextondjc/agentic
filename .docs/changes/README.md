@@ -12,7 +12,7 @@ Entry-point guide for the `.docs/changes/` artifact corpus.
 |---|---|---|
 | `artifact-type` | `skill`, `agent`, `instruction`, `prompt`, `adr` | Lowercase single word. Must match an asset type category. |
 | `artifact-class` | e.g., `reviews`, `changes`, `findings` | Lowercase single word describing the artifact class. |
-| `item` | e.g., `audit-governance`, `csharp-engineer` | Must exactly match the canonical asset name. See naming rule below. |
+| `item` | e.g., `governance-audit`, `csharp-engineer` | Must exactly match the canonical asset name. See naming rule below. |
 
 ## Naming Rule for `<item>` Folders
 

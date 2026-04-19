@@ -1,11 +1,7 @@
+---
 name: sql-dba
 description: 'Performs Microsoft SQL Server operational administration, schema inspection, and query execution. Use when live DBA work, schema analysis, or T-SQL is required.'
 tools: ['edit/editFiles', 'search/codebase', 'execute/getTerminalOutput', 'execute/runInTerminal', 'read/terminalLastCommand', 'read/terminalSelection', 'web/githubRepo', 'ms-mssql.mssql/mssql_connect', 'ms-mssql.mssql/mssql_disconnect', 'ms-mssql.mssql/mssql_list_databases', 'ms-mssql.mssql/mssql_list_tables', 'ms-mssql.mssql/mssql_list_views', 'ms-mssql.mssql/mssql_list_functions', 'ms-mssql.mssql/mssql_list_schemas', 'ms-mssql.mssql/mssql_run_query', 'ms-mssql.mssql/mssql_change_database', 'ms-mssql.mssql/mssql_get_connection_details', 'vscode/installExtension', 'web/fetch']
-handoffs:
-	- label: Route Application Follow-Up
-		agent: orchestrator
-		prompt: 'Database work is complete. Route the next application or repository phase using the schema, SQL changes, and operational outcomes established above.'
-		send: false
 ---
 
 # MS-SQL Database Administrator
@@ -27,7 +23,7 @@ Perform Microsoft SQL Server operational administration, schema inspection, and 
 ## Standards
 
 - `sql-dba.instructions.md`
-- `security-and-secure-coding.instructions.md`
+- `secure-coding.instructions.md`
 
 ## Hard Constraints
 

@@ -46,7 +46,7 @@
 |---|---|---|---|
 | REC-001 | Add `## Hard Constraints` section: no application domain code, no production repository edits, questionnaire required before any scaffolding output. | High | Proposed |
 | REC-002 | Rename `## Core Principles` → `## Focus Areas` or add a canonical `## Focus Areas` section. | Low | Proposed |
-| REC-003 | Add `## Standards` section referencing `naming-conventions.instructions.md` and workspace scaffold conventions. | Low | Proposed |
+| REC-003 | Add `## Standards` section referencing `governance-naming-conventions.instructions.md` and workspace scaffold conventions. | Low | Proposed |
 
 ## History Guard Check
 

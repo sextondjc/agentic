@@ -116,7 +116,7 @@
       "name": "Skill Authoring",
       "keywords": ["skill", "skill author", "skill create", "skill writing", "reusable skill"],
       "requiredSkills": ["skills-authoring"],
-      "optionalSkills": ["validate-customization", "skill-review"],
+      "optionalSkills": ["governance-validate-customization", "skill-review"],
       "excludedSkills": [],
       "description": "Skill creation, documentation, discoverability, and cross-project portability."
     },
@@ -125,7 +125,7 @@
       "name": "Agent Authoring",
       "keywords": ["agent", "agent author", "agent tailoring", ".agent.md"],
       "requiredSkills": ["agent-authoring"],
-      "optionalSkills": ["validate-customization", "skill-review"],
+      "optionalSkills": ["governance-validate-customization", "skill-review"],
       "excludedSkills": [],
       "description": "Agent creation, role definition, boundary tightening, and companion-skill alignment."
     },
@@ -134,7 +134,7 @@
       "name": "Instruction Authoring",
       "keywords": ["instruction", "instruction author", ".instructions.md", "policy", "guidance"],
       "requiredSkills": ["instructions-authoring"],
-      "optionalSkills": ["validate-customization", "skill-review"],
+      "optionalSkills": ["governance-validate-customization", "skill-review"],
       "excludedSkills": [],
       "description": "Instruction file creation, policy-domain scoping, and deterministic rule definition."
     },
@@ -142,7 +142,7 @@
       "id": "customization-curation",
       "name": "Customization Curation",
       "keywords": ["curate", "curation", "copilot-instructions", "import", "catalog"],
-      "requiredSkills": ["curating-copilot-instructions"],
+      "requiredSkills": ["curate-copilot-instructions"],
       "optionalSkills": [],
       "excludedSkills": [],
       "description": "Importing and curating agents, instructions, and skills from catalogs."
@@ -151,7 +151,7 @@
       "id": "customization-validation",
       "name": "Customization Validation",
       "keywords": ["customization validate", "validate custom", "conflict detection"],
-      "requiredSkills": ["validate-customization"],
+      "requiredSkills": ["governance-validate-customization"],
       "optionalSkills": ["skill-review"],
       "excludedSkills": [],
       "description": "Validation of agents, instructions, and skills against quality standards."
@@ -161,7 +161,7 @@
       "name": "Skill Review",
       "keywords": ["skill review", "review skill", "skill assessment", "skill evaluation"],
       "requiredSkills": ["skill-review"],
-      "optionalSkills": ["validate-customization"],
+      "optionalSkills": ["governance-validate-customization"],
       "excludedSkills": [],
       "description": "Skill quality assessment, review history tracking, and remediation recommendations."
     },
@@ -232,7 +232,7 @@
       "id": "governance-audit",
       "name": "Governance Audit",
       "keywords": ["audit", "governance audit", "governance assess", "health"],
-      "requiredSkills": ["audit-governance"],
+      "requiredSkills": ["governance-audit"],
       "optionalSkills": [],
       "excludedSkills": [],
       "description": "Workspace governance assessment, ranked remediation reporting."
@@ -241,7 +241,7 @@
       "id": "governance-health",
       "name": "Governance Health Overview",
       "keywords": ["governance health", "governance overview", "health overview"],
-      "requiredSkills": ["governance-health-overview"],
+      "requiredSkills": ["execute-customization-audit"],
       "optionalSkills": [],
       "excludedSkills": [],
       "description": "Reconciled cross-skill governance health synthesis."
@@ -250,7 +250,7 @@
       "id": "governance-summary",
       "name": "Governance Briefing",
       "keywords": ["governance brief", "governance summary", "governance brief"],
-      "requiredSkills": ["summarize-governance"],
+      "requiredSkills": ["governance-summarize"],
       "optionalSkills": [],
       "excludedSkills": [],
       "description": "Concise single-page governance briefings from existing artifacts."
@@ -269,7 +269,7 @@
       "name": "Mobile UX Design",
       "keywords": ["ux", "user experience", "mobile ux", "flow", "wireframe"],
       "requiredSkills": ["design-mobile-ux"],
-      "optionalSkills": ["design-mobile-ui-prototyping"],
+      "optionalSkills": ["prototype-mobile-ui"],
       "excludedSkills": [],
       "description": "Mobile UX definition, flow wireframing, validation, and engineering handoff."
     },
@@ -277,7 +277,7 @@
       "id": "ui-prototyping",
       "name": "UI Prototyping",
       "keywords": ["prototype", "prototyping", "ui", "high-fidelity", "design handoff"],
-      "requiredSkills": ["design-mobile-ui-prototyping"],
+      "requiredSkills": ["prototype-mobile-ui"],
       "optionalSkills": [],
       "excludedSkills": [],
       "description": "Wireframe-to-prototype evolution, annotation, and engineering handoff."
@@ -286,7 +286,7 @@
       "id": "usability-testing",
       "name": "Usability Testing",
       "keywords": ["usability", "testing script", "ux testing", "user test"],
-      "requiredSkills": ["design-usability-testing-scripts"],
+      "requiredSkills": ["usability-test-scripts"],
       "optionalSkills": [],
       "excludedSkills": [],
       "description": "Usability test script design, scoring rubrics, and findings templates."
@@ -331,7 +331,7 @@
       "id": "naming-conventions",
       "name": "Naming & Taxonomy",
       "keywords": ["naming", "convention", "taxonomy", "standard", "consistent", "nomenclature"],
-      "requiredSkills": ["taxonomy"],
+      "requiredSkills": ["asset-naming-taxonomy"],
       "optionalSkills": [],
       "excludedSkills": [],
       "description": "Consistent naming taxonomy across governance, customizations, documentation, and code."
@@ -446,3 +446,4 @@
     }
   ]
 }
+

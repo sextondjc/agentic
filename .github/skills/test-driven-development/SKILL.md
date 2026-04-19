@@ -51,7 +51,7 @@ Prioritize tests in this order:
 - Quality architecture tests must verify stable project reference contracts and namespace rules.
 - Update expected architecture-reference sets only when a project-reference change is intentional and reviewed.
 
-## When to Use
+## Trigger Conditions
 
 - New features.
 - Bug fixes.

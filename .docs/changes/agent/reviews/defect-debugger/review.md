@@ -47,7 +47,7 @@
 | REC-001 | Rewrite `description` to third-person specialist form stating role and invocation context. | High | Proposed |
 | REC-002 | Add `## Hard Constraints` section defining no architectural refactoring, no feature-scope pivot, no silent mode switch. | High | Proposed |
 | REC-003 | Add `## Focus Areas` section covering reproduction, root-cause analysis, fix, and regression prevention. | Low | Proposed |
-| REC-004 | Add `## Standards` section referencing `testing-strategy.instructions.md` and `security-and-secure-coding.instructions.md`. | Low | Proposed |
+| REC-004 | Add `## Standards` section referencing `testing-strategy.instructions.md` and `secure-coding.instructions.md`. | Low | Proposed |
 
 ## History Guard Check
 

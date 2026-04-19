@@ -2,7 +2,7 @@
 
 ## Metadata
 
-- Review Date: 2026-04-12
+- Review Date: 2026-04-18
 - Reviewer Skill: skill-review
 - Target Skill: layer-boundaries
 - Target Path: .github/skills/layer-boundaries/SKILL.md

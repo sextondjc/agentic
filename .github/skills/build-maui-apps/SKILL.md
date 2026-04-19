@@ -9,7 +9,7 @@ description: Use when building or upgrading .NET MAUI mobile apps and you need a
 
 Provide a repeatable, source-backed workflow for delivering production-grade .NET MAUI mobile applications.
 
-## When to Use
+## Trigger Conditions
 
 - Starting a new .NET MAUI mobile app.
 - Modernizing an existing .NET MAUI mobile app.
