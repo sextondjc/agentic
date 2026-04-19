@@ -6,7 +6,7 @@ Self-contained, approval-gated compendium synchronization.
 
 - Version metadata: `.github/skills/sync-compendium/references/.compendium/version.json`
 - Lock + artifact index state: `.github/skills/sync-compendium/references/.compendium/`
-- Generated plan + reports: Caller-specified paths (no defaults; fully configurable)
+- Generated plan + reports: Wrapper defaults to `.github/skills/sync-compendium/references/.compendium/`; low-level scripts remain caller-configurable.
 - No root-level `.compendium` or `.artifacts` paths are required.
 
 ## Scripts
@@ -17,6 +17,10 @@ Self-contained, approval-gated compendium synchronization.
   - Generates dry-run plan; caller specifies output path via `PlanOutPath` parameter (required)
 - `references/scripts/Apply-CompendiumSync.ps1`
   - Applies approved actions only; caller specifies sync report path via `SyncReportPath` parameter (required)
+- `references/scripts/Invoke-CompendiumSync.ps1`
+  - Wrapper entrypoint; derives source metadata and writes default plan/report outputs under `.github/skills/sync-compendium/references/.compendium/`
+- `references/scripts/Bootstrap-CompendiumSyncEngine.ps1`
+  - Bootstraps sync engine assets (including version metadata) for legacy callers before normal sync runs
 
 ## Automated Hash Check
 
@@ -30,7 +34,8 @@ Self-contained, approval-gated compendium synchronization.
 
 - `target_repo_root`: current workspace root
 - `target_index_path`: `.github/skills/sync-compendium/references/.compendium/artifact-index.json`
-- `source_manifest_path`: `.github/skills/sync-compendium/references/.compendium/manifest.json`
+- `plan_out_path`: `.github/skills/sync-compendium/references/.compendium/latest-plan.json`
+- `sync_report_path`: `.github/skills/sync-compendium/references/.compendium/latest-sync-report.json`
 
 ## Safety Rules
 
@@ -38,4 +43,4 @@ Self-contained, approval-gated compendium synchronization.
 - `source: local` and `ownershipMode: local` are never overwritten.
 - `ownershipMode: extended` changes always require manual review.
 - Non-compendium sources are preserved by default.
-- `hold` / `missing-in-source` outcomes are not deleted by this skill; decommission runs in a separate approved workflow.
+- If plan contains `hold` / `missing-in-source` outcomes, same-flow cleanup is mandatory: apply must include `-Prune` and approved removals for every hold artifact ID.

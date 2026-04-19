@@ -172,6 +172,7 @@ $artifactIndexMap = Convert-IndexToMap -Items $artifactIndex
 
 $appliedCount = 0
 $skippedCount = 0
+$preservedCount = 0
 $manualReviewCount = 0
 $heldCount = 0
 $rejectedCount = 0
@@ -194,6 +195,9 @@ foreach ($action in $plan.actions) {
             applied    = $false
             reason     = 'skipped'
         })
+        if ($action.action -eq 'preserve') {
+            $preservedCount++
+        }
         $skippedCount++
         continue
     }
@@ -339,6 +343,7 @@ $syncReport = @{
     approvedAt       = (Get-Date).ToUniversalTime().ToString('o')
     appliedCount     = $appliedCount
     skippedCount     = $skippedCount
+    preservedCount   = $preservedCount
     manualReviewCount = $manualReviewCount
     heldCount = $heldCount
     rejectedCount = $rejectedCount
@@ -350,4 +355,4 @@ if ($PSCmdlet.ShouldProcess($reportPath, 'Write sync report')) {
     Write-Host "Sync report written: $reportPath"
 }
 
-Write-Host "Sync complete: $appliedCount applied, $skippedCount skipped"
+Write-Host "Sync complete: $appliedCount applied, $preservedCount preserved, $skippedCount skipped"

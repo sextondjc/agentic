@@ -92,6 +92,7 @@ $bootstrapPaths = @(
     [pscustomobject]@{ path = '.github/skills/sync-compendium/references/scripts/Initialize-CompendiumImport.ps1'; required = $true },
     [pscustomobject]@{ path = '.github/skills/prune-sync-assets/references/scripts/Invoke-PruneSyncAssets.ps1'; required = $true },
     [pscustomobject]@{ path = '.github/skills/sync-compendium/references/sync-decision-matrix.md'; required = $true },
+    [pscustomobject]@{ path = '.github/skills/sync-compendium/references/.compendium/version.json'; required = $true },
     [pscustomobject]@{ path = '.github/skills/sync-compendium/SKILL.md'; required = $true },
     [pscustomobject]@{ path = '.github/prompts/sync-compendium.prompt.md'; required = $true },
     [pscustomobject]@{ path = '.github/skills/sync-compendium/references/scripts/Invoke-CompendiumSync.ps1'; required = $false }

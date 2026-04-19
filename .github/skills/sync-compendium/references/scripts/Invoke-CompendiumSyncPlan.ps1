@@ -150,6 +150,7 @@ function Get-ArtifactTypeFromPath {
     if ($Path -like '.github/skills/*/SKILL.md') { return 'skill' }
     if ($Path -like '.github/skills/*/references/scripts/*.ps1') { return 'script' }
     if ($Path -like '.github/skills/*/references/*.md') { return 'doc' }
+    if ($Path -eq '.github/skills/sync-compendium/references/.compendium/version.json') { return 'other' }
     if ($Path -like '.github/prompts/*.prompt.md') { return 'prompt' }
     if ($Path -like '.github/agents/*.agent.md') { return 'agent' }
     if ($Path -eq '.github/copilot-instructions.md') { return 'instruction' }
@@ -164,6 +165,7 @@ function Test-IsCompendiumArtifactPath {
         $Path -like '.github/skills/*/SKILL.md' -or
         $Path -like '.github/skills/*/references/*.md' -or
         $Path -like '.github/skills/*/references/scripts/*.ps1' -or
+        $Path -eq '.github/skills/sync-compendium/references/.compendium/version.json' -or
         $Path -like '.github/prompts/*.prompt.md' -or
         $Path -like '.github/agents/*.agent.md' -or
         $Path -eq '.github/copilot-instructions.md'

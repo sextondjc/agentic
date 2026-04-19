@@ -18,7 +18,7 @@ Use this matrix to classify each artifact action from a sync dry-run plan.
 | `ownershipMode=managed` and no local drift and source changed | Update candidate | Yes | Safe replace candidate once approved. |
 | `ownershipMode=managed` and local drift detected | Manual review | Yes | Must inspect and resolve before update. |
 | `ownershipMode=extended` and source changed | Manual merge | Yes | Update managed sections only; preserve local extension blocks. |
-| Managed artifact missing from source manifest | Hold | Yes | Approver chooses keep, archive, or remove. |
+| Managed artifact missing from source manifest | Hold | Yes | Same-flow prune approval is mandatory before apply completes. |
 | New artifact in source manifest | Add candidate | Yes | Require explicit acceptance. |
 
 ## Local Drift Detection
@@ -30,8 +30,9 @@ Mark as local drift when `contentHash != lastImportedHash` for a `managed` artif
 1. Generate dry-run plan.
 2. Group actions by `update`, `add`, `manual-review`, `hold`, and `preserve`.
 3. Require explicit approver decision per non-noop action.
-4. Apply only approved items.
-5. Write lock file and sync report.
+4. When hold/missing-in-source items exist, collect approved removals for all hold artifact IDs in the same apply flow.
+5. Apply only approved items.
+6. Write lock file and sync report.
 
 ## Required Sync Report Fields
 
@@ -42,9 +43,11 @@ Mark as local drift when `contentHash != lastImportedHash` for a `managed` artif
 - `approvedBy`
 - `approvedAt`
 - `appliedCount`
+- `skippedCount`
 - `preservedCount`
 - `manualReviewCount`
 - `heldCount`
+- `rejectedCount`
 
 ## Rejection Conditions
 
