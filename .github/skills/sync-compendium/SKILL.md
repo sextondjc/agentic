@@ -17,6 +17,7 @@ Use this skill when:
 
 - A target repository needs to import this compendium for the first time (run `Initialize-CompendiumImport.ps1` first).
 - A target repository needs to update from one compendium version to another (lock.version < source_version).
+- This compendium needs to interrogate an external repository (for example `github/awesome-copilot`) without cloning or direct import.
 - Teams must confirm provenance (source repo, version, commit SHA) for imported assets.
 - Sync operations must preserve local bespoke customizations (ownership_mode=local never overwritten).
 - Approval evidence must be recorded immutably in lock metadata.
@@ -41,6 +42,12 @@ The skill reads `.github/skills/sync-compendium/references/.compendium/version.j
 3. **Lock metadata update**: `.github/skills/sync-compendium/references/.compendium/lock.json` with sourceRepo, version, commit, approvedBy, approvedAt, planId
 4. **Sync report** (JSON): Applied/skipped/not-approved/manual-review/held/rejected counts; written to caller-specified path; immutable audit trail
 
+When using interrogation mode (no import/apply), produce:
+
+1. **Candidate manifest** (JSON): Read-only inventory of candidate customization artifacts discovered from the source repository tree, commit-pinned and path-filtered
+2. **Evidence bundle** (JSON): Workstream-linked metadata with approval chain, security sign-off reference, rollback reference, and policy check results
+3. **Decision template instance**: Durable markdown record for Adopt / Adapt / Reject disposition per candidate group
+
 ## Safety Rules (Non-Negotiable)
 
 - **Explicit approval mandatory**: No auto-apply; human sign-off required for every non-noop action group
@@ -50,6 +57,8 @@ The skill reads `.github/skills/sync-compendium/references/.compendium/version.j
 - **Plan-first, no blind apply**: No apply step permitted until dry-run plan exists, has been reviewed, and approval is recorded
 - **Mandatory same-flow cleanup**: If plan contains `hold + missing-in-source`, apply must include approved prune removals in the same run
 - **Lock immutability**: Lock file serves as proof of import state and enables idempotent re-runs
+- **Interrogate-only external intake**: External repositories must be interrogated through GitHub API and raw content links; no clone-and-import path is permitted
+- **Adapt-not-import**: External content may inform local changes, but direct bulk adoption is prohibited without explicit governed adaptation decisions
 
 ## Workflow (7 Steps)
 
@@ -108,6 +117,16 @@ Confirm applied state matches plan:
 - Inspect the sync report written to the `SyncReportPath` from Step 5 for rejection or manual-review flags
 - If manual-review items exist, require separate merge prior to next sync
 
+## External Repository Interrogation Mode (No Apply)
+
+Use this mode when gathering candidates from non-compendium sources while preserving governance controls.
+
+1. Run `Invoke-CompendiumSourceInterrogation.ps1` with source repository URL and required governance metadata.
+2. Persist `candidate-manifest.json` and `evidence-bundle.json` under `.github/skills/sync-compendium/references/.compendium/external-intake/`.
+3. Open [external-ingestion-decision-template.md](./references/external-ingestion-decision-template.md) and record Adopt / Adapt / Reject outcomes.
+4. For approved adaptation candidates, create local implementation tasks; do not copy external artifacts verbatim.
+5. Promotion is blocked until approval chain and security sign-off references are present in the evidence bundle.
+
 ## Decision Logic (8 Rules, Implemented in Invoke-CompendiumSyncPlan.ps1)
 
 | Condition | Decision | Reason |
@@ -126,6 +145,7 @@ Confirm applied state matches plan:
 
 - [Bootstrap-CompendiumSyncEngine.ps1](./references/scripts/Bootstrap-CompendiumSyncEngine.ps1): One-time bootstrap for legacy callers; updates sync engine files from source so subsequent sync runs are fully automated.
 - [Invoke-CompendiumSync.ps1](./references/scripts/Invoke-CompendiumSync.ps1): URL-first orchestration wrapper; generates plan and enforces mandatory same-flow prune cleanup when hold items exist.
+- [Invoke-CompendiumSourceInterrogation.ps1](./references/scripts/Invoke-CompendiumSourceInterrogation.ps1): Read-only external repository interrogation; emits candidate manifest and governance evidence bundle without cloning or applying imports.
 - [Initialize-CompendiumImport.ps1](./references/scripts/Initialize-CompendiumImport.ps1): First-import setup; creates lock + artifact index stub
 - [Invoke-CompendiumSyncPlan.ps1](./references/scripts/Invoke-CompendiumSyncPlan.ps1): Non-interactive; generates deterministic dry-run plan
 - [Apply-CompendiumSync.ps1](./references/scripts/Apply-CompendiumSync.ps1): Executes approved actions; updates lock + index; writes audit report

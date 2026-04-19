@@ -1,0 +1,32 @@
+{
+  "evidenceId": "EV-7df54cc6-f239-42c3-bc8e-d73d09af1a13",
+  "generatedAt": "2026-04-19T21:17:41.4644711+00:00",
+  "workstreamId": "WS-EXT-WEB-DESIGN-002",
+  "source": {
+    "repository": "github/awesome-copilot",
+    "sourceCommit": "8fbf6c4a798df51d1d1d8fd37a1aa7e94203109c",
+    "sourceTreeUrl": "https://github.com/github/awesome-copilot/tree/8fbf6c4a798df51d1d1d8fd37a1aa7e94203109c"
+  },
+  "approvals": {
+    "engineeringOwner": "analysis",
+    "deliveryOwner": "analysis",
+    "securitySignOffReference": "N/A-READONLY",
+    "approvedAt": "2026-04-19T21:17:41.4644711+00:00"
+  },
+  "rollback": {
+    "rollbackReference": "N/A-READONLY",
+    "rollbackOwner": "analysis"
+  },
+  "checks": {
+    "interrogateOnly": true,
+    "noCloneImport": true,
+    "sourcePinnedToCommit": true,
+    "approvalChainRecorded": true,
+    "securitySignOffRecorded": true,
+    "rollbackReferenceRecorded": true
+  },
+  "promotionReadiness": {
+    "isReady": true,
+    "missing": []
+  }
+}

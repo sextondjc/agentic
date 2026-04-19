@@ -1,0 +1,71 @@
+name: Governed Compendium Interrogation
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_repository_url:
+        description: GitHub repository URL to interrogate
+        required: true
+        type: string
+      workstream_id:
+        description: Workstream ID for traceability
+        required: true
+        type: string
+      engineering_owner:
+        description: Engineering approver name or role
+        required: true
+        type: string
+      delivery_owner:
+        description: Delivery approver name or role
+        required: true
+        type: string
+      security_signoff_reference:
+        description: Security sign-off reference ID
+        required: false
+        type: string
+      rollback_reference:
+        description: Rollback runbook or reference ID
+        required: false
+        type: string
+      max_candidates:
+        description: Maximum candidates to keep
+        required: false
+        default: '150'
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: governed-compendium-interrogation
+  cancel-in-progress: false
+
+jobs:
+  interrogate:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run external interrogation (read-only)
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          Set-StrictMode -Version Latest
+          $ErrorActionPreference = 'Stop'
+
+          & ./.github/skills/sync-compendium/references/scripts/Invoke-CompendiumSourceInterrogation.ps1 `
+            -SourceRepositoryUrl "${{ inputs.source_repository_url }}" `
+            -WorkstreamId "${{ inputs.workstream_id }}" `
+            -EngineeringOwner "${{ inputs.engineering_owner }}" `
+            -DeliveryOwner "${{ inputs.delivery_owner }}" `
+            -SecuritySignOffReference "${{ inputs.security_signoff_reference }}" `
+            -RollbackReference "${{ inputs.rollback_reference }}" `
+            -MaxCandidates ([int]"${{ inputs.max_candidates }}")
+
+      - name: Upload interrogation artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: governed-compendium-interrogation
+          path: ./.github/skills/sync-compendium/references/.compendium/external-intake/*.json

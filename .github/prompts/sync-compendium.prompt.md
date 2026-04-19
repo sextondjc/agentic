@@ -14,6 +14,14 @@ Use the `sync-compendium` skill as the primary workflow.
 Provide only:
 - `source_repository_url`: GitHub repository URL (for example `https://github.com/sextondjc/agentic`)
 
+Optional for interrogation-only mode:
+- `mode`: `interrogate` (collect candidates and evidence only; no apply)
+- `workstream_id`: Traceable planning/workstream identifier
+- `engineering_owner`: Named approver for engineering
+- `delivery_owner`: Named approver for product/delivery
+- `security_signoff_reference`: Security evidence or approval reference
+- `rollback_reference`: Rollback runbook/reference identifier
+
 Everything else is derived automatically.
 
 ## Automation Contract
@@ -58,6 +66,18 @@ Preferred execution entrypoint:
 	-SourceRepositoryUrl https://github.com/sextondjc/agentic
 ```
 
+Interrogate external source without cloning/importing:
+
+```powershell
+./.github/skills/sync-compendium/references/scripts/Invoke-CompendiumSourceInterrogation.ps1 \
+	-SourceRepositoryUrl https://github.com/github/awesome-copilot \
+	-WorkstreamId WS-EXT-INTAKE-001 \
+	-EngineeringOwner eng-owner \
+	-DeliveryOwner delivery-owner \
+	-SecuritySignOffReference SEC-REF-123 \
+	-RollbackReference RB-PLAYBOOK-01
+```
+
 Apply approved actions:
 
 ```powershell
@@ -84,6 +104,12 @@ Bootstrap outcome:
 3. Applied-change summary with preserved/held/manual-review counts.
 4. Updated lock metadata at `.github/skills/sync-compendium/references/.compendium/lock.json`.
 5. Sync report at `.github/skills/sync-compendium/references/.compendium/latest-sync-report.json`.
+
+For `mode=interrogate`:
+
+1. Candidate manifest at `.github/skills/sync-compendium/references/.compendium/external-intake/latest-candidate-manifest.json`.
+2. Evidence bundle at `.github/skills/sync-compendium/references/.compendium/external-intake/latest-evidence-bundle.json`.
+3. Decision record using `external-ingestion-decision-template.md` under the skill references.
 
 ## Verification Checklist
 
