@@ -49,6 +49,23 @@ The agent resolves source metadata from GitHub automatically:
 7. Apply only approved add/update actions using `Apply-CompendiumSync.ps1`.
 8. If `hold + missing-in-source` actions exist, cleanup is mandatory in the same flow: require approved removals and run prune workflow in that same execution.
 9. Validate outputs: lock file, artifact index, sync report, and prune report when hold items were present.
+10. If imported artifacts include `.github/copilot-instructions.md` or new PM and delivery skills under `.github/skills/`, update the target workspace curation so the delivery bundle is featured rather than left index-only.
+
+## PM And Delivery Bundle Rule
+
+When this compendium is imported into a target repository, treat these skills as the standard agent-usable PM and delivery bundle:
+
+- `delivery-operating-system`
+- `opportunity-mapping`
+- `backlog-structuring`
+- `acceptance-criteria`
+- `flow-metrics`
+
+Post-sync curation expectation for target repositories:
+
+- Feature `delivery-operating-system` as the default PM and delivery intake skill when agent-heavy delivery coordination is in scope.
+- Surface the other four skills as the supporting discovery, backlog, done-gate, and flow-control companions.
+- Keep `skill-discovery-index.md` as the full inventory, but do not rely on the index alone when these skills are relevant to the repository mission.
 
 ## One-Command Wrapper
 
@@ -119,3 +136,4 @@ For `mode=interrogate`:
 - [ ] No `local` ownership artifact is overwritten.
 - [ ] No apply action runs without explicit approval evidence.
 - [ ] Plan source version and lock metadata source version are consistent.
+- [ ] Target-repo curation features the PM and delivery bundle when those imported skills are in scope.

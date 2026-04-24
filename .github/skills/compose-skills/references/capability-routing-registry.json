@@ -103,6 +103,51 @@
       "description": "Syrx-based repository implementation, SQL parameterization, and data access patterns."
     },
     {
+      "id": "sql-server-orchestration",
+      "name": "SQL Server Orchestration",
+      "keywords": ["sql server", "sqlserver", "t-sql", "dba", "database administration", "query tuning", "backup restore", "always on", "query store", "dbatools"],
+      "requiredSkills": ["orchestrate-sql-server"],
+      "optionalSkills": ["sql-server-standards", "sql-server-diagnostics", "sql-server-query-tuning", "sql-server-security", "sql-server-automation"],
+      "excludedSkills": [],
+      "description": "Deterministic intake and phased ownership for SQL Server work that spans multiple capability areas."
+    },
+    {
+      "id": "sql-server-query-tuning",
+      "name": "SQL Server Query Tuning",
+      "keywords": ["slow query", "execution plan", "query store", "parameter sniffing", "index tuning", "logical reads", "plan regression"],
+      "requiredSkills": ["sql-server-query-tuning"],
+      "optionalSkills": ["sql-server-standards", "sql-server-diagnostics"],
+      "excludedSkills": [],
+      "description": "Evidence-first SQL Server query tuning and regression-safe plan improvement."
+    },
+    {
+      "id": "sql-server-diagnostics",
+      "name": "SQL Server Diagnostics",
+      "keywords": ["wait stats", "blocking", "tempdb", "memory pressure", "io latency", "xe", "extended events", "diagnostics"],
+      "requiredSkills": ["sql-server-diagnostics"],
+      "optionalSkills": ["sql-server-query-tuning", "sql-server-automation"],
+      "excludedSkills": [],
+      "description": "SQL Server health triage, bottleneck classification, and evidence-first diagnostic workflows."
+    },
+    {
+      "id": "sql-server-security",
+      "name": "SQL Server Security",
+      "keywords": ["sql security", "tde", "audit", "permission", "linked server", "certificate", "least privilege", "surface area"],
+      "requiredSkills": ["sql-server-security"],
+      "optionalSkills": ["sql-server-standards", "sql-server-automation"],
+      "excludedSkills": [],
+      "description": "SQL Server permission, encryption, auditing, and hardening guidance."
+    },
+    {
+      "id": "sql-server-automation",
+      "name": "SQL Server Automation",
+      "keywords": ["dbatools", "backup", "restore", "migration", "maintenance", "sql agent", "inventory", "automation"],
+      "requiredSkills": ["sql-server-automation"],
+      "optionalSkills": ["sql-server-diagnostics", "sql-server-security"],
+      "excludedSkills": [],
+      "description": "Repeatable SQL Server operational automation, maintenance, migration, and evidence-producing workflows."
+    },
+    {
       "id": "validation-and-guards",
       "name": "Validation & Guards",
       "keywords": ["validate", "validation", "guard", "contract", "constraint", "input validation"],

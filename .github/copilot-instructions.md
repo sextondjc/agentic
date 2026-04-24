@@ -75,11 +75,44 @@ Use [skill-discovery-index.md](./skills/skill-discovery-index.md) as the single 
 
 When requests route through `orchestrator`, discover and select relevant skills from the index instead of maintaining a duplicated skills list here.
 
+## Preferred Skills
+
+Use these skills as the default PM and delivery bundle when work needs agent-usable planning, execution control, and release-ready handoffs across projects.
+
+- `delivery-orchestration` - Umbrella lifecycle intake for work that spans request intake, planning, execution control, forecasting, release, change control, and post-ship learning.
+- `delivery-operating-system` - Default intake for project management and delivery operating model work spanning discovery, planning, execution flow, release control, and learning loops.
+- `opportunity-mapping` - Turn goals, requests, and discovery inputs into explicit opportunity trees, solution hypotheses, and assumption-test plans.
+- `backlog-structuring` - Define backlog hierarchy, item schema, ready-state rules, and deferral discipline for portable execution planning.
+- `acceptance-criteria` - Convert slices and work items into testable done gates, scenario boundaries, and agent-usable completion rules.
+- `flow-metrics` - Establish workflow states, WIP policy, flow metrics, and escalation rules for measurable delivery control.
+
+Use adjacent existing skills with this bundle when the project needs them:
+
+- `work-intake-governance` for pre-backlog admission control across requests, incidents, and stakeholder asks.
+- `delivery-forecasting` for confidence-based scope and date forecasting from flow evidence.
+- `outcome-review` for expected-versus-actual post-ship decision making.
+- `product-scope-slicing` for release candidate decomposition and prioritised slices.
+- `governance-delivery` for RAID management, dependency mapping, and milestone tracking.
+- `release-readiness` for promotion evidence, rollback confirmation, and go/no-go sign-off.
+- `scope-change-control` for mid-flight scope additions, descopes, swaps, and exception handling when delivery is under change pressure.
+
+Use this SQL Server bundle when requests target T-SQL, DBA operations, performance investigation, or SQL security across projects:
+
+- `orchestrate-sql-server` for one SQL intake that spans multiple capability areas.
+- `sql-server-standards` for safe, parameterized, version-aware SQL authoring and review.
+- `sql-server-diagnostics` for evidence-first SQL Server bottleneck and health triage.
+- `sql-server-query-tuning` for execution-plan and Query Store driven performance improvement.
+- `sql-server-security` for permissions, auditing, encryption, and SQL surface-area hardening.
+- `sql-server-automation` for repeatable operational workflows using DBA-safe automation patterns.
+
 ## Imported Customization Assets
 
 - `skills-authoring` (imported from an upstream skill set and renamed)
 - `test-driven-development` (supporting workflow dependency)
 - `writing-plans` (plan authoring workflow adapted to `.docs/plans`)
+- `delivery-operating-system`, `opportunity-mapping`, `backlog-structuring`, `acceptance-criteria`, and `flow-metrics` (portable PM and delivery operating bundle for agent-heavy projects)
+- `delivery-orchestration` (umbrella PM lifecycle skill for deterministic end-to-end delivery coordination)
+- `work-intake-governance`, `delivery-forecasting`, `outcome-review`, and `scope-change-control` (high-value adjacent PM and delivery controls for intake, forecasting, post-ship review, and change pressure)
 - `code-reviewer` (review specialist agent)
 - `plans` (plan execution workflow)
 - `task-execution` (same-session per-task implementation workflow)
@@ -88,6 +121,7 @@ When requests route through `orchestrator`, discover and select relevant skills 
 - `design-web-ux` (web UX flow from research to handoff)
 - `build-web-frontend` (web frontend implementation and review workflow)
 - `build-mobile-apps` (cross-platform mobile build workflow)
+- `orchestrate-sql-server`, `sql-server-standards`, `sql-server-diagnostics`, `sql-server-query-tuning`, `sql-server-security`, and `sql-server-automation` (cross-project SQL Server skill family for intake, safety, diagnostics, tuning, security, and operations)
 
 ## Workspace Design Rules
 

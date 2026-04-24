@@ -5,9 +5,43 @@
 - Skill Name: sql-server-standards
 - Skill Path: .github/skills/sql-server-standards/SKILL.md
 - Created: 2026-04-12
-- Last Reviewed: 2026-04-18
+- Last Reviewed: 2026-04-24
 
 ## Review Entries
+
+### 2026-04-24 - Review SQL-FAMILY-AUDIT-001
+
+- Outcome: Pass
+- Reviewer: audit-skill
+- Source Report: .docs/changes/skill/reviews/sql-server-standards/review.md
+
+#### Findings
+
+| Standard ID | Result | Notes |
+|---|---|---|
+| SKR-M1 | Pass | Skill scope remains limited to safe, version-aware SQL standards and review. |
+| SKR-M2 | Pass | Front matter and Markdown structure are valid. |
+| SKR-M3 | Pass | Trigger conditions are explicit and concrete. |
+| SKR-M4 | Pass | Workflow is self-contained with no sibling-skill delegation. |
+| SKR-S1 | Pass | Source catalog and exception template are now present. |
+| SKR-S2 | Pass | No conflicting overlap found in the SQL family review. |
+| SKR-S3 | Pass | Links resolve to on-disk assets. |
+| SKR-S4 | Pass | Inputs, outputs, and completion checks are explicit. |
+| SKR-S5 | Pass | Wording remains economical after the L4 expansion. |
+
+#### Recommendation Ledger
+
+| Recommendation ID | Description | Status | Finalized On | Notes |
+|---|---|---|---|---|
+| REC-001 | Add references assets (templates/examples/tools) for this skill. | Implemented | 2026-04-24 | Closed by the addition of a source catalog and SQL exception template. |
+| REC-000 | No recommendations. | Implemented | 2026-04-24 | No new open actions. |
+
+#### Deny-list Snapshot
+
+- Rejected IDs: None
+- Removed IDs: None
+- Illegitimate IDs: None
+---
 
 ### 2026-04-12 - Review FULL-AUDIT-002
 

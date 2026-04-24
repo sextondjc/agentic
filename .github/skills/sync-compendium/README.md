@@ -44,3 +44,21 @@ Self-contained, approval-gated compendium synchronization.
 - `ownershipMode: extended` changes always require manual review.
 - Non-compendium sources are preserved by default.
 - If plan contains `hold` / `missing-in-source` outcomes, same-flow cleanup is mandatory: apply must include `-Prune` and approved removals for every hold artifact ID.
+
+## Imported PM And Delivery Bundle
+
+Compendium sync already discovers new skills from the source repository tree, so PM and delivery skills under `.github/skills/*/SKILL.md` are importable without a separate manifest update.
+
+Treat this bundle as the default portable PM and delivery set when curating target repositories after sync:
+
+- `delivery-operating-system`
+- `opportunity-mapping`
+- `backlog-structuring`
+- `acceptance-criteria`
+- `flow-metrics`
+
+Post-sync curation rule:
+
+- If target-repo mission includes agent-assisted planning or delivery control, feature `delivery-operating-system` in the target `copilot-instructions.md` as the default PM and delivery intake skill.
+- Surface the other four skills as supporting discovery, backlog, acceptance, and flow-control capabilities.
+- Do not rely on `skill-discovery-index.md` alone when the repository should actively steer users toward this bundle.
