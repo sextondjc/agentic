@@ -75,10 +75,10 @@ Optional inputs:
 
 - A per-instruction review report stored using template: [audit-instructions-report-template.md](./references/audit-instructions-report-template.md).
 - A conflict report is not produced by this skill; conflict detection across instructions or with other customization types is a type-governance concern.
-- Updated per-instruction history at: `__DOCS_ROOT__/changes/instruction/history/<instruction-name>-history.md`.
+- Updated per-instruction history at: `.docs/changes/instruction/history/<instruction-name>-history.md`.
 - Review result summaries MUST be returned in Markdown grid format (tables), not prose lists.
 - Aggregate multi-instruction results MUST include at least one consolidated grid with per-instruction outcomes.
-- Per-instruction review files MUST be stored under `__DOCS_ROOT__/changes/instruction/reviews/<instruction-name>/`.
+- Per-instruction review files MUST be stored under `.docs/changes/instruction/reviews/<instruction-name>/`.
 - Reasoning package per reviewed instruction: assumptions, trade-offs, blockers, and one recommendation.
 - Source-governance summary when source validation is requested.
 - Updated [source-catalog.md](./references/source-catalog.md) when source tracking changes are made.
@@ -93,7 +93,7 @@ Optional inputs:
 ## Workflow
 
 1. Resolve target instructions and collect current `.instructions.md` files.
-2. Load the per-instruction history file from `__DOCS_ROOT__/changes/instruction/history/` before analysis.
+2. Load the per-instruction history file from `.docs/changes/instruction/history/` before analysis.
 3. Build a recommendation deny-list from history entries marked Rejected, Removed, or Illegitimate.
 4. Re-evaluate tracked sources in [source-catalog.md](./references/source-catalog.md) for freshness and current `.instructions.md` behavior before source-sensitive checks.
 5. Build coverage across all mandatory branches: policy-domain scope, frontmatter validity, `applyTo` precision, workflow leakage, instruction-file conflicts, boundary conflicts, brevity, source alignment, and history alignment.
@@ -113,13 +113,13 @@ Optional inputs:
 
 ## Storage Rules
 
-- Store each instruction review under `__DOCS_ROOT__/changes/instruction/reviews/<instruction-name>/`.
+- Store each instruction review under `.docs/changes/instruction/reviews/<instruction-name>/`.
 - Use descriptive file names: `review.md`. Use versioned names (for example, `review-v2.md`) to disambiguate repeated runs.
-- Keep aggregate cross-instruction summaries in `__DOCS_ROOT__/changes/instruction/reviews/`.
+- Keep aggregate cross-instruction summaries in `.docs/changes/instruction/reviews/`.
 
 ## History Management Rules
 
-- Keep one history file per reviewed instruction at `__DOCS_ROOT__/changes/instruction/history/<instruction-name>-history.md`.
+- Keep one history file per reviewed instruction at `.docs/changes/instruction/history/<instruction-name>-history.md`.
 - Append new review entries; never rewrite prior decisions.
 - Track each recommendation with status: Proposed, Accepted, Rejected, Removed, Implemented.
 - Before publishing recommendations, remove any item that matches prior Rejected or Removed entries unless the user explicitly re-opens it.

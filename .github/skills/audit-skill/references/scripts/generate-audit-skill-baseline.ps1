@@ -6,7 +6,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $skillsRoot = Join-Path $RootPath '.github/skills'
-$reportsDir = Join-Path $RootPath '__DOCS_ROOT__/changes/skill/reviews'
+$reportsDir = Join-Path $RootPath '.docs/changes/skill/reviews'
 $historyDir = Join-Path $skillsRoot 'skill-review/references/history'
 
 New-Item -ItemType Directory -Force -Path $reportsDir | Out-Null
@@ -336,7 +336,7 @@ $recommendationText
 
 - Outcome: $outcome
 - Reviewer: skill-review
-- Source Report: __DOCS_ROOT__/changes/skill/reviews/$skill/$reportFileName
+- Source Report: .docs/changes/skill/reviews/$skill/$reportFileName
 
 #### Findings
 

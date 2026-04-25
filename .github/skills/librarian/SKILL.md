@@ -13,7 +13,7 @@ This skill has one purpose: documentation corpus governance and organization.
 
 ## Link Integrity Ownership
 
-- Librarian is the designated owner for documentation link integrity across `__DOCS_ROOT__` and governance-facing markdown references.
+- Librarian is the designated owner for documentation link integrity across `.docs` and governance-facing markdown references.
 - Every librarian curation pass MUST execute `.github/scripts/powershell/test-governance-link-graph.ps1` and include the result in the Link integrity status output.
 - When deterministic repairs are available, librarian MUST apply or propose exact replacements and rerun link validation before closing the pass.
 - When deterministic repairs are not available, librarian MUST publish an unresolved-link ledger with owner, target path, and required follow-up action.
@@ -27,7 +27,7 @@ These rules apply to all documents and folders recommended or created by this sk
 |---|---|
 | File names | Lowercase, kebab-case (hyphens only). No spaces or underscores. |
 | Date prefixes | **PROHIBITED. No exceptions.** Date metadata belongs in file frontmatter or content, never in the filename or folder name. |
-| Folder names | Lowercase, single word per level. No camelCase, PascalCase, hyphens, or dots unless the dot is a dotfolder prefix (`__DOCS_ROOT__`, `.archive`). |
+| Folder names | Lowercase, single word per level. No camelCase, PascalCase, hyphens, or dots unless the dot is a dotfolder prefix (`.docs`, `.archive`). |
 | Compound names | Split into parent/child hierarchy. `GovernanceReports` → `governance/reports`. |
 | Hierarchy direction | Least granular → most granular. `plans/feature/auth` not `auth/feature/plans`. |
 | File content accuracy | A file's name must reflect its actual content domain. `README.md` is reserved for folder entry-point guides only. Do not name a policy document, index, or report `README.md`. |
@@ -55,7 +55,7 @@ Any workspace may vary from this model; the librarian recommends, not mandates, 
 
 ## Workflow
 
-1. Determine the documentation root: default to `__DOCS_ROOT__/` unless the user or workspace rules specify a different root.
+1. Determine the documentation root: default to `.docs/` unless the user or workspace rules specify a different root.
 2. Scan the target directory tree and collect all document paths.
 3. Pressure-test ambiguous naming or structural decisions against these naming and hierarchy rules before proposing changes.
 4. Build a flat manifest: path, title (from H1 or filename), category, word count indicator.
@@ -74,7 +74,7 @@ Any workspace may vary from this model; the librarian recommends, not mandates, 
 ## Governance Integration
 
 - Cross-reference findings with active governance standards to flag violations.
-- Keep `__DOCS_ROOT__/` planning artifact cleanup decisions explicit in the curation report.
+- Keep `.docs/` planning artifact cleanup decisions explicit in the curation report.
 - Flag governance-sensitive documents (ADRs, decision records, ledgers) as keep-by-default.
 
 ## Migration Notes
@@ -106,7 +106,7 @@ Invoke this skill when any of the following is true:
 
 ## Inputs
 
-- Documentation root path. Default: `__DOCS_ROOT__/`.
+- Documentation root path. Default: `.docs/`.
 - Workspace root path (or scoped sub-path).
 - Optional: focus domain (for example, `docs/` only).
 - Optional: user-approved exceptions to naming rules.

@@ -5,7 +5,7 @@ These scripts are reusable assets for the `audit-skill` workflow.
 ## Scripts
 
 - generate-audit-skill-baseline.ps1
-  - Purpose: Runs a baseline review across all workspace skills, generates per-skill reports in __DOCS_ROOT__/changes/skill/reviews/<skill-name>/review.md, and updates history files plus history index.
+  - Purpose: Runs a baseline review across all workspace skills, generates per-skill reports in .docs/changes/skill/reviews/<skill-name>/review.md, and updates history files plus history index.
   - Usage:
     - pwsh ./.github/skills/audit-skill/references/scripts/generate-audit-skill-baseline.ps1
     - pwsh ./.github/skills/audit-skill/references/scripts/generate-audit-skill-baseline.ps1 -RootPath c:/Projects/agentic -ReviewDate 2026-03-28
@@ -49,6 +49,6 @@ These scripts are reusable assets for the `audit-skill` workflow.
 ## Notes
 
 - These scripts are intended as review support assets (SKR-S1) and should be versioned with the skill.
-- Keep ad hoc run artifacts out of __DOCS_ROOT__/changes/skill/reviews; use only the versioned scripts in this folder for repeatable audits.
+- Keep ad hoc run artifacts out of .docs/changes/skill/reviews; use only the versioned scripts in this folder for repeatable audits.
 - Usage examples in this README should use the current workspace root and current skill names.
 

@@ -5,7 +5,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-$reportRoot = Join-Path $RootPath '__DOCS_ROOT__/changes/skill/reviews'
+$reportRoot = Join-Path $RootPath '.docs/changes/skill/reviews'
 
 function Add-MissingSections {
     param(

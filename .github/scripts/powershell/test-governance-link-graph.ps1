@@ -1,6 +1,6 @@
 param(
   [string]$RootPath = '.',
-  [string[]]$ScanRoots = @('__DOCS_ROOT__', '.github')
+  [string[]]$ScanRoots = @('.docs', '.github')
 )
 
 $ErrorActionPreference = 'Stop'

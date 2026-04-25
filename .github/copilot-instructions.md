@@ -17,7 +17,7 @@ This workspace is optimized for lean .NET application development.
 - DTO/domain model types passed into or returned from repositories must be immutable (get-only members, no public setters) and validated at instantiation using `Syrx.Validation.Contract` guards.
 - Use the latest stable C# version supported by the target framework. Do not raise `LangVersion` beyond TFM support.
 - Use xUnit and Moq for tests. FluentAssertions is banned.
-- Use `__DOCS_ROOT__/plans`, `__DOCS_ROOT__/research`, `__DOCS_ROOT__/changes`, and `__DOCS_ROOT__/adr` as canonical documentation locations.
+- Use `.docs/plans`, `.docs/research`, `.docs/changes`, and `.docs/adr` as canonical documentation locations.
 - Keep mandatory policy guidance in concise instruction files under `.github/instructions` and move procedural depth into skills.
 
 ## Lifecycle Lanes
@@ -145,7 +145,7 @@ Use this mobile app bundle when requests span mobile UX, prototyping, MAUI imple
 
 - `skills-authoring` (imported from an upstream skill set and renamed)
 - `test-driven-development` (supporting workflow dependency)
-- `writing-plans` (plan authoring workflow adapted to `__DOCS_ROOT__/plans`)
+- `writing-plans` (plan authoring workflow adapted to `.docs/plans`)
 - `delivery-operating-system`, `opportunity-mapping`, `backlog-structuring`, `acceptance-criteria`, and `flow-metrics` (portable PM and delivery operating bundle for agent-heavy projects)
 - `delivery-orchestration` (umbrella PM lifecycle skill for deterministic end-to-end delivery coordination)
 - `work-intake-governance`, `delivery-forecasting`, `outcome-review`, and `scope-change-control` (high-value adjacent PM and delivery controls for intake, forecasting, post-ship review, and change pressure)
@@ -173,7 +173,7 @@ Use this mobile app bundle when requests span mobile UX, prototyping, MAUI imple
 - Never rely on manual terminal input when required parameters can be provided explicitly.
 - Avoid duplicate prompts that restate instruction or skill content.
 - Keep prompts task-specific and lightweight.
-- Align all planning and change tracking artifacts to `__DOCS_ROOT__` rather than legacy `.copilot-tracking` paths.
+- Align all planning and change tracking artifacts to `.docs` rather than legacy `.copilot-tracking` paths.
 
 
 

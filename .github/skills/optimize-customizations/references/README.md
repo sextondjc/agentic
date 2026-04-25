@@ -8,7 +8,7 @@ Reusable assets for `optimize-customizations` execution support.
 
 ## Usage
 
-Use the template when creating `__DOCS_ROOT__/changes/customization/reviews/governance-audit-types-optimization.md`.
+Use the template when creating `.docs/changes/customization/reviews/governance-audit-types-optimization.md`.
 
 
 

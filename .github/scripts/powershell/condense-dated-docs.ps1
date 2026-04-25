@@ -2,7 +2,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $workspace = (Get-Location).Path
-$archiveRoot = '__DOCS_ROOT__/archive/condense'
+$archiveRoot = '.docs/archive/condense'
 $moved = New-Object System.Collections.Generic.List[string]
 $histories = New-Object System.Collections.Generic.List[string]
 
@@ -79,7 +79,7 @@ function Move-ToArchive {
 	}
 }
 
-$skillRoot = '__DOCS_ROOT__/changes/skill/reviews'
+$skillRoot = '.docs/changes/skill/reviews'
 if (Test-Path -LiteralPath $skillRoot) {
 	$dirs = Get-ChildItem -Path $skillRoot -Directory
 	foreach ($d in $dirs) {
@@ -103,7 +103,7 @@ if (Test-Path -LiteralPath $skillRoot) {
 	}
 }
 
-$custRoot = '__DOCS_ROOT__/changes/customization/reviews'
+$custRoot = '.docs/changes/customization/reviews'
 if (Test-Path -LiteralPath $custRoot) {
 	$dirs = Get-ChildItem -Path $custRoot -Directory | Where-Object { $_.Name -ne 'conflicts' }
 	foreach ($d in $dirs) {

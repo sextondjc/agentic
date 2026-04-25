@@ -39,5 +39,5 @@ This catalog assigns each agent to a primary lifecycle lane.
 - Any lane conflict should be resolved by `orchestrator` with explicit phase split.
 - Routing is deterministic by default with explicit intake fields and required outputs before specialist execution.
 - Bounded exploration is permitted only as a rare exception with explicit hypothesis, boundary, time-box, success criteria, and closure decision.
-- PDL coverage map: agent routing context is informed by the Phase / Discipline / Lane matrix at [phase-discipline-lane-agentic-delivery-matrix.md](../__DOCS_ROOT__/plans/governance/taxonomy-tag-registry/phase-discipline-lane-agentic-delivery-matrix.md). Bundle codes X01–X12 identify which agents are included in each coverage cluster.
+- PDL coverage map: agent routing context is informed by the Phase / Discipline / Lane matrix at [phase-discipline-lane-agentic-delivery-matrix.md](../.docs/plans/governance/taxonomy-tag-registry/phase-discipline-lane-agentic-delivery-matrix.md). Bundle codes X01–X12 identify which agents are included in each coverage cluster.
 

@@ -12,7 +12,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $skillsRoot = Join-Path $RootPath '.github/skills'
-$reportsRoot = Join-Path $RootPath '__DOCS_ROOT__/changes/skill/reviews'
+$reportsRoot = Join-Path $RootPath '.docs/changes/skill/reviews'
 $historyDir = Join-Path $skillsRoot 'skill-review/references/history'
 $mirrorPath = Join-Path $skillsRoot 'skill-review/references/mirrors/agent-customization-SKILL.md'
 
@@ -374,7 +374,7 @@ foreach ($skill in $Skills) {
     $front = Get-Frontmatter $content
 
     $targetPath = if ($isAgentMirror) { 'copilot-skill:/agent-customization/SKILL.md (mirrored at .github/skills/skill-review/references/mirrors/agent-customization-SKILL.md)' } else { ".github/skills/$skill/SKILL.md" }
-    $reportRelPath = "__DOCS_ROOT__/changes/skill/reviews/$skill/review.md"
+    $reportRelPath = ".docs/changes/skill/reviews/$skill/review.md"
     $reportPath = Join-Path $reportsRoot "$skill/review.md"
     New-Item -ItemType Directory -Force -Path (Split-Path $reportPath -Parent) | Out-Null
 

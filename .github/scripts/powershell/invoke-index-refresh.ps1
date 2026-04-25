@@ -1,5 +1,5 @@
 # invoke-index-refresh.ps1: Generate or refresh INDEX.md files throughout a document corpus.
-# Usage: ./invoke-index-refresh.ps1 -RootPath __DOCS_ROOT__ [-DryRun]
+# Usage: ./invoke-index-refresh.ps1 -RootPath .docs [-DryRun]
 # Output: Summary object with FoldersIndexed and DocumentsIndexed counts.
 # Must be called from workspace root.
 
@@ -7,7 +7,7 @@
 param(
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$RootPath = '__DOCS_ROOT__',
+    [string]$RootPath = '.docs',
 
     [Parameter()]
     [switch]$DryRun

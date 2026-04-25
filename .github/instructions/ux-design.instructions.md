@@ -1,7 +1,7 @@
 ---
 name: ux-design
 description: 'UX design policy standards: accessibility baseline, interaction conventions, and wireframe/prototype mandates.'
-applyTo: '__DOCS_ROOT__/**/*.md'
+applyTo: '.docs/**/*.md'
 ---
 # UX Design Policy
 

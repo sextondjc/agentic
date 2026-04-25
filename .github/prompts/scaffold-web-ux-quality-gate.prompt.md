@@ -5,7 +5,7 @@ argument-hint: workstream-id=<id> bundle-scope=<core|full> scope-summary=<text>
 agent: agent
 ---
 
-Create a web UX quality-gate evidence bundle under `__DOCS_ROOT__/changes/<workstream-id>/`.
+Create a web UX quality-gate evidence bundle under `.docs/changes/<workstream-id>/`.
 
 Inputs:
 - `workstream-id`: `${input:workstream-id:web-ux-example}`
@@ -18,8 +18,8 @@ Execution rules:
 - Use the templates and worked examples in these references:
   - [web-ux-quality-gate skill](../skills/web-ux-quality-gate/SKILL.md)
   - [unified recommendation template](../skills/web-ux-quality-gate/references/unified-release-recommendation-template.md)
-  - [core worked example](../../__DOCS_ROOT__/changes/web-ux-quality-gate-example/ux-quality-gate-recommendation.md)
-  - [full worked example](../../__DOCS_ROOT__/changes/web-ux-quality-gate-full-example/ux-quality-gate-recommendation.md)
+  - [core worked example](../../.docs/changes/web-ux-quality-gate-example/ux-quality-gate-recommendation.md)
+  - [full worked example](../../.docs/changes/web-ux-quality-gate-full-example/ux-quality-gate-recommendation.md)
 - Produce realistic but clearly example-safe placeholder data when concrete evidence is not supplied.
 - Keep artifact names consistent with the umbrella skill evidence contract.
 - Include a phase-output ownership matrix and a dimension evidence index when `bundle-scope=full`.

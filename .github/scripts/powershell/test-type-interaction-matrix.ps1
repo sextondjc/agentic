@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$RootPath = ".",
-    [string]$ReportPath = "__DOCS_ROOT__/changes/governance/type-audits/audit-customization-types.md"
+    [string]$ReportPath = ".docs/changes/governance/type-audits/audit-customization-types.md"
 )
 
 Set-StrictMode -Version Latest

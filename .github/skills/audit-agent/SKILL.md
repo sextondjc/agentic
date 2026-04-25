@@ -69,10 +69,10 @@ Optional inputs:
 
 - A per-agent review report stored using template: [audit-agent-report-template.md](./references/audit-agent-report-template.md).
 - A conflict report is not produced by this skill; conflict detection across agents is a type-governance concern.
-- Updated per-agent history at: `__DOCS_ROOT__/changes/agent/history/<agent-name>-history.md`.
+- Updated per-agent history at: `.docs/changes/agent/history/<agent-name>-history.md`.
 - Review result summaries MUST be returned in Markdown grid format (tables), not prose lists.
 - Aggregate multi-agent results MUST include at least one consolidated grid with per-agent outcomes.
-- Per-agent review files MUST be stored under `__DOCS_ROOT__/changes/agent/reviews/<agent-name>/`.
+- Per-agent review files MUST be stored under `.docs/changes/agent/reviews/<agent-name>/`.
 - Reasoning package per reviewed agent: assumptions, trade-offs, blockers, and one recommendation.
 - Source-governance summary when platform-currency validation is requested.
 - Updated [source-catalog.md](./references/source-catalog.md) when source tracking changes are made.
@@ -80,7 +80,7 @@ Optional inputs:
 ## Workflow
 
 1. Resolve target agents and collect current `.agent.md` files.
-2. Load the per-agent history file from `__DOCS_ROOT__/changes/agent/history/` before analysis.
+2. Load the per-agent history file from `.docs/changes/agent/history/` before analysis.
 3. Build a recommendation deny-list from history entries marked Rejected, Removed, or Illegitimate.
 4. Re-evaluate tracked sources in [source-catalog.md](./references/source-catalog.md) for freshness and platform-currency changes. Update status fields before proceeding to AGR-S5 checks.
 5. Build coverage across all mandatory branches: format, invocation trigger, specialization, hard constraints, companion skills, conflict risk, cross-agent delegation, platform currency, and history alignment.
@@ -88,7 +88,7 @@ Optional inputs:
 7. Evaluate platform currency against the current source-catalog state: flag deprecated fields (`infer`), note new available fields that could improve the agent's role clarity or capability boundary.
 8. Produce Pass or Fail for MUST standards and advisory outcome for SHOULD standards.
 9. For each failed or advisory check, record assumptions, trade-offs, blockers, and one recommendation.
-10. If conflict is detected: document it at `__DOCS_ROOT__/changes/agent/conflicts/`, recommend resolution options, and collaborate with the user to confirm resolution.
+10. If conflict is detected: document it at `.docs/changes/agent/conflicts/`, recommend resolution options, and collaborate with the user to confirm resolution.
 11. Update the agent history file with findings, decisions, and recommendation statuses.
 12. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
 
@@ -101,15 +101,15 @@ Optional inputs:
 
 ## Storage Rules
 
-- Store each agent review under `__DOCS_ROOT__/changes/agent/reviews/<agent-name>/`.
+- Store each agent review under `.docs/changes/agent/reviews/<agent-name>/`.
 - Use descriptive file names: `review.md`. Use versioned names (for example, `review-v2.md`) to disambiguate repeated runs.
-- Keep aggregate cross-agent summaries in `__DOCS_ROOT__/changes/agent/reviews/`.
+- Keep aggregate cross-agent summaries in `.docs/changes/agent/reviews/`.
 
 ## Conflict Workflow (Mandatory When Conflict Exists)
 
 When a conflict exists, this skill MUST:
 
-1. Document the conflict in a workspace document at `__DOCS_ROOT__/changes/agent/conflicts/` using the conflict template.
+1. Document the conflict in a workspace document at `.docs/changes/agent/conflicts/` using the conflict template.
 2. Provide recommendations to resolve the conflict.
 3. Collaborate with the human user to select and confirm the final resolution.
 
@@ -117,7 +117,7 @@ Do not auto-resolve without explicit user direction.
 
 ## History Management Rules
 
-- Keep one history file per reviewed agent at `__DOCS_ROOT__/changes/agent/history/<agent-name>-history.md`.
+- Keep one history file per reviewed agent at `.docs/changes/agent/history/<agent-name>-history.md`.
 - Append new review entries; never rewrite prior decisions.
 - Track each recommendation with status: Proposed, Accepted, Rejected, Removed, Implemented.
 - Before publishing recommendations, remove any item that matches prior Rejected or Removed entries unless the user explicitly re-opens it.

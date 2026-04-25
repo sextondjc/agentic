@@ -5,7 +5,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-$reportsDir = Join-Path $RootPath '__DOCS_ROOT__/changes/skill/reviews'
+$reportsDir = Join-Path $RootPath '.docs/changes/skill/reviews'
 $outFile = Join-Path $reportsDir 'governance-audit-types-skills.md'
 
 $rows = Get-ChildItem $reportsDir -Recurse -File -Filter 'review.md' |

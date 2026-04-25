@@ -48,7 +48,7 @@ Optional:
 
 - Coverage scope override.
 - Artifacts directory override.
-- Whether to update `__DOCS_ROOT__/changes/coverage-trend.md` after reporting.
+- Whether to update `.docs/changes/coverage-trend.md` after reporting.
 
 ## Assets
 
@@ -93,7 +93,7 @@ Keep non-table narrative to 3 short lines maximum.
 
 ## Reporting Rules
 
-- Do not answer from `__DOCS_ROOT__` snapshots if a fresh run was requested.
+- Do not answer from `.docs` snapshots if a fresh run was requested.
 - If the standard repo path fails before producing coverage, say so explicitly.
 - If fallback coverage runs but the solution still exits non-zero, use the fresh fallback artifacts and report the failed tests in the gaps table.
 - If per-test-project coverage cannot be reconstructed from artifacts, say that directly and report the closest valid fresh grouping.

@@ -1,7 +1,7 @@
 ---
 name: prd
 description: 'Merged specification + PRD authoring guidelines.'
-applyTo: '__DOCS_ROOT__/plans/**/*.md,__DOCS_ROOT__/specs/**/*.md,**/*prd*.md'
+applyTo: '.docs/plans/**/*.md,.docs/specs/**/*.md,**/*prd*.md'
 ---
 # Product Specification & PRD Policy
 
@@ -14,8 +14,8 @@ Applies to PRD and specification artifacts only. For general technical documenta
 ## Mandatory Policy
 
 - All PRD and specification documents must follow unified structure: Overview → Goals → Personas → Functional Requirements → User Stories (GH-###) → Interfaces/Data Contracts → Acceptance Criteria (AC-###) → Metrics → Risks → Dependencies.
-- PRD/spec artifacts must be stored in granular folder structures under `__DOCS_ROOT__/specs/` or `__DOCS_ROOT__/plans/` (minimum: `<domain>/<workstream>/`).
-- Flat placement directly under `__DOCS_ROOT__/specs/` or `__DOCS_ROOT__/plans/` is disallowed unless explicitly requested by the user.
+- PRD/spec artifacts must be stored in granular folder structures under `.docs/specs/` or `.docs/plans/` (minimum: `<domain>/<workstream>/`).
+- Flat placement directly under `.docs/specs/` or `.docs/plans/` is disallowed unless explicitly requested by the user.
 - Requirement identifiers are mandatory: REQ-, SEC-, CON-, GUD-, PAT- prefixes; user stories GH-###; acceptance criteria AC-###.
 - Acceptance criteria must be binary pass/fail and directly traceable to requirement or story identifiers.
 - Required metadata must be validated before generation: title, scope, personas, goals, and constraints.

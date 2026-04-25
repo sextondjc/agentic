@@ -31,7 +31,7 @@ Invoke this prompt when any of the following is true:
 3. Run `.github/scripts/powershell/test-type-interaction-matrix.ps1` against the audit report path to validate pair coverage and failure-propagation totals.
 4. Apply TYP-M* and TYP-S* standards with evidence.
 5. Assign severities using the Severity Mapping Grid and apply consistently in failure rows.
-6. Write the report to `__DOCS_ROOT__/changes/governance/type-audits/audit-customization-types.md` using [audit-customization-types-report-template.md](./../skills/audit-customization-types/references/audit-customization-types-report-template.md).
+6. Write the report to `.docs/changes/governance/type-audits/audit-customization-types.md` using [audit-customization-types-report-template.md](./../skills/audit-customization-types/references/audit-customization-types-report-template.md).
 7. Do not modify customization artifacts unless the user explicitly requests remediation edits.
 
 ## Output Requirements

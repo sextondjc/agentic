@@ -40,7 +40,7 @@ if (-not (Test-Path -Path $RootPath -PathType Container)) {
 }
 
 if ([string]::IsNullOrWhiteSpace($ReportDirectory)) {
-    $ReportDirectory = Join-Path -Path $RootPath -ChildPath '__DOCS_ROOT__/changes/audit-powershell-reviews'
+    $ReportDirectory = Join-Path -Path $RootPath -ChildPath '.docs/changes/audit-powershell-reviews'
 }
 
 $severityRank = @{

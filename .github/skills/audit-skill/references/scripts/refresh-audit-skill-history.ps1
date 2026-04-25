@@ -6,7 +6,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $historyDir = Join-Path $RootPath '.github/skills/skill-review/references/history'
-$reportsRoot = Join-Path $RootPath '__DOCS_ROOT__/changes/skill/reviews'
+$reportsRoot = Join-Path $RootPath '.docs/changes/skill/reviews'
 
 $historyFiles = Get-ChildItem $historyDir -File -Filter '*-history.md' | Sort-Object Name
 
@@ -62,7 +62,7 @@ $reportRows = $reportFiles | ForEach-Object {
         MustFailures = $must
         ShouldAdvisories = $should
         ConflictStatus = $conflict
-        ReportPath = "__DOCS_ROOT__/changes/skill/reviews/$skill/review.md"
+        ReportPath = ".docs/changes/skill/reviews/$skill/review.md"
     }
 } | Sort-Object Skill
 

@@ -21,7 +21,7 @@ This skill centralizes bundle-to-skill associations so individual skills remain 
 ## Inputs
 
 - Canonical matrix path: `.github/skills/matrix-skill-mapping/references/phase-discipline-lane-agentic-delivery-matrix.md`
-- Posterity copy path: `__DOCS_ROOT__/plans/governance/taxonomy-tag-registry/phase-discipline-lane-agentic-delivery-matrix.md`
+- Posterity copy path: `.docs/plans/governance/taxonomy-tag-registry/phase-discipline-lane-agentic-delivery-matrix.md`
 - Skills discovery index path: `.github/skills/skill-discovery-index.md`
 - Target skill names and proposed mapping changes
 - Relevant ADR or decision-log reference
@@ -54,7 +54,7 @@ This skill centralizes bundle-to-skill associations so individual skills remain 
 ## References
 
 - Canonical matrix: `./references/phase-discipline-lane-agentic-delivery-matrix.md`
-- Posterity copy: `../../../../__DOCS_ROOT__/plans/governance/taxonomy-tag-registry/phase-discipline-lane-agentic-delivery-matrix.md`
+- Posterity copy: `../../../../.docs/plans/governance/taxonomy-tag-registry/phase-discipline-lane-agentic-delivery-matrix.md`
 - Skill index: `../skill-discovery-index.md`
 - Mapping registry: `./references/mapping-registry.md`
 

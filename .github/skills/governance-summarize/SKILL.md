@@ -24,9 +24,9 @@ Invoke this skill when any of the following is true:
 
 - Target date or reporting window.
 - Source artifact scope, defaulting to:
-  - `__DOCS_ROOT__/changes/governance/audits/`
-  - `__DOCS_ROOT__/changes/skill/reviews/`
-  - `__DOCS_ROOT__/changes/customization/reviews/`
+  - `.docs/changes/governance/audits/`
+  - `.docs/changes/skill/reviews/`
+  - `.docs/changes/customization/reviews/`
   - `.github/instructions/`
   - `.github/agents/`
   - [README.md](./../../../README.md), [README.md](./../../../README.md), [README.md](./../../../README.md)
@@ -34,7 +34,7 @@ Invoke this skill when any of the following is true:
 
 ## Required Outputs
 
-- One markdown briefing at `__DOCS_ROOT__/changes/governance/audits/governance-one-pager.md`.
+- One markdown briefing at `.docs/changes/governance/audits/governance-one-pager.md`.
 - Grid-first output with the sections below, in this order:
   1. `Disposition Snapshot`
   2. `Top Salient Findings`

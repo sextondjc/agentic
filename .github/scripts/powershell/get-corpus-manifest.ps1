@@ -1,5 +1,5 @@
 # get-corpus-manifest.ps1: Build a structured manifest of all markdown files in a document corpus.
-# Usage: ./get-corpus-manifest.ps1 -RootPath __DOCS_ROOT__
+# Usage: ./get-corpus-manifest.ps1 -RootPath .docs
 # Output: PSCustomObject array with Path, Title, Category, WordCount, Hash fields.
 # Must be called from workspace root.
 
@@ -7,7 +7,7 @@
 param(
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$RootPath = '__DOCS_ROOT__',
+    [string]$RootPath = '.docs',
 
     [Parameter()]
     [switch]$IncludeIndex

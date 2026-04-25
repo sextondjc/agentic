@@ -15,9 +15,9 @@
 | Source Audit | Outcome | MUST Failures | SHOULD Advisories | Evidence |
 |---|---|---:|---:|---|
 | Governance Audit | <Pass/Fail/Advisory> | <n> | <n> | [governance-audit.md](./governance-audit.md) |
-| Skill Type Audit | <Pass/Fail/Advisory> | <n> | <n> | [governance-audit-types-skills.md](./../../../../__DOCS_ROOT__/changes/skill/reviews/governance-audit-types-skills.md) |
-| Customization Type Audit | <Pass/Fail/Advisory> | <n> | <n> | [governance-audit-types-customizations.md](./../../../../__DOCS_ROOT__/changes/customization/reviews/governance-audit-types-customizations.md) |
-| Optimization Type Audit | <Pass/Fail/Advisory> | <n> | <n> | [governance-audit-types-optimization.md](./../../../../__DOCS_ROOT__/changes/customization/reviews/governance-audit-types-optimization.md) |
+| Skill Type Audit | <Pass/Fail/Advisory> | <n> | <n> | [governance-audit-types-skills.md](./../../../../.docs/changes/skill/reviews/governance-audit-types-skills.md) |
+| Customization Type Audit | <Pass/Fail/Advisory> | <n> | <n> | [governance-audit-types-customizations.md](./../../../../.docs/changes/customization/reviews/governance-audit-types-customizations.md) |
+| Optimization Type Audit | <Pass/Fail/Advisory> | <n> | <n> | [governance-audit-types-optimization.md](./../../../../.docs/changes/customization/reviews/governance-audit-types-optimization.md) |
 
 ## Failure Matrix
 

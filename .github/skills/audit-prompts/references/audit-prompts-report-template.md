@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to `__DOCS_ROOT__/changes/prompt/reviews/<prompt-name>/review.md`
+- Save this file to `.docs/changes/prompt/reviews/<prompt-name>/review.md`
 
 ## Summary Outcome Grid
 

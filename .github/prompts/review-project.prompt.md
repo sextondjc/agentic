@@ -24,14 +24,14 @@ Answer each question. If any answer is No, record the corrective action before p
 | Check | Answer | Corrective Action if No |
 |---|---|---|
 | Does the active wave reference the active parent execution plan or a child plan with a `Parent Plan` field linking back to it? | | Link the wave to the parent plan before execution starts |
-| Does the Wave N ticket backlog exist at `__DOCS_ROOT__/plans/` and reference workstream IDs? | | Produce the ticket backlog via `writing-plans` + `plan-researcher` before coding |
+| Does the Wave N ticket backlog exist at `.docs/plans/` and reference workstream IDs? | | Produce the ticket backlog via `writing-plans` + `plan-researcher` before coding |
 
 ### 2. Changes Folder — Is it clean?
 
 | Check | Answer | Corrective Action if No |
 |---|---|---|
-| Do all files in `__DOCS_ROOT__/changes/` reference an originating plan ID and workstream ID in their metadata? | | Add plan linkage or move the artifact to `__DOCS_ROOT__/plans/` or `__DOCS_ROOT__/research/` |
-| Does `__DOCS_ROOT__/changes/` contain design specs, UX mockups, or feature descriptions (not change logs)? | | Move those files to `__DOCS_ROOT__/plans/` |
+| Do all files in `.docs/changes/` reference an originating plan ID and workstream ID in their metadata? | | Add plan linkage or move the artifact to `.docs/plans/` or `.docs/research/` |
+| Does `.docs/changes/` contain design specs, UX mockups, or feature descriptions (not change logs)? | | Move those files to `.docs/plans/` |
 
 ### 3. Scope Integrity — Is everything gated?
 
@@ -44,7 +44,7 @@ Answer each question. If any answer is No, record the corrective action before p
 
 | Check | Answer | Corrective Action if No |
 |---|---|---|
-| Are all ADRs in `__DOCS_ROOT__/adr/` indexed in the [README.md](./../../__DOCS_ROOT__/adr/README.md)? | | Add the missing row to the ADR README |
+| Are all ADRs in `.docs/adr/` indexed in the [README.md](./../../.docs/adr/README.md)? | | Add the missing row to the ADR README |
 | Do all ratified `DEC-XXX` entries in the active parent plan have a corresponding implementation task in the active wave backlog or an explicit deferral record? | | Add the task to the wave backlog or create a `DEF-XXX` deferral entry |
 
 ### 5. Cost and Efficiency Gate
@@ -66,5 +66,5 @@ Answer each question. If any answer is No, record the corrective action before p
 
 - If GO: proceed with `plans` skill against the wave ticket backlog.
 - If NO-GO: apply corrective actions, re-run this checklist, confirm GO before executing.
-- Record the checkpoint outcome (GO/NO-GO + any corrective actions taken) in the active `__DOCS_ROOT__/changes/` traceability artifact for the wave.
+- Record the checkpoint outcome (GO/NO-GO + any corrective actions taken) in the active `.docs/changes/` traceability artifact for the wave.
 

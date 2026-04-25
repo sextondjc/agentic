@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to __DOCS_ROOT__/changes/skill/reviews/<skill-name>/review.md
+- Save this file to .docs/changes/skill/reviews/<skill-name>/review.md
 
 ## Summary Outcome Grid
 
