@@ -8,7 +8,7 @@ This file catalogs the active customization assets under `.github` and summarize
 |---|---:|---|---|
 | Workspace hub | 1 | Defines workspace-wide behavior, routing preferences, and preferred assets. | [copilot-instructions.md](./copilot-instructions.md) |
 | Agents | 15 | Specialist agent modes invoked explicitly for narrow responsibilities. | [agent-lifecycle-catalog.md](./agent-lifecycle-catalog.md) |
-| Skills | 51 | Reusable workflows and domain playbooks used before or during implementation. | [skill-discovery-index.md](./skills/skill-discovery-index.md) |
+| Skills | 54 | Reusable workflows and domain playbooks used before or during implementation. | [skill-discovery-index.md](./skills/skill-discovery-index.md) |
 | Instructions | 16 | Always-on policy files applied by `applyTo` scope. | [instruction-lifecycle-catalog.md](./instructions/instruction-lifecycle-catalog.md) |
 | Prompts | 17 | Reusable prompt templates for repeatable governance and delivery workflows. | [prompt-lifecycle-catalog.md](./prompts/prompt-lifecycle-catalog.md) |
 | PowerShell scripts | 5 | Reusable automation helpers for governance validation and inventory checks. | [README.md](./scripts/powershell/README.md) |
@@ -48,19 +48,24 @@ Skills are reusable workflows. Lane ownership and deeper usage guidance are main
 
 | Skill | File | Purpose |
 |---|---|---|
-| `adr-generator` | [SKILL.md](./skills/adr-generator/SKILL.md) | Documents architectural decisions in `.docs/adr` with rationale, alternatives, and consequences. |
+| `adr-generator` | [SKILL.md](./skills/adr-generator/SKILL.md) | Documents architectural decisions in `__DOCS_ROOT__/adr` with rationale, alternatives, and consequences. |
 | `api-design` | [SKILL.md](./skills/api-design/SKILL.md) | Designs external API integrations with resilient client patterns, DTO contracts, and clear boundaries. |
 | `governance-audit` | [SKILL.md](./skills/governance-audit/SKILL.md) | Assesses the workspace governance layer and produces ranked remediation guidance. |
 | `audit-powershell` | [SKILL.md](./skills/audit-powershell/SKILL.md) | Audits PowerShell scripts for safety, reliability, and style issues. |
 | `branch-completion` | [SKILL.md](./skills/branch-completion/SKILL.md) | Guides branch completion decisions after implementation and testing are finished. |
-| `build-maui-apps` | [SKILL.md](./skills/build-maui-apps/SKILL.md) | Provides a repeatable workflow for building or upgrading .NET MAUI applications. |
+| `build-maui-apps` | [SKILL.md](./skills/build-maui-apps/SKILL.md) | Provides an expert workflow for MAUI architecture, secure storage, trimming, testing, and release hardening. |
+| `orchestrate-mobile` | [SKILL.md](./skills/orchestrate-mobile/SKILL.md) | Coordinates mixed MAUI mobile UX, prototyping, implementation, accessibility, resilience, performance, and release work from one deterministic intake. |
 | `critical-thinking` | [SKILL.md](./skills/critical-thinking/SKILL.md) | Pressure-tests assumptions, clarifies requirements, and evaluates trade-offs before implementation. |
 | `current-test-coverage` | [SKILL.md](./skills/current-test-coverage/SKILL.md) | Collects fresh test coverage metrics for the current session. |
 | `curate-copilot-instructions` | [SKILL.md](./skills/curate-copilot-instructions/SKILL.md) | Imports customizations and updates `copilot-instructions.md` to reflect active assets. |
 | `agent-authoring` | [SKILL.md](./skills/agent-authoring/SKILL.md) | Creates or edits `.agent.md` files with explicit role boundaries and companion-skill alignment. |
 | `instructions-authoring` | [SKILL.md](./skills/instructions-authoring/SKILL.md) | Creates or edits `.instructions.md` files with deterministic policy scope and correct `applyTo` patterns. |
 | `delivery-status-grid` | [SKILL.md](./skills/delivery-status-grid/SKILL.md) | Produces grid-first delivery status reporting with explicit completion and remaining scope. |
-| `design-mobile-ux` | [SKILL.md](./skills/design-mobile-ux/SKILL.md) | Defines or improves mobile UX from research through implementation handoff. |
+| `design-mobile-ux` | [SKILL.md](./skills/design-mobile-ux/SKILL.md) | Defines or improves mobile UX from research through platform-aware handoff and validation. |
+| `mobile-accessibility-quality-gate` | [SKILL.md](./skills/mobile-accessibility-quality-gate/SKILL.md) | Produces evidence-first accessibility findings, gates, and sign-off artifacts for MAUI mobile releases. |
+| `mobile-offline-resilience` | [SKILL.md](./skills/mobile-offline-resilience/SKILL.md) | Validates degraded-network, retry, stale-data, and interruption recovery behavior for MAUI mobile flows. |
+| `mobile-performance-quality-gate` | [SKILL.md](./skills/mobile-performance-quality-gate/SKILL.md) | Produces performance findings and release-quality decisions for startup, rendering, and memory behavior in MAUI apps. |
+| `mobile-release-readiness` | [SKILL.md](./skills/mobile-release-readiness/SKILL.md) | Produces mobile-specific release evidence for signing, store readiness, rollback, and go or no-go approval. |
 | `docker-dotnet` | [SKILL.md](./skills/docker-dotnet/SKILL.md) | Containerizes .NET applications and applies container-focused security and build practices. |
 | `dotnet-refactor` | [SKILL.md](./skills/dotnet-refactor/SKILL.md) | Modernizes .NET code with safe, behavior-preserving refactors. |
 | `dotnet-resilience` | [SKILL.md](./skills/dotnet-resilience/SKILL.md) | Designs and reviews .NET resiliency using Microsoft.Extensions.Resilience and Polly. |
@@ -70,12 +75,12 @@ Skills are reusable workflows. Lane ownership and deeper usage guidance are main
 | `optimize-customizations` | [SKILL.md](./skills/optimize-customizations/SKILL.md) | Runs optimization-factor reviews for agents, instructions, prompts, and skills with ranked remediation guidance. |
 | `asset-naming-taxonomy` | [SKILL.md](./skills/asset-naming-taxonomy/SKILL.md) | Defines and enforces naming taxonomy and conventions across governance and customization assets. |
 | `learn-topics` | [SKILL.md](./skills/learn-topics/SKILL.md) | Builds source-backed learning paths that decompose topics by depth. |
-| `prototype-mobile-ui` | [SKILL.md](./skills/prototype-mobile-ui/SKILL.md) | Evolves low-fidelity mobile concepts into high-fidelity prototypes and handoff assets. |
+| `prototype-mobile-ui` | [SKILL.md](./skills/prototype-mobile-ui/SKILL.md) | Evolves approved wireframes into high-fidelity prototypes with tokens, states, and implementation annotations. |
 | `perf-benchmark` | [SKILL.md](./skills/perf-benchmark/SKILL.md) | Designs, runs, or reviews BenchmarkDotNet performance tests. |
 | `performance-research` | [SKILL.md](./skills/performance-research/SKILL.md) | Performs research-only .NET and C# performance assessments with evidence-backed reporting. |
 | `powershell-script-library` | [SKILL.md](./skills/powershell-script-library/SKILL.md) | Maintains the reusable PowerShell script catalog with deduplication and catalog-first reuse. |
 | `prd-generator` | [SKILL.md](./skills/prd-generator/SKILL.md) | Produces comprehensive, traceable PRDs before implementation begins. |
-| `prune-doc-artifacts` | [SKILL.md](./skills/prune-doc-artifacts/SKILL.md) | Audits `.docs` artifacts to identify stale, superseded, or removable documentation. |
+| `prune-doc-artifacts` | [SKILL.md](./skills/prune-doc-artifacts/SKILL.md) | Audits `__DOCS_ROOT__` artifacts to identify stale, superseded, or removable documentation. |
 | `refine-ideas` | [SKILL.md](./skills/refine-ideas/SKILL.md) | Refines raw ideas through structured challenge loops and targeted topic learning. |
 | `remediate-review` | [SKILL.md](./skills/remediate-review/SKILL.md) | Evaluates code review feedback critically before implementing remediation. |
 | `request-code-review` | [SKILL.md](./skills/request-code-review/SKILL.md) | Requests structured review once implementation work is ready for evaluation. |
@@ -164,5 +169,6 @@ The reusable script catalog and usage guidance are maintained in [README.md](./s
 | Asset | Purpose |
 |---|---|
 | [governance-cadence.yml](./workflows/governance-cadence.yml) | Runs monthly and on demand to validate frontmatter, catalog integrity, and workspace hub synchronization. |
+
 
 

@@ -29,33 +29,33 @@ $scanTargets = @(
 $rules = @(
     @{
         Id = 'LegacySkillReviewPath'
-        Pattern = '\.docs/changes/skill-reviews(?:/|\b)'
-        Recommendation = '.docs/changes/skill/reviews'
+        Pattern = '\__DOCS_ROOT__/changes/skill-reviews(?:/|\b)'
+        Recommendation = '__DOCS_ROOT__/changes/skill/reviews'
     },
     @{
         Id = 'LegacySkillConflictPath'
-        Pattern = '\.docs/changes/skill-conflicts(?:/|\b)'
-        Recommendation = '.docs/changes/skill/conflicts'
+        Pattern = '\__DOCS_ROOT__/changes/skill-conflicts(?:/|\b)'
+        Recommendation = '__DOCS_ROOT__/changes/skill/conflicts'
     },
     @{
         Id = 'LegacyGovernanceAuditPath'
-        Pattern = '\.docs/changes/governance-audits(?:/|\b)'
-        Recommendation = '.docs/changes/governance/audits'
+        Pattern = '\__DOCS_ROOT__/changes/governance-audits(?:/|\b)'
+        Recommendation = '__DOCS_ROOT__/changes/governance/audits'
     },
     @{
         Id = 'LegacyCustomizationReviewPath'
-        Pattern = '\.docs/changes/customization-reviews(?:/|\b)'
-        Recommendation = '.docs/changes/customization/reviews'
+        Pattern = '\__DOCS_ROOT__/changes/customization-reviews(?:/|\b)'
+        Recommendation = '__DOCS_ROOT__/changes/customization/reviews'
     },
     @{
         Id = 'DatedSkillReviewArtifact'
-        Pattern = '\.docs/changes/skill/reviews/[^\s)"''`]+/\d{8}-review\.md'
-        Recommendation = '.docs/changes/skill/reviews/<skill-name>/review.md'
+        Pattern = '\__DOCS_ROOT__/changes/skill/reviews/[^\s)"''`]+/\d{8}-review\.md'
+        Recommendation = '__DOCS_ROOT__/changes/skill/reviews/<skill-name>/review.md'
     },
     @{
         Id = 'DatedSkillAggregateArtifact'
-        Pattern = '\.docs/changes/skill/reviews/\d{8}-full-skill-review-grid\.md'
-        Recommendation = '.docs/changes/skill/reviews/governance-audit-types-skills.md'
+        Pattern = '\__DOCS_ROOT__/changes/skill/reviews/\d{8}-full-skill-review-grid\.md'
+        Recommendation = '__DOCS_ROOT__/changes/skill/reviews/governance-audit-types-skills.md'
     },
     @{
         Id = 'LegacyExecutiveAuditReportName'
@@ -74,8 +74,8 @@ $rules = @(
     },
     @{
         Id = 'LegacyCustomizationAggregateReportPath'
-        Pattern = '(?<![A-Za-z0-9_-])\.docs/changes/customization/reviews/audit\.md(?![A-Za-z0-9_-])'
-        Recommendation = '.docs/changes/customization/reviews/governance-audit-types-customizations.md'
+        Pattern = '(?<![A-Za-z0-9_-])\__DOCS_ROOT__/changes/customization/reviews/audit\.md(?![A-Za-z0-9_-])'
+        Recommendation = '__DOCS_ROOT__/changes/customization/reviews/governance-audit-types-customizations.md'
     }
 )
 
@@ -129,3 +129,4 @@ if ($violations.Count -gt 0) {
 
 $violations
 exit 0
+

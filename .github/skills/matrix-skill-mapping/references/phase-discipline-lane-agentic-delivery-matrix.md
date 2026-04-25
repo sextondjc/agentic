@@ -91,7 +91,7 @@ All five candidates listed below were adopted on 2026-04-18 following a DEC-PDL-
 | X03 | Engineering build | `csharp-engineer`, `defect-debugger`, `plans`, `test-driven-development`, `csharp.instructions.md`, `testing-strategy.instructions.md`, `validation.instructions.md` |
 | X04 | Engineering review | `code-reviewer`, `manual-code-reviewer`, `request-code-review`, `remediate-review` |
 | X05 | UX planning and design | `ux-designer`, `design-web-ux`, `design-mobile-ux`, `prototype-mobile-ui`, `ux-design.instructions.md` |
-| X06 | Frontend delivery | `web-frontend-engineer`, `mobile-frontend-engineer`, `build-web-frontend`, `build-mobile-apps`, `web-frontend.instructions.md`, `mobile-frontend.instructions.md` |
+| X06 | Frontend delivery | `web-frontend-engineer`, `mobile-frontend-engineer`, `build-web-frontend`, `orchestrate-mobile`, `build-maui-apps`, `mobile-accessibility-quality-gate`, `mobile-offline-resilience`, `mobile-performance-quality-gate`, `mobile-release-readiness`, `web-frontend.instructions.md`, `mobile-frontend.instructions.md` |
 | X07 | Security analysis and governance | `security-researcher`, `security-research`, `secure-coding.instructions.md` |
 | X08 | Performance analysis | `performance-assessor`, `benchmark-researcher`, `performance-research`, `perf-benchmark` |
 | X09 | Ops and platform delivery | `sql-dba`, `powershell-reviewer`, `powershell-script-library`, `ci-cd-workflows`, `sql-server-standards`, `powershell.instructions.md`, `ci-cd.instructions.md` |

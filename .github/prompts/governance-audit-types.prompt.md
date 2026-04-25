@@ -32,10 +32,10 @@ Keep delta and failure-ID schema aligned to the executive report.
 
 Type reporting must aggregate from current source audits first:
 
-- `.docs/changes/governance/audits/governance-audit.md`
-- `.docs/changes/skill/reviews/governance-audit-types-skills.md`
-- `.docs/changes/customization/reviews/governance-audit-types-customizations.md`
-- `.docs/changes/customization/reviews/governance-audit-types-optimization.md`
+- `<documentation-root>/changes/governance/audits/governance-audit.md`
+- `<documentation-root>/changes/skill/reviews/governance-audit-types-skills.md`
+- `<documentation-root>/changes/customization/reviews/governance-audit-types-customizations.md`
+- `<documentation-root>/changes/customization/reviews/governance-audit-types-optimization.md`
 
 Then render findings/metrics to the requested scope.
 

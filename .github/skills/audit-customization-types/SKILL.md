@@ -53,7 +53,7 @@ Required inputs:
 
 - Target scope: `all` or one/more of `agents`, `instructions`, `prompts`, `skills`, `cross-type`.
 - Audit date in ISO format (`YYYY-MM-DD`).
-- Evidence roots for item-level findings (`.docs/changes/**` and relevant customization roots).
+- Evidence roots for item-level findings (`__DOCS_ROOT__/changes/**` and relevant customization roots).
 
 Optional inputs:
 
@@ -77,8 +77,8 @@ Optional inputs:
 - Review result summaries MUST be returned in Markdown grid format (tables), not prose lists.
 - Output report MUST include same-type and cross-type interaction grids with explicit pair outcomes.
 - Output report MUST include a severity mapping grid used to classify interaction failures.
-- Report outputs MUST be stored under `.docs/changes/governance/type-audits/`.
-- Recommended report path: `.docs/changes/governance/type-audits/audit-customization-types.md`.
+- Report outputs MUST be stored under `__DOCS_ROOT__/changes/governance/type-audits/`.
+- Recommended report path: `__DOCS_ROOT__/changes/governance/type-audits/audit-customization-types.md`.
 - Source-governance summary when source validation is requested.
 - Updated [source-catalog.md](./references/source-catalog.md) when source tracking changes are made.
 
@@ -121,7 +121,7 @@ Optional inputs:
 
 ## Storage Rules
 
-- Store type-audit reports under `.docs/changes/governance/type-audits/`.
+- Store type-audit reports under `__DOCS_ROOT__/changes/governance/type-audits/`.
 - Use descriptive file names: `audit-customization-types.md` (versioned names allowed for reruns, for example `audit-customization-types-v2.md`).
 
 ## Done Criteria

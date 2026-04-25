@@ -24,10 +24,10 @@ Invoke this skill when any of the following is true:
 - Audit date (`YYYY-MM-DD`).
 - Target scope (`full-workspace` by default).
 - Required source artifacts:
-  - `.docs/changes/governance/audits/governance-audit.md`
-  - `.docs/changes/skill/reviews/governance-audit-types-skills.md`
-  - `.docs/changes/customization/reviews/governance-audit-types-customizations.md`
-  - `.docs/changes/customization/reviews/governance-audit-types-optimization.md`
+  - `__DOCS_ROOT__/changes/governance/audits/governance-audit.md`
+  - `__DOCS_ROOT__/changes/skill/reviews/governance-audit-types-skills.md`
+  - `__DOCS_ROOT__/changes/customization/reviews/governance-audit-types-customizations.md`
+  - `__DOCS_ROOT__/changes/customization/reviews/governance-audit-types-optimization.md`
 - Report template: [execute-customization-audit-report-template.md](./references/execute-customization-audit-report-template.md)
 
 ## Executive Standards
@@ -42,7 +42,7 @@ Invoke this skill when any of the following is true:
 
 ## Required Outputs
 
-- Single report at `.docs/changes/governance/audits/execute-customization-audit.md`.
+- Single report at `__DOCS_ROOT__/changes/governance/audits/execute-customization-audit.md`.
 - Required report sections in this order:
   1. Executive Briefing
   2. Aggregate Outcome Grid
@@ -74,3 +74,4 @@ Invoke this skill when any of the following is true:
 - Failure matrix appears near top and includes failure reasons.
 - Final disposition respects EXE-M3 roll-up rule.
 - Evidence links are human-readable markdown links only.
+

@@ -2,7 +2,7 @@
 param(
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$DocsRoot = '.docs',
+    [string]$DocsRoot = '__DOCS_ROOT__',
 
     [Parameter()]
     [bool]$IncludeRefSnapshots = $true,
@@ -184,3 +184,4 @@ if ($IncludeLegacyReviewDirs) {
 
 $candidates |
     Sort-Object Category, Path
+

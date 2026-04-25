@@ -56,7 +56,7 @@ Optional:
 5. For each affected artifact, assess against the evaluation criteria below.
 6. Produce implementation-ready content changes for each affected artifact based on artifact type.
 7. Run post-update validation checks within this workflow and record outcomes.
-8. Publish a short maintenance summary in `.docs/changes/customization-maintenance/` with the date and impacted artifacts.
+8. Publish a short maintenance summary in `__DOCS_ROOT__/changes/customization-maintenance/` with the date and impacted artifacts.
 
 ## Evaluation Criteria
 
@@ -107,5 +107,6 @@ This skill is complete for a run only when:
 1. Gather required context and constraints from the workspace and user request.
 2. Execute the skill-specific steps and produce the required artifacts or decisions.
 3. Validate outputs for completeness and consistency with active workspace instructions.
+
 
 

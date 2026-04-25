@@ -71,9 +71,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `.docs/changes/<workstream-id>/supportability-findings.md`
-- `.docs/changes/<workstream-id>/supportability-matrix.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/supportability-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/supportability-matrix.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 
@@ -88,3 +88,4 @@ Stop when support and self-service paths are validated, high and critical issues
 - Required outputs are complete and linked.
 - Source ledger is current.
 - Final recommendation is explicit and evidence-backed.
+

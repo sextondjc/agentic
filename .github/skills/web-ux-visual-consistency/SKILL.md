@@ -71,9 +71,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `.docs/changes/<workstream-id>/visual-consistency-findings.md`
-- `.docs/changes/<workstream-id>/token-conformance-matrix.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/visual-consistency-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/token-conformance-matrix.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 
@@ -88,3 +88,4 @@ Stop when token conformance checks are complete, high and critical issues are re
 - Required outputs are complete and linked.
 - Source ledger is current.
 - Final recommendation is explicit and evidence-backed.
+

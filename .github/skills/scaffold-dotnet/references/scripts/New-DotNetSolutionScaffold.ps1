@@ -14,7 +14,7 @@ $resolvedRoot = (Resolve-Path -LiteralPath $WorkspaceRoot).Path
 
 $directories = @(
     '.config',
-    '.docs',
+    '__DOCS_ROOT__',
     '.github',
     '.scripts',
     'src',
@@ -57,3 +57,4 @@ else {
 }
 
 Write-Host 'Scaffold complete.'
+

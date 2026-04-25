@@ -16,11 +16,11 @@ Use this prompt at the start of each session to resume execution quickly for any
 
 Resolve active artifacts in this order at session start:
 
-1. Active execution authority memo from .docs/delivery/*activation*.md.
-2. Active execution plan in .docs/plans/ referenced by that memo.
-3. Active ticket backlog in .docs/plans/ for the current work slice.
-4. Active changes artifact in .docs/changes/ for progressive updates.
-5. Active status artifact in .docs/delivery/ for X-of-Y reporting.
+1. Active execution authority memo from __DOCS_ROOT__/delivery/*activation*.md.
+2. Active execution plan in __DOCS_ROOT__/plans/ referenced by that memo.
+3. Active ticket backlog in __DOCS_ROOT__/plans/ for the current work slice.
+4. Active changes artifact in __DOCS_ROOT__/changes/ for progressive updates.
+5. Active status artifact in __DOCS_ROOT__/delivery/ for X-of-Y reporting.
 
 If no authority memo exists, infer the latest merged execution plan and confirm with the user before proceeding.
 
@@ -59,11 +59,11 @@ If no authority memo exists, infer the latest merged execution plan and confirm 
 
 ## Traceability Update Protocol (Mandatory)
 
-1. After every completed batch, update the active changes artifact in .docs/changes/.
+1. After every completed batch, update the active changes artifact in __DOCS_ROOT__/changes/.
 2. Include plan linkage, changed artifacts, and evidence summary.
 3. Log all scope/sequence deviations before proceeding.
 4. No ticket can move to Done without test evidence and changed file list.
-5. Refresh delivery counters in the active status artifact in .docs/delivery/ after each batch.
+5. Refresh delivery counters in the active status artifact in __DOCS_ROOT__/delivery/ after each batch.
 
 ## Cross-Session Continuity Protocol
 
@@ -119,3 +119,4 @@ Return status updates in this order.
 - Update ticket statuses and delivery counters.
 - Record deviations and unresolved findings.
 - Publish a concise next-session handoff block.
+

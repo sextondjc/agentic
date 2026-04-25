@@ -44,3 +44,11 @@ applyTo: '**/*.ts,**/*.tsx,**/*.js,**/*.jsx,**/*.css,**/*.html'
 - Untyped API response consumption without explicit schema validation.
 - Direct DOM manipulation bypassing the component framework lifecycle.
 - Hardcoded credentials, tokens, or environment-specific URLs in source files.
+
+## Routing Notes
+
+- Use [SKILL.md](./../skills/build-web-frontend/SKILL.md) for component architecture, accessibility validation, performance tuning, and security review workflow.
+- Use quality-gate skills for domain-specific evidence-based decisions:
+  - [SKILL.md](./../skills/web-ux-accessibility/SKILL.md) for accessibility findings
+  - [SKILL.md](./../skills/web-ux-performance/SKILL.md) for Core Web Vitals validation
+  - [SKILL.md](./../skills/web-ux-quality-gate/SKILL.md) for unified web UX quality sign-off

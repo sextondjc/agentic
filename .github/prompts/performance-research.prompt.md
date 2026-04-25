@@ -11,7 +11,7 @@ Perform a research-only performance assessment of the requested .NET/C# scope. U
 
 Default output:
 
-- Report location: `/.docs/research/performance/`
+- Report location: `/__DOCS_ROOT__/research/performance/`
 - Filename: `<solution-or-project-or-namespace>-performance-research-report.md`
 
 Requirements:
@@ -20,3 +20,4 @@ Requirements:
 - Use existing workspace instructions and relevant skills.
 - Call out missing skills, missing evidence, or missing tooling in the report.
 - Keep implementation status explicit: no remediations are to be implemented.
+

@@ -1,5 +1,5 @@
-# test-naming-conformance.ps1: Check .docs file and folder naming policy conformance.
-# Usage: ./test-naming-conformance.ps1 -RootPath .docs
+# test-naming-conformance.ps1: Check __DOCS_ROOT__ file and folder naming policy conformance.
+# Usage: ./test-naming-conformance.ps1 -RootPath __DOCS_ROOT__
 # Output: PSCustomObject array of violations (empty = clean). Exits 1 if violations found.
 # Must be called from workspace root.
 
@@ -7,7 +7,7 @@
 param(
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$RootPath = '.docs'
+    [string]$RootPath = '__DOCS_ROOT__'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -17,7 +17,7 @@ $fileRx     = '^[a-z0-9]+(-[a-z0-9]+)*\.(md|txt|json|yml|yaml)$'
 $folderRx   = '^[a-z0-9]+$'
 $datePfxRx  = '^\d{4,8}-'
 # Intentional exemptions: asset-name review subdirs mirror asset identifiers (dots/hyphens load-bearing)
-# and dotted root paths (.docs/.github/.archive) are structural, not naming policy violations.
+# and dotted root paths (__DOCS_ROOT__/.github/.archive) are structural, not naming policy violations.
 $exemptFolderRx = '(\\|/)((customization|skill)\\reviews|reference\\\.)'
 # .ref.md double-extension files under reference/ are mirror artifacts - intentional by design
 $refMirrorRx    = '\.ref\.md$'
@@ -70,3 +70,4 @@ if ($violations.Count -gt 0) {
 Write-Verbose "Naming conformance: clean."
 $violations
 exit 0
+

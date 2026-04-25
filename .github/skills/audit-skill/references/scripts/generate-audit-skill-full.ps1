@@ -7,7 +7,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $skillsRoot = Join-Path $RootPath '.github/skills'
-$reportsRoot = Join-Path $RootPath '.docs/changes/skill/reviews'
+$reportsRoot = Join-Path $RootPath '__DOCS_ROOT__/changes/skill/reviews'
 $historyRoot = Join-Path $skillsRoot 'skill-review/references/history'
 $mirrorPath = Join-Path $skillsRoot 'skill-review/references/mirrors/agent-customization-SKILL.md'
 $includeMirror = $IncludeAgentCustomizationMirror
@@ -647,7 +647,7 @@ foreach ($skillInput in ($skillInputs | Sort-Object SkillName -Unique)) {
         }
     }
 
-    $reportRelPath = ".docs/changes/skill/reviews/$skill/review.md"
+    $reportRelPath = "__DOCS_ROOT__/changes/skill/reviews/$skill/review.md"
     $reportPath = Join-Path $reportsRoot "$skill/review.md"
     New-Item -ItemType Directory -Force -Path (Split-Path $reportPath -Parent) | Out-Null
 
@@ -799,4 +799,5 @@ Set-Content -Path $historyIndexPath -Value ($historyIndexLines -join "`n") -NoNe
 Write-Output "Completed full skill audit for $total skills."
 Write-Output "Aggregate grid: $gridPath"
 Write-Output "History index: $historyIndexPath"
+
 

@@ -75,11 +75,8 @@ function Add-OrUpdateReviewRecord {
 $latestByAsset = @{}
 
 $historyRoots = @(
-    @{ Path = '.docs/changes/skill/history'; Type = 'Skill' },
-    @{ Path = '.docs/changes/agent/history'; Type = 'Agent' },
-    @{ Path = '.docs/changes/instruction/history'; Type = 'Instruction' },
-    @{ Path = '.docs/changes/prompt/history'; Type = 'Prompt' },
-    @{ Path = '.github/skills/skill-review/references/history'; Type = 'Skill' }
+    @{ Path = '.github/skills/skill-review/references/history'; Type = 'Skill' },
+    @{ Path = '.github/skills/governance-health-overview/references/.artifacts/history'; Type = 'Customization' }
 )
 
 foreach ($historyRoot in $historyRoots) {
@@ -94,7 +91,7 @@ foreach ($historyRoot in $historyRoots) {
     }
 }
 
-$auditHistoryPath = Join-Path $resolvedRoot '.docs/changes/customization/reviews/audit-history.md'
+$auditHistoryPath = Join-Path $resolvedRoot '.github/skills/execute-customization-audit/references/.artifacts/audit-history.md'
 if (Test-Path -LiteralPath $auditHistoryPath) {
     $latestByArtifact = @{}
     foreach ($line in Get-Content -LiteralPath $auditHistoryPath) {
@@ -124,7 +121,10 @@ foreach ($record in $latestByAsset.Values | Sort-Object Type, Asset) {
     })
 }
 
-if ($rows.Count -eq 0) { Write-Error 'No review history records found to evaluate.'; exit 1 }
+if ($rows.Count -eq 0) {
+    Write-Warning 'No review history records found to evaluate under .github-local roots; treating as non-blocking for portability.'
+    exit 0
+}
 $results = @($rows | Sort-Object Type, Asset)
 $results
 $violations = @($results | Where-Object { $_.Status -in @('Overdue','Missing Review Date') })

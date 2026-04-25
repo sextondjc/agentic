@@ -9,7 +9,7 @@
 
 ## Storage
 
-- Save this file to `.docs/changes/governance/type-audits/audit-customization-types.md`
+- Save this file to `__DOCS_ROOT__/changes/governance/type-audits/audit-customization-types.md`
 
 ## Type Scope Grid
 

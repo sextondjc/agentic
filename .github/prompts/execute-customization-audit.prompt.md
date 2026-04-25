@@ -15,10 +15,10 @@ Produce one executive governance report that aggregates all governance source au
 
 ## Mandatory Source Audits
 
-- `.docs/changes/governance/audits/governance-audit.md`
-- `.docs/changes/skill/reviews/governance-audit-types-skills.md`
-- `.docs/changes/customization/reviews/governance-audit-types-customizations.md`
-- `.docs/changes/customization/reviews/governance-audit-types-optimization.md`
+- `<documentation-root>/changes/governance/audits/governance-audit.md`
+- `<documentation-root>/changes/skill/reviews/governance-audit-types-skills.md`
+- `<documentation-root>/changes/customization/reviews/governance-audit-types-customizations.md`
+- `<documentation-root>/changes/customization/reviews/governance-audit-types-optimization.md`
 
 If any source is missing, output `PROVISIONAL-FAILED` with missing-source rows.
 
@@ -26,7 +26,7 @@ If any source is missing, output `PROVISIONAL-FAILED` with missing-source rows.
 
 1. Load and follow [SKILL.md](./../skills/execute-customization-audit/SKILL.md).
 2. Validate all required source audit artifacts exist.
-3. Aggregate outcomes and produce one report at `.docs/changes/governance/audits/execute-customization-audit.md`.
+3. Aggregate outcomes and produce one report at `<documentation-root>/changes/governance/audits/execute-customization-audit.md`.
 4. Ensure report section order is exactly:
    1. Executive Briefing
    2. Aggregate Outcome Grid

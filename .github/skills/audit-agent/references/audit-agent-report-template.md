@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to .docs/changes/agent/reviews/<agent-name>/review.md
+- Save this file to __DOCS_ROOT__/changes/agent/reviews/<agent-name>/review.md
 
 ## Summary Outcome Grid
 
@@ -66,3 +66,4 @@
 | Agent | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---|---|
 | <agent-name> | Pass/Pass With Advisories/Fail/Blocked | <n> | <n> | None/Detected/Resolved/Blocked | <report-file> |
+

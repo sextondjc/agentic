@@ -1,7 +1,7 @@
 ---
 name: ux-design
-description: 'UX design process standards: accessibility baseline, interaction conventions, handoff artifact requirements, and usability validation rules.'
-applyTo: '.docs/**/*.md'
+description: 'UX design policy standards: accessibility baseline, interaction conventions, and wireframe/prototype mandates.'
+applyTo: '__DOCS_ROOT__/**/*.md'
 ---
 # UX Design Policy
 
@@ -29,15 +29,9 @@ applyTo: '.docs/**/*.md'
 - Mid-fidelity wireframes must include content hierarchy, spacing intent, and tap or click target sizing.
 - Do not skip the low-fidelity stage for flows with more than three steps.
 
-## Handoff Requirements
+## Routing Notes
 
-- Handoff artifacts must include: annotated wireframes, behavior specifications, acceptance cues, and a usability test plan or findings summary.
-- Accessibility annotations are mandatory before routing to any engineering agent.
-- Specify responsive breakpoints and adaptive layout behavior explicitly in handoff notes.
-- Include instrumentation hooks and success metrics for each key flow.
+- Use [SKILL.md](./../skills/design-web-ux/SKILL.md) for web UX research, wireframing, validation, and handoff workflow.
+- Use [SKILL.md](./../skills/design-mobile-ux/SKILL.md) for mobile UX research, wireframing, validation, and handoff workflow.
+- Use [SKILL.md](./../skills/usability-test-scripts/SKILL.md) for usability test design, scoring rubrics, and findings templates.
 
-## Validation
-
-- Run usability tests with a minimum of five participants before sign-off on major flows.
-- Capture severity-ranked findings; address critical and high severity issues before handoff.
-- Document unresolved findings with explicit deferral rationale and follow-up owner.

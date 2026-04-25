@@ -56,11 +56,8 @@ jobs:
             # Artifact reference hygiene (exits 1 on stale unreferenced governance artifacts)
             ./.github/scripts/powershell/test-artifact-reference-hygiene.ps1 -ArtifactsPath ./.github/skills/execute-customization-audit/references/.artifacts | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/artifact-reference-hygiene.txt
 
-            # .docs naming conformance
-            ./.github/scripts/powershell/test-naming-conformance.ps1 -RootPath .docs
-
-            # Index refresh companion check (librarian hygiene)
-            ./.github/scripts/powershell/invoke-index-refresh.ps1 -RootPath .docs | Tee-Object -FilePath ./.github/skills/execute-customization-audit/references/.artifacts/index-refresh.txt
+            # Strict shared-package portability gate (forbidden documentation-root dependencies)
+            ./.github/scripts/powershell/test-no-docs-dependency.ps1 -RootPath . -ScanPath .github -OutputJsonPath ./.github/skills/execute-customization-audit/references/.artifacts/no-docs-dependency.json
 
             # .github asset naming conformance
             ./.github/scripts/powershell/test-asset-naming.ps1 -AssetType all

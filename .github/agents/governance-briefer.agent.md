@@ -39,11 +39,11 @@ Summarizes only; does not run full governance audits unless explicitly requested
 
 - Reporting date or date window.
 - Audience mode: `Executive`, `Engineering Leads`, or `Customization Maintainers`.
-- Source paths under `.docs/changes/` and `.github/skills/governance-audit/references/`.
+- Source paths under `__DOCS_ROOT__/changes/` and `.github/skills/governance-audit/references/`.
 
 ## Output Contract
 
-- Write one briefing page to `.docs/changes/governance/audits/governance-one-pager.md`.
+- Write one briefing page to `__DOCS_ROOT__/changes/governance/audits/governance-one-pager.md`.
 - Use this grid-first order:
   1. `Disposition Snapshot`
   2. `Top Salient Findings`
@@ -58,3 +58,4 @@ Summarizes only; does not run full governance audits unless explicitly requested
 - If same-day artifacts conflict, flag evidence drift and route remediation.
 - Never hide MUST failures or unresolved conflicts.
 - Keep recommendations actionable with owner and target date.
+

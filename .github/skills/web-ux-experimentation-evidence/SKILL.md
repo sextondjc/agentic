@@ -64,9 +64,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `.docs/changes/<workstream-id>/experiment-quality-assessment.md`
-- `.docs/changes/<workstream-id>/experiment-decision-log.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/experiment-quality-assessment.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/experiment-decision-log.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 
@@ -81,3 +81,4 @@ Stop when hypothesis quality is validated, guardrail status is explicit, and a f
 - Required outputs are complete and linked.
 - Source ledger is current.
 - Final decision is explicit and auditable.
+

@@ -40,7 +40,7 @@ Project initialization and configuration specialist for lean .NET applications. 
 
 - **Questionnaire first** — gather deep context before writing configuration.
 - **Lean over generic** — every recommendation must be justified by project scope.
-- **Convention alignment** — output aligns with workspace standards (Syrx, xUnit, `.docs/`).
+- **Convention alignment** — output aligns with workspace standards (Syrx, xUnit, `<documentation-root>/`).
 - **Rationale documentation** — every recommendation includes a brief "why".
 
 ## Pre-Flight Requirements
@@ -66,14 +66,14 @@ After questionnaire:
 2. Curate agents and skills matched to project needs.
 3. Determine which instruction files are essential vs. deferrable.
 
-## Outputs (Save to `.docs/setup/` and `.github/agents/`)
+## Outputs (Save to `<documentation-root>/setup/` and `.github/agents/`)
 
 | File | Purpose |
 |---|---|
 | `.github/agents/project-copilot-instructions.md` | Project-specific copilot instructions: overview, domain model, standards, agents, skills, docs structure |
-| `.docs/setup/agents-activation.md` | Table: Agent \| Activate \| Rationale |
-| `.docs/setup/skills-recommendations.md` | High-priority, medium, deferred, guidance by phase |
-| `.docs/setup/docs-baseline.md` | Canonical `.docs/` structure; essential vs. deferred instructions |
+| `<documentation-root>/setup/agents-activation.md` | Table: Agent \| Activate \| Rationale |
+| `<documentation-root>/setup/skills-recommendations.md` | High-priority, medium, deferred, guidance by phase |
+| `<documentation-root>/setup/docs-baseline.md` | Canonical documentation structure; essential vs. deferred instructions |
 
 Keep project copilot instructions scannable: every line answers "What should developers do?" or "When should they use this agent/skill?"
 - `github-actions-ci-cd-best-practices.instructions.md` → Recommend during CI/CD setup.
@@ -91,9 +91,9 @@ Before writing application code:
 - [ ] Review and update `.github/agents/project-copilot-instructions.md` with project-specific standards.
 - [ ] Confirm Syrx dependency and version in `.csproj`.
 - [ ] Review [csharp.instructions.md](./../instructions/csharp.instructions.md) as a team.
-- [ ] Create first ADR in `.docs/adr/0001-domain-model.md` documenting core aggregates.
+- [ ] Create first ADR in `<documentation-root>/adr/0001-domain-model.md` documenting core aggregates.
 - [ ] Scaffold initial repository structure in `Infrastructure/` using `syrx-data-access` skill guidance.
-- [ ] Create `.docs/plans/phase-1-implementation.md` with detailed tasks.
+- [ ] Create `<documentation-root>/plans/phase-1-implementation.md` with detailed tasks.
 
 ## Next Steps (Phase 2)
 - Async patterns (if applicable).
@@ -108,7 +108,7 @@ Before writing application code:
 4. **Curate agent and skill list** — match to project needs.
 5. **Draft instructions and artifacts** — generate output files.
 6. **Present summary to user** — explain decisions and ask for approval before saving files.
-7. **Save outputs** — create `.github/agents/project-copilot-instructions.md` and supporting docs in `.docs/`.
+7. **Save outputs** — create `.github/agents/project-copilot-instructions.md` and supporting docs in `<documentation-root>/`.
 
 ## Output Locations
 
@@ -119,7 +119,7 @@ Save files as follows (confirm with user before writing):
 └── agents/
     └── project-copilot-instructions.md  [Primary output]
 
-.docs/
+<documentation-root>/
 ├── setup/
 │   ├── agents-activation.md
 │   ├── skills-recommendations.md
@@ -135,7 +135,7 @@ If the user specifies different locations, honor their request and document the 
 - **No deprecated tools** — cross-check all recommendations against the workspace's evolution. If a tool is marked deprecated, exclude it.
 - **No overgeneralization** — avoid "use this pattern in general"; instead, "use this pattern because X".
 - **No partial completion** — if a questionnaire answer is vague, follow up before proceeding to analysis.
-- **Align with workspace conventions** — never suggest non-Syrx ORM, non-xUnit test framework, or non-.docs/ documentation structure.
+- **Align with workspace conventions** — never suggest non-Syrx ORM, non-xUnit test framework, or non-portable documentation structure.
 
 ## Metrics for Success
 

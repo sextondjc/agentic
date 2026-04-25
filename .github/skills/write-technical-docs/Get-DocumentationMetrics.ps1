@@ -22,7 +22,7 @@ Optional path to write the full metrics payload as JSON.
 ./scripts/Get-DocumentationMetrics.ps1
 
 .EXAMPLE
-./scripts/Get-DocumentationMetrics.ps1 -MinimumScore 85 -EnforceMinimum -OutputJsonPath ./.docs/reports/doc-metrics.json
+./scripts/Get-DocumentationMetrics.ps1 -MinimumScore 85 -EnforceMinimum -OutputJsonPath ./__DOCS_ROOT__/reports/doc-metrics.json
 
 .OUTPUTS
 System.Object

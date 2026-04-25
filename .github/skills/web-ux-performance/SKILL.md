@@ -100,10 +100,10 @@ Abandonment-risk bands:
 
 Capture artifacts under one change scope path:
 
-- `.docs/changes/<workstream-id>/ux-performance-findings.md`
-- `.docs/changes/<workstream-id>/performance-evidence-matrix.md`
-- `.docs/changes/<workstream-id>/abandonment-risk-rubric.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/ux-performance-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/performance-evidence-matrix.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/abandonment-risk-rubric.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## L4 Coverage Matrix
 
@@ -166,3 +166,4 @@ Stop when all in-scope journeys have measured UX performance evidence, all high 
 - L4 coverage matrix remains complete and current.
 - Source ledger is current for this evaluation cycle.
 - Final recommendation is explicit, evidence-backed, and auditable.
+

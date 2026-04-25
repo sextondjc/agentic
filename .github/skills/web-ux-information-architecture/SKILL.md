@@ -73,9 +73,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `.docs/changes/<workstream-id>/ia-findings.md`
-- `.docs/changes/<workstream-id>/ia-findability-matrix.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/ia-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/ia-findability-matrix.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## L4 Coverage Matrix
 
@@ -100,3 +100,4 @@ Stop when in-scope tasks meet findability checks, high and critical IA issues ar
 - Required outputs are complete and linked.
 - Source ledger is current.
 - Final recommendation is explicit and evidence-backed.
+

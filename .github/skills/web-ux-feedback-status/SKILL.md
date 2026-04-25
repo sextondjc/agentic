@@ -71,9 +71,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `.docs/changes/<workstream-id>/feedback-status-findings.md`
-- `.docs/changes/<workstream-id>/feedback-status-matrix.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/feedback-status-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/feedback-status-matrix.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 
@@ -88,3 +88,4 @@ Stop when in-scope feedback states are validated, high and critical issues are r
 - Required outputs are complete and linked.
 - Source ledger is current.
 - Final recommendation is explicit and evidence-backed.
+

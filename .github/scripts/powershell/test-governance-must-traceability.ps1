@@ -4,7 +4,7 @@
 
 param(
     [Parameter(Mandatory = $false)]
-    [string]$ReportPath = '.docs/changes/governance/audits/execute-customization-audit.md',
+    [string]$ReportPath = '__DOCS_ROOT__/changes/governance/audits/execute-customization-audit.md',
 
     [Parameter(Mandatory = $false)]
     [string]$RegistryPath = '.github/scripts/powershell/governance-must-check-registry.json'
@@ -170,3 +170,4 @@ if ($violations.Count -gt 0) {
 }
 
 Write-Output "All MUST findings map to canonical checks and evidence scripts."
+

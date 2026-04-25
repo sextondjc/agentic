@@ -54,12 +54,12 @@ Generate well-structured Markdown with clear heading hierarchy, code blocks, tab
 
 ## File Location
 
-The documentation should be saved in the `/.docs/components/` directory and named according to the convention: `[component-name]-documentation.md`.
+The documentation should be saved in the `/__DOCS_ROOT__/components/` directory and named according to the convention: `[component-name]-documentation.md`.
 
 ## Workspace Alignment
 
 - Prefer concise, maintainable documentation over exhaustive boilerplate.
-- Keep generated documentation aligned with `.docs` as the canonical documentation root.
+- Keep generated documentation aligned with `__DOCS_ROOT__` as the canonical documentation root.
 - Prioritize actual code structure and current behavior over assumed architecture.
 
 ## Required Documentation Structure
@@ -202,3 +202,4 @@ await component.ProcessAsync(data);
 - REF-006: Change history and migration notes
 
 ```
+

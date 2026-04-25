@@ -73,10 +73,10 @@ Optional inputs:
 
 - A per-prompt review report stored using template: [audit-prompts-report-template.md](./references/audit-prompts-report-template.md).
 - A conflict report is not produced by this skill; conflict detection across prompts or with other customization types is a type-governance concern.
-- Updated per-prompt history at: `.docs/changes/prompt/history/<prompt-name>-history.md`.
+- Updated per-prompt history at: `__DOCS_ROOT__/changes/prompt/history/<prompt-name>-history.md`.
 - Review result summaries MUST be returned in Markdown grid format (tables), not prose lists.
 - Aggregate multi-prompt results MUST include at least one consolidated grid with per-prompt outcomes.
-- Per-prompt review files MUST be stored under `.docs/changes/prompt/reviews/<prompt-name>/`.
+- Per-prompt review files MUST be stored under `__DOCS_ROOT__/changes/prompt/reviews/<prompt-name>/`.
 - Reasoning package per reviewed prompt: assumptions, trade-offs, blockers, and one recommendation.
 - Source-governance summary when source validation is requested.
 - Updated [source-catalog.md](./references/source-catalog.md) when source tracking changes are made.
@@ -91,7 +91,7 @@ Optional inputs:
 ## Workflow
 
 1. Resolve target prompts and collect current `.prompt.md` files.
-2. Load the per-prompt history file from `.docs/changes/prompt/history/` before analysis.
+2. Load the per-prompt history file from `__DOCS_ROOT__/changes/prompt/history/` before analysis.
 3. Build a recommendation deny-list from history entries marked Rejected, Removed, or Illegitimate.
 4. Re-evaluate tracked sources in [source-catalog.md](./references/source-catalog.md) for freshness and current `.prompt.md` behavior before source-sensitive checks.
 5. Build coverage across all mandatory branches: purpose scope, frontmatter validity, output contract, skill routing, prompt conflicts, brevity, source alignment, and history alignment.
@@ -111,13 +111,13 @@ Optional inputs:
 
 ## Storage Rules
 
-- Store each prompt review under `.docs/changes/prompt/reviews/<prompt-name>/`.
+- Store each prompt review under `__DOCS_ROOT__/changes/prompt/reviews/<prompt-name>/`.
 - Use descriptive file names: `review.md`. Use versioned names (for example, `review-v2.md`) to disambiguate repeated runs.
-- Keep aggregate cross-prompt summaries in `.docs/changes/prompt/reviews/`.
+- Keep aggregate cross-prompt summaries in `__DOCS_ROOT__/changes/prompt/reviews/`.
 
 ## History Management Rules
 
-- Keep one history file per reviewed prompt at `.docs/changes/prompt/history/<prompt-name>-history.md`.
+- Keep one history file per reviewed prompt at `__DOCS_ROOT__/changes/prompt/history/<prompt-name>-history.md`.
 - Append new review entries; never rewrite prior decisions.
 - Track each recommendation with status: Proposed, Accepted, Rejected, Removed, Implemented.
 - Before publishing recommendations, remove any item that matches prior Rejected or Removed entries unless the user explicitly re-opens it.

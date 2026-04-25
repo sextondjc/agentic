@@ -5,7 +5,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-$reportRoot = Join-Path $RootPath '.docs/changes/skill/reviews'
+$reportRoot = Join-Path $RootPath '__DOCS_ROOT__/changes/skill/reviews'
 
 function Add-MissingSections {
     param(
@@ -113,3 +113,4 @@ if (-not (Test-Path $govChecklist)) {
 }
 
 Write-Output 'Skill audit remediation updates completed.'
+

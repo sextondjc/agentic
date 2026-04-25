@@ -58,9 +58,9 @@ Routing behavior in this agent must align with policy authority in [governance-l
 
 | Task Type | Route To | What That Specialist Does | What It Must Not Do |
 |-----------|----------|---------------------------|----------------------|
-| Planning, research, implementation plans | `plan-researcher` | Research, compare options, write plans in `.docs/research` and `.docs/plans` | Implement production code unless the user explicitly changes mode |
-| Security vulnerability research | `security-researcher` | Investigate .NET/C# security risks and produce remediation reports in `.docs/research/security` | Implement fixes or drift into general engineering |
-| Performance bottleneck research | `performance-assessor` | Investigate .NET/C# performance risks and produce remediation reports in `.docs/research/performance/` | Implement fixes or drift into speculative optimization |
+| Planning, research, implementation plans | `plan-researcher` | Research, compare options, write plans in `<documentation-root>/research` and `<documentation-root>/plans` | Implement production code unless the user explicitly changes mode |
+| Security vulnerability research | `security-researcher` | Investigate .NET/C# security risks and produce remediation reports in `<documentation-root>/research/security` | Implement fixes or drift into general engineering |
+| Performance bottleneck research | `performance-assessor` | Investigate .NET/C# performance risks and produce remediation reports in `<documentation-root>/research/performance/` | Implement fixes or drift into speculative optimization |
 | .NET implementation | `csharp-engineer` | Write and modify .NET code, tests, and targeted docs | Turn into broad planning-only analysis when implementation is clearly requested |
 | Architecture, DDD, ADRs | `architecture-designer` | Boundary design, ADRs, aggregate analysis, refactoring guidance | Drift into general feature implementation |
 | Bug fixing and regression diagnosis | `defect-debugger` | Reproduce, isolate, fix, verify | Become a planning-only advisor |
@@ -70,7 +70,7 @@ Routing behavior in this agent must align with policy authority in [governance-l
 | Security research workflow | `security-research` skill with `security-researcher` | Apply the standard security investigation workflow and report template | Replace the primary research agent for mixed-scope work |
 | Performance research workflow | `performance-research` skill with `performance-assessor` | Apply the standard performance investigation workflow and report template | Replace the primary research agent for mixed-scope work |
 | API integration design | `api-design` skill | Design resilient API clients and service integrations | Replace the primary implementation or planning agent |
-| ADR authoring | `adr-generator` skill with `architecture-designer` | Write ADRs in `.docs/adr` | Act as the main architecture decision-maker |
+| ADR authoring | `adr-generator` skill with `architecture-designer` | Write ADRs in `<documentation-root>/adr` | Act as the main architecture decision-maker |
 | Product and PRD work | `prd-generator` skill | Create PRDs and requirements artifacts | Perform engineering implementation |
 | PowerShell script creation or catalog management | `powershell-script-library` skill | Check catalog first for reuse, deduplication; validate script consistency with `powershell-reviewer` | Write scripts without consulting the catalog or deduplication registry |
 | Multi-skill composition under self-containment policy | `compose-skills` skill | Build explicit composition contract, phase ownership, and output coverage before execution | Allow implicit capability selection or direct skill-to-skill delegation |
@@ -86,7 +86,7 @@ Routing behavior in this agent must align with policy authority in [governance-l
 
 ### 1a. Researcher Boundaries
 - `security-researcher` and `performance-assessor` are report-first, research-only lanes.
-- Default output is a report in `.docs/research/security` or `.docs/research/performance`.
+- Default output is a report in `<documentation-root>/research/security` or `<documentation-root>/research/performance`.
 - Remediation work after the report → hand off through `orchestrator` to the correct specialist.
 
 ### 2. Architecture vs Implementation
@@ -172,9 +172,9 @@ Apply in order:
 
 ## Guardrails
 
-- Keep planning in `.docs/research` and `.docs/plans`.
-- Security reports → `.docs/research/security`; performance reports → `.docs/research/performance`.
-- ADRs → `.docs/adr`.
+- Keep planning in `<documentation-root>/research` and `<documentation-root>/plans`.
+- Security reports → `<documentation-root>/research/security`; performance reports → `<documentation-root>/research/performance`.
+- ADRs → `<documentation-root>/adr`.
 - Prefer one non-interactive terminal execution per workflow when automation can batch checks safely.
 - Require explicit parameters for commands that could prompt; avoid manual terminal input.
 - If more than one terminal approval is unavoidable, state why before execution and minimize the count.

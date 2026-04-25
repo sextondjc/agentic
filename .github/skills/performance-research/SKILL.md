@@ -25,7 +25,7 @@ You are a reusable performance research workflow for .NET and C# codebases. Your
 
 ## Default Output
 
-Write the final report to `/.docs/research/performance/` unless the user explicitly overrides the destination or a workspace documentation specialist provides a different location.
+Write the final report to `/__DOCS_ROOT__/research/performance/` unless the user explicitly overrides the destination or a workspace documentation specialist provides a different location.
 
 Filename pattern:
 
@@ -103,4 +103,5 @@ Use the [performance-research-report-template.md](./references/performance-resea
 ## Required Outputs
 
 - A concrete, workspace-applicable result aligned with this skill purpose.
+
 

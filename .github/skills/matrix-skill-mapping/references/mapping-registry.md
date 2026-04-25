@@ -52,3 +52,4 @@ Canonical matrix source: `./phase-discipline-lane-agentic-delivery-matrix.md`
 | 2026-04-18 | Added O03 post-release-retrospective, O04 customer-feedback-synthesis, O05 support-runbook-generator. | Next-40 cell implementation pass — three O-code optional assets created for Release, UX/PM, and Support coverage. |
 | 2026-04-18 | Added O01 taxonomy-tag-registry, O02 experiment-design, O06 release-simulation. | Final 70-cell pass — all O-codes now implemented; full 150-cell matrix coverage achieved. |
 | 2026-04-18 | Added N11 data-design, N12 sre-practices, X13 documentation bundle. Five new disciplines adopted via DEC-PDL-07 revisit. Matrix expanded to 225 rows, 15 disciplines. |
+| 2026-04-25 | Updated X06 Frontend delivery bundle to MAUI Android+iOS orchestration and quality-gate skills; retired `build-mobile-apps` from active bundle mapping. | Align mobile delivery taxonomy to MAUI cross-platform strategy and current specialist skill family. |

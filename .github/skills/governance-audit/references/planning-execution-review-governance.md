@@ -9,7 +9,7 @@ Provide a deterministic operating model where agents, instructions, prompts, and
 
 | Lane | Responsibility | Primary Output | Exit Condition |
 |---|---|---|---|
-| Planning | Analyze intent, constraints, and dependencies; produce execution-ready work packages. | Grid-first markdown plan packets in `.docs/plans` and supporting context in `.docs/research`. | Every work package has owner, scope, acceptance criteria, risk controls, and handoff data. |
+| Planning | Analyze intent, constraints, and dependencies; produce execution-ready work packages. | Grid-first markdown plan packets in `__DOCS_ROOT__/plans` and supporting context in `__DOCS_ROOT__/research`. | Every work package has owner, scope, acceptance criteria, risk controls, and handoff data. |
 | Execution | Build approved artifacts from planning packets. | Code, tests, docs, scripts, workflows, and change entries. | Artifact acceptance criteria are met and evidence is recorded. |
 | Review | Validate quality, correctness, security, and adherence to standards. | Review reports with findings, risk ratings, and required actions. | Findings are resolved or explicitly accepted with decision record. |
 
@@ -57,7 +57,7 @@ Planning output should prefer markdown grids over narrative text.
 
 - Execution lane must only consume approved planning packets with Plan ID.
 - Execution outputs must map each change back to Workstream ID and Acceptance Criteria IDs.
-- Execution updates must append durable change evidence under `.docs/changes`.
+- Execution updates must append durable change evidence under `__DOCS_ROOT__/changes`.
 - If execution discovers missing planning context, it must raise a `DEC-##` request rather than improvising scope.
 
 ## Review Contract
@@ -87,3 +87,4 @@ Each catalog entry should include at least `Primary Lane`, `Secondary Lane`, and
 ## Outcome
 
 This model enables high-speed, low-rework delivery by forcing explicit lane ownership, explicit handoffs, and auditable decisions.
+

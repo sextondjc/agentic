@@ -20,7 +20,7 @@ Provide a repeatable, standards-aligned workflow for delivering production-grade
 ## When Not to Use
 
 - UX research and wireframe design (use `design-web-ux`).
-- Mobile app implementation with MAUI (use `build-mobile-apps` for MAUI native targets).
+- Mobile app implementation with MAUI (use `build-maui-apps` for MAUI native Android and iOS targets).
 - Backend API or service implementation (route to `csharp-engineer`).
 - Global Blazor policy enforcement (use instruction files in `.github/instructions`).
 

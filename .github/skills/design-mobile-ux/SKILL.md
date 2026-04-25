@@ -1,97 +1,155 @@
 ---
 name: design-mobile-ux
-description: Use when defining or improving mobile app UX for iOS and Android and you need a practical flow from user research through wireframes, validation, and engineering handoff.
+description: Use when defining or improving mobile UX for iOS and Android and you need an expert, source-backed workflow from research through wireframes, validation, and engineering handoff.
 ---
 
 # Design Mobile UX
 
 ## Specialization
 
-This skill is specialized for the workflow described in this file and should remain narrowly bounded to that responsibility.
+Provide an expert-level, source-backed workflow for designing and validating mobile UX across iOS and Android, with explicit platform-fit, accessibility, and handoff quality gates.
 
-It should not absorb adjacent planning, execution, or review responsibilities that belong to other assets.
+## Objective
 
-## Scope
+Produce mobile UX artifacts that reduce implementation ambiguity, preserve platform conventions, and make success criteria measurable before engineering begins.
 
-Design and validate mobile UX for iOS and Android across phones and tablets, from discovery through tested handoff artifacts.
+## Scope Boundaries
 
-## Outcomes
+In scope:
 
-- Problem statement, user goals, and prioritized experience risks.
-- Low-fidelity to mid-fidelity wireframes for core journeys.
-- Accessibility and usability findings with concrete fixes.
-- Implementation-ready handoff notes and validation plan.
+- User-goal framing, journey design, and risk prioritization.
+- Low-fidelity to mid-fidelity mobile wireframes.
+- Platform-aware interaction decisions for iOS and Android.
+- Accessibility, adaptive-layout, and validation planning.
+- Implementation-ready UX handoff notes.
 
-## Workflow
+Out of scope:
 
-1. Define the target users, business goal, and success criteria for the feature.
-2. Gather evidence: analytics, support tickets, app reviews, and 5-8 user interviews or session reviews.
-3. Map top tasks and current pain points; write clear journey assumptions to test.
-4. Produce task flows and low-fidelity wireframes for primary, edge, and error states.
-5. Apply platform-aware patterns (iOS and Android) without fragmenting core interaction logic.
-6. Evolve to mid-fidelity wireframes with content hierarchy, tap targets, and state behavior.
-7. Run quick usability tests (5+ participants), capture severity-ranked issues, and iterate.
-8. Prepare handoff package: annotated wireframes, behavior specs, acceptance cues, and test scenarios.
-9. Define instrumentation and launch validation loop before implementation sign-off.
-
-## Accessibility and Usability Heuristics
-
-- Maintain readable typography, sufficient contrast, and clear visual hierarchy.
-- Ensure touch targets are comfortably tappable and spacing prevents accidental taps.
-- Keep navigation predictable, back behavior consistent, and system gestures respected.
-- Provide visible feedback for loading, success, and failure states.
-- Support screen readers with meaningful labels, focus order, and announced state changes.
-- Minimize cognitive load: one primary action per screen and plain-language microcopy.
-
-## Responsive and Adaptive Guidance
-
-- Design for common phone classes first, then adapt for tablets with expanded layouts.
-- Handle portrait and landscape orientation intentionally; do not rely on automatic stretch.
-- Use thumb-reach-aware placement for primary actions on large phones.
-- Preserve task continuity across device sizes with consistent information architecture.
-- Use adaptive components for split views, side panels, and keyboard-safe interactions.
-
-## Instrumentation and Validation Loop
-
-Track these metrics per key flow:
-
-- Task completion rate.
-- Time to complete task.
-- Error rate and recovery rate.
-- Drop-off by step.
-- Feature adoption and repeat usage.
-- Accessibility issue count from audits and user feedback.
-
-Validation loop:
-
-1. Establish baseline metrics before UX change.
-2. Ship with event tracking tied to critical journey steps.
-3. Compare post-release metrics against baseline and success criteria.
-4. Run targeted follow-up tests on weak steps.
-5. Feed findings into the next wireframe iteration.
-
-## Checklist
-
-- Success criteria and target users are explicit.
-- Core flows include empty, loading, success, and failure states.
-- iOS and Android interaction differences are handled intentionally.
-- Phone and tablet layouts are validated in both orientations.
-- Accessibility and usability issues are logged with severity and owner.
-- Handoff includes annotated wireframes, behavior rules, and analytics events.
-- Post-release validation cadence is scheduled.
+- High-fidelity prototype production.
+- Production code implementation.
+- Release governance unrelated to the UX slice.
 
 ## Trigger Conditions
 
-Invoke this skill when any of the following is true:
-
-- The user asks for mobile UX design guidance rather than direct UI implementation.
-- Discovery, wireframing, validation, or handoff artifacts are needed for iOS or Android experiences.
-- UX work must be structured before engineering execution begins.
+- A mobile feature needs research-backed UX direction before implementation.
+- A current mobile flow has usability, accessibility, or drop-off problems.
+- A team needs explicit mobile handoff artifacts instead of ad hoc design notes.
 
 ## Inputs
 
-- User request context and target scope for this skill invocation.
+- User request context and target journeys.
+- Platforms, device classes, and orientation constraints.
+- Known analytics, support signals, app reviews, or research inputs.
+- Business goal, success criteria, and evaluation date in ISO format (`YYYY-MM-DD`).
 
 ## Required Outputs
 
-- A concrete, workspace-applicable result aligned with this skill purpose.
+- Problem statement with target users, goals, and ranked UX risks.
+- Task-flow and wireframe set covering primary, edge, and recovery states.
+- Platform conventions summary for iOS and Android differences that matter.
+- Accessibility and usability findings with severity and remediation cues.
+- Engineering handoff package with behaviors, instrumentation, and validation loop.
+
+## Depth Modes
+
+| Level | Intent | Exit Rule |
+|---|---|---|
+| L1 Orientation | Frame one mobile UX problem | One journey map and one wireframe set exist |
+| L2 Delivery | Prepare one feature for implementation | Core flows, states, and handoff notes are complete |
+| L3 Hardening | De-risk a release-bound mobile journey | Accessibility, adaptive layout, and validation evidence are explicit |
+| L4 Expert Standardization | Define reusable mobile UX operating model | Reusable decision rubric, handoff package, and validation loop are documented |
+
+## Deterministic Workflow
+
+1. Lock target users, business goal, success criteria, and bounded journey scope.
+2. Gather evidence from analytics, support signals, app reviews, prior tests, and interviews or session reviews.
+3. Map top tasks, failure points, and journey assumptions that must be tested.
+4. Produce task flows and wireframes for primary, empty, loading, success, error, and recovery states.
+5. Apply platform conventions intentionally for navigation, back behavior, actions, gestures, and content hierarchy.
+6. Validate adaptive layouts across phone and tablet classes in portrait and landscape where relevant.
+7. Run quick usability checks, capture severity-ranked issues, and iterate on the wireframes.
+8. Produce a handoff package with behavior rules, accessibility notes, event instrumentation, and open risks.
+9. Define post-implementation validation metrics and a follow-up test loop.
+
+## Platform and Interaction Heuristics
+
+- Preserve native navigation expectations and system gestures.
+- Keep one dominant action per screen and avoid competing calls to action.
+- Show state transitions clearly for loading, success, warning, failure, and retry.
+- Use content hierarchy and spacing to lower cognitive load on small screens.
+- Keep adaptive behavior intentional instead of allowing uncontrolled stretch or collapse.
+
+## Accessibility and Usability Heuristics
+
+- Maintain readable typography, contrast, and focus order.
+- Keep touch targets comfortably tappable with safe spacing.
+- Provide meaningful labels and announced state changes for assistive technologies.
+- Avoid gesture-only actions without visible or accessible alternatives.
+- Make recovery paths explicit when a user fails or abandons a step.
+
+## Validation Loop
+
+Track these metrics per key journey:
+
+- Task completion rate.
+- Time to complete task.
+- Error and recovery rate.
+- Drop-off by step.
+- Accessibility issue count.
+- Repeat usage or feature adoption when relevant.
+
+Validation loop:
+
+1. Capture baseline metrics before the UX change.
+2. Tie instrumentation to the critical journey steps.
+3. Compare post-change behavior against success criteria.
+4. Re-test the weakest steps with targeted usability sessions.
+5. Feed findings into the next wireframe revision.
+
+## L4 Coverage Matrix
+
+| Requested Outcome | Skill Section |
+|---|---|
+| Research-backed mobile UX scope | Objective + Deterministic Workflow steps 1 to 3 |
+| Platform-aware wireframes | Workflow steps 4 to 6 + Platform and Interaction Heuristics |
+| Accessibility-aware design | Accessibility and Usability Heuristics |
+| Implementation-ready handoff | Required Outputs + Workflow step 8 |
+| Reusable mobile UX standard | Depth Modes + Pragmatic Stop Rule |
+
+## Reasoning Package
+
+Assumptions:
+
+- Mobile UX quality depends on platform-fit and accessibility, not just visual polish.
+- Teams benefit from wireframes that encode behavior and validation expectations.
+
+Trade-offs:
+
+- Strong platform-fit improves usability but can reduce cross-platform visual uniformity.
+- Heavier upfront UX definition lowers engineering ambiguity but adds planning time.
+
+Open blockers:
+
+- Missing analytics or real user evidence weakens prioritization.
+- Undefined device or orientation scope can invalidate adaptive-layout decisions.
+
+Recommendation:
+
+- Use L2 for bounded feature work and L4 when a team needs reusable mobile UX rules across projects.
+
+## Source Governance Summary
+
+- Active sources, evaluation date, and guidance deltas are tracked in [source-catalog.md](./references/source-catalog.md).
+- Freshness threshold defaults to 30 days for active source checks.
+
+## Pragmatic Stop Rule
+
+Stop when the target journeys, states, platform conventions, accessibility requirements, and handoff notes are explicit enough that engineering can implement without guessing core UX behavior.
+
+## Done Criteria
+
+- Trigger conditions are satisfied.
+- Required outputs are complete.
+- Platform, accessibility, and adaptive-layout decisions are explicit.
+- Validation loop is defined.
+- Source catalog is current for this evaluation cycle.

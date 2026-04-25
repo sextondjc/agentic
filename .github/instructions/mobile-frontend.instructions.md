@@ -46,3 +46,12 @@ applyTo: '**/*.tsx,**/*.xaml'
 - Storing authentication tokens in `Preferences` or application-level dictionaries.
 - Hardcoded environment URLs or credentials in source files.
 - Disabling platform back navigation without an explicit UX decision and accessibility review.
+
+## Routing Notes
+
+- Use [SKILL.md](./../skills/build-maui-apps/SKILL.md) for MAUI architecture, secure storage, and implementation workflow.
+- Use [SKILL.md](./../skills/orchestrate-mobile/SKILL.md) for end-to-end mobile UX, prototyping, and release coordination.
+- Use quality-gate skills for deterministic evidence gates:
+  - [SKILL.md](./../skills/mobile-accessibility-quality-gate/SKILL.md) for accessibility findings
+  - [SKILL.md](./../skills/mobile-offline-resilience/SKILL.md) for offline/sync validation
+  - [SKILL.md](./../skills/mobile-performance-quality-gate/SKILL.md) for performance and release readiness

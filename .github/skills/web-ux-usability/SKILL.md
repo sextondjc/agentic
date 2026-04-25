@@ -93,10 +93,10 @@ Out of scope:
 
 Capture artifacts under one change scope path:
 
-- `.docs/changes/<workstream-id>/usability-findings.md`
-- `.docs/changes/<workstream-id>/task-evidence-matrix.md`
-- `.docs/changes/<workstream-id>/remediation-backlog.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/usability-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/task-evidence-matrix.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/remediation-backlog.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## L4 Coverage Matrix
 
@@ -153,3 +153,4 @@ Stop when all in-scope tasks have measurable evidence, all critical/high finding
 - L4 coverage matrix remains complete and current.
 - Source ledger is current for this evaluation cycle.
 - Final recommendation is explicit, evidence-backed, and auditable.
+

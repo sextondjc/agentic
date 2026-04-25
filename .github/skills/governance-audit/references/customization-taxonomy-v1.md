@@ -151,7 +151,8 @@ The following topics are intentionally deferred to a separate v2 plan:
 
 ## Traceability
 
-- Plan: [customization-taxonomy-promotion-plan.md](./../../../../.docs/plans/customization-taxonomy-promotion-plan.md)
-- ADR: [customization-taxonomy-promotion-boundary.md](./../../../../.docs/adr/customization-taxonomy-promotion-boundary.md)
-- Changes: [customization-taxonomy-promotion-changes.md](./../../../../.docs/changes/customization-taxonomy-promotion-changes.md)
+- Plan: [customization-taxonomy-promotion-plan.md](./../../../../__DOCS_ROOT__/plans/customization-taxonomy-promotion-plan.md)
+- ADR: [customization-taxonomy-promotion-boundary.md](./../../../../__DOCS_ROOT__/adr/customization-taxonomy-promotion-boundary.md)
+- Changes: [customization-taxonomy-promotion-changes.md](./../../../../__DOCS_ROOT__/changes/customization-taxonomy-promotion-changes.md)
+
 

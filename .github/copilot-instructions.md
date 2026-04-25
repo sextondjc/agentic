@@ -17,7 +17,7 @@ This workspace is optimized for lean .NET application development.
 - DTO/domain model types passed into or returned from repositories must be immutable (get-only members, no public setters) and validated at instantiation using `Syrx.Validation.Contract` guards.
 - Use the latest stable C# version supported by the target framework. Do not raise `LangVersion` beyond TFM support.
 - Use xUnit and Moq for tests. FluentAssertions is banned.
-- Use `.docs/plans`, `.docs/research`, `.docs/changes`, and `.docs/adr` as canonical documentation locations.
+- Use `__DOCS_ROOT__/plans`, `__DOCS_ROOT__/research`, `__DOCS_ROOT__/changes`, and `__DOCS_ROOT__/adr` as canonical documentation locations.
 - Keep mandatory policy guidance in concise instruction files under `.github/instructions` and move procedural depth into skills.
 
 ## Lifecycle Lanes
@@ -105,11 +105,47 @@ Use this SQL Server bundle when requests target T-SQL, DBA operations, performan
 - `sql-server-security` for permissions, auditing, encryption, and SQL surface-area hardening.
 - `sql-server-automation` for repeatable operational workflows using DBA-safe automation patterns.
 
+Use this C# delivery bundle when requests span language quality, async behavior, architectural integrity, and cross-phase orchestration across projects:
+
+- `orchestrate-csharp` for one C# intake that spans multiple capability areas with deterministic ownership.
+- `csharp-language-quality-gate` for evidence-first language and API-contract quality decisions.
+- `csharp-async-quality-gate` for evidence-first async and concurrency quality decisions.
+- `csharp-architecture-quality-gate` for evidence-first boundary, repository, and validation quality decisions.
+- `csharp-testing-quality-gate` for evidence-first testing quality decisions across coverage intent, failure paths, and deterministic assertions.
+- `csharp-data-access-quality-gate` for evidence-first repository, SQL safety, and immutable contract quality decisions.
+- `csharp-release-quality-gate` for one consolidated go/no-go decision across language, async, architecture, testing, and data-access evidence.
+
+Use this xUnit testing bundle when requests span xUnit source curation, test design, fixture lifecycle, async test behavior, Moq collaboration patterns, and expert-level test quality decisions across projects:
+
+- `orchestrate-xunit` for one xUnit intake that spans multiple capability areas with deterministic ownership.
+- `xunit-source-curation` for authoritative source selection, freshness checks, and reusable guidance baselines.
+- `xunit-test-design` for expert Fact/Theory shaping, data strategy selection, and boundary-focused coverage design.
+- `xunit-fixture-lifecycle` for fixture scope selection, cleanup lifecycle decisions, and parallelization-safe context sharing.
+- `xunit-async-testing` for deterministic async, cancellation, and exception-flow test strategy.
+- `xunit-moq-collaboration` for Moq seam selection and resilient interaction-verification boundaries.
+- `xunit-runner-platforms` for deterministic local/CI runner strategy, adapter compatibility, and results contract decisions.
+- `xunit-ci-observability` for CI evidence contracts, flaky classification, ownership routing, and gate-ready reporting.
+- `xunit-theory-data-stability` for deterministic theory data identity, ordering, and reproducibility controls.
+- `xunit-v2-v3-migration` for phased xUnit v2 to v3 upgrade sequencing with compatibility and rollback gates.
+- `xunit-traits-and-selection` for stable trait taxonomy and selective execution slicing across PR, nightly, and release stages.
+- `xunit-quality-gate` for evidence-first pass/fail quality decisions with severity-ranked findings and ownership.
+
+Use this mobile app bundle when requests span mobile UX, prototyping, MAUI implementation, accessibility, resilience, performance, or release hardening across projects:
+
+- `orchestrate-mobile` for one mobile intake that spans UX, prototyping, MAUI implementation, accessibility, resilience, performance, and release hardening.
+- `design-mobile-ux` for source-backed mobile UX design from research through implementation handoff.
+- `prototype-mobile-ui` for high-fidelity prototypes with tokens, states, and annotated handoff assets.
+- `build-maui-apps` for .NET MAUI-specific architecture, secure storage, trimming, and release hardening.
+- `mobile-accessibility-quality-gate` for deterministic mobile accessibility findings, evidence, and sign-off decisions.
+- `mobile-offline-resilience` for degraded-network, stale-data, retry, and interruption recovery validation.
+- `mobile-performance-quality-gate` for release-grade startup, rendering, and memory performance validation.
+- `mobile-release-readiness` for signing, store readiness, rollback confirmation, and go or no-go evidence.
+
 ## Imported Customization Assets
 
 - `skills-authoring` (imported from an upstream skill set and renamed)
 - `test-driven-development` (supporting workflow dependency)
-- `writing-plans` (plan authoring workflow adapted to `.docs/plans`)
+- `writing-plans` (plan authoring workflow adapted to `__DOCS_ROOT__/plans`)
 - `delivery-operating-system`, `opportunity-mapping`, `backlog-structuring`, `acceptance-criteria`, and `flow-metrics` (portable PM and delivery operating bundle for agent-heavy projects)
 - `delivery-orchestration` (umbrella PM lifecycle skill for deterministic end-to-end delivery coordination)
 - `work-intake-governance`, `delivery-forecasting`, `outcome-review`, and `scope-change-control` (high-value adjacent PM and delivery controls for intake, forecasting, post-ship review, and change pressure)
@@ -120,8 +156,10 @@ Use this SQL Server bundle when requests target T-SQL, DBA operations, performan
 - `branch-completion` (completion and branch integration workflow)
 - `design-web-ux` (web UX flow from research to handoff)
 - `build-web-frontend` (web frontend implementation and review workflow)
-- `build-mobile-apps` (cross-platform mobile build workflow)
+- `orchestrate-mobile`, `design-mobile-ux`, `prototype-mobile-ui`, `build-maui-apps`, `mobile-accessibility-quality-gate`, `mobile-offline-resilience`, `mobile-performance-quality-gate`, and `mobile-release-readiness` (mobile delivery skill family for orchestrated UX, prototyping, MAUI implementation, accessibility, resilience, performance, and release hardening)
 - `orchestrate-sql-server`, `sql-server-standards`, `sql-server-diagnostics`, `sql-server-query-tuning`, `sql-server-security`, and `sql-server-automation` (cross-project SQL Server skill family for intake, safety, diagnostics, tuning, security, and operations)
+- `orchestrate-csharp`, `csharp-language-quality-gate`, `csharp-async-quality-gate`, `csharp-architecture-quality-gate`, `csharp-testing-quality-gate`, `csharp-data-access-quality-gate`, and `csharp-release-quality-gate` (cross-project C# skill family for deterministic intake and expert quality gates across language, async, architecture, testing, data access, and release synthesis)
+- `orchestrate-xunit`, `xunit-source-curation`, `xunit-test-design`, `xunit-fixture-lifecycle`, `xunit-async-testing`, `xunit-moq-collaboration`, `xunit-runner-platforms`, `xunit-ci-observability`, `xunit-theory-data-stability`, `xunit-v2-v3-migration`, `xunit-traits-and-selection`, and `xunit-quality-gate` (cross-project xUnit skill family for deterministic intake, expert test authoring, fixture and async safety, runner and CI evidence standardization, migration readiness, selection-governance, and evidence-first quality sign-off)
 
 ## Workspace Design Rules
 
@@ -135,7 +173,8 @@ Use this SQL Server bundle when requests target T-SQL, DBA operations, performan
 - Never rely on manual terminal input when required parameters can be provided explicitly.
 - Avoid duplicate prompts that restate instruction or skill content.
 - Keep prompts task-specific and lightweight.
-- Align all planning and change tracking artifacts to `.docs` rather than legacy `.copilot-tracking` paths.
+- Align all planning and change tracking artifacts to `__DOCS_ROOT__` rather than legacy `.copilot-tracking` paths.
+
 
 
 

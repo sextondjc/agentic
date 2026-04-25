@@ -1,6 +1,6 @@
 ---
 name: adr-generator
-description: Use when documenting architectural decisions in .docs/adr with explicit rationale, alternatives, and consequences.
+description: Use when documenting architectural decisions in __DOCS_ROOT__/adr with explicit rationale, alternatives, and consequences.
 ---
 
 # ADR Generator Skill
@@ -35,7 +35,7 @@ Collect all inputs before writing. Block generation and ask if any are missing.
 
 | Output | Description |
 |---|---|
-| ADR file | Saved to `.docs/adr/<domain>/adr-NNNN-title-slug.md` with all mandatory sections |
+| ADR file | Saved to `__DOCS_ROOT__/adr/<domain>/adr-NNNN-title-slug.md` with all mandatory sections |
 
 ## Workflow
 
@@ -47,14 +47,14 @@ Add Implementation Notes → Inject References → Quality Gate → Save File
 
 ## Numbering
 
-Scan `/.docs/adr/` recursively for the highest existing `adr-NNNN-` prefix. Increment by one. Use zero-padded four-digit format.
+Scan `/__DOCS_ROOT__/adr/` recursively for the highest existing `adr-NNNN-` prefix. Increment by one. Use zero-padded four-digit format.
 
 ## Output Rules
 
-- Save in `.docs/adr/<domain>/`.
+- Save in `__DOCS_ROOT__/adr/<domain>/`.
 - Filename: `adr-NNNN-title-slug.md` (lowercase, hyphens, no special chars).
 - Keep `<domain>` lowercase and one word.
-- Do not place ADR files directly under `.docs/adr/` unless explicitly requested by the user.
+- Do not place ADR files directly under `__DOCS_ROOT__/adr/` unless explicitly requested by the user.
 - Include all mandatory sections in order.
 - Never create root-level folders in any workspace.
 - Never create top-level reference folders; keep references under owning asset paths only.
@@ -129,4 +129,5 @@ Do not save the ADR until all checklist items pass:
 
 - Positive outcomes: `POS-001`, `POS-002`, ...
 - Negative outcomes: `NEG-001`, `NEG-002`, ...
+
 

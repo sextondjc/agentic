@@ -19,7 +19,7 @@ Use this skill to scaffold a baseline .NET workspace layout in a target reposito
 
 ```text
 .config
-.docs
+__DOCS_ROOT__
 .github
 .scripts
 src
@@ -66,5 +66,6 @@ pwsh ./.github/skills/scaffold-dotnet/references/scripts/New-DotNetSolutionScaff
 2. Run scaffold script with explicit parameters.
 3. Apply templates and verify resulting structure.
 4. Return concise setup status and next actions.
+
 
 

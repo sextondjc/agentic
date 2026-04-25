@@ -8,8 +8,8 @@
 |---|---|---|---|
 | Level 1 | Executive workspace disposition | Fresh — 2026-04-18 (Revision 2) | [governance-executive-audit.md](./governance-executive-audit.md) |
 | Level 2 | Governance aggregate audit | Fresh — 2026-04-18 | [governance-audit.md](./governance-audit.md) |
-| Level 2 | Skill aggregate audit | Fresh — 2026-04-18 | [governance-audit-types-skills.md](./../../skill/reviews/governance-audit-types-skills.md) |
-| Level 2 | Customization aggregate audit | Fresh — 2026-04-18 | [governance-audit-types-customizations.md](./../../customization/reviews/governance-audit-types-customizations.md) |
+| Level 2 | Skill aggregate audit | Fresh — 2026-04-18 | [governance-type-audit-skills.md](./../../skill/reviews/governance-type-audit-skills.md) |
+| Level 2 | Customization aggregate audit | Fresh — 2026-04-18 | [governance-type-audit-customizations.md](./../../customization/reviews/governance-type-audit-customizations.md) |
 | Level 2 | Optimization aggregate audit | Fresh — 2026-04-18 | [governance-audit-types-optimization.md](./../../customization/reviews/governance-audit-types-optimization.md) |
 | Level 3 | Governance health overview skill review | Available | [review.md](./../../skill/reviews/governance-health-overview/review.md) |
 | Level 3 | Skill-review skill review | Available | [review.md](./../../skill/reviews/skill-review/review.md) |
@@ -36,11 +36,11 @@
 | GOV-M5 | **Fail** | [governance-audit.md](./governance-audit.md) | artifact-reference-hygiene: new failure in this run; artifact reference hygiene check failing across docs corpus |
 | GOV-M6 | **Fail** | [test-governance-must-traceability.ps1](./../../../../.github/scripts/powershell/test-governance-must-traceability.ps1) | must-finding-traceability: trust guard now failing — new regression; MUST finding traceability check reports violations |
 | GOV-S1 | **Fail** | [governance-audit.md](./governance-audit.md) | 11 script checks failing: catalog-agents, catalog-instructions, frontmatter-agents, frontmatter-prompts*, frontmatter-instructions*, hub-sync, link-graph, artifact-reference-hygiene, docs-naming, index-refresh*, must-finding-traceability (* 3 likely false positives) |
-| GOV-S2 | Pass | [governance-audit-types-customizations.md](./../../customization/reviews/governance-audit-types-customizations.md) | Customization aggregate pass (0 missing specialization, 0 missing applyTo, 0 open conflicts) |
-| GOV-S3 | Pass With Advisories | [governance-audit-types-skills.md](./../../skill/reviews/governance-audit-types-skills.md) | Skill advisories present; 0 MUST failures, 22 SHOULD advisories (flat vs prior exec audit) |
+| GOV-S2 | Pass | [governance-type-audit-customizations.md](./../../customization/reviews/governance-type-audit-customizations.md) | Customization aggregate pass (0 missing specialization, 0 missing applyTo, 0 open conflicts) |
+| GOV-S3 | Pass With Advisories | [governance-type-audit-skills.md](./../../skill/reviews/governance-type-audit-skills.md) | Skill advisories present; 0 MUST failures, 22 SHOULD advisories (flat vs prior exec audit) |
 | GOV-S4 | Pass With Advisories | [governance-audit-types-optimization.md](./../../customization/reviews/governance-audit-types-optimization.md) | 0 MUST failures, 11 SHOULD advisories (+2 vs prior exec audit — maps to 11 failing governance checks) |
-| GOV-SK | Pass With Advisories | [governance-audit-types-skills.md](./../../skill/reviews/governance-audit-types-skills.md) | 0 MUST failures, 22 SHOULD advisories (17 skills Pass With Advisories, 52 Pass, 0 Fail) — flat vs prior exec audit |
-| GOV-CUS | Pass | [governance-audit-types-customizations.md](./../../customization/reviews/governance-audit-types-customizations.md) | No open customization conflicts; all agents and instructions structurally valid |
+| GOV-SK | Pass With Advisories | [governance-type-audit-skills.md](./../../skill/reviews/governance-type-audit-skills.md) | 0 MUST failures, 22 SHOULD advisories (17 skills Pass With Advisories, 52 Pass, 0 Fail) — flat vs prior exec audit |
+| GOV-CUS | Pass | [governance-type-audit-customizations.md](./../../customization/reviews/governance-type-audit-customizations.md) | No open customization conflicts; all agents and instructions structurally valid |
 | GOV-OPT | Pass With Advisories | [governance-audit-types-optimization.md](./../../customization/reviews/governance-audit-types-optimization.md) | 0 MUST failures, 11 SHOULD advisories from failing script checks (+2 vs prior exec audit) |
 
 ## Aggregate Metrics Grid

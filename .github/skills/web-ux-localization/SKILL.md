@@ -71,9 +71,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `.docs/changes/<workstream-id>/localization-findings.md`
-- `.docs/changes/<workstream-id>/localization-evidence-matrix.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/localization-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/localization-evidence-matrix.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 
@@ -88,3 +88,4 @@ Stop when target locale checks are complete, high and critical issues are resolv
 - Required outputs are complete and linked.
 - Source ledger is current.
 - Final recommendation is explicit and evidence-backed.
+

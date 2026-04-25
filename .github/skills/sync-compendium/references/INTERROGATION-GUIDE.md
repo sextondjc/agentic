@@ -41,7 +41,7 @@ Artifacts are downloaded from the workflow:
 
 ### Step 3: Record Decision
 
-1. Copy [external-ingestion-decision-template.md](./external-ingestion-decision-template.md) to `.docs/changes/external-intake/` with a unique name.
+1. Copy [external-ingestion-decision-template.md](./external-ingestion-decision-template.md) to `__DOCS_ROOT__/changes/external-intake/` with a unique name.
 2. For each artifact type group (agents, instructions, skills, prompts, scripts), choose **Adopt**, **Adapt**, or **Reject**.
 3. Record rationale and follow-up work items.
 4. Obtain sign-offs from all approvers listed in the template.
@@ -55,7 +55,7 @@ For **Adopt** candidates:
 
 For **Adapt** candidates:
 - External artifact informs a local implementation aligned with your governance model.
-- Create a task in `.docs/plans` and implement locally with proper lane ownership, instruction compliance, and naming conventions.
+- Create a task in `__DOCS_ROOT__/plans` and implement locally with proper lane ownership, instruction compliance, and naming conventions.
 - Update relevant catalogs.
 
 For **Reject** candidates:
@@ -97,9 +97,9 @@ See [sync-compendium.prompt.md](../../prompts/sync-compendium.prompt.md) for ope
 
 Specialist route: `orchestrator` → `csharp-engineer` (with sync-compendium skill).
 
-Planning artifact: `.docs/plans/external-interrogation-<workstream-id>.md`.
+Planning artifact: `__DOCS_ROOT__/plans/external-interrogation-<workstream-id>.md`.
 
-Change tracking: `.docs/changes/external-intake/<decision-id>.md`.
+Change tracking: `__DOCS_ROOT__/changes/external-intake/<decision-id>.md`.
 
 ## FAQ
 
@@ -114,3 +114,4 @@ A: No. The decision record is mandatory evidence for promotion. Release governan
 
 **Q: What if my external source doesn't have a `version.json`?**  
 A: The script derives a synthetic version identifier from the commit hash (e.g., `0.0.0+08cc5a1`). All candidates are still pinned to that commit SHA in the manifest.
+

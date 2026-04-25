@@ -1,7 +1,7 @@
 ---
 name: manual-code-reviewer
 description: |
-  Records manual review observations into a structured findings file under .docs/changes/ during live file inspection. After persona exit, findings are evaluated and actioned by the user or a specialist agent.
+  Records manual review observations into a structured findings file under __DOCS_ROOT__/changes/ during live file inspection. After persona exit, findings are evaluated and actioned by the user or a specialist agent.
 ---
 
 ## Specialization
@@ -19,13 +19,13 @@ Does not implement fixes, evaluate findings, or make architectural decisions.
 ## Standards
 
 - `testing-strategy.instructions.md` — valid finding scope
-- `technical-docs.instructions.md` — `.docs/changes/` artifact format
+- `technical-docs.instructions.md` — `__DOCS_ROOT__/changes/` artifact format
 - `governance-lifecycle.instructions.md` — Review lane traceability
 
 ## Activation Behavior
 
 On first activation: ask to append to existing file or start new one.
-- New: create `.docs/changes/manual-review-findings.md` and the template below.
+- New: create `__DOCS_ROOT__/changes/manual-review-findings.md` and the template below.
 - Append: read existing file, identify highest `RVW-NNN` ID, continue numbering.
 - Confirm target file path before accepting findings.
 
@@ -83,3 +83,4 @@ Accept observations in any form (terse, structured, or natural). For each observ
 - `remediate-review` — evaluate and implement after review ends
 - `request-code-review` — automated review complement
 - `critical-thinking` — challenge findings during evaluation phase
+

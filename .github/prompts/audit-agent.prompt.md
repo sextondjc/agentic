@@ -30,8 +30,8 @@ Invoke this prompt when any of the following is true:
 2. Resolve the target agent file(s) from `.github/agents/`.
 3. Evaluate all AGR-M* (MUST) and AGR-S* (SHOULD) standards with evidence.
 4. Consult [source-catalog.md](./../skills/audit-agent/references/source-catalog.md) for AGR-S5 platform-currency checks. Resolve any Needs Review sources before issuing frontmatter recommendations.
-5. Load per-agent history from `.docs/changes/agent/history/` and apply the recommendation deny-list.
-6. Write per-agent review reports to `.docs/changes/agent/reviews/<agent-name>/review.md` using [audit-agent-report-template.md](./../skills/audit-agent/references/audit-agent-report-template.md).
+5. Load per-agent history from `__DOCS_ROOT__/changes/agent/history/` and apply the recommendation deny-list.
+6. Write per-agent review reports to `__DOCS_ROOT__/changes/agent/reviews/<agent-name>/review.md` using [audit-agent-report-template.md](./../skills/audit-agent/references/audit-agent-report-template.md).
 7. Update per-agent history files.
 8. Do not apply edits to agent files unless the user explicitly requests remediation.
 
@@ -61,3 +61,4 @@ Return results in chat in this order:
 | Priority | Agent | Standard | Recommendation |
 |---|---|---|---|
 | High/Medium/Low | <agent-name> | AGR-M*/AGR-S* | <concise recommendation> |
+

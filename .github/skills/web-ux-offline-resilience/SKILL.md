@@ -71,9 +71,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `.docs/changes/<workstream-id>/offline-resilience-findings.md`
-- `.docs/changes/<workstream-id>/offline-resilience-matrix.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/offline-resilience-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/offline-resilience-matrix.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 
@@ -88,3 +88,4 @@ Stop when degraded-network scenarios are validated, high and critical issues are
 - Required outputs are complete and linked.
 - Source ledger is current.
 - Final recommendation is explicit and evidence-backed.
+

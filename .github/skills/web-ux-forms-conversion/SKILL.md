@@ -72,9 +72,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `.docs/changes/<workstream-id>/forms-conversion-findings.md`
-- `.docs/changes/<workstream-id>/forms-conversion-matrix.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/forms-conversion-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/forms-conversion-matrix.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 
@@ -89,3 +89,4 @@ Stop when all in-scope form paths are measured, high and critical issues are res
 - Required outputs are complete and linked.
 - Source ledger is current.
 - Final recommendation is explicit and evidence-backed.
+

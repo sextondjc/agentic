@@ -1,6 +1,6 @@
 ---
 name: task-implementation
-applyTo: '.docs/changes/*.md'
+applyTo: '__DOCS_ROOT__/changes/*.md'
 description: 'Policy boundaries for executing approved plans and maintaining change traceability artifacts.'
 ---
 
@@ -10,8 +10,8 @@ Keep this file policy-only. Use [SKILL.md](./../skills/task-execution/SKILL.md) 
 
 ## Scope
 
-- Applies to change artifacts in `.docs/changes/*.md` produced while implementing approved plans.
-- Governs traceability between plan files in `.docs/plans/**`, research notes in `.docs/research/**`, and delivered implementation artifacts.
+- Applies to change artifacts in `__DOCS_ROOT__/changes/*.md` produced while implementing approved plans.
+- Governs traceability between plan files in `__DOCS_ROOT__/plans/**`, research notes in `__DOCS_ROOT__/research/**`, and delivered implementation artifacts.
 
 ## Mandatory Policy Requirements
 
@@ -40,3 +40,4 @@ Keep this file policy-only. Use [SKILL.md](./../skills/task-execution/SKILL.md) 
 - Use [SKILL.md](./../skills/task-execution/SKILL.md) for same-session plan execution.
 - Use [SKILL.md](./../skills/plans/SKILL.md) for dedicated-session execution with explicit checkpoints.
 - Use [SKILL.md](./../skills/write-technical-docs/SKILL.md) when change artifact quality or formatting guidance is needed.
+

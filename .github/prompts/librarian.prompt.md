@@ -1,6 +1,6 @@
 ---
 name: librarian
-description: 'Prompt for documentation corpus naming, structure curation, and index refresh with .docs as the default root.'
+description: 'Prompt for documentation corpus naming, structure curation, and index refresh with __DOCS_ROOT__ as the default root.'
 ---
 
 # Librarian Curation Prompt
@@ -13,7 +13,7 @@ Produce a consistent, evidence-backed curation report that identifies naming vio
 
 ## Default Root Rule
 
-- Use `.docs/` as the documentation root by default.
+- Use `__DOCS_ROOT__/` as the documentation root by default.
 - Override this default only when the user explicitly provides a different root or when workspace rules require one.
 
 ## Scope
@@ -28,7 +28,7 @@ Produce a consistent, evidence-backed curation report that identifies naming vio
 2. Resolve documentation root in this order:
    - Explicit user-provided root.
    - Workspace-rule required root.
-   - Default `.docs/`.
+   - Default `__DOCS_ROOT__/`.
 3. Scan the target tree and build a document manifest.
 4. Evaluate naming and structure against librarian rules.
 5. Classify curation candidates as Duplicate, Redundant, or Misplaced with confidence and reason.
@@ -71,5 +71,6 @@ Return results in chat using markdown grids in this order.
 
 | Artifact | Location |
 |---|---|
-| Curation report | `.docs/changes/` (user-selected filename) |
+| Curation report | `__DOCS_ROOT__/changes/` (user-selected filename) |
 | Generated indexes | `<selected-root>/INDEX.md` and child `INDEX.md` files |
+

@@ -204,8 +204,7 @@ try {
         @{ Name = 'link-graph'; Command = { ./.github/scripts/powershell/test-governance-link-graph.ps1 } },
         @{ Name = 'artifact-contract'; Command = { ./.github/scripts/powershell/test-governance-artifact-contract.ps1 } },
         @{ Name = 'artifact-reference-hygiene'; Command = { ./.github/scripts/powershell/test-artifact-reference-hygiene.ps1 } },
-        @{ Name = 'docs-naming'; Command = { ./.github/scripts/powershell/test-naming-conformance.ps1 -RootPath .docs } },
-        @{ Name = 'index-refresh'; Command = { ./.github/scripts/powershell/invoke-index-refresh.ps1 -RootPath .docs | ConvertTo-Json -Depth 4 -Compress } },
+        @{ Name = 'no-docs-dependency'; Command = { ./.github/scripts/powershell/test-no-docs-dependency.ps1 -RootPath . -ScanPath .github | ConvertTo-Json -Depth 6 -Compress } },
         @{ Name = 'asset-naming'; Command = { ./.github/scripts/powershell/test-asset-naming.ps1 -AssetType all } },
         @{ Name = 'utilization-coverage'; Command = { ./.github/scripts/powershell/test-utilization-coverage.ps1 } },
         @{ Name = 'review-recency'; Command = { ./.github/scripts/powershell/test-review-recency.ps1 -ThresholdDays 90 } },
@@ -214,7 +213,7 @@ try {
         @{ Name = 'overlap-watchlist'; Command = { ./.github/scripts/powershell/test-overlap-watchlist.ps1 } },
         @{ Name = 'count-consistency'; Command = { ./.github/scripts/powershell/test-governance-count-consistency.ps1 } },
         @{ Name = 'global-applyto-rationale'; Command = { ./.github/scripts/powershell/test-global-applyto-rationale.ps1 } },
-        @{ Name = 'must-finding-traceability'; Command = { ./.github/scripts/powershell/test-governance-must-traceability.ps1 -ReportPath .docs/changes/governance/audits/governance-executive-audit.md -RegistryPath .github/scripts/powershell/governance-must-check-registry.json } }
+        @{ Name = 'must-finding-traceability'; Command = { ./.github/scripts/powershell/test-governance-must-traceability.ps1 -ReportPath .github/skills/governance-health-overview/references/.artifacts/governance-executive-audit.md -RegistryPath .github/scripts/powershell/governance-must-check-registry.json } }
     )
 
     $coreResults = foreach ($check in $checks) {
@@ -240,11 +239,11 @@ try {
     else {
         Write-Warning "Skill audit script not found: $skillAuditScript — skipping full skill audit."
     }
-    $skillAggregatePath = '.docs/changes/skill/reviews/governance-audit-types-skills.md'
+    $skillAggregatePath = '.github/skills/governance-health-overview/references/.artifacts/governance-audit-types-skills.md'
     $skillAggregateExists = Test-Path $skillAggregatePath
-    $governanceAggregatePath = '.docs/changes/governance/audits/governance-audit.md'
-    $customizationAggregatePath = '.docs/changes/customization/reviews/governance-audit-types-customizations.md'
-    $optimizationAggregatePath = '.docs/changes/customization/reviews/governance-audit-types-optimization.md'
+    $governanceAggregatePath = '.github/skills/governance-health-overview/references/.artifacts/governance-audit.md'
+    $customizationAggregatePath = '.github/skills/governance-health-overview/references/.artifacts/governance-audit-types-customizations.md'
+    $optimizationAggregatePath = '.github/skills/governance-health-overview/references/.artifacts/governance-audit-types-optimization.md'
 
     $agentFiles = @(Get-ChildItem '.github/agents' -File -Filter '*.agent.md')
     $instructionFiles = @(Get-ChildItem '.github/instructions' -File -Filter '*.instructions.md')
@@ -268,8 +267,8 @@ try {
     }
 
     $conflictFiles = @()
-    if (Test-Path '.docs/changes/customization/reviews/conflicts') {
-        $allConflictFiles = @(Get-ChildItem '.docs/changes/customization/reviews/conflicts' -File -Filter 'con-*.md')
+    if (Test-Path '.github/skills/execute-customization-audit/references/.artifacts/conflicts') {
+        $allConflictFiles = @(Get-ChildItem '.github/skills/execute-customization-audit/references/.artifacts/conflicts' -File -Filter 'con-*.md')
         foreach ($file in $allConflictFiles) {
             $raw = Get-Content -LiteralPath $file.FullName -Raw
             if ($raw -match '(?im)^-\s+Status:\s+Resolved\s*$') {
@@ -304,8 +303,8 @@ try {
     $docsMarkdownFiles = @()
     $duplicateNameGroups = @()
     $staleCandidates = @()
-    if (Test-Path '.docs') {
-        $docsFiles = @(Get-ChildItem '.docs' -Recurse -File -ErrorAction SilentlyContinue)
+    if (Test-Path '.github') {
+        $docsFiles = @(Get-ChildItem '.github' -Recurse -File -ErrorAction SilentlyContinue)
         $docsMarkdownFiles = @($docsFiles | Where-Object { $_.Extension -ieq '.md' })
         $duplicateNameGroups = @(
             $docsMarkdownFiles |
@@ -455,7 +454,7 @@ $optimizationRemediationRow
     $customizationAggregateExists = Test-Path $customizationAggregatePath
     $optimizationAggregateExists = Test-Path $optimizationAggregatePath
 
-    $currentReportPath = '.docs/changes/governance/audits/governance-executive-audit.md'
+    $currentReportPath = '.github/skills/governance-health-overview/references/.artifacts/governance-executive-audit.md'
     $priorReport = $null
     if (Test-Path $currentReportPath) {
         $priorRaw = Get-Content -LiteralPath $currentReportPath -Raw
@@ -642,7 +641,7 @@ $(if ($topFailures.Count -gt 0) { ($topFailures | ForEach-Object { "| $($_.Check
 
     if (-not $mustTraceabilityBlocked) {
         Update-ExecutiveRecommendationGrid `
-            -ReportPath '.docs/changes/governance/audits/governance-executive-audit.md' `
+            -ReportPath '.github/skills/governance-health-overview/references/.artifacts/governance-executive-audit.md' `
             -ReviewDate $ReviewDate `
             -TotalChecks $metrics.TotalChecks `
             -PassedChecks $metrics.PassedChecks `
@@ -659,5 +658,6 @@ $(if ($topFailures.Count -gt 0) { ($topFailures | ForEach-Object { "| $($_.Check
 finally {
     Pop-Location
 }
+
 
 

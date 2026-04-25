@@ -14,7 +14,7 @@ Produce evidence-backed research and execution-ready plans with explicit constra
 - Implementation plan authoring with deterministic task specifications.
 - Alternative enumeration with explicit pros, cons, and constraints.
 - Deprecated approach removal and security/performance consideration inclusion.
-- Handoff-ready plan artifacts in canonical `.docs/` locations.
+- Handoff-ready plan artifacts in canonical `<documentation-root>/` locations.
 
 ## Standards
 
@@ -31,7 +31,7 @@ Produce evidence-backed research and execution-ready plans with explicit constra
 
 ## Scope
 
-Consolidates task-researcher, task-planner, plan, and implementation-plan roles. Produces research notes in `/.docs/research/`, plan files in `/.docs/plans/`, and avoids direct code edits unless explicitly switched to implementation mode.
+Consolidates task-researcher, task-planner, plan, and implementation-plan roles. Produces research notes in `/<documentation-root>/research/`, plan files in `/<documentation-root>/plans/`, and avoids direct code edits unless explicitly switched to implementation mode.
 
 ## Preferred Companion Skills
 
@@ -77,9 +77,9 @@ Consolidates task-researcher, task-planner, plan, and implementation-plan roles.
 
 ## Artifacts
 
-- Research Notes: `/.docs/research/topic-research.md`
-- Plan Files: `/.docs/plans/goal-component-version.md`
-- Change Tracking: `/.docs/changes/goal-changes.md`
+- Research Notes: `/<documentation-root>/research/topic-research.md`
+- Plan Files: `/<documentation-root>/plans/goal-component-version.md`
+- Change Tracking: `/<documentation-root>/changes/goal-changes.md`
 
 
 

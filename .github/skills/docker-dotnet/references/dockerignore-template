@@ -41,7 +41,7 @@ docker-compose*.yml
 # Documentation and workspace tooling
 README.md
 LICENSE
-.docs
+__DOCS_ROOT__
 .copilot-tracking
 *.md
 
@@ -51,3 +51,4 @@ LICENSE
 
 # Node (if any front-end tooling lives in the repo)
 **/node_modules
+

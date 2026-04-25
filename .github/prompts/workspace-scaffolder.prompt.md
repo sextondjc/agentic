@@ -33,7 +33,7 @@ Key rule: do not proceed to analysis until all 12 answers are concrete and imple
 3. **Curate skills** — prioritize: `syrx-data-access`, `adr-generator`, `api-design` by phase
 4. **Identify instruction scope** — which canonical `.github/instructions/*.md` files are essential vs. optional/deferred
 
-## Outputs (Save to `.docs/setup/` + `.github/agents/`)
+## Outputs (Save to `<documentation-root>/setup/` + `.github/agents/`)
 
 ### 1. Project Copilot Instructions
 **File:** `.github/agents/project-copilot-instructions.md`
@@ -50,22 +50,22 @@ Structure:
 **Keep it scannable:** < 40 lines, only document what's unique to this project.
 
 ### 2. Agent Activation Rules
-**File:** `.docs/setup/agents-activation.md`
+**File:** `<documentation-root>/setup/agents-activation.md`
 
 Table: Agent | Activate (Yes/Optional) | Rationale
 
 ### 3. Skills Recommendations
-**File:** `.docs/setup/skills-recommendations.md`
+**File:** `<documentation-root>/setup/skills-recommendations.md`
 
 Sections: High-Priority, Medium-Priority, Deferred, Guidance by Phase
 
 ### 4. Documentation Baseline
-**File:** `.docs/setup/docs-baseline.md`
+**File:** `<documentation-root>/setup/docs-baseline.md`
 
-Canonical structure (`.docs/plans/`, `.docs/research/`, `.docs/adr/`, `.docs/changes/`) with essential vs. optional instruction files.
+Canonical structure (`<documentation-root>/plans/`, `<documentation-root>/research/`, `<documentation-root>/adr/`, `<documentation-root>/changes/`) with essential vs. optional instruction files.
 
 ### 5. Quick-Start Checklist
-**File:** `.docs/setup/quick-start-checklist.md`
+**File:** `<documentation-root>/setup/quick-start-checklist.md`
 
 Actionable list of: Review instructions, confirm Syrx, scaffold repo, create ADR, write plan, next phase steps.
 
@@ -73,7 +73,7 @@ Actionable list of: Review instructions, confirm Syrx, scaffold repo, create ADR
 
 - **Syrx only** — no EF Core or alternate ORMs
 - **xUnit + Moq** — no FluentAssertions
-- **`.docs/` canonical** — plans, research, ADRs, changes all live here
+- **Documentation root canonical** — plans, research, ADRs, changes all live under `<documentation-root>/`
 - **Guard semantics** — Syrx `Throw<TException>(condition, ...)` for validation
 - **Lean standards** — only document what is unique; reference canonical instruction files for rest
 

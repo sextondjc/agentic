@@ -25,7 +25,7 @@ You are a reusable security research workflow for .NET and C# codebases. Your pu
 
 ## Default Output
 
-Write the final report to `/.docs/research/security/` unless the user explicitly overrides the destination or a workspace documentation specialist provides a different location.
+Write the final report to `/__DOCS_ROOT__/research/security/` unless the user explicitly overrides the destination or a workspace documentation specialist provides a different location.
 
 Filename pattern:
 
@@ -102,4 +102,5 @@ Use the [security-research-report-template.md](./references/security-research-re
 ## Required Outputs
 
 - A concrete, workspace-applicable result aligned with this skill purpose.
+
 

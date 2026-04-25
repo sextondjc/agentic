@@ -29,7 +29,7 @@ Invoke this skill when any of the following is true:
 
 ## Required Outputs
 
-- Reconciled report at `.docs/changes/governance/audits/governance-executive-audit.md`.
+- Reconciled report at `__DOCS_ROOT__/changes/governance/audits/governance-executive-audit.md`.
 - Report Navigation Grid with three levels and drill-down links:
 	- Level 1 Executive (workspace summary)
 	- Level 2 Type (skills/prompts/agents/instructions aggregates)
@@ -41,7 +41,7 @@ Invoke this skill when any of the following is true:
 - Failure Detail Grid must include a `Check` column mapped to canonical check IDs and an `Evidence` column referencing the source script.
 - Delta vs Prior Report Grid using standardized metrics with `Prior`, `Current`, `Delta`, and `Trend` columns (`Increase`, `Decrease`, `Flat`).
 - Responsibility overlap summary sourced from `test-responsibility-overlap.ps1` including duplicate-pair count, threshold, and top overlap pairs.
-- Docs Corpus Hygiene Grid sourced from this skill Self-containment checks and `.docs` corpus metrics.
+- Docs Corpus Hygiene Grid sourced from this skill Self-containment checks and `__DOCS_ROOT__` corpus metrics.
 - Ranked Recommendations Grid.
 - Explicit final disposition (`PASSED` or `FAILED`) based on MUST failures and open conflicts.
 
@@ -68,17 +68,17 @@ Invoke this skill when any of the following is true:
 ## Workflow
 
 0. Run `invoke-governance-health-overview.ps1` to collect evidence in one non-interactive execution when tooling permits.
-1. Produce a fresh core governance artifact under `.docs/changes/governance/audits/` for the audit date.
-2. Produce a fresh skill-quality aggregate artifact under `.docs/changes/skill/reviews/` for the audit date.
-3. Produce a fresh customization-quality aggregate artifact under `.docs/changes/customization/reviews/` for the audit date.
-4. Produce a fresh optimization-factor artifact under `.docs/changes/customization/reviews/` for the audit date.
+1. Produce a fresh core governance artifact under `__DOCS_ROOT__/changes/governance/audits/` for the audit date.
+2. Produce a fresh skill-quality aggregate artifact under `__DOCS_ROOT__/changes/skill/reviews/` for the audit date.
+3. Produce a fresh customization-quality aggregate artifact under `__DOCS_ROOT__/changes/customization/reviews/` for the audit date.
+4. Produce a fresh optimization-factor artifact under `__DOCS_ROOT__/changes/customization/reviews/` for the audit date.
 5. Verify all four artifacts are generated in the current invocation and capture their paths in report metadata.
 6. Reconcile the four fresh sources into one coherent set of metrics.
 7. If any MUST failures or open conflicts exist in any source, set disposition to `FAILED`.
 8. Produce ranked remediation recommendations mapped to evidence artifacts.
 9. Include the `responsibility-overlap` output payload in reconciled report metadata and standards evidence.
 10. Include the `Metrics` payload in report metadata and use it as the canonical source for aggregate metrics grids.
-11. Assess `.docs` corpus growth, redundancy candidates, and stale candidates; include results in the Docs Corpus Hygiene Grid.
+11. Assess `__DOCS_ROOT__` corpus growth, redundancy candidates, and stale candidates; include results in the Docs Corpus Hygiene Grid.
 12. Compute and publish a standardized Delta vs Prior Report Grid in the reconciled report.
 13. Run `test-governance-must-traceability.ps1` before finalizing the report; if it fails, block report publication and return `PROVISIONAL-FAILED` with violations.
 
@@ -126,6 +126,7 @@ Invoke this skill when any of the following is true:
 ## Inputs
 
 - User request context and target scope for this skill invocation.
+
 
 
 

@@ -1,6 +1,6 @@
 param(
   [string]$RootPath = '.',
-  [string[]]$ScanRoots = @('.docs', '.github')
+  [string[]]$ScanRoots = @('__DOCS_ROOT__', '.github')
 )
 
 $ErrorActionPreference = 'Stop'
@@ -131,3 +131,4 @@ if ($broken.Count -gt 0) {
 
 Write-Output "Governance link graph validation passed. Files: $(@($mdFiles).Count); Links: $checkedLinks"
 exit 0
+

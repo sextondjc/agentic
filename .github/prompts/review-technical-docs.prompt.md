@@ -31,7 +31,7 @@ Review all existing documentation, detect drift against source code, update stal
 
 ## Output Requirements
 
-Generate or update documentation under `/.docs/components/` with at least:
+Generate or update documentation under `/__DOCS_ROOT__/components/` with at least:
 
 - `index.md`
 - `code-structure.md`
@@ -58,5 +58,6 @@ Provide a concise final report containing:
 - Coverage percentage
 - Link validation status
 - Remaining risks or follow-up items
+
 
 

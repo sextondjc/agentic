@@ -73,9 +73,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `.docs/changes/<workstream-id>/content-clarity-findings.md`
-- `.docs/changes/<workstream-id>/content-clarity-checklist.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/content-clarity-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/content-clarity-checklist.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## L4 Coverage Matrix
 
@@ -118,3 +118,4 @@ Stop when all in-scope content surfaces are evaluated, high and critical issues 
 - Required outputs are complete and linked.
 - Source ledger is current.
 - Final recommendation is explicit and evidence-backed.
+

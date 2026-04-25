@@ -27,10 +27,12 @@ Keep this file policy-only. Use [SKILL.md](./../skills/instructions-authoring/SK
 - Target most agents at 12 to 25 characters when practical.
 - Names must remain understandable without reading frontmatter.
 
-## `.docs` and `.archive` Naming Rules
+## `__DOCS_ROOT__` and `.archive` Naming Rules
 
 - Date prefixes in file or folder names are prohibited.
-- Folder names must be lowercase kebab-case. Folders that mirror a skill, agent, instruction, or prompt name must exactly match that asset's canonical name.
+- Folder names must be lowercase kebab-case.
+- Folders that mirror a skill, agent, instruction, or prompt name must exactly match that asset's canonical name, including hyphens for multi-word names.
+- The one-word-per-level preference applies to generic documentation folders only; it does not apply to artifact-mirroring folders under `__DOCS_ROOT__/changes/**`.
 - `README.md` is reserved for true folder entry-point guidance only.
 - `INDEX.md` is reserved for generated indexes.
 - File names must reflect the actual content domain.
@@ -39,6 +41,7 @@ Keep this file policy-only. Use [SKILL.md](./../skills/instructions-authoring/SK
 
 - Use [SKILL.md](./../skills/librarian/SKILL.md) for documentation-corpus restructuring and naming remediation.
 - Use the relevant authoring skill when creating or renaming `.github` customization assets.
+
 
 
 

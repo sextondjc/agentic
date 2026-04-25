@@ -5,7 +5,7 @@ applyTo: '**/*.cs,**/*.csproj'
 ---
 # C# Policy
 
-Keep this file policy-only. Use [SKILL.md](./../skills/dotnet-refactor/SKILL.md) for modernization workflow and evidence gates, [SKILL.md](./../skills/test-driven-development/SKILL.md) for behavior-first implementation flow, and [syrx.instructions.md](./syrx.instructions.md) for data-access rules.
+Keep this file policy-only. Use [SKILL.md](./../skills/dotnet-refactor/SKILL.md) for modernization workflow and evidence gates, and [SKILL.md](./../skills/test-driven-development/SKILL.md) for behavior-first implementation flow.
 
 ## Language and Tooling
 
@@ -31,20 +31,15 @@ Keep this file policy-only. Use [SKILL.md](./../skills/dotnet-refactor/SKILL.md)
 - Complex parsing, normalization, or calculation logic must be extracted to public utility code with tests.
 - Service methods must not accept or return API contract types.
 
-## Validation and Async
+## Async
 
-- Use `Syrx.Validation.Contract.Throw<TException>(...)` for guards.
-- Validate before state mutation.
 - Public async methods must end with `Async` and accept `CancellationToken`.
 - Do not block on async work.
-- Use `ValueTask` only when profiling proves it is warranted.
 
-## Dependencies and Testing
+## Dependencies
 
-- Syrx-only repositories for .NET data access; do not introduce EF Core or alternate ORMs.
 - Do not introduce FluentValidation or FluentAssertions.
 - Keep abstractions minimal and justified by testing or boundary needs.
-- Add or update tests for changed public behavior and important edge cases.
 
 ## Security and Prohibited Patterns
 
@@ -57,5 +52,8 @@ Keep this file policy-only. Use [SKILL.md](./../skills/dotnet-refactor/SKILL.md)
 
 - Use [SKILL.md](./../skills/dotnet-refactor/SKILL.md) for modernization sequencing, evidence capture, and refactor depth.
 - Use [SKILL.md](./../skills/test-driven-development/SKILL.md) for behavior-first delivery flow.
+- Use [validation.instructions.md](./validation.instructions.md) for guard and immutability policy.
+- Use [async-programming.instructions.md](./async-programming.instructions.md) for concurrency and ValueTask policy.
+- Use [syrx.instructions.md](./syrx.instructions.md) for data-access and repository policy.
 - Use [testing-strategy.instructions.md](./testing-strategy.instructions.md) for test policy specifics.
 

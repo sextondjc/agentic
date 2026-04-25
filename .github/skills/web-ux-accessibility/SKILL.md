@@ -94,10 +94,10 @@ Out of scope:
 
 Capture artifacts under a change scope path:
 
-- `.docs/changes/<workstream-id>/accessibility-findings.md`
-- `.docs/changes/<workstream-id>/accessibility-checklist.md`
-- `.docs/changes/<workstream-id>/scan-results.json`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/accessibility-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/accessibility-checklist.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/scan-results.json`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## L4 Coverage Matrix
 
@@ -154,3 +154,4 @@ Stop when all in-scope criteria are checked, all critical/serious findings are r
 - L4 coverage matrix entries remain fully mapped.
 - Source ledger has current evaluation date and disposition.
 - Final recommendation is explicit and evidence-backed.
+

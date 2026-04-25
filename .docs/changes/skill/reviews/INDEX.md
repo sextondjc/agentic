@@ -43,6 +43,10 @@
 | [learn-topics/](./learn-topics/INDEX.md) | Subfolder index. |
 | [librarian/](./librarian/INDEX.md) | Subfolder index. |
 | [matrix-skill-mapping/](./matrix-skill-mapping/INDEX.md) | Subfolder index. |
+| [mobile-accessibility-quality-gate/](./mobile-accessibility-quality-gate/INDEX.md) | Subfolder index. |
+| [mobile-offline-resilience/](./mobile-offline-resilience/INDEX.md) | Subfolder index. |
+| [mobile-performance-quality-gate/](./mobile-performance-quality-gate/INDEX.md) | Subfolder index. |
+| [mobile-release-readiness/](./mobile-release-readiness/INDEX.md) | Subfolder index. |
 | [operability-design/](./operability-design/INDEX.md) | Subfolder index. |
 | [perf-benchmark/](./perf-benchmark/INDEX.md) | Subfolder index. |
 | [performance-research/](./performance-research/INDEX.md) | Subfolder index. |

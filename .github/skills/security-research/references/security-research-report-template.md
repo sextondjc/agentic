@@ -6,7 +6,7 @@
 - Generated on: `<yyyy-MM-dd>`
 - Assessor: `security-researcher`
 - Scope: `<solution/project/namespace/component>`
-- Report location: `/.docs/research/security/`
+- Report location: `/__DOCS_ROOT__/research/security/`
 - Evidence sources: `<code, analyzers, logs, docs, dependency manifests, runtime output>`
 
 ## Scope and constraints

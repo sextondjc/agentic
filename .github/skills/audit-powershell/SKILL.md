@@ -40,7 +40,7 @@ Optional:
 
 - Target file(s) or folder(s).
 - Severity focus (`Error`, `Warning`, `Information`).
-- Report directory (default: `.docs/changes/audit-powershell-reviews`).
+- Report directory (default: `__DOCS_ROOT__/changes/audit-powershell-reviews`).
 
 ## Assets
 
@@ -51,7 +51,7 @@ Optional:
 This skill publishes markdown reports for cross-agent consumption.
 
 - Export format: `Markdown` only
-- Default report path: `.docs/changes/audit-powershell-reviews/`
+- Default report path: `__DOCS_ROOT__/changes/audit-powershell-reviews/`
 - Default filename: `audit-powershell.md`
 - Stable latest filename: `latest-audit-powershell.md` (written by default)
 
@@ -89,7 +89,7 @@ Return a concise report with:
   - `Issue`
   - `Recommendation`
 - A short "next fixes" list prioritized by highest severity first.
-- Persisted markdown report in `.docs/changes/audit-powershell-reviews/` so other agents can ingest it.
+- Persisted markdown report in `__DOCS_ROOT__/changes/audit-powershell-reviews/` so other agents can ingest it.
 
 ## Recommendation Patterns
 
@@ -114,4 +114,5 @@ Review is complete only when:
 ## Required Outputs
 
 - A concrete, workspace-applicable result aligned with this skill purpose.
+
 

@@ -42,6 +42,10 @@
 | learn-topics | learn-topics-history.md | 2026-04-18 | Pass |
 | librarian | librarian-history.md | 2026-04-18 | Pass |
 | matrix-skill-mapping | matrix-skill-mapping-history.md | 2026-04-18 | Pass With Advisories |
+| mobile-accessibility-quality-gate | mobile-accessibility-quality-gate-history.md | 2026-04-25 | Registered (Pending Baseline Review) |
+| mobile-offline-resilience | mobile-offline-resilience-history.md | 2026-04-25 | Registered (Pending Baseline Review) |
+| mobile-performance-quality-gate | mobile-performance-quality-gate-history.md | 2026-04-25 | Registered (Pending Baseline Review) |
+| mobile-release-readiness | mobile-release-readiness-history.md | 2026-04-25 | Registered (Pending Baseline Review) |
 | operability-design | operability-design-history.md | 2026-04-18 | Pass With Advisories |
 | perf-benchmark | perf-benchmark-history.md | 2026-04-18 | Pass |
 | performance-research | performance-research-history.md | 2026-04-18 | Pass |

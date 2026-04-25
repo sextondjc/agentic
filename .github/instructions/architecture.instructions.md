@@ -31,7 +31,7 @@ Keep this file policy-only. Use [SKILL.md](./../skills/domain-design/SKILL.md) f
 
 ## Architecture Decisions
 
-- Significant architecture changes require an ADR in `.docs/adr`.
+- Significant architecture changes require an ADR in `__DOCS_ROOT__/adr`.
 - ADRs must record context, decision, consequences, alternatives, and security implications.
 
 ## Routing Notes
@@ -74,7 +74,7 @@ Keep this file policy-only. Use [SKILL.md](./../skills/domain-design/SKILL.md) f
 - Show reasoning through concrete architecture outputs, not abstract ceremony.
 - Prefer one clear architecture over multiple overlapping patterns.
 - Use the latest stable C# supported by the target framework.
-Maintain `/.docs/spec/glossary.md` listing domain terms: Term | Definition | Source Authority.
+Maintain `/__DOCS_ROOT__/spec/glossary.md` listing domain terms: Term | Definition | Source Authority.
 
 ## Global Usings Guidance
 Add a project-level `Usings.cs` to simplify guard invocation and centralize shared imports:
@@ -82,4 +82,5 @@ Add a project-level `Usings.cs` to simplify guard invocation and centralize shar
 global using static Syrx.Validation.Contract;
 ```
 For projects with more than one `*.cs` file, keep import directives in `Usings.cs` and avoid import `using` directives in other `*.cs` files. Do not overuse `using static`; reserve for ubiquitous guard/contract helpers to maintain readability and reduce verbosity. Avoid fully qualified namespace prefixes for guard calls within domain code.
+
 

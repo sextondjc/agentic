@@ -72,9 +72,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `.docs/changes/<workstream-id>/trust-risk-findings.md`
-- `.docs/changes/<workstream-id>/trust-risk-evidence-matrix.md`
-- `.docs/changes/<workstream-id>/release-recommendation.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/trust-risk-findings.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/trust-risk-evidence-matrix.md`
+- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 
@@ -89,3 +89,4 @@ Stop when sensitive-action trust checks are complete, high and critical issues a
 - Required outputs are complete and linked.
 - Source ledger is current.
 - Final recommendation is explicit and evidence-backed.
+

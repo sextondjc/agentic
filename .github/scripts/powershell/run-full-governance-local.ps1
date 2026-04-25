@@ -37,7 +37,7 @@ try {
         @{ Name='link-graph'; Cmd={ ./.github/scripts/powershell/test-governance-link-graph.ps1 } },
         @{ Name='artifact-contract'; Cmd={ ./.github/scripts/powershell/test-governance-artifact-contract.ps1 } },
         @{ Name='artifact-reference-hygiene'; Cmd={ ./.github/scripts/powershell/test-artifact-reference-hygiene.ps1 } },
-        @{ Name='docs-naming'; Cmd={ ./.github/scripts/powershell/test-naming-conformance.ps1 -RootPath .docs } },
+        @{ Name='no-docs-dependency'; Cmd={ ./.github/scripts/powershell/test-no-docs-dependency.ps1 -RootPath . -ScanPath .github } },
         @{ Name='asset-naming'; Cmd={ ./.github/scripts/powershell/test-asset-naming.ps1 -AssetType all } },
         @{ Name='utilization-coverage'; Cmd={ ./.github/scripts/powershell/test-utilization-coverage.ps1 } },
         @{ Name='review-recency'; Cmd={ ./.github/scripts/powershell/test-review-recency.ps1 -ThresholdDays 90 } },
@@ -67,9 +67,9 @@ try {
         Coverage = $coverage
         Checks = $results
         ArtifactSummary = [pscustomobject]@{
-            SkillAggregateExists = (Test-Path '.docs/changes/skill/reviews/governance-audit-types-skills.md')
-            CustomizationAuditExists = (Test-Path '.docs/changes/customization/reviews/governance-audit-types-customizations.md')
-            OptimizationArtifactExists = (Test-Path '.docs/changes/customization/reviews/governance-audit-types-optimization.md')
+            SkillAggregateExists = (Test-Path '.github/skills/governance-health-overview/references/.artifacts/governance-audit-types-skills.md')
+            CustomizationAuditExists = (Test-Path '.github/skills/governance-health-overview/references/.artifacts/governance-audit-types-customizations.md')
+            OptimizationArtifactExists = (Test-Path '.github/skills/governance-health-overview/references/.artifacts/governance-audit-types-optimization.md')
         }
         Metrics = [pscustomobject]@{
             TotalChecks = $results.Count

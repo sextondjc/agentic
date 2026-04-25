@@ -6,7 +6,7 @@
 - Generated on: `<yyyy-MM-dd>`
 - Assessor: `performance-assessor`
 - Scope: `<solution/project/namespace/component>`
-- Report location: `/.docs/research/performance/`
+- Report location: `/__DOCS_ROOT__/research/performance/`
 - Evidence sources: `<code, profiler output, traces, counters, benchmarks, query evidence, logs>`
 
 ## Scope and constraints
@@ -85,3 +85,4 @@ Repeat the section above for each finding.
 ### Assumptions
 
 - `<explicit assumption>`
+

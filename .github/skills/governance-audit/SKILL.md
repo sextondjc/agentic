@@ -23,7 +23,7 @@ Run a workspace-level governance assessment and return a single report with cove
 
 ## Required Outputs
 
-- Governance report at .docs/changes/governance/audits/governance-audit.md.
+- Governance report at __DOCS_ROOT__/changes/governance/audits/governance-audit.md.
 - Coverage grid by lane.
 - Standards grid for GOV-M* and GOV-S*.
 - Ranked recommendations with priority and evidence.
@@ -101,6 +101,7 @@ Use these existing scripts:
 - Report saved at required path.
 - Recommendations mapped to specific failures or advisories.
 - Source catalogs for sync-customizations and sync-skills are checked for freshness threshold drift.
+
 
 
 

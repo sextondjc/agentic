@@ -68,10 +68,10 @@ Optional inputs:
 
 - A per-skill review report in workspace docs using template path: [audit-skill-report-template.md](./references/audit-skill-report-template.md).
 - A conflict report is not produced by this skill; conflict detection across skills is a type-governance concern.
-- Updated per-skill history at: `.docs/changes/skill/history/<skill-name>-history.md`.
+- Updated per-skill history at: `__DOCS_ROOT__/changes/skill/history/<skill-name>-history.md`.
 - Review result summaries MUST be returned in Markdown grid format (tables), not prose lists.
 - Aggregate multi-skill results MUST include at least one consolidated grid with per-skill outcomes.
-- Per-skill review files MUST be stored under .docs/changes/skill/reviews/<skill-name>/.
+- Per-skill review files MUST be stored under __DOCS_ROOT__/changes/skill/reviews/<skill-name>/.
 - Reasoning package per reviewed skill: assumptions, trade-offs, blockers, and one recommendation.
 - Source-governance summary when maintenance validation is requested.
 - Updated [source-catalog.md](./references/source-catalog.md) when source tracking changes are made.
@@ -94,7 +94,7 @@ Optional inputs:
 ## Workflow
 
 1. Resolve target skills and collect current SKILL.md files and related assets.
-2. Load the per-skill history file from `.docs/changes/skill/history/` before analysis.
+2. Load the per-skill history file from `__DOCS_ROOT__/changes/skill/history/` before analysis.
 3. Build a recommendation deny-list from history entries marked Rejected, Removed, or Illegitimate.
 4. Re-evaluate tracked sources in [source-catalog.md](./references/source-catalog.md) for freshness and relevance.
 5. Build coverage across mandatory branches: format, triggers, self-containedness, links, and history alignment.
@@ -124,13 +124,13 @@ Optional inputs:
 
 ## Storage Rules
 
-- Store each skill review under .docs/changes/skill/reviews/<skill-name>/.
+- Store each skill review under __DOCS_ROOT__/changes/skill/reviews/<skill-name>/.
 - Use descriptive file names: `review.md`. Use versioned names (for example, `review-v2.md`) to disambiguate repeated runs.
-- Keep aggregate cross-skill summaries in .docs/changes/skill/reviews/.
+- Keep aggregate cross-skill summaries in __DOCS_ROOT__/changes/skill/reviews/.
 
 ## History Management Rules
 
-- Keep one history file per reviewed skill at `.docs/changes/skill/history/<skill-name>-history.md`.
+- Keep one history file per reviewed skill at `__DOCS_ROOT__/changes/skill/history/<skill-name>-history.md`.
 - Append new review entries; never rewrite prior decisions.
 - Track each recommendation with status: Proposed, Accepted, Rejected, Removed, Implemented.
 - Before publishing recommendations, remove any item that matches prior Rejected or Removed entries unless the user explicitly re-opens it.
@@ -146,3 +146,4 @@ A review is complete only when:
 - Reasoning package entries are present for failed and advisory findings.
 - Maintenance assumptions are freshness-checked when maintenance validation is in scope.
 - Source-catalog freshness was checked before final recommendations were issued.
+

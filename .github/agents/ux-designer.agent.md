@@ -36,6 +36,7 @@ Does not write production code, implement components, or make engineering archit
 
 Use these skills explicitly when the trigger is present:
 
+- `orchestrate-mobile`: deterministic intake for multi-phase mobile work spanning UX, prototyping, and engineering handoff.
 - `design-web-ux`: web UX flows from research through component spec and developer handoff.
 - `design-mobile-ux`: iOS/Android UX flows from research through wireframes and handoff.
 - `prototype-mobile-ui`: evolving wireframes into annotated high-fidelity prototypes.

@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to .docs/changes/skill/reviews/<skill-name>/review.md
+- Save this file to __DOCS_ROOT__/changes/skill/reviews/<skill-name>/review.md
 
 ## Summary Outcome Grid
 
@@ -58,3 +58,4 @@
 | Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
 |---|---|---:|---:|---|---|
 | <skill-name> | Pass/Pass With Advisories/Fail/Blocked | <n> | <n> | None/Detected/Resolved/Blocked | <report-file> |
+
