@@ -13,7 +13,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260404-review.md](./../../../../../.docs/changes/skill/reviews/dotnet-resilience/history.md)
+- Source Report: [20260404-review.md](../reviews/INDEX.md)
 
 #### Findings
 

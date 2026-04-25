@@ -26,6 +26,7 @@ This folder contains reusable `.prompt.md` templates for repeatable governance a
 | `sync-compendium` | `sync-compendium.prompt.md` | Execution | Review | Runs explicit-approval compendium sync with source attribution, conflict classification, and bespoke-safe merge constraints. |
 | `security-research` | `security-research.prompt.md` | Review | Planning | Produces security assessment output without implementation. |
 | `performance-research` | `performance-research.prompt.md` | Review | Planning | Produces performance assessment output without implementation. |
+| `scaffold-web-ux-quality-gate` | `scaffold-web-ux-quality-gate.prompt.md` | Execution | Planning | Scaffolds a web UX quality-gate evidence bundle for a workstream using core or full dimension sets. |
 
 ## Governance Notes
 

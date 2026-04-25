@@ -20,6 +20,9 @@ This catalog assigns each instruction file to a primary lifecycle lane.
 | `task-implementation.instructions.md` | Execution | Review | Governs how plans are executed and tracked in changes artifacts. |
 | `testing-strategy.instructions.md` | Execution | Review | Governs test implementation and validation patterns. |
 | `validation.instructions.md` | Execution | Review | Governs boundary validation in produced code. |
+| `mobile-frontend.instructions.md` | Execution | Review | Governs cross-platform mobile frontend standards, security, performance, and prohibited implementation patterns. |
+| `web-frontend.instructions.md` | Execution | Review | Governs web frontend component, accessibility, performance, and security implementation standards. |
+| `ux-design.instructions.md` | Planning | Review | Governs UX design process standards, handoff requirements, and usability validation rules. |
 | `secure-coding.instructions.md` | Execution | Review | Governs secure implementation defaults and review expectations. |
 | `request-economy.instructions.md` | Execution | Planning | Governs premium-request and context-window budgeting with deterministic escalation rules. |
 | `governance-lifecycle.instructions.md` | Planning | Review | Governs lane classification, handoffs, and lifecycle traceability. |

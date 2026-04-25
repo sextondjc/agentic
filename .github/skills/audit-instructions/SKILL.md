@@ -1,13 +1,13 @@
 ---
 name: audit-instructions
-description: Use when evaluating one or more workspace .instructions.md files against mandatory quality standards, tracking review history, and producing source-aware remediation recommendations.
+description: Use when evaluating one or more workspace .instructions.md files for policy-domain integrity, applyTo scope correctness, and instruction-specific remediation guidance.
 ---
 
 # Audit Instructions
 
 ## Specialization
 
-Evaluate `.instructions.md` artifacts against defined quality standards and produce review outcomes (Pass, Pass With Advisories, Fail, Blocked) for instruction governance. Scope is singular: instruction quality review and follow-up governance.
+Evaluate `.instructions.md` artifacts against instruction-governance standards and produce review outcomes (Pass, Pass With Advisories, Fail, Blocked) focused on policy-domain precision and rule scoping quality. Scope is singular: instruction quality review and follow-up governance.
 
 This skill exists as a dedicated specialization for instruction-file audits so instruction review can use instruction-specific sources, storage, and outputs without sharing a mixed review workflow with agents or prompts.
 

@@ -13,7 +13,7 @@
 
 - Outcome: Fail
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -46,7 +46,7 @@
 
 - Outcome: Fail
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -80,7 +80,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -112,7 +112,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -144,7 +144,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -176,7 +176,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -208,7 +208,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 

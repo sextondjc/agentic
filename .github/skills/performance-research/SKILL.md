@@ -1,13 +1,13 @@
 ---
 name: performance-research
-description: Use when performing research-only .NET and C# performance assessments with evidence-backed remediation reporting.
+description: Use when performing research-only .NET and C# performance diagnostics focused on latency, throughput, allocation, and contention evidence with prioritized remediation reporting.
 ---
 
 # Performance Research Skill
 
 ## Specialization
 
-This skill is specialized for the workflow described in this file and should remain narrowly bounded to that responsibility.
+This skill is specialized for performance diagnostics and should remain narrowly bounded to responsiveness, resource-efficiency, and scalability bottleneck assessment.
 
 It should not absorb adjacent planning, execution, or review responsibilities that belong to other assets.
 

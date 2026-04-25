@@ -1,13 +1,13 @@
 ---
 name: audit-prompts
-description: Use when evaluating one or more workspace .prompt.md files against mandatory quality standards, tracking review history, and producing source-aware remediation recommendations.
+description: Use when evaluating one or more workspace .prompt.md files for prompt execution-contract quality, invocation safety, and prompt-specific remediation guidance.
 ---
 
 # Audit Prompts
 
 ## Specialization
 
-Evaluate `.prompt.md` artifacts against defined quality standards and produce review outcomes (Pass, Pass With Advisories, Fail, Blocked) for prompt governance. Scope is singular: prompt quality review and follow-up governance.
+Evaluate `.prompt.md` artifacts against prompt-governance standards and produce review outcomes (Pass, Pass With Advisories, Fail, Blocked) focused on trigger clarity, output contract quality, and safe invocation behavior. Scope is singular: prompt quality review and follow-up governance.
 
 This skill exists as a dedicated specialization for prompt-file audits so prompt review can use prompt-specific sources, storage, and outputs without sharing a mixed review workflow with instructions or agents.
 

@@ -30,21 +30,36 @@ function Get-FrontmatterContract {
 
   switch ($Type) {
     'instructions' {
+      # Source: VS Code Custom Instructions docs (optional: name, description, applyTo)
       return [pscustomobject]@{
         RequiredKeys = @('name', 'description', 'applyTo')
-        AllowedKeys = @('name', 'description', 'applyTo', 'mode', 'tools')
+        AllowedKeys = @('name', 'description', 'applyTo')
       }
     }
     'agents' {
+      # Source: VS Code Custom Agents docs + workspace source-catalog
       return [pscustomobject]@{
         RequiredKeys = @('name', 'description')
-        AllowedKeys = @('name', 'description', 'applyTo', 'mode', 'tools')
+        AllowedKeys = @(
+          'name',
+          'description',
+          'tools',
+          'agents',
+          'model',
+          'user-invocable',
+          'disable-model-invocation',
+          'handoffs',
+          'hooks',
+          'target',
+          'mcp-servers'
+        )
       }
     }
     'prompts' {
+      # Source: VS Code Prompt Files docs (all frontmatter fields are optional)
       return [pscustomobject]@{
         RequiredKeys = @('name', 'description')
-        AllowedKeys = @('name', 'description', 'applyTo', 'mode', 'tools', 'agent')
+        AllowedKeys = @('name', 'description', 'argument-hint', 'agent', 'model', 'tools')
       }
     }
     default {

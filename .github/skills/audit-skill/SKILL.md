@@ -1,13 +1,13 @@
 ---
 name: audit-skill
-description: Use when evaluating one or more workspace skills against mandatory quality standards, tracking review history, and producing remediation recommendations.
+description: Use when evaluating one or more workspace skills for skill-specific quality signals such as trigger clarity, self-containment, and reference integrity, then recording remediation recommendations.
 ---
 
 # Audit Skill
 
 ## Specialization
 
-Evaluate skills against defined quality standards and produce review outcomes (Pass, Pass With Advisories, Fail, Blocked) for skill governance. Scope is singular: skill quality review and follow-up governance.
+Evaluate skills against skill-governance standards and produce review outcomes (Pass, Pass With Advisories, Fail, Blocked) centered on reusable workflow quality. Scope is singular: skill quality review and follow-up governance.
 
 ## Normative Language
 

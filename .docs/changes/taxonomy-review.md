@@ -25,16 +25,16 @@
 Every one of the 58 skill directories, 17 instruction files, 15 agent files, and 18 prompt files conforms to the canonical `^[a-z]+(-[a-z]+)*` pattern. This is a strong baseline that most workspaces do not achieve.
 
 ### 2. Mature four-layer taxonomy model with authoritative references
-The taxonomy system defines Type, Lane, Domain, and Function layers with explicit machine-readable configuration in [naming-conventions.json](./../.github/skills/governance-taxonomy-tag-registry/references/naming-conventions.json). This is well above average and enables automated audit and deterministic naming during authoring.
+The taxonomy system defines Type, Lane, Domain, and Function layers with explicit machine-readable configuration in [naming-conventions.json](./../../.github/skills/taxonomy-tag-registry/references/naming-conventions.json). This is well above average and enables automated audit and deterministic naming during authoring.
 
 ### 3. Vocabulary drift is documented, not ignored
-Known exceptions (`write-technical-docs`, `delivery-status-grid`, `branch-completion`, `librarian`, `current-test-coverage`) are explicitly documented in [lane-intent.md](./../.github/skills/governance-taxonomy-tag-registry/references/lane-intent.md) with justification. This prevents silent drift from becoming technical debt.
+Known exceptions (`write-technical-docs`, `delivery-status-grid`, `branch-completion`, `librarian`, `current-test-coverage`) are explicitly documented in [lane-intent.md](./../../.github/skills/taxonomy-tag-registry/references/lane-intent.md) with justification. This prevents silent drift from becoming technical debt.
 
 ### 4. Lifecycle catalogs are complete and consistent
-All four asset types have maintained catalogs with primary/secondary lane assignments: [agent-lifecycle-catalog.md](./../.github/agent-lifecycle-catalog.md), [instruction-lifecycle-catalog.md](./../.github/instructions/instruction-lifecycle-catalog.md), [prompt-lifecycle-catalog.md](./../.github/prompts/prompt-lifecycle-catalog.md), and [skill-discovery-index.md](./../.github/skills/skill-discovery-index.md). All 108 assets are catalogued — no omissions.
+All four asset types have maintained catalogs with primary/secondary lane assignments: [agent-lifecycle-catalog.md](./../../.github/agent-lifecycle-catalog.md), [instruction-lifecycle-catalog.md](./../../.github/instructions/instruction-lifecycle-catalog.md), [prompt-lifecycle-catalog.md](./../../.github/prompts/prompt-lifecycle-catalog.md), and [skill-discovery-index.md](./../../.github/skills/skill-discovery-index.md). All 108 assets are catalogued — no omissions.
 
 ### 5. Naming policy is separated from authoring guidance
-[governance-naming-conventions.instructions.md](./../.github/instructions/governance-naming-conventions.instructions.md) is policy-only and routes to authoring skills instead of duplicating procedural detail. This is the correct structural choice.
+[governance-naming-conventions.instructions.md](./../../.github/instructions/governance-naming-conventions.instructions.md) is policy-only and routes to authoring skills instead of duplicating procedural detail. This is the correct structural choice.
 
 ### 6. Governance report names are canonically mapped
 Legacy governance file names (`audit.md`, `optimization-factor.md`, etc.) are explicitly mapped to their canonical names in the JSON configuration. This prevents the "every run produces a new filename" anti-pattern.
@@ -93,14 +93,14 @@ The `-generator` suffix is used for two Planning-lane skills but is not in the n
 | R3 | Document the canonical `.docs/changes` path schema with explicit depth rules | Eliminates W4 structural ambiguity | Low | Execution | 🟡 Medium |
 | R4 | Standardize `execute-` prefix: either apply it consistently to all Execution-lane skills or remove it and rely on function vocabulary alone | Resolves W3 inconsistency | High | Execution | 🟡 Medium |
 | R5 | Add length exceptions to the catalog for skills > 20 chars, with a rationale note | Resolves W5 untracked drift | Low | Execution | 🟢 Low |
-| R6 | Add `-generator` as an explicit Planning vocabulary noun-form in [function-vocabulary.md](./../.github/skills/governance-taxonomy-tag-registry/references/function-vocabulary.md) | Resolves W6 undocumented suffix | Low | Execution | 🟢 Low |
+| R6 | Add `-generator` as an explicit Planning vocabulary noun-form in [function-vocabulary.md](./../../.github/skills/taxonomy-tag-registry/references/function-vocabulary.md) | Resolves W6 undocumented suffix | Low | Execution | 🟢 Low |
 
 ---
 
 ## Recommendation Detail
 
 ### R1 — Revise the `.docs` folder rule (High)
-In [governance-naming-conventions.instructions.md](./../.github/instructions/governance-naming-conventions.instructions.md), change:
+In [governance-naming-conventions.instructions.md](./../../.github/instructions/governance-naming-conventions.instructions.md), change:
 > "Folder names must be lowercase and one word per level."
 
 To:
@@ -112,7 +112,7 @@ This brings policy in sync with practice without requiring a mass rename.
 Invoke `prune-doc-artifacts` scoped to `.docs/changes/skill/reviews/`. Target the 14 folders listed in W2. Archive rather than delete — move to `.docs/archive/changes/skill/reviews/` to preserve history. Add a policy note that review folders must be renamed in the same change that renames the skill.
 
 ### R3 — Document `.docs/changes` schema (Medium)
-Add a section to [technical-docs.instructions.md](./../.github/instructions/technical-docs.instructions.md) or create `.docs/changes/README.md` (as a legitimate entry-point guide) specifying:
+Add a section to [technical-docs.instructions.md](./../../.github/instructions/technical-docs.instructions.md) or create `.docs/changes/README.md` (as a legitimate entry-point guide) specifying:
 - Depth schema: `changes/<artifact-type>/<artifact-class>/<item>/`
 - Allowed artifact-type values: `skill`, `agent`, `instruction`, `prompt`, `adr`
 - Naming rule: item folder must exactly match the asset's canonical name
@@ -125,10 +125,10 @@ Two viable options:
 **Recommendation:** Option A. It removes redundancy, is consistent with how Review-lane skills are named (`audit-*`, `validate-*`), and leaves lane signal to the function vocabulary where the taxonomy already defines it.
 
 ### R5 — Track length exceptions (Low)
-In [naming-conventions.json](./../.github/skills/governance-taxonomy-tag-registry/references/naming-conventions.json), add a `lengthExceptions` array under `scopes.customizations` with a `justification` field per entry. Apply to the two current violations.
+In [naming-conventions.json](./../../.github/skills/taxonomy-tag-registry/references/naming-conventions.json), add a `lengthExceptions` array under `scopes.customizations` with a `justification` field per entry. Apply to the two current violations.
 
 ### R6 — Add `-generator` to Planning vocabulary (Low)
-In [function-vocabulary.md](./../.github/skills/governance-taxonomy-tag-registry/references/function-vocabulary.md), add `-generator` as an accepted noun-form suffix under the Planning table with a note: "Acceptable for skills that produce a structured document artifact as the primary output."
+In [function-vocabulary.md](./../../.github/skills/taxonomy-tag-registry/references/function-vocabulary.md), add `-generator` as an accepted noun-form suffix under the Planning table with a note: "Acceptable for skills that produce a structured document artifact as the primary output."
 
 ---
 
@@ -146,12 +146,12 @@ In [function-vocabulary.md](./../.github/skills/governance-taxonomy-tag-registry
 
 | Finding | Policy Source |
 |---|---|
-| W1 | [governance-naming-conventions.instructions.md](./../.github/instructions/governance-naming-conventions.instructions.md) — `.docs` folder rule |
-| W2 | [governance-naming-conventions.instructions.md](./../.github/instructions/governance-naming-conventions.instructions.md) — "File names must reflect the actual content domain" |
-| W3 | [function-vocabulary.md](./../.github/skills/governance-taxonomy-tag-registry/references/function-vocabulary.md) — Lane vocabulary consistency |
-| W4 | [technical-docs.instructions.md](./../.github/instructions/technical-docs.instructions.md) — missing `.docs/changes` schema |
-| W5 | [governance-naming-conventions.instructions.md](./../.github/instructions/governance-naming-conventions.instructions.md) — 12–20 char target |
-| W6 | [function-vocabulary.md](./../.github/skills/governance-taxonomy-tag-registry/references/function-vocabulary.md) — Planning vocabulary table |
+| W1 | [governance-naming-conventions.instructions.md](./../../.github/instructions/governance-naming-conventions.instructions.md) — `.docs` folder rule |
+| W2 | [governance-naming-conventions.instructions.md](./../../.github/instructions/governance-naming-conventions.instructions.md) — "File names must reflect the actual content domain" |
+| W3 | [function-vocabulary.md](./../../.github/skills/taxonomy-tag-registry/references/function-vocabulary.md) — Lane vocabulary consistency |
+| W4 | [technical-docs.instructions.md](./../../.github/instructions/technical-docs.instructions.md) — missing `.docs/changes` schema |
+| W5 | [governance-naming-conventions.instructions.md](./../../.github/instructions/governance-naming-conventions.instructions.md) — 12–20 char target |
+| W6 | [function-vocabulary.md](./../../.github/skills/taxonomy-tag-registry/references/function-vocabulary.md) — Planning vocabulary table |
 
 ---
 

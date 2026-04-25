@@ -18,23 +18,79 @@ $resolvedRoot = Resolve-Path -LiteralPath $RootPath -ErrorAction Stop
 $today = Get-Date
 $rows = [System.Collections.Generic.List[PSCustomObject]]::new()
 
-$historyDir = Join-Path $resolvedRoot '.github/skills/skill-review/references/history'
-if (Test-Path -LiteralPath $historyDir) {
-    foreach ($file in Get-ChildItem -LiteralPath $historyDir -Filter '*-history.md' -File) {
-        $content = Get-Content -LiteralPath $file.FullName -Raw
-        $dates = @([regex]::Matches($content, '(?m)^###\s+(\d{4}-\d{2}-\d{2})\s+-\s+Review') | ForEach-Object { [datetime]::Parse($_.Groups[1].Value) })
-        if (-not $dates -or $dates.Count -eq 0) {
-            $dates = @([regex]::Matches($content, '(?m)^-\s+Last Reviewed:\s+(\d{4}-\d{2}-\d{2})\s*$') | ForEach-Object { [datetime]::Parse($_.Groups[1].Value) })
+function Get-HistoryDates {
+    param(
+        [Parameter(Mandatory)]
+        [string]$Content
+    )
+
+    $dates = [System.Collections.Generic.List[datetime]]::new()
+
+    foreach ($match in [regex]::Matches($Content, '(?m)^###\s+(\d{4}-\d{2}-\d{2})\s+-\s+Review')) {
+        try { $null = $dates.Add([datetime]::ParseExact($match.Groups[1].Value, 'yyyy-MM-dd', $null)) } catch { }
+    }
+
+    foreach ($match in [regex]::Matches($Content, '(?m)^-\s+Last Reviewed:\s+(\d{4}-\d{2}-\d{2})\s*$')) {
+        try { $null = $dates.Add([datetime]::ParseExact($match.Groups[1].Value, 'yyyy-MM-dd', $null)) } catch { }
+    }
+
+    foreach ($match in [regex]::Matches($Content, '(?m)^\|\s*(\d{4}-\d{2}-\d{2})\s*\|')) {
+        try { $null = $dates.Add([datetime]::ParseExact($match.Groups[1].Value, 'yyyy-MM-dd', $null)) } catch { }
+    }
+
+    foreach ($match in [regex]::Matches($Content, '(?m)^\|\s*(\d{8})\s*\|')) {
+        try { $null = $dates.Add([datetime]::ParseExact($match.Groups[1].Value, 'yyyyMMdd', $null)) } catch { }
+    }
+
+    return @($dates)
+}
+
+function Add-OrUpdateReviewRecord {
+    param(
+        [Parameter(Mandatory)]
+        [hashtable]$Index,
+        [Parameter(Mandatory)]
+        [string]$Type,
+        [Parameter(Mandatory)]
+        [string]$Asset,
+        [datetime]$LastDate
+    )
+
+    $key = "{0}::{1}" -f $Type, $Asset
+    if (-not $Index.ContainsKey($key)) {
+        $Index[$key] = [PSCustomObject]@{
+            Type = $Type
+            Asset = $Asset
+            LastDate = $LastDate
         }
+        return
+    }
+
+    $current = $Index[$key]
+    if ($null -eq $current.LastDate -or ($null -ne $LastDate -and $LastDate -gt $current.LastDate)) {
+        $current.LastDate = $LastDate
+    }
+}
+
+$latestByAsset = @{}
+
+$historyRoots = @(
+    @{ Path = '.docs/changes/skill/history'; Type = 'Skill' },
+    @{ Path = '.docs/changes/agent/history'; Type = 'Agent' },
+    @{ Path = '.docs/changes/instruction/history'; Type = 'Instruction' },
+    @{ Path = '.docs/changes/prompt/history'; Type = 'Prompt' },
+    @{ Path = '.github/skills/skill-review/references/history'; Type = 'Skill' }
+)
+
+foreach ($historyRoot in $historyRoots) {
+    $dir = Join-Path $resolvedRoot $historyRoot.Path
+    if (-not (Test-Path -LiteralPath $dir)) { continue }
+
+    foreach ($file in Get-ChildItem -LiteralPath $dir -Filter '*-history.md' -File) {
+        $content = Get-Content -LiteralPath $file.FullName -Raw
+        $dates = @(Get-HistoryDates -Content $content)
         $last = if ($dates.Count -gt 0) { ($dates | Sort-Object -Descending | Select-Object -First 1) } else { $null }
-        $days = if ($null -ne $last) { [int]($today - $last).TotalDays } else { $null }
-        $rows.Add([PSCustomObject]@{
-            Asset = ($file.Name -replace '-history\.md$', '')
-            Type = 'Skill'
-            LastReviewDate = if ($last) { $last.ToString('yyyy-MM-dd') } else { '' }
-            DaysSinceReview = if ($null -ne $days) { $days } else { '' }
-            Status = if ($null -eq $last) { 'Missing Review Date' } elseif ($days -gt $ThresholdDays) { 'Overdue' } else { 'Current' }
-        })
+        Add-OrUpdateReviewRecord -Index $latestByAsset -Type $historyRoot.Type -Asset ($file.Name -replace '-history\.md$', '') -LastDate $last
     }
 }
 
@@ -53,15 +109,19 @@ if (Test-Path -LiteralPath $auditHistoryPath) {
     }
     foreach ($artifact in $latestByArtifact.Keys | Sort-Object) {
         $last = $latestByArtifact[$artifact]
-        $days = [int]($today - $last).TotalDays
-        $rows.Add([PSCustomObject]@{
-            Asset = $artifact
-            Type = 'Customization'
-            LastReviewDate = $last.ToString('yyyy-MM-dd')
-            DaysSinceReview = $days
-            Status = if ($days -gt $ThresholdDays) { 'Overdue' } else { 'Current' }
-        })
+        Add-OrUpdateReviewRecord -Index $latestByAsset -Type 'Customization' -Asset $artifact -LastDate $last
     }
+}
+
+foreach ($record in $latestByAsset.Values | Sort-Object Type, Asset) {
+    $days = if ($null -ne $record.LastDate) { [int]($today - $record.LastDate).TotalDays } else { $null }
+    $rows.Add([PSCustomObject]@{
+        Asset = $record.Asset
+        Type = $record.Type
+        LastReviewDate = if ($record.LastDate) { $record.LastDate.ToString('yyyy-MM-dd') } else { '' }
+        DaysSinceReview = if ($null -ne $days) { $days } else { '' }
+        Status = if ($null -eq $record.LastDate) { 'Missing Review Date' } elseif ($days -gt $ThresholdDays) { 'Overdue' } else { 'Current' }
+    })
 }
 
 if ($rows.Count -eq 0) { Write-Error 'No review history records found to evaluate.'; exit 1 }

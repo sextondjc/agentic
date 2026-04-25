@@ -1,13 +1,13 @@
 ---
 name: security-research
-description: Use when performing research-only .NET and C# security assessments with evidence-backed remediation reporting.
+description: Use when performing research-only .NET and C# security assessments focused on threat exposure, exploitability, and control effectiveness with prioritized remediation reporting.
 ---
 
 # Security Research Skill
 
 ## Specialization
 
-This skill is specialized for the workflow described in this file and should remain narrowly bounded to that responsibility.
+This skill is specialized for security and should remain narrowly bounded to vulnerability discovery, threat-path analysis, and control-gap assessment.
 
 It should not absorb adjacent planning, execution, or review responsibilities that belong to other assets.
 

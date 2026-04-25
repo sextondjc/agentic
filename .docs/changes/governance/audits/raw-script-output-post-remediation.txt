@@ -1,0 +1,63 @@
+=== CHECK: frontmatter-prompts ===
+All prompts files passed frontmatter validation.
+exit=0
+
+=== CHECK: frontmatter-agents ===
+All agents files passed frontmatter validation.
+exit=0
+
+=== CHECK: frontmatter-instructions ===
+WARNING: governance-release.instructions.md: 'applyTo' is set to global '**' — confirm this is intentional
+WARNING: request-economy.instructions.md: 'applyTo' is set to global '**' — confirm this is intentional
+WARNING: secure-coding.instructions.md: 'applyTo' is set to global '**' — confirm this is intentional
+All instructions files passed frontmatter validation.
+exit=0
+
+=== CHECK: catalog-skills ===
+Catalog integrity passed for 'skills': all entries match on-disk assets.
+MissingInCatalog: {}
+StaleInCatalog: {}
+exit=0
+
+=== CHECK: catalog-agents ===
+Catalog integrity passed for 'agents': all entries match on-disk assets.
+MissingInCatalog: {}
+StaleInCatalog: {}
+exit=0
+
+=== CHECK: catalog-instructions ===
+Catalog integrity passed for 'instructions': all entries match on-disk assets.
+MissingInCatalog: {}
+StaleInCatalog: {}
+exit=0
+
+=== CHECK: catalog-prompts ===
+Catalog integrity passed for 'prompts': all entries match on-disk assets.
+MissingInCatalog: {}
+StaleInCatalog: {}
+exit=0
+
+=== CHECK: hub-sync ===
+Hub file is synced: preferred agents and prompt/instruction catalogs match assets.
+exit=0
+
+=== CHECK: review-recency ===
+Review recency passed: all tracked artifacts are within 90 days.
+exit=0
+
+=== CHECK: overlap ===
+DuplicatePairCount: 0
+DuplicatePairThresholdBreached: False
+Responsibility overlap passed: 0 duplicate pair(s) within threshold 0.
+exit=0
+
+=== CHECK: link-graph ===
+CheckedFiles: 794
+CheckedLinks: 1699
+BrokenLinks: 123
+exit=1
+
+=== CHECK: summary ===
+Completed recommendation validations in this evidence bundle: REC-002, REC-003, REC-004 (partial burn-down), REC-005, REC-006.
+Remaining advisory work is tracked under REC-004 and REC-007.
+

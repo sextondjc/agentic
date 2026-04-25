@@ -13,7 +13,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill/reviews/receiving-code-review/history.md)
+- Source Report: [20260329-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -43,7 +43,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260329-review.md](./../../../../../.docs/changes/skill/reviews/receiving-code-review/history.md)
+- Source Report: [20260329-review.md](../reviews/INDEX.md)
 
 #### Findings
 

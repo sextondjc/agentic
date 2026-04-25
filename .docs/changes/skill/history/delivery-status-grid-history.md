@@ -13,7 +13,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260401-review.md](./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md)
+- Source Report: [20260401-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -43,7 +43,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260401-review.md](./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md)
+- Source Report: [20260401-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -73,7 +73,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260401-review.md](./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md)
+- Source Report: [20260401-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -104,7 +104,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -136,7 +136,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -168,7 +168,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -200,7 +200,7 @@
 
 - Outcome: Pass With Advisories
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -232,7 +232,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -264,7 +264,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 
@@ -296,7 +296,7 @@
 
 - Outcome: Pass
 - Reviewer: skill-review
-- Source Report: [20260403-review.md](./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md)
+- Source Report: [20260403-review.md](../reviews/INDEX.md)
 
 #### Findings
 

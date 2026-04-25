@@ -1,0 +1,3431 @@
+=== CHECK: get-lane-counts:agents ===
+
+[32;1mLane     [0m[32;1m Count[0m
+[32;1m----     [0m [32;1m-----[0m
+Execution     6
+Planning      5
+Review        7
+
+exit=0
+
+=== CHECK: get-lane-counts:skills ===
+
+[32;1mLane     [0m[32;1m Count[0m
+[32;1m----     [0m [32;1m-----[0m
+Execution    65
+Planning     28
+Review       27
+
+exit=0
+
+=== CHECK: get-lane-counts:instructions ===
+
+[32;1mLane     [0m[32;1m Count[0m
+[32;1m----     [0m [32;1m-----[0m
+Execution    14
+Planning      4
+
+exit=0
+
+=== CHECK: get-lane-counts:prompts ===
+
+[32;1mLane     [0m[32;1m Count[0m
+[32;1m----     [0m [32;1m-----[0m
+Execution     9
+Review       11
+
+exit=0
+
+=== CHECK: test-catalog-integrity:agents ===
+[31;1mGet-Content: [0m/workspaces/agentic/.github/scripts/powershell/test-catalog-integrity.ps1:53:3[0m
+[31;1m[0m[36;1mLine |[0m
+[31;1m[0m[36;1m[36;1m  53 | [0m   [36;1mGet-Content $catalogPath[0m |[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m   ~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mCannot find path[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m[31;1m[36;1m     | [31;1m'/workspaces/agentic/.github/agents/agent-lifecycle-catalog.md' because[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m[31;1m[36;1m[31;1m[36;1m     | [31;1mit does not exist.[0m
+[31;1mWrite-Error: [31;1mCatalog integrity failed for 'agents': 18 missing, 0 stale.[0m
+
+exit=1
+
+=== CHECK: test-catalog-integrity:skills ===
+[31;1mWrite-Error: [31;1mCatalog integrity failed for 'skills': 1 missing, 0 stale.[0m
+
+exit=1
+
+=== CHECK: test-catalog-integrity:instructions ===
+[31;1mWrite-Error: [31;1mCatalog integrity failed for 'instructions': 3 missing, 0 stale.[0m
+
+exit=1
+
+=== CHECK: test-catalog-integrity:prompts ===
+[31;1mWrite-Error: [31;1mCatalog integrity failed for 'prompts': 1 missing, 0 stale.[0m
+
+exit=1
+
+=== CHECK: test-frontmatter-validity:agents ===
+All agents files passed frontmatter validation.
+exit=0
+
+=== CHECK: test-frontmatter-validity:instructions ===
+[33;1mWARNING: governance-release.instructions.md: 'applyTo' is set to global '**' — confirm this is intentional[0m
+[33;1mWARNING: request-economy.instructions.md: 'applyTo' is set to global '**' — confirm this is intentional[0m
+[33;1mWARNING: secure-coding.instructions.md: 'applyTo' is set to global '**' — confirm this is intentional[0m
+All instructions files passed frontmatter validation.
+exit=0
+
+=== CHECK: test-frontmatter-validity:prompts ===
+scaffold-web-ux-quality-gate.prompt.md: unknown frontmatter key 'argument-hint' (allowed: name, description, applyTo, mode, tools, agent)
+exit=1
+
+=== CHECK: test-hub-file-sync ===
+{
+  "Missing instructions in catalog": [
+    "mobile-frontend.instructions.md",
+    "ux-design.instructions.md",
+    "web-frontend.instructions.md"
+  ],
+  "Missing prompts in catalog": [
+    "scaffold-web-ux-quality-gate.prompt.md"
+  ]
+}
+exit=1
+
+=== CHECK: test-governance-link-graph ===
+{
+  "CheckedFiles": 794,
+  "CheckedLinks": 1693,
+  "BrokenLinks": 642,
+  "Issues": [
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/skills/governance-taxonomy-tag-registry/references/naming-conventions.json",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/skills/governance-taxonomy-tag-registry/references/lane-intent.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/agent-lifecycle-catalog.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/instructions/instruction-lifecycle-catalog.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/prompts/prompt-lifecycle-catalog.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/skills/skill-discovery-index.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/instructions/governance-naming-conventions.instructions.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/skills/governance-taxonomy-tag-registry/references/function-vocabulary.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/instructions/governance-naming-conventions.instructions.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/instructions/technical-docs.instructions.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/skills/governance-taxonomy-tag-registry/references/naming-conventions.json",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/skills/governance-taxonomy-tag-registry/references/function-vocabulary.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/instructions/governance-naming-conventions.instructions.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/instructions/governance-naming-conventions.instructions.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/skills/governance-taxonomy-tag-registry/references/function-vocabulary.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/instructions/technical-docs.instructions.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/instructions/governance-naming-conventions.instructions.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/taxonomy-review.md",
+      "Target": "./../.github/skills/governance-taxonomy-tag-registry/references/function-vocabulary.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/reviews/INDEX.md",
+      "Target": "./governance-audit-types-skills.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../adr-generator/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/adr-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/adr-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/agent-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/agent-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../api-design/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/api-design-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/api-design/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-governance-history.md",
+      "Target": "./../../../governance-audit/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-governance-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-audit/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-governance-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-audit/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-governance-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-audit/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-governance-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-audit/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-governance-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-audit/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-governance-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-audit/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-governance-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-audit/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../audit-powershell/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-powershell-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/audit-powershell/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/audit-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skill-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/benchmarkdotnet-performance-testing-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/benchmarkdotnet-performance-testing/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/benchmarkdotnet-performance-testing-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/benchmarkdotnet-performance-testing/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/benchmarkdotnet-performance-testing-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/benchmarkdotnet-performance-testing/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../branch-completion/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/branch-completion-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/branch-completion/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/build-maui-apps-history.md",
+      "Target": "./../../../build-maui-apps/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/build-maui-apps-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/build-maui-apps/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/build-maui-apps-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/build-maui-apps/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/build-maui-apps-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/build-maui-apps/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/build-maui-apps-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/build-maui-apps/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/build-maui-apps-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/build-maui-apps/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/build-maui-apps-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/build-maui-apps/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/build-maui-apps-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/build-maui-apps/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/build-mobile-apps-history.md",
+      "Target": ".docs/changes/skill/reviews/build-mobile-apps/review-v2.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/build-mobile-apps-history.md",
+      "Target": ".docs/changes/skill/reviews/build-mobile-apps/review-v2.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/condense-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/condense-skill/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/condense-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/condense-skill/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/condense-skill-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/condense-skill/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../critical-thinking/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/critical-thinking-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/critical-thinking/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/curating-copilot-instructions-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/curating-copilot-instructions/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/current-test-coverage-history.md",
+      "Target": "./../../../current-test-coverage/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/current-test-coverage-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/current-test-coverage/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/current-test-coverage-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/current-test-coverage/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/current-test-coverage-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/current-test-coverage/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/current-test-coverage-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/current-test-coverage/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/current-test-coverage-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/current-test-coverage/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/current-test-coverage-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/current-test-coverage/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/current-test-coverage-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/current-test-coverage/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/current-test-coverage-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/current-test-coverage/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/customization-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/customization-review/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/customization-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/customization-review/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/customization-routing-decision-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/customization-routing-decision/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/customization-routing-decision-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/customization-routing-decision/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/delivery-status-grid-history.md",
+      "Target": "./../../../delivery-status-grid/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/delivery-status-grid-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/delivery-status-grid-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/delivery-status-grid-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/delivery-status-grid-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/delivery-status-grid-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/delivery-status-grid-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/delivery-status-grid-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/delivery-status-grid-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/delivery-status-grid-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/delivery-status-grid-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/delivery-status-grid/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../docker-dotnet/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/docker-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/docker-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-modernization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-modernization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-modernization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-modernization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../dotnet-refactor/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-refactor-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-refactor/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-resilience-history.md",
+      "Target": "./../../../dotnet-resilience/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/dotnet-resilience-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/dotnet-resilience/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../plans/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/executing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/finishing-a-development-branch-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/finishing-a-development-branch/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/finishing-a-development-branch-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/finishing-a-development-branch/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/governance-health-overview-history.md",
+      "Target": "./../../../governance-health-overview/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/governance-health-overview-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-health-overview/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/governance-health-overview-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-health-overview/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/governance-health-overview-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-health-overview/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/governance-health-overview-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-health-overview/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/governance-health-overview-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-health-overview/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/keeping-customizations-current-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/keeping-customizations-current/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/keeping-customizations-current-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/keeping-customizations-current/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/keeping-skills-current-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/keeping-skills-current/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/keeping-skills-current-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/keeping-skills-current/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/learn-topics-history.md",
+      "Target": "./../../../learn-topics/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/learn-topics-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/learn-topics/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/learn-topics-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/learn-topics/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/learn-topics-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/learn-topics/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/learn-topics-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/learn-topics/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/learn-topics-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/learn-topics/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/learn-topics-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/learn-topics/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/learn-topics-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/learn-topics/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../perf-benchmark/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/perf-benchmark-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/perf-benchmark/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../performance-research/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/performance-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/performance-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/powershell-script-library-history.md",
+      "Target": "./../../../powershell-script-library/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/powershell-script-library-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/powershell-script-library-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/powershell-script-library-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/powershell-script-library-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/powershell-script-library-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/powershell-script-library-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/powershell-script-library-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/powershell-script-library/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/powershell-script-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/powershell-script-review/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../prd-generator/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prd-generator-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prd-generator/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prune-doc-artifacts-history.md",
+      "Target": "./../../../prune-doc-artifacts/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prune-doc-artifacts-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prune-doc-artifacts/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prune-doc-artifacts-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prune-doc-artifacts/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prune-doc-artifacts-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prune-doc-artifacts/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prune-doc-artifacts-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prune-doc-artifacts/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prune-doc-artifacts-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prune-doc-artifacts/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prune-doc-artifacts-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prune-doc-artifacts/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/prune-doc-artifacts-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/prune-doc-artifacts/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/receiving-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/receiving-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/receiving-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/receiving-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../remediate-review/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/remediate-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/remediate-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../request-code-review/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/request-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/request-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/requesting-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/requesting-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/requesting-code-review-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/requesting-code-review/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../route-customization/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/route-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/route-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/scaffold-dotnet-history.md",
+      "Target": "./../../../scaffold-dotnet/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/scaffold-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/scaffold-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/scaffold-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/scaffold-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/scaffold-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/scaffold-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/scaffold-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/scaffold-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/scaffold-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/scaffold-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/scaffold-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/scaffold-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/scaffold-dotnet-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/scaffold-dotnet/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../security-research/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/security-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/security-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../skills-authoring/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/skills-authoring-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/skills-authoring/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/subagent-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/subagent-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/subagent-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/subagent-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../governance-sync-customizations/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-customizations-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-sync-customizations/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-editorconfig-history.md",
+      "Target": "./../../../sync-editorconfig/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-editorconfig-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-editorconfig/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-editorconfig-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-editorconfig/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-editorconfig-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-editorconfig/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-editorconfig-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-editorconfig/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-editorconfig-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-editorconfig/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-editorconfig-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-editorconfig/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-editorconfig-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-editorconfig/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../sync-skills/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/sync-skills-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/sync-skills/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../syrx-data-access/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/syrx-data-access-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/syrx-data-access/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../task-execution/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-execution-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-execution/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../task-research/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/task-research-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/task-research/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/technical-documentation-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/technical-documentation/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/technical-documentation-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/technical-documentation/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../test-driven-development/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/test-driven-development-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/test-driven-development/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../governance-validate-customization/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/validate-customization-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/governance-validate-customization/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../write-technical-docs/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/write-technical-docs-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/write-technical-docs/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../writing-plans/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/skill/history/writing-plans-history.md",
+      "Target": "./../../../../../.docs/changes/skill/reviews/writing-plans/history.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/agent/reviews/benchmark-researcher/review.md",
+      "Target": "../skills/perf-benchmark/references/benchmarkdotnet-performance-report-template.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/agent/reviews/orchestrator/review.md",
+      "Target": "./../instructions/governance-lifecycle.instructions.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/INDEX.md",
+      "Target": "./governance-audit-types-customizations.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "./../../plans/governance/skills-optimization/all-skills-optimization-plan.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "./../../../.github/skills/write-technical-docs/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "./../../../.github/skills/sre-practices/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "../README.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "./../../../.github/skills/curate-copilot-instructions/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "./../../../.github/skills/build-mobile-apps/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "./../../../.github/skills/build-web-frontend/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "./../../../.github/skills/design-web-ux/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "./../../../.github/skills/write-technical-docs/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "./../../../.github/skills/adr-generator/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "./../../../.github/skills/writing-plans/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "path",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/customization/reviews/skills-optimization-2026-04-19.md",
+      "Target": "./../../../.github/skills/audit-skill/references/source-catalog.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/execute-customization-audit.md",
+      "Target": "./../../skill/reviews/governance-audit-types-skills.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/execute-customization-audit.md",
+      "Target": "./../../customization/reviews/governance-audit-types-customizations.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/execute-customization-audit.md",
+      "Target": "./../../skill/reviews/governance-audit-types-skills.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/execute-customization-audit.md",
+      "Target": "./../../customization/reviews/governance-audit-types-customizations.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/execute-customization-audit.md",
+      "Target": "./../../customization/reviews/governance-audit-types-customizations.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/execute-customization-audit.md",
+      "Target": "./../../customization/reviews/governance-audit-types-customizations.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/execute-customization-audit.md",
+      "Target": "./../../skill/reviews/governance-audit-types-skills.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/execute-customization-audit.md",
+      "Target": "./../../skill/reviews/governance-audit-types-skills.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/execute-customization-audit.md",
+      "Target": "./../../skill/reviews/governance-audit-types-skills.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/execute-customization-audit.md",
+      "Target": "./../../customization/reviews/governance-audit-types-customizations.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/governance-audit.md",
+      "Target": "./../../../skill/reviews/governance-audit-types-skills.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/governance-audit.md",
+      "Target": "./../../../customization/reviews/governance-audit-types-customizations.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/governance-audit.md",
+      "Target": "./../../../customization/reviews/governance-audit-types-optimization.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/governance-executive-audit.md",
+      "Target": "./../../skill/reviews/governance-audit-types-skills.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/governance-executive-audit.md",
+      "Target": "./../../customization/reviews/governance-audit-types-customizations.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/governance-executive-audit.md",
+      "Target": "./../../skill/reviews/skill-review/review.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/governance-executive-audit.md",
+      "Target": "./../../customization/reviews/governance-audit-types-customizations.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/governance-executive-audit.md",
+      "Target": "./../../skill/reviews/governance-audit-types-skills.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/governance-executive-audit.md",
+      "Target": "./../../skill/reviews/governance-audit-types-skills.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/changes/governance/audits/governance-executive-audit.md",
+      "Target": "./../../customization/reviews/governance-audit-types-customizations.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-quality-gate/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-accessibility/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-usability/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-performance/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-responsive-design/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-motion-animation/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-notification-alerts/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-content-clarity/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-information-architecture/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-feedback-status/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-onboarding-progressive-disclosure/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-forms-conversion/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-experimentation-evidence/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-telemetry-instrumentation/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-trust-risk-signals/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-privacy-consent/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-account-identity-flows/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-localization/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-visual-consistency/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-data-dense-interfaces/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-offline-resilience/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/skills/web-ux-supportability-self-service/SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.github/prompts/scaffold-web-ux-quality-gate.prompt.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.docs/components/ux/skills/web-ux-skills-index.md",
+      "Target": "../../../.docs/changes/ux-quality-gate-examples-index.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/skill-discovery-index.md",
+      "Target": "../.docs/plans/governance/taxonomy-tag-registry/phase-discipline-lane-agentic-delivery-matrix.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/matrix-skill-mapping/references/phase-discipline-lane-agentic-delivery-matrix.md",
+      "Target": "../../../adr/governance/adr-0001-phase-discipline-lane-model-adoption.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./governance-audit.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./../../skill/reviews/governance-audit-types-skills.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./../../customization/reviews/governance-audit-types-customizations.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./../../customization/reviews/governance-audit-types-optimization.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./path/to/evidence.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./path/to/type-report.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./path/to/type-report.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./path/to/type-report.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./path/to/type-report.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./path/to/type-report.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./path/to/evidence.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md",
+      "Target": "./governance-audit.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/sync-compendium/references/INTERROGATION-GUIDE.md",
+      "Target": "./references/scripts/Invoke-CompendiumSourceInterrogation.ps1",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/sync-compendium/references/INTERROGATION-GUIDE.md",
+      "Target": "./references/external-ingestion-decision-template.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/sync-compendium/references/INTERROGATION-GUIDE.md",
+      "Target": "./references/external-source-interrogation.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/sync-compendium/references/INTERROGATION-GUIDE.md",
+      "Target": "../../workflows/governed-compendium-interrogation.yml",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/sync-compendium/references/INTERROGATION-GUIDE.md",
+      "Target": "./SKILL.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/sync-compendium/references/INTERROGATION-GUIDE.md",
+      "Target": "../../prompts/sync-compendium.prompt.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/sync-compendium/references/INTERROGATION-GUIDE.md",
+      "Target": "../../prompts/sync-compendium.prompt.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/curate-copilot-instructions/SKILL.md",
+      "Target": "./../skills/skill-discovery-index.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/skills/curate-copilot-instructions/references/preferred-skills-section-template.md",
+      "Target": "./../../../../../README.md",
+      "Reason": "Missing or malformed target file path"
+    },
+    {
+      "Source": "/workspaces/agentic/.github/prompts/generate-readme.prompt.md",
+      "Target": "./../../../README.md",
+      "Reason": "Missing or malformed target file path"
+    }
+  ]
+}
+exit=1
+
+=== CHECK: test-governance-artifact-contract ===
+exit=0
+
+=== CHECK: test-utilization-coverage ===
+
+exit=0
+
+=== CHECK: test-review-recency ===
+[31;1mWrite-Error: [0m/workspaces/agentic/.github/scripts/powershell/test-review-recency.ps1:67:26[0m
+[31;1m[0m[36;1mLine |[0m
+[31;1m[0m[36;1m[36;1m  67 | [0m … nt -eq 0) { [36;1mWrite-Error 'No review history records found to evaluate.[0m …[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mNo review history records found to evaluate.[0m
+exit=1
+
+=== CHECK: test-source-catalog-freshness ===
+
+[32;1mCatalog       : [0m.github/skills/sync-customizations/references/source-catalog.md
+[32;1mSource        : [0m[GitHub Copilot Customization Docs](https://docs.github.com/en/
+                copilot/customizing-copilot)
+[32;1mLastEvaluated : [0m2026-04-07
+[32;1mDaysOverdue   : [0m0
+[32;1mStatus        : [0mCurrent
+
+[32;1mCatalog       : [0m.github/skills/sync-customizations/references/source-catalog.md
+[32;1mSource        : [0m[VS Code Copilot Chat Agents](https://code.visualstudio.com/doc
+                s/copilot/chat/chat-agents)
+[32;1mLastEvaluated : [0m2026-04-07
+[32;1mDaysOverdue   : [0m0
+[32;1mStatus        : [0mCurrent
+
+[32;1mCatalog       : [0m.github/skills/sync-customizations/references/source-catalog.md
+[32;1mSource        : [0m[VS Code Copilot Instructions](https://code.visualstudio.com/do
+                cs/copilot/copilot-customization)
+[32;1mLastEvaluated : [0m2026-04-07
+[32;1mDaysOverdue   : [0m0
+[32;1mStatus        : [0mCurrent
+
+[32;1mCatalog       : [0m.github/skills/sync-skills/references/source-catalog.md
+[32;1mSource        : [0m[Agent Skills](https://agentskills.io/home)
+[32;1mLastEvaluated : [0m2026-04-12
+[32;1mDaysOverdue   : [0m0
+[32;1mStatus        : [0mCurrent
+
+[32;1mCatalog       : [0m.github/skills/sync-skills/references/source-catalog.md
+[32;1mSource        : [0m[Anthropic Skills Repository](https://github.com/anthropics/ski
+                lls)
+[32;1mLastEvaluated : [0m2026-04-12
+[32;1mDaysOverdue   : [0m0
+[32;1mStatus        : [0mCurrent
+
+[32;1mCatalog       : [0m.github/skills/sync-skills/references/source-catalog.md
+[32;1mSource        : [0m[Claude Support: How to Create Custom Skills](https://support.c
+                laude.com/en/articles/12512198-how-to-create-custom-skills)
+[32;1mLastEvaluated : [0m2026-04-12
+[32;1mDaysOverdue   : [0m0
+[32;1mStatus        : [0mCurrent
+
+[32;1mCatalog       : [0m.github/skills/sync-skills/references/source-catalog.md
+[32;1mSource        : [0m[VS Code Agent Skills Documentation](https://code.visualstudio.
+                com/docs/copilot/customization/agent-skills)
+[32;1mLastEvaluated : [0m2026-04-12
+[32;1mDaysOverdue   : [0m0
+[32;1mStatus        : [0mCurrent
+
+Source catalog freshness passed.
+exit=0
+
+=== CHECK: test-responsibility-overlap ===
+
+[32;1mRootPath                       : [0m/workspaces/agentic
+[32;1mSimilarityThreshold            : [0m0.82
+[32;1mMinimumSharedTokens            : [0m6
+[32;1mMaxAllowedDuplicatePairs       : [0m0
+[32;1mAssetCounts                    : [0m@{Agents=18; Instructions=21; Prompts=21; Skil
+                                 ls=121; Total=181}
+[32;1mDuplicatePairCount             : [0m3
+[32;1mDuplicatePairThresholdBreached : [0mTrue
+[32;1mTypePairCounts                 : [0m{[skills-skills, 3]}
+[32;1mOverlapPairs                   : [0m{@{Signal=HighTokenSimilarity; SimilarityScore
+                                 =0.9524; SharedTokenCount=20; SharedTokens=adv
+                                 isories, blocked, defined, evaluate, evaluatin
+                                 g, fail, follow-up, governance, history, manda
+                                 tory, more, outcomes, pass, recommendations, r
+                                 emediation, scope, singular, standards, tracki
+                                 ng, workspace; AssetAType=skills; AssetAName=a
+                                 udit-skill; AssetAPath=.github/skills/audit-sk
+                                 ill/SKILL.md; AssetBType=skills; AssetBName=au
+                                 dit-agent; AssetBPath=.github/skills/audit-age
+                                 nt/SKILL.md}, @{Signal=HighTokenSimilarity; Si
+                                 milarityScore=0.9091; SharedTokenCount=20; Sha
+                                 redTokens=absorb, adjacent, assessments, asset
+                                 s, belong, bounded, described, evidence-backed
+                                 , execution, narrowly, other, performing, plan
+                                 ning, remain, remediation, reporting, research
+                                 -only, responsibilities, responsibility, speci
+                                 alized; AssetAType=skills; AssetAName=performa
+                                 nce-research; AssetAPath=.github/skills/perfor
+                                 mance-research/SKILL.md; AssetBType=skills; As
+                                 setBName=security-research; AssetBPath=.github
+                                 /skills/security-research/SKILL.md}, @{Signal=
+                                 HighTokenSimilarity; SimilarityScore=0.8824; S
+                                 haredTokenCount=30; SharedTokens=advisories, a
+                                 udits, blocked, dedicated, defined, evaluate, 
+                                 evaluating, exists, fail, follow-up, governanc
+                                 e, history, mandatory, mixed, more, outcomes, 
+                                 pass, recommendations, remediation, scope, sha
+                                 ring, singular, source-aware, sources, special
+                                 ization, standards, storage, tracking, without
+                                 , workspace; AssetAType=skills; AssetAName=aud
+                                 it-instructions; AssetAPath=.github/skills/aud
+                                 it-instructions/SKILL.md; AssetBType=skills; A
+                                 ssetBName=audit-prompts; AssetBPath=.github/sk
+                                 ills/audit-prompts/SKILL.md}}
+
+[33;1mWARNING: Responsibility overlap failed: 3 duplicate pair(s) exceeds threshold 0.[0m
+exit=1
+
