@@ -115,7 +115,7 @@ Produce a severity-ranked findings report and a pass/warning/block release recom
 
 ## Evidence Contract
 
-**Motion and Animation Findings Report** (`__DOCS_ROOT__/changes/<id>/motion-animation-findings.md`):
+**Motion and Animation Findings Report** (`.docs/changes/<id>/motion-animation-findings.md`):
 ```md
 ### Reduced-Motion Compliance
 - [x] Primary surfaces: reduced-motion supported with fallback behavior
@@ -141,17 +141,17 @@ Produce a severity-ranked findings report and a pass/warning/block release recom
 - <FBK-ID>: <finding text> [severity]
 ```
 
-**Animation Coherence Matrix** (`__DOCS_ROOT__/changes/<id>/animation-coherence-matrix.md`):
+**Animation Coherence Matrix** (`.docs/changes/<id>/animation-coherence-matrix.md`):
 ```md
 | Feature | Animation Type | Element | Duration | Easing | Accessibility Support | Status |
 |---|---|---|---|---|---|---|
 | Navigation expand | state-change | sidebar | 200ms | ease-in-out | reduced-motion alt provided | pass |
 ```
 
-**Reduced-Motion Audit Report** (`__DOCS_ROOT__/changes/<id>/reduced-motion-audit.md`):
+**Reduced-Motion Audit Report** (`.docs/changes/<id>/reduced-motion-audit.md`):
 Explicit log of every animated surface and its reduced-motion support status.
 
-**Unified Release Recommendation** (`__DOCS_ROOT__/changes/<id>/ux-quality-gate-recommendation.md`, motion section):
+**Unified Release Recommendation** (`.docs/changes/<id>/ux-quality-gate-recommendation.md`, motion section):
 Motion and Animation: `pass | warning | block`
 
 ## Source Governance Summary

@@ -29,4 +29,4 @@ Use this template when evaluating a source for continued use in skill maintenanc
 - Skills impacted:
 - Required changes:
 - Routed to skills-authoring: Yes or No
-- Routed to skill-review: Yes or No
+- Routed to audit-skill: Yes or No

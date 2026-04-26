@@ -129,7 +129,7 @@ Produce a severity-ranked findings report and a pass/warning/block release recom
 
 ## Evidence Contract
 
-**Responsive Design Findings Report** (`__DOCS_ROOT__/changes/<id>/responsive-design-findings.md`):
+**Responsive Design Findings Report** (`.docs/changes/<id>/responsive-design-findings.md`):
 ```md
 ### Viewport Configuration
 - Meta viewport tag present: yes/no
@@ -164,16 +164,16 @@ Produce a severity-ranked findings report and a pass/warning/block release recom
 - <RD-ID>: <finding text> [severity]
 ```
 
-**Breakpoint and Layout Reflow Matrix** (`__DOCS_ROOT__/changes/<id>/breakpoint-reflow-matrix.md`):
+**Breakpoint and Layout Reflow Matrix** (`.docs/changes/<id>/breakpoint-reflow-matrix.md`):
 Detailed mapping of each breakpoint, layout type, and content reordering.
 
-**Touch-Target Audit Report** (`__DOCS_ROOT__/changes/<id>/touch-target-audit.md`):
+**Touch-Target Audit Report** (`.docs/changes/<id>/touch-target-audit.md`):
 Complete inventory of interactive elements and their sizes per device class.
 
-**Multi-Device Test Matrix** (`__DOCS_ROOT__/changes/<id>/multidevice-test-matrix.md`):
+**Multi-Device Test Matrix** (`.docs/changes/<id>/multidevice-test-matrix.md`):
 Test results for each device/OS/viewport combination.
 
-**Unified Release Recommendation** (`__DOCS_ROOT__/changes/<id>/ux-quality-gate-recommendation.md`, responsive section):
+**Unified Release Recommendation** (`.docs/changes/<id>/ux-quality-gate-recommendation.md`, responsive section):
 Responsive Design: `pass | warning | block`
 
 ## Source Governance Summary

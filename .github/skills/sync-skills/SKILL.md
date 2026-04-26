@@ -57,7 +57,7 @@ Optional inputs:
 4. Record concrete deltas that affect workspace skills.
 5. Prepare implementation-ready change instructions for impacted skill files.
 6. Validate the updated skill files against this skill's quality and self-containment rules.
-7. Publish a short maintenance summary in `__DOCS_ROOT__/changes/skill/maintenance/` with the date and impacted skills.
+7. Publish a short maintenance summary in `.docs/changes/skill/maintenance/` with the date and impacted skills.
 
 ## Evaluation Criteria
 

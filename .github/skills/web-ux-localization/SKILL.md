@@ -71,9 +71,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `__DOCS_ROOT__/changes/<workstream-id>/localization-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/localization-evidence-matrix.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
+- `.docs/changes/<workstream-id>/localization-findings.md`
+- `.docs/changes/<workstream-id>/localization-evidence-matrix.md`
+- `.docs/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 

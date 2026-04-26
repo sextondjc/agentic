@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to `__DOCS_ROOT__/changes/instruction/reviews/<instruction-name>/review.md`
+- Save this file to `.docs/changes/instruction/reviews/<instruction-name>/review.md`
 
 ## Summary Outcome Grid
 

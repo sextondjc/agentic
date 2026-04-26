@@ -1,6 +1,6 @@
 ---
 name: prune-doc-artifacts
-description: Use when auditing __DOCS_ROOT__ planning and execution artifacts to identify stale, superseded, or generated leftovers and produce safe archive or removal candidates.
+description: Use when auditing .docs planning and execution artifacts to identify stale, superseded, or generated leftovers and produce safe archive or removal candidates.
 ---
 
 # Prune Doc Artifacts
@@ -26,7 +26,7 @@ Invoke this skill when any of the following is true:
 
 Required:
 - Workspace root path.
-- Optional focus path (default: `__DOCS_ROOT__`).
+- Optional focus path (default: `.docs`).
 
 Optional:
 - Include legacy review directories based on rename aliases (default: true).

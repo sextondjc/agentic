@@ -79,7 +79,7 @@
       "Name": "link-graph",
       "ExitCode": 1,
       "Passed": false,
-      "Output": "{\r\n  \"CheckedFiles\": 545,\r\n  \"CheckedLinks\": 1469,\r\n  \"BrokenLinks\": 2,\r\n  \"Issues\": [\r\n    {\r\n      \"Source\": \"C:\\\\Projects\\\\agentic\\\\__DOCS_ROOT__\\\\plans\\\\governance-tightening-plan.md\",\r\n      \"Target\": \"./../skills/governance-validate-customization/SKILL.md\",\r\n      \"Reason\": \"Missing or malformed target file path\"\r\n    },\r\n    {\r\n      \"Source\": \"C:\\\\Projects\\\\agentic\\\\__DOCS_ROOT__\\\\plans\\\\governance-tightening-plan.md\",\r\n      \"Target\": \"./../skills/governance-validate-customization/SKILL.md\",\r\n      \"Reason\": \"Missing or malformed target file path\"\r\n    }\r\n  ]\r\n}"
+      "Output": "{\r\n  \"CheckedFiles\": 545,\r\n  \"CheckedLinks\": 1469,\r\n  \"BrokenLinks\": 2,\r\n  \"Issues\": [\r\n    {\r\n      \"Source\": \"C:\\\\Projects\\\\agentic\\\\.docs\\\\plans\\\\governance-tightening-plan.md\",\r\n      \"Target\": \"./../skills/governance-validate-customization/SKILL.md\",\r\n      \"Reason\": \"Missing or malformed target file path\"\r\n    },\r\n    {\r\n      \"Source\": \"C:\\\\Projects\\\\agentic\\\\.docs\\\\plans\\\\governance-tightening-plan.md\",\r\n      \"Target\": \"./../skills/governance-validate-customization/SKILL.md\",\r\n      \"Reason\": \"Missing or malformed target file path\"\r\n    }\r\n  ]\r\n}"
     },
     {
       "Name": "artifact-contract",
@@ -130,4 +130,5 @@
     "AdvisoryFailCount": 2
   }
 }
+
 

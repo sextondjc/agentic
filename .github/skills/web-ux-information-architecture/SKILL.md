@@ -73,9 +73,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `__DOCS_ROOT__/changes/<workstream-id>/ia-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/ia-findability-matrix.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
+- `.docs/changes/<workstream-id>/ia-findings.md`
+- `.docs/changes/<workstream-id>/ia-findability-matrix.md`
+- `.docs/changes/<workstream-id>/release-recommendation.md`
 
 ## L4 Coverage Matrix
 

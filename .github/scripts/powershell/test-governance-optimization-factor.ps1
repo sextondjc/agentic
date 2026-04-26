@@ -9,9 +9,9 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $checks = @(
-    @{ Name = 'skill-review brevity standard'; Path = '.github/skills/skill-review/SKILL.md'; Pattern = 'SKR-S5\s*\|\s*Brevity' },
-    @{ Name = 'governance-validate-customization instruction brevity'; Path = '.github/skills/governance-validate-customization/SKILL.md'; Pattern = 'INR-S4\s*\|\s*Brevity' },
-    @{ Name = 'governance-validate-customization agent brevity'; Path = '.github/skills/governance-validate-customization/SKILL.md'; Pattern = 'AGR-S3\s*\|\s*Brevity' },
+    @{ Name = 'audit-skill brevity standard'; Path = '.github/skills/audit-skill/SKILL.md'; Pattern = 'SKR-S5\s*\|\s*Brevity' },
+    @{ Name = 'audit-instructions instruction brevity'; Path = '.github/skills/audit-instructions/SKILL.md'; Pattern = 'INR-S4\s*\|\s*Brevity' },
+    @{ Name = 'audit-agent conflict standard'; Path = '.github/skills/audit-agent/SKILL.md'; Pattern = 'AGR-S3\s*\|\s*No conflict' },
     @{ Name = 'optimization skill exists'; Path = '.github/skills/optimize-customizations/SKILL.md'; Pattern = '^---' },
     @{ Name = 'skill discovery registration'; Path = '.github/skills/skill-discovery-index.md'; Pattern = '\|\s*optimize-customizations\s*\|' },
     @{ Name = 'copilot skills discovery pointer'; Path = '.github/copilot-instructions.md'; Pattern = '\[skill-discovery-index\.md\]\(\./skills/skill-discovery-index\.md\)' },

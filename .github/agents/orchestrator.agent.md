@@ -73,6 +73,7 @@ Routing behavior in this agent must align with policy authority in [governance-l
 | ADR authoring | `adr-generator` skill with `architecture-designer` | Write ADRs in `<documentation-root>/adr` | Act as the main architecture decision-maker |
 | Product and PRD work | `prd-generator` skill | Create PRDs and requirements artifacts | Perform engineering implementation |
 | PowerShell script creation or catalog management | `powershell-script-library` skill | Check catalog first for reuse, deduplication; validate script consistency with `powershell-reviewer` | Write scripts without consulting the catalog or deduplication registry |
+| Web application icon creation or refresh | `generate-web-icons` skill with `web-frontend-engineer` | Produce favicon, touch, and manifest icon assets aligned to existing design language and framework integration | Redefine brand direction or execute unrelated frontend feature work |
 | Multi-skill composition under self-containment policy | `compose-skills` skill | Build explicit composition contract, phase ownership, and output coverage before execution | Allow implicit capability selection or direct skill-to-skill delegation |
 
 ## Routing Rules

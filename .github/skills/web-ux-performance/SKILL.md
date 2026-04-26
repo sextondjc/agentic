@@ -100,10 +100,10 @@ Abandonment-risk bands:
 
 Capture artifacts under one change scope path:
 
-- `__DOCS_ROOT__/changes/<workstream-id>/ux-performance-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/performance-evidence-matrix.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/abandonment-risk-rubric.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
+- `.docs/changes/<workstream-id>/ux-performance-findings.md`
+- `.docs/changes/<workstream-id>/performance-evidence-matrix.md`
+- `.docs/changes/<workstream-id>/abandonment-risk-rubric.md`
+- `.docs/changes/<workstream-id>/release-recommendation.md`
 
 ## L4 Coverage Matrix
 

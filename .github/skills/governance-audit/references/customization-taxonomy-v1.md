@@ -117,7 +117,7 @@ The accepted taxonomy is maintained and applied through these governing assets:
 | perf-benchmark | review | test | skill | benchmark-workflow |
 | performance-research | review | test | skill | performance-analyst |
 | security-research | review | security | skill | security-analyst |
-| skill-review | review | governance | skill | skill-auditor |
+| audit-skill | review | governance | skill | skill-auditor |
 | audit-agent | review | governance | skill | agent-auditor |
 | audit-instructions | review | governance | skill | instruction-auditor |
 | audit-prompts | review | governance | skill | prompt-auditor |
@@ -151,8 +151,8 @@ The following topics are intentionally deferred to a separate v2 plan:
 
 ## Traceability
 
-- Plan: [customization-taxonomy-promotion-plan.md](./../../../../__DOCS_ROOT__/plans/customization-taxonomy-promotion-plan.md)
-- ADR: [customization-taxonomy-promotion-boundary.md](./../../../../__DOCS_ROOT__/adr/customization-taxonomy-promotion-boundary.md)
-- Changes: [customization-taxonomy-promotion-changes.md](./../../../../__DOCS_ROOT__/changes/customization-taxonomy-promotion-changes.md)
+- Plan: `.docs/plans/customization-taxonomy-promotion-plan.md`
+- ADR: `.docs/adr/customization-taxonomy-promotion-boundary.md`
+- Changes: `.docs/changes/customization-taxonomy-promotion-changes.md`
 
 

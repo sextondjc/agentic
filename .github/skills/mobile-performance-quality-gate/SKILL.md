@@ -98,10 +98,10 @@ Risk bands:
 
 ## Evidence Contract
 
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-performance-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-performance-evidence-matrix.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-performance-threshold-rubric.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-performance-release-recommendation.md`
+- `.docs/changes/<workstream-id>/mobile-performance-findings.md`
+- `.docs/changes/<workstream-id>/mobile-performance-evidence-matrix.md`
+- `.docs/changes/<workstream-id>/mobile-performance-threshold-rubric.md`
+- `.docs/changes/<workstream-id>/mobile-performance-release-recommendation.md`
 
 ## L4 Coverage Matrix
 

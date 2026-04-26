@@ -72,9 +72,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `__DOCS_ROOT__/changes/<workstream-id>/privacy-consent-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/privacy-consent-matrix.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
+- `.docs/changes/<workstream-id>/privacy-consent-findings.md`
+- `.docs/changes/<workstream-id>/privacy-consent-matrix.md`
+- `.docs/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 

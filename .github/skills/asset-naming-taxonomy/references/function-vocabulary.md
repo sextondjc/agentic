@@ -56,7 +56,7 @@ Verbs and noun-form equivalents that signal Review intent.
 | Verb / Noun-form | Meaning in context | Example usage |
 |---|---|---|
 | `audit` | Comprehensive systematic assessment of governance or structure | `governance-audit`, `audit-powershell` |
-| `review` | Targeted evaluation of one artifact or set against standards | `skill-review`, `request-code-review`, `remediate-review` |
+| `review` | Targeted evaluation of one artifact or set against standards | `audit-skill`, `request-code-review`, `remediate-review` |
 | `validate` | Confirm an artifact conforms to a schema or contract | `syrx-validation` |
 | `assess` | Form a judgment on quality, risk, or fitness | _(use as modifier)_ |
 | `benchmark` | Measure and compare performance metrics | `perf-benchmark` |

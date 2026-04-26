@@ -13,3 +13,13 @@
 | File | Title | Category | Summary |
 |---|---|---|---|
 | skill-discovery-index.md | Skills Discovery Index | index | Canonical skill lookup table with lane mappings and usage guidance. |
+
+## Inventory Snapshot
+
+| Metric | Count |
+|---|---:|
+| Skill folders (`.github/skills/*`) | 146 |
+| Skill definitions (`**/SKILL.md`) | 146 |
+| Planning lane skills | 33 |
+| Execution lane skills | 78 |
+| Review lane skills | 35 |

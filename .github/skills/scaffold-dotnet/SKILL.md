@@ -19,7 +19,7 @@ Use this skill to scaffold a baseline .NET workspace layout in a target reposito
 
 ```text
 .config
-__DOCS_ROOT__
+.docs
 .github
 .scripts
 src

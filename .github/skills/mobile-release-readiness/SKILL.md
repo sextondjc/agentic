@@ -93,10 +93,10 @@ Out of scope:
 
 ## Evidence Contract
 
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-release-gate-checklist.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-release-evidence-bundle.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-store-readiness-matrix.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-release-decision.md`
+- `.docs/changes/<workstream-id>/mobile-release-gate-checklist.md`
+- `.docs/changes/<workstream-id>/mobile-release-evidence-bundle.md`
+- `.docs/changes/<workstream-id>/mobile-store-readiness-matrix.md`
+- `.docs/changes/<workstream-id>/mobile-release-decision.md`
 
 ## L4 Coverage Matrix
 

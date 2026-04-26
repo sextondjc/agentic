@@ -7,27 +7,29 @@ description: Use when xUnit guidance must be grounded in authoritative, current 
 
 ## Specialization
 
-Use this skill to establish and maintain a high-confidence xUnit source baseline before authoring or revising reusable testing guidance.
+Use this skill to curate xUnit testing references for deterministic test-design policy, runner behavior, fixture lifecycle patterns, and v2/v3 migration readiness.
 
-This skill is specialized for source governance and content synthesis readiness. It does not implement test code.
+This skill curates testing-governance sources only. It does not author production tests.
 
 ## Objective
 
-Produce a source-governed xUnit baseline with explicit relevance, freshness, and actionability decisions that can safely drive cross-project skill outputs.
+Produce an xUnit evidence baseline that supports stable guidance for Facts/Theories, fixtures, async assertions, traits, and cross-runner consistency.
 
 ## Trigger Conditions
 
-- xUnit guidance needs to be authored, refreshed, or audited.
-- Existing testing guidance may be stale or inconsistent across projects.
-- A compendium update requires authoritative provenance before skill edits.
+- xUnit guidance is needed for test authoring standards, runner behavior, or fixture lifecycle decisions.
+- A test-quality gate needs refreshed references for Theory data stability, async/cancellation testing, or Moq collaboration boundaries.
+- xUnit v2/v3 compatibility questions require source-backed migration position.
+- CI test-selection or trait taxonomy guidance needs authoritative grounding.
 
 ## Scope Boundaries
 
 In scope:
 
-- Source selection, authority checks, and freshness checks.
-- Mapping source content into actionable guidance deltas.
+- Source selection, authority checks, and freshness checks for xUnit-related materials.
+- Mapping source content into actionable xUnit guidance deltas.
 - Rejected-source recording with explicit reason codes.
+- Version-position capture for xUnit v2/v3 and runner compatibility constraints.
 
 Out of scope:
 
@@ -45,9 +47,10 @@ Out of scope:
 ## Required Outputs
 
 - Updated source catalog with authority, freshness, relevance, and actionability fields.
-- Topic-to-source coverage matrix.
+- xUnit topic-to-source coverage matrix.
 - Rejected-source table with deterministic reason codes.
-- Prioritized guidance delta list for downstream authoring.
+- Prioritized xUnit guidance deltas grouped by: design patterns, fixture lifecycle, async behavior, runner/CI, and migration readiness.
+- Runner and version compatibility notes for IDE/CLI/CI execution contexts.
 
 ## Deterministic Workflow
 
@@ -55,9 +58,9 @@ Out of scope:
 2. Collect candidate sources from first-party xUnit and Microsoft documentation.
 3. Score each source for authority, freshness, relevance, and actionability.
 4. Reject weak sources and record reason codes.
-5. Build a topic-to-source coverage matrix to expose gaps.
-6. Produce prioritized deltas that downstream skills can consume.
-7. Publish closure status and unresolved source gaps.
+5. Build an xUnit topic-to-source coverage matrix to expose gaps.
+6. Produce prioritized xUnit deltas by testing dimension (design, fixture, async, runner, migration).
+7. Publish closure status, unresolved gaps, and runner/version compatibility notes.
 
 ## Source Decision Rules
 

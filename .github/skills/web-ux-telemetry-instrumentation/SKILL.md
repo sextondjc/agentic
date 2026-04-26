@@ -71,9 +71,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `__DOCS_ROOT__/changes/<workstream-id>/telemetry-quality-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/telemetry-coverage-matrix.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
+- `.docs/changes/<workstream-id>/telemetry-quality-findings.md`
+- `.docs/changes/<workstream-id>/telemetry-coverage-matrix.md`
+- `.docs/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 

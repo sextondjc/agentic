@@ -87,10 +87,10 @@ Out of scope:
 
 ## Evidence Contract
 
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-offline-resilience-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-offline-resilience-matrix.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-offline-remediation-backlog.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-offline-release-recommendation.md`
+- `.docs/changes/<workstream-id>/mobile-offline-resilience-findings.md`
+- `.docs/changes/<workstream-id>/mobile-offline-resilience-matrix.md`
+- `.docs/changes/<workstream-id>/mobile-offline-remediation-backlog.md`
+- `.docs/changes/<workstream-id>/mobile-offline-release-recommendation.md`
 
 ## L4 Coverage Matrix
 

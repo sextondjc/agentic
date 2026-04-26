@@ -10,7 +10,7 @@
 
 ## Storage
 
-- Save this file to __DOCS_ROOT__/changes/agent/reviews/<agent-name>/review.md
+- Save this file to `.docs/changes/agent/reviews/<agent-name>/review.md`
 
 ## Summary Outcome Grid
 

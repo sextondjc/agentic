@@ -76,11 +76,11 @@ Present the draft and explicitly ask for approval before proceeding. Only after 
 
 ## Output
 
-Save the PRD as `__DOCS_ROOT__/specs/<domain>/<workstream>/prd.md` by default.
+Save the PRD as `.docs/specs/<domain>/<workstream>/prd.md` by default.
 If the user does not specify a location, propose this granular path and confirm before saving.
 
 Folder policy:
-- Use at least two granular levels under `__DOCS_ROOT__/specs/` (`<domain>/<workstream>`).
+- Use at least two granular levels under `.docs/specs/` (`<domain>/<workstream>`).
 - Keep folder names lowercase and one word per level.
 - Do not save PRDs directly at repository root unless the user explicitly requests it.
 

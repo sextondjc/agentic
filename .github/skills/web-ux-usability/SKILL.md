@@ -93,10 +93,10 @@ Out of scope:
 
 Capture artifacts under one change scope path:
 
-- `__DOCS_ROOT__/changes/<workstream-id>/usability-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/task-evidence-matrix.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/remediation-backlog.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
+- `.docs/changes/<workstream-id>/usability-findings.md`
+- `.docs/changes/<workstream-id>/task-evidence-matrix.md`
+- `.docs/changes/<workstream-id>/remediation-backlog.md`
+- `.docs/changes/<workstream-id>/release-recommendation.md`
 
 ## L4 Coverage Matrix
 

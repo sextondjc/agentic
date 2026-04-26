@@ -71,9 +71,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `__DOCS_ROOT__/changes/<workstream-id>/onboarding-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/onboarding-matrix.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
+- `.docs/changes/<workstream-id>/onboarding-findings.md`
+- `.docs/changes/<workstream-id>/onboarding-matrix.md`
+- `.docs/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 

@@ -141,7 +141,7 @@ Produce a severity-ranked findings report and a pass/warning/block release recom
 
 ## Evidence Contract
 
-**Notification and Alert Findings Report** (`__DOCS_ROOT__/changes/<id>/notification-alert-findings.md`):
+**Notification and Alert Findings Report** (`.docs/changes/<id>/notification-alert-findings.md`):
 ```md
 ### Notification Frequency Audit
 | Type | Trigger | Frequency Limit | Test Result | Status |
@@ -178,16 +178,16 @@ Produce a severity-ranked findings report and a pass/warning/block release recom
 - <NA-ID>: <finding text> [severity]
 ```
 
-**Notification Frequency and Timing Matrix** (`__DOCS_ROOT__/changes/<id>/notification-frequency-timing-matrix.md`):
+**Notification Frequency and Timing Matrix** (`.docs/changes/<id>/notification-frequency-timing-matrix.md`):
 Complete inventory of notification types, triggers, frequency limits, and timing behavior.
 
-**Dismissal and Persistence Audit Report** (`__DOCS_ROOT__/changes/<id>/dismissal-persistence-audit.md`):
+**Dismissal and Persistence Audit Report** (`.docs/changes/<id>/dismissal-persistence-audit.md`):
 Test results for dismissal UX and cross-session persistence.
 
-**User Control Inventory** (`__DOCS_ROOT__/changes/<id>/user-control-inventory.md`):
+**User Control Inventory** (`.docs/changes/<id>/user-control-inventory.md`):
 Mapping of user-facing notification preferences and control options.
 
-**Unified Release Recommendation** (`__DOCS_ROOT__/changes/<id>/ux-quality-gate-recommendation.md`, notification section):
+**Unified Release Recommendation** (`.docs/changes/<id>/ux-quality-gate-recommendation.md`, notification section):
 Notification and Alert Strategy: `pass | warning | block`
 
 ## Source Governance Summary

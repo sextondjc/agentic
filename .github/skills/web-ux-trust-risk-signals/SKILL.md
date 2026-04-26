@@ -72,9 +72,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `__DOCS_ROOT__/changes/<workstream-id>/trust-risk-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/trust-risk-evidence-matrix.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
+- `.docs/changes/<workstream-id>/trust-risk-findings.md`
+- `.docs/changes/<workstream-id>/trust-risk-evidence-matrix.md`
+- `.docs/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 

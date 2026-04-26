@@ -73,9 +73,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `__DOCS_ROOT__/changes/<workstream-id>/content-clarity-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/content-clarity-checklist.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
+- `.docs/changes/<workstream-id>/content-clarity-findings.md`
+- `.docs/changes/<workstream-id>/content-clarity-checklist.md`
+- `.docs/changes/<workstream-id>/release-recommendation.md`
 
 ## L4 Coverage Matrix
 

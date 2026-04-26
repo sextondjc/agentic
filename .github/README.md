@@ -23,7 +23,7 @@ These counts are current for the repository state as of this documentation refre
 | Agents (`*.agent.md`) | 18 |
 | Instructions (`*.instructions.md`) | 21 |
 | Prompts (`*.prompt.md`) | 21 |
-| Skills (`**/SKILL.md`) | 145 |
+| Skills (`**/SKILL.md`) | 146 |
 | PowerShell scripts (`*.ps1`) | 28 |
 | GitHub workflows (`*.yml`) | 2 |
 

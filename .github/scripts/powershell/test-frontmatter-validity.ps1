@@ -106,12 +106,12 @@ foreach ($f in $files) {
   if ($AssetType -eq 'instructions') {
     $applyTo = Get-FrontmatterValue -Lines $fm -Key 'applyTo'
     if ($applyTo -eq '**' -or $applyTo -eq '**/*') {
-      # Warn on global catch-all only — not an automatic failure, but flagged for review
-      Write-Warning "$($f.Name): 'applyTo' is set to global '$applyTo' — confirm this is intentional"
+      # Warn on global catch-all only - not an automatic failure, but flagged for review
+      Write-Warning "$($f.Name): 'applyTo' is set to global '$applyTo' - confirm this is intentional"
     }
   }
 
-  # Detect unknown top-level keys (advisory — keys beyond the required set are flagged)
+  # Detect unknown top-level keys (advisory - keys beyond the required set are flagged)
   $allowedKeys = $frontmatterContract.AllowedKeys
   foreach ($line in ($fm | Where-Object { $_ -match '^\w[\w-]*\s*:' })) {
     $key = ($line -split ':')[0].Trim()

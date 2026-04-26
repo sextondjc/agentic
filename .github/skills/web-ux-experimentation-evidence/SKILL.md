@@ -64,9 +64,9 @@ Out of scope:
 
 ## Evidence Contract
 
-- `__DOCS_ROOT__/changes/<workstream-id>/experiment-quality-assessment.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/experiment-decision-log.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/release-recommendation.md`
+- `.docs/changes/<workstream-id>/experiment-quality-assessment.md`
+- `.docs/changes/<workstream-id>/experiment-decision-log.md`
+- `.docs/changes/<workstream-id>/release-recommendation.md`
 
 ## Source Governance Summary
 

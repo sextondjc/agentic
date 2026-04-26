@@ -12,7 +12,7 @@
 ### YYYY-MM-DD - Review <id>
 
 - Outcome: Pass | Pass With Advisories | Fail | Blocked
-- Reviewer: skill-review
+- Reviewer: audit-skill
 - Source Report: <path-to-review-report>
 
 #### Findings

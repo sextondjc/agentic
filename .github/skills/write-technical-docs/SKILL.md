@@ -26,7 +26,7 @@ This skill is documentation-first and evidence-first:
 ## Mandatory Inputs
 
 - Documentation scope (default: entire workspace).
-- Documentation root output path (default: `/__DOCS_ROOT__/components/<domain>/`).
+- Documentation root output path (default: `/.docs/components/<domain>/`).
 - Preferred audience (default: developers and maintainers).
 - Language/ecosystem hints when available (for API idioms and examples).
 
@@ -44,7 +44,7 @@ When scope is workspace-wide, split by top-level directory and run discovery in 
 
 ## Output Contract
 
-Produce a technical reference documentation set under the selected root (default `/__DOCS_ROOT__/components/<domain>/`) with this baseline:
+Produce a technical reference documentation set under the selected root (default `/.docs/components/<domain>/`) with this baseline:
 
 - `index.md` - repository documentation home page.
 - `code-structure.md` - source tree mirror and navigation map.
@@ -57,7 +57,7 @@ Folder granularity rules:
 - Use at least three levels for generated docs when scope is non-trivial: `<domain>/<subdomain>/<artifact-type>/`.
 - Keep folder names lowercase and one word per level.
 - Avoid flat dumps of many files into a single folder.
-- Do not place module documentation files directly in `__DOCS_ROOT__/components/` unless the user explicitly requests a flat structure.
+- Do not place module documentation files directly in `.docs/components/` unless the user explicitly requests a flat structure.
 
 When creating landing pages:
 
@@ -115,7 +115,7 @@ Usage:
 ./.github/skills/write-technical-docs/Get-DocumentationMetrics.ps1
 
 # Enforce a minimum score and export metrics as JSON
-./.github/skills/write-technical-docs/Get-DocumentationMetrics.ps1 -MinimumScore 85 -EnforceMinimum -OutputJsonPath ./__DOCS_ROOT__/reports/doc-metrics.json
+./.github/skills/write-technical-docs/Get-DocumentationMetrics.ps1 -MinimumScore 85 -EnforceMinimum -OutputJsonPath ./.docs/reports/doc-metrics.json
 ```
 
 The CI/CD pipeline runs this script with `-EnforceMinimum` on every push and pull request. Documentation work is blocked from merging if the composite score falls below the configured threshold.

@@ -95,10 +95,10 @@ Out of scope:
 
 Capture artifacts under one change scope path:
 
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-accessibility-findings.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-accessibility-checklist.md`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-accessibility-scan-results.json`
-- `__DOCS_ROOT__/changes/<workstream-id>/mobile-accessibility-release-recommendation.md`
+- `.docs/changes/<workstream-id>/mobile-accessibility-findings.md`
+- `.docs/changes/<workstream-id>/mobile-accessibility-checklist.md`
+- `.docs/changes/<workstream-id>/mobile-accessibility-scan-results.json`
+- `.docs/changes/<workstream-id>/mobile-accessibility-release-recommendation.md`
 
 ## L4 Coverage Matrix
 

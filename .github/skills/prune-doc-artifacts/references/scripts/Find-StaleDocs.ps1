@@ -2,7 +2,7 @@
 param(
     [Parameter()]
     [ValidateNotNullOrEmpty()]
-    [string]$DocsRoot = '__DOCS_ROOT__',
+    [string]$DocsRoot = '.docs',
 
     [Parameter()]
     [bool]$IncludeRefSnapshots = $true,

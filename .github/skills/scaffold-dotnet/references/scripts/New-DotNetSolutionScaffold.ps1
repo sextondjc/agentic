@@ -14,7 +14,7 @@ $resolvedRoot = (Resolve-Path -LiteralPath $WorkspaceRoot).Path
 
 $directories = @(
     '.config',
-    '__DOCS_ROOT__',
+    '.docs',
     '.github',
     '.scripts',
     'src',

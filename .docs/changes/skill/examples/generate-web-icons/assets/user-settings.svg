@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">User settings icon</title>
+  <desc id="desc">A user avatar with a small settings gear badge</desc>
+
+  <g stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="25" cy="20" r="9" />
+    <path d="M8 47c2.5-9 11-14 17-14s14.5 5 17 14" />
+
+    <circle cx="47" cy="42" r="8" />
+    <circle cx="47" cy="42" r="3" />
+
+    <path d="M47 31v3" />
+    <path d="M47 50v3" />
+    <path d="M36 42h3" />
+    <path d="M55 42h3" />
+    <path d="M39.9 34.9l2.1 2.1" />
+    <path d="M52 47l2.1 2.1" />
+    <path d="M39.9 49.1l2.1-2.1" />
+    <path d="M52 37l2.1-2.1" />
+  </g>
+</svg>
