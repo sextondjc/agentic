@@ -77,10 +77,10 @@ Planning output should prefer markdown grids over narrative text.
 
 Maintain lifecycle mappings in:
 
-- [agent-lifecycle-catalog.md](./../../../agent-lifecycle-catalog.md)
-- [instruction-lifecycle-catalog.md](./../../../instructions/instruction-lifecycle-catalog.md)
-- [prompt-lifecycle-catalog.md](./../../../prompts/prompt-lifecycle-catalog.md)
-- [skill-discovery-index.md](./../../../skills/skill-discovery-index.md)
+- [agents-discovery-index.md](./../../../catalogs/agents-discovery-index.md)
+- [instructions-discovery-index.md](./../../../catalogs/instructions-discovery-index.md)
+- [prompts-discovery-index.md](./../../../catalogs/prompts-discovery-index.md)
+- [skills-discovery-index.md](./../../../catalogs/skills-discovery-index.md)
 
 Each catalog entry should include at least `Primary Lane`, `Secondary Lane`, and `Rationale`.
 

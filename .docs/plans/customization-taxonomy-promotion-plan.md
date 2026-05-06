@@ -129,10 +129,10 @@
 **Files:**
 - Modify: [customization-taxonomy-promotion-plan.md](./customization-taxonomy-promotion-plan.md)
 - Review: [customization-taxonomy-v1.md](./../../.github/skills/governance-audit/references/customization-taxonomy-v1.md)
-- Review: [agent-lifecycle-catalog.md](./../../.github/agent-lifecycle-catalog.md)
-- Review: [instruction-lifecycle-catalog.md](./../../.github/instructions/instruction-lifecycle-catalog.md)
-- Review: [prompt-lifecycle-catalog.md](./../../.github/prompts/prompt-lifecycle-catalog.md)
-- Review: [skill-discovery-index.md](./../../.github/skills/skill-discovery-index.md)
+- Review: [agents-discovery-index.md](./../../.github/catalogs/agents-discovery-index.md)
+- Review: [instructions-discovery-index.md](./../../.github/catalogs/instructions-discovery-index.md)
+- Review: [prompts-discovery-index.md](./../../.github/catalogs/prompts-discovery-index.md)
+- Review: [skills-discovery-index.md](./../../.github/catalogs/skills-discovery-index.md)
 
 - [ ] Confirm that v1 promotion means reference approval, not README catalog schema migration.
 - [ ] Confirm whether `delivery` remains distinct from `execution` for v1.
@@ -148,11 +148,11 @@
 - Modify: [customization-taxonomy-v1.md](./../../.github/skills/governance-audit/references/customization-taxonomy-v1.md)
 - Create: [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md)
 - Review: [rename-history.md](./../changes/customization/renames/rename-history.md)
-- Review: [agent-lifecycle-catalog.md](./../../.github/agent-lifecycle-catalog.md)
-- Review: [instruction-lifecycle-catalog.md](./../../.github/instructions/instruction-lifecycle-catalog.md)
-- Review: [skill-discovery-index.md](./../../.github/skills/skill-discovery-index.md)
+- Review: [agents-discovery-index.md](./../../.github/catalogs/agents-discovery-index.md)
+- Review: [instructions-discovery-index.md](./../../.github/catalogs/instructions-discovery-index.md)
+- Review: [skills-discovery-index.md](./../../.github/catalogs/skills-discovery-index.md)
 - Review: [copilot-instructions.md](./../../.github/copilot-instructions.md)
-- Review: [prompt-lifecycle-catalog.md](./../../.github/prompts/prompt-lifecycle-catalog.md)
+- Review: [prompts-discovery-index.md](./../../.github/catalogs/prompts-discovery-index.md)
 
 - [ ] Create the execution change log with `PLAN-20260402-001`, planned workstream mapping, and deviation section.
 - [ ] Replace stale asset names from pre-rename state with current canonical names.

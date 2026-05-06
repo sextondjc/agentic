@@ -1,6 +1,6 @@
-# Prompts Lifecycle Catalog
+# Prompts Discovery Index
 
-This folder contains reusable `.prompt.md` templates for repeatable governance and delivery workflows. This catalog assigns each prompt to a primary lifecycle lane and shows the corresponding file in this folder.
+This discovery index covers reusable `.prompt.md` templates for repeatable governance and delivery workflows. It assigns each prompt to a primary lifecycle lane and shows the corresponding file in `.github/prompts/`.
 
 ## Prompt Mapping
 

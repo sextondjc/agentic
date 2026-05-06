@@ -71,10 +71,10 @@
 
 | Failure ID | Type | Severity | Root Cause | Owner | Target |
 |---|---|---|---|---|---|
-| F-2026-001 | Skill Registration | **CRITICAL** | 6 capacitor skills unregistered in skill-discovery-index.md | Skills Owner | 2026-05-10 |
+| F-2026-001 | Skill Registration | **CRITICAL** | 6 capacitor skills unregistered in skills-discovery-index.md | Skills Owner | 2026-05-10 |
 | F-2026-002 | Skill Description | **HIGH** | `orchestrate-capacitor` index description mismatches SKILL.md (9 vs 19 domains) | Skills Owner | 2026-05-10 |
 | F-2026-003 | Agent Description | **HIGH** | `csharp-engineer` description lacks invocation conditions | Skills Owner | 2026-05-10 |
-| F-2026-004 | Index Contradiction | **HIGH** | `skill-discovery-index.md` `orchestrate-capacitor` entry contradicts SKILL.md (OPR-M3) | Skills Owner | 2026-05-10 |
+| F-2026-004 | Index Contradiction | **HIGH** | `skills-discovery-index.md` `orchestrate-capacitor` entry contradicts SKILL.md (OPR-M3) | Skills Owner | 2026-05-10 |
 | F-2026-005 | Agent Determinism | **HIGH** | `csharp-engineer` description fails determinism check (OPR-M2) | Skills Owner | 2026-05-10 |
 
 All 5 failures have a common structural cause: assets were added or modified without corresponding catalog/index updates. Enforcement of the update-in-same-change rule would prevent recurrence.
@@ -99,7 +99,7 @@ Key insight: The workspace grew by 6 skills between audits, but the index was no
 
 | Overlap Area | Involved Assets | Severity | Action |
 |---|---|---|---|
-| `orchestrate-capacitor` description drift | skill-discovery-index.md + orchestrate-capacitor/SKILL.md | HIGH | Fix index; verify SKILL.md is authoritative |
+| `orchestrate-capacitor` description drift | skills-discovery-index.md + orchestrate-capacitor/SKILL.md | HIGH | Fix index; verify SKILL.md is authoritative |
 | `csharp-engineer` routing ambiguity | csharp-engineer.agent.md + orchestrator.agent.md | HIGH | Fix csharp-engineer description; no change to orchestrator |
 | `review-project` / `review-technical-docs` trigger overlap | review-project.prompt.md + review-technical-docs.prompt.md | MEDIUM | Add explicit disambiguation clause to both descriptions |
 | Global `applyTo: '**'` instruction scope | governance-release + request-economy + secure-coding | LOW | Monitor; rationale documented in each file |
@@ -123,7 +123,7 @@ No removal candidates. No empty files remain.
 
 | Rank | Priority | Recommendation | Owner | Target |
 |---|---:|---|---|---|
-| 1 | CRITICAL | Register 6 unregistered capacitor skills in skill-discovery-index.md | Skills Owner | 2026-05-10 |
+| 1 | CRITICAL | Register 6 unregistered capacitor skills in skills-discovery-index.md | Skills Owner | 2026-05-10 |
 | 2 | HIGH | Update `orchestrate-capacitor` discovery description to list all 19 sub-domains | Skills Owner | 2026-05-10 |
 | 3 | HIGH | Replace `csharp-engineer` description with concrete invocation conditions | Skills Owner | 2026-05-10 |
 | 4 | HIGH | Enforce update-in-same-change rule for all future skill additions | Governance Owner | 2026-05-10 |

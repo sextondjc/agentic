@@ -20,8 +20,8 @@ The workspace has **regressed** from a PASSED baseline (2026-04-18, 0 MUST failu
 
 | # | Severity | Finding | Asset | Action |
 |---|---|---|---|---|
-| 1 | **CRITICAL** | 6 capacitor skills on disk but unregistered in skill-discovery-index.md — undiscoverable by agents and prompts | `skill-discovery-index.md` | Register all 6 immediately |
-| 2 | **HIGH** | `orchestrate-capacitor` index description lists 9 sub-domains; SKILL.md covers 19 — agents miss 10 routing triggers | `skill-discovery-index.md` | Update description to enumerate all 19 domains |
+| 1 | **CRITICAL** | 6 capacitor skills on disk but unregistered in skills-discovery-index.md — undiscoverable by agents and prompts | `skills-discovery-index.md` | Register all 6 immediately |
+| 2 | **HIGH** | `orchestrate-capacitor` index description lists 9 sub-domains; SKILL.md covers 19 — agents miss 10 routing triggers | `skills-discovery-index.md` | Update description to enumerate all 19 domains |
 | 3 | **HIGH** | `csharp-engineer` agent description lacks invocation conditions — orchestrator routing is ambiguous | `csharp-engineer.agent.md` | Replace with concrete, testable invocation directive |
 | 4 | **MEDIUM** | 2 prompts have incomplete Output Contract sections (`governance-audit-types`, `governance-item-audit`) | Prompt files | Complete column schemas and file path contracts |
 | 5 | **MEDIUM** | 8 stale docs artifacts are archive candidates; 3 files are in wrong directory — corpus hygiene debt is growing | `.docs/changes/` | Archive 8 candidates; relocate 3 misplaced files |
@@ -42,7 +42,7 @@ No open conflicts exist that would block execution today. The routing failures a
 
 | Action | Owner | Target | Priority | Blockers |
 |---|---|---|---|---|
-| Register 6 unregistered capacitor skills in skill-discovery-index.md | Skills Owner | 2026-05-10 | CRITICAL | None |
+| Register 6 unregistered capacitor skills in skills-discovery-index.md | Skills Owner | 2026-05-10 | CRITICAL | None |
 | Update `orchestrate-capacitor` description to list 19 sub-domains | Skills Owner | 2026-05-10 | HIGH | None |
 | Replace `csharp-engineer` description with invocation conditions | Skills Owner | 2026-05-10 | HIGH | None |
 | Enforce update-in-same-change rule for skill additions (process) | Governance Owner | 2026-05-10 | HIGH | None |

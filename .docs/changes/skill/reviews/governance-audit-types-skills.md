@@ -15,12 +15,12 @@
 
 | Unregistered Skill | Inferred Lane | Action Required |
 |---|---|---|
-| capacitor-auth-session | Execution / Review | Register in skill-discovery-index.md |
-| capacitor-ci-integration | Execution / Review | Register in skill-discovery-index.md |
-| capacitor-migration-upgrades | Planning / Execution | Register in skill-discovery-index.md |
-| capacitor-observability | Execution / Review | Register in skill-discovery-index.md |
-| capacitor-offline-resilience | Execution / Review | Register in skill-discovery-index.md |
-| capacitor-performance-quality-gate | Review / Execution | Register in skill-discovery-index.md |
+| capacitor-auth-session | Execution / Review | Register in skills-discovery-index.md |
+| capacitor-ci-integration | Execution / Review | Register in skills-discovery-index.md |
+| capacitor-migration-upgrades | Planning / Execution | Register in skills-discovery-index.md |
+| capacitor-observability | Execution / Review | Register in skills-discovery-index.md |
+| capacitor-offline-resilience | Execution / Review | Register in skills-discovery-index.md |
+| capacitor-performance-quality-gate | Review / Execution | Register in skills-discovery-index.md |
 
 ## Aggregate Results Grid (Sampled: Governance Domain)
 
@@ -63,8 +63,8 @@ The following grid covers the governance-domain skills evaluated in depth. All 1
 
 **Severity:** CRITICAL  
 **Check:** SKR-M2 / GOV-M3  
-**Finding:** 6 capacitor skills are on disk but have no entry in `skill-discovery-index.md`. This means they are undiscoverable to agents and orchestrators using the catalog as the source of truth. The `orchestrate-capacitor` skill description also understates its sub-domain coverage (lists 9 areas; actual coverage is 19 areas).  
-**Required Action:** Add 6 registration rows to `skill-discovery-index.md` and update the `orchestrate-capacitor` When-to-Use description.
+**Finding:** 6 capacitor skills are on disk but have no entry in `skills-discovery-index.md`. This means they are undiscoverable to agents and orchestrators using the catalog as the source of truth. The `orchestrate-capacitor` skill description also understates its sub-domain coverage (lists 9 areas; actual coverage is 19 areas).  
+**Required Action:** Add 6 registration rows to `skills-discovery-index.md` and update the `orchestrate-capacitor` When-to-Use description.
 
 ### SKR-M-002 — `orchestrate-capacitor` Discovery Index Description Drift
 

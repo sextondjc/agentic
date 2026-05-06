@@ -1,6 +1,6 @@
-# Agents Lifecycle Catalog
+# Agents Discovery Index
 
-This catalog assigns each agent to a primary lifecycle lane.
+This discovery index assigns each agent to a primary lifecycle lane.
 
 ## Lanes
 

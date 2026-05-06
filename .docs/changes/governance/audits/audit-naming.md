@@ -29,7 +29,7 @@
 | `.docs/changes/librarian-curation-report.md` | `librarian-curation-report.md` | Should reside under `.docs/changes/governance/` or `.docs/changes/librarian/` | Domain | File is in root of `.changes/` against naming convention |
 | `.docs/changes/customization-taxonomy-promotion-changes.md` | `customization-taxonomy-promotion-changes.md` | Should reside under `.docs/changes/customization/` subdirectory | Domain | File in root of `.changes/` instead of subdirectory |
 | `.docs/changes/ux-quality-gate-examples-index.md` | `ux-quality-gate-examples-index.md` | Should reside under `.docs/changes/ux/` or `.docs/changes/web-ux/` | Domain | File in root of `.changes/` |
-| `skill-discovery-index.md` | Flat file in `.github/skills/` | Correct per convention (governance doc, not a skill) | — | No action needed — correctly placed |
+| `skills-discovery-index.md` | Flat file in `.github/skills/` | Correct per convention (governance doc, not a skill) | — | No action needed — correctly placed |
 
 ## Vocabulary Drift Signals Table
 

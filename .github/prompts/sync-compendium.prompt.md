@@ -65,7 +65,7 @@ Post-sync curation expectation for target repositories:
 
 - Feature `delivery-operating-system` as the default PM and delivery intake skill when agent-heavy delivery coordination is in scope.
 - Surface the other four skills as the supporting discovery, backlog, done-gate, and flow-control companions.
-- Keep `skill-discovery-index.md` as the full inventory, but do not rely on the index alone when these skills are relevant to the repository mission.
+- Keep `skills-discovery-index.md` as the full inventory, but do not rely on the index alone when these skills are relevant to the repository mission.
 
 ## One-Command Wrapper
 

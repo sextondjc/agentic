@@ -6,7 +6,7 @@ Each row maps one skill to its assigned family and its primary and secondary lif
 
 Skills that are not yet assigned to a family appear at the end under **Unclassified**.
 
-Source of truth: `.github/skills/skill-discovery-index.md`.
+Source of truth: `.github/catalogs/skills-discovery-index.md`.
 Snapshot date: 2026-04-30. Total skills: 155.
 
 ---

@@ -7,11 +7,12 @@ This README is the entry point for workspace customization assets. Use this page
 | Topic | Canonical File | Purpose |
 |---|---|---|
 | Top-level folder index | [INDEX.md](./INDEX.md) | Generated navigation for `.github` docs and subfolders. |
+| Discovery catalogs hub | [catalogs/INDEX.md](./catalogs/INDEX.md) | Shared home for discovery indexes across agents, instructions, prompts, and skills. |
 | Workspace behavior hub | [copilot-instructions.md](./copilot-instructions.md) | Global operating model, routing policy, preferred agents and skills. |
-| Agents inventory | [agent-lifecycle-catalog.md](./agent-lifecycle-catalog.md) | Canonical lifecycle ownership and rationale for agent assets. |
-| Instructions inventory | [instruction-lifecycle-catalog.md](./instructions/instruction-lifecycle-catalog.md) | Canonical lifecycle ownership and rationale for instruction files. |
-| Prompts inventory | [prompt-lifecycle-catalog.md](./prompts/prompt-lifecycle-catalog.md) | Canonical lifecycle ownership and rationale for prompt assets. |
-| Skills discovery | [skill-discovery-index.md](./skills/skill-discovery-index.md) | Canonical skill lookup table and lane mapping. |
+| Agents inventory | [agents-discovery-index.md](./catalogs/agents-discovery-index.md) | Canonical lifecycle ownership and rationale for agent assets. |
+| Instructions inventory | [instructions-discovery-index.md](./catalogs/instructions-discovery-index.md) | Canonical lifecycle ownership and rationale for instruction files. |
+| Prompts inventory | [prompts-discovery-index.md](./catalogs/prompts-discovery-index.md) | Canonical lifecycle ownership and rationale for prompt assets. |
+| Skills discovery | [skills-discovery-index.md](./catalogs/skills-discovery-index.md) | Canonical skill lookup table and lane mapping. |
 | PowerShell scripts catalog | [README.md](./scripts/powershell/README.md) | Script inventory and usage guidance. |
 
 ## Inventory Snapshot
@@ -30,7 +31,7 @@ These counts are current for the repository state as of this documentation refre
 ## Maintenance Notes
 
 1. Keep discovery data in catalogs and indexes, not in this README.
-2. If an asset is added, removed, or renamed, update the matching lifecycle catalog in the same change.
+2. If an asset is added, removed, or renamed, update the matching discovery index in the same change.
 3. Regenerate or refresh [INDEX.md](./INDEX.md) when top-level markdown or folder structure changes.
 4. Run `.github/scripts/powershell/test-governance-link-graph.ps1` after documentation edits to confirm link integrity.
 
@@ -38,10 +39,11 @@ These counts are current for the repository state as of this documentation refre
 
 | File | Role |
 |---|---|
-| [agent-lifecycle-catalog.md](./agent-lifecycle-catalog.md) | Agent lane ownership and rationale. |
-| [instruction-lifecycle-catalog.md](./instructions/instruction-lifecycle-catalog.md) | Instruction lane ownership and rationale. |
-| [prompt-lifecycle-catalog.md](./prompts/prompt-lifecycle-catalog.md) | Prompt lane ownership and rationale. |
-| [skill-discovery-index.md](./skills/skill-discovery-index.md) | Skill selection and lane mapping. |
+| [catalogs/INDEX.md](./catalogs/INDEX.md) | Shared discovery hub for all canonical indexes. |
+| [agents-discovery-index.md](./catalogs/agents-discovery-index.md) | Agent lane ownership and rationale. |
+| [instructions-discovery-index.md](./catalogs/instructions-discovery-index.md) | Instruction lane ownership and rationale. |
+| [prompts-discovery-index.md](./catalogs/prompts-discovery-index.md) | Prompt lane ownership and rationale. |
+| [skills-discovery-index.md](./catalogs/skills-discovery-index.md) | Skill selection and lane mapping. |
 | [copilot-instructions.md](./copilot-instructions.md) | Workspace routing, standards, and bundle guidance. |
 
 

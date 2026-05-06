@@ -100,7 +100,7 @@ Total Broken Links: 107
 | 92 | SKILL.md | .github/skills/benchmark-experiment-design/SKILL.md | PrepareInput (Size) | Navigate to PrepareInput |
 | 93 | SKILL.md | .github/skills/benchmark-experiment-design/SKILL.md | CurrentImplementation (_input) | Navigate to CurrentImplementation |
 | 94 | SKILL.md | .github/skills/benchmark-experiment-design/SKILL.md | CurrentImplementation (_input) | Navigate to CurrentImplementation |
-| 95 | SKILL.md | .github/skills/curate-copilot-instructions/SKILL.md | skill-discovery-index.md (./../skills/skill-discovery-index.md) | Navigate to skill-discovery-index.md |
+| 95 | SKILL.md | .github/skills/curate-copilot-instructions/SKILL.md | skills-discovery-index.md (./../skills/skills-discovery-index.md) | Navigate to skills-discovery-index.md |
 | 96 | execute-customization-audit-report-template.md | .github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md | governance-audit.md (./governance-audit.md) | Navigate to governance-audit.md |
 | 97 | execute-customization-audit-report-template.md | .github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md | governance-audit-types-skills.md (./../../../../.docs/changes/skill/reviews/governance-audit-types-skills.md) | Navigate to governance-audit-types-skills.md |
 | 98 | execute-customization-audit-report-template.md | .github/skills/execute-customization-audit/references/execute-customization-audit-report-template.md | governance-audit-types-customizations.md (./../../../../.docs/changes/customization/reviews/governance-audit-types-customizations.md) | Navigate to governance-audit-types-customizations.md |

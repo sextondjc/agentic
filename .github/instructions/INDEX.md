@@ -12,7 +12,6 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| instruction-lifecycle-catalog.md | Instruction Lifecycle Catalog | index | Canonical lane mappings and rationale for instruction assets. |
 | architecture.instructions.md | architecture | reference | Consolidated DDD, SOLID, and .NET architecture guidance. |
 | async-programming.instructions.md | async-programming | reference | Async and concurrency standards for .NET code. |
 | ci-cd.instructions.md | ci-cd | reference | GitHub Actions and CI/CD safety and efficiency standards. |

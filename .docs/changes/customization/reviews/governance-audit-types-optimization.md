@@ -26,4 +26,4 @@
 
 | ID | Action | Target | Priority |
 |---|---|---|---|
-| R0 | No optimization remediation required beyond keeping the SQL bundle synchronized with the discovery index when the family changes. | .github/copilot-instructions.md and .github/skills/skill-discovery-index.md | Low |
+| R0 | No optimization remediation required beyond keeping the SQL bundle synchronized with the discovery index when the family changes. | .github/copilot-instructions.md and .github/catalogs/skills-discovery-index.md | Low |

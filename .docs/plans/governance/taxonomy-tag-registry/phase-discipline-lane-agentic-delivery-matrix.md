@@ -422,8 +422,8 @@ A cell may be promoted to a first-class customisation asset only when **both** o
 |---|---|---|
 | Discipline list change | Any addition or removal to the Discipline column values | DEC-PDL-07: block adoption until matrix revisit is complete |
 | Cell gap | A request arrives that has no existing bundle coverage | No X-code in the Existing column; treat as `tagged only` until promoted |
-| Asset drift | A bundle member is renamed, removed, or split | Bundle legend becomes inconsistent with skill-discovery-index.md; use `governance-sync-customizations` or `governance-audit` |
-| Stale matrix | Matrix version is older than the last discipline or bundle change | Compare matrix date against agent-lifecycle-catalog.md and skill-discovery-index.md modification dates |
+| Asset drift | A bundle member is renamed, removed, or split | Bundle legend becomes inconsistent with skills-discovery-index.md; use `governance-sync-customizations` or `governance-audit` |
+| Stale matrix | Matrix version is older than the last discipline or bundle change | Compare matrix date against agents-discovery-index.md and skills-discovery-index.md modification dates |
 | Promotion without evidence | A new customisation cites matrix cells without a decision record | Adoption Protocol check: require ADR or decision log entry before asset creation |
 
 ---

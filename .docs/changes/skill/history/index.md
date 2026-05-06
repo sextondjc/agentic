@@ -4,8 +4,6 @@
 |---|---|---|---|
 | adr-generator | adr-generator-history.md | 2026-04-18 | Pass |
 | agent-authoring | agent-authoring-history.md | 2026-04-18 | Pass |
-| agent-customization | agent-customization-history.md | 2026-04-18 | Pass |
-| agent-review | agent-review-history.md | 2026-04-18 | Pass With Advisories |
 | analysis-execution | analysis-execution-history.md | 2026-04-18 | Pass With Advisories |
 | api-design | api-design-history.md | 2026-04-18 | Pass |
 | async-programming | async-programming-history.md | 2026-04-18 | Pass With Advisories |
@@ -17,12 +15,9 @@
 | ci-cd-workflows | ci-cd-workflows-history.md | 2026-04-18 | Pass |
 | compose-skills | compose-skills-history.md | 2026-04-18 | Pass |
 | critical-thinking | critical-thinking-history.md | 2026-04-18 | Pass |
-| curating-copilot-instructions | curating-copilot-instructions-history.md | 2026-04-18 | Pass |
 | current-test-coverage | current-test-coverage-history.md | 2026-04-18 | Pass |
 | delivery-status-grid | delivery-status-grid-history.md | 2026-04-18 | Pass |
-| design-mobile-ui-prototyping | design-mobile-ui-prototyping-history.md | 2026-04-18 | Pass |
 | design-mobile-ux | design-mobile-ux-history.md | 2026-04-18 | Pass |
-| design-usability-testing-scripts | design-usability-testing-scripts-history.md | 2026-04-18 | Pass |
 | design-web-ux | design-web-ux-history.md | 2026-04-18 | Pass With Advisories |
 | docker-dotnet | docker-dotnet-history.md | 2026-04-18 | Pass |
 | domain-design | domain-design-history.md | 2026-04-18 | Pass |
@@ -31,11 +26,7 @@
 | governance-audit | governance-audit-history.md | 2026-04-18 | Pass |
 | governance-delivery | governance-delivery-history.md | 2026-04-18 | Pass With Advisories |
 | governance-health-overview | governance-health-overview-history.md | 2026-04-18 | Pass |
-| governance-optimize-customizations | governance-optimize-customizations-history.md | 2026-04-18 | Pass |
 | governance-summarize | governance-summarize-history.md | 2026-04-18 | Pass |
-| governance-sync-customizations | governance-sync-customizations-history.md | 2026-04-18 | Pass |
-| governance-taxonomy | governance-taxonomy-history.md | 2026-04-18 | Pass |
-| governance-validate-customization | governance-validate-customization-history.md | 2026-04-18 | Pass |
 | index-docs | index-docs-history.md | 2026-04-18 | Pass |
 | instructions-authoring | instructions-authoring-history.md | 2026-04-18 | Pass |
 | layer-boundaries | layer-boundaries-history.md | 2026-04-18 | Pass With Advisories |

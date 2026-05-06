@@ -51,7 +51,7 @@
 
 ## Files Updated
 
-- `.github/skills/skill-discovery-index.md`
+- `.github/catalogs/skills-discovery-index.md`
 
 ## Residual Risks
 

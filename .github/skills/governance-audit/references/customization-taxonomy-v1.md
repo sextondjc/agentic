@@ -15,16 +15,16 @@ This taxonomy is authoritative for conceptual classification and naming analysis
 Operational routing and lane ownership remain governed by:
 
 1. [planning-execution-review-governance.md](./planning-execution-review-governance.md)
-2. [agent-lifecycle-catalog.md](./../../../agent-lifecycle-catalog.md)
-3. [instruction-lifecycle-catalog.md](./../../../instructions/instruction-lifecycle-catalog.md)
-4. [prompt-lifecycle-catalog.md](./../../../prompts/prompt-lifecycle-catalog.md)
-5. [skill-discovery-index.md](./../../../skills/skill-discovery-index.md)
+2. [agents-discovery-index.md](./../../../catalogs/agents-discovery-index.md)
+3. [instructions-discovery-index.md](./../../../catalogs/instructions-discovery-index.md)
+4. [prompts-discovery-index.md](./../../../catalogs/prompts-discovery-index.md)
+5. [skills-discovery-index.md](./../../../catalogs/skills-discovery-index.md)
 
 ## Governing Assets
 
 The accepted taxonomy is maintained and applied through these governing assets:
 
-1. Agent: [agent-lifecycle-catalog.md](./../../../agent-lifecycle-catalog.md) defines `orchestrator` as the mandatory intake and routing entry point.
+1. Agent: [agents-discovery-index.md](./../../../catalogs/agents-discovery-index.md) defines `orchestrator` as the mandatory intake and routing entry point.
 2. Instruction: [governance-lifecycle.instructions.md](./../../../instructions/governance-lifecycle.instructions.md) is the normative policy for lane ownership, routing, and traceable handoff.
 3. Skills: [agent-authoring SKILL.md](./../../../skills/agent-authoring/SKILL.md) and [instructions-authoring SKILL.md](./../../../skills/instructions-authoring/SKILL.md) govern taxonomy-adjacent customization edits by artifact type, [write-technical-docs SKILL.md](./../../../skills/write-technical-docs/SKILL.md) governs documentation maintenance and link integrity, and [governance-audit SKILL.md](./../../../skills/governance-audit/SKILL.md) governs review of the resulting governance state.
 
@@ -128,10 +128,10 @@ The accepted taxonomy is maintained and applied through these governing assets:
 
 Compared against:
 
-- [agent-lifecycle-catalog.md](./../../../agent-lifecycle-catalog.md)
-- [instruction-lifecycle-catalog.md](./../../../instructions/instruction-lifecycle-catalog.md)
-- [prompt-lifecycle-catalog.md](./../../../prompts/prompt-lifecycle-catalog.md)
-- [skill-discovery-index.md](./../../../skills/skill-discovery-index.md)
+- [agents-discovery-index.md](./../../../catalogs/agents-discovery-index.md)
+- [instructions-discovery-index.md](./../../../catalogs/instructions-discovery-index.md)
+- [prompts-discovery-index.md](./../../../catalogs/prompts-discovery-index.md)
+- [skills-discovery-index.md](./../../../catalogs/skills-discovery-index.md)
 
 | Area | v1 Position | Current Catalog Position | Outcome | Follow-Up |
 |---|---|---|---|---|

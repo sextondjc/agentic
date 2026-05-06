@@ -60,7 +60,7 @@ description: 'Use when implementing, modernizing, testing, or reviewing .NET/C# 
 **Severity:** LOW  
 **Check:** AGR-S5 — New platform fields (`handoffs`, `hooks`, `disable-model-invocation`, `agents`, `model`) should be considered where they improve role clarity.  
 **Finding:** The `orchestrator` agent does not declare `model` preferences or `agents` routing registry fields that could improve deterministic handoff behavior. These are optional but would strengthen routing reliability.  
-**Recommendation:** Evaluate adding `model: claude-sonnet` (or equivalent) and an `agents` registry list aligned to `agent-lifecycle-catalog.md` to make orchestrator routing machine-readable.
+**Recommendation:** Evaluate adding `model: claude-sonnet` (or equivalent) and an `agents` registry list aligned to `agents-discovery-index.md` to make orchestrator routing machine-readable.
 
 ### AGR-S5-002 — `csharp-engineer`: Platform Currency Advisory
 

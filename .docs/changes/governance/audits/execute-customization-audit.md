@@ -36,10 +36,10 @@
 
 | Failure ID | Severity | Finding | Impact | Evidence |
 |---|---|---|---|---|
-| F-2026-001 | **CRITICAL** | GOV-M3: 6 capacitor skills unregistered in skill-discovery-index.md (`capacitor-auth-session`, `capacitor-ci-integration`, `capacitor-migration-upgrades`, `capacitor-observability`, `capacitor-offline-resilience`, `capacitor-performance-quality-gate`) | Undiscoverable; cross-type routing chain broken for 6 CapacitorJS sub-domains | [governance-audit.md](./governance-audit.md) |
+| F-2026-001 | **CRITICAL** | GOV-M3: 6 capacitor skills unregistered in skills-discovery-index.md (`capacitor-auth-session`, `capacitor-ci-integration`, `capacitor-migration-upgrades`, `capacitor-observability`, `capacitor-offline-resilience`, `capacitor-performance-quality-gate`) | Undiscoverable; cross-type routing chain broken for 6 CapacitorJS sub-domains | [governance-audit.md](./governance-audit.md) |
 | F-2026-002 | **HIGH** | SKR-M-002: `orchestrate-capacitor` index description lists 9 sub-domains; SKILL.md covers 19 | Agents miss routing for 10 capacitor sub-domains | [governance-audit-types-skills.md](./../../skill/reviews/governance-audit-types-skills.md) |
 | F-2026-003 | **HIGH** | AGR-M3: `csharp-engineer` description lacks explicit invocation conditions | Orchestrator routing to csharp-engineer is ambiguous | [audit-agents.md](./audit-agents.md) |
-| F-2026-004 | **HIGH** | OPR-M3: `skill-discovery-index.md` entry for `orchestrate-capacitor` contradicts SKILL.md body | Same root cause as F-2026-002; confirmed non-contradiction failure | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
+| F-2026-004 | **HIGH** | OPR-M3: `skills-discovery-index.md` entry for `orchestrate-capacitor` contradicts SKILL.md body | Same root cause as F-2026-002; confirmed non-contradiction failure | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
 | F-2026-005 | **HIGH** | OPR-M2: `csharp-engineer` description fails determinism check | Same root cause as F-2026-003; confirmed non-determinism failure | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
 
 ## Per-Type Results
@@ -59,7 +59,7 @@
 
 | Rank | Priority | Recommendation | Owner | Target Date |
 |---|---:|---|---|---|
-| 1 | CRITICAL | Register 6 unregistered capacitor skills in skill-discovery-index.md | Skills Owner | 2026-05-10 |
+| 1 | CRITICAL | Register 6 unregistered capacitor skills in skills-discovery-index.md | Skills Owner | 2026-05-10 |
 | 2 | HIGH | Update `orchestrate-capacitor` description to enumerate all 19 sub-domains | Skills Owner | 2026-05-10 |
 | 3 | HIGH | Replace `csharp-engineer` description with concrete invocation directive | Skills Owner | 2026-05-10 |
 | 4 | MEDIUM | Complete Output Contract for `governance-audit-types` and `governance-item-audit` prompts | Governance Owner | 2026-05-17 |
@@ -176,13 +176,13 @@
 
 | Finding | Done Gate | Evidence | Disposition |
 |---|---|---|---|
-| F-2026-001 | All 6 capacitor skills registered in `skill-discovery-index.md` | Lines 235–240: rows present for `capacitor-auth-session`, `capacitor-ci-integration`, `capacitor-migration-upgrades`, `capacitor-observability`, `capacitor-offline-resilience`, `capacitor-performance-quality-gate` | **Accepted** |
+| F-2026-001 | All 6 capacitor skills registered in `skills-discovery-index.md` | Lines 235–240: rows present for `capacitor-auth-session`, `capacitor-ci-integration`, `capacitor-migration-upgrades`, `capacitor-observability`, `capacitor-offline-resilience`, `capacitor-performance-quality-gate` | **Accepted** |
 | F-2026-002 | `orchestrate-capacitor` row description lists all 19 sub-domains | Line 220: `"…setup, web integration, native APIs, plugin authoring, auth/session, offline resilience, observability, security, testing, CI integration, performance gates, migration upgrades, live updates, accessibility, deep linking, environment config, push notifications, privacy compliance, or release readiness…"` — all 12 required sub-domains confirmed present | **Accepted** |
 | F-2026-003 | `csharp-engineer` description is invocation-focused and routes to adjacent agents | Frontmatter: `"Use when implementing, modernizing, testing, or reviewing .NET/C# code with workspace canonical standards. Route debugging to defect-debugger and architecture boundary decisions to architecture-designer."` — invocation trigger present; two adjacent-agent routing directives present | **Accepted** |
-| F-2026-004 | `governance-lifecycle.instructions.md` contains MUST rule with explicit audit-failure consequence for skill catalog updates | Line 26: `"Skills added to .github/skills/ MUST have a corresponding row added to skill-discovery-index.md in the same change. Skills removed MUST have their row removed in the same change. An unregistered skill or orphaned catalog row is treated as a MUST failure with no grace period."` | **Accepted** |
+| F-2026-004 | `governance-lifecycle.instructions.md` contains MUST rule with explicit audit-failure consequence for skill catalog updates | Line 26: `"Skills added to .github/skills/ MUST have a corresponding row added to skills-discovery-index.md in the same change. Skills removed MUST have their row removed in the same change. An unregistered skill or orphaned catalog row is treated as a MUST failure with no grace period."` | **Accepted** |
 | F-2026-005 (governance-audit-types) | Output Contract enumerates output file path, column schema, and valid disposition values | Lines 50+: output file path pattern defined; Aggregate Outcome Grid columns listed; Failure Detail Grid columns listed; valid disposition values `PASSED`, `FAILED`, `PROVISIONAL-FAILED` defined | **Accepted** |
 | F-2026-005 (governance-item-audit) | Output Contract enumerates output file path, column schema, and valid disposition values | Lines 38+: output file path pattern defined; Item Scope Grid columns listed; Failure Detail Grid columns listed; valid disposition values `PASSED`, `FAILED`, `PROVISIONAL-FAILED` defined | **Accepted** |
-| Archive — 5 files | Files present at `.docs/archive/governance/scripts/` and `.docs/archive/governance/phase-1/` | `Test-Path` confirmed `True` for all 5: `raw-script-output.txt`, `raw-script-output-post-remediation.txt`, `phase-1-baseline-lock.md`, `phase-1-status.md`, `phase-1-audit-entry-checklist.md` | **Accepted** |
+| Archive — 5 files (historical) | Files were present at former `.docs/archive/governance/scripts/` and `.docs/archive/governance/phase-1/` during remediation | `Test-Path` returned `True` for all 5 on 2026-05-06; those legacy archive subpaths were later removed during aggressive docs cleanup | **Accepted (historical evidence)** |
 | Relocate — 3 files | Files present at new domain paths | `Test-Path` confirmed `True` for all 3: `librarian-curation-report.md` (governance), `customization-taxonomy-promotion-changes.md` (customization), `ux-quality-gate-examples-index.md` (ux) | **Accepted** |
 
 ### Severity Summary

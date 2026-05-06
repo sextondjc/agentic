@@ -61,4 +61,4 @@ Post-sync curation rule:
 
 - If target-repo mission includes agent-assisted planning or delivery control, feature `delivery-operating-system` in the target `copilot-instructions.md` as the default PM and delivery intake skill.
 - Surface the other four skills as supporting discovery, backlog, acceptance, and flow-control capabilities.
-- Do not rely on `skill-discovery-index.md` alone when the repository should actively steer users toward this bundle.
+- Do not rely on `skills-discovery-index.md` alone when the repository should actively steer users toward this bundle.

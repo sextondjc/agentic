@@ -18,7 +18,7 @@
 | SKR-M1 | Frontmatter `name` + `description` fields present | MUST | Both fields populated |
 | SKR-M2 | Description matches SKILL.md body specialization | MUST | No vague/generic mismatch |
 | SKR-M3 | Description is invocation-focused (`Use when...`) | MUST | Begins with "Use when" |
-| SKR-M4 | Primary lane correct in `skill-discovery-index.md` | MUST | Matches skill category |
+| SKR-M4 | Primary lane correct in `skills-discovery-index.md` | MUST | Matches skill category |
 | SKR-M5 | No scope bleed with adjacent family skills | MUST | Unique trigger per skill |
 
 ### Verdict Legend
@@ -129,7 +129,7 @@
 
 ### 2.5 Other New Additions (~63 skills — index-sampled)
 
-All remaining ~63 skills not in the four named families above were verified via `skill-discovery-index.md` sampling:
+All remaining ~63 skills not in the four named families above were verified via `skills-discovery-index.md` sampling:
 
 - **SKR-M1:** All entries have `name` and `description` fields confirmed present (index population requires both)
 - **SKR-M3:** Index review of all 261 entries confirms descriptions begin with "Use when..." except pre-existing `powershell-script-library` (carries forward a known LOW advisory from the prior audit cycle, not in scope as a new addition)
@@ -184,7 +184,7 @@ Method per TYP-S4: verify index description enumerates all sub-domains present i
 
 **Finding F-D-2026-001** | Severity: **MEDIUM**  
 `orchestrate-jquery` index description omits "CI integration" sub-domain present in SKILL.md frontmatter. `jquery-ci-integration` is a registered specialist skill that will not surface when a user scans the index for CI-related jQuery routing. Analogous to prior F-2026-002 root cause.  
-**Recommendation:** Update `skill-discovery-index.md` `orchestrate-jquery` description to append "CI integration" to the sub-domain list. Change is one-line, same-change rule applies.
+**Recommendation:** Update `skills-discovery-index.md` `orchestrate-jquery` description to append "CI integration" to the sub-domain list. Change is one-line, same-change rule applies.
 
 ---
 
@@ -219,7 +219,7 @@ Method per TYP-S4: verify index description enumerates all sub-domains present i
 
 **Finding F-D-2026-002** | Severity: **HIGH**  
 `orchestrate-kendo` index description omits 8 of 19 sub-domains present in SKILL.md frontmatter: Grid advanced behavior, charts/dataviz, export/printing, localization, state persistence, real-time updates, upload workflows, observability. This is a direct recurrence of the F-2026-002 root cause pattern. Agents and users scanning the index for Grid, chart, export, localization, or real-time Kendo routing will not be directed to `orchestrate-kendo`.  
-**Recommendation:** Update `skill-discovery-index.md` `orchestrate-kendo` description to enumerate all 19 sub-domains. The SKILL.md frontmatter description is the authoritative source. Change must be made in the same transaction as any future Kendo UI skill additions.
+**Recommendation:** Update `skills-discovery-index.md` `orchestrate-kendo` description to enumerate all 19 sub-domains. The SKILL.md frontmatter description is the authoritative source. Change must be made in the same transaction as any future Kendo UI skill additions.
 
 ---
 
@@ -254,4 +254,4 @@ All three orchestrate-* SKILL.md bodies open with invocation-focused trigger con
 
 ---
 
-*Evidence: `skill-discovery-index.md` rows for `orchestrate-jquery`, `orchestrate-kendo`, `orchestrate-sveltekit`; SKILL.md frontmatter for same three skills read directly from workspace.*
+*Evidence: `skills-discovery-index.md` rows for `orchestrate-jquery`, `orchestrate-kendo`, `orchestrate-sveltekit`; SKILL.md frontmatter for same three skills read directly from workspace.*

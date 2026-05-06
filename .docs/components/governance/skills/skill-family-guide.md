@@ -6,7 +6,7 @@ This document groups the workspace skill library into practical skill families s
 
 ## Source and Scope
 
-- Source of truth for included skills: `.github/skills/skill-discovery-index.md`.
+- Source of truth for included skills: `.github/catalogs/skills-discovery-index.md`.
 - Scope: local workspace skills under `.github/skills/`.
 - Classification style: functional families (what outcome a skill drives), not lane-only grouping.
 - Snapshot date: 2026-04-30.
@@ -107,5 +107,5 @@ The following 9 skills from the discovery index are not yet assigned to a family
 
 - This family model is intentionally functional and overlaps are expected.
 - Several skills are valid in more than one family; they are placed where they add the strongest primary routing value.
-- The definitive inventory remains `.github/skills/skill-discovery-index.md`.
+- The definitive inventory remains `.github/catalogs/skills-discovery-index.md`.
 - Unclassified skills above should be assigned to families in the next governance review pass.

@@ -50,7 +50,7 @@
 **Check:** Stale generated artifacts.  
 **Files:** `raw-script-output.txt`, `raw-script-output-post-remediation.txt`  
 **Finding:** These are unprocessed text dumps of script execution results. Their content has been processed into the governance audit artifacts. They serve no active documentation purpose and inflate the corpus.  
-**Recommendation:** Archive to `.docs/archive/governance/scripts/` after confirming no active references.
+**Recommendation:** Archive under the current `.docs/archive/` structure after confirming no active references.
 
 ### HYG-S-002 — Phase-1 Delivery Artifacts May Be Superseded
 
@@ -58,7 +58,7 @@
 **Check:** Superseded planning artifacts.  
 **Files:** `phase-1-baseline-lock.md`, `phase-1-status.md`, `phase-1-audit-entry-checklist.md`  
 **Finding:** Three Phase-1-specific governance artifacts remain in `.docs/changes/governance/` without a corresponding archive or completion marker. If Phase 1 delivery is complete, these should be archived to reduce corpus noise.  
-**Recommendation:** Verify Phase 1 completion status. If complete, move to `.docs/archive/governance/phase-1/`.
+**Recommendation:** Verify Phase 1 completion status. If complete, archive under the current `.docs/archive/` structure instead of legacy governance subpaths.
 
 ### HYG-S-003 — Three Root-Level `.docs/changes/` Files Violate Structure
 

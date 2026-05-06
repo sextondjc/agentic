@@ -48,9 +48,9 @@ Routing behavior in this agent must align with policy authority in [governance-l
 
 Use catalogs as the source of truth so routing scales as assets are added, removed, or renamed:
 
-- Agent lanes and role boundaries: [agent-lifecycle-catalog.md](./../agent-lifecycle-catalog.md)
-- Skill discovery and lane mapping: [skill-discovery-index.md](./../skills/skill-discovery-index.md)
-- Instruction lane mapping and policy authority: [instruction-lifecycle-catalog.md](./../instructions/instruction-lifecycle-catalog.md)
+- Agent lanes and role boundaries: [agents-discovery-index.md](./../catalogs/agents-discovery-index.md)
+- Skill discovery and lane mapping: [skills-discovery-index.md](./../catalogs/skills-discovery-index.md)
+- Instruction lane mapping and policy authority: [instructions-discovery-index.md](./../catalogs/instructions-discovery-index.md)
 
 If an explicit asset listed in this file conflicts with a catalog, the catalog wins.
 
@@ -73,8 +73,8 @@ If an explicit asset listed in this file conflicts with a catalog, the catalog w
 
 1. Classify request into one primary category and optional secondary categories.
 2. Resolve lane owner from the category map.
-3. Select candidate specialist agents from [agent-lifecycle-catalog.md](./../agent-lifecycle-catalog.md) matching lane and category intent.
-4. Select companion skills from [skill-discovery-index.md](./../skills/skill-discovery-index.md) to tighten workflow.
+3. Select candidate specialist agents from [agents-discovery-index.md](./../catalogs/agents-discovery-index.md) matching lane and category intent.
+4. Select companion skills from [skills-discovery-index.md](./../catalogs/skills-discovery-index.md) to tighten workflow.
 5. Apply tie-break rules and select one owner per phase.
 6. Publish intake schema before specialist execution.
 

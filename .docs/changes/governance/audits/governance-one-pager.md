@@ -17,7 +17,7 @@ See [governance-summary.md](./governance-summary.md) for the full briefing page.
 
 ## Must-Fix Summary
 
-1. Register 6 unregistered capacitor skills in skill-discovery-index.md — **Skills Owner by 2026-05-10**
+1. Register 6 unregistered capacitor skills in skills-discovery-index.md — **Skills Owner by 2026-05-10**
 2. Update `orchestrate-capacitor` description to list all 19 sub-domains — **Skills Owner by 2026-05-10**
 3. Fix `csharp-engineer` description with concrete invocation conditions — **Skills Owner by 2026-05-10**
 4. Enforce update-in-same-change rule for skill additions (process) — **Governance Owner by 2026-05-10**

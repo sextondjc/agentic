@@ -96,8 +96,8 @@
 
 | Rank | Priority | Finding ID | Recommendation | Owner | Target Date |
 |---|---|---|---|---|---|
-| 1 | HIGH | F-D-2026-002 | Update `skill-discovery-index.md` `orchestrate-kendo` description to enumerate all 19 sub-domains from SKILL.md frontmatter | Skills Owner | 2026-05-13 |
-| 2 | MEDIUM | F-D-2026-001 | Update `skill-discovery-index.md` `orchestrate-jquery` description to append "CI integration" to sub-domain list | Skills Owner | 2026-05-13 |
+| 1 | HIGH | F-D-2026-002 | Update `skills-discovery-index.md` `orchestrate-kendo` description to enumerate all 19 sub-domains from SKILL.md frontmatter | Skills Owner | 2026-05-13 |
+| 2 | MEDIUM | F-D-2026-001 | Update `skills-discovery-index.md` `orchestrate-jquery` description to append "CI integration" to sub-domain list | Skills Owner | 2026-05-13 |
 | 3 | LOW | Preventive | Adopt update-in-same-change rule enforcement: when adding specialist skills to an existing family, the orchestrator index description must be updated in the same commit | Governance Owner | Ongoing |
 
 ---
@@ -110,4 +110,4 @@ No MUST failures exist across any of the 261 registered skills, 18 agents, 21 in
 
 ---
 
-*Evidence sources: [delta-baseline-2026-05-06.md](./delta-baseline-2026-05-06.md), [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md), on-disk enumeration (261 skill directories), `skill-discovery-index.md` (261 entries), lifecycle catalogs (agents 18/18, instructions 21/21, prompts 21/21).*
+*Evidence sources: [delta-baseline-2026-05-06.md](./delta-baseline-2026-05-06.md), [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md), on-disk enumeration (261 skill directories), `skills-discovery-index.md` (261 entries), lifecycle catalogs (agents 18/18, instructions 21/21, prompts 21/21).*

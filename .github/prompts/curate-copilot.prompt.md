@@ -41,7 +41,7 @@ Required outputs:
 - [ ] Every listed agent/skill file exists in the workspace.
 - [ ] Descriptions match frontmatter semantics.
 - [ ] No duplicate entries across sections.
-- [ ] Links to [skill-discovery-index.md](./../skills/skill-discovery-index.md) are valid.
+- [ ] Links to [skills-discovery-index.md](./../catalogs/skills-discovery-index.md) are valid.
 - [ ] No references to removed or renamed assets.
 
 ## Success Criteria

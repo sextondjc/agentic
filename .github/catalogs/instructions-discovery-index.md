@@ -1,6 +1,6 @@
-# Instructions Lifecycle Catalog
+# Instructions Discovery Index
 
-This catalog assigns each instruction file to a primary lifecycle lane.
+This discovery index assigns each instruction file to a primary lifecycle lane.
 
 ## Instruction Mapping
 

@@ -22,14 +22,14 @@ Use a three-lane operating model for all customization artifacts:
 - Execution: implementation of documentation, code, scripts, workflows, and configuration.
 - Review: evaluation of outputs, findings, and remediation disposition.
 
-Canonical governance and classification references:
+Canonical governance and discovery references:
 
 - [planning-execution-review-governance.md](./skills/governance-audit/references/planning-execution-review-governance.md)
-- [agent-lifecycle-catalog.md](./agent-lifecycle-catalog.md)
-- [instruction-lifecycle-catalog.md](./instructions/instruction-lifecycle-catalog.md)
+- [agents-discovery-index.md](./catalogs/agents-discovery-index.md)
+- [instructions-discovery-index.md](./catalogs/instructions-discovery-index.md)
 - [governance-naming-conventions.instructions.md](./instructions/governance-naming-conventions.instructions.md) ← Mandatory: review before creating new assets
-- [prompt-lifecycle-catalog.md](./prompts/prompt-lifecycle-catalog.md)
-- [skill-discovery-index.md](./skills/skill-discovery-index.md)
+- [prompts-discovery-index.md](./catalogs/prompts-discovery-index.md)
+- [skills-discovery-index.md](./catalogs/skills-discovery-index.md)
 
 ## Mandatory Request Intake
 
@@ -38,11 +38,11 @@ Canonical governance and classification references:
 - No direct specialist execution is allowed before `orchestrator` routing, including single-lane tasks.
 - If the assigned specialist is already obvious, `orchestrator` still performs intake and immediate handoff.
 
-Use [agent-lifecycle-catalog.md](./agent-lifecycle-catalog.md) as the canonical source for specialist selection and lane mapping.
+Use [agents-discovery-index.md](./catalogs/agents-discovery-index.md) as the canonical source for specialist selection and lane mapping.
 
 ## Skills Discovery
 
-Use [skill-discovery-index.md](./skills/skill-discovery-index.md) as the single source of truth for the full skill inventory and lane mapping.
+Use [skills-discovery-index.md](./catalogs/skills-discovery-index.md) as the single source of truth for the full skill inventory and lane mapping.
 
 Because all requests route through `orchestrator`, discover and select relevant skills from the index instead of maintaining a duplicated skills list here.
 

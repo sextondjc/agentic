@@ -6,7 +6,7 @@
 
 | Folder | Description |
 |---|---|
-| [changes/](./changes/INDEX.md) | Subfolder index. |
+| (none) | - |
 
 ## Documents
 

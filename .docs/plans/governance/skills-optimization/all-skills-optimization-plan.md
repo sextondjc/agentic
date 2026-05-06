@@ -61,7 +61,7 @@ Apply optimization and audit quality checks across all 84 workspace skills and d
 **Skills:** `critical-thinking`
 
 **Files:**
-- Read: `.github/skills/skill-discovery-index.md`
+- Read: `.github/catalogs/skills-discovery-index.md`
 - Read: Prior review history under `.docs/changes/skill/reviews/`
 
 **Steps:**

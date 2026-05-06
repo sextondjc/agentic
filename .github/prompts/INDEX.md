@@ -12,7 +12,6 @@
 
 | File | Title | Category | Summary |
 |---|---|---|---|
-| prompt-lifecycle-catalog.md | Prompt Lifecycle Catalog | index | Canonical lane mappings and rationale for prompt assets. |
 | audit-agent.prompt.md | audit-agent | reference | Prompt template for focused agent customization audits. |
 | audit-customization-types.prompt.md | audit-customization-types | reference | Prompt template for cross-type customization audits. |
 | curate-copilot.prompt.md | curate-copilot | reference | Prompt template for copilot instruction curation workflows. |

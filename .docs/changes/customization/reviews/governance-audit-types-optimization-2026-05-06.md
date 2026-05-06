@@ -34,7 +34,7 @@
 
 **Severity:** HIGH  
 **Check:** OPR-M3 — Artifact does not conflict with active governance instructions or catalogs.  
-**Asset:** `skill-discovery-index.md` entry for `orchestrate-capacitor`  
+**Asset:** `skills-discovery-index.md` entry for `orchestrate-capacitor`  
 **Finding:** The description conflicts with the actual SKILL.md content by omitting 10 sub-domain triggers. Agents using the index as ground truth receive contradictory results vs reading the SKILL.md directly.  
 **Required Fix:** Update skill-discovery-index description to match actual scope of 19 domains.
 
@@ -77,7 +77,7 @@
 | Rank | Priority | Asset | Recommendation | Target Date | Owner |
 |---|---:|---|---|---|---|
 | 1 | HIGH | `csharp-engineer.agent.md` | Replace description with concrete invocation directive | 2026-05-10 | Skills Owner |
-| 2 | HIGH | `skill-discovery-index.md` | Update `orchestrate-capacitor` description; add 6 missing skills | 2026-05-10 | Skills Owner |
+| 2 | HIGH | `skills-discovery-index.md` | Update `orchestrate-capacitor` description; add 6 missing skills | 2026-05-10 | Skills Owner |
 | 3 | MEDIUM | `governance-audit-types.prompt.md` | Complete Output Contract section | 2026-05-17 | Governance Owner |
 | 4 | MEDIUM | `governance-item-audit.prompt.md` | Complete Output Contract section | 2026-05-17 | Governance Owner |
 | 5 | MEDIUM | `secure-coding.instructions.md` | Add language-context qualifier to .NET-specific rules | 2026-05-17 | Governance Owner |

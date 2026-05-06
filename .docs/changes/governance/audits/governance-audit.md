@@ -28,14 +28,14 @@
 
 | Catalog | Asset Type | Registered | Found On Disk | Orphaned | Unregistered | Result |
 |---|---|---:|---:|---:|---:|---|
-| agent-lifecycle-catalog.md | Agents | 18 | 18 | 0 | 0 | ✓ PASS |
-| instruction-lifecycle-catalog.md | Instructions | 21 | 21 | 0 | 0 | ✓ PASS |
-| prompt-lifecycle-catalog.md | Prompts | 21 | 21 | 0 | 0 | ✓ PASS |
-| skill-discovery-index.md | Skills | 130 | 136 | 0 | **6** | ✗ **FAIL** |
+| agents-discovery-index.md | Agents | 18 | 18 | 0 | 0 | ✓ PASS |
+| instructions-discovery-index.md | Instructions | 21 | 21 | 0 | 0 | ✓ PASS |
+| prompts-discovery-index.md | Prompts | 21 | 21 | 0 | 0 | ✓ PASS |
+| skills-discovery-index.md | Skills | 130 | 136 | 0 | **6** | ✗ **FAIL** |
 
 **GOV-M2 Result: PASS** — All registered assets have valid frontmatter fields present (`name`, `description`, and `applyTo` where applicable) across agents, instructions, and prompts. Minor frontmatter quality advisories noted under GOV-S* checks.
 
-**GOV-M3 Result: FAIL (MUST)** — 6 skills exist on disk but are NOT registered in `skill-discovery-index.md`:
+**GOV-M3 Result: FAIL (MUST)** — 6 skills exist on disk but are NOT registered in `skills-discovery-index.md`:
 
 | Unregistered Skill | Directory Path | Status |
 |---|---|---|
@@ -101,13 +101,13 @@ Sampling 10 skills across domains for cross-skill invocation violations:
 
 | Failure ID | Check | Severity | Description | Recommended Action |
 |---|---|---|---|---|
-| GOV-2026-M3-001 | GOV-M3 | **CRITICAL** | 6 CapacitorJS skills unregistered in skill-discovery-index.md | Register all 6 skills in skill-discovery-index.md with correct lane assignments; update orchestrate-capacitor description |
+| GOV-2026-M3-001 | GOV-M3 | **CRITICAL** | 6 CapacitorJS skills unregistered in skills-discovery-index.md | Register all 6 skills in skills-discovery-index.md with correct lane assignments; update orchestrate-capacitor description |
 
 ## Ranked Recommendations
 
 | Rank | Priority | Recommendation | Owner | Target Date |
 |---|---:|---|---|---|
-| 1 | CRITICAL | Register 6 unregistered capacitor skills in skill-discovery-index.md and update orchestrate-capacitor description | Skills Owner | 2026-05-10 |
+| 1 | CRITICAL | Register 6 unregistered capacitor skills in skills-discovery-index.md and update orchestrate-capacitor description | Skills Owner | 2026-05-10 |
 | 2 | HIGH | Verify governance broken-links-grid resolution; re-run link-graph check to close GOV-S5 | Governance Owner | 2026-05-10 |
 | 3 | HIGH | Run hub-sync check and restore cross-workspace coherence (GOV-S6) | Governance Owner | 2026-05-10 |
 | 4 | MEDIUM | Update `csharp-engineer` agent description to include explicit invocation context (GOV-S1) | Skills Owner | 2026-05-17 |
