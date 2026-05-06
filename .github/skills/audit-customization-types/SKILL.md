@@ -37,6 +37,7 @@ Use these standards exactly:
 | TYP-S3 | Boundary clarity | SHOULD | Type responsibilities and boundaries are explicit and do not duplicate another type's primary responsibility. | Record advisory; recommend boundary clarification and mapping updates. |
 | TYP-S4 | Catalog and taxonomy parity | SHOULD | Lifecycle catalogs and taxonomy references reflect current type responsibilities and active audit skills. | Record advisory; recommend catalog/taxonomy updates. |
 | TYP-S5 | Brevity | SHOULD | Type-audit wording is economical and avoids repetitive narrative outside required evidence grids. | Record advisory; recommend concise reductions while preserving evidence quality. |
+| TYP-S6 | Growth governance alignment | SHOULD | Type-level outcomes follow growth discipline: reuse-before-create, anti-duplication, delta-first remediation, and explicit auditability. | Record advisory; recommend minimal, self-contained consolidation and scope-tight remediations. |
 
 ## Trigger Conditions
 
@@ -97,12 +98,13 @@ Optional inputs:
 4. Run `test-type-interaction-matrix.ps1` (from `.github/scripts/powershell/`) to validate interaction-pair coverage and failure-propagation totals when a prior or in-progress report exists.
 5. Evaluate TYP-M* standards first with evidence.
 6. Evaluate TYP-S* standards with evidence.
-7. For each interaction pair, record disposition (`Pass`, `Advisory`, `Fail`, `Blocked`) and linked evidence.
-8. Assign failure severities using one explicit severity mapping table and apply it consistently.
-9. Produce deterministic final disposition from MUST failures and open blocking conflicts.
-10. Produce ranked recommendations with owners and priority.
-11. If a conflict is detected, include resolution options and required follow-up checks.
-12. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
+7. Validate growth-governance alignment before final disposition: duplication control, reuse-before-create, delta-first remediation, and explicit review outputs.
+8. For each interaction pair, record disposition (`Pass`, `Advisory`, `Fail`, `Blocked`) and linked evidence.
+9. Assign failure severities using one explicit severity mapping table and apply it consistently.
+10. Produce deterministic final disposition from MUST failures and open blocking conflicts.
+11. Produce ranked recommendations with owners and priority.
+12. If a conflict is detected, include resolution options and required follow-up checks.
+13. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
 
 ## Output Format Rules
 

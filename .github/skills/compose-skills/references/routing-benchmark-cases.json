@@ -59,6 +59,66 @@
       "id": "C12-review-remediation-loop",
       "request": "Request a structured code review and then remediate accepted findings.",
       "requiredSkills": ["request-code-review", "remediate-review"]
+    },
+    {
+      "id": "C13-capacitor-new-project",
+      "request": "Set up a new CapacitorJS project in an existing SvelteKit app and add it to iOS and Android.",
+      "requiredSkills": ["capacitor-setup", "capacitor-web-integration"]
+    },
+    {
+      "id": "C14-capacitor-native-capability",
+      "request": "Add camera access and push notifications to our Capacitor app with correct permission handling and web fallbacks.",
+      "requiredSkills": ["capacitor-native-apis", "capacitor-testing"]
+    },
+    {
+      "id": "C15-capacitor-production-hardening",
+      "request": "Harden our Capacitor app for production — security, performance gate, and release submission.",
+      "requiredSkills": ["capacitor-security", "capacitor-performance-quality-gate", "capacitor-release-readiness"]
+    },
+    {
+      "id": "C16-capacitor-auth-offline",
+      "request": "Add OAuth login with token refresh and make critical features work offline.",
+      "requiredSkills": ["capacitor-auth-session", "capacitor-offline-resilience", "capacitor-security"]
+    },
+    {
+      "id": "C17-capacitor-ci-observability",
+      "request": "Automate our Capacitor build and signing pipeline in CI and add production telemetry.",
+      "requiredSkills": ["capacitor-ci-integration", "capacitor-observability"]
+    },
+    {
+      "id": "C18-capacitor-upgrade",
+      "request": "Upgrade our app from Capacitor v5 to v7 with compatibility checks and a rollback plan.",
+      "requiredSkills": ["capacitor-migration-upgrades", "capacitor-source-curation", "capacitor-testing"]
+    },
+    {
+      "id": "C19-capacitor-live-updates",
+      "request": "Add OTA live update delivery to our Capacitor app with staged rollout and automatic rollback on crash.",
+      "requiredSkills": ["capacitor-live-updates", "capacitor-ci-integration", "capacitor-security"]
+    },
+    {
+      "id": "C20-capacitor-accessibility",
+      "request": "Audit and fix accessibility in our Capacitor hybrid app for VoiceOver and TalkBack before App Store submission.",
+      "requiredSkills": ["capacitor-accessibility", "capacitor-testing", "capacitor-release-readiness"]
+    },
+    {
+      "id": "C21-capacitor-deep-linking",
+      "request": "Set up Universal Links on iOS and App Links on Android so marketing emails open the correct in-app screen.",
+      "requiredSkills": ["capacitor-deep-linking", "capacitor-security", "capacitor-testing"]
+    },
+    {
+      "id": "C22-capacitor-environment-config",
+      "request": "Configure our Capacitor app to use different API base URLs and app IDs for dev, staging, and production without secrets in source.",
+      "requiredSkills": ["capacitor-environment-config", "capacitor-ci-integration"]
+    },
+    {
+      "id": "C23-capacitor-push-notifications",
+      "request": "Implement end-to-end push notifications with APNs and FCM, Android notification channels, and tap-to-route navigation to the correct screen.",
+      "requiredSkills": ["capacitor-push-notifications", "capacitor-native-apis", "capacitor-deep-linking"]
+    },
+    {
+      "id": "C24-capacitor-privacy-compliance",
+      "request": "Our App Store submission was rejected for missing PrivacyInfo.xcprivacy entries. Fix the privacy manifest, audit all plugins, and complete the Android data safety form.",
+      "requiredSkills": ["capacitor-privacy-compliance", "capacitor-release-readiness"]
     }
   ]
 }

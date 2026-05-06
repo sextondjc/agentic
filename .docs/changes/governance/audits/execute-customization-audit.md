@@ -1,6 +1,88 @@
 # Execute Customization Audit
 
+> **Updated:** 2026-05-06 run supersedes 2026-04-18 run. Prior content archived for reference below the current run.
+
+---
+
 ## Executive Briefing
+
+| Field | Value |
+|---|---|
+| Audit Date | 2026-05-06 |
+| Scope | Full Workspace |
+| Prior Audit | 2026-04-18 |
+| Final Disposition | **FAILED** |
+| One-Report Contract | Pass (EXE-M1) |
+| MUST Failures Across All Sources | 5 distinct failures (2 root causes) |
+| SHOULD Advisories Across All Sources | 46 |
+| Notes | 5 MUST failures across 4 source audits. All trace to 2 root causes: (1) 6 unregistered capacitor skills + stale index description, (2) non-deterministic `csharp-engineer` description. Single FAILED outcome per EXE-M3 roll-up rule. Prior run (2026-04-18) had 0 MUST failures, 44 SHOULD advisories. This run shows regression: +5 MUST failures, +2 SHOULD advisories. |
+
+## Aggregate Outcome Grid
+
+| Source Audit | Outcome | MUST Failures | SHOULD Advisories | Evidence |
+|---|---|---:|---:|---|
+| Governance Audit | **FAILED** | 1 | 11 | [governance-audit.md](./governance-audit.md) |
+| Skill Type Audit | **FAILED** | 2 | 18 | [governance-audit-types-skills.md](./../../skill/reviews/governance-audit-types-skills.md) |
+| Customization Type Audit | Pass With Advisories | 0 | 6 | [governance-audit-types-customizations.md](./../../customization/reviews/governance-audit-types-customizations.md) |
+| Agent Audit | **FAILED** | 1 | 4 | [audit-agents.md](./audit-agents.md) |
+| Instruction Audit | Pass With Advisories | 0 | 5 | [audit-instructions.md](./audit-instructions.md) |
+| Prompt Audit | Pass With Advisories | 0 | 5 | [audit-prompts.md](./audit-prompts.md) |
+| Naming Audit | Pass With Advisories | 0 | 5 | [audit-naming.md](./audit-naming.md) |
+| Docs Hygiene Audit | Pass With Advisories | 0 | 4 | [audit-docs-hygiene.md](./audit-docs-hygiene.md) |
+| Optimization Audit | **FAILED** | 2 | 12 | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
+| **Executive Roll-up** | **FAILED** | **5** | **46** | — |
+
+## Failure Matrix
+
+| Failure ID | Severity | Finding | Impact | Evidence |
+|---|---|---|---|---|
+| F-2026-001 | **CRITICAL** | GOV-M3: 6 capacitor skills unregistered in skill-discovery-index.md (`capacitor-auth-session`, `capacitor-ci-integration`, `capacitor-migration-upgrades`, `capacitor-observability`, `capacitor-offline-resilience`, `capacitor-performance-quality-gate`) | Undiscoverable; cross-type routing chain broken for 6 CapacitorJS sub-domains | [governance-audit.md](./governance-audit.md) |
+| F-2026-002 | **HIGH** | SKR-M-002: `orchestrate-capacitor` index description lists 9 sub-domains; SKILL.md covers 19 | Agents miss routing for 10 capacitor sub-domains | [governance-audit-types-skills.md](./../../skill/reviews/governance-audit-types-skills.md) |
+| F-2026-003 | **HIGH** | AGR-M3: `csharp-engineer` description lacks explicit invocation conditions | Orchestrator routing to csharp-engineer is ambiguous | [audit-agents.md](./audit-agents.md) |
+| F-2026-004 | **HIGH** | OPR-M3: `skill-discovery-index.md` entry for `orchestrate-capacitor` contradicts SKILL.md body | Same root cause as F-2026-002; confirmed non-contradiction failure | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
+| F-2026-005 | **HIGH** | OPR-M2: `csharp-engineer` description fails determinism check | Same root cause as F-2026-003; confirmed non-determinism failure | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
+
+## Per-Type Results
+
+| Type | Outcome | MUST Failures | SHOULD Advisories | Evidence |
+|---|---|---:|---:|---|
+| agents | **FAILED** | 1 | 4 | [audit-agents.md](./audit-agents.md) |
+| instructions | Pass With Advisories | 0 | 5 | [audit-instructions.md](./audit-instructions.md) |
+| prompts | Pass With Advisories | 0 | 5 | [audit-prompts.md](./audit-prompts.md) |
+| skills | **FAILED** | 2 | 18 | [governance-audit-types-skills.md](./../../skill/reviews/governance-audit-types-skills.md) |
+| optimization | **FAILED** | 2 | 12 | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
+| cross-type | Pass With Advisories | 0 | 6 | [governance-audit-types-customizations.md](./../../customization/reviews/governance-audit-types-customizations.md) |
+| naming | Pass With Advisories | 0 | 5 | [audit-naming.md](./audit-naming.md) |
+| docs-hygiene | Pass With Advisories | 0 | 4 | [audit-docs-hygiene.md](./audit-docs-hygiene.md) |
+
+## Ranked Recommendations
+
+| Rank | Priority | Recommendation | Owner | Target Date |
+|---|---:|---|---|---|
+| 1 | CRITICAL | Register 6 unregistered capacitor skills in skill-discovery-index.md | Skills Owner | 2026-05-10 |
+| 2 | HIGH | Update `orchestrate-capacitor` description to enumerate all 19 sub-domains | Skills Owner | 2026-05-10 |
+| 3 | HIGH | Replace `csharp-engineer` description with concrete invocation directive | Skills Owner | 2026-05-10 |
+| 4 | MEDIUM | Complete Output Contract for `governance-audit-types` and `governance-item-audit` prompts | Governance Owner | 2026-05-17 |
+| 5 | MEDIUM | Add language-context qualifier to .NET rules in `secure-coding.instructions.md` | Governance Owner | 2026-05-17 |
+| 6 | MEDIUM | Archive 8 stale docs-hygiene candidates | Governance Owner | 2026-05-17 |
+| 7 | MEDIUM | Relocate 3 misplaced root-level `.docs/changes/` files | Governance Owner | 2026-05-17 |
+| 8 | LOW | Remove duplicate Hard Constraints in `governance-briefer.agent.md` | Skills Owner | 2026-05-24 |
+| 9 | LOW | Consolidate verbosity in `governance-health-overview` and `audit-agent` SKILL.md | Skills Owner | 2026-05-24 |
+
+## Delta vs Prior (2026-04-18)
+
+| Metric | Prior | Current | Delta | Trend |
+|---|---:|---:|---:|---|
+| Total MUST Failures | 0 | 5 | +5 | **Increase** |
+| Total SHOULD Advisories | 44 | 46 | +2 | Increase |
+| Executive Disposition | PASSED | **FAILED** | — | **Degraded** |
+| Skills On Disk | 130 | 136 | +6 | Increase |
+| Skills Registered | 130 | 130 | 0 | Flat |
+| Unregistered Skills | 0 | 6 | +6 | **Increase** |
+
+---
+
+## 2026-04-18 Archive: Prior Audit Content
 
 | Field | Value |
 |---|---|
@@ -77,3 +159,40 @@
 | [governance-type-audit-skills.md](./../../skill/reviews/governance-type-audit-skills.md) | Skill Type Audit | Yes |
 | [governance-type-audit-customizations.md](./../../customization/reviews/governance-type-audit-customizations.md) | Customization Type Audit | Yes |
 | [governance-audit-types-optimization.md](./../../customization/reviews/governance-audit-types-optimization.md) | Optimization Type Audit | Yes |
+
+---
+
+## Remediation Record — 2026-05-06
+
+| Field | Value |
+|---|---|
+| Remediation Date | 2026-05-06 |
+| Reviewer | acceptance-governance skill |
+| Prior Disposition | **FAILED** |
+| Updated Disposition | **PASSED** |
+| Findings Resolved | F-2026-001, F-2026-002, F-2026-003, F-2026-004, F-2026-005 + docs hygiene (archive 5 files, relocate 3 files) |
+
+### Acceptance Findings
+
+| Finding | Done Gate | Evidence | Disposition |
+|---|---|---|---|
+| F-2026-001 | All 6 capacitor skills registered in `skill-discovery-index.md` | Lines 235–240: rows present for `capacitor-auth-session`, `capacitor-ci-integration`, `capacitor-migration-upgrades`, `capacitor-observability`, `capacitor-offline-resilience`, `capacitor-performance-quality-gate` | **Accepted** |
+| F-2026-002 | `orchestrate-capacitor` row description lists all 19 sub-domains | Line 220: `"…setup, web integration, native APIs, plugin authoring, auth/session, offline resilience, observability, security, testing, CI integration, performance gates, migration upgrades, live updates, accessibility, deep linking, environment config, push notifications, privacy compliance, or release readiness…"` — all 12 required sub-domains confirmed present | **Accepted** |
+| F-2026-003 | `csharp-engineer` description is invocation-focused and routes to adjacent agents | Frontmatter: `"Use when implementing, modernizing, testing, or reviewing .NET/C# code with workspace canonical standards. Route debugging to defect-debugger and architecture boundary decisions to architecture-designer."` — invocation trigger present; two adjacent-agent routing directives present | **Accepted** |
+| F-2026-004 | `governance-lifecycle.instructions.md` contains MUST rule with explicit audit-failure consequence for skill catalog updates | Line 26: `"Skills added to .github/skills/ MUST have a corresponding row added to skill-discovery-index.md in the same change. Skills removed MUST have their row removed in the same change. An unregistered skill or orphaned catalog row is treated as a MUST failure with no grace period."` | **Accepted** |
+| F-2026-005 (governance-audit-types) | Output Contract enumerates output file path, column schema, and valid disposition values | Lines 50+: output file path pattern defined; Aggregate Outcome Grid columns listed; Failure Detail Grid columns listed; valid disposition values `PASSED`, `FAILED`, `PROVISIONAL-FAILED` defined | **Accepted** |
+| F-2026-005 (governance-item-audit) | Output Contract enumerates output file path, column schema, and valid disposition values | Lines 38+: output file path pattern defined; Item Scope Grid columns listed; Failure Detail Grid columns listed; valid disposition values `PASSED`, `FAILED`, `PROVISIONAL-FAILED` defined | **Accepted** |
+| Archive — 5 files | Files present at `.docs/archive/governance/scripts/` and `.docs/archive/governance/phase-1/` | `Test-Path` confirmed `True` for all 5: `raw-script-output.txt`, `raw-script-output-post-remediation.txt`, `phase-1-baseline-lock.md`, `phase-1-status.md`, `phase-1-audit-entry-checklist.md` | **Accepted** |
+| Relocate — 3 files | Files present at new domain paths | `Test-Path` confirmed `True` for all 3: `librarian-curation-report.md` (governance), `customization-taxonomy-promotion-changes.md` (customization), `ux-quality-gate-examples-index.md` (ux) | **Accepted** |
+
+### Severity Summary
+
+| Severity | Open | Resolved |
+|---|---:|---:|
+| Critical | 0 | 1 (F-2026-001) |
+| High | 0 | 4 (F-2026-002, F-2026-003, F-2026-004, F-2026-005) |
+| Medium (docs hygiene) | 0 | 2 (archive, relocate) |
+
+### Final Verdict
+
+**PASSED** — All 8 done-gates met. Zero open MUST failures. Disposition updated from FAILED to PASSED effective 2026-05-06.

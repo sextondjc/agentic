@@ -33,6 +33,7 @@ Use these standards exactly:
 | PRR-M4 | Skill routing present | MUST | Prompt explicitly routes to a named skill via `Load and follow [SKILL.md]` or equivalent when the prompt is intended to drive a reusable workflow rather than a lightweight inline task. | Mark failed; recommend adding a skill routing directive or simplifying the prompt purpose. |
 | PRR-S1 | No conflict with other prompts | SHOULD NOT conflict | No harmful overlap or duplicate trigger conditions with other active prompts. | Record advisory finding and recommend escalation to type-governance audit for conflict resolution. |
 | PRR-S2 | Brevity | SHOULD | Wording is economical; no narrative padding beyond routing and output clarity. | Record advisory finding; recommend concise reductions. |
+| PRR-S3 | Growth governance alignment | SHOULD | Prompt changes follow growth discipline: reuse-before-create, anti-duplication, delta-first edits, and explicit auditability. | Record advisory finding and recommend minimal, self-contained consolidation. |
 
 ## Trigger Conditions
 
@@ -95,12 +96,13 @@ Optional inputs:
 3. Build a recommendation deny-list from history entries marked Rejected, Removed, or Illegitimate.
 4. Re-evaluate tracked sources in [source-catalog.md](./references/source-catalog.md) for freshness and current `.prompt.md` behavior before source-sensitive checks.
 5. Build coverage across all mandatory branches: purpose scope, frontmatter validity, output contract, skill routing, prompt conflicts, brevity, source alignment, and history alignment.
-6. Evaluate all PRR-M* and PRR-S* checks with evidence.
-7. Evaluate source alignment against the current source-catalog state: file locations, supported frontmatter metadata, prompt invocation behavior, tool and agent metadata, and Markdown reference expectations.
-8. Produce Pass or Fail for MUST standards and advisory outcome for SHOULD standards.
-9. For each failed or advisory check, record assumptions, trade-offs, blockers, and one recommendation.
-10. Update the prompt history file with findings, decisions, and recommendation statuses.
-11. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
+6. Verify growth-governance alignment: duplication control, reuse-before-create, delta-first edits, and explicit review outputs.
+7. Evaluate all PRR-M* and PRR-S* checks with evidence.
+8. Evaluate source alignment against the current source-catalog state: file locations, supported frontmatter metadata, prompt invocation behavior, tool and agent metadata, and Markdown reference expectations.
+9. Produce Pass or Fail for MUST standards and advisory outcome for SHOULD standards.
+10. For each failed or advisory check, record assumptions, trade-offs, blockers, and one recommendation.
+11. Update the prompt history file with findings, decisions, and recommendation statuses.
+12. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
 
 ## Output Format Rules
 

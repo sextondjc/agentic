@@ -50,6 +50,7 @@ Invoke this skill when any of the following is true:
 ## Inputs
 
 - User request context and target `.instructions.md` scope.
+- Growth-governance baseline: scope-first changes, reuse-before-create, concise deltas, and explicit reviewability.
 
 ## Required Outputs
 
@@ -58,16 +59,18 @@ Invoke this skill when any of the following is true:
 ## Workflow
 
 1. Confirm the target artifact is an instruction file.
-2. Apply frontmatter and scope requirements.
-3. Ensure content is policy-only and testable.
-4. Remove duplication and narrative padding.
-5. Route post-change quality checks to this skill.
+2. Run a pre-authoring growth gate and capture any exception decision: avoid duplicate policy blocks, keep scope singular, and make outputs auditable.
+3. Apply frontmatter and scope requirements.
+4. Ensure content is policy-only and testable.
+5. Remove duplication and narrative padding.
+6. Route post-change quality checks to this skill.
 
 ## Hard Constraint
 
 - Never create root-level folders in any workspace.
 - Never create top-level reference folders; keep references under the owning asset path (for example `.github/skills/<skill>/references/`).
 - Instruction files MUST NOT embed skill names or cross-skill delegation in their policy content. Policy scope is rules only; no execution routing to skills.
+- Prefer canonical shared references for growth-policy guidance rather than embedding duplicate policy blocks in multiple files.
 
 ## Done Criteria
 

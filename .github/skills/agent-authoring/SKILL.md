@@ -51,6 +51,7 @@ Invoke this skill when any of the following is true:
 Required inputs:
 
 - User request context and target `.agent.md` scope.
+- Growth-governance baseline: singular role scope, reuse-before-create, concise deltas, and explicit reviewability.
 - Evaluation date in ISO format (YYYY-MM-DD).
 - Source catalog file path (default: ./references/source-catalog.md).
 
@@ -81,12 +82,13 @@ Optional inputs:
 ## Workflow
 
 1. Confirm the target artifact is an agent file.
-2. Apply frontmatter and section requirements.
-3. Keep role scope singular and deterministic.
-4. Re-evaluate tracked sources in [source-catalog.md](./references/source-catalog.md) when the request includes source governance updates.
-5. Update In Use, Last Evaluated, and Current Status for affected sources.
-6. Reference instruction standards instead of restating them.
-7. Route post-change quality checks to this skill.
+2. Run a pre-authoring growth gate and record any scoped exception: avoid duplicate role patterns, keep boundaries singular, and keep deltas minimal.
+3. Apply frontmatter and section requirements.
+4. Keep role scope singular and deterministic.
+5. Re-evaluate tracked sources in [source-catalog.md](./references/source-catalog.md) when the request includes source governance updates.
+6. Update In Use, Last Evaluated, and Current Status for affected sources.
+7. Reference instruction standards instead of restating them.
+8. Route post-change quality checks to this skill.
 
 ## Hard Constraint
 

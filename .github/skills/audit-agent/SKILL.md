@@ -27,6 +27,7 @@ Use these standards exactly:
 | AGR-S1 | Required sections | SHOULD | Required body sections are present: `## Specialization`, `## Focus Areas`, `## Standards`, `## Hard Constraints`, `## Preferred Companion Skills`. | Record advisory finding and list missing sections with minimum viable drafts. |
 | AGR-S2 | No cross-agent delegation | SHOULD NOT | Agent body contains no hardcoded invocations, delegation chains, or required-sub-agent directives to named sibling agents. | Record advisory finding and recommend removing or routing delegation through an orchestrator. |
 | AGR-S3 | No conflict | SHOULD NOT conflict | No harmful role overlap or contradictory behavior with other agents. | Start conflict workflow and document resolution plan. |
+| AGR-S4 | Growth governance alignment | SHOULD | Agent changes follow growth discipline: reuse-before-create, anti-duplication, delta-first edits, and explicit auditability. | Record advisory finding and recommend minimal, self-contained consolidation. |
 | AGR-S5 | Platform currency | SHOULD | Frontmatter fields are aligned with the current VS Code custom agent specification. No deprecated fields (`infer`) used without acknowledged migration path. New platform fields (`handoffs`, `hooks`, `disable-model-invocation`, `agents`, `model`) are considered where they improve role clarity or capability boundaries. | Record advisory finding, reference source-catalog entry and current spec state, and recommend concrete field updates. |
 
 ## Trigger Conditions
@@ -84,13 +85,14 @@ Optional inputs:
 3. Build a recommendation deny-list from history entries marked Rejected, Removed, or Illegitimate.
 4. Re-evaluate tracked sources in [source-catalog.md](./references/source-catalog.md) for freshness and platform-currency changes. Update status fields before proceeding to AGR-S5 checks.
 5. Build coverage across all mandatory branches: format, invocation trigger, specialization, hard constraints, companion skills, conflict risk, cross-agent delegation, platform currency, and history alignment.
-6. Evaluate all AGR-M* and AGR-S* checks with evidence.
-7. Evaluate platform currency against the current source-catalog state: flag deprecated fields (`infer`), note new available fields that could improve the agent's role clarity or capability boundary.
-8. Produce Pass or Fail for MUST standards and advisory outcome for SHOULD standards.
-9. For each failed or advisory check, record assumptions, trade-offs, blockers, and one recommendation.
-10. If conflict is detected: document it at `.docs/changes/agent/conflicts/`, recommend resolution options, and collaborate with the user to confirm resolution.
-11. Update the agent history file with findings, decisions, and recommendation statuses.
-12. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
+6. Verify growth-governance alignment: duplication control, reuse-before-create, delta-first edits, and explicit review outputs.
+7. Evaluate all AGR-M* and AGR-S* checks with evidence.
+8. Evaluate platform currency against the current source-catalog state: flag deprecated fields (`infer`), note new available fields that could improve the agent's role clarity or capability boundary.
+9. Produce Pass or Fail for MUST standards and advisory outcome for SHOULD standards.
+10. For each failed or advisory check, record assumptions, trade-offs, blockers, and one recommendation.
+11. If conflict is detected: document it at `.docs/changes/agent/conflicts/`, recommend resolution options, and collaborate with the user to confirm resolution.
+12. Update the agent history file with findings, decisions, and recommendation statuses.
+13. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
 
 ## Output Format Rules
 

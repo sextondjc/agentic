@@ -54,7 +54,6 @@ This skill centralizes bundle-to-skill associations so individual skills remain 
 ## References
 
 - Canonical matrix: `./references/phase-discipline-lane-agentic-delivery-matrix.md`
-- Posterity copy: `../../../../.docs/plans/governance/taxonomy-tag-registry/phase-discipline-lane-agentic-delivery-matrix.md`
 - Skill index: `../skill-discovery-index.md`
 - Mapping registry: `./references/mapping-registry.md`
 

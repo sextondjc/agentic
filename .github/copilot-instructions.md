@@ -55,6 +55,7 @@ Leverage the `compose-skill` capability to combine skills into reusable bundles 
 - Prefer skills for narrow, reusable workflows over creating new agents.
 - Prefer concise instruction shims that route to skills for situational or procedural depth.
 - Use `orchestrator` as the mandatory entry point for all requests.
+- **Design language model**: shadcn/ui is the primary design language and TailwindCSS is the utility layer beneath it. When both are present, shadcn CSS variable tokens govern color, spacing, and radius by default. Tailwind utilities and `@theme` tokens are used where they provide clear advantage (layout, responsive breakpoints, prose, animation, content surfaces) without conflicting with shadcn semantic tokens. The goal is the best of both — shadcn owns component and brand tokens; Tailwind owns utility composition. Conflicts are resolved in favor of shadcn semantic tokens unless a documented exception exists.
 - Operate in deterministic-by-default mode: define scope and required outputs before execution and avoid silent scope drift.
 - Allow exploration only as a rare bounded exception with explicit hypothesis, time-box, success criteria, and closure decision.
 - Batch automatable terminal work into a single non-interactive command whenever feasible.
@@ -64,3 +65,4 @@ Leverage the `compose-skill` capability to combine skills into reusable bundles 
 - Keep prompts task-specific and lightweight.
 - Align all planning and change tracking artifacts to `.docs` rather than legacy `.copilot-tracking` paths.
 - Always start with a planning artifact for every request. For complex requests, use a decision record or change plan with explicit scope, required outputs, and execution handoff. For simple requests, use a one-pager with the same information. For trivial requests, a documented intake comment with the same information is sufficient.
+- In the summary of your response to the user, always include a grid of the agentic assets you used, along with a justification for why you chose each one. 

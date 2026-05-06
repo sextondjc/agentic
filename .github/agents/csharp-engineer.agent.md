@@ -1,6 +1,6 @@
 ---
 name: csharp-engineer
-description: 'Expert C#/.NET engineering agent consolidating craftsmanship, modernization, and performance guidance.'
+description: 'Use when implementing, modernizing, testing, or reviewing .NET/C# code with workspace canonical standards. Route debugging to defect-debugger and architecture boundary decisions to architecture-designer.'
 ---
 # C# Engineering Agent
 

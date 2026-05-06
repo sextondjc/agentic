@@ -44,6 +44,7 @@ Copilot compatibility is mandatory for L4:
 - Target skill name and purpose.
 - Trigger conditions and scope boundaries.
 - Required references, scripts, or templates.
+- Growth-governance baseline: reuse-before-create, delta-first edits, concise wording, and explicit auditability.
 - Consumer context for Copilot usage (user intent, constraints, and expected artifacts).
 - Known assumptions, risks, and options that affect recommendation quality.
 - Evaluation date in ISO format (`YYYY-MM-DD`) for source freshness checks.
@@ -70,15 +71,16 @@ Copilot compatibility is mandatory for L4:
 1. Run baseline validation and identify gaps.
 2. Re-evaluate active sources for relevance, authority, freshness, and actionability.
 3. Record source status updates and extract implementation deltas that affect the target skill.
-4. Draft minimal frontmatter and specialization-first content.
-5. Build a depth-calibrated topic map (domain -> subdomain -> specialization) and prune branches that do not serve the target outcome.
-6. Build an L4 coverage matrix: map requested outcomes to required sections, and identify gaps before drafting details.
-7. Add canonical execution-context sections.
-8. Evaluate assumptions and trade-offs; remove weak options and keep one clear recommendation.
-9. Add references to improve reuse; a `references/` directory is not optional and required.
-10. Validate deterministic completeness: required outputs and workflow must cover the intended scope without omission.
-11. If exploration logic is required, keep it bounded with hypothesis, boundary, time-box, success criteria, and closure decision.
-12. Run self-validation against the core rules, L4 target, source-governance summary, and reasoning package before finalizing.
+4. Run a pre-authoring growth gate and record any exception before drafting: reuse-before-create, singular scope, concise delta-only edits, and deterministic verification outputs.
+5. Draft minimal frontmatter and specialization-first content.
+6. Build a depth-calibrated topic map (domain -> subdomain -> specialization) and prune branches that do not serve the target outcome.
+7. Build an L4 coverage matrix: map requested outcomes to required sections, and identify gaps before drafting details.
+8. Add canonical execution-context sections.
+9. Evaluate assumptions and trade-offs; remove weak options and keep one clear recommendation.
+10. Add references to improve reuse; a `references/` directory is not optional and required.
+11. Validate deterministic completeness: required outputs and workflow must cover the intended scope without omission.
+12. If exploration logic is required, keep it bounded with hypothesis, boundary, time-box, success criteria, and closure decision.
+13. Run self-validation against the core rules, L4 target, source-governance summary, and reasoning package before finalizing.
 
 ## Core Rules
 
@@ -91,6 +93,7 @@ Copilot compatibility is mandatory for L4:
 - Never create root-level folders in any workspace.
 - Never create top-level reference folders; keep references under the owning asset path (for example `.github/skills/<skill>/references/`).
 - **Skills MUST NOT reference, invoke, or delegate to other named skills within their guidance body.** All execution content must be entirely self-contained. Cross-referencing between skills is a SKR-M4 violation and a governance fail. If two skills genuinely require shared logic, introduce a dedicated orchestrator skill as the indirection layer rather than referencing from either skill.
+- Prefer a canonical shared reference over repeating growth-policy text across multiple skill bodies.
 
 ## Done Criteria
 

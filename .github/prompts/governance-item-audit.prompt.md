@@ -37,6 +37,9 @@ Do not run isolated item-only checks. First aggregate from current source audits
 
 ## Output Contract
 
+**Output file path:** `.docs/changes/governance/audits/audit-<item-name>-<YYYY-MM-DD>.md`
+where `<item-name>` is the asset filename without extension (e.g., `audit-csharp-engineer-2026-05-06.md`) and `<YYYY-MM-DD>` is the audit date.
+
 Return sections in this order:
 
 1. Item Scope Grid
@@ -45,6 +48,12 @@ Return sections in this order:
 4. Delta vs Prior Item Grid (Metric, Prior, Current, Delta, Trend)
 5. Ranked Recommendations Grid
 6. Final Disposition (`PASSED`, `FAILED`, or `PROVISIONAL-FAILED`)
+
+**Item Scope Grid columns:** `Field`, `Value` — rows: Item Path, Item Type, Audit Date, Standards Applied, Prior Audit Date
+
+**Failure Detail Grid columns:** `Finding ID`, `Severity` (`CRITICAL` | `HIGH` | `MEDIUM` | `LOW`), `Standard`, `Description`, `Recommendation`, `Disposition` (`Open` | `Accepted` | `Resolved`)
+
+**Valid Final Disposition values:** `PASSED` (zero MUST failures), `FAILED` (one or more MUST failures), `PROVISIONAL-FAILED` (MUST failures present but all have accepted mitigations on record)
 
 ## Failure ID Format
 

@@ -35,6 +35,7 @@ Use these standards exactly:
 | INR-S2 | Rationale present for non-obvious rules | SHOULD | Non-obvious mandates include a brief rationale comment. | Record advisory finding; recommend rationale addition. |
 | INR-S3 | No conflict with agent or skill boundaries | SHOULD NOT conflict | Instruction behavior does not contradict active agent personas or skill boundaries. | Record advisory finding and recommend escalation to type-governance audit for boundary resolution. |
 | INR-S4 | Brevity | SHOULD | Instruction wording is economical, avoids duplication, and does not include narrative padding beyond what policy clarity requires. | Record advisory finding; recommend concise reductions. |
+| INR-S5 | Growth governance alignment | SHOULD | Instruction changes follow growth discipline: reuse-before-create, anti-duplication, delta-first edits, and explicit auditability. | Record advisory finding and recommend minimal, self-contained consolidation. |
 
 ## Trigger Conditions
 
@@ -97,12 +98,13 @@ Optional inputs:
 3. Build a recommendation deny-list from history entries marked Rejected, Removed, or Illegitimate.
 4. Re-evaluate tracked sources in [source-catalog.md](./references/source-catalog.md) for freshness and current `.instructions.md` behavior before source-sensitive checks.
 5. Build coverage across all mandatory branches: policy-domain scope, frontmatter validity, `applyTo` precision, workflow leakage, instruction-file conflicts, boundary conflicts, brevity, source alignment, and history alignment.
-6. Evaluate all INR-M* and INR-S* checks with evidence.
-7. Evaluate source alignment against the current source-catalog state: file locations, frontmatter semantics, recursive discovery behavior, `applyTo` usage, and when instructions are auto-applied versus manually attached.
-8. Produce Pass or Fail for MUST standards and advisory outcome for SHOULD standards.
-9. For each failed or advisory check, record assumptions, trade-offs, blockers, and one recommendation.
-10. Update the instruction history file with findings, decisions, and recommendation statuses.
-11. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
+6. Verify growth-governance alignment: duplication control, reuse-before-create, delta-first edits, and explicit review outputs.
+7. Evaluate all INR-M* and INR-S* checks with evidence.
+8. Evaluate source alignment against the current source-catalog state: file locations, frontmatter semantics, recursive discovery behavior, `applyTo` usage, and when instructions are auto-applied versus manually attached.
+9. Produce Pass or Fail for MUST standards and advisory outcome for SHOULD standards.
+10. For each failed or advisory check, record assumptions, trade-offs, blockers, and one recommendation.
+11. Update the instruction history file with findings, decisions, and recommendation statuses.
+12. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
 
 ## Output Format Rules
 

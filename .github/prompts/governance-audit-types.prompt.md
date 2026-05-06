@@ -32,10 +32,10 @@ Keep delta and failure-ID schema aligned to the executive report.
 
 Type reporting must aggregate from current source audits first:
 
-- `<documentation-root>/changes/governance/audits/governance-audit.md`
-- `<documentation-root>/changes/skill/reviews/governance-audit-types-skills.md`
-- `<documentation-root>/changes/customization/reviews/governance-audit-types-customizations.md`
-- `<documentation-root>/changes/customization/reviews/governance-audit-types-optimization.md`
+- `.docs/changes/governance/audits/governance-audit.md`
+- `.docs/changes/skill/reviews/governance-audit-types-skills.md`
+- `.docs/changes/customization/reviews/governance-audit-types-customizations.md`
+- `.docs/changes/customization/reviews/governance-audit-types-optimization.md`
 
 Then render findings/metrics to the requested scope.
 
@@ -49,6 +49,9 @@ Then render findings/metrics to the requested scope.
 
 ## Output Contract
 
+**Output file path:** `.docs/changes/customization/reviews/governance-audit-types-<scope>-<YYYY-MM-DD>.md`
+where `<scope>` is the lowercase `Target Scope` value (e.g., `skills`, `cross-type`) and `<YYYY-MM-DD>` is the audit date.
+
 Return sections in this order:
 
 1. Type Scope Grid
@@ -59,6 +62,12 @@ Return sections in this order:
 6. Delta vs Prior Report Grid (Metric, Prior, Current, Delta, Trend)
 7. Ranked Recommendations Grid
 8. Final Disposition (`PASSED`, `FAILED`, or `PROVISIONAL-FAILED`)
+
+**Aggregate Outcome Grid columns:** `Check ID`, `Description`, `Result` (`PASS` | `FAIL` | `ADVISORY`), `Severity` (`CRITICAL` | `HIGH` | `MEDIUM` | `LOW`), `Finding ID`
+
+**Failure Detail Grid columns:** `Finding ID`, `Severity`, `Asset`, `Description`, `Recommendation`, `Disposition` (`Open` | `Accepted` | `Resolved`)
+
+**Valid Final Disposition values:** `PASSED` (zero MUST failures), `FAILED` (one or more MUST failures), `PROVISIONAL-FAILED` (MUST failures present but all have accepted mitigations on record)
 
 ## Failure ID Format
 

@@ -488,6 +488,195 @@
       "optionalSkills": [],
       "excludedSkills": [],
       "description": "PowerShell script safety, reliability, and style auditing with corrections."
+    },
+    {
+      "id": "capacitor-orchestration",
+      "name": "CapacitorJS Orchestration",
+      "keywords": ["capacitor", "capacitorjs", "ionic capacitor", "cap sync", "cap add", "hybrid app"],
+      "requiredSkills": ["orchestrate-capacitor"],
+      "optionalSkills": ["capacitor-setup", "capacitor-web-integration", "capacitor-native-apis", "capacitor-security", "capacitor-testing", "capacitor-release-readiness", "capacitor-ci-integration", "capacitor-auth-session", "capacitor-offline-resilience", "capacitor-observability", "capacitor-performance-quality-gate", "capacitor-migration-upgrades", "capacitor-plugin-authoring", "capacitor-source-curation"],
+      "excludedSkills": [],
+      "description": "Deterministic intake and phased ownership for any CapacitorJS request spanning multiple capability areas."
+    },
+    {
+      "id": "capacitor-setup",
+      "name": "CapacitorJS Project Setup",
+      "keywords": ["capacitor setup", "capacitor init", "capacitor config", "capacitor.config.ts", "cap add ios", "cap add android", "appid", "webdir"],
+      "requiredSkills": ["capacitor-setup"],
+      "optionalSkills": ["capacitor-web-integration", "capacitor-source-curation"],
+      "excludedSkills": [],
+      "description": "CapacitorJS project initialization, capacitor.config.ts authoring, platform registration, and sync workflow governance."
+    },
+    {
+      "id": "capacitor-web-integration",
+      "name": "CapacitorJS Web Framework Integration",
+      "keywords": ["capacitor react", "capacitor vue", "capacitor angular", "capacitor sveltekit", "platform detection", "isnativeplatform", "getplatform", "pwa capacitor", "live reload capacitor"],
+      "requiredSkills": ["capacitor-web-integration"],
+      "optionalSkills": ["capacitor-setup", "capacitor-security"],
+      "excludedSkills": [],
+      "description": "CapacitorJS integration into React, Vue, Angular, and SvelteKit with platform detection, build alignment, and PWA coexistence."
+    },
+    {
+      "id": "capacitor-native-apis",
+      "name": "CapacitorJS Native APIs",
+      "keywords": ["capacitor camera", "capacitor geolocation", "capacitor filesystem", "capacitor preferences", "capacitor push", "capacitor haptics", "capacitor network", "capacitor share", "capacitor clipboard", "native api", "capacitor plugin api"],
+      "requiredSkills": ["capacitor-native-apis"],
+      "optionalSkills": ["capacitor-security", "capacitor-testing"],
+      "excludedSkills": [],
+      "description": "Official and community Capacitor plugin API usage with permission handling, platform branching, and web fallbacks."
+    },
+    {
+      "id": "capacitor-plugin-authoring",
+      "name": "CapacitorJS Custom Plugin Authoring",
+      "keywords": ["custom plugin", "capacitor plugin", "native bridge", "swift plugin", "kotlin plugin", "capplugin", "pluginmethod"],
+      "requiredSkills": ["capacitor-plugin-authoring"],
+      "optionalSkills": ["capacitor-testing", "capacitor-security"],
+      "excludedSkills": [],
+      "description": "Custom CapacitorJS plugin design with TypeScript interface, iOS Swift bridge, Android Kotlin bridge, and bridge-safety rules."
+    },
+    {
+      "id": "capacitor-auth-session",
+      "name": "CapacitorJS Auth and Session",
+      "keywords": ["capacitor auth", "capacitor login", "capacitor oauth", "pkce capacitor", "capacitor token", "capacitor refresh", "capacitor logout", "capacitor session", "capacitor deep link auth"],
+      "requiredSkills": ["capacitor-auth-session"],
+      "optionalSkills": ["capacitor-security", "capacitor-testing"],
+      "excludedSkills": [],
+      "description": "OAuth/PKCE flows, token lifecycle, secure refresh, callback validation, and logout hygiene in CapacitorJS hybrid apps."
+    },
+    {
+      "id": "capacitor-offline-resilience",
+      "name": "CapacitorJS Offline Resilience",
+      "keywords": ["capacitor offline", "capacitor sync", "capacitor retry", "capacitor conflict", "offline first capacitor", "capacitor queue", "capacitor reconnect"],
+      "requiredSkills": ["capacitor-offline-resilience"],
+      "optionalSkills": ["capacitor-native-apis", "capacitor-testing"],
+      "excludedSkills": [],
+      "description": "Offline-first behavior, retry/backoff, sync conflict resolution, and recovery validation for CapacitorJS apps."
+    },
+    {
+      "id": "capacitor-observability",
+      "name": "CapacitorJS Observability",
+      "keywords": ["capacitor telemetry", "capacitor logging", "capacitor crash", "capacitor diagnostics", "capacitor analytics", "capacitor monitoring", "capacitor tracing"],
+      "requiredSkills": ["capacitor-observability"],
+      "optionalSkills": ["capacitor-security", "capacitor-ci-integration"],
+      "excludedSkills": [],
+      "description": "Production telemetry, crash diagnostics, cross-layer error correlation, privacy-safe signals, and alert routing for CapacitorJS apps."
+    },
+    {
+      "id": "capacitor-security",
+      "name": "CapacitorJS Security Hardening",
+      "keywords": ["capacitor csp", "capacitor security", "capacitor secure storage", "capacitor permission", "capacitor deep link", "capacitor https", "capacitor cors", "capacitor hardening"],
+      "requiredSkills": ["capacitor-security"],
+      "optionalSkills": ["capacitor-auth-session", "capacitor-testing"],
+      "excludedSkills": [],
+      "description": "CSP, secure storage, permission governance, deep link validation, and transport hardening for CapacitorJS apps."
+    },
+    {
+      "id": "capacitor-testing",
+      "name": "CapacitorJS Testing",
+      "keywords": ["capacitor test", "capacitor mock", "capacitor unit test", "capacitor e2e", "capacitor vitest", "capacitor jest", "capacitor playwright", "mock plugin"],
+      "requiredSkills": ["capacitor-testing"],
+      "optionalSkills": ["capacitor-ci-integration", "capacitor-source-curation"],
+      "excludedSkills": [],
+      "description": "CapacitorJS test strategy with plugin mocking, unit/E2E coverage, and CI device test automation."
+    },
+    {
+      "id": "capacitor-ci-integration",
+      "name": "CapacitorJS CI/CD Integration",
+      "keywords": ["capacitor ci", "capacitor pipeline", "capacitor build automation", "capacitor github actions", "capacitor signing ci", "capacitor artifact"],
+      "requiredSkills": ["capacitor-ci-integration"],
+      "optionalSkills": ["capacitor-testing", "capacitor-release-readiness"],
+      "excludedSkills": [],
+      "description": "Deterministic CI toolchain pinning, cap sync automation, signing-safe pipelines, and promotion-grade artifact packaging for CapacitorJS."
+    },
+    {
+      "id": "capacitor-performance-quality-gate",
+      "name": "CapacitorJS Performance Quality Gate",
+      "keywords": ["capacitor performance", "capacitor startup", "capacitor latency", "capacitor memory", "capacitor bridge latency", "capacitor frame time", "capacitor perf"],
+      "requiredSkills": ["capacitor-performance-quality-gate"],
+      "optionalSkills": ["capacitor-testing", "capacitor-observability"],
+      "excludedSkills": [],
+      "description": "Evidence-first startup, rendering, memory, and bridge-latency performance gate for CapacitorJS release candidates."
+    },
+    {
+      "id": "capacitor-migration-upgrades",
+      "name": "CapacitorJS Version Migration",
+      "keywords": ["capacitor upgrade", "capacitor migration", "capacitor version", "capacitor breaking change", "capacitor plugin upgrade", "capacitor v5", "capacitor v6", "capacitor v7"],
+      "requiredSkills": ["capacitor-migration-upgrades"],
+      "optionalSkills": ["capacitor-source-curation", "capacitor-testing"],
+      "excludedSkills": [],
+      "description": "Compatibility-checked Capacitor version upgrade sequencing with rollback planning and release-risk controls."
+    },
+    {
+      "id": "capacitor-release-readiness",
+      "name": "CapacitorJS Release Readiness",
+      "keywords": ["capacitor release", "capacitor app store", "capacitor play store", "capacitor signing", "capacitor icons", "capacitor splash", "capacitor version", "capacitor store submission"],
+      "requiredSkills": ["capacitor-release-readiness"],
+      "optionalSkills": ["capacitor-ci-integration", "capacitor-security", "capacitor-testing"],
+      "excludedSkills": [],
+      "description": "App Store and Play Store release gate covering icons, signing, versioning, store metadata, smoke evidence, and go/no-go decision."
+    },
+    {
+      "id": "capacitor-source-curation",
+      "name": "CapacitorJS Source Curation",
+      "keywords": ["capacitor source", "capacitor docs freshness", "capacitor guidance", "capacitor official", "capacitor drift"],
+      "requiredSkills": ["capacitor-source-curation"],
+      "optionalSkills": [],
+      "excludedSkills": [],
+      "description": "Official-source verification, freshness checking, and drift detection for CapacitorJS skill and guidance content."
+    },
+    {
+      "id": "capacitor-live-updates",
+      "name": "CapacitorJS Live Updates",
+      "keywords": ["capacitor ota", "capacitor live update", "capacitor updater", "appflow", "capgo", "capacitor bundle", "ota rollback", "staged rollout capacitor"],
+      "requiredSkills": ["capacitor-live-updates"],
+      "optionalSkills": ["capacitor-ci-integration", "capacitor-release-readiness", "capacitor-security"],
+      "excludedSkills": [],
+      "description": "OTA live update channel governance, bundle verification, staged rollout, rollback triggers, and store compliance for CapacitorJS apps."
+    },
+    {
+      "id": "capacitor-accessibility",
+      "name": "CapacitorJS Accessibility",
+      "keywords": ["capacitor accessibility", "capacitor voiceover", "capacitor talkback", "capacitor wcag", "capacitor aria", "capacitor focus", "capacitor screen reader", "capacitor a11y"],
+      "requiredSkills": ["capacitor-accessibility"],
+      "optionalSkills": ["capacitor-testing", "capacitor-release-readiness"],
+      "excludedSkills": [],
+      "description": "VoiceOver/TalkBack hybrid accessibility, focus management across web/native boundary, ARIA, dynamic announcements, touch targets, and WCAG compliance for CapacitorJS apps."
+    },
+    {
+      "id": "capacitor-deep-linking",
+      "name": "CapacitorJS Deep Linking",
+      "keywords": ["capacitor deep link", "capacitor universal link", "capacitor app link", "capacitor url scheme", "appUrlOpen", "apple-app-site-association", "assetlinks", "capacitor link routing"],
+      "requiredSkills": ["capacitor-deep-linking"],
+      "optionalSkills": ["capacitor-security", "capacitor-testing", "capacitor-auth-session"],
+      "excludedSkills": [],
+      "description": "Universal Links (iOS), App Links (Android), custom URL schemes, appUrlOpen handler, AASA and assetlinks.json, fallback pages, and deep-link test strategy for CapacitorJS apps."
+    },
+    {
+      "id": "capacitor-environment-config",
+      "name": "CapacitorJS Environment Config",
+      "keywords": ["capacitor env", "capacitor environment", "capacitor config variants", "capacitor dotenv", "capacitor build config", "capacitor app id per env", "capacitor secrets", "capacitor xcconfig"],
+      "requiredSkills": ["capacitor-environment-config"],
+      "optionalSkills": ["capacitor-ci-integration", "capacitor-security"],
+      "excludedSkills": [],
+      "description": "Per-environment .env strategy, build-time injection, capacitor.config.ts variants, native-layer per-env configuration, secret hygiene, and CI injection patterns for CapacitorJS apps."
+    },
+    {
+      "id": "capacitor-push-notifications",
+      "name": "CapacitorJS Push Notifications",
+      "keywords": ["capacitor push", "capacitor push notifications", "capacitor apns", "capacitor fcm", "capacitor firebase messaging", "capacitor notification channel", "capacitor silent push", "capacitor push token"],
+      "requiredSkills": ["capacitor-push-notifications"],
+      "optionalSkills": ["capacitor-native-apis", "capacitor-deep-linking", "capacitor-testing", "capacitor-ci-integration"],
+      "excludedSkills": [],
+      "description": "APNs key and FCM setup, @capacitor/push-notifications wiring, Android notification channels, iOS soft-ask permission, silent pushes, token rotation, FCM HTTP v1 payload design, and tap-to-route navigation."
+    },
+    {
+      "id": "capacitor-privacy-compliance",
+      "name": "CapacitorJS Privacy Compliance",
+      "keywords": ["capacitor privacy manifest", "capacitor PrivacyInfo", "capacitor ATT", "capacitor app tracking transparency", "capacitor data safety", "capacitor GDPR", "capacitor CCPA", "capacitor privacy", "capacitor required reason api"],
+      "requiredSkills": ["capacitor-privacy-compliance"],
+      "optionalSkills": ["capacitor-release-readiness", "capacitor-observability", "capacitor-security"],
+      "excludedSkills": [],
+      "description": "iOS PrivacyInfo.xcprivacy authoring, required-reason API declarations, SDK manifest gap audit, ATT prompt, Android data safety form, and GDPR/CCPA consent flow patterns for CapacitorJS apps."
     }
   ]
 }

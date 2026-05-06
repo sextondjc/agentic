@@ -22,7 +22,8 @@ Keep this file policy-only. Use [SKILL.md](./../skills/route-customization/SKILL
   - [instruction-lifecycle-catalog.md](./instruction-lifecycle-catalog.md)
   - [prompt-lifecycle-catalog.md](./../prompts/prompt-lifecycle-catalog.md)
   - [skill-discovery-index.md](./../skills/skill-discovery-index.md)
-- Update the relevant catalog row in the same change when creating, deleting, or renaming any agent, instruction, prompt, or skill.
+- Update the relevant catalog row in the same change when creating, deleting, or renaming any agent, instruction, prompt, or skill. Omitting this update is a MUST failure (GOV-M3) in the next governance audit and blocks PASSED disposition.
+- Skills added to `.github/skills/` MUST have a corresponding row added to `skill-discovery-index.md` in the same change. Skills removed MUST have their row removed in the same change. An unregistered skill or orphaned catalog row is treated as a MUST failure with no grace period.
 - Include a one-line rationale for lane assignment in each catalog entry.
 
 ## Mandatory Intake Policy

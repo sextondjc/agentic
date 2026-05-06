@@ -26,6 +26,7 @@ Use these standards exactly:
 | SKR-M4 | No cross-skill references | MUST | Skill guidance body contains no invocations, delegations, required-sub-skill directives, or workflow steps that call a named sibling skill. All execution content must be self-contained, with explicit inputs, outputs, and process. | Mark as failed; inline required content directly or introduce a dedicated orchestrator skill as the indirection layer. Do not cross-reference to resolve shared logic. |
 | SKR-S1 | Assets | SHOULD | Skill uses concrete references or reusable assets when they materially improve execution support; a `references/` directory is optional when the skill is already self-contained. | Record advisory finding only when missing assets cause ambiguity, duplication, or weak reuse. |
 | SKR-S3 | Link integrity | SHOULD | Markdown links are resolvable, non-placeholder, and aligned with referenced assets/docs, including valid fragment anchors when present. Validate from the on-disk workspace file context. | Record advisory finding and recommend target fixes or valid replacements. |
+| SKR-S4 | Growth governance alignment | SHOULD | Skill changes follow growth discipline: reuse-before-create, anti-duplication, delta-first edits, and explicit auditability. | Record advisory finding and recommend minimal, self-contained consolidation. |
 | SKR-S5 | Brevity | SHOULD | Skill wording is economical for context efficiency, avoids obvious duplication or narrative padding, and preserves clarity without unnecessary verbosity. | Record advisory finding and recommend concise reductions through the appropriate authoring skill. |
 
 ## Trigger Conditions
@@ -98,17 +99,18 @@ Optional inputs:
 3. Build a recommendation deny-list from history entries marked Rejected, Removed, or Illegitimate.
 4. Re-evaluate tracked sources in [source-catalog.md](./references/source-catalog.md) for freshness and relevance.
 5. Build coverage across mandatory branches: format, triggers, self-containedness, links, and history alignment.
-6. Re-evaluate maintenance assumptions against active standards and source context when requested.
-7. Evaluate all SKR-M* and SKR-S* checks with evidence.
-8. Validate markdown link integrity in SKILL.md from on-disk context (reject placeholder `#` and unresolved local paths).
-9. Prefer workspace-root-relative markdown links to reduce virtual-buffer resolution mismatch in IDE diagnostics.
-10. Validate self-containedness semantically: required execution context must be explicit and not rely on unstated assumptions, using canonical sections or clearly labeled equivalents.
-11. Validate brevity: wording should be economical, without obvious duplication or narrative padding.
-12. Produce pass or fail for MUST standards and advisory outcome for SHOULD standards.
-13. For each failed or advisory check, record assumptions, trade-offs, blockers, and one recommendation.
-14. If advisory findings are primarily concision-related, include rewrite-ready text in the report before finalizing remediation wording.
-15. Update the skill history file with findings, decisions, and recommendation statuses.
-16. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
+6. Verify growth-governance alignment: duplication control, reuse-before-create, delta-first edits, and explicit review outputs.
+7. Re-evaluate maintenance assumptions against active standards and source context when requested.
+8. Evaluate all SKR-M* and SKR-S* checks with evidence.
+9. Validate markdown link integrity in SKILL.md from on-disk context (reject placeholder `#` and unresolved local paths).
+10. Prefer workspace-root-relative markdown links to reduce virtual-buffer resolution mismatch in IDE diagnostics.
+11. Validate self-containedness semantically: required execution context must be explicit and not rely on unstated assumptions, using canonical sections or clearly labeled equivalents.
+12. Validate brevity: wording should be economical, without obvious duplication or narrative padding.
+13. Produce pass or fail for MUST standards and advisory outcome for SHOULD standards.
+14. For each failed or advisory check, record assumptions, trade-offs, blockers, and one recommendation.
+15. If advisory findings are primarily concision-related, include rewrite-ready text in the report before finalizing remediation wording.
+16. Update the skill history file with findings, decisions, and recommendation statuses.
+17. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
 
 ## Output Format Rules
 
