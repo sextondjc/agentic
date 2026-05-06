@@ -196,3 +196,27 @@
 ### Final Verdict
 
 **PASSED** — All 8 done-gates met. Zero open MUST failures. Disposition updated from FAILED to PASSED effective 2026-05-06.
+
+---
+
+## Delta Re-Audit Record — 2026-05-06
+
+| Field | Value |
+|---|---|
+| Re-Audit Date | 2026-05-06 |
+| Re-Audit Scope | Delta — 125 net-new skills (136 → 261); 0 new agents, instructions, or prompts |
+| Prior Baseline Disposition | **PASSED** (post-remediation, 136 skills) |
+| **Delta Re-Audit Disposition** | **PASSED WITH ADVISORIES** |
+| New MUST Failures | 0 |
+| New Advisory Findings | 2 (F-D-2026-001: MEDIUM, F-D-2026-002: HIGH) |
+| New Skill Families | jQuery (12), Kendo UI (21), SvelteKit (17), xUnit Extensions (12), other (~63) |
+| All Prior Failures | Confirmed resolved (F-2026-001 through F-2026-005) |
+| Full Delta Report | [governance-executive-audit-delta-2026-05-06.md](./governance-executive-audit-delta-2026-05-06.md) |
+| Briefing | [governance-summary-delta-2026-05-06.md](./governance-summary-delta-2026-05-06.md) |
+
+### Open Advisory Actions
+
+| Finding ID | Severity | Action | Owner | Target |
+|---|---|---|---|---|
+| F-D-2026-002 | HIGH | Update `orchestrate-kendo` index entry to enumerate all 19 sub-domains | Skills Owner | 2026-05-13 |
+| F-D-2026-001 | MEDIUM | Update `orchestrate-jquery` index entry to append "CI integration" | Skills Owner | 2026-05-13 |

@@ -27,6 +27,7 @@ This folder contains reusable `.prompt.md` templates for repeatable governance a
 | `security-research` | `security-research.prompt.md` | Review | Planning | Produces security assessment output without implementation. |
 | `performance-research` | `performance-research.prompt.md` | Review | Planning | Produces performance assessment output without implementation. |
 | `scaffold-web-ux-quality-gate` | `scaffold-web-ux-quality-gate.prompt.md` | Execution | Planning | Scaffolds a web UX quality-gate evidence bundle for a workstream using core or full dimension sets. |
+| `run-delivery-pattern` | `run-delivery-pattern.prompt.md` | Execution | Planning | Invokes the workspace ratified delivery pattern for a named workstream, routing through orchestrator with the approved phase sequence. |
 
 ## Governance Notes
 

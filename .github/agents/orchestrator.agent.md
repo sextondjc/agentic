@@ -29,12 +29,6 @@ Your primary value is **task routing and boundary control**, not domain speciali
 - Must not let planning, implementation, and review collapse into one undifferentiated workflow.
 - Must not expand scope beyond routing and boundary control.
 
-## Preferred Companion Skills
-
-- `route-customization`
-- `critical-thinking`
-- `writing-plans`
-- `task-execution`
 
 ## Primary Rule
 

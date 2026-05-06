@@ -149,6 +149,21 @@ Recommendation:
 
 - Use this skill as the default project-management and delivery entry point for agent-heavy work. Then instantiate only the phases that materially add value for the project.
 
+## Workspace Execution Contract
+
+This workspace has a ratified delivery pattern that serves as the canonical operating model when this skill is invoked here. Agents must follow it in preference to constructing a model from scratch.
+
+**Ratified plan:** [`.docs/plans/delivery/pattern/delivery-pattern-plan.md`](../../.docs/plans/delivery/pattern/delivery-pattern-plan.md)  
+**Status:** APPROVED 2026-05-06  
+**Phase flow:** P1 Intake → P2 Research → P3 Plan (`G-PLAN`) → P4 Acceptance Criteria ‖ P5 ADRs → P6 TDD (`G-TDD`) → P7 Implementation → P7a Security ‖ P7b Performance ‖ P7c Governance Audit → P8 Quality Gate (`G-REVIEW`) → P9 Test Orchestration → P10 Release Readiness (`G-RELEASE`) → P11 Sync/Promotion → P12 Retrospective
+
+Key constraints from the ratified plan:
+- Full pattern applies to all deliveries — no abridged variant
+- `release-simulation` mandatory when >3 asset files are changed
+- Full PRD for new assets; one-page plan for updates
+- Retrospective due within 5 business days or on-demand
+- `G-TDD` may be satisfied by `code-reviewer` agent; human oversight required for high-risk or cross-cutting changes
+
 ## Source Governance Summary
 
 - Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
