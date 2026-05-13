@@ -16,7 +16,7 @@ This discovery index assigns each agent to a primary lifecycle lane.
 | `topic-learner` | Planning | Execution | Decomposes learning goals into specialist topic maps, calibrates depth, and routes skill/customization generation work. |
 | `plan-researcher` | Planning | Review | Produces research and executable plans before implementation starts. |
 | `architecture-designer` | Planning | Review | Defines architecture boundaries and ADR decisions before build work. |
-| `csharp-engineer` | Execution | Review | Implements .NET code, tests, and focused engineering artifacts. |
+| `csharp-engineer` | Execution | Review | Invoke when C# implementation, testing, review, or architecture guidance needed for .NET/C# code. Handles focused engineering artifacts with deterministic routing. |
 | `defect-debugger` | Execution | Review | Reproduces and fixes defects with verification output. |
 | `sql-dba` | Execution | Review | Executes operational database work and schema changes. |
 | `workspace-scaffolder` | Execution | Planning | Scaffolds project structures and workspace artifacts. |

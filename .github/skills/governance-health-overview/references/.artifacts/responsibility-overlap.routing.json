@@ -6,39 +6,51 @@
   "AssetCounts": {
     "Agents": 18,
     "Instructions": 21,
-    "Prompts": 19,
-    "Skills": 68,
-    "Total": 126
+    "Prompts": 22,
+    "Skills": 261,
+    "Total": 322
   },
-  "DuplicatePairCount": 2,
+  "DuplicatePairCount": 3,
   "DuplicatePairThresholdBreached": false,
   "TypePairCounts": {
-    "skills-skills": 2
+    "skills-skills": 3
   },
   "OverlapPairs": [
     {
       "Signal": "HighTokenSimilarity",
-      "SimilarityScore": 0.9524,
-      "SharedTokenCount": 20,
-      "SharedTokens": "advisories, blocked, defined, evaluate, evaluating, fail, follow-up, governance, history, mandatory, more, outcomes, pass, recommendations, remediation, scope, singular, standards, tracking, workspace",
+      "SimilarityScore": 0.931,
+      "SharedTokenCount": 27,
+      "SharedTokens": "agent-usable, authoritative, components, configure, controls, converted, curate, current, deterministic, does, drift, enforcing, explicit, freshness, governs, grounded, grounding, implement, inputs, official-source-first, policy, projects, reusable, selection, source, sources, while",
       "AssetAType": "skills",
-      "AssetAName": "agent-review",
-      "AssetAPath": ".github/skills/agent-review/SKILL.md",
+      "AssetAName": "kendo-ui-source-curation",
+      "AssetAPath": ".github/skills/kendo-ui-source-curation/SKILL.md",
       "AssetBType": "skills",
-      "AssetBName": "skill-review",
-      "AssetBPath": ".github/skills/skill-review/SKILL.md"
+      "AssetBName": "shadcn-source-curation",
+      "AssetBPath": ".github/skills/shadcn-source-curation/SKILL.md"
     },
     {
       "Signal": "HighTokenSimilarity",
-      "SimilarityScore": 0.9091,
-      "SharedTokenCount": 20,
-      "SharedTokens": "absorb, adjacent, assessments, assets, belong, bounded, described, evidence-backed, execution, narrowly, other, performing, planning, remain, remediation, reporting, research-only, responsibilities, responsibility, specialized",
+      "SimilarityScore": 0.8667,
+      "SharedTokenCount": 26,
+      "SharedTokens": "agent-usable, authoritative, configure, controls, converted, curate, current, deterministic, does, drift, enforcing, explicit, freshness, governs, grounded, grounding, implement, inputs, official-source-first, policy, projects, reusable, selection, source, sources, while",
       "AssetAType": "skills",
-      "AssetAName": "performance-research",
-      "AssetAPath": ".github/skills/performance-research/SKILL.md",
+      "AssetAName": "jquery-source-curation",
+      "AssetAPath": ".github/skills/jquery-source-curation/SKILL.md",
       "AssetBType": "skills",
-      "AssetBName": "security-research",
-      "AssetBPath": ".github/skills/security-research/SKILL.md"
+      "AssetBName": "kendo-ui-source-curation",
+      "AssetBPath": ".github/skills/kendo-ui-source-curation/SKILL.md"
+    },
+    {
+      "Signal": "HighTokenSimilarity",
+      "SimilarityScore": 0.8667,
+      "SharedTokenCount": 26,
+      "SharedTokens": "agent-usable, authoritative, configure, controls, converted, curate, current, deterministic, does, drift, enforcing, explicit, freshness, governs, grounded, grounding, implement, inputs, official-source-first, policy, projects, reusable, selection, source, sources, while",
+      "AssetAType": "skills",
+      "AssetAName": "jquery-source-curation",
+      "AssetAPath": ".github/skills/jquery-source-curation/SKILL.md",
+      "AssetBType": "skills",
+      "AssetBName": "shadcn-source-curation",
+      "AssetBPath": ".github/skills/shadcn-source-curation/SKILL.md"
     }
   ]
 }

@@ -28,7 +28,7 @@ applyTo: '**'
 ## Data Access & Injection
 - Use explicit, parameterized SQL only.
 - Do not concatenate SQL, shell commands, URLs, or file paths from untrusted input.
-- For .NET data access, use Syrx only.
+- For .NET data access specifically, use Syrx only. Non-.NET projects should use parameterized queries native to their platform.
 
 ## Web & API Security
 - Validate outbound user-supplied URLs to prevent SSRF.
