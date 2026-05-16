@@ -1,8 +1,6 @@
 ---
 name: write-component-docs
-agent: 'agent'
 description: 'Create comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards.'
-tools: ['changes', 'search/codebase', 'edit/editFiles', 'extensions', 'fetch', 'githubRepo', 'problems', 'runTasks', 'search', 'search/searchResults', 'runCommands/terminalLastCommand', 'runCommands/terminalSelection', 'testFailure', 'usages', 'vscodeAPI']
 ---
 # Generate Standard OO Component Documentation
 
@@ -64,142 +62,28 @@ The documentation should be saved in the `/.docs/components/` directory and name
 
 ## Required Documentation Structure
 
-The documentation file must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:
+Use the canonical `write-technical-docs` skill templates and include, at minimum, these sections:
 
-```md
----
-title: [Component Name] - Technical Documentation
-component_path: `${input:ComponentPath}`
-version: [Optional: e.g., 1.0, Date]
-date_created: [YYYY-MM-DD]
-last_updated: [Optional: YYYY-MM-DD]
-owner: [Optional: Team/Individual responsible for this component]
-tags: [Optional: List of relevant tags or categories, e.g., `component`,`service`,`tool`,`infrastructure`,`documentation`,`architecture` etc]
----
+1. Component Overview
+2. Architecture and Dependencies (include Mermaid diagram)
+3. Interface Reference (methods/properties table)
+4. Implementation Details
+5. Usage Examples
+6. Quality Attributes
+7. Reference Information
 
-# [Component Name] Documentation
+Required metadata fields in doc frontmatter:
 
-[A short concise introduction to the component and its purpose within the system.]
+- `title`
+- `component_path`
+- `date_created`
 
-## 1. Component Overview
+Optional metadata fields:
 
-### Purpose/Responsibility
-- OVR-001: State component's primary responsibility
-- OVR-002: Define scope (included/excluded functionality)
-- OVR-003: Describe system context and relationships
+- `version`
+- `last_updated`
+- `owner`
+- `tags`
 
-## 2. Architecture Section
-
-- ARC-001: Document design patterns used (Repository, Factory, Observer, etc.)
-- ARC-002: List internal and external dependencies with purposes
-- ARC-003: Document component interactions and relationships
-- ARC-004: Include visual diagrams (UML class, sequence, component)
-- ARC-005: Create mermaid diagram showing component structure, relationships, and dependencies
-
-### Component Structure and Dependencies Diagram
-
-Include a comprehensive mermaid diagram that shows:
-- **Component structure** - Main classes, interfaces, and their relationships
-- **Internal dependencies** - How components interact within the system
-- **External dependencies** - External libraries, services, databases, APIs
-- **Data flow** - Direction of dependencies and interactions
-- **Inheritance/composition** - Class hierarchies and composition relationships
-
-```mermaid
-graph TD
-    subgraph "Component System"
-        A[Main Component] --> B[Internal Service]
-        A --> C[Internal Repository]
-        B --> D[Business Logic]
-        C --> E[Data Access Layer]
-    end
-
-    subgraph "External Dependencies"
-        F[External API]
-        G[Database]
-        H[Third-party Library]
-        I[Configuration Service]
-    end
-
-    A --> F
-    E --> G
-    B --> H
-    A --> I
-
-    classDiagram
-        class MainComponent {
-            +property: Type
-            +method(): ReturnType
-            +asyncMethod(): Promise~Type~
-        }
-        class InternalService {
-            +businessOperation(): Result
-        }
-        class ExternalAPI {
-            <<external>>
-            +apiCall(): Data
-        }
-
-        MainComponent --> InternalService
-        MainComponent --> ExternalAPI
-```
-
-## 3. Interface Documentation
-
-- INT-001: Document all public interfaces and usage patterns
-- INT-002: Create method/property reference table
-- INT-003: Document events/callbacks/notification mechanisms
-
-| Method/Property | Purpose | Parameters | Return Type | Usage Notes |
-|-----------------|---------|------------|-------------|-------------|
-| [Name] | [Purpose] | [Parameters] | [Type] | [Notes] |
-
-## 4. Implementation Details
-
-- IMP-001: Document main implementation classes and responsibilities
-- IMP-002: Describe configuration requirements and initialization
-- IMP-003: Document key algorithms and business logic
-- IMP-004: Note performance characteristics and bottlenecks
-
-## 5. Usage Examples
-
-### Basic Usage
-
-```csharp
-// Basic usage example
-var component = new ComponentName();
-component.DoSomething();
-```
-
-### Advanced Usage
-
-```csharp
-// Advanced configuration patterns
-var options = new ComponentOptions();
-var component = ComponentFactory.Create(options);
-await component.ProcessAsync(data);
-```
-
-- USE-001: Provide basic usage examples
-- USE-002: Show advanced configuration patterns
-- USE-003: Document best practices and recommended patterns
-
-## 6. Quality Attributes
-
-- QUA-001: Security (authentication, authorization, data protection)
-- QUA-002: Performance (characteristics, scalability, resource usage)
-- QUA-003: Reliability (error handling, fault tolerance, recovery)
-- QUA-004: Maintainability (standards, testing, documentation)
-- QUA-005: Extensibility (extension points, customization options)
-
-## 7. Reference Information
-
-- REF-001: List dependencies with versions and purposes
-- REF-002: Complete configuration options reference
-- REF-003: Testing guidelines and mock setup
-- REF-004: Troubleshooting (common issues, error messages)
-- REF-005: Related documentation links
-- REF-006: Change history and migration notes
-
-```
+Keep this prompt as routing plus output contract only; detailed templates belong in skill references.
 

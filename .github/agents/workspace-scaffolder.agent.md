@@ -75,30 +75,21 @@ After questionnaire:
 | `.docs/setup/skills-recommendations.md` | High-priority, medium, deferred, guidance by phase |
 | `.docs/setup/docs-baseline.md` | Canonical documentation structure; essential vs. deferred instructions |
 
+| `.docs/setup/quick-start-checklist.md` | Actionable phase-1 onboarding and execution checklist |
+
 Keep project copilot instructions scannable: every line answers "What should developers do?" or "When should they use this agent/skill?"
-- `github-actions-ci-cd-best-practices.instructions.md` → Recommend during CI/CD setup.
-```
 
-### 5. Quick-Start Checklist (`quick-start-checklist.md`)
+## Invocation Examples
 
-Provide a clear, actionable next-steps list. Example:
+- "Set up a new .NET 9 background service workspace with Syrx and strict docs governance."
+- "Scaffold onboarding assets for a lean REST API project and recommend only essential agents and skills."
+- "Create a project-specific copilot instructions baseline from questionnaire input and existing workspace standards."
 
-```markdown
-## Phase 1 Quick-Start Checklist
+## When Not To Use
 
-Before writing application code:
-
-- [ ] Review and update `.github/agents/project-copilot-instructions.md` with project-specific standards.
-- [ ] Confirm Syrx dependency and version in `.csproj`.
-- [ ] Review [csharp.instructions.md](./../instructions/csharp.instructions.md) as a team.
-- [ ] Create first ADR in `.docs/adr/0001-domain-model.md` documenting core aggregates.
-- [ ] Scaffold initial repository structure in `Infrastructure/` using `syrx-data-access` skill guidance.
-- [ ] Create `.docs/plans/phase-1-implementation.md` with detailed tasks.
-
-## Next Steps (Phase 2)
-- Async patterns (if applicable).
-- API resilience and integration patterns.
-```
+- Do not use for feature implementation, bug fixes, or refactoring existing production code.
+- Do not use when the user asks for a single file edit without workspace-level scaffolding intent.
+- Do not use to make architecture boundary decisions; route those to `architecture-designer`.
 
 ## Execution Workflow
 

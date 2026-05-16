@@ -1,19 +1,21 @@
 ---
 name: kendo-ui-source-curation
-description: Use when Kendo UI guidance must be grounded in authoritative, current sources and converted into reusable, agent-usable skill inputs with freshness and drift controls.
+description: Use when Kendo UI guidance requires Telerik-first evidence across jQuery, Angular, React, and Vue variants with release-history, licensing, and component-contract drift controls.
 ---
 
 # Kendo UI Source Curation
 
 ## Specialization
 
-Curate authoritative Kendo UI guidance into deterministic, reusable skill inputs while enforcing official-source-first policy and explicit freshness controls.
+Build a Telerik-first evidence set centered on commercial release cadence, framework-variant divergence, licensing implications, and component contract drift across the Kendo product line.
+
+This specialization follows `What's New`, `kendo-ui-core`, and variant docs to expose platform-specific breakpoints for Grid/DataSource behavior, theme changes, and upgrade risk.
 
 This skill governs source selection and skill grounding only. It does not implement Kendo UI components or configure projects.
 
 ## Objective
 
-Produce a Kendo UI evidence baseline with explicit decisions for component usage, DataSource patterns, theming, accessibility, forms, security, performance, migration, and testing that downstream Kendo UI skills can cite without re-fetching.
+Produce a Kendo UI source dossier that separates stable vendor guidance from variant-specific caveats for components, DataSource, theming, accessibility, migration, and security.
 
 ## Trigger Conditions
 

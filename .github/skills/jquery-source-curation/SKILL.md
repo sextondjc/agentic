@@ -1,19 +1,21 @@
 ---
 name: jquery-source-curation
-description: Use when jQuery guidance must be grounded in authoritative, current sources and converted into reusable, agent-usable skill inputs with freshness and drift controls.
+description: Use when jQuery guidance needs evidence from api.jquery.com, jQuery Migrate, and release notes with explicit deprecation, plugin-compatibility, and legacy-browser freshness controls.
 ---
 
 # jQuery Source Curation
 
 ## Specialization
 
-Curate authoritative jQuery guidance into deterministic, reusable skill inputs while enforcing official-source-first policy and explicit freshness controls.
+Track jQuery source evidence around long-lived API behavior, Migrate warning coverage, plugin survivability, and browser-era compatibility constraints that matter in legacy estates.
+
+This specialization starts with `api.jquery.com`, `jquery-migrate`, and release notes, then turns those inputs into keep-vs-modernize guidance for teams maintaining older frontend code.
 
 This skill governs source selection and skill grounding only. It does not implement jQuery code or configure projects.
 
 ## Objective
 
-Produce a jQuery evidence baseline with explicit decisions for core API usage, AJAX patterns, events, plugins, performance, migration, security, and testing that downstream jQuery skills can cite without re-fetching.
+Produce a jQuery maintenance evidence pack that clarifies deprecated APIs, migration blockers, plugin risk, and version-specific behavior changes for downstream jQuery skills.
 
 ## Trigger Conditions
 

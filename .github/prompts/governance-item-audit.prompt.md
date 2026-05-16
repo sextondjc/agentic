@@ -6,14 +6,13 @@ description: 'Canonical item governance prompt for one customization item agains
 # Governance Item Audit Prompt
 
 Route this request to `orchestrator`.
-
 Use `execute-customization-audit` to gather full-workspace evidence and use `audit-agent` / `audit-instructions` / `audit-prompts` / `audit-skill` / `optimize-customizations` for item-level findings as applicable.
 
 ## Purpose
 
-Produce an item report for one specific customization where the item is evaluated against:
+Produce an item report for one customization evaluated against:
 
-- workspace-wide standards, and
+- workspace-wide standards
 - standards applicable to the item's customization type.
 
 The report must provide evidence-backed findings that roll up into type and executive reports.
@@ -38,7 +37,7 @@ Do not run isolated item-only checks. First aggregate from current source audits
 ## Output Contract
 
 **Output file path:** `.docs/changes/governance/audits/audit-<item-name>-<YYYY-MM-DD>.md`
-where `<item-name>` is the asset filename without extension (e.g., `audit-csharp-engineer-2026-05-06.md`) and `<YYYY-MM-DD>` is the audit date.
+`<item-name>` is the asset filename without extension (for example, `audit-csharp-engineer-2026-05-06.md`) and `<YYYY-MM-DD>` is the audit date.
 
 Return sections in this order:
 

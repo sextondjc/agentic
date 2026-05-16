@@ -61,7 +61,7 @@
 | Delta Skills Audit | Phase 2: SKR-M* checks per family; Phase 3: orchestrator accuracy | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md) |
 | Executive Delta Report | Phases 1–4 synthesis, metrics grid, failure matrix, recommendations | [governance-executive-audit-delta-2026-05-06.md](./governance-executive-audit-delta-2026-05-06.md) |
 | Prior Executive Audit | Prior FAILED baseline (2026-05-06, pre-remediation) | [execute-customization-audit.md](./execute-customization-audit.md) |
-| Skill Discovery Index | Canonical skill registration source | [skills-discovery-index.md](../../../.github/catalogs/skills-discovery-index.md) |
+| Skill Discovery Index | Canonical skill registration source | [skills-discovery-index.md](../../../../.github/catalogs/skills-discovery-index.md) |
 
 ---
 

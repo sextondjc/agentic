@@ -28,46 +28,21 @@ Key rule: do not proceed to analysis until all 12 answers are concrete and imple
 
 ## Analysis
 
-1. **Audit workspace** — extract Syrx patterns, guard semantics, test naming, documentation structure from existing projects
-2. **Curate agents** — match project needs to: `csharp-engineer`, `architecture-designer`, `syrx-data-access`, `api-design`, `critical-thinking`, etc.
-3. **Curate skills** — prioritize: `syrx-data-access`, `adr-generator`, `api-design` by phase
-4. **Identify instruction scope** — which canonical `.github/instructions/*.md` files are essential vs. optional/deferred
+1. Audit workspace for canonical patterns (Syrx, validation, testing, docs structure).
+2. Curate recommended agents and skills by project phase and scope.
+3. Identify essential vs deferred instruction files.
 
 ## Outputs (Save to `.docs/setup/` + `.github/agents/`)
 
-### 1. Project Copilot Instructions
-**File:** `.github/agents/project-copilot-instructions.md`
+Required artifacts:
 
-Structure:
-- Overview (1–2 sentences)
-- Domain Model (core aggregates, invariants)
-- Canonical Standards (tied to questionnaire answers)
-- Preferred Agents (with rationale)
-- Preferred Skills (with rationale)
-- Documentation Structure
-- Getting Started
+- `.github/agents/project-copilot-instructions.md`
+- `.docs/setup/agents-activation.md`
+- `.docs/setup/skills-recommendations.md`
+- `.docs/setup/docs-baseline.md`
+- `.docs/setup/quick-start-checklist.md`
 
-**Keep it scannable:** < 40 lines, only document what's unique to this project.
-
-### 2. Agent Activation Rules
-**File:** `.docs/setup/agents-activation.md`
-
-Table: Agent | Activate (Yes/Optional) | Rationale
-
-### 3. Skills Recommendations
-**File:** `.docs/setup/skills-recommendations.md`
-
-Sections: High-Priority, Medium-Priority, Deferred, Guidance by Phase
-
-### 4. Documentation Baseline
-**File:** `.docs/setup/docs-baseline.md`
-
-Canonical structure (`.docs/plans/`, `.docs/research/`, `.docs/adr/`, `.docs/changes/`) with essential vs. optional instruction files.
-
-### 5. Quick-Start Checklist
-**File:** `.docs/setup/quick-start-checklist.md`
-
-Actionable list of: Review instructions, confirm Syrx, scaffold repo, create ADR, write plan, next phase steps.
+Artifact schemas and examples are defined in the `scaffold-dotnet` skill references and must be followed.
 
 ## Workspace Rules
 

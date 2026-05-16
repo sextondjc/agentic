@@ -69,50 +69,17 @@ Post-sync curation expectation for target repositories:
 
 ## One-Command Wrapper
 
-Legacy bootstrap (one-time for callers on old sync engine):
-
-```powershell
-./.github/skills/sync-compendium/references/scripts/Bootstrap-CompendiumSyncEngine.ps1 \
-	-SourceRepositoryUrl https://github.com/sextondjc/agentic
-```
-
 Preferred execution entrypoint:
 
 ```powershell
-./.github/skills/sync-compendium/references/scripts/Invoke-CompendiumSync.ps1 \
-	-SourceRepositoryUrl https://github.com/sextondjc/agentic
+./.github/skills/sync-compendium/references/scripts/Invoke-CompendiumSync.ps1 -SourceRepositoryUrl https://github.com/sextondjc/agentic
 ```
 
-Interrogate external source without cloning/importing:
-
-```powershell
-./.github/skills/sync-compendium/references/scripts/Invoke-CompendiumSourceInterrogation.ps1 \
-	-SourceRepositoryUrl https://github.com/github/awesome-copilot \
-	-WorkstreamId WS-EXT-INTAKE-001 \
-	-EngineeringOwner eng-owner \
-	-DeliveryOwner delivery-owner \
-	-SecuritySignOffReference SEC-REF-123 \
-	-RollbackReference RB-PLAYBOOK-01
-```
-
-Apply approved actions:
-
-```powershell
-./.github/skills/sync-compendium/references/scripts/Invoke-CompendiumSync.ps1 \
-	-SourceRepositoryUrl https://github.com/sextondjc/agentic \
-	-Apply \
-	-ApprovedActions .github/agents/architecture-designer.agent.md \
-	-Prune \
-	-ApprovedRemovals .github/skills/old-renamed-skill/SKILL.md
-```
+For bootstrap, interrogation-only mode, and apply/prune examples, follow the canonical examples in `sync-compendium` skill references.
 
 Mandatory gate behavior:
 - If plan contains `hold + missing-in-source` actions, `-Apply` fails unless `-Prune` is set.
 - `-ApprovedRemovals` must include every hold artifactId in that plan.
-
-Bootstrap outcome:
-- Refreshes the sync engine scripts/prompt/skill files in-place from the source commit.
-- After bootstrap, run the normal `Invoke-CompendiumSync.ps1` flow.
 
 ## Required Outputs
 

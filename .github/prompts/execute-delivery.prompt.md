@@ -26,17 +26,21 @@ If no authority memo exists, infer the latest merged execution plan and confirm 
 
 ## Orchestrator-First Routing (Mandatory)
 
-1. Classify each requested item into Planning, Execution, or Review before implementation.
-2. Route through orchestrator first for non-trivial work and phase-split mixed requests.
-3. Dispatch implementation tasks to csharp-engineer only after routing is explicit.
-4. Route research-only security/performance work to research agents and do not implement in those lanes.
+| Rule | Requirement |
+|---|---|
+| Lane classification | Classify each item as Planning, Execution, or Review before implementation. |
+| Intake path | Route non-trivial and mixed requests through orchestrator first. |
+| Implementation dispatch | Dispatch to csharp-engineer only after explicit routing is established. |
+| Research separation | Route research-only security/performance work to research agents; do not implement in those lanes. |
 
 ## Parallel Dispatch Rules
 
-1. Dispatch tickets in parallel only when dependencies are independent.
-2. Do not parallelize tasks that mutate the same contract surface without explicit sequence control.
-3. Keep one owner per ticket id.
-4. Require independent evidence capture per ticket.
+| Rule | Requirement |
+|---|---|
+| Independence | Parallelize only tickets with independent dependencies. |
+| Contract safety | Do not parallelize mutations on the same contract surface without explicit sequencing. |
+| Ownership | Keep one owner per ticket id. |
+| Evidence | Capture evidence independently for each ticket. |
 
 ## Session Startup Checklist
 

@@ -11,7 +11,7 @@ Use the `curate-copilot-instructions` skill as the primary workflow.
 
 Update `copilot-instructions.md` so imported skills, agents, and instructions are discoverable and new contributors can pick the right tool quickly.
 
-Use this prompt when importing customizations, setting up a workspace, adding assets, or cleaning stale references.
+Use this prompt for copilot-instructions curation after customization import or inventory changes.
 
 ## Required Inputs
 
@@ -27,7 +27,7 @@ Ask for missing required inputs before continuing.
 
 ## Execution Contract
 
-Run the full curation workflow from [SKILL.md](./../skills/curate-copilot-instructions/SKILL.md) and keep this prompt as a routing and output contract only.
+Run the full curation workflow from [README.md](./../skills/curate-copilot-instructions/references/README.md) and keep this prompt as a routing and output contract only.
 
 Required outputs:
 
@@ -43,12 +43,6 @@ Required outputs:
 - [ ] No duplicate entries across sections.
 - [ ] Links to [skills-discovery-index.md](./../catalogs/skills-discovery-index.md) are valid.
 - [ ] No references to removed or renamed assets.
-
-## Success Criteria
-
-- `copilot-instructions.md` reflects current workspace scope and defaults.
-- Curated assets are discoverable and non-duplicative.
-- All verification checks pass.
 
 
 

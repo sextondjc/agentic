@@ -21,3 +21,26 @@ Requirements:
 - Call out missing skills, missing evidence, or missing tooling in the report.
 - Keep implementation status explicit: no remediations are to be implemented.
 
+## Output Contract
+
+Create the report at the default output location and include these sections in order:
+
+1. Executive Summary
+2. Scope and Assumptions
+3. Evidence Collected
+4. Bottleneck Findings Grid
+5. Prioritized Remediation Options (research-only)
+6. Risk and Confidence Notes
+7. Open Questions
+
+### Bottleneck Findings Grid Schema
+
+| Finding ID | Area | Symptom | Evidence | Estimated Impact | Recommendation |
+|---|---|---|---|---|---|
+
+### Success Criteria
+
+- At least 3 evidence-backed findings are documented unless the scope is demonstrably clean.
+- Every recommendation includes rationale and an expected impact level.
+- Report explicitly states "No code changes implemented".
+

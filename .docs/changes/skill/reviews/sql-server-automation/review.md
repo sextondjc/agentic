@@ -2,15 +2,11 @@
 
 ## Metadata
 
-- Review Date: 2026-04-24
+- Review Date: 2026-05-13
 - Reviewer Skill: audit-skill
 - Target Skill: sql-server-automation
 - Target Path: .github/skills/sql-server-automation/SKILL.md
 - Review Scope: Full
-
-## Storage
-
-- Save this file to .docs/changes/skill/reviews/sql-server-automation/review.md
 
 ## Summary Outcome Grid
 
@@ -25,15 +21,15 @@
 
 | Standard ID | Result | Evidence | Notes |
 |---|---|---|---|
-| SKR-M1 | Pass | .github/skills/sql-server-automation/SKILL.md | The skill stays focused on repeatable SQL Server operational automation. |
-| SKR-M2 | Pass | .github/skills/sql-server-automation/SKILL.md | Front matter and Markdown structure are valid. |
-| SKR-M3 | Pass | .github/skills/sql-server-automation/SKILL.md | Discovery triggers are explicit for maintenance, migration, and DBA automation work. |
-| SKR-M4 | Pass | .github/skills/sql-server-automation/SKILL.md | The workflow is self-contained and does not reference sibling skills for execution. |
-| SKR-S1 | Pass | .github/skills/sql-server-automation/references/ | Concrete source catalog and runbook template are present. |
-| SKR-S2 | Pass | .github/skills/sql-server-automation/SKILL.md | No contradictory overlap was identified in the SQL family review. |
-| SKR-S3 | Pass | .github/skills/sql-server-automation/SKILL.md | Markdown links resolve to on-disk assets. |
-| SKR-S4 | Pass | .github/skills/sql-server-automation/SKILL.md | Inputs, outputs, and rollback-aware workflow are explicit. |
-| SKR-S5 | Pass | .github/skills/sql-server-automation/SKILL.md | Wording is concise relative to the workflow breadth. |
+| SKR-M1 | Pass | .github/skills/sql-server-automation/SKILL.md | Single primary objective for the skill. |
+| SKR-M2 | Pass | .github/skills/sql-server-automation/SKILL.md | Front matter includes required name and description fields. |
+| SKR-M3 | Pass | .github/skills/sql-server-automation/SKILL.md | Triggering guidance present in description or body. |
+| SKR-M4 | Pass | .github/skills/sql-server-automation/SKILL.md | Skill is self-contained (baseline check). |
+| SKR-S1 | Pass | .github/skills/sql-server-automation/references/ | Concrete references/assets exist. |
+| SKR-S2 | Pass | .github/skills/*/SKILL.md | No cross-skill conflicts detected. |
+| SKR-S3 | Pass | C:\Projects\agentic\.docs\changes\skill\reviews\sql-server-automation | No broken or placeholder links. |
+| SKR-S4 | Pass | .docs/changes/skill/history/ | Aligns with growth governance principles. |
+| SKR-S5 | Pass | .github/skills/sql-server-automation/SKILL.md | Wording is economical and clear. |
 
 ## Recommendations
 
@@ -43,18 +39,12 @@
 
 ## History Guard Check
 
-- History File Loaded: no
+- History File Loaded: no (initial baseline)
 - Deny-list Entries Applied: 0
 - Suppressed Repeat Recommendations: 0
-- Notes: First review entry for this skill.
+- Notes: Initial baseline review entry.
 
 ## Next Actions
 
-1. Keep the automation template aligned with future tooling additions.
-2. Re-audit when the execution surface or rollback model changes.
-
-## Aggregate Results Grid (Use for multi-skill reviews)
-
-| Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
-|---|---|---:|---:|---|---|
-| sql-server-automation | Pass | 0 | 0 | None | .docs/changes/skill/reviews/sql-server-automation/review.md |
+1. Review and accept or reject proposed recommendations.
+2. Update skill history ledger with decision outcomes.

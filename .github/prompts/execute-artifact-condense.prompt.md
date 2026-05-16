@@ -15,23 +15,24 @@ Produce recommendation-only output that makes artifacts shorter without sacrific
 
 Pick one mode before starting:
 
-- Single artifact mode: run for one named artifact.
-- Full artifact set mode: run for all artifacts matching the selected Artifact Type file pattern.
+| Mode | Behavior |
+|---|---|
+| `single` | Review exactly one named artifact. |
+| `all` | Review all artifacts matching the selected artifact-type pattern. |
 
 ## Inputs
 
 Provide these values at run time:
 
-- Review Date: `YYYY-MM-DD`.
-- Mode: `single` or `all`.
-- Artifact Type: `Skill`, `Agent`, `Instruction`, `Prompt`, or `Hub`.
-- Target Artifact Name: required only when mode is `single`.
-- Workspace Root Path.
-
-Optional:
-
-- Maximum reduction target as a percentage per artifact.
-- Sections to protect from edits.
+| Input | Required | Notes |
+|---|---|---|
+| Review Date (`YYYY-MM-DD`) | Yes | Review timestamp |
+| Mode (`single` or `all`) | Yes | Determines target set size |
+| Artifact Type (`Skill`/`Agent`/`Instruction`/`Prompt`/`Hub`) | Yes | Determines routing skill |
+| Target Artifact Name | Only for `single` | Exact artifact identifier |
+| Workspace Root Path | Yes | Scope boundary |
+| Maximum reduction target (%) | No | Optional tightening goal |
+| Protected sections | No | Sections excluded from rewrite |
 
 ## Scope
 
@@ -42,10 +43,10 @@ Optional:
 ## Required Actions
 
 1. Resolve artifact type:
-   - `Skill` -> [SKILL.md](./../skills/skills-authoring/SKILL.md)
-   - `Agent` -> [SKILL.md](./../skills/agent-authoring/SKILL.md)
-   - `Instruction` -> [SKILL.md](./../skills/instructions-authoring/SKILL.md)
-   - `Prompt`/`Hub` -> [SKILL.md](./../skills/route-customization/SKILL.md) (determine owning artifact and route accordingly)
+   - `Skill`: Load and follow [SKILL.md](./../skills/skills-authoring/SKILL.md)
+   - `Agent`: Load and follow [SKILL.md](./../skills/agent-authoring/SKILL.md)
+   - `Instruction`: Load and follow [SKILL.md](./../skills/instructions-authoring/SKILL.md)
+   - `Prompt`/`Hub`: Load and follow [SKILL.md](./../skills/route-customization/SKILL.md) to determine owning artifact and route accordingly
 2. Identify the artifact type and preserve its mandatory sections.
 3. Resolve target set:
    - If mode is `single`, review only the selected artifact.

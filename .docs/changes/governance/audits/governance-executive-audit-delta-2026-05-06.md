@@ -86,9 +86,9 @@
 | Phase | Scope | Outcome | MUST Failures | Advisories | Evidence |
 |---|---|---|---:|---:|---|
 | Phase 1 — Delta Baseline Lock | 261 on-disk vs. 261 indexed; prior failures | ✅ PASS | 0 | 0 | [delta-baseline-2026-05-06.md](./delta-baseline-2026-05-06.md) |
-| Phase 2 — SKR-M* Quality (new skills) | 125 new skills; 4 named families + others | ✅ PASS | 0 | 0 | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md#phase-2) |
-| Phase 3 — Orchestrator Accuracy | `orchestrate-jquery`, `orchestrate-kendo`, `orchestrate-sveltekit` | ⚠️ PASS WITH ADVISORIES | 0 | 2 | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md#phase-3) |
-| Phase 4 — Type Catalog Integrity | Agents, instructions, prompts catalogs | ✅ PASS | 0 | 0 | [delta-baseline-2026-05-06.md](./delta-baseline-2026-05-06.md#phase-4) |
+| Phase 2 — SKR-M* Quality (new skills) | 125 new skills; 4 named families + others | ✅ PASS | 0 | 0 | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md) |
+| Phase 3 — Orchestrator Accuracy | `orchestrate-jquery`, `orchestrate-kendo`, `orchestrate-sveltekit` | ⚠️ PASS WITH ADVISORIES | 0 | 2 | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md) |
+| Phase 4 — Type Catalog Integrity | Agents, instructions, prompts catalogs | ✅ PASS | 0 | 0 | [delta-baseline-2026-05-06.md](./delta-baseline-2026-05-06.md) |
 
 ---
 

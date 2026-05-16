@@ -2,15 +2,11 @@
 
 ## Metadata
 
-- Review Date: 2026-04-24
+- Review Date: 2026-05-13
 - Reviewer Skill: audit-skill
 - Target Skill: sql-server-query-tuning
 - Target Path: .github/skills/sql-server-query-tuning/SKILL.md
 - Review Scope: Full
-
-## Storage
-
-- Save this file to .docs/changes/skill/reviews/sql-server-query-tuning/review.md
 
 ## Summary Outcome Grid
 
@@ -25,15 +21,15 @@
 
 | Standard ID | Result | Evidence | Notes |
 |---|---|---|---|
-| SKR-M1 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | The skill is specialized to evidence-first query tuning and regression-safe improvement. |
-| SKR-M2 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | Front matter and Markdown structure are valid. |
-| SKR-M3 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | Trigger guidance is explicit for slow queries, regressions, and indexing trade-offs. |
-| SKR-M4 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | The workflow is self-contained and does not require sibling skill execution. |
-| SKR-S1 | Pass | .github/skills/sql-server-query-tuning/references/ | Concrete evidence template and source catalog are present. |
-| SKR-S2 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | No contradictory overlap was identified in the SQL family review. |
-| SKR-S3 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | Markdown links resolve to on-disk assets. |
-| SKR-S4 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | Inputs, outputs, option-pruning rules, and workflow are explicit. |
-| SKR-S5 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | Wording is concise for a tuning workflow of this depth. |
+| SKR-M1 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | Single primary objective for the skill. |
+| SKR-M2 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | Front matter includes required name and description fields. |
+| SKR-M3 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | Triggering guidance present in description or body. |
+| SKR-M4 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | Skill is self-contained (baseline check). |
+| SKR-S1 | Pass | .github/skills/sql-server-query-tuning/references/ | Concrete references/assets exist. |
+| SKR-S2 | Pass | .github/skills/*/SKILL.md | No cross-skill conflicts detected. |
+| SKR-S3 | Pass | C:\Projects\agentic\.docs\changes\skill\reviews\sql-server-query-tuning | No broken or placeholder links. |
+| SKR-S4 | Pass | .docs/changes/skill/history/ | Aligns with growth governance principles. |
+| SKR-S5 | Pass | .github/skills/sql-server-query-tuning/SKILL.md | Wording is economical and clear. |
 
 ## Recommendations
 
@@ -43,18 +39,12 @@
 
 ## History Guard Check
 
-- History File Loaded: no
+- History File Loaded: no (initial baseline)
 - Deny-list Entries Applied: 0
 - Suppressed Repeat Recommendations: 0
-- Notes: First review entry for this skill.
+- Notes: Initial baseline review entry.
 
 ## Next Actions
 
-1. Keep the tuning evidence template aligned with future validation needs.
-2. Re-audit if new tuning modes or broader workload semantics are introduced.
-
-## Aggregate Results Grid (Use for multi-skill reviews)
-
-| Skill | Outcome | MUST Failures | SHOULD Advisories | Conflict Status | Report |
-|---|---|---:|---:|---|---|
-| sql-server-query-tuning | Pass | 0 | 0 | None | .docs/changes/skill/reviews/sql-server-query-tuning/review.md |
+1. Review and accept or reject proposed recommendations.
+2. Update skill history ledger with decision outcomes.

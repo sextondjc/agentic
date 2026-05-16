@@ -7,7 +7,7 @@
 | Folder | Description |
 |---|---|
 | [renames/](./renames/INDEX.md) | Subfolder index. |
-| [reviews/](./reviews/INDEX.md) | Subfolder index. |
+| [reviews/](./reviews/governance-type-audit-customizations.md) | Reviews folder (entrypoint report). |
 
 ## Documents
 

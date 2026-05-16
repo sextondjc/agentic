@@ -13,6 +13,7 @@ Inputs:
 - `scope-summary`: `${input:scope-summary:checkout refresh and registration flow}`
 
 Execution rules:
+- Load and follow [SKILL.md](../skills/web-ux-quality-gate/SKILL.md).
 - If `bundle-scope=core`, create the core bundle for accessibility, usability, and performance plus the unified recommendation artifact.
 - If `bundle-scope=full`, create the full portable bundle supported by the umbrella quality-gate skill.
 - Use the templates and worked examples in these references:

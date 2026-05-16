@@ -5,7 +5,7 @@
 >
 > **Status:** Approved baseline — 2026-04-17
 >
-> **ADR:** [adr-0001-phase-discipline-lane-model-adoption.md](../../../adr/governance/adr-0001-phase-discipline-lane-model-adoption.md)
+> **ADR:** [adr-0001-phase-discipline-lane-model-adoption.md](../../../../.docs/adr/governance/adr-0001-phase-discipline-lane-model-adoption.md)
 >
 > **Canonical source:** [phase-discipline-lane-agentic-delivery-matrix.md](../../../../.github/skills/matrix-skill-mapping/references/phase-discipline-lane-agentic-delivery-matrix.md)
 >

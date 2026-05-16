@@ -4,5 +4,4 @@ Reusable assets for the executive aggregation workflow.
 
 ## Assets
 
-- [execute-customization-audit-report-template.md](./execute-customization-audit-report-template.md)
 - [execute-customization-audit-metrics-checklist.md](./execute-customization-audit-metrics-checklist.md)

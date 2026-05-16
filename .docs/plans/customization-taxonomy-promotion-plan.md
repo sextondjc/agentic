@@ -30,7 +30,7 @@
 | Approval | Approved by user on 2026-04-02 |
 | Execution Route Used | Same-session execution of approved plan tasks |
 | Completion Date | 2026-04-02 |
-| Completion Evidence | [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md), [governance-audit.md](./../changes/governance/audits/governance-audit.md) |
+| Completion Evidence | [customization-taxonomy-promotion-changes.md](./../changes/customization/customization-taxonomy-promotion-changes.md), [governance-audit.md](./../changes/governance/audits/governance-audit.md) |
 
 ## Intent and Scope
 
@@ -61,7 +61,7 @@
 | Workstream ID | Current State | Next Action | Blockers | Resume Command/Prompt | Artifact Links |
 |---|---|---|---|---|---|
 | `WS-01` | Planned | Obtain user approval on promotion boundary and execution route | Awaiting approval | Continue from this plan | [customization-taxonomy-promotion-plan.md](./customization-taxonomy-promotion-plan.md) |
-| `WS-02` | Not started | Update taxonomy content, create ADR, and maintain progressive change log after approval | `DEC-01` approval required | Use `task-execution` if approved in-session; else `executing-plans` | [customization-taxonomy-v1.md](./../../.github/skills/governance-audit/references/customization-taxonomy-v1.md), [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md) |
+| `WS-02` | Not started | Update taxonomy content, create ADR, and maintain progressive change log after approval | `DEC-01` approval required | Use `task-execution` if approved in-session; else `executing-plans` | [customization-taxonomy-v1.md](./../../.github/skills/governance-audit/references/customization-taxonomy-v1.md), [customization-taxonomy-promotion-changes.md](./../changes/customization/customization-taxonomy-promotion-changes.md) |
 | `WS-03` | Not started | Add discoverability links after taxonomy content is final | `WS-02` not complete | Use `write-technical-docs` workflow | `reference/index.md` (removed in prune pass), [README.md](./../adr/README.md) |
 | `WS-04` | Not started | Run governance audit and capture findings | `WS-02` and `WS-03` not complete | Use `governance-audit` skill (`governance-cadence` may be used only as a convenience prompt wrapper) | `.docs/changes/governance/audits/` |
 
@@ -101,9 +101,9 @@
 | File | Action | Responsibility |
 |---|---|---|
 | [customization-taxonomy-v1.md](./../../.github/skills/governance-audit/references/customization-taxonomy-v1.md) | Modify | Normalize asset inventory, resolve family semantics, update status from draft to approved baseline, and remove stale statements. |
-| [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md) | Create | Progressive execution log linking changes back to `PLAN-20260402-001`, affected workstreams, and any deviations. |
+| [customization-taxonomy-promotion-changes.md](./../changes/customization/customization-taxonomy-promotion-changes.md) | Create | Progressive execution log linking changes back to `PLAN-20260402-001`, affected workstreams, and any deviations. |
 | [README.md](./../adr/README.md) | Modify | Add the new ADR to the local ADR index. |
-| [customization-taxonomy-promotion-boundary.md](./../adr/customization-taxonomy-promotion-boundary.md) | Create | Record why v1 promotion is documentation-first and why catalog schema changes remain deferred. |
+| [adr README](./../adr/README.md) | Update | Record why v1 promotion is documentation-first and why catalog schema changes remain deferred. |
 | `reference/index.md` (removed in prune pass) | Modify | Add an explicit link to the taxonomy reference if missing and keep the reference set discoverable. |
 | [planning-execution-review-governance.md](./../../.github/skills/governance-audit/references/planning-execution-review-governance.md) | Modify only if needed | Add a brief cross-reference to the promoted taxonomy only if a discoverability gap remains after index updates. |
 | `.docs/changes/governance/audits/governance-audit.md` | Create during execution | Capture post-change governance validation. |
@@ -146,7 +146,7 @@
 
 **Files:**
 - Modify: [customization-taxonomy-v1.md](./../../.github/skills/governance-audit/references/customization-taxonomy-v1.md)
-- Create: [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md)
+- Create: [customization-taxonomy-promotion-changes.md](./../changes/customization/customization-taxonomy-promotion-changes.md)
 - Review: [rename-history.md](./../changes/customization/renames/rename-history.md)
 - Review: [agents-discovery-index.md](./../../.github/catalogs/agents-discovery-index.md)
 - Review: [instructions-discovery-index.md](./../../.github/catalogs/instructions-discovery-index.md)
@@ -188,7 +188,7 @@
 ### Task 5: Validate and Close
 
 **Files:**
-- Modify: [customization-taxonomy-promotion-changes.md](./../changes/customization-taxonomy-promotion-changes.md)
+- Modify: [customization-taxonomy-promotion-changes.md](./../changes/customization/customization-taxonomy-promotion-changes.md)
 - Create: `.docs/changes/governance/audits/governance-audit.md`
 
 - [ ] Run `governance-audit` after edits complete.

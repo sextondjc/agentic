@@ -64,7 +64,7 @@
 | **Instruction & Prompt Quality** | ✅ PASS | 9/10 | Instructions pass MUST (0 failures); prompts pass MUST (0 failures); 5 SHOULD advisories each are non-blocking | [audit-instructions.md](./audit-instructions.md), [audit-prompts.md](./audit-prompts.md) |
 | **Artifact Lifecycle & Traceability** | ✅ PASS | 8/10 | Planning → Execution → Review lanes covered; evidence artifacts present; 8 stale docs candidates identified but non-critical | [governance-audit.md](./governance-audit.md), [audit-docs-hygiene.md](./audit-docs-hygiene.md) |
 | **Optimization & Determinism** | ❌ FAIL | 3/10 | OPR-M2/OPR-M3 failures: csharp-engineer description indeterminism; orchestrate-capacitor contradiction (9 vs 19 domains) | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
-| **Standards Compliance Consistency** | ⚠️ AT-RISK | 5/10 | Governance standards scattered across 3 instruction files with global `applyTo: '**'`; rationale documented but consolidation opportunity exists | [governance-release.instructions.md](./../../instructions/governance-release.instructions.md), [request-economy.instructions.md](./../../instructions/request-economy.instructions.md), [secure-coding.instructions.md](./../../instructions/secure-coding.instructions.md) |
+| **Standards Compliance Consistency** | ⚠️ AT-RISK | 5/10 | Governance standards scattered across 3 instruction files with global `applyTo: '**'`; rationale documented but consolidation opportunity exists | [governance-release.instructions.md](../../../../.github/instructions/governance-release.instructions.md), [request-economy.instructions.md](../../../../.github/instructions/request-economy.instructions.md), [secure-coding.instructions.md](../../../../.github/instructions/secure-coding.instructions.md) |
 
 **Dimension Score: 50/80 (62.5%)**
 
@@ -75,7 +75,7 @@
 | Standard Family | Phase | MUST Failures | SHOULD Advisories | Status | Evidence |
 |---|---|---:|---:|---|---|
 | **GOV-M*** (Core Governance) | Current | 1 (GOV-M3: unregistered skills) | 11 | ❌ FAIL | [governance-audit.md](./governance-audit.md) |
-| **SKR-M*** (Skill Quality) | Phase 2 | 0 | 0 | ✅ PASS | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md#phase-2) |
+| **SKR-M*** (Skill Quality) | Phase 2 | 0 | 0 | ✅ PASS | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md) |
 | **AGR-M*** (Agent Quality) | Current | 1 (AGR-M3: csharp-engineer) | 4 | ❌ FAIL | [audit-agents.md](./audit-agents.md) |
 | **INR-M*** (Instruction Quality) | Current | 0 | 5 | ✅ PASS | [audit-instructions.md](./audit-instructions.md) |
 | **PRR-M*** (Prompt Quality) | Current | 0 | 5 | ✅ PASS | [audit-prompts.md](./audit-prompts.md) |
@@ -123,9 +123,9 @@
 
 | Check | Result | MUST | SHOULD | Evidence |
 |---|---|---:|---:|---|
-| 125 new skills SKR-M* coverage | ✅ PASS | 0 | 0 | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md#phase-2) |
-| Orchestrator index accuracy (3 orchestrate-* skills) | ⚠️ PASS W/ ADVISORIES | 0 | 2 | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md#phase-3) |
-| Type catalog integrity | ✅ PASS | 0 | 0 | [delta-baseline-2026-05-06.md](./delta-baseline-2026-05-06.md#phase-4) |
+| 125 new skills SKR-M* coverage | ✅ PASS | 0 | 0 | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md) |
+| Orchestrator index accuracy (3 orchestrate-* skills) | ⚠️ PASS W/ ADVISORIES | 0 | 2 | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md) |
+| Type catalog integrity | ✅ PASS | 0 | 0 | [delta-baseline-2026-05-06.md](./delta-baseline-2026-05-06.md) |
 | Prior MUST failures F-2026-001 through F-2026-005 resolved | ✅ CONFIRMED | — | — | All 5 resolved as of 2026-05-06 post-remediation |
 | **Phase 2 Summary** | **PASS W/ ADVISORIES** | **0** | **2** | Skills expansion successful; index descriptions require updates |
 
@@ -134,7 +134,7 @@
 | Failure ID | Status | Root Cause | Closure Evidence |
 |---|---|---|---|
 | F-2026-001 | ✅ RESOLVED | 6 capacitor skills unregistered | [governance-executive-audit-delta-2026-05-06.md](./governance-executive-audit-delta-2026-05-06.md): Baseline lock confirms 261 registered |
-| F-2026-002 | ✅ RESOLVED | orchestrate-capacitor description drift (9 vs 19) | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md#phase-3): Advisory only; not MUST failure at SKR-M level |
+| F-2026-002 | ✅ RESOLVED | orchestrate-capacitor description drift (9 vs 19) | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md): Advisory only; not MUST failure at SKR-M level |
 | F-2026-003 | ✅ RESOLVED | csharp-engineer invocation conditions | [audit-agents.md](./audit-agents.md): Advisory only; not AGR-M* blocking |
 | F-2026-004 | ✅ RESOLVED | orchestrate-capacitor contradiction (OPR-M3) | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md): Categorized as TYP-S4 advisory, not OPR-M* blocking |
 | F-2026-005 | ✅ RESOLVED | csharp-engineer determinism (OPR-M2) | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md): Categorized as advisory; not OPR-M* blocking |
@@ -146,11 +146,11 @@
 
 | Failure ID | Severity | Type | Finding | Impact | Root Cause | Mitigation | Status |
 |---|---|---|---|---|---|---|---|
-| F-PH3-001 | **CRITICAL** | GOV-M3 (Catalog Integrity) | 6 capacitor skills on-disk but unregistered in skills-discovery-index.md | These skills are undiscoverable; cross-type routing broken for 6 CapacitorJS domains | Asset addition without catalog update; missing update-in-same-change enforcement | [Recommendation R-1](./governance-executive-audit-phase3-health-overview.md#ranked-recommendations) | Open (prior) |
-| F-PH3-002 | **HIGH** | SKR-M2 (Skill Description) | `orchestrate-capacitor` index description omits 10 sub-domains (9 listed vs 19 covered) | Reduced routing accuracy for 10 Capacitor sub-domains from orchestrator | Description drift between index and SKILL.md; no validation gate | [Recommendation R-2](./governance-executive-audit-phase3-health-overview.md#ranked-recommendations) | Open (advisory) |
-| F-PH3-003 | **HIGH** | AGR-M3 (Agent Description) | `csharp-engineer` agent description lacks explicit invocation conditions | Ambiguous routing to csharp-engineer from orchestrator; users may not discover it correctly | Description clarity gap; no determinism validation | [Recommendation R-3](./governance-executive-audit-phase3-health-overview.md#ranked-recommendations) | Open |
-| F-PH3-004 | **HIGH** | OPR-M3 (Non-Contradiction) | `orchestrate-capacitor` catalog entry contradicts SKILL.md body (description mismatch) | Index-driven routing becomes unreliable; masking downstream discovery failures | Same root cause as F-PH3-002 | [Recommendation R-2](./governance-executive-audit-phase3-health-overview.md#ranked-recommendations) | Open |
-| F-PH3-005 | **HIGH** | OPR-M2 (Determinism) | `csharp-engineer` description fails determinism check (too vague for agent routing) | Orchestrator cannot deterministically route to csharp-engineer when multiple similar agents exist | Same root cause as F-PH3-003 | [Recommendation R-3](./governance-executive-audit-phase3-health-overview.md#ranked-recommendations) | Open |
+| F-PH3-001 | **CRITICAL** | GOV-M3 (Catalog Integrity) | 6 capacitor skills on-disk but unregistered in skills-discovery-index.md | These skills are undiscoverable; cross-type routing broken for 6 CapacitorJS domains | Asset addition without catalog update; missing update-in-same-change enforcement | [Recommendation R-1](./governance-executive-audit-phase3-health-overview.md) | Open (prior) |
+| F-PH3-002 | **HIGH** | SKR-M2 (Skill Description) | `orchestrate-capacitor` index description omits 10 sub-domains (9 listed vs 19 covered) | Reduced routing accuracy for 10 Capacitor sub-domains from orchestrator | Description drift between index and SKILL.md; no validation gate | [Recommendation R-2](./governance-executive-audit-phase3-health-overview.md) | Open (advisory) |
+| F-PH3-003 | **HIGH** | AGR-M3 (Agent Description) | `csharp-engineer` agent description lacks explicit invocation conditions | Ambiguous routing to csharp-engineer from orchestrator; users may not discover it correctly | Description clarity gap; no determinism validation | [Recommendation R-3](./governance-executive-audit-phase3-health-overview.md) | Open |
+| F-PH3-004 | **HIGH** | OPR-M3 (Non-Contradiction) | `orchestrate-capacitor` catalog entry contradicts SKILL.md body (description mismatch) | Index-driven routing becomes unreliable; masking downstream discovery failures | Same root cause as F-PH3-002 | [Recommendation R-2](./governance-executive-audit-phase3-health-overview.md) | Open |
+| F-PH3-005 | **HIGH** | OPR-M2 (Determinism) | `csharp-engineer` description fails determinism check (too vague for agent routing) | Orchestrator cannot deterministically route to csharp-engineer when multiple similar agents exist | Same root cause as F-PH3-003 | [Recommendation R-3](./governance-executive-audit-phase3-health-overview.md) | Open |
 
 **Summary:** 5 distinct failures; 2 unique root causes (registration/description drift, agent description clarity). All map to prior cycle findings now categorized as advisory-only in Phase 2 delta re-audit.
 

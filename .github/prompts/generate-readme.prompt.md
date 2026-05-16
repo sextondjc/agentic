@@ -5,10 +5,8 @@ description: 'Prompt to build a consolidated README from repository documentatio
 # README Generation Prompt
 
 Route this request to `orchestrator`.
-
 Use the `write-technical-docs` skill as the primary workflow.
-
-Generate a concise but useful [README.md](./../../../README.md) by aggregating the repository's documentation, architecture guidance, coding standards, testing strategy, and development workflow.
+Generate a concise, useful [README.md](./../../../README.md) from repository docs, architecture guidance, coding standards, testing strategy, and development workflow.
 
 ## Content Goals
 
@@ -23,7 +21,7 @@ Generate a concise but useful [README.md](./../../../README.md) by aggregating t
 
 - Prefer [copilot-instructions.md](./../copilot-instructions.md) and `.github/instructions/*` for canonical standards.
 - Use repository docs and architecture files for implementation details.
-- Avoid inventing sections when the source material is missing.
+- Do not invent sections when source material is missing.
 
 ## Output Rules
 

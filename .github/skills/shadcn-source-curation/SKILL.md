@@ -1,19 +1,21 @@
 ---
 name: shadcn-source-curation
-description: Use when shadcn/ui guidance must be grounded in authoritative, current sources and converted into reusable, agent-usable skill inputs with freshness and drift controls.
+description: Use when shadcn/ui guidance needs CLI-registry, Radix primitive, and token-system evidence with explicit tracking for component API drift and accessibility contract changes.
 ---
 
 # shadcn/ui Source Curation
 
 ## Specialization
 
-Curate authoritative shadcn/ui guidance into deterministic, reusable skill inputs while enforcing official-source-first policy and explicit freshness controls.
+Curate shadcn/ui evidence around CLI registry behavior, copy-paste component composition, token semantics, and Radix interaction contracts used in app-level design systems.
+
+This specialization emphasizes `ui.shadcn.com`, Radix primitives, and form-stack dependencies to keep generated guidance aligned with registry drift, dependency updates, and accessibility contracts.
 
 This skill governs source selection and skill grounding only. It does not implement components or configure projects.
 
 ## Objective
 
-Produce a shadcn/ui evidence baseline with explicit decisions for installation, component composition, theming, form patterns, accessibility, and quality that downstream shadcn skills can cite without re-fetching.
+Produce a shadcn/ui reference pack that clarifies install-time choices, component-copy patterns, token behavior, Radix dependencies, and accessibility-sensitive API changes for downstream shadcn skills.
 
 ## Trigger Conditions
 

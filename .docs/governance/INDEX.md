@@ -13,6 +13,8 @@ This index navigates the complete governance documentation for this workspace. S
 | Document | Description |
 |---|---|
 | [Executive Summary](./executive-summary.md) | What the governance system is, why it exists, how it works, and a map of all 13 governance types |
+| [Remediation Plan (114 Advisories)](./remediation-plan-114-advisories-2025-04-17.md) | Source remediation scope and execution history for 114 advisory claims |
+| [Remediation Verification Ledger (2026-05-16)](./remediation-verification-ledger-2026-05-16.md) | Itemized verification evidence, archive closure references, and unresolved ID-enumeration slots |
 
 ---
 

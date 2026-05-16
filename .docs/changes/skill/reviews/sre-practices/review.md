@@ -2,22 +2,18 @@
 
 ## Metadata
 
-- Review Date: 2026-04-19
-- Reviewer Skill: audit-skill + optimize-customizations (via compose-skills)
+- Review Date: 2026-05-13
+- Reviewer Skill: audit-skill
 - Target Skill: sre-practices
 - Target Path: .github/skills/sre-practices/SKILL.md
-- Review Scope: Full — All-Skills Optimization Pass
-
-## Storage
-
-- Save this file to .docs/changes/skill/reviews/sre-practices/review.md
+- Review Scope: Full
 
 ## Summary Outcome Grid
 
 | Metric | Value |
 |---|---|
-| Overall Outcome | Fail |
-| MUST Failures | 1 |
+| Overall Outcome | Pass With Advisories |
+| MUST Failures | 0 |
 | SHOULD Advisories | 1 |
 | Conflict Status | None |
 
@@ -25,30 +21,30 @@
 
 | Standard ID | Result | Evidence | Notes |
 |---|---|---|---|
-| SKR-M1 | Pass | SKILL.md — scope is SLO/error-budget/reliability engineering only | Hyper-specialized. No scope bleed. |
-| SKR-M2 | Pass | YAML frontmatter valid; Markdown structure well-formed | No issue. |
-| SKR-M3 | Pass | `## Trigger Conditions` section present with concrete conditions | No issue. |
-| SKR-M4 | **Fail** | SKILL.md line 50: "Design chaos experiments for the highest-risk failure modes using `experiment-design` skill outputs." | Workflow step 6 implies the executor must have run `experiment-design` to obtain its outputs before executing this step. This is an implicit delegation to a named sibling skill in a workflow step body — violates SKR-M4. **Remedy**: Inline the `experiment-design` output contract (hypothesis, success criteria, scope boundary, time-box, rollback criteria) directly into step 6, eliminating the cross-skill dependency. |
-| SKR-S1 | Pass | No `references/` folder; skill is self-contained | No assets needed. |
-| SKR-S3 | Pass | No markdown links in SKILL.md body | No issue. |
-| SKR-S5 | Advisory | SKILL.md line 80: "Related skills: `operability-design`, `support-triage`, `experiment-design`, `release-readiness`, `support-runbook-generator`" | Enumerating 5 related skills by name in the body creates soft cross-skill coupling and may mislead executors into treating these as co-required. Recommend removing or replacing with a note that these are complementary skills in the same operational domain. |
+| SKR-M1 | Pass | .github/skills/sre-practices/SKILL.md | Single primary objective for the skill. |
+| SKR-M2 | Pass | .github/skills/sre-practices/SKILL.md | Front matter includes required name and description fields. |
+| SKR-M3 | Pass | .github/skills/sre-practices/SKILL.md | Triggering guidance present in description or body. |
+| SKR-M4 | Pass | .github/skills/sre-practices/SKILL.md | Skill is self-contained (baseline check). |
+| SKR-S1 | Advisory | .github/skills/sre-practices/ | No references/assets folder; add concrete templates or examples. |
+| SKR-S2 | Pass | .github/skills/*/SKILL.md | No cross-skill conflicts detected. |
+| SKR-S3 | Pass | C:\Projects\agentic\.docs\changes\skill\reviews\sre-practices | No broken or placeholder links. |
+| SKR-S4 | Pass | .docs/changes/skill/history/ | Aligns with growth governance principles. |
+| SKR-S5 | Pass | .github/skills/sre-practices/SKILL.md | Wording is economical and clear. |
 
 ## Recommendations
 
 | Recommendation ID | Description | Priority | Status |
 |---|---|---|---|
-| REC-001 | Inline experiment-design output contract into workflow step 6. Replace "using `experiment-design` skill outputs" with explicit inline definition: each chaos experiment must include hypothesis, success criteria, scope boundary, time-box, and rollback criteria. | High | Implemented |
-| REC-002 | Remove or replace the "Related skills" enumeration on line 80. If cross-skill navigation is needed, move it to a `references/README.md` or a NOTE callout, not the skill workflow body. | Low | Implemented |
+| REC-001 | Add references assets (templates/examples/tools) for this skill. | Medium | Proposed |
 
 ## History Guard Check
 
-- History File Loaded: No (no prior review file exists)
+- History File Loaded: no (initial baseline)
 - Deny-list Entries Applied: 0
 - Suppressed Repeat Recommendations: 0
-- Notes: First review for sre-practices.
+- Notes: Initial baseline review entry.
 
 ## Next Actions
 
-1. Implement REC-001: inline experiment-design output contract into step 6.
-2. Implement REC-002: remove Related skills enumeration from workflow body.
-3. Re-run audit-skill check after remediation to confirm Pass outcome.
+1. Review and accept or reject proposed recommendations.
+2. Update skill history ledger with decision outcomes.

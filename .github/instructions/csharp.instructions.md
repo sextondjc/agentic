@@ -41,6 +41,18 @@ Keep this file policy-only. Use [SKILL.md](./../skills/dotnet-refactor/SKILL.md)
 - Do not introduce FluentValidation or FluentAssertions.
 - Keep abstractions minimal and justified by testing or boundary needs.
 
+## Deprecation and Breaking Change Cadence
+
+- Mark members as `[Obsolete]` before removal and provide a migration hint in the message.
+- Maintain at least one planned release cycle between deprecation notice and removal for non-emergency changes.
+- Document any breaking change in the relevant `.docs/changes/` artifact with migration steps.
+- Prefer additive compatibility shims during transition windows when practical.
+
+## Deprecation Communication Rules
+
+- Include deprecation reason, replacement API, and removal target window in change notes.
+- For high-impact removals, add a short upgrade checklist to reduce migration ambiguity.
+
 ## Security and Prohibited Patterns
 
 - No secrets in code.

@@ -18,3 +18,19 @@ This file governs async and concurrency policy for C# code. Baseline C# conventi
 - Introduce `ValueTask` only with measured evidence.
 - Concurrency changes must include verification for cancellation, timeout, and exception propagation.
 
+## ValueTask Selection Guide
+
+Use `Task` by default. Consider `ValueTask` only when all conditions below are satisfied.
+
+| Decision Question | Use `ValueTask` | Use `Task` |
+|---|---|---|
+| Is this method on a measured hot path with allocation pressure evidence? | Yes, continue evaluation. | No, keep `Task`. |
+| Does the method frequently complete synchronously? | Yes, `ValueTask` may reduce allocations. | No, keep `Task`. |
+| Will the result be awaited exactly once by consumers? | Yes, `ValueTask` remains safe. | No or unknown, keep `Task`. |
+| Is API simplicity and interoperability more important than micro-allocations? | No, continue with `ValueTask`. | Yes, prefer `Task`. |
+
+## Rationale Notes
+
+- `ValueTask` is a targeted optimization, not a default style choice.
+- Misuse of `ValueTask` can increase complexity and create subtle correctness issues.
+

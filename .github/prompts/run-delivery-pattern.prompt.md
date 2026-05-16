@@ -23,27 +23,20 @@ Provide at least one of the following before the prompt runs:
 
 ## Ratified Phase Sequence
 
-```
-P1  Work Intake & Classification          → intake-record.md
-P2  Discovery & Research                  → [topic]-research.md
-P3  Planning & Specification              → [task]-plan.md
-    ⛔ G-PLAN — user approval required
-P4  Acceptance Criteria       ─┐
-P5  Architecture & ADRs        ┘ (parallel after G-PLAN)
-P6  Test Design (TDD First)               → [task]-test-design.md
-    ⛔ G-TDD — code-reviewer or user
-P7  Implementation / Asset Authoring      → assets in .github/
-    P7a  Security Review       ─┐
-    P7b  Performance Review    ┼ (parallel after P7)
-    P7c  Governance Audit      ┘
-P8  Asset Review & Quality Gate           → [task]-quality-gate.md
-    ⛔ G-REVIEW — code-reviewer + user if blocking
-P9  Test Orchestration                    → [task]-test-orchestration.md
-P10 Release Readiness & Go/No-Go          → [task]-release-readiness.md
-    ⛔ G-RELEASE — user approval required
-P11 Sync / Promotion
-P12 Retrospective & Outcome Review        → [task]-retrospective.md
-```
+| Phase | Activity | Output / Gate |
+|---|---|---|
+| P1 | Work Intake & Classification | `intake-record.md` |
+| P2 | Discovery & Research | `[topic]-research.md` |
+| P3 | Planning & Specification | `[task]-plan.md` + G-PLAN |
+| P4-P5 | Acceptance Criteria + Architecture/ADRs (parallel) | acceptance + ADR artifacts |
+| P6 | Test Design (TDD First) | `[task]-test-design.md` + G-TDD |
+| P7 | Implementation / Asset Authoring | assets in `.github/` |
+| P7a-P7c | Security + Performance + Governance reviews (parallel) | review evidence artifacts |
+| P8 | Asset Review & Quality Gate | `[task]-quality-gate.md` + G-REVIEW |
+| P9 | Test Orchestration | `[task]-test-orchestration.md` |
+| P10 | Release Readiness & Go/No-Go | `[task]-release-readiness.md` + G-RELEASE |
+| P11 | Sync / Promotion | promotion evidence |
+| P12 | Retrospective & Outcome Review | `[task]-retrospective.md` |
 
 ## Gate Rules (Non-Negotiable)
 

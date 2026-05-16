@@ -32,6 +32,18 @@ Does not write production code, implement components, or make engineering archit
 - No scope expansion into backend or data architecture; route those decisions to `architecture-designer`.
 - Handoff artifacts must include accessibility annotations before routing to an engineering agent.
 
+## When Not To Use
+
+- Do not use when the request is implementation-first (HTML/CSS/TypeScript/MAUI code changes).
+- Do not use for architecture boundary decisions, data modeling, or backend service design.
+- Do not use for component-library migration execution; route implementation to the relevant engineering specialist.
+
+## Routing Clarification
+
+- Use `ux-designer` for research, flows, wireframes, usability findings, and engineering handoff artifacts.
+- Use `web-frontend-engineer` or `mobile-frontend-engineer` for production implementation after handoff.
+- Use `orchestrator` when the request spans both UX definition and implementation sequencing.
+
 ## Preferred Companion Skills
 
 Use these skills explicitly when the trigger is present:

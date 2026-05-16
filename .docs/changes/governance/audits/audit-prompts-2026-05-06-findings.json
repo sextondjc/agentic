@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "standards": [
+      "PRR-M1",
+      "PRR-M2",
+      "PRR-M3",
+      "PRR-M4",
+      "PRR-S1",
+      "PRR-S2",
+      "PRR-S3"
+    ],
+    "audit_date": "2026-05-06",
+    "target_directory": ".github/prompts",
+    "total_prompts": 22
+  },
+  "prompts_by_outcome": {
+    "fail": [],
+    "pass": [
+      "audit-agent",
+      "audit-customization-types",
+      "execute-customization-audit",
+      "execute-manual-review",
+      "execute-testing-xunit",
+      "generate-readme",
+      "governance-audit-types",
+      "governance-item-audit",
+      "librarian",
+      "optimize-customizations",
+      "review-project"
+    ],
+    "pass_with_advisories": [
+      "curate-copilot",
+      "execute-artifact-condense",
+      "execute-delivery",
+      "performance-research",
+      "review-technical-docs",
+      "run-delivery-pattern",
+      "scaffold-web-ux-quality-gate",
+      "security-research",
+      "sync-compendium",
+      "workspace-scaffolder",
+      "write-component-docs"
+    ]
+  },
+  "findings": [
+    {
+      "disposition": "Open",
+      "evidence": "Frontmatter includes fields not in VS Code prompt-file spec",
+      "description": "Non-standard frontmatter fields detected (agent, tools, model)",
+      "standard": "PRR-M2",
+      "prompt": "write-component-docs",
+      "severity": "ADVISORY",
+      "recommendation": "Document as intentional extensions or remove if not supported",
+      "id": "F-001"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "Only default location noted; no section/grid definitions",
+      "description": "Minimal output structure; missing explicit output declarations",
+      "standard": "PRR-M3",
+      "prompt": "performance-research",
+      "severity": "ADVISORY",
+      "recommendation": "Add explicit output structure with Executive Summary, Findings Grid, Recommendations Grid",
+      "id": "F-002"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "Only default location noted; no section/grid definitions",
+      "description": "Minimal output structure; missing explicit output declarations",
+      "standard": "PRR-M3",
+      "prompt": "security-research",
+      "severity": "ADVISORY",
+      "recommendation": "Add explicit output structure with Executive Summary, Findings Grid, Recommendations Grid",
+      "id": "F-003"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "Uses conditional routing without explicit \"Load and follow [SKILL.md]\" pattern",
+      "description": "Inconsistent skill routing pattern",
+      "standard": "PRR-M4",
+      "prompt": "execute-artifact-condense",
+      "severity": "ADVISORY",
+      "recommendation": "Adopt explicit \"Load and follow [SKILL.md](...)\" pattern for consistency",
+      "id": "F-004"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "Skill referenced in template links, not in Required Actions section",
+      "description": "Implicit skill routing; not explicit in Required Actions",
+      "standard": "PRR-M4",
+      "prompt": "scaffold-web-ux-quality-gate",
+      "severity": "ADVISORY",
+      "recommendation": "Add explicit \"Load and follow [SKILL.md](...)\" in Required Actions",
+      "id": "F-005"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "Triggers listed as prose; could be consolidated",
+      "description": "Narrative padding in trigger enum",
+      "standard": "PRR-S2",
+      "prompt": "curate-copilot",
+      "severity": "ADVISORY",
+      "recommendation": "Convert trigger list to table or single consolidated statement",
+      "id": "F-006"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "Sections 4-5 contain detailed narrative explanations (~100 words)",
+      "description": "Verbose mode selection logic",
+      "standard": "PRR-S2",
+      "prompt": "execute-artifact-condense",
+      "severity": "ADVISORY",
+      "recommendation": "Convert to compact comparison table",
+      "id": "F-007"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "4 rules with prose explanation (~50 words each); repetitive structure",
+      "description": "Narrative padding in dispatch rules",
+      "standard": "PRR-S2",
+      "prompt": "execute-delivery",
+      "severity": "ADVISORY",
+      "recommendation": "Convert to tight bullet list without narrative flourish",
+      "id": "F-008"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "5 agents listed with individual prose descriptions (~50 words)",
+      "description": "Verbose agent list; could be more scannable",
+      "standard": "PRR-S2",
+      "prompt": "review-technical-docs",
+      "severity": "ADVISORY",
+      "recommendation": "Convert to compact table for quick reference",
+      "id": "F-009"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "Phase sequence in code block (~50 lines with ASCII formatting)",
+      "description": "ASCII phase diagram is verbose",
+      "standard": "PRR-S2",
+      "prompt": "run-delivery-pattern",
+      "severity": "ADVISORY",
+      "recommendation": "Replace with markdown table or condensed list format (target: 20-30 lines)",
+      "id": "F-010"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "3 separate script examples (60+ lines total) in \"One-Command Wrapper\" section",
+      "description": "Multiple PowerShell script examples; not essential in prompt body",
+      "standard": "PRR-S2",
+      "prompt": "sync-compendium",
+      "severity": "ADVISORY",
+      "recommendation": "Move detailed examples to skill references/README; retain single canonical example in prompt",
+      "id": "F-011"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "Sections list detailed file examples and descriptions (~80 lines)",
+      "description": "Detailed output templates inline; bloats prompt",
+      "standard": "PRR-S2",
+      "prompt": "workspace-scaffolder",
+      "severity": "ADVISORY",
+      "recommendation": "Move output structure and examples to skill references; retain outline only",
+      "id": "F-012"
+    },
+    {
+      "disposition": "Open",
+      "evidence": "~200 lines of template code + instruction guidelines inline",
+      "description": "Full Markdown template embedded in prompt",
+      "standard": "PRR-S2",
+      "prompt": "write-component-docs",
+      "severity": "ADVISORY",
+      "recommendation": "Move complete template to skill references (SKILL.md references/template); link from prompt; reduce prompt to purpose + outline",
+      "id": "F-013"
+    }
+  ],
+  "summary": {
+    "total_prompts": 22,
+    "pass_with_advisories": 9,
+    "should_advisories": 13,
+    "must_failures": 0,
+    "pass": 13,
+    "fail": 0,
+    "blocked": 0,
+    "overall_outcome": "PASS WITH ADVISORIES"
+  }
+}

@@ -92,7 +92,7 @@ Use these when products are enterprise-like, high-density, or disruption-prone.
 | Asset | Role | Best Use |
 |---|---|---|
 | [scaffold-web-ux-quality-gate.prompt.md](../../../../.github/prompts/scaffold-web-ux-quality-gate.prompt.md) | Generate core or full evidence bundles | Starting a new workstream evidence set |
-| [ux-quality-gate-examples-index.md](../../../changes/ux-quality-gate-examples-index.md) | Discover worked examples | Finding reference bundles for adaptation |
+| [ux-quality-gate-examples-index.md](../../../changes/ux/ux-quality-gate-examples-index.md) | Discover worked examples | Finding reference bundles for adaptation |
 | [agent-web-ux-resource-skill-mapping-template.md](./agent-web-ux-resource-skill-mapping-template.md) | Convert external resources into skill rules | Creating new portable UX skills from authoritative sources |
 
 ## Adoption Profiles

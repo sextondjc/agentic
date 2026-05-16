@@ -6,7 +6,7 @@
 
 | Folder | Description |
 |---|---|
-| [reviews/](./reviews/INDEX.md) | Subfolder index. |
+| [reviews/](./reviews/README.md) | Subfolder index. |
 
 ## Documents
 

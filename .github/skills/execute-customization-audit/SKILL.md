@@ -28,7 +28,7 @@ Invoke this skill when any of the following is true:
   - `.docs/changes/skill/reviews/governance-audit-types-skills.md`
   - `.docs/changes/customization/reviews/governance-audit-types-customizations.md`
   - `.docs/changes/customization/reviews/governance-audit-types-optimization.md`
-- Report template: [execute-customization-audit-report-template.md](./references/execute-customization-audit-report-template.md)
+- Report template guidance: [README.md](./references/README.md)
 
 ## Executive Standards
 
@@ -64,7 +64,7 @@ Invoke this skill when any of the following is true:
 5. Build per-type roll-up rows with outcomes, MUST fail counts, SHOULD advisory counts, and evidence links.
 6. Set final disposition using strict roll-up rule: any single source `Fail` -> executive `FAILED`.
 7. Ensure evidence links are markdown links to human-readable markdown artifacts.
-8. Render report using [execute-customization-audit-report-template.md](./references/execute-customization-audit-report-template.md).
+8. Render report using the template guidance in [README.md](./references/README.md).
 9. Save the single report to the required output path.
 
 ## Done Criteria

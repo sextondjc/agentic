@@ -43,6 +43,16 @@
 | F-2026-004 | **HIGH** | OPR-M3: `skills-discovery-index.md` entry for `orchestrate-capacitor` contradicts SKILL.md body | Same root cause as F-2026-002; confirmed non-contradiction failure | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
 | F-2026-005 | **HIGH** | OPR-M2: `csharp-engineer` description fails determinism check | Same root cause as F-2026-003; confirmed non-determinism failure | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
 
+## Failure Detail Grid
+
+| ID | Severity | Check | Finding | Evidence |
+|---|---|---|---|---|
+| F-2026-001 | CRITICAL | utilization-coverage | GOV-M3: 6 capacitor skills unregistered in skills-discovery-index.md | [test-utilization-coverage.ps1](./../../../../.github/scripts/powershell/test-utilization-coverage.ps1) |
+| F-2026-002 | HIGH | source-catalog-freshness | SKR-M-002: `orchestrate-capacitor` index description lists fewer sub-domains than SKILL.md | [test-source-catalog-freshness.ps1](./../../../../.github/scripts/powershell/test-source-catalog-freshness.ps1) |
+| F-2026-003 | HIGH | review-recency | AGR-M3: `csharp-engineer` description lacks explicit invocation conditions | [test-review-recency.ps1](./../../../../.github/scripts/powershell/test-review-recency.ps1) |
+| F-2026-004 | HIGH | optimization-factor | OPR-M3: `skills-discovery-index.md` entry contradicts SKILL.md body | [test-governance-optimization-factor.ps1](./../../../../.github/scripts/powershell/test-governance-optimization-factor.ps1) |
+| F-2026-005 | HIGH | routing-determinism | OPR-M2: `csharp-engineer` description fails determinism check | [test-routing-determinism.ps1](./../../../../.github/scripts/powershell/test-routing-determinism.ps1) |
+
 ## Per-Type Results
 
 | Type | Outcome | MUST Failures | SHOULD Advisories | Evidence |

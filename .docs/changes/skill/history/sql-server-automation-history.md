@@ -4,12 +4,12 @@
 
 - Skill Name: sql-server-automation
 - Skill Path: .github/skills/sql-server-automation/SKILL.md
-- Created: 2026-04-24
-- Last Reviewed: 2026-04-24
+- Created: 2026-05-13
+- Last Reviewed: 2026-05-13
 
 ## Review Entries
 
-### 2026-04-24 - Review SQL-FAMILY-AUDIT-001
+### 2026-05-13 - Review BASELINE-001
 
 - Outcome: Pass
 - Reviewer: audit-skill
@@ -19,21 +19,21 @@
 
 | Standard ID | Result | Notes |
 |---|---|---|
-| SKR-M1 | Pass | Skill scope is limited to repeatable SQL Server operational automation. |
-| SKR-M2 | Pass | Front matter and Markdown structure are valid. |
-| SKR-M3 | Pass | Trigger conditions are explicit and concrete. |
-| SKR-M4 | Pass | Workflow is self-contained with no sibling-skill delegation. |
-| SKR-S1 | Pass | Reference assets and source catalog are present. |
-| SKR-S2 | Pass | No conflicting overlap found in the SQL family review. |
-| SKR-S3 | Pass | Links resolve to on-disk assets. |
-| SKR-S4 | Pass | Inputs, outputs, and completion checks are explicit. |
-| SKR-S5 | Pass | Wording is economical for the operational scope. |
+| SKR-M1 | Pass | Single primary objective for the skill. |
+| SKR-M2 | Pass | Front matter includes required name and description fields. |
+| SKR-M3 | Pass | Triggering guidance present in description or body. |
+| SKR-M4 | Pass | Self-contained (baseline check). |
+| SKR-S1 | Pass | Concrete references/assets exist. |
+| SKR-S2 | Pass | No cross-skill conflicts detected. |
+| SKR-S3 | Pass | No broken or placeholder links. |
+| SKR-S4 | Pass | Aligns with growth governance principles. |
+| SKR-S5 | Pass | Wording is economical and clear. |
 
 #### Recommendation Ledger
 
 | Recommendation ID | Description | Status | Finalized On | Notes |
 |---|---|---|---|---|
-| REC-000 | No recommendations. | Implemented | 2026-04-24 | No open actions. |
+| REC-000 | No recommendations. | Implemented | 2026-05-13 | Baseline clean pass. |
 
 #### Deny-list Snapshot
 

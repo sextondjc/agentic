@@ -33,6 +33,12 @@ Keep this file policy-only. Use [SKILL.md](./../skills/route-customization/SKILL
 - Direct specialist-first execution is prohibited, including obvious single-lane requests.
 - `orchestrator` MAY immediately hand off after intake when the destination specialist is clear.
 
+## Orchestrator Boundary
+
+- `orchestrator` is an agent-level intake and routing authority, not a standalone skill.
+- This instruction defines mandatory policy; it does not replace orchestrator execution logic or specialist skill contracts.
+- Skills provide procedural workflows after orchestrator intake and handoff.
+
 ## Determinism Policy
 
 - Determinism is mandatory by default for all requests.
