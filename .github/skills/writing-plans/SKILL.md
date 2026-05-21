@@ -7,7 +7,7 @@ description: Use when you have a spec or requirements for a multi-step task, bef
 
 ## Overview
 
-Write comprehensive implementation plans assuming the engineer has zero context for our codebase and questionable taste. Document everything they need to know: which files to touch for each task, code, testing, docs they might need to check, how to test it. Give them the whole plan as bite-sized tasks. DRY. YAGNI. TDD. Frequent commits.
+Write comprehensive implementation plans that are durable, execution-ready, and traceable across sessions. Document everything needed to execute safely: files to touch, expected code changes, validation steps, and references required for context. Use DRY, YAGNI, TDD, and frequent commits.
 
 Assume they are a skilled developer, but know almost nothing about our toolset or problem domain. Assume they don't know good test design very well.
 
@@ -15,6 +15,17 @@ Assume they are a skilled developer, but know almost nothing about our toolset o
 
 **Save plans to:** `.docs/plans/<domain>/<workstream>/<plan-name>.md`
 - (User preferences for plan location override this default)
+
+## Plan Stability Contract
+
+Use this skill as the single source of truth for planning structure and quality gates.
+
+- Do not create alternate planning templates in multiple assets.
+- Keep mandatory policy in instructions and procedural detail in this skill.
+- Update this skill only when one of these triggers occurs:
+    - Repeated planning misses are found in review.
+    - Lane ownership or routing policy changes.
+    - A new required output type is introduced.
 
 ## Plan Folder Granularity
 
@@ -70,6 +81,42 @@ This structure informs the task decomposition. Each task should produce self-con
 
 ---
 ```
+
+## Required Plan Metadata
+
+Every plan must include explicit metadata immediately after the header.
+
+```markdown
+## Metadata
+
+- Plan ID: `plan-<domain>-<workstream>-<slug>-<yyyymmdd>`
+- Workstream ID: `ws-<domain>-<workstream>`
+- Lane: `Planning`
+- Owner: `<role-or-agent>`
+- Scope: `<in-scope summary>`
+- Out of Scope: `<out-of-scope summary>`
+- Dependencies: `<list or none>`
+- Acceptance Inputs: `<linked requirements, ADRs, or decision notes>`
+```
+
+This metadata is mandatory for deterministic handoff and later review.
+
+## Planning Quality Gate (Pre-Execution)
+
+Before any execution starts, the plan must pass all six checks.
+
+```markdown
+## Quality Gate
+
+- [ ] QG1 Scope Boundaries: In-scope and out-of-scope are explicit and non-overlapping.
+- [ ] QG2 Traceability IDs: Plan ID and Workstream ID are present and used consistently.
+- [ ] QG3 File-Level Mapping: Tasks list concrete create/modify/test file targets.
+- [ ] QG4 Verification Steps: Each task includes runnable validation commands and expected outcomes.
+- [ ] QG5 Handoff Completeness: Dependencies, assumptions, and risks are listed with owners.
+- [ ] QG6 Acceptance Coverage: Every requirement maps to one or more tasks with no gaps.
+```
+
+If any check is unchecked, the plan is not execution-ready.
 
 ## Task Structure
 
@@ -130,6 +177,15 @@ After writing the complete plan, look at the spec with fresh eyes and check the 
 
 If you find issues, fix them inline. No need to re-review — just fix and move on. If you find a spec requirement with no task, add the task.
 
+## Minimal Maintenance Cadence
+
+To avoid endless revisits, use a lightweight maintenance loop.
+
+1. Revalidate this skill quarterly or after a major planning miss.
+2. Only patch sections impacted by a trigger condition.
+3. Preserve existing template contracts unless a policy change requires a version bump.
+4. Record significant planning-process changes in a decision artifact before changing this skill.
+
 ## Execution Handoff
 
 After saving the plan, offer execution choice:
@@ -169,6 +225,7 @@ Invoke this skill when any of the following is true:
 ## Required Outputs
 
 - A concrete, workspace-applicable result aligned with this skill purpose.
+- A completed Quality Gate section with all checks passing before execution handoff.
 
 ## Workflow
 
