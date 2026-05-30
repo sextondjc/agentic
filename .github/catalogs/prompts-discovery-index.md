@@ -23,7 +23,6 @@ This discovery index covers reusable `.prompt.md` templates for repeatable gover
 | `audit-agent` | `audit-agent.prompt.md` | Review | Execution | Runs an on-demand quality review of one or more `.agent.md` files with platform-currency-aware evaluation and ranked remediation recommendations. |
 | `execute-artifact-condense` | `execute-artifact-condense.prompt.md` | Review | Execution | Invokes skills-authoring plus agent-authoring/instructions-authoring concision mode for one named artifact or a full artifact set and returns concise rewrite recommendations without applying edits. |
 | `librarian` | `librarian.prompt.md` | Execution | Review | Curates documentation corpus naming and structure with `.docs/` as default root and produces approval-gated recommendations. |
-| `sync-compendium` | `sync-compendium.prompt.md` | Execution | Review | Runs explicit-approval compendium sync with source attribution, conflict classification, and bespoke-safe merge constraints. |
 | `security-research` | `security-research.prompt.md` | Review | Planning | Produces security assessment output without implementation. |
 | `performance-research` | `performance-research.prompt.md` | Review | Planning | Produces performance assessment output without implementation. |
 | `scaffold-web-ux-quality-gate` | `scaffold-web-ux-quality-gate.prompt.md` | Execution | Planning | Scaffolds a web UX quality-gate evidence bundle for a workstream using core or full dimension sets. |

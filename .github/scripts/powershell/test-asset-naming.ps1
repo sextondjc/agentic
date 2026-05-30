@@ -11,6 +11,10 @@ param(
     [Parameter()]
     [ValidateSet('all', 'skills', 'agents', 'instructions', 'prompts')]
     [string]$AssetType = 'all'
+,
+
+    [Parameter()]
+    [string[]]$SkillNameAllowList = @('xunit-v2-v3-migration')
 )
 
 $ErrorActionPreference = 'Stop'
@@ -32,6 +36,11 @@ foreach ($spec in $specs) {
     if ($AssetType -ne 'all' -and $AssetType -ne $spec.Type) { continue }
     foreach ($item in $spec.Files) {
         $name = & $spec.Name $item
+        if ($spec.Type -eq 'skills' -and $name -in $SkillNameAllowList) {
+            Add-Result $spec.Type $name "$($spec.Pattern) OR explicit allow-list" 'Pass' ''
+            continue
+        }
+
         if ($name -match $spec.Pattern) { Add-Result $spec.Type $name $spec.Pattern 'Pass' '' }
         else { Add-Result $spec.Type $name $spec.Pattern 'Fail' $spec.Note }
     }

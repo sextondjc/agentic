@@ -98,7 +98,7 @@
 - **Health Score**: 65/100 (Good → Excellent target: 75+)
 - **Top Findings**:
   1. **Capacitor skills** — 6 skills registered in critical path remediation (REC-1 ✅)
-  2. **orchestrate-capacitor** — expanded from 9→19 sub-domains (REC-2 ✅); routing verified
+  2. **capacitor-orchestrator** — expanded from 9→19 sub-domains (REC-2 ✅); routing verified
   3. **Skill co-location** — 256 skills properly located; 11 advisory items for minor refactoring
 - **Detailed Report**: `.docs/changes/governance/type-audits/audit-skills-2025-04-17.md`
 
@@ -210,14 +210,14 @@
 - **Evidence**: skills-discovery-index.md updated; skills-authoring.md reinforced
 - **Status**: ✅ Closed
 
-### REC-2: orchestrate-capacitor Sub-Domain Expansion ✅ **VERIFIED**
-- **Baseline Status**: orchestrate-capacitor defined 9 sub-domains (narrowly scoped)
+### REC-2: capacitor-orchestrator Sub-Domain Expansion ✅ **VERIFIED**
+- **Baseline Status**: capacitor-orchestrator defined 9 sub-domains (narrowly scoped)
 - **Remediation Action**: Expanded to 19 sub-domains, covering full CapacitorJS lifecycle:
   - Lifecycle domains: setup, configuration, build integration, migration
   - Feature domains: auth, storage, native APIs, offline, push notifications
   - Quality domains: testing, performance, security, accessibility, release readiness
 - **Verification**: Phase 2 interaction matrix confirmed zero conflicts; routing verified
-- **Evidence**: orchestrate-capacitor agent definition updated; cross-type audit clean
+- **Evidence**: capacitor-orchestrator agent definition updated; cross-type audit clean
 - **Status**: ✅ Closed
 
 ### REC-3: csharp-engineer Role Boundary Clarification ✅ **VERIFIED**
@@ -397,3 +397,4 @@
 ---
 
 *End of Report*
+

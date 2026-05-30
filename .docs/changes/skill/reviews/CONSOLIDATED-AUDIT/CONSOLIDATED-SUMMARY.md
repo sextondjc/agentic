@@ -181,18 +181,18 @@
 | operability-design | Pass With Advisories | 0 | 1 | [operability-design](../operability-design/review.md) |
 | opportunity-mapping | Pass | 0 | 0 | [opportunity-mapping](../opportunity-mapping/review.md) |
 | optimize-customizations | Pass | 0 | 0 | [optimize-customizations](../optimize-customizations/review.md) |
-| orchestrate-benchmark | Pass With Advisories | 0 | 1 | [orchestrate-benchmark](../orchestrate-benchmark/review.md) |
-| orchestrate-capacitor | Pass With Advisories | 0 | 1 | [orchestrate-capacitor](../orchestrate-capacitor/review.md) |
-| orchestrate-csharp | Pass | 0 | 0 | [orchestrate-csharp](../orchestrate-csharp/review.md) |
-| orchestrate-jquery | Pass With Advisories | 0 | 1 | [orchestrate-jquery](../orchestrate-jquery/review.md) |
-| orchestrate-kendo | Pass With Advisories | 0 | 1 | [orchestrate-kendo](../orchestrate-kendo/review.md) |
-| orchestrate-mcp-servers | Pass | 0 | 0 | [orchestrate-mcp-servers](../orchestrate-mcp-servers/review.md) |
-| orchestrate-mobile | Pass | 0 | 0 | [orchestrate-mobile](../orchestrate-mobile/review.md) |
-| orchestrate-shadcn | Pass With Advisories | 0 | 1 | [orchestrate-shadcn](../orchestrate-shadcn/review.md) |
-| orchestrate-sql-server | Pass | 0 | 0 | [orchestrate-sql-server](../orchestrate-sql-server/review.md) |
-| orchestrate-sveltekit | Pass | 0 | 0 | [orchestrate-sveltekit](../orchestrate-sveltekit/review.md) |
-| orchestrate-tailwind | Pass | 0 | 0 | [orchestrate-tailwind](../orchestrate-tailwind/review.md) |
-| orchestrate-xunit | Pass | 0 | 0 | [orchestrate-xunit](../orchestrate-xunit/review.md) |
+| benchmark-orchestrator | Pass With Advisories | 0 | 1 | [benchmark-orchestrator](../benchmark-orchestrator/review.md) |
+| capacitor-orchestrator | Pass With Advisories | 0 | 1 | [capacitor-orchestrator](../capacitor-orchestrator/review.md) |
+| csharp-orchestrator | Pass | 0 | 0 | [csharp-orchestrator](../csharp-orchestrator/review.md) |
+| jquery-orchestrator | Pass With Advisories | 0 | 1 | [jquery-orchestrator](../jquery-orchestrator/review.md) |
+| kendo-orchestrator | Pass With Advisories | 0 | 1 | [kendo-orchestrator](../kendo-orchestrator/review.md) |
+| mcp-servers-orchestrator | Pass | 0 | 0 | [mcp-servers-orchestrator](../mcp-servers-orchestrator/review.md) |
+| mobile-orchestrator | Pass | 0 | 0 | [mobile-orchestrator](../mobile-orchestrator/review.md) |
+| shadcn-orchestrator | Pass With Advisories | 0 | 1 | [shadcn-orchestrator](../shadcn-orchestrator/review.md) |
+| sql-server-orchestrator | Pass | 0 | 0 | [sql-server-orchestrator](../sql-server-orchestrator/review.md) |
+| sveltekit-orchestrator | Pass | 0 | 0 | [sveltekit-orchestrator](../sveltekit-orchestrator/review.md) |
+| tailwind-orchestrator | Pass | 0 | 0 | [tailwind-orchestrator](../tailwind-orchestrator/review.md) |
+| xunit-orchestrator | Pass | 0 | 0 | [xunit-orchestrator](../xunit-orchestrator/review.md) |
 | outcome-review | Pass | 0 | 0 | [outcome-review](../outcome-review/review.md) |
 | perf-benchmark | Pass | 0 | 0 | [perf-benchmark](../perf-benchmark/review.md) |
 | performance-research | Pass | 0 | 0 | [performance-research](../performance-research/review.md) |

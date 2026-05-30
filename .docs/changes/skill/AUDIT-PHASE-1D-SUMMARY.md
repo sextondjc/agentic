@@ -90,7 +90,7 @@ Representative samples across all categories:
 - All benchmark-* skills (6 skills)
 - All capacitor-* skills (22 skills)
 - All build-* skills (4 skills)
-- All orchestrate-* skills (11 skills)
+- All legacy pre-rename orchestrator skills (11 skills)
 - And 56 additional skills across other categories
 
 **See consolidated results grid for complete list.**

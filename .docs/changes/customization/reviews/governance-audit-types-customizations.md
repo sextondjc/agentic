@@ -56,7 +56,7 @@
 | TYP-S1 | Same-type non-conflict | Prompt-prompt partial overlap: `review-project` / `review-technical-docs` | MEDIUM |
 | TYP-S2 | Cross-type non-conflict | Agent-instruction drift: `csharp-engineer` description gap reduces routing reliability | MEDIUM |
 | TYP-S3 | Boundary clarity | Skill catalog registration gap means 6 capacitor skills are invisible at the cross-type interaction layer | HIGH |
-| TYP-S4 | Catalog/taxonomy parity | `orchestrate-capacitor` discovery description understates coverage; taxonomy parity gap | MEDIUM |
+| TYP-S4 | Catalog/taxonomy parity | `capacitor-orchestrator` discovery description understates coverage; taxonomy parity gap | MEDIUM |
 | TYP-S5 | Brevity | Report is within bounds | ✓ Pass |
 | TYP-S6 | Growth governance alignment | 6 new skills added without catalog update; growth discipline violated | HIGH |
 
@@ -68,7 +68,7 @@ None. No cross-type contradictions that would block execution.
 
 ### TYP-ADV-001 — Skill Registration Gap Creates Cross-Type Discovery Failure (HIGH)
 
-6 unregistered capacitor skills cannot be discovered by agents or prompts consulting the skill-discovery-index. This means the cross-type chain (Agent → Prompt → Skill) is broken for any request involving CapacitorJS auth/session, CI, observability, offline resilience, performance, or migration work. Agents routing through `orchestrate-capacitor` may succeed (since the SKILL.md still exists on disk), but direct skill routing fails.
+6 unregistered capacitor skills cannot be discovered by agents or prompts consulting the skill-discovery-index. This means the cross-type chain (Agent → Prompt → Skill) is broken for any request involving CapacitorJS auth/session, CI, observability, offline resilience, performance, or migration work. Agents routing through `capacitor-orchestrator` may succeed (since the SKILL.md still exists on disk), but direct skill routing fails.
 
 **Owner:** Skills Owner  
 **Target:** 2026-05-10
@@ -87,9 +87,9 @@ Both prompts can trigger on documentation review requests. The difference is tha
 **Owner:** Governance Owner  
 **Target:** 2026-05-17
 
-### TYP-ADV-004 — `orchestrate-capacitor` Taxonomy Parity Gap (MEDIUM)
+### TYP-ADV-004 — `capacitor-orchestrator` Taxonomy Parity Gap (MEDIUM)
 
-The skill-discovery-index description for `orchestrate-capacitor` lists 9 sub-domains. The taxonomy system expects index descriptions to serve as machine-readable triggers. This gap means cross-type routing from prompt or agent to skill will miss 10 valid capacitor sub-domains.
+The skill-discovery-index description for `capacitor-orchestrator` lists 9 sub-domains. The taxonomy system expects index descriptions to serve as machine-readable triggers. This gap means cross-type routing from prompt or agent to skill will miss 10 valid capacitor sub-domains.
 
 **Owner:** Skills Owner  
 **Target:** 2026-05-10
@@ -107,3 +107,4 @@ Three instructions (`governance-release`, `request-economy`, `secure-coding`) ap
 
 **Owner:** Governance Owner  
 **Target:** Next audit cycle
+

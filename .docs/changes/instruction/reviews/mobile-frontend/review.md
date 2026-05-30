@@ -25,7 +25,7 @@
 | **INR-M4: Policy Only** | ✅ PASS | Content is pure policy; no workflows or multi-step procedures | Policy defines standards (platform parity, architecture, offline, security, performance, prohibited patterns) without procedural workflow. Routing notes delegate to skills. |
 | **INR-S1: No Conflict with Other Instructions** | ✅ PASS | No contradictory rules vs other active instructions | Mobile-frontend policy aligns with web-frontend, secure-coding, and architecture instructions. No conflicts detected. |
 | **INR-S2: Rationale Present** | ✅ PASS | Non-obvious rules include rationale | Example: "Target app cold-start time under two seconds" - rationale is user experience. Platform parity requirement justified by UX consistency. Performance targets are industry-standard. |
-| **INR-S3: No Agent/Skill Boundary Conflict** | ✅ PASS | Routing notes properly delegate to build-maui-apps and orchestrate-mobile skills | Delegates workflow to skills; no boundary violations. |
+| **INR-S3: No Agent/Skill Boundary Conflict** | ✅ PASS | Routing notes properly delegate to build-maui-apps and mobile-orchestrator skills | Delegates workflow to skills; no boundary violations. |
 | **INR-S4: Brevity & Wording Economy** | ✅ PASS | Wording is economical and concise | Policy sections are focused. No duplication or padding. |
 | **INR-S5: Growth Governance Alignment** | ✅ PASS | References existing skills; reuse-before-create pattern followed | No redundant rules. Delegates to skills. Delta-first approach. |
 
@@ -54,3 +54,4 @@
 
 - ✅ Audit complete. No blocking issues.
 - File approved for continued use.
+

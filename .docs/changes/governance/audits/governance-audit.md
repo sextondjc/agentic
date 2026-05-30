@@ -46,7 +46,7 @@
 | `capacitor-offline-resilience` | `.github/skills/capacitor-offline-resilience/` | Unregistered |
 | `capacitor-performance-quality-gate` | `.github/skills/capacitor-performance-quality-gate/` | Unregistered |
 
-Additionally, the `orchestrate-capacitor` skill-discovery-index description enumerates only 9 sub-domains but the skill covers 19. This description drift reduces discovery accuracy.
+Additionally, the `capacitor-orchestrator` skill-discovery-index description enumerates only 9 sub-domains but the skill covers 19. This description drift reduces discovery accuracy.
 
 ## Evidence Artifact Coverage (GOV-M4)
 
@@ -93,7 +93,7 @@ Sampling 10 skills across domains for cross-skill invocation violations:
 | GOV-S6 | Hub-sync state current | Advisory | Prior run: `hub-sync` check returned non-zero. Cross-workspace coherence not verified in this run. |
 | GOV-S7 | Artifact reference hygiene normalized | Advisory | Prior run: `artifact-reference-hygiene` returned non-zero. Evidence traceability gaps persist. |
 | GOV-S8 | Docs naming conventions met | Advisory | Prior run: `docs-naming` returned non-zero. Legacy `librarian-curation-report.md` and other flat-root change files violate sub-directory naming convention. |
-| GOV-S9 | Utilization coverage: skills referenced by agents/prompts | Advisory | 6 unregistered capacitor skills not discoverable via catalog; `orchestrate-capacitor` description understates coverage scope. |
+| GOV-S9 | Utilization coverage: skills referenced by agents/prompts | Advisory | 6 unregistered capacitor skills not discoverable via catalog; `capacitor-orchestrator` description understates coverage scope. |
 | GOV-S10 | Review recency within 30-day threshold | Advisory | Prior reviews dated 2026-04-18 (18 days); within threshold. Skill review artifacts for benchmark, capacitor, sveltekit families lack individual history files. |
 | GOV-S11 | Responsibility overlap below threshold | Pass | Prior run showed 0 conflicts across 18 agents. No new agents added since prior run. |
 
@@ -101,13 +101,13 @@ Sampling 10 skills across domains for cross-skill invocation violations:
 
 | Failure ID | Check | Severity | Description | Recommended Action |
 |---|---|---|---|---|
-| GOV-2026-M3-001 | GOV-M3 | **CRITICAL** | 6 CapacitorJS skills unregistered in skills-discovery-index.md | Register all 6 skills in skills-discovery-index.md with correct lane assignments; update orchestrate-capacitor description |
+| GOV-2026-M3-001 | GOV-M3 | **CRITICAL** | 6 CapacitorJS skills unregistered in skills-discovery-index.md | Register all 6 skills in skills-discovery-index.md with correct lane assignments; update capacitor-orchestrator description |
 
 ## Ranked Recommendations
 
 | Rank | Priority | Recommendation | Owner | Target Date |
 |---|---:|---|---|---|
-| 1 | CRITICAL | Register 6 unregistered capacitor skills in skills-discovery-index.md and update orchestrate-capacitor description | Skills Owner | 2026-05-10 |
+| 1 | CRITICAL | Register 6 unregistered capacitor skills in skills-discovery-index.md and update capacitor-orchestrator description | Skills Owner | 2026-05-10 |
 | 2 | HIGH | Verify governance broken-links-grid resolution; re-run link-graph check to close GOV-S5 | Governance Owner | 2026-05-10 |
 | 3 | HIGH | Run hub-sync check and restore cross-workspace coherence (GOV-S6) | Governance Owner | 2026-05-10 |
 | 4 | MEDIUM | Update `csharp-engineer` agent description to include explicit invocation context (GOV-S1) | Skills Owner | 2026-05-17 |
@@ -128,3 +128,4 @@ Sampling 10 skills across domains for cross-skill invocation violations:
 | Instructions | 21 | 21 | 0 | Flat |
 | Prompts | 19 | 21 | +2 | Increase |
 | Disposition | PASSED | FAILED | — | Degraded |
+

@@ -16,7 +16,7 @@ Three frontend/UX instruction files lacked explicit skill routing. Added routing
 |---|---|---|
 | ux-design.instructions.md | Added "Routing Notes" section | design-web-ux, design-mobile-ux, usability-test-scripts |
 | web-frontend.instructions.md | Added "Routing Notes" section | build-web-frontend, web-ux-* quality-gate skills |
-| mobile-frontend.instructions.md | Added "Routing Notes" section | build-maui-apps, orchestrate-mobile, mobile-*-quality-gate |
+| mobile-frontend.instructions.md | Added "Routing Notes" section | build-maui-apps, mobile-orchestrator, mobile-*-quality-gate |
 
 **Impact**: 3 previously unrouted files now direct users to paired implementation skills.
 
@@ -139,3 +139,4 @@ Run this audit again with `audit-instructions` skill to confirm:
 **Completed by**: Instruction Optimization Audit + Phase 1-2 Execution  
 **Status**: Ready for merge  
 **Risk Level**: Low (policy-focused edits, no behavioral changes)
+

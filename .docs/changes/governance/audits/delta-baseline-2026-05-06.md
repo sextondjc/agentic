@@ -28,10 +28,10 @@
 
 | Family | Orchestrator Skill | Specialist Skills | Family Total |
 |---|---|---:|---:|
-| jQuery | `orchestrate-jquery` | 11 | **12** |
-| Kendo UI | `orchestrate-kendo` | 20 | **21** |
-| SvelteKit | `orchestrate-sveltekit` | 16 | **17** |
-| xUnit Extensions | `orchestrate-xunit` | 11 | **12** |
+| jQuery | `jquery-orchestrator` | 11 | **12** |
+| Kendo UI | `kendo-orchestrator` | 20 | **21** |
+| SvelteKit | `sveltekit-orchestrator` | 16 | **17** |
+| xUnit Extensions | `xunit-orchestrator` | 11 | **12** |
 | Other new additions | — | ~63 | **~63** |
 | **Total new** | — | — | **125** |
 
@@ -56,9 +56,9 @@
 | Failure ID | Severity | Prior Finding | Resolution Status |
 |---|---|---|---|
 | F-2026-001 | CRITICAL | 6 capacitor skills unregistered in `skills-discovery-index.md` | ✅ **RESOLVED** — all 261 on-disk skills are now registered |
-| F-2026-002 | HIGH | `orchestrate-capacitor` index description listed only 9 of 19 sub-domains | ✅ **RESOLVED** — `orchestrate-capacitor` index entry now lists all 19 sub-domains |
+| F-2026-002 | HIGH | `capacitor-orchestrator` index description listed only 9 of 19 sub-domains | ✅ **RESOLVED** — `capacitor-orchestrator` index entry now lists all 19 sub-domains |
 | F-2026-003 | HIGH | `csharp-engineer` description lacked explicit invocation conditions | ✅ **RESOLVED** — description updated per recommendation |
-| F-2026-004 | HIGH | `skills-discovery-index.md` `orchestrate-capacitor` entry contradicted SKILL.md body (OPR-M3) | ✅ **RESOLVED** — same root cause as F-2026-002; index aligned |
+| F-2026-004 | HIGH | `skills-discovery-index.md` `capacitor-orchestrator` entry contradicted SKILL.md body (OPR-M3) | ✅ **RESOLVED** — same root cause as F-2026-002; index aligned |
 | F-2026-005 | HIGH | `csharp-engineer` description failed determinism check (OPR-M2) | ✅ **RESOLVED** — same root cause as F-2026-003; description fixed |
 
 All 5 prior MUST failures are confirmed resolved. No carry-forward failures from the 2026-05-06 post-remediation baseline.
@@ -100,3 +100,4 @@ Type catalog integrity is fully intact. All three lifecycle catalogs (agents, in
 ---
 
 *Evidence: on-disk enumeration via `Get-ChildItem .github/skills` (261 directories), `skills-discovery-index.md` row count (261 entries), agent/instruction/prompt directory listings vs. lifecycle catalogs.*
+

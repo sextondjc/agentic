@@ -1,0 +1,17 @@
+
+Old                     New                      OldExists NewExists
+---                     ---                      --------- ---------
+orchestrate-benchmark   benchmark-orchestrator       False      True
+orchestrate-capacitor   capacitor-orchestrator       False      True
+orchestrate-csharp      csharp-orchestrator          False      True
+orchestrate-jquery      jquery-orchestrator          False      True
+orchestrate-kendo       kendo-orchestrator           False      True
+orchestrate-mcp-servers mcp-servers-orchestrator     False      True
+orchestrate-mobile      mobile-orchestrator          False      True
+orchestrate-shadcn      shadcn-orchestrator          False      True
+orchestrate-sql-server  sql-server-orchestrator      False      True
+orchestrate-sveltekit   sveltekit-orchestrator       False      True
+orchestrate-tailwind    tailwind-orchestrator        False      True
+orchestrate-xunit       xunit-orchestrator           False      True
+
+

@@ -69,12 +69,12 @@
 **Finding:** Skills conventionally start with a verb (`audit-`, `build-`, `design-`, `execute-`) or a noun domain (`governance-`, `sql-`, `csharp-`). `current-` is an adjective that signals context rather than function, making this skill harder to discover via vocabulary-based scanning.  
 **Recommendation:** Consider renaming to `assess-test-coverage` or `report-test-coverage` in a future taxonomy normalization pass. Document current name exception in `lane-intent.md`.
 
-### NMG-S-004 — `orchestrate-capacitor` Index Description Does Not Match Skill Coverage
+### NMG-S-004 — `capacitor-orchestrator` Index Description Does Not Match Skill Coverage
 
 **Severity:** MEDIUM  
 **Check:** Domain classification completeness (repeated from GOV-S9 / SKR-M-002).  
-**Finding:** The skill-discovery-index entry for `orchestrate-capacitor` lists 9 sub-domains. The SKILL.md and the 19 individual capacitor sub-skills collectively cover auth/session, offline, CI, observability, performance, migration, and more. This mismatch breaks discovery for those 6+ domains.  
-**Recommendation:** Update the `orchestrate-capacitor` index description to enumerate all 19 sub-domain triggers (or use a "…and more" pattern with a link to the SKILL.md).
+**Finding:** The skill-discovery-index entry for `capacitor-orchestrator` lists 9 sub-domains. The SKILL.md and the 19 individual capacitor sub-skills collectively cover auth/session, offline, CI, observability, performance, migration, and more. This mismatch breaks discovery for those 6+ domains.  
+**Recommendation:** Update the `capacitor-orchestrator` index description to enumerate all 19 sub-domain triggers (or use a "…and more" pattern with a link to the SKILL.md).
 
 ### NMG-S-005 — `.docs/changes/web-ux-quality-gate-example/` and `.docs/changes/web-ux-quality-gate-full-example/` Directory Placement
 
@@ -82,3 +82,4 @@
 **Check:** Domain classification — example directories.  
 **Finding:** Two example directories sit directly under `.docs/changes/` rather than under a domain-specific path like `.docs/changes/ux/examples/`. This is minor but creates corpus clutter.  
 **Recommendation:** Move to `.docs/changes/ux/examples/` or `.docs/examples/web-ux-quality-gate/` during the next librarian pass.
+

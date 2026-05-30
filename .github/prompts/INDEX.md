@@ -30,6 +30,5 @@
 | review-technical-docs.prompt.md | review-technical-docs | reference | Prompt template for technical documentation review and remediation. |
 | scaffold-web-ux-quality-gate.prompt.md | scaffold-web-ux-quality-gate | reference | Prompt template for web UX quality-gate scaffolding. |
 | security-research.prompt.md | security-research | reference | Prompt template for research-only security assessment. |
-| sync-compendium.prompt.md | sync-compendium | reference | Prompt template for compendium synchronization workflow. |
 | workspace-scaffolder.prompt.md | workspace-scaffolder | reference | Prompt template for workspace scaffolding. |
 | write-component-docs.prompt.md | write-component-docs | reference | Prompt template for component documentation authoring. |

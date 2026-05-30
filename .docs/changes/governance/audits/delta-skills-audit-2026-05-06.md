@@ -33,7 +33,7 @@
 
 | Skill | SKR-M1 | SKR-M2 | SKR-M3 | SKR-M4 | SKR-M5 | Verdict |
 |---|---|---|---|---|---|---|
-| `orchestrate-jquery` | ✅ | ✅ | ✅ | ✅ Planning | ✅ | **PASS** |
+| `jquery-orchestrator` | ✅ | ✅ | ✅ | ✅ Planning | ✅ | **PASS** |
 | `jquery-source-curation` | ✅ | ✅ | ✅ | ✅ Planning | ✅ | **PASS** |
 | `jquery-core` | ✅ | ✅ | ✅ | ✅ Execution | ✅ | **PASS** |
 | `jquery-events` | ✅ | ✅ | ✅ | ✅ Execution | ✅ | **PASS** |
@@ -54,7 +54,7 @@
 
 | Skill | SKR-M1 | SKR-M2 | SKR-M3 | SKR-M4 | SKR-M5 | Verdict |
 |---|---|---|---|---|---|---|
-| `orchestrate-kendo` | ✅ | ✅ | ✅ | ✅ Planning | ✅ | **PASS** |
+| `kendo-orchestrator` | ✅ | ✅ | ✅ | ✅ Planning | ✅ | **PASS** |
 | `kendo-ui-source-curation` | ✅ | ✅ | ✅ | ✅ Planning | ✅ | **PASS** |
 | `kendo-ui-core` | ✅ | ✅ | ✅ | ✅ Execution | ✅ | **PASS** |
 | `kendo-ui-data-binding` | ✅ | ✅ | ✅ | ✅ Execution | ✅ | **PASS** |
@@ -84,7 +84,7 @@
 
 | Skill | SKR-M1 | SKR-M2 | SKR-M3 | SKR-M4 | SKR-M5 | Verdict |
 |---|---|---|---|---|---|---|
-| `orchestrate-sveltekit` | ✅ | ✅ | ✅ | ✅ Planning | ✅ | **PASS** |
+| `sveltekit-orchestrator` | ✅ | ✅ | ✅ | ✅ Planning | ✅ | **PASS** |
 | `sveltekit-routing` | ✅ | ✅ | ✅ | ✅ Execution | ✅ | **PASS** |
 | `sveltekit-load` | ✅ | ✅ | ✅ | ✅ Execution | ✅ | **PASS** |
 | `sveltekit-actions` | ✅ | ✅ | ✅ | ✅ Execution | ✅ | **PASS** |
@@ -110,7 +110,7 @@
 
 | Skill | SKR-M1 | SKR-M2 | SKR-M3 | SKR-M4 | SKR-M5 | Verdict |
 |---|---|---|---|---|---|---|
-| `orchestrate-xunit` | ✅ | ✅ | ✅ | ✅ Planning | ✅ | **PASS** |
+| `xunit-orchestrator` | ✅ | ✅ | ✅ | ✅ Planning | ✅ | **PASS** |
 | `xunit-source-curation` | ✅ | ✅ | ✅ | ✅ Planning | ✅ | **PASS** |
 | `xunit-test-design` | ✅ | ✅ | ✅ | ✅ Execution | ✅ | **PASS** |
 | `xunit-fixture-lifecycle` | ✅ | ✅ | ✅ | ✅ Execution | ✅ | **PASS** |
@@ -157,12 +157,12 @@ All remaining ~63 skills not in the four named families above were verified via 
 
 ## Phase 3 — Orchestrator Entry Accuracy Check
 
-Scope: `orchestrate-jquery`, `orchestrate-kendo`, `orchestrate-sveltekit`  
+Scope: `jquery-orchestrator`, `kendo-orchestrator`, `sveltekit-orchestrator`  
 Method per TYP-S4: verify index description enumerates all sub-domains present in SKILL.md frontmatter description. Flag any sub-domain present in SKILL.md but absent from index (root cause of prior F-2026-002).
 
 ---
 
-### 3.1 orchestrate-jquery
+### 3.1 jquery-orchestrator
 
 | | Text |
 |---|---|
@@ -183,12 +183,12 @@ Method per TYP-S4: verify index description enumerates all sub-domains present i
 | **CI integration** | ✅ | ❌ **ABSENT** |
 
 **Finding F-D-2026-001** | Severity: **MEDIUM**  
-`orchestrate-jquery` index description omits "CI integration" sub-domain present in SKILL.md frontmatter. `jquery-ci-integration` is a registered specialist skill that will not surface when a user scans the index for CI-related jQuery routing. Analogous to prior F-2026-002 root cause.  
-**Recommendation:** Update `skills-discovery-index.md` `orchestrate-jquery` description to append "CI integration" to the sub-domain list. Change is one-line, same-change rule applies.
+`jquery-orchestrator` index description omits "CI integration" sub-domain present in SKILL.md frontmatter. `jquery-ci-integration` is a registered specialist skill that will not surface when a user scans the index for CI-related jQuery routing. Analogous to prior F-2026-002 root cause.  
+**Recommendation:** Update `skills-discovery-index.md` `jquery-orchestrator` description to append "CI integration" to the sub-domain list. Change is one-line, same-change rule applies.
 
 ---
 
-### 3.2 orchestrate-kendo
+### 3.2 kendo-orchestrator
 
 | | Text |
 |---|---|
@@ -218,12 +218,12 @@ Method per TYP-S4: verify index description enumerates all sub-domains present i
 | CI integration | ✅ | ✅ |
 
 **Finding F-D-2026-002** | Severity: **HIGH**  
-`orchestrate-kendo` index description omits 8 of 19 sub-domains present in SKILL.md frontmatter: Grid advanced behavior, charts/dataviz, export/printing, localization, state persistence, real-time updates, upload workflows, observability. This is a direct recurrence of the F-2026-002 root cause pattern. Agents and users scanning the index for Grid, chart, export, localization, or real-time Kendo routing will not be directed to `orchestrate-kendo`.  
-**Recommendation:** Update `skills-discovery-index.md` `orchestrate-kendo` description to enumerate all 19 sub-domains. The SKILL.md frontmatter description is the authoritative source. Change must be made in the same transaction as any future Kendo UI skill additions.
+`kendo-orchestrator` index description omits 8 of 19 sub-domains present in SKILL.md frontmatter: Grid advanced behavior, charts/dataviz, export/printing, localization, state persistence, real-time updates, upload workflows, observability. This is a direct recurrence of the F-2026-002 root cause pattern. Agents and users scanning the index for Grid, chart, export, localization, or real-time Kendo routing will not be directed to `kendo-orchestrator`.  
+**Recommendation:** Update `skills-discovery-index.md` `kendo-orchestrator` description to enumerate all 19 sub-domains. The SKILL.md frontmatter description is the authoritative source. Change must be made in the same transaction as any future Kendo UI skill additions.
 
 ---
 
-### 3.3 orchestrate-sveltekit
+### 3.3 sveltekit-orchestrator
 
 | | Text |
 |---|---|
@@ -238,7 +238,7 @@ Descriptions are **identical**. No delta. The frontmatter intentionally uses a g
 
 ### 3.4 Phase 3 Trigger Condition Check
 
-All three orchestrate-* SKILL.md bodies open with invocation-focused trigger condition lists. `orchestrate-jquery`, `orchestrate-kendo`, and `orchestrate-sveltekit` all begin their trigger sections with concrete use conditions starting with "A [framework] request spans more than one capability area". **PASS.**
+All three legacy pre-rename orchestrator SKILL.md bodies open with invocation-focused trigger condition lists. `jquery-orchestrator`, `kendo-orchestrator`, and `sveltekit-orchestrator` all begin their trigger sections with concrete use conditions starting with "A [framework] request spans more than one capability area". **PASS.**
 
 ---
 
@@ -246,12 +246,13 @@ All three orchestrate-* SKILL.md bodies open with invocation-focused trigger con
 
 | Skill | Index Accuracy | SKILL.md Trigger | Delta Findings | Severity |
 |---|---|---|---|---|
-| `orchestrate-jquery` | ❌ 1 sub-domain absent | ✅ PASS | F-D-2026-001 | **MEDIUM** |
-| `orchestrate-kendo` | ❌ 8 sub-domains absent | ✅ PASS | F-D-2026-002 | **HIGH** |
-| `orchestrate-sveltekit` | ✅ PASS | ✅ PASS | None | — |
+| `jquery-orchestrator` | ❌ 1 sub-domain absent | ✅ PASS | F-D-2026-001 | **MEDIUM** |
+| `kendo-orchestrator` | ❌ 8 sub-domains absent | ✅ PASS | F-D-2026-002 | **HIGH** |
+| `sveltekit-orchestrator` | ✅ PASS | ✅ PASS | None | — |
 
 **Phase 3 outcome: 2 advisory findings (1 HIGH, 1 MEDIUM). 0 MUST failures. No new CRITICAL findings.**
 
 ---
 
-*Evidence: `skills-discovery-index.md` rows for `orchestrate-jquery`, `orchestrate-kendo`, `orchestrate-sveltekit`; SKILL.md frontmatter for same three skills read directly from workspace.*
+*Evidence: `skills-discovery-index.md` rows for `jquery-orchestrator`, `kendo-orchestrator`, `sveltekit-orchestrator`; SKILL.md frontmatter for same three skills read directly from workspace.*
+

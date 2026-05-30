@@ -38,9 +38,9 @@
 | Failure ID | Severity | Finding | Impact | Evidence |
 |---|---|---|---|---|
 | F-2026-001 | **CRITICAL** | GOV-M3: 6 capacitor skills unregistered in skills-discovery-index.md (`capacitor-auth-session`, `capacitor-ci-integration`, `capacitor-migration-upgrades`, `capacitor-observability`, `capacitor-offline-resilience`, `capacitor-performance-quality-gate`) | Undiscoverable; cross-type routing chain broken for 6 CapacitorJS sub-domains | [governance-audit.md](./governance-audit.md) |
-| F-2026-002 | **HIGH** | SKR-M-002: `orchestrate-capacitor` index description lists 9 sub-domains; SKILL.md covers 19 | Agents miss routing for 10 capacitor sub-domains | [governance-audit-types-skills.md](./../../skill/reviews/governance-audit-types-skills.md) |
+| F-2026-002 | **HIGH** | SKR-M-002: `capacitor-orchestrator` index description lists 9 sub-domains; SKILL.md covers 19 | Agents miss routing for 10 capacitor sub-domains | [governance-audit-types-skills.md](./../../skill/reviews/governance-audit-types-skills.md) |
 | F-2026-003 | **HIGH** | AGR-M3: `csharp-engineer` description lacks explicit invocation conditions | Orchestrator routing to csharp-engineer is ambiguous | [audit-agents.md](./audit-agents.md) |
-| F-2026-004 | **HIGH** | OPR-M3: `skills-discovery-index.md` entry for `orchestrate-capacitor` contradicts SKILL.md body | Same root cause as F-2026-002; confirmed non-contradiction failure | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
+| F-2026-004 | **HIGH** | OPR-M3: `skills-discovery-index.md` entry for `capacitor-orchestrator` contradicts SKILL.md body | Same root cause as F-2026-002; confirmed non-contradiction failure | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
 | F-2026-005 | **HIGH** | OPR-M2: `csharp-engineer` description fails determinism check | Same root cause as F-2026-003; confirmed non-determinism failure | [governance-audit-types-optimization-2026-05-06.md](./../../customization/reviews/governance-audit-types-optimization-2026-05-06.md) |
 
 ## Failure Detail Grid
@@ -48,7 +48,7 @@
 | ID | Severity | Check | Finding | Evidence |
 |---|---|---|---|---|
 | F-2026-001 | CRITICAL | utilization-coverage | GOV-M3: 6 capacitor skills unregistered in skills-discovery-index.md | [test-utilization-coverage.ps1](./../../../../.github/scripts/powershell/test-utilization-coverage.ps1) |
-| F-2026-002 | HIGH | source-catalog-freshness | SKR-M-002: `orchestrate-capacitor` index description lists fewer sub-domains than SKILL.md | [test-source-catalog-freshness.ps1](./../../../../.github/scripts/powershell/test-source-catalog-freshness.ps1) |
+| F-2026-002 | HIGH | source-catalog-freshness | SKR-M-002: `capacitor-orchestrator` index description lists fewer sub-domains than SKILL.md | [test-source-catalog-freshness.ps1](./../../../../.github/scripts/powershell/test-source-catalog-freshness.ps1) |
 | F-2026-003 | HIGH | review-recency | AGR-M3: `csharp-engineer` description lacks explicit invocation conditions | [test-review-recency.ps1](./../../../../.github/scripts/powershell/test-review-recency.ps1) |
 | F-2026-004 | HIGH | optimization-factor | OPR-M3: `skills-discovery-index.md` entry contradicts SKILL.md body | [test-governance-optimization-factor.ps1](./../../../../.github/scripts/powershell/test-governance-optimization-factor.ps1) |
 | F-2026-005 | HIGH | routing-determinism | OPR-M2: `csharp-engineer` description fails determinism check | [test-routing-determinism.ps1](./../../../../.github/scripts/powershell/test-routing-determinism.ps1) |
@@ -72,7 +72,7 @@
 | Rank | Priority | Recommendation | Owner | Target Date |
 |---|---:|---|---|---|
 | 1 | CRITICAL | Register 6 unregistered capacitor skills in skills-discovery-index.md | Skills Owner | 2026-05-10 |
-| 2 | HIGH | Update `orchestrate-capacitor` description to enumerate all 19 sub-domains | Skills Owner | 2026-05-10 |
+| 2 | HIGH | Update `capacitor-orchestrator` description to enumerate all 19 sub-domains | Skills Owner | 2026-05-10 |
 | 3 | HIGH | Replace `csharp-engineer` description with concrete invocation directive | Skills Owner | 2026-05-10 |
 | 4 | MEDIUM | Complete Output Contract for `governance-audit-types` and `governance-item-audit` prompts | Governance Owner | 2026-05-17 |
 | 5 | MEDIUM | Add language-context qualifier to .NET rules in `secure-coding.instructions.md` | Governance Owner | 2026-05-17 |
@@ -244,7 +244,7 @@
 | Finding | Done Gate | Evidence | Disposition |
 |---|---|---|---|
 | F-2026-001 | All 6 capacitor skills registered in `skills-discovery-index.md` | Lines 235–240: rows present for `capacitor-auth-session`, `capacitor-ci-integration`, `capacitor-migration-upgrades`, `capacitor-observability`, `capacitor-offline-resilience`, `capacitor-performance-quality-gate` | **Accepted** |
-| F-2026-002 | `orchestrate-capacitor` row description lists all 19 sub-domains | Line 220: `"…setup, web integration, native APIs, plugin authoring, auth/session, offline resilience, observability, security, testing, CI integration, performance gates, migration upgrades, live updates, accessibility, deep linking, environment config, push notifications, privacy compliance, or release readiness…"` — all 12 required sub-domains confirmed present | **Accepted** |
+| F-2026-002 | `capacitor-orchestrator` row description lists all 19 sub-domains | Line 220: `"…setup, web integration, native APIs, plugin authoring, auth/session, offline resilience, observability, security, testing, CI integration, performance gates, migration upgrades, live updates, accessibility, deep linking, environment config, push notifications, privacy compliance, or release readiness…"` — all 12 required sub-domains confirmed present | **Accepted** |
 | F-2026-003 | `csharp-engineer` description is invocation-focused and routes to adjacent agents | Frontmatter: `"Use when implementing, modernizing, testing, or reviewing .NET/C# code with workspace canonical standards. Route debugging to defect-debugger and architecture boundary decisions to architecture-designer."` — invocation trigger present; two adjacent-agent routing directives present | **Accepted** |
 | F-2026-004 | `governance-lifecycle.instructions.md` contains MUST rule with explicit audit-failure consequence for skill catalog updates | Line 26: `"Skills added to .github/skills/ MUST have a corresponding row added to skills-discovery-index.md in the same change. Skills removed MUST have their row removed in the same change. An unregistered skill or orphaned catalog row is treated as a MUST failure with no grace period."` | **Accepted** |
 | F-2026-005 (governance-audit-types) | Output Contract enumerates output file path, column schema, and valid disposition values | Lines 50+: output file path pattern defined; Aggregate Outcome Grid columns listed; Failure Detail Grid columns listed; valid disposition values `PASSED`, `FAILED`, `PROVISIONAL-FAILED` defined | **Accepted** |
@@ -285,5 +285,6 @@
 
 | Finding ID | Severity | Action | Owner | Target |
 |---|---|---|---|---|
-| F-D-2026-002 | HIGH | Update `orchestrate-kendo` index entry to enumerate all 19 sub-domains | Skills Owner | 2026-05-13 |
-| F-D-2026-001 | MEDIUM | Update `orchestrate-jquery` index entry to append "CI integration" | Skills Owner | 2026-05-13 |
+| F-D-2026-002 | HIGH | Update `kendo-orchestrator` index entry to enumerate all 19 sub-domains | Skills Owner | 2026-05-13 |
+| F-D-2026-001 | MEDIUM | Update `jquery-orchestrator` index entry to append "CI integration" | Skills Owner | 2026-05-13 |
+

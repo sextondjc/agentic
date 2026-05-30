@@ -1,0 +1,12 @@
+orchestrate-benchmark -> benchmark-orchestrator
+orchestrate-capacitor -> capacitor-orchestrator
+orchestrate-csharp -> csharp-orchestrator
+orchestrate-jquery -> jquery-orchestrator
+orchestrate-kendo -> kendo-orchestrator
+orchestrate-mcp-servers -> mcp-servers-orchestrator
+orchestrate-mobile -> mobile-orchestrator
+orchestrate-shadcn -> shadcn-orchestrator
+orchestrate-sql-server -> sql-server-orchestrator
+orchestrate-sveltekit -> sveltekit-orchestrator
+orchestrate-tailwind -> tailwind-orchestrator
+orchestrate-xunit -> xunit-orchestrator

@@ -1,0 +1,7 @@
+PLAN-SKILL-ORCH-RENAME-001 - Residual Scan
+Timestamp: 2026-05-28T22:15:40
+Total matches including plan/evidence: 44
+Residual matches excluding plan/evidence: 0
+
+Residual entries:
+None

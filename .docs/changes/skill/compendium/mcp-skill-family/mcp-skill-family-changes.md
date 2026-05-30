@@ -24,8 +24,8 @@
 
 ## Files Added
 
-- `.github/skills/orchestrate-mcp-servers/SKILL.md`
-- `.github/skills/orchestrate-mcp-servers/references/source-catalog.md`
+- `.github/skills/mcp-servers-orchestrator/SKILL.md`
+- `.github/skills/mcp-servers-orchestrator/references/source-catalog.md`
 - `.github/skills/write-mcp-servers/SKILL.md`
 - `.github/skills/write-mcp-servers/references/source-catalog.md`
 - `.github/skills/refine-mcp-servers/SKILL.md`
@@ -57,3 +57,4 @@
 
 - Source catalogs use current evaluation snapshots and should be refreshed periodically.
 - Any future MCP SDK policy changes require a targeted sync pass for these skills.
+

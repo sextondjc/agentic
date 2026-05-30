@@ -536,18 +536,18 @@ This grid is the proposed migration mapping for all currently discoverable skill
 | operability-design | Execution / Planning | execution | .github/skills/execution/operability-design/SKILL.md |
 | opportunity-mapping | Planning / Execution | delivery | .github/skills/delivery/opportunity-mapping/SKILL.md |
 | optimize-customizations | Review / Execution | governance | .github/skills/governance/optimize-customizations/SKILL.md |
-| orchestrate-benchmark | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-benchmark/SKILL.md |
-| orchestrate-capacitor | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-capacitor/SKILL.md |
-| orchestrate-csharp | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-csharp/SKILL.md |
-| orchestrate-jquery | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-jquery/SKILL.md |
-| orchestrate-kendo | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-kendo/SKILL.md |
-| orchestrate-mcp-servers | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-mcp-servers/SKILL.md |
-| orchestrate-mobile | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-mobile/SKILL.md |
-| orchestrate-shadcn | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-shadcn/SKILL.md |
-| orchestrate-sql-server | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-sql-server/SKILL.md |
-| orchestrate-sveltekit | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-sveltekit/SKILL.md |
-| orchestrate-tailwind | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-tailwind/SKILL.md |
-| orchestrate-xunit | Planning / Execution | orchestration | .github/skills/orchestration/orchestrate-xunit/SKILL.md |
+| benchmark-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/benchmark-orchestrator/SKILL.md |
+| capacitor-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/capacitor-orchestrator/SKILL.md |
+| csharp-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/csharp-orchestrator/SKILL.md |
+| jquery-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/jquery-orchestrator/SKILL.md |
+| kendo-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/kendo-orchestrator/SKILL.md |
+| mcp-servers-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/mcp-servers-orchestrator/SKILL.md |
+| mobile-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/mobile-orchestrator/SKILL.md |
+| shadcn-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/shadcn-orchestrator/SKILL.md |
+| sql-server-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/sql-server-orchestrator/SKILL.md |
+| sveltekit-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/sveltekit-orchestrator/SKILL.md |
+| tailwind-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/tailwind-orchestrator/SKILL.md |
+| xunit-orchestrator | Planning / Execution | orchestration | .github/skills/orchestration/xunit-orchestrator/SKILL.md |
 | outcome-review | Review / Planning | delivery | .github/skills/delivery/outcome-review/SKILL.md |
 | perf-benchmark | Review / Planning | test | .github/skills/test/perf-benchmark/SKILL.md |
 | performance-research | Review / Planning | review | .github/skills/review/performance-research/SKILL.md |
@@ -707,3 +707,4 @@ Technology grouping is metadata-driven and index-driven. It does not change phys
 ## Approval Gate
 
 Approve this plan to begin execution design-to-implementation handoff with lifecycle-primary storage and technology-secondary discovery.
+

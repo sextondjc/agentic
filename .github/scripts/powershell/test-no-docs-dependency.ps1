@@ -1,5 +1,5 @@
 # test-no-docs-dependency.ps1: Detect forbidden documentation-root references under .github.
-# Usage: ./.github/scripts/powershell/test-no-docs-dependency.ps1 [-RootPath <path>] [-ScanPath <path>] [-OutputJsonPath <path>] [-FailOnMatch <$true|$false>]
+# Usage: ./.github/scripts/powershell/test-no-docs-dependency.ps1 [-RootPath <path>] [-ScanPath <path>] [-OutputJsonPath <path>] [-FailOnMatch <$true|$false>] [-IncludeMarkdown] [-IncludePowerShell]
 
 [CmdletBinding()]
 param(
@@ -16,6 +16,18 @@ param(
 
     [Parameter()]
     [bool]$FailOnMatch = $true
+,
+
+    [Parameter()]
+    [switch]$IncludeMarkdown
+,
+
+    [Parameter()]
+    [switch]$IncludePowerShell
+,
+
+    [Parameter()]
+    [string[]]$ExcludePathPatterns = @('*/.artifacts/*')
 )
 
 $ErrorActionPreference = 'Stop'
@@ -32,11 +44,29 @@ $needle = "{0}{1}" -f $dot, 'docs'
 # Match the forbidden token only when it ends at a non-identifier boundary.
 $needlePattern = "(?i)$([regex]::Escape($needle))(?=$|[^A-Za-z0-9_])"
 
-$includeExtensions = @('.md', '.ps1', '.psm1', '.yml', '.yaml', '.json', '.txt')
+$includeExtensions = @('.yml', '.yaml', '.json', '.txt')
+if ($IncludeMarkdown) {
+    $includeExtensions += '.md'
+}
+if ($IncludePowerShell) {
+    $includeExtensions += @('.ps1', '.psm1')
+}
 $violations = [System.Collections.Generic.List[PSCustomObject]]::new()
 
 $files = Get-ChildItem -LiteralPath $resolvedScan -Recurse -File | Where-Object {
     $_.Extension -in $includeExtensions
+}
+
+if ($ExcludePathPatterns.Count -gt 0) {
+    $files = @($files | Where-Object {
+        $relative = [System.IO.Path]::GetRelativePath($resolvedRoot, $_.FullName) -replace '[\\/]', '/'
+        foreach ($pattern in $ExcludePathPatterns) {
+            if ($relative -like $pattern) {
+                return $false
+            }
+        }
+        return $true
+    })
 }
 
 foreach ($file in $files) {

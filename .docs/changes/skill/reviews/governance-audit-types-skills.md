@@ -63,15 +63,15 @@ The following grid covers the governance-domain skills evaluated in depth. All 1
 
 **Severity:** CRITICAL  
 **Check:** SKR-M2 / GOV-M3  
-**Finding:** 6 capacitor skills are on disk but have no entry in `skills-discovery-index.md`. This means they are undiscoverable to agents and orchestrators using the catalog as the source of truth. The `orchestrate-capacitor` skill description also understates its sub-domain coverage (lists 9 areas; actual coverage is 19 areas).  
-**Required Action:** Add 6 registration rows to `skills-discovery-index.md` and update the `orchestrate-capacitor` When-to-Use description.
+**Finding:** 6 capacitor skills are on disk but have no entry in `skills-discovery-index.md`. This means they are undiscoverable to agents and orchestrators using the catalog as the source of truth. The `capacitor-orchestrator` skill description also understates its sub-domain coverage (lists 9 areas; actual coverage is 19 areas).  
+**Required Action:** Add 6 registration rows to `skills-discovery-index.md` and update the `capacitor-orchestrator` When-to-Use description.
 
-### SKR-M-002 — `orchestrate-capacitor` Discovery Index Description Drift
+### SKR-M-002 — `capacitor-orchestrator` Discovery Index Description Drift
 
 **Severity:** HIGH  
 **Check:** SKR-M3 — Clear discovery triggers.  
-**Finding:** The skill-discovery-index entry for `orchestrate-capacitor` reads: "Use when one CapacitorJS request spans multiple capability areas — setup, web integration, native APIs, plugin authoring, security, testing, or release readiness." The actual SKILL.md body covers 19 domains including auth/session, offline resilience, CI integration, performance gates, migration upgrades, live updates, deep linking, environment config, push notifications, observability, privacy compliance, and accessibility — none of which appear in the discovery index description.  
-**Impact:** Agents scanning the discovery index for auth, offline, CI, and observability triggers will not route to `orchestrate-capacitor`.
+**Finding:** The skill-discovery-index entry for `capacitor-orchestrator` reads: "Use when one CapacitorJS request spans multiple capability areas — setup, web integration, native APIs, plugin authoring, security, testing, or release readiness." The actual SKILL.md body covers 19 domains including auth/session, offline resilience, CI integration, performance gates, migration upgrades, live updates, deep linking, environment config, push notifications, observability, privacy compliance, and accessibility — none of which appear in the discovery index description.  
+**Impact:** Agents scanning the discovery index for auth, offline, CI, and observability triggers will not route to `capacitor-orchestrator`.
 
 ## SHOULD Advisories Detail
 
@@ -114,3 +114,4 @@ The following grid covers the governance-domain skills evaluated in depth. All 1
 | Skills Blocked (Unregistered) | 6 |
 | MUST Failures | 2 |
 | SHOULD Advisories | 18 |
+

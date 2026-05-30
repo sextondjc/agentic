@@ -14,7 +14,7 @@
 
 | Artifact | Type | Outcome | MUST Failures | SHOULD Advisories | Evidence |
 |---|---|---|---:|---:|---|
-| .github/skills/orchestrate-sql-server/SKILL.md | skill | Pass | 0 | 0 | Scope remains orchestration-only with explicit ownership contract. |
+| .github/skills/sql-server-orchestrator/SKILL.md | skill | Pass | 0 | 0 | Scope remains orchestration-only with explicit ownership contract. |
 | .github/skills/sql-server-standards/SKILL.md | skill | Pass | 0 | 0 | Scope purity and determinism improved; execution-support asset added. |
 | .github/skills/sql-server-diagnostics/SKILL.md | skill | Pass | 0 | 0 | Evidence-first diagnostic workflow is deterministic and self-contained. |
 | .github/skills/sql-server-query-tuning/SKILL.md | skill | Pass | 0 | 0 | One-objective tuning flow with explicit rejected-option model. |

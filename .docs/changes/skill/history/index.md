@@ -134,18 +134,18 @@
 | operability-design | operability-design-history.md | 2026-05-13 | Pass With Advisories |
 | opportunity-mapping | opportunity-mapping-history.md | 2026-05-13 | Pass |
 | optimize-customizations | optimize-customizations-history.md | 2026-05-13 | Pass |
-| orchestrate-benchmark | orchestrate-benchmark-history.md | 2026-05-13 | Pass With Advisories |
-| orchestrate-capacitor | orchestrate-capacitor-history.md | 2026-05-13 | Pass With Advisories |
-| orchestrate-csharp | orchestrate-csharp-history.md | 2026-05-13 | Pass |
-| orchestrate-jquery | orchestrate-jquery-history.md | 2026-05-13 | Pass With Advisories |
-| orchestrate-kendo | orchestrate-kendo-history.md | 2026-05-13 | Pass With Advisories |
-| orchestrate-mcp-servers | orchestrate-mcp-servers-history.md | 2026-05-13 | Pass |
-| orchestrate-mobile | orchestrate-mobile-history.md | 2026-05-13 | Pass |
-| orchestrate-shadcn | orchestrate-shadcn-history.md | 2026-05-13 | Pass With Advisories |
-| orchestrate-sql-server | orchestrate-sql-server-history.md | 2026-05-13 | Pass |
-| orchestrate-sveltekit | orchestrate-sveltekit-history.md | 2026-05-13 | Pass |
-| orchestrate-tailwind | orchestrate-tailwind-history.md | 2026-05-13 | Pass |
-| orchestrate-xunit | orchestrate-xunit-history.md | 2026-05-13 | Pass |
+| benchmark-orchestrator | benchmark-orchestrator-history.md | 2026-05-13 | Pass With Advisories |
+| capacitor-orchestrator | capacitor-orchestrator-history.md | 2026-05-13 | Pass With Advisories |
+| csharp-orchestrator | csharp-orchestrator-history.md | 2026-05-13 | Pass |
+| jquery-orchestrator | jquery-orchestrator-history.md | 2026-05-13 | Pass With Advisories |
+| kendo-orchestrator | kendo-orchestrator-history.md | 2026-05-13 | Pass With Advisories |
+| mcp-servers-orchestrator | mcp-servers-orchestrator-history.md | 2026-05-13 | Pass |
+| mobile-orchestrator | mobile-orchestrator-history.md | 2026-05-13 | Pass |
+| shadcn-orchestrator | shadcn-orchestrator-history.md | 2026-05-13 | Pass With Advisories |
+| sql-server-orchestrator | sql-server-orchestrator-history.md | 2026-05-13 | Pass |
+| sveltekit-orchestrator | sveltekit-orchestrator-history.md | 2026-05-13 | Pass |
+| tailwind-orchestrator | tailwind-orchestrator-history.md | 2026-05-13 | Pass |
+| xunit-orchestrator | xunit-orchestrator-history.md | 2026-05-13 | Pass |
 | outcome-review | outcome-review-history.md | 2026-05-13 | Pass |
 | perf-benchmark | perf-benchmark-history.md | 2026-05-13 | Pass |
 | performance-research | performance-research-history.md | 2026-05-13 | Pass |

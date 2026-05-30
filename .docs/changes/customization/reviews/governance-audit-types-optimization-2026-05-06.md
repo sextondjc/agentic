@@ -30,11 +30,11 @@
 **Finding:** The `description` field reads `'Expert C#/.NET engineering agent consolidating craftsmanship, modernization, and performance guidance.'` This does not provide testable, concrete invocation conditions. A test question such as "should I route a .NET refactoring task here?" cannot be answered from this description alone.  
 **Required Fix:** Replace with a concrete invocation directive (see AGR-M3-001 in [audit-agents.md](../../governance/audits/audit-agents.md)).
 
-### OPR-M-002 — `orchestrate-capacitor` skill-discovery-index: Contradictory Trigger Description (OPR-M3)
+### OPR-M-002 — `capacitor-orchestrator` skill-discovery-index: Contradictory Trigger Description (OPR-M3)
 
 **Severity:** HIGH  
 **Check:** OPR-M3 — Artifact does not conflict with active governance instructions or catalogs.  
-**Asset:** `skills-discovery-index.md` entry for `orchestrate-capacitor`  
+**Asset:** `skills-discovery-index.md` entry for `capacitor-orchestrator`  
 **Finding:** The description conflicts with the actual SKILL.md content by omitting 10 sub-domain triggers. Agents using the index as ground truth receive contradictory results vs reading the SKILL.md directly.  
 **Required Fix:** Update skill-discovery-index description to match actual scope of 19 domains.
 
@@ -77,7 +77,7 @@
 | Rank | Priority | Asset | Recommendation | Target Date | Owner |
 |---|---:|---|---|---|---|
 | 1 | HIGH | `csharp-engineer.agent.md` | Replace description with concrete invocation directive | 2026-05-10 | Skills Owner |
-| 2 | HIGH | `skills-discovery-index.md` | Update `orchestrate-capacitor` description; add 6 missing skills | 2026-05-10 | Skills Owner |
+| 2 | HIGH | `skills-discovery-index.md` | Update `capacitor-orchestrator` description; add 6 missing skills | 2026-05-10 | Skills Owner |
 | 3 | MEDIUM | `governance-audit-types.prompt.md` | Complete Output Contract section | 2026-05-17 | Governance Owner |
 | 4 | MEDIUM | `governance-item-audit.prompt.md` | Complete Output Contract section | 2026-05-17 | Governance Owner |
 | 5 | MEDIUM | `secure-coding.instructions.md` | Add language-context qualifier to .NET-specific rules | 2026-05-17 | Governance Owner |
@@ -86,3 +86,4 @@
 | 8 | LOW | `governance-health-overview` SKILL.md | Consolidate Freshness Policy repetitions | 2026-05-24 | Skills Owner |
 | 9 | LOW | `audit-agent` SKILL.md | Remove Source Governance Rules / Workflow duplication | 2026-05-24 | Skills Owner |
 | 10 | LOW | `orchestrator.agent.md` | Remove or justify H1 before Specialization | 2026-05-24 | Skills Owner |
+

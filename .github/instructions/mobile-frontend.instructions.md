@@ -50,8 +50,9 @@ applyTo: '**/*.tsx,**/*.xaml'
 ## Routing Notes
 
 - Use [SKILL.md](./../skills/build-maui-apps/SKILL.md) for MAUI architecture, secure storage, and implementation workflow.
-- Use [SKILL.md](./../skills/orchestrate-mobile/SKILL.md) for end-to-end mobile UX, prototyping, and release coordination.
+- Use [SKILL.md](./../skills/mobile-orchestrator/SKILL.md) for end-to-end mobile UX, prototyping, and release coordination.
 - Use quality-gate skills for deterministic evidence gates:
   - [SKILL.md](./../skills/mobile-accessibility-quality-gate/SKILL.md) for accessibility findings
   - [SKILL.md](./../skills/mobile-offline-resilience/SKILL.md) for offline/sync validation
   - [SKILL.md](./../skills/mobile-performance-quality-gate/SKILL.md) for performance and release readiness
+

@@ -37,10 +37,10 @@ function Get-CatalogAssets {
   param([string]$Type)
 
   $catalogPath = switch ($Type) {
-    'agents' { '.github/agent-lifecycle-catalog.md' }
-    'skills' { '.github/skills/skill-discovery-index.md' }
-    'instructions' { '.github/instructions/instruction-lifecycle-catalog.md' }
-    'prompts' { '.github/prompts/prompt-lifecycle-catalog.md' }
+    'agents' { '.github/catalogs/agents-discovery-index.md' }
+    'skills' { '.github/catalogs/skills-discovery-index.md' }
+    'instructions' { '.github/catalogs/instructions-discovery-index.md' }
+    'prompts' { '.github/catalogs/prompts-discovery-index.md' }
   }
 
   $headerCell = switch ($Type) {
@@ -57,7 +57,20 @@ function Get-CatalogAssets {
       if ($cells.Count -lt 3) { return }
 
       $name = $cells[1].Trim().Trim('`')
+      if ($name -match '^\[(?<text>[^\]]+)\]\([^)]+\)$') {
+        $name = $matches['text']
+      }
+
       if (-not $name -or $name -eq $headerCell) { return }
+
+      switch ($Type) {
+        'instructions' {
+          if ($name -notmatch '\.instructions\.md$') {
+            $name = "$name.instructions.md"
+          }
+        }
+      }
+
       $name
     }
 }

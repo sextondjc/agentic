@@ -39,7 +39,7 @@ Does not author UX wireframes or make backend architecture decisions. Distinct f
 
 Use these skills explicitly when the trigger is present:
 
-- `orchestrate-mobile`: deterministic intake when one mobile request spans UX, prototyping, engineering, accessibility, and release hardening.
+- `mobile-orchestrator`: deterministic intake when one mobile request spans UX, prototyping, engineering, accessibility, and release hardening.
 - `build-maui-apps`: .NET MAUI-specific workflow for navigation, MVVM, secure storage, and release readiness.
 - `mobile-accessibility-quality-gate`: evidence-first accessibility validation for mobile screens, flows, and release sign-off.
 - `mobile-offline-resilience`: degraded-network, retry, stale-data, and interruption recovery validation.
@@ -48,3 +48,4 @@ Use these skills explicitly when the trigger is present:
 - `design-mobile-ux`: consulting iOS/Android UX specifications during implementation.
 - `async-programming`: async/await patterns, background tasks, and cancellation in mobile contexts.
 - `request-code-review`: completion-stage implementation validation before merge.
+

@@ -17,12 +17,12 @@ Snapshot date: 2026-04-30. Total skills: 155.
 |---|---|---|
 | `compose-skills` | Planning | Execution |
 | `delivery-orchestration` | Planning | Execution |
-| `orchestrate-benchmark` | Planning | Execution |
-| `orchestrate-csharp` | Planning | Execution |
-| `orchestrate-mcp-servers` | Planning | Execution |
-| `orchestrate-mobile` | Planning | Execution |
-| `orchestrate-sql-server` | Planning | Execution |
-| `orchestrate-xunit` | Planning | Execution |
+| `benchmark-orchestrator` | Planning | Execution |
+| `csharp-orchestrator` | Planning | Execution |
+| `mcp-servers-orchestrator` | Planning | Execution |
+| `mobile-orchestrator` | Planning | Execution |
+| `sql-server-orchestrator` | Planning | Execution |
+| `xunit-orchestrator` | Planning | Execution |
 | `web-ux-quality-gate` | Planning | Review |
 | `work-intake-governance` | Planning | Execution |
 
@@ -288,3 +288,4 @@ Skills present in the discovery index but not yet assigned to a family. Candidat
 | UX and Frontend Experience | 33 |
 | Unclassified | 9 |
 | **Total** | **146 + 9 = 155** |
+

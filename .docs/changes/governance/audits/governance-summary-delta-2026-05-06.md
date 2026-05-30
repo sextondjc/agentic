@@ -25,11 +25,11 @@
 
 | # | Finding ID | Severity | Description | Evidence |
 |---|---|---|---|---|
-| 1 | F-D-2026-002 | **HIGH** | `orchestrate-kendo` index description omits 8 of 19 sub-domains (Grid advanced behavior, charts/dataviz, export/printing, localization, state persistence, real-time updates, upload workflows, observability). Same root-cause pattern as resolved F-2026-002. | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md#32-orchestrate-kendo) |
-| 2 | F-D-2026-001 | **MEDIUM** | `orchestrate-jquery` index description omits "CI integration" sub-domain present in SKILL.md frontmatter. `jquery-ci-integration` skill has reduced discoverability via index routing. | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md#31-orchestrate-jquery) |
+| 1 | F-D-2026-002 | **HIGH** | `kendo-orchestrator` index description omits 8 of 19 sub-domains (Grid advanced behavior, charts/dataviz, export/printing, localization, state persistence, real-time updates, upload workflows, observability). Same root-cause pattern as resolved F-2026-002. | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md#32-kendo-orchestrator) |
+| 2 | F-D-2026-001 | **MEDIUM** | `jquery-orchestrator` index description omits "CI integration" sub-domain present in SKILL.md frontmatter. `jquery-ci-integration` skill has reduced discoverability via index routing. | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md#31-jquery-orchestrator) |
 | 3 | — | ✅ INFO | All 125 net-new skills across jQuery (12), Kendo UI (21), SvelteKit (17), xUnit (12), and ~63 other additions pass all SKR-M* mandatory checks. 0 MUST failures. | [delta-skills-audit-2026-05-06.md](./delta-skills-audit-2026-05-06.md#26-phase-2-aggregate) |
 | 4 | — | ✅ INFO | Registration gap = 0. All 261 on-disk skill directories are registered in `skills-discovery-index.md`. | [delta-baseline-2026-05-06.md](./delta-baseline-2026-05-06.md) |
-| 5 | — | ✅ INFO | All five prior MUST failures (F-2026-001 through F-2026-005) confirmed resolved. Capacitor skills fully registered; `orchestrate-capacitor` description corrected; `csharp-engineer` description fixed. | [delta-baseline-2026-05-06.md](./delta-baseline-2026-05-06.md#13-prior-must-failure-resolution-status) |
+| 5 | — | ✅ INFO | All five prior MUST failures (F-2026-001 through F-2026-005) confirmed resolved. Capacitor skills fully registered; `capacitor-orchestrator` description corrected; `csharp-engineer` description fixed. | [delta-baseline-2026-05-06.md](./delta-baseline-2026-05-06.md#13-prior-must-failure-resolution-status) |
 
 ---
 
@@ -37,8 +37,8 @@
 
 | Risk | Severity | Impact | Affected Artifacts |
 |---|---|---|---|
-| Kendo UI orchestrator index gap (8 sub-domains) | **HIGH** | Agents scanning index for Grid, chart, export, localization, or real-time Kendo work will not be routed to `orchestrate-kendo`. 8 specialist skills have reduced upstream routing. | `skills-discovery-index.md` (orchestrate-kendo row) |
-| jQuery CI integration index gap | **MEDIUM** | `jquery-ci-integration` specialist skill is undiscoverable via orchestrator index scan. Low-frequency but structural. | `skills-discovery-index.md` (orchestrate-jquery row) |
+| Kendo UI orchestrator index gap (8 sub-domains) | **HIGH** | Agents scanning index for Grid, chart, export, localization, or real-time Kendo work will not be routed to `kendo-orchestrator`. 8 specialist skills have reduced upstream routing. | `skills-discovery-index.md` (kendo-orchestrator row) |
+| jQuery CI integration index gap | **MEDIUM** | `jquery-ci-integration` specialist skill is undiscoverable via orchestrator index scan. Low-frequency but structural. | `skills-discovery-index.md` (jquery-orchestrator row) |
 | Recurrence of F-2026-002 pattern | MEDIUM | The "add specialist skills without updating orchestrator index" pattern has now recurred in two families (Capacitor previously, Kendo UI now). Preventive control should be documented. | Governance process |
 
 ---
@@ -47,8 +47,8 @@
 
 | Priority | Action | Owner | Target Date |
 |---|---|---|---|
-| HIGH | Update `orchestrate-kendo` index entry to enumerate all 19 sub-domains from SKILL.md frontmatter | Skills Owner | 2026-05-13 |
-| MEDIUM | Update `orchestrate-jquery` index entry to append "CI integration" to sub-domain list | Skills Owner | 2026-05-13 |
+| HIGH | Update `kendo-orchestrator` index entry to enumerate all 19 sub-domains from SKILL.md frontmatter | Skills Owner | 2026-05-13 |
+| MEDIUM | Update `jquery-orchestrator` index entry to append "CI integration" to sub-domain list | Skills Owner | 2026-05-13 |
 | LOW | Document and enforce update-in-same-change rule: orchestrator index description updated whenever specialist skills are added to a family | Governance Owner | 2026-05-20 |
 
 ---
@@ -66,3 +66,4 @@
 ---
 
 **Final disposition: PASSED WITH ADVISORIES.** Two index description gaps (HIGH + MEDIUM) require updates before the next full-cycle audit. No MUST failures. No delivery blockers.
+

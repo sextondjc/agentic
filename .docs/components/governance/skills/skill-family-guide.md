@@ -15,7 +15,7 @@ This document groups the workspace skill library into practical skill families s
 
 | Family | Primary Goal | Naming Signals | Included Skill Sets |
 |---|---|---|---|
-| Intake and Orchestration | Classify a request, define ownership, and route execution deterministically. | `orchestrate-*`, `compose-*`, `work-intake-*`, `delivery-orchestration` | `compose-skills`, `work-intake-governance`, `delivery-orchestration`, `orchestrate-csharp`, `orchestrate-mobile`, `orchestrate-mcp-servers`, `orchestrate-sql-server`, `orchestrate-benchmark`, `orchestrate-xunit`, `web-ux-quality-gate` |
+| Intake and Orchestration | Classify a request, define ownership, and route execution deterministically. | `*-orchestrator`, `compose-*`, `work-intake-*`, `delivery-orchestration` | `compose-skills`, `work-intake-governance`, `delivery-orchestration`, `csharp-orchestrator`, `mobile-orchestrator`, `mcp-servers-orchestrator`, `sql-server-orchestrator`, `benchmark-orchestrator`, `xunit-orchestrator`, `web-ux-quality-gate` |
 | Planning and Product Shaping | Turn goals or ambiguous requests into testable plans, slices, and acceptance boundaries. | `*-planning`, `*-mapping`, `*-structuring`, `*-criteria` | `writing-plans`, `task-research`, `critical-thinking`, `refine-ideas`, `opportunity-mapping`, `backlog-structuring`, `product-scope-slicing`, `acceptance-criteria`, `experiment-design`, `delivery-forecasting`, `delivery-operating-system`, `delivery-status-grid` |
 | Governance and Audit | Assess policy adherence, quality posture, and review findings across assets. | `audit-*`, `governance-*`, `acceptance-governance` | `governance-audit`, `governance-health-overview`, `governance-summarize`, `execute-customization-audit`, `audit-customization-types`, `audit-skill`, `audit-agent`, `audit-instructions`, `audit-prompts`, `acceptance-governance`, `request-code-review`, `remediate-review` |
 | Documentation and Knowledge Curation | Author, organize, and keep documentation discoverable and link-valid. | `*-docs`, `librarian`, `index-*`, `prd-*`, `adr-*` | `write-technical-docs`, `librarian`, `index-docs`, `prd-generator`, `adr-generator`, `prune-doc-artifacts`, `governance-delivery`, `support-runbook-generator` |
@@ -109,3 +109,4 @@ The following 9 skills from the discovery index are not yet assigned to a family
 - Several skills are valid in more than one family; they are placed where they add the strongest primary routing value.
 - The definitive inventory remains `.github/catalogs/skills-discovery-index.md`.
 - Unclassified skills above should be assigned to families in the next governance review pass.
+

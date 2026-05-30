@@ -38,7 +38,7 @@ Total Broken Links: 107
 | 30 | instruction-policy-optimization-audit.md | .docs/changes/instructions/reviews/instruction-policy-optimization-audit.md | SKILL.md (./../skills/web-ux-performance/SKILL.md) | Navigate to SKILL.md |
 | 31 | instruction-policy-optimization-audit.md | .docs/changes/instructions/reviews/instruction-policy-optimization-audit.md | SKILL.md (./../skills/web-ux-quality-gate/SKILL.md) | Navigate to SKILL.md |
 | 32 | instruction-policy-optimization-audit.md | .docs/changes/instructions/reviews/instruction-policy-optimization-audit.md | SKILL.md (./../skills/build-maui-apps/SKILL.md) | Navigate to SKILL.md |
-| 33 | instruction-policy-optimization-audit.md | .docs/changes/instructions/reviews/instruction-policy-optimization-audit.md | SKILL.md (./../skills/orchestrate-mobile/SKILL.md) | Navigate to SKILL.md |
+| 33 | instruction-policy-optimization-audit.md | .docs/changes/instructions/reviews/instruction-policy-optimization-audit.md | SKILL.md (./../skills/mobile-orchestrator/SKILL.md) | Navigate to SKILL.md |
 | 34 | instruction-policy-optimization-audit.md | .docs/changes/instructions/reviews/instruction-policy-optimization-audit.md | SKILL.md (./../skills/mobile-accessibility-quality-gate/SKILL.md) | Navigate to SKILL.md |
 | 35 | instruction-policy-optimization-audit.md | .docs/changes/instructions/reviews/instruction-policy-optimization-audit.md | SKILL.md (./../skills/mobile-offline-resilience/SKILL.md) | Navigate to SKILL.md |
 | 36 | instruction-policy-optimization-audit.md | .docs/changes/instructions/reviews/instruction-policy-optimization-audit.md | SKILL.md (./../skills/mobile-performance-quality-gate/SKILL.md) | Navigate to SKILL.md |
@@ -113,3 +113,4 @@ Total Broken Links: 107
 | 105 | INTERROGATION-GUIDE.md | .github/skills/sync-compendium/references/INTERROGATION-GUIDE.md | SKILL.md (./SKILL.md) | Navigate to SKILL.md |
 | 106 | INTERROGATION-GUIDE.md | .github/skills/sync-compendium/references/INTERROGATION-GUIDE.md | sync-compendium.prompt.md (../../prompts/sync-compendium.prompt.md) | Navigate to sync-compendium.prompt.md |
 | 107 | INTERROGATION-GUIDE.md | .github/skills/sync-compendium/references/INTERROGATION-GUIDE.md | sync-compendium.prompt.md (../../prompts/sync-compendium.prompt.md) | Navigate to sync-compendium.prompt.md |
+

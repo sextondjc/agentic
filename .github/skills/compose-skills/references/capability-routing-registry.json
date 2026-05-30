@@ -440,18 +440,9 @@
       "name": "Synchronization & Maintenance",
       "keywords": ["sync", "synchronize", "update", "maintain", "upgrade", "freshness"],
       "requiredSkills": ["sync-customizations"],
-      "optionalSkills": ["sync-skills", "sync-compendium", "sync-editorconfig", "prune-sync-assets"],
+      "optionalSkills": ["sync-skills", "sync-editorconfig", "prune-sync-assets"],
       "excludedSkills": [],
       "description": "Customization and skill library maintenance, source freshness, and alignment."
-    },
-    {
-      "id": "compendium-sync",
-      "name": "Compendium Synchronization",
-      "keywords": ["compendium", "sync compendium", "import compendium"],
-      "requiredSkills": ["sync-compendium"],
-      "optionalSkills": [],
-      "excludedSkills": [],
-      "description": "Compendium import/update with approval gates, source attribution, and merge behavior."
     },
     {
       "id": "editorconfig-sync",
