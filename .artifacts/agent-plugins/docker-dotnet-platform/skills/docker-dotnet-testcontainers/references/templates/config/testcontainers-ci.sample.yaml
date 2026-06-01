@@ -1,0 +1,7 @@
+testcontainers:
+  cleanup: true
+  startupTimeoutSeconds: 60
+  logsOnFailure: true
+ci:
+  command: dotnet test --configuration Release
+  collectDiagnostics: true

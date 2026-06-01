@@ -9,12 +9,23 @@
 ## Version
 
 - Plugin Name: jquery-engineering
-- Semantic Version: 1.0.0
+- Semantic Version: 1.0.1
 - Author: David Sexton
-- Source Commit: 16d627d5eb2b
-- Generated At (UTC): 2026-05-30T22:42:32.1011507Z
-- Plugin SHA-256: 1ddaef082c9c183c2875e81121b81c01ee0706541fe399a23d2bc29e7e6fe1dd
+- Source Commit: af3203d710a9
+- Generated At (UTC): 2026-06-01T22:48:36.4803723Z
+- Plugin SHA-256: 8359d525648518f22cd74246daccd73b1d944376e273020222be30a39b593969
 
+## Skills Catalog
+
+- Catalog Version: 2026.06.01.1
+- Source Path: .github/catalogs/skills-discovery-index.md
+- Source Commit: af3203d710a9
+- Generated At (UTC): 2026-06-01T22:48:36.4803723Z
+
+| Catalog Asset | SHA-256 |
+|---|---|
+| catalogs/skills-discovery-index.md | a722055bb3dd803325af6c87d08aba3d00aa39f60818c704525e956bcfa175b7 |
+| catalogs/skills-catalog.version.json | 0e9642e615c761840119abe6bf4ba6ec7028180650abbc052ce6e785e84c778e |
 ## Agent Purpose Guide
 
 | Asset Path | Asset Type | Purpose |
@@ -40,22 +51,24 @@
 
 | Asset Path | SHA-256 |
 |---|---|
-| plugin.json | 3b3fddf77f408b559784d36d6f4eb42127c6b0e586624a257f553e4cb2e6a506 |
-| skills/jquery-security/SKILL.md | 5657215e6e171bc1b470f4e310148f78b93e0c043b3a436cc51116e4ddd7ac28 |
-| skills/jquery-quality-gate/SKILL.md | 2601e5a1a85db4b75b86e9bf7625c26ce79328b2ccc514a4c369b941f1ed2dfe |
-| skills/jquery-plugins/SKILL.md | 9e53d317ef8d5972d4a35ef4d0202fbb9c0eff4663023b407879a083699507f5 |
-| skills/jquery-performance/SKILL.md | 03514ce2d134e28b6c1745a4b2756390b54cb6a305c46e420d7ab069a3119a09 |
-| skills/jquery-orchestrator/SKILL.md | 47eae704bca6da6eee4d8ba56970e7272883a391d5630c3396722a85d3315500 |
-| skills/jquery-migration/SKILL.md | a2ae8607d24c7f4da80449fa42f1ff3119b8a461c0560f2a1627c7112a331653 |
-| skills/jquery-source-curation/SKILL.md | 5d5a32c20ce4c0b42aa2f90de99bf833c8ab1dfdb393be027d2b009a40fc8f06 |
-| skills/jquery-events/SKILL.md | e34623fd5c215dd3d477b8f4b4da55c02e14578e75ec7b0ce8ea24d03b618f02 |
-| skills/jquery-ci-integration/SKILL.md | 3150ce88e727c51ddbc1c422e768a80d38947c04f4dfba3eb1078d625118be4e |
-| skills/jquery-ajax/SKILL.md | 0f264162803cd713e9bf7761fab15e90319e2e938e8e6240fb24f63c2e23fd0d |
-| prompts/execute-delivery.prompt.md | 3f95cb30768d39d2f3dd4df306c94c28be1124184ed3e192fac11e5b7d2b0039 |
-| instructions/web-frontend.instructions.md | 49c14c2334becf67c199bc510f28f1872e817eaa826d13eedf109fdde26ab763 |
-| instructions/secure-coding.instructions.md | 647b74096502508a655973b6161ac10f646620bc63a92beec5084376a7e7630c |
 | agents/web-frontend-engineer.agent.md | 651a9cabd397454c2f0356886e5968ec09b35a2610480222a6a6a08651ab995e |
+| catalogs/skills-catalog.version.json | 0e9642e615c761840119abe6bf4ba6ec7028180650abbc052ce6e785e84c778e |
+| catalogs/skills-discovery-index.md | a722055bb3dd803325af6c87d08aba3d00aa39f60818c704525e956bcfa175b7 |
+| instructions/secure-coding.instructions.md | 647b74096502508a655973b6161ac10f646620bc63a92beec5084376a7e7630c |
+| instructions/web-frontend.instructions.md | 49c14c2334becf67c199bc510f28f1872e817eaa826d13eedf109fdde26ab763 |
+| plugin.json | 5b18a4b5bea0d02be51a2876eaf864e7825621103553ecc7a0155b9e73410e90 |
+| prompts/execute-delivery.prompt.md | 3f95cb30768d39d2f3dd4df306c94c28be1124184ed3e192fac11e5b7d2b0039 |
+| skills/jquery-ajax/SKILL.md | 0f264162803cd713e9bf7761fab15e90319e2e938e8e6240fb24f63c2e23fd0d |
+| skills/jquery-ci-integration/SKILL.md | 3150ce88e727c51ddbc1c422e768a80d38947c04f4dfba3eb1078d625118be4e |
 | skills/jquery-core/SKILL.md | 318a2a249c06d31f5c08178958a7cdda0c23bdbd3eec11392d8cd68b2e552b06 |
+| skills/jquery-events/SKILL.md | e34623fd5c215dd3d477b8f4b4da55c02e14578e75ec7b0ce8ea24d03b618f02 |
+| skills/jquery-migration/SKILL.md | a2ae8607d24c7f4da80449fa42f1ff3119b8a461c0560f2a1627c7112a331653 |
+| skills/jquery-orchestrator/SKILL.md | 47eae704bca6da6eee4d8ba56970e7272883a391d5630c3396722a85d3315500 |
+| skills/jquery-performance/SKILL.md | 03514ce2d134e28b6c1745a4b2756390b54cb6a305c46e420d7ab069a3119a09 |
+| skills/jquery-plugins/SKILL.md | 9e53d317ef8d5972d4a35ef4d0202fbb9c0eff4663023b407879a083699507f5 |
+| skills/jquery-quality-gate/SKILL.md | 2601e5a1a85db4b75b86e9bf7625c26ce79328b2ccc514a4c369b941f1ed2dfe |
+| skills/jquery-security/SKILL.md | 5657215e6e171bc1b470f4e310148f78b93e0c043b3a436cc51116e4ddd7ac28 |
+| skills/jquery-source-curation/SKILL.md | 5d5a32c20ce4c0b42aa2f90de99bf833c8ab1dfdb393be027d2b009a40fc8f06 |
 | skills/jquery-testing/SKILL.md | 5d852b67e3ee82252856bd0ff526d4c07c9cf961f9fd45b1206fb977b275c168 |
 
 ## Verification

@@ -1,0 +1,20 @@
+evaluationDate: "2026-06-01"
+mode: phased-execution
+objective: "Containerize .NET service with secure CI gates"
+phases:
+  - name: Foundations and Dockerfile Baseline
+    requiredOutputs:
+      - dockerfile_template
+  - name: Compose Workflows
+    requiredOutputs:
+      - compose_template
+  - name: Security and Supply Chain
+    requiredOutputs:
+      - scan_script
+      - sbom_generation
+  - name: CI/CD and Promotion Gates
+    requiredOutputs:
+      - pipeline_gate_template
+rejectedCandidates:
+  - code: R1
+    reason: "Outside Docker .NET container scope"

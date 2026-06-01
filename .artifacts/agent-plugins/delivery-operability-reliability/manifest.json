@@ -1,0 +1,40 @@
+{
+  "pluginId": "PLG-18",
+  "pluginName": "delivery-operability-reliability",
+  "pluginVersion": "1.0.0",
+  "author": "David Sexton",
+  "sourceCommit": "af3203d710a9",
+  "generatedAtUtc": "2026-06-01T22:55:16.6471142Z",
+  "digestAlgorithm": "SHA-256",
+  "artifactEntries": [
+    {
+      "path": "plugin.json",
+      "sha256": "503bcb14e55fd5e6028d0a80f59405c60648d2ec57ae6efe7fd01211b5bc7be5"
+    },
+    {
+      "path": "skills\\operability-design\\SKILL.md",
+      "sha256": "d1e35f5b5559605d546e51327ac0cb3c1a9f7d785fe98f51f09f783257f6053b"
+    },
+    {
+      "path": "skills\\outcome-review\\references\\source-catalog.md",
+      "sha256": "48f1385f13360c2095e6b2daa992de2346749085c7e07c6fc3c347aef3828c0e"
+    },
+    {
+      "path": "skills\\outcome-review\\SKILL.md",
+      "sha256": "9b4447fb72dc2abc55dbe802ddd12dfc161b70b72f0cc575c7f929aa9fa934e6"
+    },
+    {
+      "path": "skills\\sre-practices\\SKILL.md",
+      "sha256": "13f5a0b30397bb72c26bab425cac18ad12cf3c3d8086f4812992f5e17b56bdde"
+    },
+    {
+      "path": "skills\\support-runbook-generator\\SKILL.md",
+      "sha256": "d7dff954f66c75890923c3b9a2d9278b7bea11f1a99e6a965a67bce8f64e487e"
+    },
+    {
+      "path": "skills\\support-triage\\SKILL.md",
+      "sha256": "352ab39466084206d70fcd46a9d937ea6d0062c535b39f5e24f0091e146aa31a"
+    }
+  ],
+  "aggregateDigest": "be472f4187c24203e6c78490967e8525418649c4abc02635ec5a9bd9e392ac2d"
+}

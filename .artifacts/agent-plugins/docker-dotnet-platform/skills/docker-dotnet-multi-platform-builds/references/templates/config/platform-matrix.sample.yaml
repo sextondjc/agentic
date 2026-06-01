@@ -1,0 +1,8 @@
+platforms:
+  - linux/amd64
+  - linux/arm64
+ridMap:
+  linux/amd64: linux-x64
+  linux/arm64: linux-arm64
+releaseTagPattern: ghcr.io/org/service:{version}
+manifestInspectionRequired: true

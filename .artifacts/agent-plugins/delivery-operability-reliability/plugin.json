@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "id": "delivery-operability-reliability",
+  "name": "delivery-operability-reliability",
+  "version": "1.0.0",
+  "author": "David Sexton",
+  "sourceCommit": "af3203d710a9",
+  "generatedAtUtc": "2026-06-01T22:55:16.6471142Z",
+  "description": "Operability design, SRE practices, support triage/runbooks, and post-release outcome review workflows.",
+  "capabilities": [
+    "Operability design, SRE practices, support triage/runbooks, and post-release outcome review workflows."
+  ],
+  "dependencies": [
+    "core-intake-governance"
+  ],
+  "assets": {
+    "agents": [],
+    "instructions": [],
+    "prompts": [],
+    "skills": [
+      "operability-design",
+      "outcome-review",
+      "sre-practices",
+      "support-runbook-generator",
+      "support-triage"
+    ]
+  }
+}

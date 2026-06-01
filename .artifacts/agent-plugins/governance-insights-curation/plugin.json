@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "id": "governance-insights-curation",
+  "name": "governance-insights-curation",
+  "version": "1.0.0",
+  "author": "David Sexton",
+  "sourceCommit": "af3203d710a9",
+  "generatedAtUtc": "2026-06-01T22:55:16.6471142Z",
+  "description": "Agentic workflow patterns, asset naming taxonomy, and customer feedback synthesis curation workflows.",
+  "capabilities": [
+    "Agentic workflow patterns, asset naming taxonomy, and customer feedback synthesis curation workflows."
+  ],
+  "dependencies": [
+    "core-intake-governance"
+  ],
+  "assets": {
+    "agents": [],
+    "instructions": [],
+    "prompts": [],
+    "skills": [
+      "agentic-workflow-patterns",
+      "asset-naming-taxonomy",
+      "customer-feedback-synthesis"
+    ]
+  }
+}

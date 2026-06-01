@@ -1,0 +1,48 @@
+{
+  "pluginId": "PLG-19",
+  "pluginName": "governance-insights-curation",
+  "pluginVersion": "1.0.0",
+  "generatedAtUtc": "2026-06-01T22:55:16.6471142Z",
+  "artifactEntries": [
+    {
+      "path": "plugin.json",
+      "sha256": "66993c6a3b98d3299d313b0b9492e4588963cad705b2d100196ed98e9aa8e8db",
+      "purpose": "Plugin manifest metadata and dependency declarations."
+    },
+    {
+      "path": "skills\\agentic-workflow-patterns\\references\\source-catalog.md",
+      "sha256": "45b5cacfc2101ffceea8ec75e8be8005e068016165cff946c5b81460eca9cbd9",
+      "purpose": "Packaged plugin artifact."
+    },
+    {
+      "path": "skills\\agentic-workflow-patterns\\SKILL.md",
+      "sha256": "89aa1d6778db51da5f3d256584e0ad60f486aaf7866e4a4e76f78b703af79880",
+      "purpose": "Packaged plugin artifact."
+    },
+    {
+      "path": "skills\\asset-naming-taxonomy\\references\\function-vocabulary.md",
+      "sha256": "977e378f655c8a191fa36e155de14a886b96d3b9ed9aa1c6ef169fc0c025e802",
+      "purpose": "Packaged plugin artifact."
+    },
+    {
+      "path": "skills\\asset-naming-taxonomy\\references\\lane-intent.md",
+      "sha256": "0117ebf9117ce850443d51e0659bec9436e254dd05aeaf0a7f89268552057fe0",
+      "purpose": "Packaged plugin artifact."
+    },
+    {
+      "path": "skills\\asset-naming-taxonomy\\references\\naming-conventions.json",
+      "sha256": "d6977ff907e58fb56229a461261430121e0ce9322ab7634f986a1ee7fcb7dfd3",
+      "purpose": "Packaged plugin artifact."
+    },
+    {
+      "path": "skills\\asset-naming-taxonomy\\SKILL.md",
+      "sha256": "4f21ac9b5243fb2fe2e6de2ff34215dff85fab9b2834d4e11cc51b9439b74f62",
+      "purpose": "Packaged plugin artifact."
+    },
+    {
+      "path": "skills\\customer-feedback-synthesis\\SKILL.md",
+      "sha256": "a8f8410c89b1ade20b0574f9f6a0373f3f582a4d764ad7b026fc07c8f1da5cc4",
+      "purpose": "Packaged plugin artifact."
+    }
+  ]
+}

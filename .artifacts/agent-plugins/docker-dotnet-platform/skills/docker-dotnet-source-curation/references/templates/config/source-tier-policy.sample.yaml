@@ -1,0 +1,12 @@
+tiers:
+  tier1:
+    description: official standards and vendor docs
+    normative: true
+  tier2:
+    description: official tool docs
+    normative: false
+  tier3:
+    description: community and sample references
+    normative: false
+freshness:
+  thresholdDays: 30

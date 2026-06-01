@@ -9,12 +9,23 @@
 ## Version
 
 - Plugin Name: shadcn-tailwind-system
-- Semantic Version: 1.0.0
+- Semantic Version: 1.0.1
 - Author: David Sexton
-- Source Commit: 16d627d5eb2b
-- Generated At (UTC): 2026-05-30T22:42:32.1011507Z
-- Plugin SHA-256: c1862157096d6ad67b130e3788c87b30e06c42e62fda0fc8542cf71c1b840c66
+- Source Commit: af3203d710a9
+- Generated At (UTC): 2026-06-01T22:48:36.4803723Z
+- Plugin SHA-256: 0f3375079396e942e6d4e50d623753019644ead7dbe81d9e2814a66ad86dab79
 
+## Skills Catalog
+
+- Catalog Version: 2026.06.01.1
+- Source Path: .github/catalogs/skills-discovery-index.md
+- Source Commit: af3203d710a9
+- Generated At (UTC): 2026-06-01T22:48:36.4803723Z
+
+| Catalog Asset | SHA-256 |
+|---|---|
+| catalogs/skills-discovery-index.md | a722055bb3dd803325af6c87d08aba3d00aa39f60818c704525e956bcfa175b7 |
+| catalogs/skills-catalog.version.json | 0e9642e615c761840119abe6bf4ba6ec7028180650abbc052ce6e785e84c778e |
 ## Agent Purpose Guide
 
 | Asset Path | Asset Type | Purpose |
@@ -52,33 +63,16 @@
 
 | Asset Path | SHA-256 |
 |---|---|
-| plugin.json | 6646d0a456b8ca8fc420e5a1b03b8ddb8d84744d9befe745f9ba75c4c403f1f1 |
-| skills/shadcn-source-curation/SKILL.md | 5e4bf75eedcbdda465350a1dfbb10f2eefbe549441f8d5fbc41d128a7353ecdd |
-| skills/shadcn-testing/SKILL.md | 508db6a85e665d56bb13ddb30ae519e268d0fc7559c9c7f9f6d9a81afc8db794 |
-| skills/shadcn-theming/SKILL.md | 0d5b7117c9e84ae1959686698ea75e5ed85ce207a6d65d2a3798fd8e4f70d50d |
-| skills/tailwind-ci-integration/SKILL.md | 24e9b613ce2bb9036cd53b4da449b42cfa11653c463494c4963dabe652e5ee04 |
-| skills/tailwind-ci-integration/references/source-catalog.md | 8bfbd9d81e6620277cf35d3d529535c5c7cd44393fe97cd9456f7b3a60d2860d |
-| skills/tailwind-component-design/SKILL.md | a720829646220babd090ac74da809a63d087e8d8add852268f136efef12395a4 |
-| skills/tailwind-component-design/references/source-catalog.md | 7bb80141f1c810f4ef5dcf7d0fdedc983f7c89232cd539175eb1af58c079cb7a |
-| skills/tailwind-design-system/SKILL.md | a4420b2453d38e06558320f4bfd0bf31a7a0d0c14d3640d79c667cefc46efeb0 |
-| skills/tailwind-design-system/references/source-catalog.md | 8e6f3cd33886c7e8eb73fa64b47689372a366d1023869e8e1f4358d47ac7a1d3 |
-| skills/tailwind-orchestrator/SKILL.md | c8ff8609c5620eb0253ab31667601fbf8802a8778e523d194b0e2b205d0358d9 |
-| skills/tailwind-orchestrator/references/source-catalog.md | b63e8c9bd84daa58c3b63edb7dd773bf3e971dacffc917ea5a555113ceb82f8f |
-| skills/tailwind-quality-gate/SKILL.md | 5da2a087aef3fb1722b483ac8c6142df0cace9e43a4ff9a01200e90eb4570771 |
-| skills/tailwind-quality-gate/references/source-catalog.md | 41e2f8476836b3bad2136be32501861bb8209015a95ff74a758ff2dce39dcda8 |
-| skills/tailwind-setup/SKILL.md | b401a1bb2e66e05cc82a704621e71455db51b295b9b3bb00fdcbcd902e19547e |
-| skills/tailwind-setup/references/source-catalog.md | 317e695b4c3a235164edf822a01c66aeb0b7a29cc914957bcbc1a9ef12182163 |
-| skills/shadcn-setup/SKILL.md | 9cf48c437620bb444085857cbf3ba259cb6f76cf31cf16d6176f2d457e026847 |
-| skills/tailwind-source-curation/SKILL.md | 4b6bd830b832c0232ed8d2b355457a1800e9e33a4d4d8939f8b731289d19bbbd |
-| skills/shadcn-registry/SKILL.md | ede6cd5f53957338b18042a28229a6523f0d9bd79aa332b442ce65f0dba4f032 |
-| skills/shadcn-orchestrator/SKILL.md | 904e8b4c90f6b0502dd924d28a52bfcd183c8016b9911b03677a02c91a1518a9 |
 | agents/ux-designer.agent.md | eae58b89ffb2e0db0410aad0692c5b75c1d06e1a60c4fc210f78765d743df08d |
 | agents/web-frontend-engineer.agent.md | 651a9cabd397454c2f0356886e5968ec09b35a2610480222a6a6a08651ab995e |
+| catalogs/skills-catalog.version.json | 0e9642e615c761840119abe6bf4ba6ec7028180650abbc052ce6e785e84c778e |
+| catalogs/skills-discovery-index.md | a722055bb3dd803325af6c87d08aba3d00aa39f60818c704525e956bcfa175b7 |
 | instructions/ux-design.instructions.md | 30159d3abcc057c853d2492aa00e3600fe09508ca566f8474f7093d105211e2b |
 | instructions/web-frontend.instructions.md | 49c14c2334becf67c199bc510f28f1872e817eaa826d13eedf109fdde26ab763 |
+| plugin.json | eb249a86dc1164a9424098fc7d76989c4cb759c4abf4e7b2db0788dac58ce427 |
 | prompts/scaffold-web-ux-quality-gate.prompt.md | f8a8cf6d68a327068f218c616382a202cf87286ed77103fbebe5c0a6cc1d90c7 |
-| skills/generate-web-icons/SKILL.md | 1877482b03c2d9bbbd221dace6331b761dab80f7c63487c8bf4b138a2618e6ee |
 | skills/generate-web-icons/references/source-catalog.md | 66d296564885d272a43853db37175d541a9e95f36192317f44a8d81c8afcc21c |
+| skills/generate-web-icons/SKILL.md | 1877482b03c2d9bbbd221dace6331b761dab80f7c63487c8bf4b138a2618e6ee |
 | skills/shadcn-accessibility/SKILL.md | bc99c2430e91fc74d1a593a8595d405104cf1345ac077778923a60f57e0f54a1 |
 | skills/shadcn-animation/SKILL.md | 093a5e4d3b0d0fb0fda701f3981fe18e20995e0f05164d553e29f199f862f816 |
 | skills/shadcn-ci-integration/SKILL.md | f1ada12d792ef797f6aa2c797364aba25ba085fa0cfde3a0df1a0ec9d06480a7 |
@@ -87,8 +81,27 @@
 | skills/shadcn-design-system/SKILL.md | 8d158138cdb86a8ad1ef74d30283dd908b8128d70eb42789422d88be477d7aa5 |
 | skills/shadcn-forms/SKILL.md | 3c48c9e3aac6be930d2509ecda302b9840dcbeda90d1e3e4cd1a0501ab1ed34f |
 | skills/shadcn-migration/SKILL.md | 3d1518650271eb9f0092dab04bac9b8ce9738aae942a37d244464eddb7430337 |
+| skills/shadcn-orchestrator/SKILL.md | 904e8b4c90f6b0502dd924d28a52bfcd183c8016b9911b03677a02c91a1518a9 |
 | skills/shadcn-quality-gate/SKILL.md | 698d9abc8c8cdba1791e8ab8582d463a292c06c0ba2626f19e921f16bbc08a1f |
+| skills/shadcn-registry/SKILL.md | ede6cd5f53957338b18042a28229a6523f0d9bd79aa332b442ce65f0dba4f032 |
+| skills/shadcn-setup/SKILL.md | 9cf48c437620bb444085857cbf3ba259cb6f76cf31cf16d6176f2d457e026847 |
+| skills/shadcn-source-curation/SKILL.md | 5e4bf75eedcbdda465350a1dfbb10f2eefbe549441f8d5fbc41d128a7353ecdd |
+| skills/shadcn-testing/SKILL.md | 508db6a85e665d56bb13ddb30ae519e268d0fc7559c9c7f9f6d9a81afc8db794 |
+| skills/shadcn-theming/SKILL.md | 0d5b7117c9e84ae1959686698ea75e5ed85ce207a6d65d2a3798fd8e4f70d50d |
+| skills/tailwind-ci-integration/references/source-catalog.md | 8bfbd9d81e6620277cf35d3d529535c5c7cd44393fe97cd9456f7b3a60d2860d |
+| skills/tailwind-ci-integration/SKILL.md | 24e9b613ce2bb9036cd53b4da449b42cfa11653c463494c4963dabe652e5ee04 |
+| skills/tailwind-component-design/references/source-catalog.md | 7bb80141f1c810f4ef5dcf7d0fdedc983f7c89232cd539175eb1af58c079cb7a |
+| skills/tailwind-component-design/SKILL.md | a720829646220babd090ac74da809a63d087e8d8add852268f136efef12395a4 |
+| skills/tailwind-design-system/references/source-catalog.md | 8e6f3cd33886c7e8eb73fa64b47689372a366d1023869e8e1f4358d47ac7a1d3 |
+| skills/tailwind-design-system/SKILL.md | a4420b2453d38e06558320f4bfd0bf31a7a0d0c14d3640d79c667cefc46efeb0 |
+| skills/tailwind-orchestrator/references/source-catalog.md | b63e8c9bd84daa58c3b63edb7dd773bf3e971dacffc917ea5a555113ceb82f8f |
+| skills/tailwind-orchestrator/SKILL.md | c8ff8609c5620eb0253ab31667601fbf8802a8778e523d194b0e2b205d0358d9 |
+| skills/tailwind-quality-gate/references/source-catalog.md | 41e2f8476836b3bad2136be32501861bb8209015a95ff74a758ff2dce39dcda8 |
+| skills/tailwind-quality-gate/SKILL.md | 5da2a087aef3fb1722b483ac8c6142df0cace9e43a4ff9a01200e90eb4570771 |
+| skills/tailwind-setup/references/source-catalog.md | 317e695b4c3a235164edf822a01c66aeb0b7a29cc914957bcbc1a9ef12182163 |
+| skills/tailwind-setup/SKILL.md | b401a1bb2e66e05cc82a704621e71455db51b295b9b3bb00fdcbcd902e19547e |
 | skills/tailwind-source-curation/references/source-catalog.md | 3492f55df6a80c6696996aaeec3dd297d540fe2cd5ccfc01b0bd47b76d723865 |
+| skills/tailwind-source-curation/SKILL.md | 4b6bd830b832c0232ed8d2b355457a1800e9e33a4d4d8939f8b731289d19bbbd |
 
 ## Verification
 

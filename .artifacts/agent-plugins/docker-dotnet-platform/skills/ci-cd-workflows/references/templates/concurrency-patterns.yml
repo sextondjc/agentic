@@ -1,0 +1,24 @@
+# Template: Concurrency control patterns for CI and deployment workflows
+# Use when: Preventing redundant runs on push/PR and protecting deployment queues.
+
+# --- Pattern 1: CI - cancel superseded runs per-branch, protect release branches ---
+# Applies cancel-in-progress only when NOT on a release branch.
+# Prevents cancellation of release builds while still cleaning up PR/feature branches.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ !contains(github.ref, 'release/') }}
+
+# --- Pattern 2: Multi-event workflow fallback ---
+# github.head_ref is only set on pull_request events.
+# Falls back to run_id (always unique) for push/workflow_dispatch to avoid syntax errors.
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+# --- Pattern 3: Deployment queue - serialize, never cancel in-progress deploys ---
+# Use at job level for deploy jobs that must not be interrupted mid-execution.
+jobs:
+  deploy:
+    concurrency:
+      group: deploy-${{ github.ref }}
+      cancel-in-progress: false

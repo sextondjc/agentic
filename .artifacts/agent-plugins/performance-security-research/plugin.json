@@ -2,10 +2,10 @@
   "schemaVersion": "1.0",
   "id": "performance-security-research",
   "name": "performance-security-research",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "David Sexton",
-  "sourceCommit": "16d627d5eb2b",
-  "generatedAtUtc": "2026-05-30T22:42:32.1011507Z",
+  "sourceCommit": "af3203d710a9",
+  "generatedAtUtc": "2026-06-01T22:48:36.4803723Z",
   "description": "Research-only performance and security assessment capability bundle.",
   "capabilities": [
     "Research-only performance and security assessment capability bundle."
@@ -40,6 +40,26 @@
       "benchmark-ci-integration",
       "benchmark-quality-gate",
       "dependency-security-scan"
+    ],
+    "catalogs": [
+      "catalogs/skills-discovery-index.md",
+      "catalogs/skills-catalog.version.json"
     ]
+  },
+  "catalogs": [
+    {
+      "path": "catalogs/skills-discovery-index.md",
+      "catalogVersion": "2026.06.01.1"
+    },
+    {
+      "path": "catalogs/skills-catalog.version.json",
+      "catalogVersion": "2026.06.01.1"
+    }
+  ],
+  "catalogMetadata": {
+    "generatedAtUtc": "2026-06-01T22:48:36.4803723Z",
+    "sourcePath": ".github/catalogs/skills-discovery-index.md",
+    "sourceCommit": "af3203d710a9",
+    "catalogVersion": "2026.06.01.1"
   }
 }

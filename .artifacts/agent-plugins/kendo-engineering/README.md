@@ -9,12 +9,23 @@
 ## Version
 
 - Plugin Name: kendo-engineering
-- Semantic Version: 1.0.0
+- Semantic Version: 1.0.1
 - Author: David Sexton
-- Source Commit: 16d627d5eb2b
-- Generated At (UTC): 2026-05-30T22:42:32.1011507Z
-- Plugin SHA-256: 0152f1026cf30cc2e658a3b4f4663c9d328455078d8c1cf811f7523deae97e50
+- Source Commit: af3203d710a9
+- Generated At (UTC): 2026-06-01T22:48:36.4803723Z
+- Plugin SHA-256: b1272eaba2e01701fefd26aad810fecac06b9afc07a1613f4e5b1e272b28ff13
 
+## Skills Catalog
+
+- Catalog Version: 2026.06.01.1
+- Source Path: .github/catalogs/skills-discovery-index.md
+- Source Commit: af3203d710a9
+- Generated At (UTC): 2026-06-01T22:48:36.4803723Z
+
+| Catalog Asset | SHA-256 |
+|---|---|
+| catalogs/skills-discovery-index.md | a722055bb3dd803325af6c87d08aba3d00aa39f60818c704525e956bcfa175b7 |
+| catalogs/skills-catalog.version.json | 0e9642e615c761840119abe6bf4ba6ec7028180650abbc052ce6e785e84c778e |
 ## Agent Purpose Guide
 
 | Asset Path | Asset Type | Purpose |
@@ -49,30 +60,32 @@
 
 | Asset Path | SHA-256 |
 |---|---|
-| plugin.json | 810506a218219af582a32271aa3bc4c0f8d21a82c81a6f69e5d3e577076bd7b7 |
-| skills/kendo-ui-testing/SKILL.md | 593e77eb262658338cfec9bbad1127e43d2163fe917812c27b76c3b1e22668f5 |
-| skills/kendo-ui-state-persistence/SKILL.md | 61e9e91ec24566e898c2bf04f23de938eb55a9d884c45097a24356c608f260a1 |
-| skills/kendo-ui-source-curation/SKILL.md | 05cb95dc2a814954d1c7ad85cc6f8ed3fd63915090fe91ff8a0c5ba99a9d359f |
-| skills/kendo-ui-security/SKILL.md | ea20792925d14e029c54ad3ca3cef7d9c65f57fa3164461c69468cc1febf8b90 |
-| skills/kendo-ui-real-time-updates/SKILL.md | 813900bd337bed097018b31a1abf290275599d6f384e3d61974cce0e878f5402 |
-| skills/kendo-ui-quality-gate/SKILL.md | 501c844a7b51ee3fa366463ed70b7371895d13aee71bc2e3b658a899be3a338a |
-| skills/kendo-ui-performance/SKILL.md | 6e44d6ad899be35f08f0761560ed9c48b7741c1f221d1b74b121e23a97c2ed37 |
-| skills/kendo-ui-observability/SKILL.md | 460995f6724f1f18b1315c9099e4c9892fc409ae13d35077f6e0b589444b5d10 |
-| skills/kendo-ui-migration/SKILL.md | a6cb8db964309b1948cda537183d78b7e62c217fe85e21bc5f3baedd9a8abac9 |
-| skills/kendo-ui-localization/SKILL.md | c1d04585216b5eec0098504fbe605438bcb730cbbf48a3013b806ca3e764aecc |
-| skills/kendo-ui-grid-advanced/SKILL.md | aea6b4f2d6113549b0a5937ce7624ec945732cf144ee1b590f5e0e4529a3fab1 |
-| skills/kendo-ui-forms/SKILL.md | fb06fda31f64d34c060acdc39d842aaf43a99187ccaedd3d090de7394383c26b |
-| skills/kendo-ui-export-printing/SKILL.md | d8f378f0297edd925e7717b2f81db3bf79de1b70fce1750e3dbdb5ab1078a417 |
-| skills/kendo-ui-data-binding/SKILL.md | 316b5efd3b1c818d06f010faea7e0c21d35ca2eb38249a73b6346f38c743e667 |
-| skills/kendo-ui-core/SKILL.md | 7437086d77f447e116a9b084b0fbd8397494864fa8a95b8ef87cfc1a1a4a0466 |
-| skills/kendo-ui-ci-integration/SKILL.md | 7324036841915be2103a3f0cc418348e94511bdc4f9dda2762a408e7f4d6fc95 |
-| skills/kendo-ui-charts-dataviz/SKILL.md | 5d7e38256acb05b80a1c140396e5fe74d2868111afff4490b47c4c8356dd39d7 |
-| skills/kendo-ui-accessibility/SKILL.md | ce7f0ba8d57392b764f4a043422a92ab919aa2613c80584a4dd43430ef7f974e |
-| skills/kendo-orchestrator/SKILL.md | 59778dab6884adf8da6da3cad2ff9f29330f6024b0ac4d270d12b89099d321c9 |
-| prompts/execute-delivery.prompt.md | 3f95cb30768d39d2f3dd4df306c94c28be1124184ed3e192fac11e5b7d2b0039 |
-| instructions/web-frontend.instructions.md | 49c14c2334becf67c199bc510f28f1872e817eaa826d13eedf109fdde26ab763 |
-| instructions/secure-coding.instructions.md | 647b74096502508a655973b6161ac10f646620bc63a92beec5084376a7e7630c |
 | agents/web-frontend-engineer.agent.md | 651a9cabd397454c2f0356886e5968ec09b35a2610480222a6a6a08651ab995e |
+| catalogs/skills-catalog.version.json | 0e9642e615c761840119abe6bf4ba6ec7028180650abbc052ce6e785e84c778e |
+| catalogs/skills-discovery-index.md | a722055bb3dd803325af6c87d08aba3d00aa39f60818c704525e956bcfa175b7 |
+| instructions/secure-coding.instructions.md | 647b74096502508a655973b6161ac10f646620bc63a92beec5084376a7e7630c |
+| instructions/web-frontend.instructions.md | 49c14c2334becf67c199bc510f28f1872e817eaa826d13eedf109fdde26ab763 |
+| plugin.json | 9c9ea1e775e5f0534d9684744ca46600d81fc5c596187aa7acf89c8bed5a7f8d |
+| prompts/execute-delivery.prompt.md | 3f95cb30768d39d2f3dd4df306c94c28be1124184ed3e192fac11e5b7d2b0039 |
+| skills/kendo-orchestrator/SKILL.md | 59778dab6884adf8da6da3cad2ff9f29330f6024b0ac4d270d12b89099d321c9 |
+| skills/kendo-ui-accessibility/SKILL.md | ce7f0ba8d57392b764f4a043422a92ab919aa2613c80584a4dd43430ef7f974e |
+| skills/kendo-ui-charts-dataviz/SKILL.md | 5d7e38256acb05b80a1c140396e5fe74d2868111afff4490b47c4c8356dd39d7 |
+| skills/kendo-ui-ci-integration/SKILL.md | 7324036841915be2103a3f0cc418348e94511bdc4f9dda2762a408e7f4d6fc95 |
+| skills/kendo-ui-core/SKILL.md | 7437086d77f447e116a9b084b0fbd8397494864fa8a95b8ef87cfc1a1a4a0466 |
+| skills/kendo-ui-data-binding/SKILL.md | 316b5efd3b1c818d06f010faea7e0c21d35ca2eb38249a73b6346f38c743e667 |
+| skills/kendo-ui-export-printing/SKILL.md | d8f378f0297edd925e7717b2f81db3bf79de1b70fce1750e3dbdb5ab1078a417 |
+| skills/kendo-ui-forms/SKILL.md | fb06fda31f64d34c060acdc39d842aaf43a99187ccaedd3d090de7394383c26b |
+| skills/kendo-ui-grid-advanced/SKILL.md | aea6b4f2d6113549b0a5937ce7624ec945732cf144ee1b590f5e0e4529a3fab1 |
+| skills/kendo-ui-localization/SKILL.md | c1d04585216b5eec0098504fbe605438bcb730cbbf48a3013b806ca3e764aecc |
+| skills/kendo-ui-migration/SKILL.md | a6cb8db964309b1948cda537183d78b7e62c217fe85e21bc5f3baedd9a8abac9 |
+| skills/kendo-ui-observability/SKILL.md | 460995f6724f1f18b1315c9099e4c9892fc409ae13d35077f6e0b589444b5d10 |
+| skills/kendo-ui-performance/SKILL.md | 6e44d6ad899be35f08f0761560ed9c48b7741c1f221d1b74b121e23a97c2ed37 |
+| skills/kendo-ui-quality-gate/SKILL.md | 501c844a7b51ee3fa366463ed70b7371895d13aee71bc2e3b658a899be3a338a |
+| skills/kendo-ui-real-time-updates/SKILL.md | 813900bd337bed097018b31a1abf290275599d6f384e3d61974cce0e878f5402 |
+| skills/kendo-ui-security/SKILL.md | ea20792925d14e029c54ad3ca3cef7d9c65f57fa3164461c69468cc1febf8b90 |
+| skills/kendo-ui-source-curation/SKILL.md | 05cb95dc2a814954d1c7ad85cc6f8ed3fd63915090fe91ff8a0c5ba99a9d359f |
+| skills/kendo-ui-state-persistence/SKILL.md | 61e9e91ec24566e898c2bf04f23de938eb55a9d884c45097a24356c608f260a1 |
+| skills/kendo-ui-testing/SKILL.md | 593e77eb262658338cfec9bbad1127e43d2163fe917812c27b76c3b1e22668f5 |
 | skills/kendo-ui-theming/SKILL.md | 639d004c2e650074610afbcc00b5d72c3eee98f1e1199278256c647199786ed3 |
 | skills/kendo-ui-upload-file-workflows/SKILL.md | 8b6839bfc50fd97075e35dac6dfc87ddcbd25408377482a7896e698598aed2f3 |
 

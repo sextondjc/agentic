@@ -1,0 +1,9 @@
+baseImage: mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm
+features:
+  - ghcr.io/devcontainers/features/docker-in-docker:2
+postCreate:
+  - dotnet restore
+validation:
+  - dotnet --info
+  - dotnet build
+  - dotnet test --no-build

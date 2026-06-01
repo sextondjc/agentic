@@ -1,0 +1,30 @@
+{
+  "evaluationDate": "2026-06-01",
+  "objective": "Create a secure and optimized Docker workflow for an ASP.NET API with CI scanning",
+  "scopeBoundaries": {
+    "inScope": [
+      "dockerfile baseline",
+      "build optimization",
+      "security scanning",
+      "compose local workflow",
+      "ci publish gates"
+    ],
+    "outOfScope": [
+      "kubernetes deployment architecture",
+      "application feature implementation"
+    ]
+  },
+  "requiredOutputs": [
+    "Dockerfile template",
+    "compose template",
+    "scan and SBOM script",
+    "pipeline gate template"
+  ],
+  "decisionMode": "phased-execution",
+  "ownerByOutput": {
+    "Dockerfile template": "Foundations and Dockerfile Baseline",
+    "compose template": "Compose Workflows",
+    "scan and SBOM script": "Security and Supply Chain",
+    "pipeline gate template": "CI/CD and Promotion Gates"
+  }
+}

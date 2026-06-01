@@ -2,10 +2,10 @@
   "schemaVersion": "1.0",
   "id": "plugin-authoring-lifecycle",
   "name": "plugin-authoring-lifecycle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "David Sexton",
-  "sourceCommit": "16d627d5eb2b",
-  "generatedAtUtc": "2026-05-30T22:42:32.1011507Z",
+  "sourceCommit": "af3203d710a9",
+  "generatedAtUtc": "2026-06-01T22:48:36.4803723Z",
   "description": "End-to-end authoring and publishing workflows for agent plugins.",
   "capabilities": [
     "End-to-end authoring and publishing workflows for agent plugins."
@@ -39,6 +39,26 @@
       "skills-authoring",
       "route-customization",
       "agent-plugin-integrity"
+    ],
+    "catalogs": [
+      "catalogs/skills-discovery-index.md",
+      "catalogs/skills-catalog.version.json"
     ]
+  },
+  "catalogs": [
+    {
+      "path": "catalogs/skills-discovery-index.md",
+      "catalogVersion": "2026.06.01.1"
+    },
+    {
+      "path": "catalogs/skills-catalog.version.json",
+      "catalogVersion": "2026.06.01.1"
+    }
+  ],
+  "catalogMetadata": {
+    "generatedAtUtc": "2026-06-01T22:48:36.4803723Z",
+    "sourcePath": ".github/catalogs/skills-discovery-index.md",
+    "sourceCommit": "af3203d710a9",
+    "catalogVersion": "2026.06.01.1"
   }
 }

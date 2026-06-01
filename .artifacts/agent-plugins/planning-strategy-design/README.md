@@ -9,12 +9,23 @@
 ## Version
 
 - Plugin Name: planning-strategy-design
-- Semantic Version: 1.0.0
+- Semantic Version: 1.0.1
 - Author: David Sexton
-- Source Commit: 16d627d5eb2b
-- Generated At (UTC): 2026-05-30T22:42:32.1011507Z
-- Plugin SHA-256: 6c9554c01287461659f088fc2dfbdd880f44ec10ccb195a85bab15d3b02e5220
+- Source Commit: af3203d710a9
+- Generated At (UTC): 2026-06-01T22:48:36.4803723Z
+- Plugin SHA-256: 06daec5f9fcc1cf80518ca42def6463f33fd636a027ea616661837d015edb455
 
+## Skills Catalog
+
+- Catalog Version: 2026.06.01.1
+- Source Path: .github/catalogs/skills-discovery-index.md
+- Source Commit: af3203d710a9
+- Generated At (UTC): 2026-06-01T22:48:36.4803723Z
+
+| Catalog Asset | SHA-256 |
+|---|---|
+| catalogs/skills-discovery-index.md | a722055bb3dd803325af6c87d08aba3d00aa39f60818c704525e956bcfa175b7 |
+| catalogs/skills-catalog.version.json | 0e9642e615c761840119abe6bf4ba6ec7028180650abbc052ce6e785e84c778e |
 ## Agent Purpose Guide
 
 | Asset Path | Asset Type | Purpose |
@@ -49,43 +60,48 @@
 
 | Asset Path | SHA-256 |
 |---|---|
-| plugin.json | 340536fa3511a6f074b6ebea5f9fa03bced3b3c41c0b4b7ba40767b41d21f72f |
-| skills/delivery-orchestration/SKILL.md | 38e54dbd76c644ccd785d705e0a0cf13112ead6f465eb93ec20d02a1b66a1bf2 |
-| skills/delivery-orchestration/references/source-catalog.md | 6c3579f4bbc385d56a8cf14e14fab092522610ce9448a4bee1aee02b264f4fde |
-| skills/experiment-design/SKILL.md | e600596c0fada9c227dc3cd1ffe1cb7ef1d657a9b3cc824f12f818568257d7c1 |
-| skills/flow-metrics/SKILL.md | 37e4fc608c36aa0556360585dabe32bf37f2a258ac03b55cf077851857b3251d |
-| skills/flow-metrics/references/source-catalog.md | 0f7158cd90e0e77a57d191d593c429fa628e1b7f96e25264040f39440dc74940 |
-| skills/governance-delivery/SKILL.md | 11e2fe8ed0e39dd8ca3973484e0b7876076c110fc0546d646aa38da37f7da348 |
-| skills/learn-topics/SKILL.md | 7aca702814fefb941cf9382c358dbb8809fa6fbeaf5f82b9f632ee52537720ea |
-| skills/learn-topics/references/source-ledger-template.md | 9c224f31ee64547878a40899ef6cd81afae7d8df2e5b4e1327db59667f314103 |
-| skills/opportunity-mapping/SKILL.md | 3d329ec48274187320b29f0f2899f93ba9f076e51e586d8d1596d56ef6726a47 |
-| skills/opportunity-mapping/references/source-catalog.md | 3d9f5f59da2f01ea65e64b0196750da71b241c32aa294c146d3813b763c03a41 |
-| skills/prd-generator/SKILL.md | 876d8def2e702e48e3ad52225c253b9555438dc66e181adc4429e4fcdda903c6 |
-| skills/prd-generator/references/prd-template.md | c32ed62f5bdb02b7ae9b5770cb394301382c7e8c503b4ae830d6c93235a2e832 |
-| skills/probabilistic-forecasting/SKILL.md | 2b8f19e7bc6cca61b1443dc133c8de5ac82966b5bcebda134a8c879642f0ae0f |
-| skills/probabilistic-forecasting/references/source-catalog.md | 907ed2ea57d9fce5f21267f0b832cacd9398c987b7bc594b263915c6f166ef46 |
-| skills/product-scope-slicing/SKILL.md | b3bd9490b6137b6b6e3747f7360b0d9bffc403286c3c3062d095a6b1a08c4e28 |
-| skills/delivery-operating-system/references/source-catalog.md | 7821100122ec06a0a39681056a15861612589184f8e87d334bc2ba4fc336817d |
-| skills/refine-ideas/SKILL.md | 7bc30073b6e4e67dc77468a1cf0d76d0bf694e1d8edd3fc239b9bd63e5acd9a1 |
-| skills/delivery-operating-system/SKILL.md | 7991996c55c3d7c8add6d526c89e54b4036b24d28f81b5726b78ad13d4ff623d |
-| skills/delivery-forecasting/SKILL.md | 5a87f0c1e1515c8aaa87265be6aceb81eac77d009e94025eb5e59736f29f6b7d |
 | agents/architecture-designer.agent.md | 19b2acf36cef83ccf06cf9c1d397c923822141c695b1a302430ca05c5b182f25 |
 | agents/plan-researcher.agent.md | 64ac5addaf3f4b2a2ed02e09973dbef49aa88b24d14c4538dfba808e4b57d913 |
 | agents/topic-learner.agent.md | 2109b5c55d0cdb8f4f42c9a784aeba95ad2da875570a51a12e666e558c2a4260 |
 | agents/ux-designer.agent.md | eae58b89ffb2e0db0410aad0692c5b75c1d06e1a60c4fc210f78765d743df08d |
+| catalogs/skills-catalog.version.json | 0e9642e615c761840119abe6bf4ba6ec7028180650abbc052ce6e785e84c778e |
+| catalogs/skills-discovery-index.md | a722055bb3dd803325af6c87d08aba3d00aa39f60818c704525e956bcfa175b7 |
 | instructions/prd.instructions.md | 97159aa3028656e64e02de74188ed86f3b3919c5c56a96c7d3b1ed9caa6ba856 |
 | instructions/technical-docs.instructions.md | 61c82515bd8f076a0c33f625587b0b5e8ef093922edc52ccf976da168ad7a025 |
 | instructions/ux-design.instructions.md | 30159d3abcc057c853d2492aa00e3600fe09508ca566f8474f7093d105211e2b |
+| plugin.json | 5ad783bc7d7b8f1e6c827887e3a34ace73807c5371188cdd76172c49ef33f490 |
 | prompts/review-technical-docs.prompt.md | 65fe2d20077866d99fc66bb3efaaf96838dc01bc4efdb5d68c1b0d3de7c372b7 |
-| skills/acceptance-criteria/SKILL.md | 3d179bbdcd83fb90c8b1389593c0784c6daaf56f22519d664c7d5b60e665e40c |
 | skills/acceptance-criteria/references/source-catalog.md | 08aeef609ffce3565696f8c8820907e09286e4ae6333d2280899d39d03ce076e |
+| skills/acceptance-criteria/SKILL.md | 3d179bbdcd83fb90c8b1389593c0784c6daaf56f22519d664c7d5b60e665e40c |
+| skills/adr-generator/references/README.md | 195045e613dd7ee3c0efdf99420e767e2a708c59afefd7592f0265cad7ce5d8e |
 | skills/adr-generator/SKILL.md | fba543376eaf8643ab46c2c46b99598e2af1c76f8752ce0ad04e9f29d07c6133 |
 | skills/analysis-execution/SKILL.md | 1f35f5e07c9b9c2fe383f3b0f7dd75e220b0330bcf4ac2f2705466c26709e7eb |
-| skills/backlog-structuring/SKILL.md | a4f218f3eb97af260f68ecd27dc3cb0ed739c68ae36975e4e7a60884b3c005a0 |
 | skills/backlog-structuring/references/source-catalog.md | dd1f32bbb0132fd30606e655395f0b4d984e2ef1917dcb8fbfd59bccc2b8fc1a |
+| skills/backlog-structuring/SKILL.md | a4f218f3eb97af260f68ecd27dc3cb0ed739c68ae36975e4e7a60884b3c005a0 |
+| skills/critical-thinking/references/README.md | 2fc0e83e770031c063384767e17f9f8d25ada6ddecbdf83fae01beb438935ca0 |
 | skills/critical-thinking/SKILL.md | b900846a01cc4b28e5ad2d9f8f064e73be9e23172a755a6cc8efd01fec96bd2c |
 | skills/delivery-forecasting/references/source-catalog.md | 598f59ebba20e271c868999454d203f47b552e04f75e79b53671242839f4028f |
+| skills/delivery-forecasting/SKILL.md | 5a87f0c1e1515c8aaa87265be6aceb81eac77d009e94025eb5e59736f29f6b7d |
+| skills/delivery-operating-system/references/source-catalog.md | 7821100122ec06a0a39681056a15861612589184f8e87d334bc2ba4fc336817d |
+| skills/delivery-operating-system/SKILL.md | 7991996c55c3d7c8add6d526c89e54b4036b24d28f81b5726b78ad13d4ff623d |
+| skills/delivery-orchestration/references/source-catalog.md | 6c3579f4bbc385d56a8cf14e14fab092522610ce9448a4bee1aee02b264f4fde |
+| skills/delivery-orchestration/SKILL.md | 38e54dbd76c644ccd785d705e0a0cf13112ead6f465eb93ec20d02a1b66a1bf2 |
+| skills/experiment-design/SKILL.md | e600596c0fada9c227dc3cd1ffe1cb7ef1d657a9b3cc824f12f818568257d7c1 |
+| skills/flow-metrics/references/source-catalog.md | 0f7158cd90e0e77a57d191d593c429fa628e1b7f96e25264040f39440dc74940 |
+| skills/flow-metrics/SKILL.md | 37e4fc608c36aa0556360585dabe32bf37f2a258ac03b55cf077851857b3251d |
+| skills/governance-delivery/SKILL.md | 11e2fe8ed0e39dd8ca3973484e0b7876076c110fc0546d646aa38da37f7da348 |
+| skills/learn-topics/references/source-ledger-template.md | 9c224f31ee64547878a40899ef6cd81afae7d8df2e5b4e1327db59667f314103 |
+| skills/learn-topics/SKILL.md | 7aca702814fefb941cf9382c358dbb8809fa6fbeaf5f82b9f632ee52537720ea |
+| skills/opportunity-mapping/references/source-catalog.md | 3d9f5f59da2f01ea65e64b0196750da71b241c32aa294c146d3813b763c03a41 |
+| skills/opportunity-mapping/SKILL.md | 3d329ec48274187320b29f0f2899f93ba9f076e51e586d8d1596d56ef6726a47 |
+| skills/prd-generator/references/prd-template.md | c32ed62f5bdb02b7ae9b5770cb394301382c7e8c503b4ae830d6c93235a2e832 |
+| skills/prd-generator/SKILL.md | 876d8def2e702e48e3ad52225c253b9555438dc66e181adc4429e4fcdda903c6 |
+| skills/probabilistic-forecasting/references/source-catalog.md | 907ed2ea57d9fce5f21267f0b832cacd9398c987b7bc594b263915c6f166ef46 |
+| skills/probabilistic-forecasting/SKILL.md | 2b8f19e7bc6cca61b1443dc133c8de5ac82966b5bcebda134a8c879642f0ae0f |
+| skills/product-scope-slicing/SKILL.md | b3bd9490b6137b6b6e3747f7360b0d9bffc403286c3c3062d095a6b1a08c4e28 |
 | skills/refine-ideas/references/idea-refinement-session-template.md | 55d509383414dd32b1d56c62ddeed2b4a2f3f459fa13b65dfff7ab901268da07 |
+| skills/refine-ideas/references/README.md | 8cf317ecc161172e06110444c1fb3281d4523a87cf944454e8cecf8acb35ed6a |
+| skills/refine-ideas/SKILL.md | 7bc30073b6e4e67dc77468a1cf0d76d0bf694e1d8edd3fc239b9bd63e5acd9a1 |
 
 ## Verification
 

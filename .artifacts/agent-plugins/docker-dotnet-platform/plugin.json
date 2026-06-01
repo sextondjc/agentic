@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "id": "docker-dotnet-platform",
+  "name": "docker-dotnet-platform",
+  "version": "1.0.0",
+  "author": "David Sexton",
+  "sourceCommit": "af3203d710a9",
+  "generatedAtUtc": "2026-06-01T22:55:16.6471142Z",
+  "description": "Docker .NET container foundations, optimization, diagnostics, security, testcontainers, and CI/CD orchestration.",
+  "capabilities": [
+    "Docker .NET container foundations, optimization, diagnostics, security, testcontainers, and CI/CD orchestration."
+  ],
+  "dependencies": [
+    "core-intake-governance"
+  ],
+  "assets": {
+    "agents": [],
+    "instructions": [],
+    "prompts": [],
+    "skills": [
+      "docker-dotnet",
+      "docker-dotnet-buildkit-optimization",
+      "docker-dotnet-ci-cd",
+      "docker-dotnet-compose-workflows",
+      "docker-dotnet-devcontainers",
+      "docker-dotnet-foundations",
+      "docker-dotnet-multi-platform-builds",
+      "docker-dotnet-quality-gate",
+      "docker-dotnet-runtime-diagnostics",
+      "docker-dotnet-security-supply-chain",
+      "docker-dotnet-source-curation",
+      "docker-dotnet-testcontainers",
+      "docker-orchestrator",
+      "ci-cd-workflows"
+    ]
+  }
+}

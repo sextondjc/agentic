@@ -1,0 +1,7 @@
+services:
+  api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    volumes:
+      - ./src:/src
+    command: ["dotnet", "watch", "run", "--project", "src/MyService.Api/MyService.Api.csproj", "--urls", "http://+:8080"]

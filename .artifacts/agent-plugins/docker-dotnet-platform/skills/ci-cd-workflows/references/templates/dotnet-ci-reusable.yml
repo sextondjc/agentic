@@ -1,0 +1,72 @@
+# Template: Reusable .NET CI workflow (called workflow)
+# Use when: Sharing a standard dotnet build/test gate across multiple repositories.
+# Callers reference this file via:
+#   uses: <org>/<repo>/.github/workflows/dotnet-ci-reusable.yml@<sha-or-tag>
+# Pin callers to a commit SHA for stability; never use a mutable branch ref.
+
+name: dotnet-ci-reusable
+
+on:
+  workflow_call:
+    inputs:
+      dotnet-version:
+        description: 'Semantic version range or exact .NET SDK version'
+        required: false
+        type: string
+        default: '8.x'
+      configuration:
+        description: 'Build configuration (Release | Debug)'
+        required: false
+        type: string
+        default: 'Release'
+    secrets:
+      nuget-token:
+        description: 'Token for private NuGet feeds; omit when only public feeds are used'
+        required: false
+    outputs:
+      test-outcome:
+        description: 'Aggregated test outcome (pass | fail)'
+        value: ${{ jobs.build.outputs.test-outcome }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      test-outcome: ${{ steps.test.outcome }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ inputs.dotnet-version }}
+          cache: true
+          cache-dependency-path: '**/packages.lock.json'
+
+      - name: Restore
+        run: dotnet restore
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.nuget-token }}
+
+      - name: Build
+        run: dotnet build --no-restore --configuration ${{ inputs.configuration }}
+
+      - id: test
+        name: Test
+        run: >
+          dotnet test
+          --no-build
+          --configuration ${{ inputs.configuration }}
+          --logger trx
+          --results-directory TestResults
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: TestResults
+          retention-days: 14

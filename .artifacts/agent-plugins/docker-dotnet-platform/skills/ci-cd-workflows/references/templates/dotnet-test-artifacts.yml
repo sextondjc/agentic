@@ -1,0 +1,12 @@
+# Template: Upload TRX test results as a workflow artifact
+# Use when: Ensuring test results are always available even on test failure.
+# if: always() is required; omitting it suppresses results on failed test runs.
+# Name includes dotnet-version when used inside a matrix to avoid artifact name collisions.
+
+  - name: Upload test results
+    uses: actions/upload-artifact@v4
+    if: always()
+    with:
+      name: test-results-${{ matrix.dotnet-version }}
+      path: TestResults
+      retention-days: 14

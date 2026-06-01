@@ -1,0 +1,9 @@
+tags:
+  immutable:
+    - sha
+    - semver
+  mutable:
+    - latest
+publish:
+  requireSecurityGatePass: true
+  requireSbom: true
