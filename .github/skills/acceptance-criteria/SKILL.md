@@ -55,15 +55,6 @@ Out of scope:
 - Ambiguity log recording unresolved questions or deferred clarifications.
 - Traceability note linking each criterion back to the source work item or outcome.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Clarify what done means | One complete criteria set exists |
-| L2 Delivery | Prepare an item for implementation and QA | Scenarios and done gate are complete |
-| L3 Hardening | Remove hidden ambiguity before execution | Edge and negative cases are explicitly captured |
-| L4 Expert Standardization | Establish reusable acceptance-writing standard | Criteria grammar, scenario model, and ambiguity rules are portable |
-
 ## Deterministic Workflow
 
 1. Normalize the source item into one clear outcome statement.
@@ -98,46 +89,6 @@ Out of scope:
 - If edge or negative behavior matters operationally, it must be in the scenario matrix even if it is not in the title of the work item.
 - If done cannot be expressed as a small gate, the item is probably too large.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Testable completion rules | Deterministic Workflow steps 1 to 5 |
-| Edge and failure coverage | Scenario matrix + Decision Rules |
-| Explicit unresolved ambiguity | Deterministic Workflow step 6 + Ambiguity log |
-| Agent-usable validation contract | Required Outputs + Artifact Contract |
-| Reusable criteria standard | Depth Modes L4 + Criteria Rules |
-
-## Reasoning Package
-
-Assumptions:
-
-- The source item has at least one identifiable user or system outcome.
-- Acceptance ambiguity is cheaper to resolve before execution than after code exists.
-
-Trade-offs:
-
-- More detailed scenario coverage lowers execution risk but increases upfront authoring time.
-- Strict done gates improve delivery trust but can expose missing product decisions earlier.
-
-Open blockers:
-
-- Conflicting stakeholder expectations can prevent a clean done gate.
-- Missing prototypes or examples may limit edge-case confidence.
-
-Recommendation:
-
-- Use this skill on any item that will be implemented by an agent or handed across teams. It is one of the highest-leverage ways to reduce execution drift.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Default freshness threshold is 30 days.
-
-## Pragmatic Stop Rule
-
-Stop when done can be checked without interpretation, major scenario classes are covered, and unresolved questions are explicit rather than hidden.
-
 ## Anti-Patterns
 
 - Writing criteria that restate the title without adding verification value.
@@ -152,3 +103,28 @@ Stop when done can be checked without interpretation, major scenario classes are
 - Done gate is explicit.
 - Ambiguity log exists when unresolved questions remain.
 - Source catalog entries are current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

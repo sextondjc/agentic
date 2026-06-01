@@ -76,3 +76,19 @@ This skill owns tag consistency, not the underlying taxonomy definition. The PDL
 - Canonical matrix: [phase-discipline-lane-agentic-delivery-matrix.md](../matrix-skill-mapping/references/phase-discipline-lane-agentic-delivery-matrix.md)
 - Related skills: `matrix-skill-mapping`, `sync-customizations`, `asset-naming-taxonomy`, `governance-audit`
 
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

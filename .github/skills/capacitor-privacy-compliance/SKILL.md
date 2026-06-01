@@ -60,15 +60,6 @@ Out of scope:
 - Rejected-candidate table with deterministic reason codes.
 - Closure check: build produces no privacy manifest warnings; submission checklist passes.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Identify applicable privacy requirements and gap surface | Requirements list and gap inventory documented |
-| L2 Delivery | Author `PrivacyInfo.xcprivacy`; complete Android data safety form; implement ATT prompt if required | Build produces no privacy manifest warnings; form is complete |
-| L3 Hardening | Add SDK gap remediation, consent flow, GDPR/CCPA propagation, and pre-submission audit | Privacy audit findings are zero or risk-accepted; submission checklist passes |
-| L4 Expert Standardization | Reusable privacy compliance model for multi-app compendium use | Templates, SDK inventory, and audit runbook documented |
-
 ## Deterministic Workflow
 
 1. Run an Xcode archive build and capture all `PrivacyInfo.xcprivacy`-related warnings.
@@ -82,153 +73,6 @@ Out of scope:
 9. Re-run Xcode archive — zero privacy manifest warnings is the gate.
 10. Document SDK inventory with privacy manifest status, data collection categories, and owner.
 
-## PrivacyInfo.xcprivacy Pattern
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-  <!-- Required-reason API declarations -->
-  <key>NSPrivacyAccessedAPITypes</key>
-  <array>
-    <!-- File timestamp APIs — used by @capacitor/filesystem -->
-    <dict>
-      <key>NSPrivacyAccessedAPIType</key>
-      <string>NSPrivacyAccessedAPICategoryFileTimestamp</string>
-      <key>NSPrivacyAccessedAPITypeReasons</key>
-      <array>
-        <string>C617.1</string> <!-- display to user or provide to user on request -->
-      </array>
-    </dict>
-    <!-- User defaults — used by @capacitor/preferences -->
-    <dict>
-      <key>NSPrivacyAccessedAPIType</key>
-      <string>NSPrivacyAccessedAPICategoryUserDefaults</string>
-      <key>NSPrivacyAccessedAPITypeReasons</key>
-      <array>
-        <string>CA92.1</string> <!-- access own app's user defaults only -->
-      </array>
-    </dict>
-  </array>
-
-  <!-- First-party data collection -->
-  <key>NSPrivacyCollectedDataTypes</key>
-  <array>
-    <dict>
-      <key>NSPrivacyCollectedDataType</key>
-      <string>NSPrivacyCollectedDataTypeCrashData</string>
-      <key>NSPrivacyCollectedDataTypeLinked</key>
-      <false/>
-      <key>NSPrivacyCollectedDataTypeTracking</key>
-      <false/>
-      <key>NSPrivacyCollectedDataTypePurposes</key>
-      <array>
-        <string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
-      </array>
-    </dict>
-  </array>
-
-  <!-- Set to true only if app uses IDFA or cross-app tracking -->
-  <key>NSPrivacyTracking</key>
-  <false/>
-  <key>NSPrivacyTrackingDomains</key>
-  <array/>
-</dict>
-</plist>
-```
-
-## ATT Implementation Pattern
-
-```typescript
-// Only implement if NSPrivacyTracking is true in PrivacyInfo.xcprivacy
-// Use a community plugin or native bridge for ATT on Capacitor
-
-import { Capacitor } from '@capacitor/core';
-
-async function requestTrackingPermission(): Promise<void> {
-  if (Capacitor.getPlatform() !== 'ios') return;
-
-  // Soft-ask first: explain why tracking benefits the user
-  const userWantsToProceed = await showTrackingRationale();
-  if (!userWantsToProceed) return;
-
-  // Request ATT permission (requires plugin: capacitor-ios-app-tracking or equivalent)
-  const { status } = await AppTrackingTransparency.requestPermission();
-
-  if (status === 'authorized') {
-    // Initialize ad/analytics SDKs that require IDFA
-    initializeAdSDKs();
-  } else {
-    // Use limited ad targeting or contextual ads only
-    initializeLimitedAdSDKs();
-  }
-}
-
-// Call after first meaningful interaction — NOT on cold launch
-// Apple guidance: do not request ATT on first app open; wait for onboarding completion
-```
-
-## GDPR/CCPA Consent Pattern
-
-```typescript
-// capacitor/privacy-consent.ts
-import { Preferences } from '@capacitor/preferences';
-
-const CONSENT_KEY = 'privacy_consent_v1';
-
-export interface ConsentDecision {
-  analytics: boolean;
-  advertising: boolean;
-  timestamp: string;
-}
-
-export async function getStoredConsent(): Promise<ConsentDecision | null> {
-  const { value } = await Preferences.get({ key: CONSENT_KEY });
-  return value ? JSON.parse(value) : null;
-}
-
-export async function storeConsent(decision: ConsentDecision): Promise<void> {
-  await Preferences.set({ key: CONSENT_KEY, value: JSON.stringify(decision) });
-}
-
-export async function initializeSDKsWithConsent(): Promise<void> {
-  const consent = await getStoredConsent();
-  if (!consent) {
-    // Show consent UI — do not initialize any tracking SDK until consent is captured
-    return;
-  }
-  if (consent.analytics) initializeAnalytics();
-  if (consent.advertising) initializeAdSDKs();
-}
-```
-
-## SDK Privacy Manifest Audit Checklist
-
-Common Capacitor plugins with required-reason API usage:
-
-| Plugin | Required-reason API | Ships own manifest (as of 2025)? |
-|---|---|---|
-| `@capacitor/filesystem` | `NSPrivacyAccessedAPICategoryFileTimestamp` | Yes — verify version |
-| `@capacitor/preferences` | `NSPrivacyAccessedAPICategoryUserDefaults` | Yes — verify version |
-| `@capacitor/device` | `NSPrivacyAccessedAPICategoryDiskSpace`, boot time | Yes — verify version |
-| `@capacitor/push-notifications` | None directly — verify Firebase SDK | Firebase SDK ships manifest |
-| `@capacitor/camera` | None directly | Yes — verify version |
-| Custom plugins | Audit native code for `NSFileModificationDate`, `UserDefaults`, `systemUptime` | Must be declared in app manifest |
-
-**Rule:** If a plugin does not ship its own `PrivacyInfo.xcprivacy`, all required-reason APIs it accesses must be declared in the app-level manifest.
-
-## Quality Gates
-
-- Xcode archive build produces zero `PrivacyInfo.xcprivacy` warnings.
-- Every required-reason API used by the app and its dependencies is declared with a valid reason code.
-- `NSPrivacyTracking` is `true` only if the app uses IDFA or cross-app tracking identifiers.
-- ATT prompt is implemented if `NSPrivacyTracking` is `true`; prompt timing follows Apple guidance (not on cold launch).
-- Android data safety form is complete; all collected data types, sharing disclosures, and retention periods are accurate.
-- No analytics or ad SDK initializes before consent is captured in GDPR/CCPA-applicable markets.
-- SDK inventory exists with privacy manifest status for every native dependency.
-
 ## Done Criteria
 
 - `PrivacyInfo.xcprivacy` is authored and committed; Xcode build is clean.
@@ -238,3 +82,28 @@ Common Capacitor plugins with required-reason API usage:
 - GDPR/CCPA consent flow captures, stores, and propagates consent before SDK initialization (if applicable).
 - SDK privacy inventory is documented with manifest status, data categories, and owner.
 - Pre-submission privacy checklist passes with zero open blockers.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

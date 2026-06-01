@@ -108,5 +108,19 @@ This skill is complete for a run only when:
 2. Execute the skill-specific steps and produce the required artifacts or decisions.
 3. Validate outputs for completeness and consistency with active workspace instructions.
 
+## Execution Context
 
+### Input Context
 
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

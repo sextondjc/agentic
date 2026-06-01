@@ -89,3 +89,23 @@ Before creating or editing code, ensure:
 3. Apply namespace, file-location, and project-reference updates.
 4. Run focused checks/tests for impacted boundaries.
 5. Record temporary aliases, exceptions, and follow-up cleanup decisions.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

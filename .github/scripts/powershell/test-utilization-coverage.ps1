@@ -11,7 +11,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $resolvedRoot = Resolve-Path -LiteralPath $RootPath -ErrorAction Stop
-$indexPath = Join-Path $resolvedRoot '.github/skills/skill-discovery-index.md'
+$indexPath = Join-Path $resolvedRoot '.github/catalogs/skills-discovery-index.md'
 if (-not (Test-Path -LiteralPath $indexPath)) { Write-Error "Skill index not found: $indexPath"; exit 1 }
 
 $skillRows = Get-Content -LiteralPath $indexPath | Where-Object { $_ -match '^\|' -and $_ -notmatch '^\|---' }
@@ -22,7 +22,7 @@ $skills = foreach ($row in $skillRows) {
     if ($skill -and $skill -ne 'Skill') { $skill }
 }
 $skills = @($skills | Sort-Object -Unique)
-if ($skills.Count -eq 0) { Write-Error 'No skills parsed from skill-discovery-index.md.'; exit 1 }
+if ($skills.Count -eq 0) { Write-Error 'No skills parsed from skills-discovery-index.md.'; exit 1 }
 
 $searchFiles = @(
     Get-ChildItem -LiteralPath (Join-Path $resolvedRoot '.github/agents') -Filter '*.agent.md' -File -ErrorAction SilentlyContinue

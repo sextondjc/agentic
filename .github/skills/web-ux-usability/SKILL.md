@@ -52,15 +52,6 @@ Out of scope:
 - Residual risk summary with owner and follow-up window.
 - Final recommendation: `go`, `go-with-exceptions`, or `no-go`.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Validate one flow with one primary task | One complete task evidence row and severity-ranked findings list |
-| L2 Delivery | Validate end-to-end core journey set | Primary, edge, and error journeys each have measurable evidence |
-| L3 Hardening | Enforce release-grade usability gates | Critical/high findings resolved or formally deferred with owners |
-| L4 Expert Standardization | Build reusable team usability decision model | Reusable rubric, evidence schema, and decision thresholds are documented |
-
 ## Deterministic Workflow
 
 1. Lock scope: flows, tasks, environments, and participant assumptions.
@@ -98,47 +89,6 @@ Capture artifacts under one change scope path:
 - `.docs/changes/<workstream-id>/remediation-backlog.md`
 - `.docs/changes/<workstream-id>/release-recommendation.md`
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Deterministic usability execution | Deterministic Workflow |
-| Objective task evidence | Required Outputs + Evidence Contract |
-| Severity-ranked findings and prioritization | Severity Model + Workflow steps 6 and 7 |
-| Durable sign-off artifacts | Evidence Contract |
-| Explicit release recommendation | Required Outputs + Workflow step 9 |
-| Source freshness governance | Source Governance Summary + Source Ledger |
-
-## Reasoning Package
-
-Assumptions:
-
-- In-scope flows and tasks are known before validation starts.
-- Release decisions require measurable usability evidence.
-
-Trade-offs:
-
-- Smaller participant sets are faster but raise variance risk.
-- Strict critical/high closure reduces user risk but can increase schedule pressure.
-
-Open blockers:
-
-- Missing task definitions make evidence non-comparable across runs.
-- Environment differences can distort time-on-task metrics.
-
-Recommendation:
-
-- Use L3 by default for release-bound UX changes and L4 when teams need reusable usability governance.
-
-## Source Governance Summary
-
-- Source relevance, authority, freshness, and actionability are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold default is 30 days for active source checks.
-
-## Pragmatic Stop Rule
-
-Stop when all in-scope tasks have measurable evidence, all critical/high findings are resolved or explicitly deferred with owner and due date, and a final recommendation is recorded with durable artifact links.
-
 ## Anti-Patterns
 
 - Making go or no-go decisions without task-level evidence.
@@ -154,3 +104,27 @@ Stop when all in-scope tasks have measurable evidence, all critical/high finding
 - Source ledger is current for this evaluation cycle.
 - Final recommendation is explicit, evidence-backed, and auditable.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

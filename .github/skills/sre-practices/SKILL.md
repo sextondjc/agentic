@@ -76,3 +76,23 @@ This skill is distinct from incident response and triage (`support-triage`), run
 - Do not run chaos experiments in production without an `experiment-design` output defining scope, time-box, and rollback criteria.
 
 ## References
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -150,19 +150,33 @@ When confidence is Insufficient, the benchmark must be re-run with environment i
 - Rationale: [one sentence]
 ```
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Distribution-aware interpretation | Statistical Interpretation Rules |
-| Effect size and practical significance | Effect Size Assessment |
-| Outlier policy and rationale | Outlier Policy |
-| Allocation and GC assessment | Allocation and GC Interpretation |
-| Confidence adequacy ruling | Confidence Adequacy Verdicts |
-| One deterministic recommendation | Interpretation Report Template |
-
 ## Sources
 
 - [Andrey Akinshin's Blog](https://aakinshin.net/) — statistical interpretation, effect size, distribution analysis
 - [Perfolizer Docs](https://github.com/AndreyAkinshin/perfolizer) — outlier detection and distribution modeling
 - [BenchmarkDotNet Docs](https://benchmarkdotnet.org/articles/overview.html) — column definitions and outlier configuration
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

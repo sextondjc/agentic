@@ -53,15 +53,6 @@ Use this skill when one or more are true:
 - Risk notes for destructive or privileged operations.
 - Determinism check stating whether behavior and rollback path are explicit.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Validate one isolated query or script | One SQL artifact reviewed with concrete safety corrections |
-| L2 Delivery | Ship one safe SQL change | Query or script is parameterized, deterministic, and rollback-aware |
-| L3 Hardening | Enforce production-grade SQL governance | Privileged, destructive, and compatibility risks are explicitly documented |
-| L4 Expert Standardization | Establish reusable SQL standards across projects | A repeatable review model and exception framework are defined and reusable |
-
 ## Deterministic Workflow
 
 1. Classify script intent and risk: read-only, write, destructive, migration, or privileged.
@@ -113,50 +104,9 @@ Use this skill when one or more are true:
 - Never store plaintext passwords or secrets in SQL scripts or tables.
 - Audit sensitive column access (PII/financial data) with approved controls where required.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Safe SQL defaults | Safety Rules |
-| Injection-resistant authoring | Parameterization |
-| Project-portable naming model | Naming Conventions |
-| Version-aware syntax choices | Compatibility |
-| Privilege and secret controls | Security |
-| Deterministic execution decision | Deterministic Workflow + Required Outputs |
-
-## Reasoning Package
-
-Assumptions:
-
-- SQL Server 2019 or later is the default target unless stated otherwise.
-- The caller prefers explicit safety over terse or vendor-specific shortcuts.
-
-Trade-offs:
-
-- Stricter transaction and validation guidance reduces accidental damage but increases authoring overhead.
-- Explicit compatibility checks slow initial delivery slightly but reduce migration and upgrade surprises.
-
-Open blockers:
-
-- Unknown target compatibility level can invalidate syntax recommendations.
-- Missing rollback expectations weaken execution safety for write-heavy scripts.
-
-Recommendation:
-
-- Use this skill as the mandatory first pass for SQL artifact quality, then widen into deeper diagnostics or tuning only when the request clearly exceeds standards review.
-
-## Source Governance Summary
-
-- Active sources, evaluation date, and resulting guidance deltas are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active source checks.
-
 ## Reference Assets
 
 - Use [sql-exception-log-template.md](./references/sql-exception-log-template.md) to record justified exceptions such as `NOLOCK`, compatibility concessions, or privileged execution decisions.
-
-## Pragmatic Stop Rule
-
-Stop when the SQL artifact is parameterized, deterministic, version-aware, and any destructive or privileged behavior has an explicit risk note and rollback-aware validation path.
 
 ## Done Criteria
 
@@ -166,3 +116,27 @@ Stop when the SQL artifact is parameterized, deterministic, version-aware, and a
 - Exceptions are explicit, justified, and bounded.
 - Source catalog is current for this evaluation cycle.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -49,15 +49,6 @@ Out of scope:
 - Prioritized remediation backlog for task-continuity blockers.
 - Final recommendation: `go`, `go-with-exceptions`, or `no-go`.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Validate one disrupted journey baseline | One disrupted journey has complete evidence and findings |
-| L2 Delivery | Validate core offline-capable flows | Primary and recovery paths are evidence-backed |
-| L3 Hardening | Enforce release-grade continuity gates | High and critical continuity risks are resolved or dispositioned |
-| L4 Expert Standardization | Build reusable mobile resilience governance pattern | Reusable disruption matrix, thresholds, and evidence schema are documented |
-
 ## Deterministic Workflow
 
 1. Lock in-scope disruption, cache, retry, and recovery scenarios.
@@ -92,49 +83,33 @@ Out of scope:
 - `.docs/changes/<workstream-id>/mobile-offline-remediation-backlog.md`
 - `.docs/changes/<workstream-id>/mobile-offline-release-recommendation.md`
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Deterministic resilience workflow | Deterministic Workflow |
-| Objective continuity gates | Offline Resilience Gate Checklist |
-| Severity-ranked disruption findings | Severity Model |
-| Durable evidence artifacts | Evidence Contract |
-| Explicit recommendation | Required Outputs + Workflow step 8 |
-| Source freshness governance | Source Governance Summary + Source Catalog |
-
-## Reasoning Package
-
-Assumptions:
-
-- Mobile reliability issues often surface as UX continuity failures rather than infrastructure metrics.
-- Resume and interruption behavior matter as much as network loss for mobile task continuity.
-
-Trade-offs:
-
-- Strong offline resilience gates reduce user-risk but add scenario-testing effort.
-- Broader disruption coverage increases confidence but lengthens validation time.
-
-Open blockers:
-
-- Missing offline expectations or recovery rules reduce check quality.
-- Weak local-state handling can invalidate otherwise good retry behavior.
-
-Recommendation:
-
-- Use L3 by default when a MAUI release depends on networked tasks, cached data, or resumable workflows.
-
-## Source Governance Summary
-
-- Source relevance, authority, freshness, and actionability are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active resilience-source checks.
-
-## Pragmatic Stop Rule
-
-Stop when degraded-network and interruption scenarios are validated, high and critical continuity risks are resolved or dispositioned, and a final recommendation is published with durable artifacts.
-
 ## Done Criteria
 
 - Required outputs are complete and linked.
 - Source catalog is current.
 - Final recommendation is explicit and evidence-backed.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

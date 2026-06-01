@@ -185,11 +185,27 @@ QUnit.test("destroy removes all event handlers", function(assert) {
 | Kendo UI for Angular | Jasmine + Angular TestBed | Import Kendo module in `TestBed`; use `fixture.detectChanges()` before assertions |
 | Kendo UI for Vue | Jest + Vue Test Utils | Mount with `globalComponents` registration; use `wrapper.find()` for widget DOM |
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | One initialization test with mock DataSource | Widget renders from local data; test passes |
-| L2 Practical | Full event, method, and validation test suite for one widget | All primary interactions and edge cases covered |
-| L3 Hardening | Destruction tests + DataSource transport mock + validator round-trip | No leaked handlers; transport mock intercepts all CRUD operations |
-| L4 Expert | Cross-framework test strategy with shared mock fixtures | Mock DataSource reusable across QUnit/Jest; CI runs all suites |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

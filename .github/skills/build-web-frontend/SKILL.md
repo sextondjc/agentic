@@ -33,15 +33,6 @@ Provide a repeatable, standards-aligned workflow for delivering production-grade
 | Security review sign-off | CSP, token storage, input encoding, and third-party script integrity confirmed |
 | Readiness summary | Open risks, deferred items, and next improvement actions documented |
 
-## Depth Modes
-
-| Level | Intent | Stop Rule |
-|---|---|---|
-| L1 Orientation | Understand component structure | Produce a working component with props, state, and one test |
-| L2 Practical Delivery | Ship one feature safely | Deliver a complete feature with route, components, API integration, tests, and accessibility checks |
-| L3 Specialist Hardening | Improve quality and resilience | Demonstrate measured Core Web Vitals improvement, full WCAG 2.1 AA audit pass, and security review sign-off |
-| L4 Expert Standardization | Define reusable team standards | Produce reusable component patterns, testing templates, and a governance baseline for repeated delivery |
-
 ## Workflow
 
 1. Define outcome, target users, UX handoff artifacts, and selected depth mode.
@@ -91,3 +82,27 @@ Measure before and after significant changes:
 - [ ] All user-controlled input is encoded before rendering in DOM or URL contexts.
 - [ ] No hardcoded credentials, API keys, or environment URLs in source.
 - [ ] Third-party scripts are integrity-checked (SRI hashes).
+
+## Inputs
+
+- Request objective and scope boundary.
+- Applicable constraints and risk context.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

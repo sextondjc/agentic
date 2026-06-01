@@ -9,15 +9,6 @@ description: Author custom agents in Markdown format (.agent.md) for simple work
 
 Implement a VS Code custom agent as a single `.agent.md` file when the agent does not require custom TypeScript code. Use Markdown frontmatter for metadata and body for detailed instructions.
 
-## Supporting Activities
-
-- Apply `.agent.md` YAML frontmatter syntax (name, description, tools, model, user-invocable).
-- Write clear, concise agent instructions (2-4 paragraphs).
-- Define handoff transitions to other agents (optional).
-- Apply tool picker configuration (optional; control which tools are visible).
-- Reference external resources or templates for specialized workflows.
-- Validate syntax and test in VS Code Chat interface.
-
 ## Workflow
 
 1. **Create `.agent.md` file** in the plugin `agents/` directory:
@@ -154,26 +145,6 @@ Implement a VS Code custom agent as a single `.agent.md` file when the agent doe
 - Agent loads in VS Code without errors.
 - Agent behaves as documented: accepts valid input, rejects out-of-scope requests, handles tool failures gracefully.
 
-## Validation Checklist
-
-- [ ] `.agent.md` filename uses kebab-case and matches `name` field in frontmatter.
-- [ ] YAML frontmatter has valid syntax (colons after keys, quoted strings with special chars).
-- [ ] `tools` array lists only available tools (search, read, edit, web, execute, etc.).
-- [ ] `description` is max 1024 characters and concise.
-- [ ] Instructions clearly state what the agent does (scope).
-- [ ] Instructions clearly state what the agent does NOT do (non-scope).
-- [ ] At least one example is provided showing expected agent behavior.
-- [ ] Constraints are explicit and quantified (e.g., "max 10 findings per review").
-- [ ] Handoff transitions (if present) name valid agents from the plugin.
-- [ ] Agent tested in VS Code: loads, accepts input, produces expected output.
-
-## References
-
-- [VS Code Custom Agents Documentation](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
-- [.agent.md Format Specification](https://code.visualstudio.com/docs/copilot/customization/custom-agents#_agent-markdown-format)
-- [Agent Tools Reference](https://code.visualstudio.com/docs/copilot/agents/agent-tools)
-- [Handoff Patterns](https://code.visualstudio.com/docs/copilot/agents/agents-window#_agent-handoffs)
-
 ## Trigger Conditions
 
 Invoke this skill when any of the following is true:
@@ -182,3 +153,23 @@ Invoke this skill when any of the following is true:
 - An agent uses only built-in or existing MCP tools (no custom tool implementation).
 - An agent design has been finalized and is ready for implementation.
 - An agent needs to be tested or deployed quickly without extension infrastructure.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

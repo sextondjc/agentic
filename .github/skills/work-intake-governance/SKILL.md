@@ -56,15 +56,6 @@ Out of scope:
 - Urgency and impact assessment with rationale.
 - Next-action trigger with named owner and decision horizon.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Classify one inbound request | One intake record and one decision exist |
-| L2 Delivery | Govern a batch of requests | All items have explicit intake disposition |
-| L3 Hardening | Establish admission discipline | Evidence and urgency rules are enforced consistently |
-| L4 Expert Standardization | Build reusable intake operating model | Intake schema and admission rules are portable across projects |
-
 ## Deterministic Workflow
 
 1. Normalize the request into one concise problem or ask statement.
@@ -92,46 +83,6 @@ Out of scope:
 | Urgency-impact assessment | Urgency, impact, risk note, rationale |
 | Next-action trigger | Trigger date or event, owner, review condition |
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Pre-backlog admission gate | Objective + Deterministic Workflow |
-| Explicit intake decisions | Required Outputs + Intake Decision Rules |
-| Evidence-based intake quality | Deterministic Workflow step 3 + Artifact Contract |
-| Durable routing and follow-up | Required Outputs + Deterministic Workflow steps 6 to 8 |
-| Portable cross-project intake model | Depth Modes L4 + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Not every inbound ask deserves backlog space.
-- Intake quality improves downstream planning more than ad hoc clarification later.
-
-Trade-offs:
-
-- Strong intake control reduces churn but can feel slower to requesters.
-- High evidence expectations improve signal quality but may defer some valuable work.
-
-Open blockers:
-
-- Weak ownership prevents durable intake decisions.
-- Missing evidence can force defer decisions even when intuition says the work matters.
-
-Recommendation:
-
-- Use this skill wherever multiple sources can create work. It is the cleanest way to stop backlog pollution before it starts.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Default freshness threshold is 30 days.
-
-## Pragmatic Stop Rule
-
-Stop when each inbound item has one explicit disposition, one owner, and one next trigger, and no item remains in an ambiguous intake state.
-
 ## Anti-Patterns
 
 - Treating every inbound request as a backlog item.
@@ -146,3 +97,28 @@ Stop when each inbound item has one explicit disposition, one owner, and one nex
 - Evidence sufficiency is explicit.
 - Ownership and next trigger are recorded.
 - Source catalog entries are current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

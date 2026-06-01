@@ -66,15 +66,6 @@ Assign one or more phases based on request shape:
 - Rejected-candidate table with deterministic reason codes.
 - Closure check stating whether all required outputs are owned.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Route one mixed benchmark request | One intake and one phase contract exist |
-| L2 Delivery | Coordinate one cross-capability benchmark effort | Every required output has one owning phase |
-| L3 Hardening | Support promotion-grade benchmark confidence | Risks, evidence expectations, and blockers are explicit |
-| L4 Expert Standardization | Establish reusable BenchmarkDotNet operating model | Reusable intake, ownership, and routing rubric are documented |
-
 ## Deterministic Workflow
 
 1. Lock objective, risk boundary, target runtime, and required outputs.
@@ -105,4 +96,27 @@ Each phase handoff must record:
 - `benchmark-quality-gate` — evidence-first promotion sign-off.
 - `perf-benchmark` — lightweight single-purpose benchmark execution for simple scenarios.
 
+## Workflow
 
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

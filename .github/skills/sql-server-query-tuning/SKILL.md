@@ -52,15 +52,6 @@ Out of scope:
 - Residual regression risks and rollback path.
 - Pragmatic stop decision that states whether the tuning pass is complete.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Improve one isolated statement | One query has a confirmed bottleneck and one validated improvement |
-| L2 Delivery | Fix one production-facing query issue | Duration, CPU, logical reads, or concurrency impact improves against baseline |
-| L3 Hardening | Reduce regression risk across workload slice | Query Store, plan stability, and index side effects are explicitly evaluated |
-| L4 Expert Standardization | Institutionalize repeatable tuning practice | Reusable evidence contract, option pruning, and validation rubric are documented |
-
 ## Evidence Contract
 
 Collect the strongest available combination of:
@@ -100,49 +91,9 @@ Use these deterministic reason codes when pruning options:
 - `R4`: Requires scope expansion beyond the agreed slice.
 - `R5`: Evidence is too weak to justify the change.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Evidence-first diagnosis | Evidence Contract |
-| One clear recommendation | Deterministic Workflow steps 4 to 8 |
-| Explicit trade-off handling | Option Selection Rules + Rejected Candidate Reasons |
-| Regression-aware validation | Required Outputs + Deterministic Workflow steps 6 and 7 |
-| Cross-project reusability | Depth Modes + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- The slow path can be isolated to a query or small workload slice.
-- Baseline metrics are comparable before and after changes.
-
-Trade-offs:
-
-- Aggressive indexing may improve reads while increasing write cost and maintenance overhead.
-- Plan forcing can stabilize regressions quickly but may hide deeper optimizer or stats issues.
-
-Open blockers:
-
-- Missing plans or Query Store history weakens root-cause confidence.
-- Unclear workload concurrency can make single-query wins misleading.
-
-Recommendation:
-
-- Default to the smallest evidence-backed query or index change, and require before/after proof on the same measurement surface before widening scope.
-
-## Source Governance Summary
-
-- Active sources, evaluation date, and guidance deltas are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active source checks.
-
 ## Reference Assets
 
 - Use [query-tuning-evidence-template.md](./references/query-tuning-evidence-template.md) to capture baseline metrics, chosen change, rejected options, and before/after validation.
-
-## Pragmatic Stop Rule
-
-Stop when one dominant bottleneck has a validated improvement, rejected alternatives are recorded, and the remaining risks are smaller than the original performance problem.
 
 ## Done Criteria
 
@@ -151,3 +102,28 @@ Stop when one dominant bottleneck has a validated improvement, rejected alternat
 - One recommendation is chosen and rejected options are recorded.
 - Validation and rollback expectations are explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

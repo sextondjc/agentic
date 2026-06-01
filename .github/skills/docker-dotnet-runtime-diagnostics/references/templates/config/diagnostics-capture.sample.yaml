@@ -1,0 +1,13 @@
+capture:
+  logs: true
+  inspect: true
+  health: true
+  envSummary: true
+redaction:
+  secrets: required
+classificationBuckets:
+  - startup
+  - config
+  - network
+  - permission
+  - dependency

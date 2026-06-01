@@ -63,3 +63,23 @@ This skill is the primary owner of Project Management lane work. It does not mak
 ## References
 
 - Related skills: `delivery-status-grid`, `writing-plans`, `analysis-execution`
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

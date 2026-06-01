@@ -114,11 +114,27 @@ Out of scope:
 - Editor (rich text): contenteditable ARIA support varies by AT. Provide a plain-text fallback or accessible description.
 - Chart: charts are not fully accessible via keyboard alone — always provide a tabular data alternative.
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Verify ARIA roles on one component | Role, state, and keyboard contract documented for target component |
-| L2 Practical | Full keyboard and ARIA audit for a page with multiple Kendo UI widgets | All components pass keyboard matrix; no missing ARIA labels |
-| L3 Hardening | AT compatibility testing with JAWS/NVDA and remediation | Screen reader test results documented; blockers resolved |
-| L4 Expert | VPAT-ready audit across full Kendo UI application | VPAT table complete; all AA blockers resolved; known limitations documented |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

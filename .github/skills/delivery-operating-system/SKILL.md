@@ -56,15 +56,6 @@ Out of scope:
 - Escalation and exception policy for blocked, aging, or high-risk work.
 - Final operating-model recommendation with residual risks and adoption order.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Stand up a lightweight delivery system | Core phases and artifact owners are defined |
-| L2 Delivery | Enable one project end to end | Artifact set and cadence support active delivery |
-| L3 Hardening | Establish release-grade governance | Exception handling and release checkpoints are explicit |
-| L4 Expert Standardization | Build a reusable cross-project delivery model | The operating system is portable, auditable, and agent-usable by default |
-
 ## Capability Phases
 
 - Outcome Framing
@@ -118,37 +109,6 @@ Out of scope:
 - If a phase has no artifact, remove the phase or define the artifact.
 - If exceptions recur without changing the model, treat that as a design failure, not a one-off issue.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| One reusable PM/delivery entry point | Specialization + Deterministic Workflow |
-| Explicit phase orchestration | Capability Phases + Handoff Criteria |
-| Owned artifacts across lifecycle | Required Outputs + Ownership Matrix Template |
-| Agent-usable delivery gates | Decision Rules + Cadence model in workflow |
-| Cross-project portability | Depth Modes L4 + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- The project benefits from one explicit operating model instead of ad hoc local process.
-- Artifact ownership is a stronger control than meeting-heavy coordination.
-
-Trade-offs:
-
-- One lifecycle model improves consistency but can feel heavier than informal team habits.
-- Strong handoff criteria reduce ambiguity but can expose missing upstream work earlier.
-
-Open blockers:
-
-- Missing named owners weaken phase accountability.
-- Existing local rituals may conflict with explicit artifact ownership.
-
-Recommendation:
-
-- Use this skill as the default project-management and delivery entry point for agent-heavy work. Then instantiate only the phases that materially add value for the project.
-
 ## Workspace Execution Contract
 
 This workspace has a ratified delivery pattern that serves as the canonical operating model when this skill is invoked here. Agents must follow it in preference to constructing a model from scratch.
@@ -164,15 +124,6 @@ Key constraints from the ratified plan:
 - Retrospective due within 5 business days or on-demand
 - `G-TDD` may be satisfied by `code-reviewer` agent; human oversight required for high-risk or cross-cutting changes
 
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Default freshness threshold is 30 days.
-
-## Pragmatic Stop Rule
-
-Stop when each selected phase owns one output set, handoff rules are explicit, cadence is defined, and exception handling is auditable.
-
 ## Anti-Patterns
 
 - Running delivery from ceremonies with no durable artifacts.
@@ -187,3 +138,28 @@ Stop when each selected phase owns one output set, handoff rules are explicit, c
 - Handoff criteria and escalation rules are explicit.
 - Final recommendation states adoption order and residual risk.
 - Source catalog entries are current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

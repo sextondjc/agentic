@@ -14,16 +14,18 @@ $preferred_agents = [regex]::Matches($agentTable, '(?m)^\| `([^`]+)` \|') | ForE
 $actual_agents = Get-ChildItem .github/agents/*.agent.md | ForEach-Object { $_.BaseName -replace '\.agent$', '' }
 
 $divergence = @{}
-$missing_agents = @($actual_agents | Where-Object { $_ -notin $preferred_agents })
-$stale_agents = @($preferred_agents | Where-Object { $_ -notin $actual_agents })
+if (@($preferred_agents).Count -gt 0) {
+  $missing_agents = @($actual_agents | Where-Object { $_ -notin $preferred_agents })
+  $stale_agents = @($preferred_agents | Where-Object { $_ -notin $actual_agents })
 
-if ($missing_agents) { $divergence['Missing agents'] = $missing_agents }
-if ($stale_agents) { $divergence['Stale agents'] = $stale_agents }
+  if ($missing_agents) { $divergence['Missing agents'] = $missing_agents }
+  if ($stale_agents) { $divergence['Stale agents'] = $stale_agents }
+}
 
-# Validate prompts against prompt-lifecycle-catalog.md
-$promptCatalog = Get-Content .github/prompts/prompt-lifecycle-catalog.md
+# Validate prompts against prompts discovery index
+$promptCatalog = Get-Content .github/catalogs/prompts-discovery-index.md
 $catalogged_prompts = $promptCatalog | ForEach-Object {
-  if ($_ -match '\| `([^`]+\.prompt\.md)` \|') { $Matches[1] }
+  if ($_ -match '^\|\s*`[^`]+`\s*\|\s*`([^`]+\.prompt\.md)`\s*\|') { $Matches[1] }
 } | Where-Object { $_ }
 $actual_prompts = Get-ChildItem .github/prompts/*.prompt.md | Select-Object -ExpandProperty Name
 $missing_prompts = @($actual_prompts | Where-Object { $_ -notin $catalogged_prompts })
@@ -31,8 +33,8 @@ $stale_prompts = @($catalogged_prompts | Where-Object { $_ -notin $actual_prompt
 if ($missing_prompts) { $divergence['Missing prompts in catalog'] = $missing_prompts }
 if ($stale_prompts) { $divergence['Stale prompts in catalog'] = $stale_prompts }
 
-# Validate instructions against instruction-lifecycle-catalog.md
-$instrCatalog = Get-Content .github/instructions/instruction-lifecycle-catalog.md
+# Validate instructions against instructions discovery index
+$instrCatalog = Get-Content .github/catalogs/instructions-discovery-index.md
 $catalogged_instructions = $instrCatalog | ForEach-Object {
   if ($_ -match '^\| `([^`]+\.instructions\.md)` \|') { $Matches[1] }
 } | Where-Object { $_ }

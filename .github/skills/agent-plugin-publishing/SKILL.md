@@ -9,16 +9,6 @@ description: Package and publish VS Code agent plugins to Marketplace, GitHub Re
 
 Prepare agent plugins for distribution through VS Code Marketplace, GitHub Releases, or private registries. Manage versioning, VSIX packaging, release documentation, and post-release monitoring.
 
-## Supporting Activities
-
-- Validate plugin manifest (plugin.json schema compliance).
-- Bump semantic version and update changelog.
-- Generate VSIX package (single and multi-platform).
-- Create release notes with scope, known issues, rollback reference, and approval evidence.
-- Publish to chosen distribution channel.
-- Configure marketplace metadata (tags, logo, repository link).
-- Monitor telemetry and respond to issues.
-
 ## Workflow
 
 1. **Pre-publish validation**:
@@ -230,27 +220,6 @@ Prepare agent plugins for distribution through VS Code Marketplace, GitHub Relea
 - First-week telemetry collected: usage patterns and error rates monitored.
 - Update monitoring process is in place (daily checks first week, then weekly).
 
-## Validation Checklist
-
-- [ ] `plugin.json` version field updated (semver, matches CHANGELOG).
-- [ ] `marketplace.json` version field updated (if applicable).
-- [ ] CHANGELOG.md entry exists for this version with features, fixes, breaking changes, known issues.
-- [ ] RELEASE_NOTES.md includes scope, deferred items, known issues, rollback procedure, approval evidence.
-- [ ] VSIX package generated successfully (`vsce package` output without errors).
-- [ ] VSIX contains plugin.json, README.md, all referenced directories (skills/, agents/, etc.).
-- [ ] Plugin published to distribution channel (Marketplace, GitHub Release, or private registry).
-- [ ] Plugin is discoverable in VS Code Extensions (`@agentPlugins` filter) or distribution URL.
-- [ ] Installation test passes: plugin installs, components load, agent appears in Chat.
-- [ ] Telemetry monitoring is configured (crash rates, tool latency, error frequency tracked).
-
-## References
-
-- [VS Code Extension Publishing Guide](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)
-- [vsce Command Reference](https://github.com/microsoft/vscode-vsce)
-- [Semantic Versioning](https://semver.org/)
-- [GitHub Release Documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
-- [Marketplace Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
 ## Trigger Conditions
 
 Invoke this skill when any of the following is true:
@@ -260,3 +229,23 @@ Invoke this skill when any of the following is true:
 - Release notes must be created with evidence and rollback procedures.
 - A plugin needs to be published to Marketplace, GitHub, or private registry.
 - Post-release monitoring and update management is required.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

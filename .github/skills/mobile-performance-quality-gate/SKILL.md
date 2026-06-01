@@ -51,15 +51,6 @@ Out of scope:
 - Prioritized remediation backlog with owner and expected impact.
 - Final recommendation: `go`, `go-with-exceptions`, or `no-go`.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Validate one journey baseline | One journey has complete performance evidence and findings |
-| L2 Delivery | Validate core flow performance quality | Primary, edge, and recovery journeys have measured outputs |
-| L3 Hardening | Enforce release-grade performance gates | High-risk startup, rendering, or memory findings are resolved or dispositioned |
-| L4 Expert Standardization | Build reusable mobile performance governance pattern | Reusable thresholds, scoring rubric, and evidence schema are documented |
-
 ## Deterministic Workflow
 
 1. Lock scope: journeys, states, devices, and environment assumptions.
@@ -103,47 +94,6 @@ Risk bands:
 - `.docs/changes/<workstream-id>/mobile-performance-threshold-rubric.md`
 - `.docs/changes/<workstream-id>/mobile-performance-release-recommendation.md`
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Deterministic mobile performance workflow | Deterministic Workflow |
-| Objective performance thresholds | Mobile Performance Gate Checklist |
-| Severity and risk classification | Severity and Risk Model |
-| Durable evidence artifacts | Evidence Contract |
-| Explicit release recommendation | Required Outputs + Workflow step 9 |
-| Source freshness governance | Source Governance Summary + Source Catalog |
-
-## Reasoning Package
-
-Assumptions:
-
-- Mobile performance decisions should be based on user-visible task impact, not infrastructure metrics alone.
-- Startup, navigation, and memory stability are the minimum reusable gate set for MAUI mobile quality.
-
-Trade-offs:
-
-- Stricter thresholds reduce user risk but can increase release pressure.
-- Broader device coverage increases confidence but adds execution time.
-
-Open blockers:
-
-- Missing production-like test conditions can distort performance outcomes.
-- Undefined loading or resume behavior reduces consistency of findings.
-
-Recommendation:
-
-- Use L3 by default for release-bound MAUI changes and L4 when establishing reusable mobile performance governance.
-
-## Source Governance Summary
-
-- Source relevance, authority, freshness, and actionability are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active performance-source checks.
-
-## Pragmatic Stop Rule
-
-Stop when all in-scope journeys have measured performance evidence, all high and critical findings are resolved or explicitly deferred with owner and due date, and the final recommendation is recorded with durable artifact links.
-
 ## Done Criteria
 
 - Trigger conditions are met for the request.
@@ -151,3 +101,28 @@ Stop when all in-scope journeys have measured performance evidence, all high and
 - L4 coverage matrix remains complete and current.
 - Source catalog is current for this evaluation cycle.
 - Final recommendation is explicit, evidence-backed, and auditable.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

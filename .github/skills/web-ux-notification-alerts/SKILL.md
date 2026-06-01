@@ -130,93 +130,6 @@ Produce a severity-ranked findings report and a pass/warning/block release recom
    - **Warning**: High-frequency notification without limits; non-dismissable promotional; missing or unclear user control.
    - **Pass**: All findings at medium/low severity or explicitly deferred with owner.
 
-## Severity Model
-
-| Severity | Example Finding | Action |
-|---|---|---|
-| Critical | Notification fatigue: >8 notifications per session; critical security alert can be disabled; notification not announced to screen reader | Do not release without fix |
-| High | Frequent notification without rate limit; dismissal UI unclear; accessibility (focus lost after dismiss, no live region announced) | Document deferral owner; recommend fix before release |
-| Medium | Timing suboptimal (auto-dismiss too fast); user control hidden in settings; priority color subtle but acceptable | Track for next refinement; release allowed |
-| Low | Secondary notification type lacks dismissal option; documentation incomplete | No action required |
-
-## Evidence Contract
-
-**Notification and Alert Findings Report** (`.docs/changes/<id>/notification-alert-findings.md`):
-```md
-### Notification Frequency Audit
-| Type | Trigger | Frequency Limit | Test Result | Status |
-|---|---|---|---|---|
-| confirmation | form submit | 1 per session | 1 observed | pass |
-| warning | unsaved changes | undefined | 3-4 per session | high-severity |
-| promotional | app visit | 1 per day | 2+ observed | high-severity |
-
-### Timing and Interruption Heuristics
-| Type | Timing | Auto-dismiss | Interruption | Alignment | Finding |
-|---|---|---|---|---|---|
-| confirmation | user-triggered | 3s | low | yes | pass |
-| error | auto-triggered | 7s | high | no | medium-severity |
-
-### Dismissal and Persistence
-| Type | Dismissal Clear? | One-time? | Persistent? | Finding |
-|---|---|---|---|---|
-| confirmation | yes | yes | yes | pass |
-| promotional | unclear | no | no | medium-severity |
-
-### User Control Inventory
-| Type | User Disable? | Frequency Control? | Discoverable? | Critical? | Finding |
-|---|---|---|---|---|---|
-| security alert | no | no | n/a | yes | pass |
-| marketing | yes | no | hard to find | no | medium-severity |
-
-### Accessibility Audit
-| Type | Role | Live Region | Keyboard Dismissible | Focus Management | Finding |
-|---|---|---|---|---|---|
-| alert | alert | announced | yes | return to trigger | pass |
-| status | status | announced | yes | maintain | pass |
-
-### Consolidated Findings
-- <NA-ID>: <finding text> [severity]
-```
-
-**Notification Frequency and Timing Matrix** (`.docs/changes/<id>/notification-frequency-timing-matrix.md`):
-Complete inventory of notification types, triggers, frequency limits, and timing behavior.
-
-**Dismissal and Persistence Audit Report** (`.docs/changes/<id>/dismissal-persistence-audit.md`):
-Test results for dismissal UX and cross-session persistence.
-
-**User Control Inventory** (`.docs/changes/<id>/user-control-inventory.md`):
-Mapping of user-facing notification preferences and control options.
-
-**Unified Release Recommendation** (`.docs/changes/<id>/ux-quality-gate-recommendation.md`, notification section):
-Notification and Alert Strategy: `pass | warning | block`
-
-## Source Governance Summary
-
-| Source | Status | Relevance | Authority | Freshness | Actionability | Notes |
-|---|---|---|---|---|---|---|
-| [WCAG 2.2 Status Messages and Live Regions](https://www.w3.org/TR/WCAG22/#status-messages) | active | Accessible notification announcements | W3C standard | current | encode aria-live and role checks | SC 4.1.3 guidance |
-| [FTC Dark Patterns Research](https://www.ftc.gov/news-events/news/2023/09/ftc-sends-warning-letters-dark-patterns) | active | Deceptive notification frequency and dismissal | regulatory guidance | current | document rate-limiting and dismissal clarity | consumer protection baseline |
-| [Notification Design Best Practices](https://www.nngroup.com/articles/notification-design-patterns/) | active | Notification timing and user control heuristics | NN/g research | current | apply frequency limits and dismissal rules | empirical usability patterns |
-| [Web Notifications API Spec](https://notifications.spec.whatwg.org/) | active | Push notification standards and permission flow | WHATWG standard | current | verify permission UX and delivery | browser notification behavior |
-| [WCAG Alert Role and aria-live](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA19.html) | active | Screen-reader-friendly notification markup | W3C technique | current | implement role and live-region checks | implementation reference |
-
-## Pragmatic Stop Rule
-
-Stop and proceed to recommendation when:
-
-1. Notification catalog is complete; all notification types are identified.
-2. Frequency audit is complete for all notification types.
-3. Timing and dismissal UX is audited for at least critical and common notification types.
-4. User control inventory is documented.
-5. Accessibility audit (live regions, role, keyboard) is complete.
-6. All findings are severity-tagged and have associated remediation owners or deferrals.
-
-**If token budget is exhausted before 6 is complete:**
-- Defer less-common notification types to follow-up.
-- Prioritize critical and frequently-triggered notifications.
-- Prioritize accessibility and dismissal audits.
-- Document incomplete scope in recommendation and defer non-critical findings.
-
 ## Done Criteria
 
 - [ ] Notification and Alert Findings Report created with at least critical and high findings documented.
@@ -228,3 +141,27 @@ Stop and proceed to recommendation when:
 - [ ] Unified recommendation is unambiguous: pass, warning, or block.
 - [ ] Remediation owners are assigned for all deferred findings.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -66,48 +66,34 @@ Out of scope:
 - Every pipeline stage must map to explicit required trait slices.
 - Fail closed when release-critical slices are omitted from release gates.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert trait taxonomy | Deterministic Workflow |
-| Deterministic selective execution | Required Outputs |
-| Release-safe suite slicing | Decision Rules + Required Outputs |
-| Cross-project portability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Predictable slicing depends on stable taxonomy and filter contracts.
-- Trait drift is a governance issue that causes silent coverage gaps.
-
-Trade-offs:
-
-- Coarse slices simplify operations but reduce targeting precision.
-- Fine-grained slices improve speed but increase taxonomy overhead.
-
-Open blockers:
-
-- Legacy inconsistent tags can delay clean cutover.
-- Missing ownership for taxonomy updates can reintroduce drift.
-
-Recommendation:
-
-- Establish one canonical taxonomy with explicit stage slices and drift controls before optimizing slice granularity.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Taxonomy template is provided in [traits-taxonomy-template.md](./references/traits-taxonomy-template.md).
-
-## Pragmatic Stop Rule
-
-Stop when canonical taxonomy, stage slices, and filter commands are explicit and drift checks are assigned.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Taxonomy and slice rules are explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -63,3 +63,24 @@ Prefer one non-interactive script invocation with explicit parameters over manua
 - Duplicate inline logic is removed or avoided.
 - Shared script is cataloged with usage and output format.
 - Safety and consistency checks are completed.
+
+## Inputs
+
+- Request objective and scope boundary.
+- Applicable constraints and risk context.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

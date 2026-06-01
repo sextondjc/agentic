@@ -48,15 +48,6 @@ This skill covers form implementation patterns. Component design and CVA variant
 | Multi-step contract (if applicable) | Step schema slices, navigation state, and partial validation gates defined |
 | Readiness summary | Open items, deferred fields, and known edge cases |
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Build one form with a single field and submit | Field renders, validates on submit, and error message appears |
-| L2 Practical Delivery | Full production form with all field types and validation | All fields typed, all validations active, submission handler wired |
-| L3 Advanced Patterns | Multi-step, async validation, or server-error mapping | Step transitions clean, async validation debounced, server errors surface correctly |
-| L4 Expert Standardization | Reusable cross-project form patterns | Typed form hook factory, shared field component library, and validation pattern library documented |
-
 ## Core Form Pattern
 
 ### 1. Install Dependencies
@@ -230,6 +221,27 @@ setCurrentStep(2)
 - On submission failure, focus the first errored field: `form.setFocus(firstErrorField)`.
 - Disabled submit button during `isSubmitting` prevents double-submission; ensure it is re-enabled on error.
 
-## Pragmatic Stop Rule
+## Workflow
 
-Stop when the zod schema is complete, all `FormField` compositions render errors correctly, the submission handler is wired and handles both success and error paths, and accessibility requirements are met. Open items must be in the readiness summary.
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

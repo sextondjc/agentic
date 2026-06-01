@@ -184,12 +184,80 @@ function Update-ExecutiveRecommendationGrid {
     }
 }
 
+function Update-AuditExecutorDisposition {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$ReportPath,
+
+        [Parameter(Mandatory = $true)]
+        [string]$ReviewDate,
+
+        [Parameter(Mandatory = $true)]
+        [int]$PassedChecks,
+
+        [Parameter(Mandatory = $true)]
+        [int]$TotalChecks,
+
+        [Parameter(Mandatory = $true)]
+        [int]$FailedChecks
+,
+        [Parameter(Mandatory = $false)]
+        [array]$FailedCheckRows = @()
+    )
+
+    if (-not (Test-Path -LiteralPath $ReportPath)) {
+        return
+    }
+
+    $status = if ($FailedChecks -gt 0) { 'FAILED' } else { 'PASSED' }
+    $content = Get-Content -LiteralPath $ReportPath -Raw
+
+    $content = [regex]::Replace($content, '(?m)^- Overall governance health status: .+$', "- Overall governance health status: $status")
+    $content = [regex]::Replace($content, '(?m)^\| Validation checks passed \| .+\|$', "| Validation checks passed | $PassedChecks / $TotalChecks (canonical wrapper check set) |")
+    $content = [regex]::Replace($content, '(?m)^\| Disposition \| .+\|$', "| Disposition | $status |")
+    $content = [regex]::Replace($content, '(?m)^\| Failed checks \| .+\|$', "| Failed checks | $FailedChecks |")
+    $content = [regex]::Replace($content, '(?m)^- Date run: .+$', "- Date run: $ReviewDate")
+    $content = [regex]::Replace($content, '(?m)^- Disposition: .+$', "- Disposition: $status")
+
+    $failureRows = if ($FailedCheckRows.Count -gt 0) {
+        @($FailedCheckRows | ForEach-Object {
+            "| $($_.Check) | $($_.ExitCode) | $(Convert-ToSingleLine -Text $_.Output -MaxLength 180) |"
+        }) -join "`r`n"
+    }
+    else {
+        '| None | 0 | No failing checks. |'
+    }
+
+    $detailBlock = @"
+<!-- GOV-CHECK-DETAIL-START -->
+### Current Gate Check Failures
+
+| Check | ExitCode | Evidence Snippet |
+|---|---:|---|
+$failureRows
+<!-- GOV-CHECK-DETAIL-END -->
+"@
+
+    if ($content -match '(?ms)<!-- GOV-CHECK-DETAIL-START -->.*?<!-- GOV-CHECK-DETAIL-END -->') {
+        $content = [regex]::Replace($content, '(?ms)<!-- GOV-CHECK-DETAIL-START -->.*?<!-- GOV-CHECK-DETAIL-END -->', [System.Text.RegularExpressions.MatchEvaluator]{ param($m) $detailBlock })
+    }
+
+    Set-Content -LiteralPath $ReportPath -Value $content -Encoding UTF8
+}
+
 Push-Location $RootPath
 try {
     # Validate workspace root is a .github workspace before running checks
     if (-not (Test-Path (Join-Path $RootPath '.github'))) {
         Write-Error "No .github directory found at '$RootPath'. Provide the workspace root via -RootPath."
         exit 1
+    }
+
+    $artifactDirectory = '.github/skills/governance-health-overview/references/.artifacts'
+    $rawEvidencePath = Join-Path $artifactDirectory 'governance-health-overview.latest.json'
+    New-Item -ItemType Directory -Path $artifactDirectory -Force | Out-Null
+    if (-not (Test-Path -LiteralPath $rawEvidencePath)) {
+        '{}' | Set-Content -LiteralPath $rawEvidencePath -Encoding UTF8
     }
 
     $checks = @(
@@ -369,7 +437,7 @@ try {
     New-Item -ItemType Directory -Path (Split-Path -Path $optimizationAggregatePath -Parent) -Force | Out-Null
 
     $failedCheckText = if ($failedChecks.Count -gt 0) { ($failedChecks.Check -join ', ') } else { 'None' }
-    $governanceOutcome = if ($failedChecks.Count -eq 0) { 'Pass' } else { 'Pass With Advisories' }
+    $governanceOutcome = if ($failedChecks.Count -eq 0) { 'Pass' } else { 'Fail' }
 
     $governanceReport = @"
 # Governance Audit
@@ -416,12 +484,12 @@ try {
 "@
     Set-Content -LiteralPath $customizationAggregatePath -Value $customizationReport -Encoding UTF8
 
-    $optimizationOutcome = if ($failedChecks.Count -eq 0) { 'Pass' } else { 'Pass With Advisories' }
+    $optimizationOutcome = if ($failedChecks.Count -eq 0) { 'Pass' } else { 'Fail' }
     $optimizationRemediationRow = if ($failedChecks.Count -eq 0) {
         '| R0 | No open optimization remediation actions for this run. | None | None |'
     }
     else {
-        "| R1 | Resolve all failing advisory checks from governance scripts | $failedCheckText | High |"
+        "| R1 | Resolve all failing checks from governance scripts | $failedCheckText | High |"
     }
     $optimizationReport = @"
 # Optimization Factor Review
@@ -433,12 +501,12 @@ try {
 | Review Date | $ReviewDate |
 | Artifacts Reviewed | $($metrics.AssetCount.Total) |
 | MUST Failures | 0 |
-| SHOULD Advisories | $($metrics.FailedChecks) |
+| Failed Checks | $($metrics.FailedChecks) |
 | Overall Outcome | $optimizationOutcome |
 
 ## Results Grid
 
-| Artifact | Type | Outcome | MUST Failures | SHOULD Advisories | Evidence |
+| Artifact | Type | Outcome | MUST Failures | Failed Checks | Evidence |
 |---|---|---|---:|---:|---|
 | Governance checks | workflow | $optimizationOutcome | 0 | $($metrics.FailedChecks) | .github/skills/governance-health-overview/references/.artifacts/governance-health-overview.latest.json |
 
@@ -653,7 +721,20 @@ $(if ($topFailures.Count -gt 0) { ($topFailures | ForEach-Object { "| $($_.Check
         exit 1
     }
 
+    Update-AuditExecutorDisposition `
+        -ReportPath '.docs/governance/audit-executor-report.md' `
+        -ReviewDate $ReviewDate `
+        -PassedChecks $metrics.PassedChecks `
+        -TotalChecks $metrics.TotalChecks `
+        -FailedChecks $metrics.FailedChecks `
+        -FailedCheckRows @($failedChecks)
+
     $result
+
+    if ($metrics.FailedChecks -gt 0) {
+        Write-Error "Governance hard gate failed: $($metrics.FailedChecks) check(s) failed ($($metrics.FailedCheckNames -join ', '))."
+        exit 1
+    }
 }
 finally {
     Pop-Location

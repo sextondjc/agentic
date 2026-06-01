@@ -14,16 +14,16 @@
 |---|---:|
 | Agents | 18 |
 | Instructions | 21 |
-| Prompts | 22 |
-| Skills | 268 |
-| Total | 329 |
+| Prompts | 21 |
+| Skills | 267 |
+| Total | 327 |
 
 ## Standards Health Grid
 
 | Standard Group | Result | Notes |
 |---|---|---|
 | GOV-M* | Pass | No open MUST failures. |
-| GOV-S* | Pass | Advisory backlog for this remediation scope is closed. |
+| GOV-S* | Pass | No open governance script failures in the current run. |
 | GOV-SK | Pass | Skills checks pass after catalog/freshness updates. |
 | GOV-CUS | Pass | No-docs-dependency now aligns with repository conventions for source checks. |
 | GOV-OPT | Pass | Responsibility-overlap remains within threshold. |
@@ -32,8 +32,8 @@
 
 | Metric | Value |
 |---|---:|
-| Validation checks run | 7 |
-| Validation checks passed | 7 |
+| Validation checks run | 21 |
+| Validation checks passed | 21 |
 | Validation checks failed | 0 |
 | Duplicate responsibility pairs | 0 |
 
@@ -41,13 +41,13 @@
 
 | ID | Check | Severity | Finding | Evidence |
 |---|---|---|---|---|
-| None | N/A | N/A | No open failures in this remediation cycle. | N/A |
+| None | N/A | N/A | No open failures in current check set. | `.github/skills/governance-health-overview/references/.artifacts/governance-health-overview.latest.json` |
 
 ## Ranked Recommendations Grid
 
 | Rank | Recommendation | Priority |
 |---:|---|---|
-| 1 | Maintain monthly governance verification cadence. | Low |
+| 1 | Maintain monthly governance verification cadence and keep check paths aligned with active catalogs. | Low |
 
 ## Final Disposition
 

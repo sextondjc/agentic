@@ -51,15 +51,6 @@ Out of scope:
 - Error propagation pattern from native to web layer.
 - Local registration instructions and smoke-test checklist.
 
-## Depth Modes
-
-| Level | Intent | Stop Rule |
-|---|---|---|
-| L1 Orientation | Understand the plugin contract | One method bridges native to web correctly |
-| L2 Practical Plugin | Ship one safe custom plugin | TypeScript, iOS, and Android implementations exist and sync |
-| L3 Hardened Plugin | Production-safe plugin | Permissions, errors, threading, and edge cases are handled |
-| L4 Expert Plugin | Reusable plugin standard | Plugin is packageable, versioned, and has documented contracts |
-
 ## Deterministic Workflow
 
 1. Define the TypeScript interface: method names, parameter types, return types, and error shapes.
@@ -118,3 +109,28 @@ call.resolve(JSObject().apply { put("result", value) });
 - Permissions are declared and runtime requests are verified.
 - Error paths are tested and produce correct `reject` behavior.
 - Bridge safety checklist passes without exceptions.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

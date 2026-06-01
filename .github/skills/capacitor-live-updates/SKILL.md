@@ -52,15 +52,6 @@ Out of scope:
 - User-facing update UX pattern (silent, prompted, or forced).
 - Store compliance checklist for OTA content scope rules.
 
-## Depth Modes
-
-| Level | Intent | Stop Rule |
-|---|---|---|
-| L1 Orientation | Understand OTA update mechanics | Update check and apply flow works end-to-end |
-| L2 Practical Delivery | Ship safe OTA updates | Channel, verification, and rollback are configured |
-| L3 Staged Governance | Production-grade rollout control | Promotion gates, staged percentages, and triggers are enforced |
-| L4 Expert Standardization | Reusable OTA operating model | Channel governance, verification policy, and rollback runbook are documented for cross-project use |
-
 ## Update Lifecycle Pattern
 
 ```typescript
@@ -120,3 +111,28 @@ if (latest.url) {
 - Staged rollout plan with promotion gates and rollback triggers is documented.
 - Store compliance checklist is complete.
 - Residual risks are explicit and owner-assigned.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

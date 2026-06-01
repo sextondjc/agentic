@@ -9,26 +9,6 @@ description: Use when evaluating one or more workspace skills for skill-specific
 
 Evaluate skills against skill-governance standards and produce review outcomes (Pass, Pass With Advisories, Fail, Blocked) centered on reusable workflow quality. Scope is singular: skill quality review and follow-up governance.
 
-## Normative Language
-
-- MUST: Mandatory requirement. Failure means the reviewed skill fails.
-- SHOULD: Advisory requirement. Failure does not auto-fail, but requires recommendation and tracking.
-
-## Review Standards
-
-Use these standards exactly:
-
-| ID | Standard | Type | Pass Criteria | Failure Action |
-|---|---|---|---|---|
-| SKR-M1 | Specialization | MUST | Skill scope is hyper-specialized to one objective only. | Mark as failed and recommend scope split or refocus. |
-| SKR-M2 | Valid format | MUST | Valid YAML front matter and valid Markdown structure for Copilot skill loading. | Mark as failed and provide exact formatting fix. |
-| SKR-M3 | Triggers | MUST | Clear discovery triggers in description and body with concrete use conditions. | Mark as failed and provide trigger rewrite guidance. |
-| SKR-M4 | No cross-skill references | MUST | Skill guidance body contains no invocations, delegations, required-sub-skill directives, or workflow steps that call a named sibling skill. All execution content must be self-contained, with explicit inputs, outputs, and process. | Mark as failed; inline required content directly or introduce a dedicated orchestrator skill as the indirection layer. Do not cross-reference to resolve shared logic. |
-| SKR-S1 | Assets | SHOULD | Skill uses concrete references or reusable assets when they materially improve execution support; a `references/` directory is optional when the skill is already self-contained. | Record advisory finding only when missing assets cause ambiguity, duplication, or weak reuse. |
-| SKR-S3 | Link integrity | SHOULD | Markdown links are resolvable, non-placeholder, and aligned with referenced assets/docs, including valid fragment anchors when present. Validate from the on-disk workspace file context. | Record advisory finding and recommend target fixes or valid replacements. |
-| SKR-S4 | Growth governance alignment | SHOULD | Skill changes follow growth discipline: reuse-before-create, anti-duplication, delta-first edits, and explicit auditability. | Record advisory finding and recommend minimal, self-contained consolidation. |
-| SKR-S5 | Brevity | SHOULD | Skill wording is economical for context efficiency, avoids obvious duplication or narrative padding, and preserves clarity without unnecessary verbosity. | Record advisory finding and recommend concise reductions through the appropriate authoring skill. |
-
 ## Trigger Conditions
 
 Invoke this skill when any condition below is true:
@@ -54,16 +34,6 @@ Optional inputs:
 - Evaluation date in ISO format (`YYYY-MM-DD`) for review freshness tracking.
 - Source catalog file path (default: `./references/source-catalog.md`).
 - Maximum age threshold in days for source freshness (default: 30).
-
-## Source Governance Rules
-
-- **BLOCKING**: Read [source-catalog.md](./references/source-catalog.md) BEFORE producing any findings. Platform-specific assessments — including skill structural expectations, format requirements, and tooling behavior — MUST be grounded in the source catalog, not inferred from workspace scripts or local tooling whose contracts may be stale.
-- Keep the source catalog in Markdown grid format.
-- Every source row MUST include: Source, What It Provides, Why It Is Valuable, In Use (Yes or No), Last Evaluated (YYYY-MM-DD), Current Status (Current, Needs Review, Deprecated).
-- Mark a source as Needs Review when Last Evaluated exceeds the freshness threshold.
-- Mark a source as Deprecated when it is no longer maintained or no longer relevant to skill review.
-- Do not remove historical sources without adding a short deprecation note in the Notes column.
-- Re-evaluate sources before finalizing recommendations for skill standards and review guidance.
 
 ## Required Outputs
 
@@ -112,31 +82,6 @@ Optional inputs:
 16. Update the skill history file with findings, decisions, and recommendation statuses.
 17. Confirm deterministic coverage: each requested outcome is mapped to a report artifact or explicit decision.
 
-## Output Format Rules
-
-- MUST return review outcomes in Markdown grid format.
-- MUST present aggregate results using a single consolidated grid with these columns:
-   - Skill
-   - Outcome
-   - MUST Failures
-   - SHOULD Advisories
-   - Report
-- SHOULD include a small aggregate metrics grid for totals (Pass, Pass With Advisories, Fail, Blocked).
-- SHOULD keep narrative concise and place it after the grids.
-
-## Storage Rules
-
-- Store each skill review under .docs/changes/skill/reviews/<skill-name>/.
-- Use descriptive file names: `review.md`. Use versioned names (for example, `review-v2.md`) to disambiguate repeated runs.
-- Keep aggregate cross-skill summaries in .docs/changes/skill/reviews/.
-
-## History Management Rules
-
-- Keep one history file per reviewed skill at `.docs/changes/skill/history/<skill-name>-history.md`.
-- Append new review entries; never rewrite prior decisions.
-- Track each recommendation with status: Proposed, Accepted, Rejected, Removed, Implemented.
-- Before publishing recommendations, remove any item that matches prior Rejected or Removed entries unless the user explicitly re-opens it.
-
 ## Done Criteria
 
 A review is complete only when:
@@ -149,3 +94,22 @@ A review is complete only when:
 - Maintenance assumptions are freshness-checked when maintenance validation is in scope.
 - Source-catalog freshness was checked before final recommendations were issued.
 
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

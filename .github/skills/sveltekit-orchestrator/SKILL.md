@@ -77,15 +77,6 @@ Each domain maps to a dedicated specialist skill. Invoke the specialist directly
 | Rejected-candidate table | Domains excluded with reason codes |
 | Closure check | Confirmation that all required outputs are owned |
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Route one mixed SvelteKit request | One intake and one phase contract exist |
-| L2 Delivery | Coordinate one cross-domain SvelteKit effort | Every required output has one owning domain |
-| L3 Hardening | Support production-grade SvelteKit delivery | Risks, evidence expectations, and blockers are explicit |
-| L4 Expert Standardisation | Establish reusable SvelteKit operating model | Reusable intake, ownership, and routing rubric documented |
-
 ## Phase Dependency Map
 
 Apply before finalising phase ownership to catch mandatory sequencing requirements:
@@ -149,19 +140,31 @@ Flag these patterns for explicit risk review during intake:
 - Nested `handle` functions without `sequence()` — order-dependent interception bugs are common.
 - `handleError` defined in both `hooks.ts` and `hooks.server.ts` without coordination — duplicate or conflicting error shapes.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| One SvelteKit intake | Objective + Deterministic Workflow |
-| Phase sequencing | Phase Dependency Map |
-| Domain ownership clarity | Phase-Output Ownership Matrix Template |
-| Deterministic orchestration | Unified Decision Rules |
-| Rejected-scope record | Rejected Candidate Reasons |
-| Cross-phase risk identification | Cross-Domain Risk Signals |
-
 ## References
 
 See [references/source-catalog.md](./references/source-catalog.md) for active source tracking.
 
+## Workflow
 
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

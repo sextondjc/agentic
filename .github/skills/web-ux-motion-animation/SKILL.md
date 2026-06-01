@@ -154,31 +154,6 @@ Explicit log of every animated surface and its reduced-motion support status.
 **Unified Release Recommendation** (`.docs/changes/<id>/ux-quality-gate-recommendation.md`, motion section):
 Motion and Animation: `pass | warning | block`
 
-## Source Governance Summary
-
-| Source | Status | Relevance | Authority | Freshness | Actionability | Notes |
-|---|---|---|---|---|---|---|
-| [WCAG 2.2 Animation and Motion](https://www.w3.org/TR/WCAG22/#animation-from-interactions) | active | Critical for accessibility compliance | W3C standard | current | encode success criteria into checklist | SC 2.3.3, 2.3.4 guidelines |
-| [prefers-reduced-motion CSS Media Query](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) | active | Motion-risk mitigation | MDN/vendor standard | current | deterministic implementation checks | browser support >95% |
-| [Web Animations Performance](https://web.dev/animations-guide/) | active | Performance impact assessment | web.dev best practices | current | profile metrics extraction | LCP/CLS/jank detection |
-| [APG Animation and Motion Guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/) | active | Component animation coherence | W3C guidance | current | map interaction patterns to timing | component-specific motion rules |
-| [Seizure and Photosensitivity in Web Animation](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html) | active | Flash/flicker risk detection | W3C Understanding docs | current | encode flash detection rules | 3+ flashes/sec threshold |
-
-## Pragmatic Stop Rule
-
-Stop and proceed to recommendation when:
-
-1. Reduced-motion audit is complete for all animated surfaces.
-2. Animation coherence matrix covers all distinct animation types and surfaces.
-3. Flash/flicker audit is complete (axe-core + manual inspection).
-4. Performance profile is captured and jank assessment is documented.
-5. All findings are severity-tagged and have associated remediation owners or deferrals.
-
-**If token budget is exhausted before 5 is complete:**
-- Defer animation coherence and performance checks to a follow-up pass.
-- Prioritize reduced-motion and seizure-risk audits (accessibility must-haves).
-- Document incomplete scope in recommendation and defer non-critical findings.
-
 ## Done Criteria
 
 - [ ] Motion and Animation Findings Report created with at least critical and high findings documented.
@@ -190,3 +165,27 @@ Stop and proceed to recommendation when:
 - [ ] Unified recommendation is unambiguous: pass, warning, or block.
 - [ ] Remediation owners are assigned for all deferred findings.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -1,0 +1,198 @@
+[
+  {
+    "Project": "Syrx_2.0.0",
+    "Total": 11229,
+    "Models": 921,
+    "Repositories": 6,
+    "Tests": 6502
+  },
+  {
+    "Project": "Syrx_3.0.0",
+    "Total": 5471,
+    "Models": 424,
+    "Repositories": 2,
+    "Tests": 3150
+  },
+  {
+    "Project": "Rook_backup",
+    "Total": 1596,
+    "Models": 397,
+    "Repositories": 402,
+    "Tests": 745
+  },
+  {
+    "Project": "Syrx",
+    "Total": 1589,
+    "Models": 121,
+    "Repositories": 3,
+    "Tests": 945
+  },
+  {
+    "Project": "Syrx_",
+    "Total": 1475,
+    "Models": 120,
+    "Repositories": 0,
+    "Tests": 864
+  },
+  {
+    "Project": "aliasesonline",
+    "Total": 187,
+    "Models": 26,
+    "Repositories": 19,
+    "Tests": 76
+  },
+  {
+    "Project": "anonyme_1x",
+    "Total": 181,
+    "Models": 24,
+    "Repositories": 64,
+    "Tests": 120
+  },
+  {
+    "Project": "Dapper",
+    "Total": 158,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 92
+  },
+  {
+    "Project": "AO",
+    "Total": 85,
+    "Models": 14,
+    "Repositories": 17,
+    "Tests": 45
+  },
+  {
+    "Project": "Mira",
+    "Total": 81,
+    "Models": 15,
+    "Repositories": 40,
+    "Tests": 50
+  },
+  {
+    "Project": "Lynx",
+    "Total": 65,
+    "Models": 0,
+    "Repositories": 9,
+    "Tests": 27
+  },
+  {
+    "Project": "Syrx_Http_2",
+    "Total": 56,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 15
+  },
+  {
+    "Project": "Syrx_Http_1",
+    "Total": 49,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 18
+  },
+  {
+    "Project": "Scapex",
+    "Total": 47,
+    "Models": 0,
+    "Repositories": 2,
+    "Tests": 16
+  },
+  {
+    "Project": "Syrx.Samples",
+    "Total": 33,
+    "Models": 2,
+    "Repositories": 24,
+    "Tests": 18
+  },
+  {
+    "Project": "Syrx.Validation",
+    "Total": 27,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 16
+  },
+  {
+    "Project": "Polly",
+    "Total": 26,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 0
+  },
+  {
+    "Project": "Syrx.Middleware",
+    "Total": 24,
+    "Models": 0,
+    "Repositories": 2,
+    "Tests": 3
+  },
+  {
+    "Project": "Syrx.Http",
+    "Total": 22,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 7
+  },
+  {
+    "Project": "Proxima",
+    "Total": 15,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 5
+  },
+  {
+    "Project": "Flo",
+    "Total": 14,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 9
+  },
+  {
+    "Project": "Syrx.Files",
+    "Total": 11,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 1
+  },
+  {
+    "Project": "awesome-copilot",
+    "Total": 8,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 0
+  },
+  {
+    "Project": "Arclight",
+    "Total": 7,
+    "Models": 2,
+    "Repositories": 3,
+    "Tests": 4
+  },
+  {
+    "Project": "Syrx.Analyzers",
+    "Total": 7,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 4
+  },
+  {
+    "Project": "JunkYard",
+    "Total": 6,
+    "Models": 0,
+    "Repositories": 0,
+    "Tests": 1
+  },
+  {
+    "Project": "Eumi",
+    "Total": 5,
+    "Models": 1,
+    "Repositories": 0,
+    "Tests": 1
+  },
+  {
+    "Project": "syrx-data-access",
+    "Total": 3,
+    "Models": 0,
+    "Repositories": 3,
+    "Tests": 0
+  }
+]

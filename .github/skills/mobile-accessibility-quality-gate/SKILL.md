@@ -53,15 +53,6 @@ Out of scope:
 - Evidence bundle references for automated and manual validation.
 - Explicit sign-off recommendation: `go`, `go-with-exceptions`, or `no-go`.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Validate one screen baseline | One scoped accessibility report with objective defects listed |
-| L2 Delivery | Validate a complete flow | Default, loading, empty, error, and success states are covered |
-| L3 Hardening | Enforce release-grade quality gates | No unresolved critical or serious issues and evidence bundle complete |
-| L4 Expert Standardization | Build reusable mobile accessibility execution pattern | Reusable checklist, evidence schema, and decision rubric are documented |
-
 ## Deterministic Workflow
 
 1. Confirm scope boundary: screens, components, states, and representative device classes.
@@ -100,47 +91,6 @@ Capture artifacts under one change scope path:
 - `.docs/changes/<workstream-id>/mobile-accessibility-scan-results.json`
 - `.docs/changes/<workstream-id>/mobile-accessibility-release-recommendation.md`
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Deterministic expert workflow | Deterministic Workflow |
-| Objective acceptance criteria | Accessibility Gate Checklist |
-| Severity-ranked findings | Severity Model |
-| Durable evidence bundle | Evidence Contract |
-| Explicit go or no-go sign-off | Required Outputs + Workflow step 9 |
-| Source freshness governance | Source Governance Summary + Source Catalog |
-
-## Reasoning Package
-
-Assumptions:
-
-- Mobile accessibility quality requires both automated and manual verification.
-- Release decisions need durable evidence, not verbal confirmation.
-
-Trade-offs:
-
-- Strict no-critical and no-serious gates reduce risk but can delay release.
-- Broader device and assistive-technology coverage increases confidence but adds execution time.
-
-Open blockers:
-
-- Missing state definitions reduce check completeness.
-- Lack of representative device coverage can invalidate findings.
-
-Recommendation:
-
-- Use L3 by default for release-bound MAUI changes and L4 when building a repeatable mobile accessibility operating model.
-
-## Source Governance Summary
-
-- Source relevance, authority, freshness, and actionability are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active standards and platform checks.
-
-## Pragmatic Stop Rule
-
-Stop when all in-scope criteria are checked, all critical and serious findings are resolved or dispositioned with owner and due date, and the evidence contract artifacts exist with a final recommendation.
-
 ## Anti-Patterns
 
 - Relying on automated scans only.
@@ -155,3 +105,28 @@ Stop when all in-scope criteria are checked, all critical and serious findings a
 - L4 coverage matrix remains fully mapped.
 - Source catalog has current evaluation date and disposition.
 - Final recommendation is explicit and evidence-backed.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

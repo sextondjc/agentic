@@ -53,15 +53,6 @@ This skill is specialized for multi-app or monorepo design system governance. Si
 | Visual consistency audit checklist | Cross-app checks: token parity, dark mode, component variant alignment |
 | Readiness summary | Open items, migration risks, and deferred governance decisions |
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Extract one component into a shared package | Component resolves correctly in two consuming apps |
-| L2 Practical Delivery | Shared package with core components and token contract | Token contract documented; consuming apps import without forking |
-| L3 Governance | Breaking-change policy, deprecation workflow, and registry update process | Policy exists and has been applied to at least one real change |
-| L4 Expert Standardization | Full cross-project design system operating model | Versioning, update policy, consistency audit, and CI enforcement template documented |
-
 ## Package Architecture
 
 ### Recommended Monorepo Layout
@@ -171,6 +162,27 @@ Run before any major design system release:
 | Spacing scale | Shared spacing tokens used for component internals; Tailwind utilities may supplement for layout |
 | Icon consistency | Icon library (Lucide React) version pinned in shared package; consuming apps do not override |
 
-## Pragmatic Stop Rule
+## Workflow
 
-Stop when the package architecture is decided, the token contract is documented with versioning rules, the breaking-change policy is defined, and the consuming app integration contract is complete. Visual consistency audit and registry update policy are required before the L3 gate. Open items must be in the readiness summary.
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

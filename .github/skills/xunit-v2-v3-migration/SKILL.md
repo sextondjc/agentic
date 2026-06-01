@@ -65,48 +65,34 @@ Out of scope:
 - Rollback plan must be executable without in-flight context.
 - Fail closed when critical blockers remain unresolved.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert migration planning | Deterministic Workflow |
-| Deterministic compatibility gating | Decision Rules + Required Outputs |
-| Risk-controlled rollout | Required Outputs |
-| Cross-project portability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Most migration failures come from hidden compatibility dependencies.
-- Phased rollout reduces blast radius and improves confidence.
-
-Trade-offs:
-
-- Conservative phased rollout lowers risk but increases elapsed migration time.
-- Fast cutover reduces time but increases rollback pressure.
-
-Open blockers:
-
-- Unknown plugin/adapter dependencies may block full v3 adoption.
-- Incomplete test telemetry can hide regression signals.
-
-Recommendation:
-
-- Use a phased, evidence-first migration with explicit rollback criteria at every checkpoint.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Migration planning checklist is provided in [migration-checklist.md](./references/migration-checklist.md).
-
-## Pragmatic Stop Rule
-
-Stop when compatibility blockers are mapped, phased gates are explicit, and rollback posture is validated.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Migration and rollback decisions are explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

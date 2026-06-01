@@ -7,7 +7,7 @@ description: Use when applying or reviewing Syrx.Validation.Contract guard patte
 
 ## Overview
 
-Use this skill to standardize boundary validation with `Syrx.Validation.Contract.Throw<TException>` across repository and application entry points.
+Use this skill to standardize boundary validation with `Syrx.Validation.Contract.Throw<TException>` across repository and application entry points, with explicit retrieval-parameter versus state-changing model guard rules.
 
 ## Trigger Conditions
 
@@ -18,7 +18,7 @@ Use this skill to standardize boundary validation with `Syrx.Validation.Contract
 
 ## When Not to Use
 
-- Replacing repository SQL/data-access patterns (use this skill for that).
+- Replacing repository SQL/data-access patterns (use `syrx-data-access` for that).
 - General non-Syrx validation strategy decisions.
 - Domain behavior changes unrelated to input validation guards.
 
@@ -36,6 +36,8 @@ Use this skill to standardize boundary validation with `Syrx.Validation.Contract
 - Use get-only properties or equivalent immutable record semantics; no public setters.
 - Run required guard validation at instantiation time (constructor or static factory).
 - Use Syrx guard methods from `Syrx.Validation.Contract` (`Throw` or `Require`) for all repository-bound model validation.
+- Retrieval contracts may use validated primitive parameters for identifiers and paging only.
+- State-changing contracts (`Create*`, `Update*`, `Delete*`) should use validated complex models/options instead of primitive parameter lists.
 
 ## Null-Forgiving Operator Idiom
 
@@ -75,6 +77,37 @@ Throw<ArgumentException>(count > 0, "Count must be positive, got {0}", count);
 
 `Require<TException>(successCondition, message)` is permitted as an equivalent semantic alias from `Syrx.Validation.Contract`.
 
+## Repository-Bound Guard Examples
+
+```csharp
+using static Syrx.Validation.Contract;
+
+public sealed record UpdateUserOptions
+{
+   public int Id { get; }
+   public string DisplayName { get; }
+
+   public UpdateUserOptions(int id, string displayName)
+   {
+      Throw<ArgumentOutOfRangeException>(id > 0, nameof(id));
+      Throw<ArgumentException>(!string.IsNullOrWhiteSpace(displayName), nameof(displayName));
+      Id = id;
+      DisplayName = displayName.Trim();
+   }
+}
+
+public sealed record DeleteUserOptions
+{
+   public int Id { get; }
+
+   public DeleteUserOptions(int id)
+   {
+      Throw<ArgumentOutOfRangeException>(id > 0, nameof(id));
+      Id = id;
+   }
+}
+```
+
 ## Rationale
 
 Use fail-fast validation to centralize semantics and maintain a consistent exception taxonomy.
@@ -89,11 +122,12 @@ Use fail-fast validation to centralize semantics and maintain a consistent excep
 
 ## Required Outputs
 
-1. Findings Table
+1. Findings Table (split by model-boundary findings and repository-signature findings)
    - File
    - Method/Member
    - Validation Status (Pass/Fail)
    - Recommended Guard
+   - Finding Category (`Model-Boundary` | `Repository-Signature`)
 2. Code Changes Applied
    - Updated file list
    - Summary of guard additions or corrections
@@ -105,4 +139,28 @@ Use fail-fast validation to centralize semantics and maintain a consistent excep
 
 ## Related Skills
 
-- this skill for repository SQL/data-access implementation patterns.
+- `syrx-data-access`: repository SQL/data-access implementation patterns.
+
+## Inputs
+
+- Request objective and scope boundary.
+- Applicable constraints and risk context.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

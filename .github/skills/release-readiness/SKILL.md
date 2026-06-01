@@ -68,3 +68,23 @@ This skill satisfies the `governance-release.instructions.md` policy requirement
 
 - Policy: `governance-release.instructions.md`
 - Related skills: `operability-design`, `test-design-review`
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

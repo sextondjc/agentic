@@ -65,47 +65,34 @@ Out of scope:
 - `pass-with-conditions`: only medium or low findings remain with owner and due date.
 - `fail`: unresolved critical findings, or high findings in core boundaries.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert architecture review | Deterministic Workflow |
-| Deterministic gate decision | Decision Rules |
-| Auditable findings and ownership | Required Outputs |
-| Cross-project portability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Boundary drift is a leading indicator of long-term delivery friction.
-- Repository and validation discipline are core reliability controls in cross-project C# work.
-
-Trade-offs:
-
-- Strict architecture gates improve maintainability but can slow short-term delivery.
-- Relaxed gates increase short-term speed but raise defect and coupling risk.
-
-Open blockers:
-
-- Incomplete dependency visibility can hide coupling regressions.
-- Undefined repository or validation standards weaken recommendation confidence.
-
-Recommendation:
-
-- Use this gate for any change that touches architectural seams, repositories, or boundary validation behavior.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-
-## Pragmatic Stop Rule
-
-Stop when boundary findings, repository safety, and validation discipline are explicitly assessed and one recommendation is published.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Decision mode is explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

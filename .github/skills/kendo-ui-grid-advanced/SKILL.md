@@ -84,11 +84,27 @@ pageable: true,
 height: 600
 ```
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Add one advanced Grid feature safely | Feature works and no baseline regressions |
-| L2 Delivery | Combine 2 to 3 advanced Grid features | Compatibility matrix validated |
-| L3 Hardening | Production-scale Grid behavior | Performance guardrails and failure modes verified |
-| L4 Expert | Reusable advanced Grid blueprint | Pattern documented for cross-project reuse |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

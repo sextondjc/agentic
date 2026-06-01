@@ -72,3 +72,23 @@ This skill bridges the gap between product discovery and delivery execution. It 
 ## References
 
 - Related skills: `analysis-execution`, `writing-plans`, `prd-generator`, `delivery-status-grid`, `acceptance-governance`
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

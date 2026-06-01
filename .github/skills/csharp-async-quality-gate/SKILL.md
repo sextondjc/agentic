@@ -65,47 +65,34 @@ Out of scope:
 - `pass-with-conditions`: only medium or low findings remain with owner and due date.
 - `fail`: any unresolved critical finding, or high finding in a production path.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert async review | Deterministic Workflow |
-| Deterministic quality decision | Decision Rules |
-| Auditable findings | Required Outputs |
-| Cross-project reusability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Async defects are high-impact and often escape superficial review.
-- Cancellation and exception behavior must be explicit to avoid production instability.
-
-Trade-offs:
-
-- Strict async checks increase pre-merge effort but reduce runtime defects.
-- Minimal checks increase throughput but can hide failure-mode risk.
-
-Open blockers:
-
-- Missing traceability of async entry points can invalidate conclusions.
-- Undefined cancellation policy creates ambiguous pass criteria.
-
-Recommendation:
-
-- Apply this gate to all async changes in shared libraries and production paths.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-
-## Pragmatic Stop Rule
-
-Stop when async behavior, cancellation flow, and exception flow are explicitly mapped and one recommendation is published.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Decision mode is explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

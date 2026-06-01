@@ -9,16 +9,6 @@ description: Apply security controls to agents including sandbox configuration, 
 
 Harden agent security posture through explicit controls on external access (SSRF prevention), secret management, tool permissions, sandbox configuration, and input validation. This skill is a peer to implementation and must be applied before release.
 
-## Supporting Activities
-
-- Audit tool permissions and remove unnecessary access.
-- Prevent Server-Side Request Forgery (SSRF) via URL validation.
-- Implement secret management (environment variables, vault integration).
-- Configure sandbox constraints on MCP servers and shell execution.
-- Validate user input at agent boundaries.
-- Document security assumptions and incident response.
-- Perform threat modeling and security checklist validation.
-
 ## Workflow
 
 1. **Audit tool permissions** (deny-by-default):
@@ -190,27 +180,6 @@ Harden agent security posture through explicit controls on external access (SSRF
 - Security checklist is complete (all items pass or exceptions documented).
 - Security review has been completed (peer or security team sign-off).
 
-## Validation Checklist
-
-- [ ] Agent tool whitelist has no tools beyond what is required.
-- [ ] `grep -r "password\|secret\|api.key\|token" plugin.json .agent.md .mcp.json` returns no hardcoded values.
-- [ ] SSRF rules explicitly list approved domains and blocked patterns.
-- [ ] SSRF rules tested: malicious URLs (localhost, private IPs, file://) are rejected.
-- [ ] Sandbox constraints are present for MCP servers and whitelist only necessary access.
-- [ ] Terminal auto-approval rules deny `rm`, `sudo`, `del`, format, and equivalent destructive commands.
-- [ ] Input validation rejects oversized input (>10KB), invalid encoding, path traversal attempts.
-- [ ] Logs do not print secrets (search for $API_KEY, $PASSWORD, etc. in log statements).
-- [ ] Telemetry events include only safe fields (no raw user input, secrets, or file contents).
-- [ ] Security review completed and documented (name, date, findings, resolution).
-
-## References
-
-- [OWASP: Server-Side Request Forgery (SSRF)](https://owasp.org/www-community/attacks/Server-Side_Request_Forgery)
-- [VS Code Security Documentation](https://code.visualstudio.com/docs/copilot/security)
-- [MCP Sandbox Configuration](https://code.visualstudio.com/docs/copilot/security#_sandbox)
-- [Secret Management Best Practices](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)
-- [OWASP Top 10: A03:2021 Injection](https://owasp.org/Top10/A03_2021-Injection/)
-
 ## Trigger Conditions
 
 Invoke this skill when any of the following is true:
@@ -222,3 +191,22 @@ Invoke this skill when any of the following is true:
 - Secret management approach must be designed and validated.
 - Agent handles sensitive data (code, user input, API credentials).
 
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

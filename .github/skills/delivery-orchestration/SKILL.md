@@ -56,15 +56,6 @@ Out of scope:
 - Exception and recalculation policy for blocked work, scope pressure, forecast drift, and release risk.
 - Final orchestration recommendation with adoption order and residual risks.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Stand up one lifecycle contract | Core phases and required outputs are explicit |
-| L2 Delivery | Coordinate one project end to end | The lifecycle contract supports live delivery decisions |
-| L3 Hardening | Enforce release-grade orchestration | Exceptions, recalculation triggers, and review checkpoints are explicit |
-| L4 Expert Standardization | Build a reusable umbrella delivery model | The orchestration contract is portable, auditable, and agent-usable across projects |
-
 ## Lifecycle Phases
 
 - Intake Control
@@ -119,37 +110,6 @@ Out of scope:
 - If a phase adds no unique output, remove it from scope.
 - If exceptions recur without altering the lifecycle contract, treat that as orchestration failure, not normal variance.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| One umbrella PM and delivery intake | Specialization + Deterministic Workflow |
-| Explicit lifecycle phase ownership | Lifecycle Phases + Ownership Matrix Template |
-| Gated handoffs across lifecycle | Handoff Criteria |
-| Forecast, change, release, and learning control | Required Outputs + Decision Rules |
-| Cross-project portability | Depth Modes L4 + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- A single lifecycle contract reduces coordination ambiguity better than disconnected local rituals.
-- Artifact ownership is the primary control mechanism for agent-usable delivery.
-
-Trade-offs:
-
-- One umbrella model improves consistency but can feel heavier than local team habits.
-- Strong gates and recalculation rules reduce drift but surface weak upstream work earlier.
-
-Open blockers:
-
-- Missing named owners weaken phase accountability.
-- Existing local process conventions may conflict with explicit lifecycle gating.
-
-Recommendation:
-
-- Use this skill as the top-level delivery orchestration intake when the work spans more than one major delivery control area.
-
 ## Workspace Execution Contract
 
 This workspace has a ratified delivery pattern that serves as the canonical phase sequence when this skill is invoked here. Agents must follow it in preference to deriving their own sequence.
@@ -165,15 +125,6 @@ Key constraints from the ratified plan:
 - Retrospective due within 5 business days or on-demand
 - `G-TDD` may be satisfied by `code-reviewer` agent; human oversight required for high-risk or cross-cutting changes
 
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Default freshness threshold is 30 days.
-
-## Pragmatic Stop Rule
-
-Stop when every selected phase owns one output set, cadence and exception rules are explicit, and lifecycle closure includes both release control and post-ship learning.
-
 ## Anti-Patterns
 
 - Running delivery through meetings with no durable lifecycle artifacts.
@@ -188,3 +139,28 @@ Stop when every selected phase owns one output set, cadence and exception rules 
 - Handoff criteria and recalculation triggers are explicit.
 - Final recommendation states adoption order and residual risk.
 - Source catalog entries are current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

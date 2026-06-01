@@ -81,3 +81,24 @@ Type 'discard' to confirm permanent deletion.
 3. Present four options.
 4. Execute chosen option using matrices.
 5. Apply cleanup rules and report final state.
+
+## Inputs
+
+- Request objective and scope boundary.
+- Applicable constraints and risk context.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

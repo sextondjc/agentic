@@ -54,15 +54,6 @@ Out of scope:
 - Follow-up action list with owner and trigger.
 - Residual uncertainty note where attribution is weak or mixed.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Review one shipped change at a high level | One outcome table and one decision exist |
-| L2 Delivery | Support concrete next-step decisions | Actual signals and follow-up actions are explicit |
-| L3 Hardening | Standardize post-ship outcome accountability | Confidence, caveats, and decision rules are enforced |
-| L4 Expert Standardization | Build reusable outcome-governance pattern | Review schema and decision rules are portable across projects |
-
 ## Deterministic Workflow
 
 1. Restate the original intended outcome and success signals.
@@ -90,46 +81,6 @@ Out of scope:
 | Decision record | Recommendation, rationale, review date |
 | Follow-up list | Action, owner, target or trigger |
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Post-ship outcome accountability | Objective + Deterministic Workflow |
-| Evidence-based next decision | Required Outputs + Outcome Decision Rules |
-| Honest attribution and caveats | Signal quality note + Reasoning Package |
-| Durable follow-up decisions | Artifact Contract + Deterministic Workflow steps 6 to 8 |
-| Portable cross-project review model | Depth Modes L4 + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Not every shipped change should be judged only by release smoothness.
-- Outcome review is strongest when success signals were explicit before ship.
-
-Trade-offs:
-
-- Strong outcome review improves learning but requires better measurement discipline.
-- Honest attribution caveats reduce false certainty but may frustrate decision speed.
-
-Open blockers:
-
-- Missing pre-ship success signals weakens comparison quality.
-- Mixed interventions in the same review window can blur causality.
-
-Recommendation:
-
-- Use this skill to close the gap between release execution and actual product effect.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Default freshness threshold is 30 days.
-
-## Pragmatic Stop Rule
-
-Stop when the expected versus actual comparison is explicit, one decision is chosen, and the next follow-up trigger is recorded.
-
 ## Anti-Patterns
 
 - Calling a release successful without checking outcomes.
@@ -144,3 +95,28 @@ Stop when the expected versus actual comparison is explicit, one decision is cho
 - One recommendation is recorded.
 - Follow-up actions and uncertainty notes are present.
 - Source catalog entries are current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

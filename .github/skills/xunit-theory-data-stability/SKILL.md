@@ -65,47 +65,34 @@ Out of scope:
 - Generated data must have explicit seed and bounded domain controls.
 - Test case identity must be stable across runs and environments.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert theory stability posture | Deterministic Workflow |
-| Deterministic reproducibility rules | Decision Rules + Required Outputs |
-| Reduced flaky data-driven tests | Required Outputs |
-| Cross-project portability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Most theory flakiness comes from unstable data identity or uncontrolled generation.
-- Stable case identity improves debugging and long-term maintainability.
-
-Trade-offs:
-
-- Strict deterministic data improves reliability but may reduce breadth.
-- Broader generated data increases coverage but can increase instability.
-
-Open blockers:
-
-- Hidden environment dependencies may still affect generated data behavior.
-- Incomplete case identity metadata can reduce diagnosability.
-
-Recommendation:
-
-- Default to explicit, stable theory data and allow generated data only with strict deterministic controls.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-
-## Pragmatic Stop Rule
-
-Stop when all in-scope theories have explicit data identity rules, generation controls, and reproducibility checks.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Data stability rules are explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

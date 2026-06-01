@@ -254,3 +254,23 @@ QUnit.module('$.fn.myPlugin', function(hooks) {
 - [jQuery API: .trigger()](https://api.jquery.com/trigger/)
 - [jQuery API: Deferred Object](https://api.jquery.com/category/deferred-object/)
 - [jQuery Learn: Testing with QUnit](https://learn.jquery.com/code-organization/unit-testing/)
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

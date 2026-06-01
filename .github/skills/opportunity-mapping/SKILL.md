@@ -55,15 +55,6 @@ Out of scope:
 - Assumption-test matrix listing hypothesis, evidence gap, test method, owner, and stop condition.
 - Decision log naming promoted, deferred, and rejected solution paths.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Clarify one outcome and major opportunities | One opportunity map with initial confidence markers |
-| L2 Delivery | Prepare discovery for backlog shaping | Top opportunities and test plan are complete |
-| L3 Hardening | Remove high-risk ambiguity before delivery commitment | Highest-risk assumptions have explicit tests and owners |
-| L4 Expert Standardization | Establish reusable discovery operating model | Artifact schema and decision rules are reusable across projects |
-
 ## Deterministic Workflow
 
 1. Lock the outcome statement: define success measure, time horizon, and non-goals.
@@ -93,46 +84,6 @@ Out of scope:
 - If multiple hypotheses target the same opportunity, rank by learning value first, implementation effort second.
 - If no test can be defined within the decision horizon, record the item as deferred rather than pretending it is ready.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Structured discovery map | Deterministic Workflow steps 1 to 4 |
-| Solution reasoning chain | Deterministic Workflow steps 5 to 8 |
-| Agent-usable artifacts | Required Outputs + Artifact Contract |
-| Bounded experimentation | Decision Rules + Assumption-test matrix |
-| Reusable cross-project operating model | Depth Modes L4 + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- The user can supply at least one credible evidence source or clearly label evidence gaps.
-- Not every opportunity needs immediate solution commitment.
-
-Trade-offs:
-
-- Strong structure improves downstream execution but adds up-front discipline.
-- Narrow test design reduces waste but can feel slower to idea-heavy teams.
-
-Open blockers:
-
-- Missing evidence sources can force confidence downgrades.
-- Conflicting stakeholder goals can prevent a single clean outcome statement.
-
-Recommendation:
-
-- Use this skill before backlog shaping whenever the work starts from goals, requests, or mixed discovery signals instead of a validated problem map.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Default freshness threshold is 30 days.
-
-## Pragmatic Stop Rule
-
-Stop when the top opportunities are explicit, the promoted hypotheses have falsifiable tests, and downstream planning no longer needs to infer the problem structure.
-
 ## Anti-Patterns
 
 - Writing feature ideas directly under the outcome without opportunity decomposition.
@@ -147,3 +98,28 @@ Stop when the top opportunities are explicit, the promoted hypotheses have falsi
 - High-risk hypotheses have explicit tests or explicit deferral.
 - Decision log records promoted, deferred, and rejected paths.
 - Source catalog entries are current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

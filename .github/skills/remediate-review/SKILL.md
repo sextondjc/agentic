@@ -78,3 +78,24 @@ For edge-case triage patterns and pushback templates, use [remediation-edge-case
 - [README.md](./references/README.md)
 - [review-response-examples.md](./references/review-response-examples.md)
 - [remediation-edge-cases.md](./references/remediation-edge-cases.md)
+
+## Inputs
+
+- Request objective and scope boundary.
+- Applicable constraints and risk context.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

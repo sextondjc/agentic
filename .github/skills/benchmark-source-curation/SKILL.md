@@ -105,11 +105,27 @@ Out of scope:
 6. Produce prioritized deltas that downstream skills can consume.
 7. Publish closure status, unresolved benchmark-source gaps, and version-impact notes.
 
-## L4 Coverage Matrix
+## Workflow
 
-| Requested Outcome | Skill Section |
-|---|---|
-| Authoritative source baseline | Authoritative Source Registry |
-| Topic-to-source traceability | Topic-to-Source Coverage Map |
-| Source quality decisions | Source Decision Rules + Rejected Source Reasons |
-| Downstream guidance deltas | Deterministic Workflow steps 5–7 |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

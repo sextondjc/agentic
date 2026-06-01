@@ -61,3 +61,24 @@ Use the canonical fast-rule checklist in [fast-rules.md](./references/fast-rules
 - Security posture includes non-root runtime and no secrets in layers.
 - Compose and CI guidance are present when requested by scope.
 - Output remains concise and points to references for detailed examples.
+
+## Inputs
+
+- Request objective and scope boundary.
+- Applicable constraints and risk context.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

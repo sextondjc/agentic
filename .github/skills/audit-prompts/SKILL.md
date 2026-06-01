@@ -133,3 +133,20 @@ A review is complete only when:
 - History was updated for every reviewed prompt.
 - Reasoning package entries are present for failed and advisory findings.
 - Source-catalog freshness was checked and source-sensitive findings are grounded in a current source evaluation.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

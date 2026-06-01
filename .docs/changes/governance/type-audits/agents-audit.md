@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Audit Date | 2026-05-28 |
+| Audit Date | 2026-05-30 |
 | Type | agents |
 | Primary Lane | Review |
 | Asset Count | 18 |
@@ -14,7 +14,7 @@
 | ID | Severity | Finding | Evidence | Status |
 |---|---|---|---|---|
 | AGT-P1 | Low | Agent frontmatter contract passes for all assets. | `.github/scripts/powershell/test-frontmatter-validity.ps1 -AssetType agents` | Verified |
-| AGT-P2 | Low | Catalog integrity validation now resolves current catalog location and passes. | `.github/scripts/powershell/test-catalog-integrity.ps1 -AssetType agents` | Verified |
+| AGT-P2 | Low | Catalog integrity validation passes for all agent assets. | `.github/scripts/powershell/test-catalog-integrity.ps1 -AssetType agents` | Verified |
 
 ## Check Summary
 

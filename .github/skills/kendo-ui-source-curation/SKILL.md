@@ -108,11 +108,27 @@ Out of scope:
 | Migration | What's New + GitHub changelog | Telerik Blog | Verify on each run |
 | Testing | Kendo UI Docs | Progress Community | Verify on each run |
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Verify one source for one Kendo UI topic | One source accepted or rejected with reason code |
-| L2 Baseline | Full coverage matrix for a target framework variant | All nine topic areas have at least one accepted source |
-| L3 Hardening | Version-locked source catalog with drift detection | Catalog includes version-impact note and rejected-source table |
-| L4 Expert Standardization | Reusable source catalog powering all Kendo UI skills | Catalog is cited by every downstream skill without re-fetch |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

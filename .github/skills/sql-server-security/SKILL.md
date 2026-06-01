@@ -51,15 +51,6 @@ Out of scope:
 - Surface-area decisions with accepted or rejected features.
 - Residual risks, blockers, and owner-ready next actions.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Review one security surface | One bounded access or hardening issue is assessed |
-| L2 Delivery | Harden one project or database boundary | Permissions, encryption, and auditing decisions are explicit |
-| L3 Hardening | Reach release-grade SQL security posture | High-risk surface area and privileged features are dispositioned |
-| L4 Expert Standardization | Establish reusable SQL security model | A repeatable SQL hardening and evidence rubric is documented |
-
 ## Deterministic Workflow
 
 1. Lock the security boundary: instance, database, application surface, or admin workflow.
@@ -86,49 +77,9 @@ Out of scope:
 - `R4`: Depends on manual tribal knowledge instead of durable controls.
 - `R5`: Hardening cost exceeds benefit for the bounded scope and risk level.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Permission review | Deterministic Workflow steps 1 to 5 |
-| Encryption and audit posture | Required Outputs + Hardening Rules |
-| Surface-area control | Hardening Rules |
-| Explicit rejected options | Rejected Candidate Reasons |
-| Cross-project SQL hardening model | Depth Modes + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- SQL Server is one security boundary inside a wider system, not the only security layer.
-- The team can distinguish accepted legacy exceptions from target-state controls.
-
-Trade-offs:
-
-- Stronger least-privilege and auditing controls reduce operational convenience.
-- Broad hardening can surface hidden application dependencies that slow rollout.
-
-Open blockers:
-
-- Missing privilege inventory or undocumented cross-server dependencies weaken recommendations.
-- Unknown certificate backup posture blocks safe encryption expansion.
-
-Recommendation:
-
-- Default to explicit least-privilege design, shrink SQL Server surface area early, and require durable evidence for any exception that preserves elevated access.
-
-## Source Governance Summary
-
-- Active sources, evaluation date, and guidance deltas are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active source checks.
-
 ## Reference Assets
 
 - Use [security-hardening-decision-template.md](./references/security-hardening-decision-template.md) to record principal inventory, exposure decisions, and residual risks.
-
-## Pragmatic Stop Rule
-
-Stop when the highest-risk privilege and surface-area exposures have explicit target-state decisions, residual risks are named, and the next hardening steps can be assigned without reopening the threat model.
 
 ## Done Criteria
 
@@ -137,3 +88,28 @@ Stop when the highest-risk privilege and surface-area exposures have explicit ta
 - Least-privilege, encryption, auditing, and surface-area decisions are explicit.
 - Rejected risky patterns are recorded.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

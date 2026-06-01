@@ -107,3 +107,20 @@ Copilot compatibility is mandatory for L4:
 - Implementation deltas and post-update validation outcomes are captured.
 - Source ledger entries are current for all active sources used in this pass.
 - Review checks pass with no MUST failures.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

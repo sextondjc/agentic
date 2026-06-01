@@ -145,3 +145,23 @@ If jQuery is used exclusively for AJAX (no DOM manipulation or event delegation)
 - [jQuery API: $.when()](https://api.jquery.com/jquery.when/)
 - [jQuery Learn: Ajax](https://learn.jquery.com/ajax/)
 - [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

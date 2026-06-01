@@ -80,11 +80,27 @@ function scheduleRefresh(grid) {
 }
 ```
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Add simple live update path | Updates appear correctly |
-| L2 Delivery | Maintain UX stability under moderate event rate | Focus/selection retention verified |
-| L3 Hardening | High-frequency stream resilience | Throttling and reconnect scenarios pass |
-| L4 Expert | Reusable real-time Kendo pattern set | Conflict and continuity standards documented |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -50,3 +50,24 @@ Use this skill when one or more are true:
 - Requested mobile behavior is implemented and verified.
 - Required output evidence is documented.
 - Remaining risk items are explicit, prioritized, and owner-assigned.
+
+## Inputs
+
+- Request objective and scope boundary.
+- Applicable constraints and risk context.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

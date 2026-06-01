@@ -122,11 +122,27 @@ if (grid) {
 | `kendo.observable()` inline binding via `data-bind` in IE-only mode | Standard MVVM `kendo.bind()` | Check release notes |
 | Widget `change` event on read-only widgets | Widget-specific event (e.g., `select`) | Varies by widget |
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Initialize one widget with minimal config | Widget renders with correct data |
-| L2 Practical | Full widget config with events, methods, and teardown | All lifecycle phases covered |
-| L3 Composition | Multi-widget interaction: detail Grid in master Grid, Chart linked to Grid selection | Cross-widget event wiring verified |
-| L4 Expert | Custom widget authoring extending `kendo.ui.Widget` base class | Custom widget passes destroy, event, and option contract checks |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

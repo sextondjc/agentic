@@ -112,3 +112,20 @@ Authoring is complete when:
 - Required sections are present with non-overlapping boundaries.
 - Any source-tracking updates are reflected in [source-catalog.md](./references/source-catalog.md) with freshness fields populated.
 - The output `.agent.md` includes `agent-authoring` in `## Preferred Companion Skills` for post-change review.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

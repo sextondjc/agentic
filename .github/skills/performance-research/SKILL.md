@@ -104,4 +104,19 @@ Use the [performance-research-report-template.md](./references/performance-resea
 
 - A concrete, workspace-applicable result aligned with this skill purpose.
 
+## Execution Context
 
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

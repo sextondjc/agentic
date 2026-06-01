@@ -87,3 +87,20 @@ Optional:
 - Protected ownership modes are preserved.
 - Report is written to caller-specified path.
 - All outcomes are attributable to explicit approval.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

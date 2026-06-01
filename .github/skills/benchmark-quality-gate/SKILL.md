@@ -152,21 +152,34 @@ Out of scope:
 [List any medium or low findings that remain after conditional approval, with owner and date.]
 ```
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Experiment design quality check | Quality Check Dimensions – D1 |
-| Statistical confidence adequacy | Quality Check Dimensions – D2 |
-| Environment discipline check | Quality Check Dimensions – D3 |
-| CI integration compliance | Quality Check Dimensions – D4 |
-| Decision traceability check | Quality Check Dimensions – D5 |
-| Severity-ranked findings | Severity Model + Findings Table Template |
-| One deterministic recommendation | Decision Rules + Final Recommendation Template |
-
 ## Sources
 
 - [BenchmarkDotNet Docs](https://benchmarkdotnet.org/articles/overview.html)
 - [Andrey Akinshin's Blog](https://aakinshin.net/) — statistical confidence and distribution quality
 - [dotnet/performance CI Workflow](https://github.com/dotnet/performance/blob/main/docs/benchmarking-workflow-dotnet-runtime.md) — CI integration quality patterns
 - [Adam Sitnik's Blog](https://adamsitnik.com/) — experiment design pitfalls
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

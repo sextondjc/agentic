@@ -6,9 +6,9 @@
   "AssetCounts": {
     "Agents": 18,
     "Instructions": 21,
-    "Prompts": 22,
-    "Skills": 268,
-    "Total": 329
+    "Prompts": 21,
+    "Skills": 280,
+    "Total": 340
   },
   "DuplicatePairCount": 0,
   "DuplicatePairThresholdBreached": false,

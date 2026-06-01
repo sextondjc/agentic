@@ -49,15 +49,6 @@ Out of scope:
 - Performance and trimming hardening plan.
 - Release-readiness report with packaging, signing, telemetry, and residual risks.
 
-## Depth Modes
-
-| Level | Intent | Stop Rule |
-|---|---|---|
-| L1 Orientation | Understand MAUI foundations | One multi-page MAUI app baseline exists |
-| L2 Practical Delivery | Ship one app safely | Navigation, data, secure storage, and tests are complete |
-| L3 Specialist Hardening | Improve reliability and performance | Profiling, trim-safety, and release risks are explicit |
-| L4 Expert Standardization | Define reusable MAUI standards | Reusable patterns, templates, and governance are documented |
-
 ## Deterministic Workflow
 
 1. Define outcome, target users, Android and iOS target platforms, and selected depth mode.
@@ -108,49 +99,33 @@ Out of scope:
 - Ignoring suspend or resume transitions when handling state.
 - Releasing without representative device validation.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| MAUI-specific architecture baseline | Objective + Workflow step 2 |
-| Secure storage and lifecycle safety | Workflow step 3 + Data and Security Checklist |
-| Testable MAUI implementation path | Workflow step 4 + Testing Checklist |
-| Performance and trimming hardening | Workflow step 5 + Performance Checklist |
-| Release-ready MAUI delivery | Workflow steps 6 to 7 + Deployment Checklist |
-
-## Reasoning Package
-
-Assumptions:
-
-- MAUI teams need more than a generic mobile workflow because Shell, bindings, and trimming create distinct risks.
-- Secure storage and device lifecycle behavior are release-critical concerns on MAUI targets.
-
-Trade-offs:
-
-- MAUI-specific depth improves release safety but narrows framework portability.
-- Trim-safe and startup optimization work increases up-front engineering cost.
-
-Open blockers:
-
-- Missing platform signing or packaging prerequisites can block release readiness.
-- Weak navigation or state boundaries can invalidate later hardening work.
-
-Recommendation:
-
-- Use L3 or L4 when the MAUI app is expected to become a reusable delivery standard instead of a one-off prototype.
-
-## Source Governance Summary
-
-- Active sources, evaluation date, and guidance deltas are tracked in [source-catalog.md](./references/source-catalog.md).
-- Record evidence with [source-ledger-template.md](./references/source-ledger-template.md) for major architecture or release recommendations.
-
-## Pragmatic Stop Rule
-
-Stop when the MAUI architecture, storage, testing, profiling, trimming, and release decisions are explicit enough that teams can implement and harden without re-discovering platform-specific risks.
-
 ## Done Criteria
 
 - The requested depth stop rule is met.
 - Quality and release gates are satisfied for the selected targets.
 - Source-backed decisions are documented for future reuse.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -123,3 +123,23 @@ Out of scope:
 - [jQuery API: Data](https://api.jquery.com/data/)
 - [jQuery Learn: How jQuery Works](https://learn.jquery.com/about-jquery/how-jquery-works/)
 - [jQuery Learn: Performance](https://learn.jquery.com/performance/)
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

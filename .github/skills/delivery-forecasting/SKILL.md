@@ -55,15 +55,6 @@ Out of scope:
 - Commitment risk summary with primary threats.
 - Recommended decision: hold date, reduce scope, increase confidence work, or avoid commitment.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Estimate one small delivery question | One forecast statement exists |
-| L2 Delivery | Support active planning with confidence ranges | Forecast, assumptions, and trade-offs are complete |
-| L3 Hardening | Govern commitment quality | Commitment risk and exception conditions are explicit |
-| L4 Expert Standardization | Establish reusable forecasting practice | Forecast model and assumption rules are portable across projects |
-
 ## Deterministic Workflow
 
 1. Define the forecast question: date for scope, scope for date, or commitment confidence.
@@ -91,46 +82,6 @@ Out of scope:
 | Trade-off table | Option, scope effect, date effect, confidence effect |
 | Commitment risk summary | Main risks, severity, owner or trigger |
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Confidence-based forecast | Objective + Deterministic Workflow |
-| Explicit assumptions | Required Outputs + Artifact Contract |
-| Scope-date trade-off decision support | Required Outputs + Deterministic Workflow step 6 |
-| Commitment quality control | Forecast Rules + Reasoning Package |
-| Portable forecasting model | Depth Modes L4 + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Historical flow can inform future planning when comparability is explicit.
-- Confidence ranges are more truthful and useful than point estimates.
-
-Trade-offs:
-
-- Wider ranges improve honesty but may frustrate stakeholders seeking certainty.
-- Forecast discipline improves commitments but exposes weak data quality quickly.
-
-Open blockers:
-
-- Sparse or unstable historical data lowers confidence.
-- Major dependency volatility can dominate the forecast.
-
-Recommendation:
-
-- Use this skill when dates matter. It closes the gap between flow measurement and commitment quality.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Default freshness threshold is 30 days.
-
-## Pragmatic Stop Rule
-
-Stop when the forecast question is answered with a confidence range, assumptions are explicit, and one clear decision recommendation is recorded.
-
 ## Anti-Patterns
 
 - Turning weak data into precise dates.
@@ -145,3 +96,28 @@ Stop when the forecast question is answered with a confidence range, assumptions
 - Assumptions and distortions are recorded.
 - One recommended decision path is present.
 - Source catalog entries are current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

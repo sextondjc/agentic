@@ -50,15 +50,6 @@ This skill covers installation and project wiring. Component design patterns and
 | Framework integration checklist | Framework-specific steps verified (RSC compatibility, SSR rendering, hydration) |
 | Readiness summary | Open risks, deferred items, and known version caveats |
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Install shadcn and render one component | Component renders correctly in dev without console errors |
-| L2 Practical Setup | Fully configure for a real project | `components.json` correct, aliases resolved, Tailwind aligned, one real component rendered |
-| L3 Framework Hardening | Production-ready integration for a specific framework | SSR/RSC compatibility confirmed, hydration clean, bundle impact assessed |
-| L4 Expert Standardization | Reusable setup template for cross-project use | Framework-agnostic setup template, monorepo layout documented, CI-verified import resolution |
-
 ## Framework Setup Workflows
 
 ### Next.js (App Router)
@@ -155,6 +146,27 @@ Key decisions:
 - Use `npx shadcn diff <component>` for targeted review before accepting changes.
 - Record the evaluation date and component version in the source catalog (`shadcn-source-curation`).
 
-## Pragmatic Stop Rule
+## Workflow
 
-Stop when `components.json` is valid, one component renders correctly, path aliases resolve without error, and the framework integration checklist passes. Open items must be recorded in the readiness summary.
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

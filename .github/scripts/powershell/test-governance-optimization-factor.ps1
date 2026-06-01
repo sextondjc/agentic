@@ -13,13 +13,13 @@ $checks = @(
     @{ Name = 'audit-instructions instruction brevity'; Path = '.github/skills/audit-instructions/SKILL.md'; Pattern = 'INR-S4\s*\|\s*Brevity' },
     @{ Name = 'audit-agent conflict standard'; Path = '.github/skills/audit-agent/SKILL.md'; Pattern = 'AGR-S3\s*\|\s*No conflict' },
     @{ Name = 'optimization skill exists'; Path = '.github/skills/optimize-customizations/SKILL.md'; Pattern = '^---' },
-    @{ Name = 'skill discovery registration'; Path = '.github/skills/skill-discovery-index.md'; Pattern = '\|\s*optimize-customizations\s*\|' },
-    @{ Name = 'copilot skills discovery pointer'; Path = '.github/copilot-instructions.md'; Pattern = '\[skill-discovery-index\.md\]\(\./skills/skill-discovery-index\.md\)' },
+    @{ Name = 'skill discovery registration'; Path = '.github/catalogs/skills-discovery-index.md'; Pattern = '\|\s*optimize-customizations\s*\|' },
+    @{ Name = 'copilot skills discovery pointer'; Path = '.github/copilot-instructions.md'; Pattern = '\[skills-discovery-index\.md\]\(\./catalogs/skills-discovery-index\.md\)' },
     @{ Name = 'governance-audit includes GOV-OPT'; Path = '.github/skills/governance-audit/SKILL.md'; Pattern = 'GOV-OPT' },
     @{ Name = 'execute-customization-audit includes optimization skill'; Path = '.github/skills/execute-customization-audit/SKILL.md'; Pattern = 'governance-audit-types-optimization' },
     @{ Name = 'executive prompt references execute customization audit workflow'; Path = '.github/prompts/execute-customization-audit.prompt.md'; Pattern = 'execute-customization-audit' },
     @{ Name = 'on-demand optimization prompt exists'; Path = '.github/prompts/optimize-customizations.prompt.md'; Pattern = '^---' },
-    @{ Name = 'optimization prompt catalog registration'; Path = '.github/prompts/prompt-lifecycle-catalog.md'; Pattern = '\|\s*`optimize-customizations`\s*\|\s*`optimize-customizations\.prompt\.md`\s*\|' }
+    @{ Name = 'optimization prompt catalog registration'; Path = '.github/catalogs/prompts-discovery-index.md'; Pattern = '\|\s*`optimize-customizations`\s*\|\s*`optimize-customizations\.prompt\.md`\s*\|' }
 )
 
 $violations = @()

@@ -156,11 +156,27 @@ module.exports = {
 };
 ```
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Add test execution to an existing pipeline | Tests run and publish JUnit XML artifacts |
-| L2 Practical Enforcement | Core gate: tests, SASS build, CVE scan | All three checks run on every PR; artifacts stored |
-| L3 Full Conformance | Bundle gate + license validation + XSS static gate | All five checks active; zero undetected violations on sample PR |
-| L4 Expert Standardization | Reusable cross-project CI template | Parameterized workflow template usable by any Kendo UI project; thresholds policy-documented |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -53,15 +53,6 @@ Out of scope:
 - Go or no-go recommendation with explicit residual risks.
 - Rollback procedure documented and owner-assigned.
 
-## Depth Modes
-
-| Level | Intent | Stop Rule |
-|---|---|---|
-| L1 Orientation | Understand release requirements | All required assets and signing types identified |
-| L2 First Release | Ship first App Store or Play Store build | Signing, assets, and metadata are complete |
-| L3 CI/CD Release | Automate release pipeline | Signing and archive steps run reproducibly in CI |
-| L4 Expert Governance | Release governance standard | Evidence, rollback, and approval chain are documented per release |
-
 ## App Icon and Splash Screen
 
 ### Icon Requirements (minimum)
@@ -189,3 +180,28 @@ android {
 - Smoke test evidence is documented.
 - Rollback procedure is documented, reviewed, and owner is named.
 - Go or no-go recommendation is issued with residual risks listed.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

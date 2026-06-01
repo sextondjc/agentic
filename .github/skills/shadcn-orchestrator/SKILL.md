@@ -63,34 +63,6 @@ Out of scope:
 - Rejected-phase table with deterministic reason codes (phases excluded from scope).
 - Closure check stating whether all required outputs are owned.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Route one mixed shadcn request | One intake and one phase contract exist |
-| L2 Delivery | Coordinate a cross-phase shadcn effort | Every required output has one owning phase |
-| L3 Hardening | Support production-grade shadcn delivery | Risks, evidence expectations, and blockers are explicit |
-| L4 Expert Standardization | Establish reusable shadcn operating model | Reusable intake, token conventions, component library baseline, and CI quality policy documented |
-
-## shadcn Capability Catalog
-
-| Phase | Specialist Skill | When Active |
-|---|---|---|
-| Source Curation | `shadcn-source-curation` | First adoption, major CLI or Radix update, or source freshness check required |
-| Setup and Configuration | `shadcn-setup` | New project, monorepo layout, framework integration, or `components.json` audit |
-| Theming | `shadcn-theming` | Brand palette mapping, dark mode implementation, or multi-theme / white-label work |
-| Component Design | `shadcn-component-design` | New component, CVA variants, Radix primitive integration, or cross-project component conventions |
-| Data Display | `shadcn-data-display` | DataTable with TanStack Table, Charts with Recharts, Command palette, Combobox, or virtualized list/grid |
-| Forms | `shadcn-forms` | Any form with `react-hook-form` + `zod`, multi-step forms, or form accessibility audit |
-| CI Integration | `shadcn-ci-integration` | Registry drift detection, bundle gating, import lint, token conformance, or RSC boundary checks in CI |
-| Design System | `shadcn-design-system` | Shared component package across multiple apps or monorepo — versioning, token contract, breaking-change governance |
-| Testing | `shadcn-testing` | Writing or reviewing component tests — Radix portal queries, keyboard interaction, async assertions, `forceMount` patterns, Storybook `play` functions |
-| Accessibility | `shadcn-accessibility` | Per-component ARIA contracts, WCAG 2.2 mapping, focus management, `aria-live` announcements, and screen reader test sequences |
-| Migration | `shadcn-migration` | Transitioning from MUI, Chakra UI, Mantine, or Ant Design — equivalence maps, token migration, coexistence configuration, and phase sequencing |
-| Animation | `shadcn-animation` | Enter/exit animations with Framer Motion or `tailwindcss-animate`, `forceMount` + `AnimatePresence` for Radix overlays, route transitions, and reduced-motion compliance |
-| Registry | `shadcn-registry` | Authoring a custom component registry — `registry.json` schema, item types, hosting, CLI consumption, co-existence with upstream, and versioning strategy |
-| Quality Gate | `shadcn-quality-gate` | Pre-merge review, pre-promotion gate, design system audit, or post-update conformance check |
-
 ## Deterministic Workflow
 
 1. Lock objective, risk boundary, target framework, and required outputs.
@@ -101,70 +73,27 @@ Out of scope:
 6. Confirm closure: every required output has an owner.
 7. Emit the execution contract.
 
-## Phase Assignment Table
+## Workflow
 
-| Required Output Type | Owning Phase |
-|---|---|
-| Source freshness baseline | Source Curation |
-| `components.json`, path aliases, framework wiring | Setup and Configuration |
-| CSS variable declarations, dark mode, brand token mapping | Theming |
-| TSX components, CVA schemas, Radix wiring, RSC boundaries | Component Design |
-| DataTable, Chart, Command, Combobox, virtualized list | Data Display |
-| Zod schemas, `useForm` setup, `FormField` compositions, submission handlers | Forms |
-| CI checks: drift, bundle, import lint, token scan, RSC lint | CI Integration |
-| Shared package architecture, token contract, breaking-change policy | Design System |
-| Accessibility verdict, token conformance, bundle health, gate recommendation | Quality Gate |
-| Test files, portal query strategy, keyboard maps, Storybook stories | Testing |
-| ARIA contracts, WCAG mappings, focus management spec, screen reader sequences | Accessibility |
-| Component equivalence map, token migration map, coexistence configuration, phase plan | Migration |
-| Animation implementation, variant library, `forceMount` pattern, reduced-motion compliance | Animation |
-| `registry.json`, component item files, hosting config, consumer onboarding guide | Registry |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
 
-## Cross-Phase Dependency Map
+## Execution Context
+### Input Context
 
-```
-Source Curation
-    └── Setup and Configuration
-            ├── Theming
-            │       └── Quality Gate
-            ├── Component Design
-            │       └── Quality Gate
-            ├── Data Display
-            │       └── Quality Gate
-            ├── Forms
-            │       └── Quality Gate
-            ├── Design System
-            │       ├── CI Integration
-            │       └── Quality Gate
-            ├── Testing
-            │       └── Quality Gate
-            ├── Accessibility
-            │       └── Quality Gate
-            ├── Animation
-            │       └── Quality Gate
-            ├── Registry
-            │       └── Quality Gate
-            └── Migration
-                    └── Quality Gate
-```
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
 
-- Source Curation is optional when sources are within freshness threshold.
-- Theming, Component Design, Data Display, and Forms are independently executable once Setup is complete.
-- Design System requires Setup and is typically active in monorepo or multi-app contexts.
-- CI Integration requires Setup and may run alongside or after Design System.
-- Quality Gate is always the final phase when a merge or promotion decision is required.
+### Process Context
 
-## Rejected Phase Reason Codes
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
 
-| Code | Meaning |
-|---|---|
-| `P1` | Phase not needed — request is scoped to other phases only |
-| `P2` | Phase already complete — evidence exists from a prior session |
-| `P3` | Phase deferred — out of current delivery scope; owner identified for future work |
-| `P4` | Phase not applicable — framework or project type does not require it |
+### Output Context
 
-## Pragmatic Stop Rule
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
 
-Stop when the intake contract is locked, every required output has exactly one owning phase, rejected phases are recorded, and the closure check passes. A bounded exception record is required for any output with no clear phase owner.
-
-
+- [Reference assets](./references/README.md)

@@ -146,11 +146,27 @@ function teardownView() {
 | Memory per Grid instance (virtual, 100 visible rows) | < 10 MB heap delta |
 | Kendo UI bundle (custom build, gzip) | ≤ 300 KB (component-dependent) |
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Enable server paging on one Grid | Server-paging DataSource active; client loads only current page |
-| L2 Practical | Virtual scrolling + server-side paging, sorting, filtering | Grid renders 10K+ rows without scroll jank |
-| L3 Hardening | Deferred init + memory-safe teardown + custom build | Page load budget met; no memory growth across navigation cycles |
-| L4 Expert | Full performance evidence: benchmarks, heap profiles, bundle analysis | Evidence artifacts support promotion decision |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

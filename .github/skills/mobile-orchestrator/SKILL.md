@@ -52,15 +52,6 @@ Out of scope:
 - Rejected-candidate table with deterministic reason codes.
 - Closure check stating whether all required outputs are owned.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Route one mixed mobile request | One intake and one phase contract exist |
-| L2 Delivery | Coordinate one cross-surface mobile effort | Every required output has one owning phase |
-| L3 Hardening | Support release-grade mobile work coordination | Risks, evidence expectations, and blockers are explicit |
-| L4 Expert Standardization | Establish reusable mobile operating model | Reusable intake, ownership, and routing rubric are documented |
-
 ## Capability Catalog
 
 Use one or more phases based on request shape:
@@ -111,46 +102,6 @@ Use one or more phases based on request shape:
 - `R4`: Requires evidence, platform access, or environment setup that is not currently available.
 - `R5`: Better handled by a narrower single-phase workflow.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| One mobile intake | Objective + Deterministic Workflow |
-| Phase ownership clarity | Phase-Output Ownership Matrix Template |
-| Deterministic orchestration | Unified Decision Rules |
-| Rejected-scope record | Rejected Candidate Reasons |
-| Cross-project reusable contract | Capability Catalog + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Mixed mobile requests benefit from one intake and explicit output ownership.
-- Most mobile work can be reduced to a small number of bounded capability phases.
-
-Trade-offs:
-
-- Strong orchestration reduces drift and duplicate work but adds upfront routing overhead.
-- Over-bundling slows narrow requests that should stay inside one phase.
-
-Open blockers:
-
-- Missing platform constraints or release targets can invalidate a phased plan.
-- Weakly bounded objectives create overlapping phase ownership.
-
-Recommendation:
-
-- Default to `narrow-execution` for one-surface mobile tasks and use `phased-execution` only when more than one phase clearly owns a required output.
-
-## Source Governance Summary
-
-- Active sources, evaluation date, and guidance deltas are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active source checks.
-
-## Pragmatic Stop Rule
-
-Stop when every required output has exactly one owner, the execution mode is explicit, and no blocker remains hidden behind ambiguous mobile scope.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
@@ -159,3 +110,27 @@ Stop when every required output has exactly one owner, the execution mode is exp
 - Decision mode is explicit.
 - Source catalog is current for this evaluation cycle.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

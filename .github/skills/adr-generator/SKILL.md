@@ -130,4 +130,23 @@ Do not save the ADR until all checklist items pass:
 - Positive outcomes: `POS-001`, `POS-002`, ...
 - Negative outcomes: `NEG-001`, `NEG-002`, ...
 
+## Inputs
 
+- Request objective and scope boundary.
+- Applicable constraints and risk context.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

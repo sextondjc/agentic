@@ -74,47 +74,34 @@ Out of scope:
 - Reusing mutable mock state across unrelated tests.
 - Assertions that pass despite broken behavior due to permissive setups.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert Moq seam decisions | Deterministic Workflow |
-| Deterministic verification strategy | Decision Rules + Required Outputs |
-| Reduced mock brittleness | Anti-Pattern Checks |
-| Cross-project portability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Collaboration tests are reliable only when verification scope matches behavior contracts.
-- Over-mocking increases maintenance cost and false failures.
-
-Trade-offs:
-
-- Strict verification catches unintended behavior but can over-couple tests.
-- Looser verification improves resilience but can miss regressions.
-
-Open blockers:
-
-- Missing collaborator contracts make seam selection ambiguous.
-- Side effects without observable outcomes can force heavier interaction assertions.
-
-Recommendation:
-
-- Default to state assertions, add interaction verification only for contract-critical collaborator behavior, and keep mock setups minimal.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-
-## Pragmatic Stop Rule
-
-Stop when each collaborator seam has one verification strategy decision, one strictness posture, and one anti-pattern check outcome.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Verification decisions are explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -66,40 +66,6 @@ Out of scope:
 - Rejected-phase table with deterministic reason codes.
 - Closure check confirming all required outputs are owned.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Route one mixed Kendo UI request | One intake and one phase contract exist |
-| L2 Delivery | Coordinate a cross-phase Kendo UI effort | Every required output has one owning phase |
-| L3 Hardening | Support production-grade Kendo UI delivery | Risks, CVE posture, accessibility evidence, and blockers are explicit |
-| L4 Expert Standardization | Establish reusable Kendo UI operating model | Reusable intake, security baseline, theming governance, CI quality policy documented |
-
-## Kendo UI Capability Catalog
-
-| Phase | Specialist Skill | When Active |
-|---|---|---|
-| Source Curation | `kendo-ui-source-curation` | First adoption, major Kendo UI version change, source freshness check required |
-| Core Components | `kendo-ui-core` | Widget initialization, configuration, event binding, method invocation, widget composition |
-| Data Binding | `kendo-ui-data-binding` | DataSource configuration, remote transport, MVVM ViewModel, OData, SignalR |
-| Grid Advanced | `kendo-ui-grid-advanced` | Advanced Grid editing, virtualization combinations, grouping aggregates, locked columns |
-| Charts and Dataviz | `kendo-ui-charts-dataviz` | Chart selection, drill-down behavior, cross-filtering, large dataset rendering strategy |
-| Export and Printing | `kendo-ui-export-printing` | Excel/PDF export contracts, print layouts, data-scope controls, output reliability |
-| Localization | `kendo-ui-localization` | Culture-aware formatting, localized messages, runtime locale switching, RTL checks |
-| State Persistence | `kendo-ui-state-persistence` | Save and restore Grid/widget state across sessions, routes, and upgrades |
-| Real-Time Updates | `kendo-ui-real-time-updates` | Push/streaming updates with throttling, reconciliation, and UI continuity controls |
-| Upload Workflows | `kendo-ui-upload-file-workflows` | Chunked uploads, retry/resume behavior, validation boundaries, file lifecycle workflows |
-| Observability | `kendo-ui-observability` | Widget telemetry contracts, interaction latency metrics, error correlation and alerting |
-| Theming | `kendo-ui-theming` | SASS variable overrides, ThemeBuilder, dark mode, multi-theme, upgrade-safe governance |
-| Accessibility | `kendo-ui-accessibility` | WCAG 2.1 AA compliance, ARIA roles, keyboard navigation, focus management |
-| Forms | `kendo-ui-forms` | Input widget composition, Kendo UI Validator, server validation routing, multi-step flows |
-| Security | `kendo-ui-security` | XSS template audit, CSRF in transport, Upload restrictions, Editor sanitization, CVE posture |
-| Performance | `kendo-ui-performance` | Virtual scrolling, server paging, deferred init, memory cleanup, bundle size |
-| Migration | `kendo-ui-migration` | Version upgrade, deprecated API triage, SASS variable migration, framework variant migration |
-| Testing | `kendo-ui-testing` | Widget tests, mock DataSource, event simulation, Validator tests, destruction tests |
-| CI Integration | `kendo-ui-ci-integration` | Automated test execution, SASS build gate, bundle size gate, CVE scan, license validation |
-| Quality Gate | `kendo-ui-quality-gate` | Pre-merge review, pre-promotion gate, or full-project quality audit |
-
 ## Deterministic Workflow
 
 ### Step 1: Intake Lock
@@ -170,13 +136,27 @@ Before declaring the contract complete, confirm:
 - [ ] Quality Gate is always the final phase.
 - [ ] All phase dependencies are respected in sequencing.
 
-## Rejected Phase Reason Codes
+## Workflow
 
-| Code | Meaning |
-|---|---|
-| `OUT-OF-SCOPE` | Phase does not apply to the stated objective |
-| `ALREADY-COVERED` | Another active phase fully covers the output |
-| `DEFERRED` | Phase is valid but deferred to a future delivery cycle with explicit approval |
-| `NOT-APPLICABLE` | Phase is inapplicable to the current framework variant |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
 
+## Execution Context
+### Input Context
 
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

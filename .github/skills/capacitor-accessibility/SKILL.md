@@ -53,15 +53,6 @@ Out of scope:
 - Test matrix for manual VoiceOver and TalkBack validation.
 - Release recommendation with residual accessibility risks.
 
-## Depth Modes
-
-| Level | Intent | Stop Rule |
-|---|---|---|
-| L1 Orientation | Understand hybrid accessibility constraints | Key WebView/native boundary issues identified |
-| L2 Practical Remediation | Fix critical barriers | Focus management, ARIA, and touch targets pass manual testing |
-| L3 Quality Gate | Pre-release accessibility sign-off | All severity-1 findings resolved; severity-2 accepted or mitigated |
-| L4 Expert Baseline | Reusable hybrid accessibility standard | Patterns, test scripts, and governance documented for cross-project use |
-
 ## WebView Accessibility Constraints
 
 Capacitor's WebView inherits platform accessibility APIs but with key limitations:
@@ -161,3 +152,28 @@ function announceToScreenReader(message: string): void {
 - Focus management and live region patterns are implemented and tested.
 - Manual test matrix is completed on target devices.
 - Release recommendation with residual risks is documented and owner-assigned.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -118,90 +118,6 @@ Produce a severity-ranked findings report and a pass/warning/block release recom
    - **Warning**: Touch-target sizing issue on secondary surface; reflow jerky but not breaking; CLS slightly elevated.
    - **Pass**: All findings at medium/low severity or explicitly deferred with owner.
 
-## Severity Model
-
-| Severity | Example Finding | Action |
-|---|---|---|
-| Critical | User-scalability disabled; primary CTA button 20x20px on mobile; layout completely breaks at tablet breakpoint | Do not release without fix |
-| High | Touch-target 36x36px on mobile; CLS 0.15 caused by image loading; content reordering confusing on one breakpoint | Document deferral owner; recommend fix before release |
-| Medium | Touch-target 40x40px (close to 44px); CLS 0.12 from non-critical widget; spacing slightly tight between targets | Track for next refinement; release allowed |
-| Low | Desktop layout slightly tight; secondary interactive element slightly undersized; documentation missing | No action required |
-
-## Evidence Contract
-
-**Responsive Design Findings Report** (`.docs/changes/<id>/responsive-design-findings.md`):
-```md
-### Viewport Configuration
-- Meta viewport tag present: yes/no
-- User-scalability enabled: yes/no
-- Viewport-fit cover: yes/no
-
-### Breakpoint Strategy
-| Breakpoint | Width | Layout Type | Content Reordering | Notes |
-|---|---|---|---|---|
-| mobile | 320px | single-column | sidebar hidden | pass |
-| tablet | 768px | two-column | sidebar visible | pass |
-| desktop | 1024px | three-column | full layout | pass |
-
-### Touch-Target Audit
-| Element | Mobile Size | Tablet Size | Desktop Size | Status | Finding |
-|---|---|---|---|---|---|
-| Primary CTA | 48x48px | 48x48px | 48x48px | pass | meets minimum |
-| Secondary button | 40x40px | 48x48px | 48x48px | warning | below 44px on mobile |
-
-### Multi-Device Test Results
-| Device | OS | Screen | Orientation | Load Time | Interaction Success | Visual Consistency | Finding |
-|---|---|---|---|---|---|---|---|
-| iPhone 14 | iOS | 393x852 | portrait | 2.1s | pass | pass | pass |
-| Pixel 7 | Android | 412x915 | portrait | 2.3s | pass | pass | pass |
-
-### CLS and Reflow Impact
-- Desktop: 0.08 (good)
-- Tablet: 0.12 (fair; caused by image loading)
-- Mobile: 0.10 (good)
-
-### Consolidated Findings
-- <RD-ID>: <finding text> [severity]
-```
-
-**Breakpoint and Layout Reflow Matrix** (`.docs/changes/<id>/breakpoint-reflow-matrix.md`):
-Detailed mapping of each breakpoint, layout type, and content reordering.
-
-**Touch-Target Audit Report** (`.docs/changes/<id>/touch-target-audit.md`):
-Complete inventory of interactive elements and their sizes per device class.
-
-**Multi-Device Test Matrix** (`.docs/changes/<id>/multidevice-test-matrix.md`):
-Test results for each device/OS/viewport combination.
-
-**Unified Release Recommendation** (`.docs/changes/<id>/ux-quality-gate-recommendation.md`, responsive section):
-Responsive Design: `pass | warning | block`
-
-## Source Governance Summary
-
-| Source | Status | Relevance | Authority | Freshness | Actionability | Notes |
-|---|---|---|---|---|---|---|
-| [WCAG 2.2 Mobile Accessibility](https://www.w3.org/TR/WCAG22/#target-size) | active | Touch-target sizing and zoom requirements | W3C standard | current | encode SC 2.5.5 checks | minimum 44x44px at level AA |
-| [Mobile-First Responsive Design](https://www.mobileFirst.org/) | active | Responsive breakpoint strategy | design best practice | current | map breakpoint layout type | systematic scaling approach |
-| [Responsive Web Design Fundamentals](https://web.dev/responsive-web-design-basics/) | active | Layout reflow and viewport configuration | web.dev best practice | current | implement media-query checks | CSS media query patterns |
-| [Touch Target Size Guidelines](https://www.nngroup.com/articles/touch-target-size/) | active | Touch-target ergonomics | NN/g research | current | apply 48px+ recommendation | comfort vs. minimum threshold |
-| [Web Vitals CLS Optimization](https://web.dev/cls/) | active | Cumulative Layout Shift measurement | web.dev best practice | current | profile CLS across breakpoints | layout-shift cost assessment |
-
-## Pragmatic Stop Rule
-
-Stop and proceed to recommendation when:
-
-1. Viewport configuration audit is complete.
-2. Breakpoint strategy is mapped and reflow tested at each boundary.
-3. Touch-target sizing is audited for at least mobile and desktop.
-4. Multi-device testing is complete for at least 2 representative mobile and 1 desktop device.
-5. CLS measurement is captured and documented.
-6. All findings are severity-tagged and have associated remediation owners or deferrals.
-
-**If token budget is exhausted before 6 is complete:**
-- Defer tablet testing and advanced multi-device scenarios to follow-up.
-- Prioritize mobile touch-target and viewport configuration audits.
-- Document incomplete scope in recommendation and defer non-critical findings.
-
 ## Done Criteria
 
 - [ ] Responsive Design Findings Report created with at least critical and high findings documented.
@@ -213,3 +129,27 @@ Stop and proceed to recommendation when:
 - [ ] Unified recommendation is unambiguous: pass, warning, or block.
 - [ ] Remediation owners are assigned for all deferred findings.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

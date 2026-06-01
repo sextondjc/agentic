@@ -56,15 +56,6 @@ Out of scope:
 - Breach and escalation playbook for aging, blocked, or failing work.
 - Improvement review template with metric interpretation guardrails.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Make workflow observable | States and started/finished rules are explicit |
-| L2 Delivery | Control active work with policy | WIP and SLE rules are published |
-| L3 Hardening | Use metrics for operational decisions | Breach playbook and review cadence are active |
-| L4 Expert Standardization | Establish portable flow governance model | Workflow, metrics, and guardrails are reusable across projects |
-
 ## Deterministic Workflow
 
 1. Define the workflow states and remove duplicate or ambiguous labels.
@@ -100,46 +91,6 @@ Out of scope:
 - If a metric lacks a balancing signal and can distort behavior, downgrade its use.
 - If a breach trigger has no owner, it is not an escalation path.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Explicit workflow model | Deterministic Workflow steps 1 to 4 |
-| Delivery measurement contract | Deterministic Workflow step 5 + Artifact Contract |
-| Anti-metric-theater safeguards | Metrics Rules + Deterministic Workflow step 6 |
-| Operational escalation rules | Breach playbook + Decision Rules |
-| Reusable cross-project flow system | Depth Modes L4 + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Work can be represented as items moving through a defined workflow.
-- Policy is only useful if it changes behavior when breached.
-
-Trade-offs:
-
-- More explicit flow control improves predictability but can expose uncomfortable capacity limits.
-- Richer measurement improves learning but increases instrumentation and review overhead.
-
-Open blockers:
-
-- Missing historical data may delay baseline setting.
-- Inconsistent state usage can make early metrics noisy.
-
-Recommendation:
-
-- Use this skill as soon as a team wants trustworthy delivery signals. It prevents the common failure mode where agents and humans report motion instead of flow health.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Default freshness threshold is 30 days.
-
-## Pragmatic Stop Rule
-
-Stop when the workflow states are enforceable, metrics definitions are decision-linked, and breach handling has named owners and actions.
-
 ## Anti-Patterns
 
 - Collecting dashboards with no decision usage.
@@ -153,3 +104,28 @@ Stop when the workflow states are enforceable, metrics definitions are decision-
 - Each metric has a purpose and review cadence.
 - Escalation ownership is explicit.
 - Source catalog entries are current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

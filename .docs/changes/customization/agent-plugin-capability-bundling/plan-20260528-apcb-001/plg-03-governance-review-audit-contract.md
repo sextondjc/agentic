@@ -28,6 +28,48 @@
 | Prompts | execute-customization-audit.prompt.md; governance-audit-types.prompt.md; governance-item-audit.prompt.md; audit-customization-types.prompt.md; audit-agent.prompt.md; optimize-customizations.prompt.md; execute-artifact-condense.prompt.md; execute-manual-review.prompt.md |
 | Skills | governance-audit; execute-customization-audit; audit-executor; audit-customization-types; audit-agent; audit-instructions; audit-prompts; audit-skill; audit-powershell; acceptance-governance; optimize-customizations; governance-health-overview; governance-summarize; matrix-skill-mapping; delivery-status-grid; remediate-review; request-code-review; test-design-review; test-orchestration; release-readiness; release-simulation; post-release-retrospective |
 
+## Asset Purpose and Benefit Matrix
+
+| Asset | Purpose | Benefit |
+|---|---|---|
+| code-reviewer.agent.md | Specialist for standards-based implementation review. | Provides severity-ranked findings for code and implementation artifacts. |
+| manual-code-reviewer.agent.md | Captures structured manual review observations. | Improves review traceability for findings gathered outside automated passes. |
+| governance-briefer.agent.md | Produces concise governance summaries from evidence. | Enables fast decision briefings for stakeholders. |
+| powershell-reviewer.agent.md | Reviews PowerShell assets for safety and maintainability. | Extends review coverage to script-heavy governance surfaces. |
+| governance-lifecycle.instructions.md | Governs lane ownership and handoff behavior. | Ensures review outputs remain lifecycle-compliant and traceable. |
+| technical-docs.instructions.md | Governs documentation quality and structure. | Improves consistency and clarity of review artifacts and reports. |
+| task-implementation.instructions.md | Governs plan-linked execution change traceability. | Ensures review references proper plan IDs, deviations, and progressive updates. |
+| execute-customization-audit.prompt.md | Runs executive aggregate customization governance audits. | Provides consolidated audit workflow for high-level disposition. |
+| governance-audit-types.prompt.md | Runs deep type-level governance audits. | Enables cross-type quality checks across agents/instructions/prompts/skills. |
+| governance-item-audit.prompt.md | Runs focused single-item governance audit. | Supports pinpoint diagnostics and remediation planning. |
+| audit-customization-types.prompt.md | Executes deterministic cross-type interaction audits. | Detects integration and overlap risks between customization types. |
+| audit-agent.prompt.md | Executes agent-focused audit workflows. | Improves quality of agent role boundaries and behavior contracts. |
+| optimize-customizations.prompt.md | Runs optimization-focused customization reviews. | Identifies actionable quality improvements across assets. |
+| execute-artifact-condense.prompt.md | Produces concise rewrite guidance for artifacts. | Reduces verbosity and improves maintainability of reviewed assets. |
+| execute-manual-review.prompt.md | Applies and validates recorded manual review findings. | Closes loop between observed issues and remediation execution checks. |
+| governance-audit | Baseline workspace governance assessment workflow. | Provides ranked governance findings and remediation direction. |
+| execute-customization-audit | Aggregates governance outputs into executive disposition. | Supports release-quality go or no-go style governance decisions. |
+| audit-executor | Coordinates full multi-type governance audit execution. | Ensures comprehensive coverage with unified outcomes. |
+| audit-customization-types | Evaluates customization type interactions and boundaries. | Identifies cross-type drift and contract ambiguity. |
+| audit-agent | Evaluates .agent.md quality and invocation boundaries. | Improves agent reliability and specialization fidelity. |
+| audit-instructions | Evaluates instruction integrity and applyTo correctness. | Reduces policy drift and over/under-scoped instruction behavior. |
+| audit-prompts | Evaluates prompt execution contracts and safety. | Improves prompt determinism and invocation clarity. |
+| audit-skill | Evaluates skill quality, triggers, and self-containment. | Strengthens reuse quality and reduces skill coupling risks. |
+| audit-powershell | Evaluates PowerShell script safety and style quality. | Adds scripting governance depth for automation assets. |
+| acceptance-governance | Evaluates outputs against acceptance criteria and sign-off rules. | Improves decision confidence for completion and promotion gates. |
+| optimize-customizations | Applies concise optimization checks across customization assets. | Helps reduce duplication and improve maintainability. |
+| governance-health-overview | Synthesizes governance health into unified status view. | Enables quick understanding of systemic governance posture. |
+| governance-summarize | Produces concise governance brief artifacts. | Supports executive communication and rapid decision support. |
+| matrix-skill-mapping | Maintains matrix-to-skill coverage mapping integrity. | Prevents taxonomy drift across phase/discipline/lane coverage. |
+| delivery-status-grid | Produces table-first delivery progress views. | Improves review visibility into completion state and remaining risk. |
+| remediate-review | Validates and applies review feedback rigorously. | Reduces shallow or incorrect remediation actions. |
+| request-code-review | Standardizes code-review request workflow. | Ensures review engagement occurs at appropriate checkpoints. |
+| test-design-review | Reviews test strategy and coverage rationale. | Improves release confidence through stronger testing posture. |
+| test-orchestration | Coordinates multi-discipline test evidence and outcomes. | Consolidates testing signals into clear release recommendations. |
+| release-readiness | Governs release gate evidence and promotion checks. | Prevents promotion without sufficient readiness proof. |
+| release-simulation | Supports pre-release rehearsal and rollback drill validation. | Reduces release risk through practiced failure recovery. |
+| post-release-retrospective | Captures post-release outcomes and follow-up actions. | Improves continuous governance learning after promotion events. |
+
 ## Dependency Declarations
 
 | Dependency | Type | Rationale |

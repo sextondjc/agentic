@@ -109,15 +109,6 @@ Rules:
 - Each branch must have a defined input contract.
 - Unknown or ambiguous inputs must route to a clarification step, not to a default branch.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Name the right pattern for one task | Pattern is selected with one-line rationale |
-| L2 Delivery | Design one workflow end to end | Step map, handoff contracts, and parallelization analysis are complete |
-| L3 Hardening | Make a live workflow deterministic | Evaluator gates, anti-pattern remediation, and escalation rules are explicit |
-| L4 Expert Standardization | Build a reusable agentic delivery operating model | Workflow patterns are documented, portable, and usable by new agents without human coaching |
-
 ## Deterministic Workflow
 
 1. Identify the task type and whether it is sequential, parallel, iterative, or routed.
@@ -150,47 +141,6 @@ Rules:
 | Evaluator gate | Criteria, pass signal, fail action, max iterations, hard stop rule |
 | Anti-pattern log | Pattern name, location in workflow, remediation |
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Pattern selection guidance | Workflow Patterns section |
-| Step-level input/output discipline | Deterministic Workflow steps 3-4 + Artifact Contract |
-| Parallelization analysis | Parallelization pattern + step 4 |
-| Orchestration boundary design | Orchestrator-Subagent pattern + step 5 |
-| Iterative quality loops | Evaluator-Optimizer pattern + step 6 |
-| Anti-pattern detection | Anti-Patterns section + step 8 |
-
-## Reasoning Package
-
-Assumptions:
-
-- Agentic tasks benefit from explicit workflow design before execution, especially when they span multiple steps or agents.
-- Artifact-first contracts are the primary mechanism for agent-to-agent reliability.
-
-Trade-offs:
-
-- Explicit step contracts add up-front design overhead but reduce execution ambiguity.
-- Strict stop rules on evaluator loops may reject outputs that a human would accept with minor fixes; evaluator criteria should be calibrated to avoid false failures.
-
-Open blockers:
-
-- Tasks with genuinely ambiguous outputs may not yield clean artifact contracts on the first attempt; schedule a refinement loop.
-- Platform tool availability can constrain which patterns are executable at runtime.
-
-Recommendation:
-
-- Use this skill before executing any multi-step agentic workflow. It pays back design overhead immediately by preventing silent scope drift, invisible handoffs, and non-terminating loops.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Default freshness threshold is 30 days.
-
-## Pragmatic Stop Rule
-
-Stop when each step has a named input and output artifact, all handoffs have explicit entry conditions and exit gates, parallelization is analyzed, and any evaluator loops have defined stop rules.
-
 ## Done Criteria
 
 - Workflow pattern is selected with rationale.
@@ -199,3 +149,28 @@ Stop when each step has a named input and output artifact, all handoffs have exp
 - Evaluator gates are defined where iteration exists.
 - Anti-pattern log is present and empty or remediated.
 - Source catalog entries are current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

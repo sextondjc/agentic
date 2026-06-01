@@ -142,11 +142,27 @@ function advanceStep(stepper, currentStepValidator) {
 3. Custom Validator rules (extend built-in for domain logic).
 4. Server validation errors (routed back to the form after transport failure).
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Single form field with required validation | Validator blocks submission when empty; error message visible |
-| L2 Practical | Full form with multiple widgets, type/range/pattern rules, and server error routing | All validation rules enforced; server errors surface in form |
-| L3 Hardening | Accessible error messages with ARIA + server round-trip validation | ARIA `aria-describedby` wired; server errors displayed without page reload |
-| L4 Expert | Multi-step wizard with per-step validation and shared DataSource model | Stepper advances only on valid step; final submit posts complete model |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

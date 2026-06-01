@@ -140,3 +140,27 @@ Orchestrates all governance audits across customization types (agents, instructi
 - [ ] Cross-type findings are surfaced
 - [ ] Governance health assessment is included
 - [ ] Remediation roadmap is actionable and assigned
+
+## Required Outputs
+
+- Skill deliverables mapped to requested outcomes.
+- Completion status and residual risks.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

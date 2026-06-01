@@ -50,15 +50,6 @@ Out of scope:
 - Accessibility and usability findings with severity and remediation cues.
 - Engineering handoff package with behaviors, instrumentation, and validation loop.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Frame one mobile UX problem | One journey map and one wireframe set exist |
-| L2 Delivery | Prepare one feature for implementation | Core flows, states, and handoff notes are complete |
-| L3 Hardening | De-risk a release-bound mobile journey | Accessibility, adaptive layout, and validation evidence are explicit |
-| L4 Expert Standardization | Define reusable mobile UX operating model | Reusable decision rubric, handoff package, and validation loop are documented |
-
 ## Deterministic Workflow
 
 1. Lock target users, business goal, success criteria, and bounded journey scope.
@@ -106,46 +97,6 @@ Validation loop:
 4. Re-test the weakest steps with targeted usability sessions.
 5. Feed findings into the next wireframe revision.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Research-backed mobile UX scope | Objective + Deterministic Workflow steps 1 to 3 |
-| Platform-aware wireframes | Workflow steps 4 to 6 + Platform and Interaction Heuristics |
-| Accessibility-aware design | Accessibility and Usability Heuristics |
-| Implementation-ready handoff | Required Outputs + Workflow step 8 |
-| Reusable mobile UX standard | Depth Modes + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Mobile UX quality depends on platform-fit and accessibility, not just visual polish.
-- Teams benefit from wireframes that encode behavior and validation expectations.
-
-Trade-offs:
-
-- Strong platform-fit improves usability but can reduce cross-platform visual uniformity.
-- Heavier upfront UX definition lowers engineering ambiguity but adds planning time.
-
-Open blockers:
-
-- Missing analytics or real user evidence weakens prioritization.
-- Undefined device or orientation scope can invalidate adaptive-layout decisions.
-
-Recommendation:
-
-- Use L2 for bounded feature work and L4 when a team needs reusable mobile UX rules across projects.
-
-## Source Governance Summary
-
-- Active sources, evaluation date, and guidance deltas are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active source checks.
-
-## Pragmatic Stop Rule
-
-Stop when the target journeys, states, platform conventions, accessibility requirements, and handoff notes are explicit enough that engineering can implement without guessing core UX behavior.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
@@ -153,3 +104,28 @@ Stop when the target journeys, states, platform conventions, accessibility requi
 - Platform, accessibility, and adaptive-layout decisions are explicit.
 - Validation loop is defined.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

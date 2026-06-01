@@ -181,3 +181,22 @@ Invoke this skill when any of the following is true:
 - Tool whitelist needs validation against availability and security policy.
 - Multi-tool workflows require careful binding and orchestration.
 
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

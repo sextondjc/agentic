@@ -50,15 +50,6 @@ Out of scope:
 - Build pipeline integration plan aligned to the host framework's output directory.
 - Residual risks and open actions with owners.
 
-## Depth Modes
-
-| Level | Intent | Stop Rule |
-|---|---|---|
-| L1 Orientation | Understand Capacitor setup basics | Config file exists and one platform is registered |
-| L2 Practical Setup | Ship a working iOS and Android project | Both platforms sync cleanly from a framework build |
-| L3 CI Integration | Automate sync within a pipeline | CI produces native builds reproducibly |
-| L4 Expert Governance | Enforce config standards across projects | Config schema is validated in CI and documented |
-
 ## Deterministic Workflow
 
 1. Confirm web framework, build tool, and output directory.
@@ -101,3 +92,28 @@ Out of scope:
 - `capacitor.config.ts` passes the configuration checklist.
 - CI integration plan is documented and tested.
 - Residual risks are explicit and owner-assigned.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

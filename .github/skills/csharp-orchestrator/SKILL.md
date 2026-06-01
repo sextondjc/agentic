@@ -20,7 +20,7 @@ Produce one deterministic C# execution contract from a single intake, with expli
 - A C# request spans more than one capability area.
 - Teams need one intake instead of disconnected language, architecture, and testing workflows.
 - Cross-project reuse matters more than local one-off optimization.
-- A change requires explicit ownership across language, async, architecture, validation, testing, or performance.
+- A change requires explicit ownership across language, async, architecture, validation, testing, or performance, including repository-contract decisions that require a test-guidance follow-on.
 
 ## Scope Boundaries
 
@@ -51,15 +51,6 @@ Out of scope:
 - Rejected-candidate table with deterministic reason codes.
 - Closure check stating whether all required outputs are owned.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Route one mixed C# request | One intake and one phase contract exist |
-| L2 Delivery | Coordinate one cross-capability C# effort | Every required output has one owning phase |
-| L3 Hardening | Support production-grade C# delivery | Risks, evidence expectations, and blockers are explicit |
-| L4 Expert Standardization | Establish reusable C# operating model | Reusable intake, ownership, and routing rubric are documented |
-
 ## Capability Catalog
 
 Use one or more phases based on request shape:
@@ -72,12 +63,14 @@ Use one or more phases based on request shape:
 - Testing and Evidence
 - Performance and Resilience
 - Release and Governance Readiness
+- Repository and model-contract decisions must stabilize in `Validation and Data Integrity` plus `Data Access and Repository Safety` before routing follow-on work to `Testing and Evidence`.
 
 ## Deterministic Workflow
 
 1. Lock objective, risk boundary, target runtime, and required outputs.
 2. Classify the request into one or more capability phases from the catalog.
 3. Assign exactly one owner per required output.
+3a. When repository/model guidance and test guidance both apply, complete repository/model contract outputs first, then hand off test-surface changes as a bounded follow-on.
 4. Reject any phase plan with unowned or multiply owned outputs.
 5. Define evidence expectations and handoff criteria between phases.
 6. Produce one unified execution recommendation: narrow-execution, phased-execution, or stop-pending-blockers.
@@ -92,7 +85,7 @@ Use one or more phases based on request shape:
 | Layering and dependency boundary decision | Architecture and Boundaries | Boundary map and dependency direction checks |
 | Input and model invariant decision | Validation and Data Integrity | Boundary validation and immutability evidence |
 | Repository and SQL safety decision | Data Access and Repository Safety | Repository contract and parameterization notes |
-| Test strategy and risk coverage decision | Testing and Evidence | Unit, integration, and edge-case coverage matrix |
+| Test strategy and risk coverage decision (after repository/model contract stabilization) | Testing and Evidence | Unit, integration, and edge-case coverage matrix aligned to repository contract outputs |
 | Performance and allocation decision | Performance and Resilience | Baselines, hotspots, and regression checks |
 | Promotion and rollback decision | Release and Governance Readiness | Approval chain, rollback plan, and evidence bundle |
 
@@ -110,49 +103,9 @@ Use one or more phases based on request shape:
 - `R4`: Requires evidence or environment access that is not available.
 - `R5`: Better handled by a narrower single-phase workflow.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| One C# intake | Objective + Deterministic Workflow |
-| Phase ownership clarity | Phase-Output Ownership Matrix Template |
-| Deterministic orchestration | Unified Decision Rules |
-| Rejected-scope record | Rejected Candidate Reasons |
-| Cross-project reusable contract | Capability Catalog + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Mixed C# requests are higher quality when routed through one intake with explicit ownership.
-- Most requests can be reduced to a small number of bounded capability phases.
-
-Trade-offs:
-
-- Strong orchestration reduces drift and duplicate work but adds upfront routing overhead.
-- Over-bundling can slow narrow requests that should remain in one phase.
-
-Open blockers:
-
-- Missing runtime constraints or release criteria can invalidate the phase plan.
-- Weakly bounded objectives create overlapping ownership.
-
-Recommendation:
-
-- Default to `narrow-execution` for localized requests and use `phased-execution` only when more than one phase clearly owns a required output.
-
-## Source Governance Summary
-
-- Active sources, evaluation date, and guidance deltas are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active source checks.
-
 ## Reference Assets
 
 - Use [csharp-execution-contract-template.md](./references/csharp-execution-contract-template.md) when one C# request needs a reusable intake and ownership contract.
-
-## Pragmatic Stop Rule
-
-Stop when every required output has exactly one owner, the execution mode is explicit, and no blocker remains hidden behind ambiguous C# scope.
 
 ## Done Criteria
 
@@ -162,4 +115,27 @@ Stop when every required output has exactly one owner, the execution mode is exp
 - Decision mode is explicit.
 - Source catalog is current for this evaluation cycle.
 
+## Workflow
 
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

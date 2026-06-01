@@ -1,0 +1,8 @@
+thresholds:
+  highAllowed: 0
+  mediumAllowedWithoutRemediation: 0
+requiredEvidence:
+  - build-log
+  - scan-report
+  - sbom
+  - rollback-reference

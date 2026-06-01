@@ -52,15 +52,6 @@ Out of scope:
 - Verification notes for cross-platform rendering, legibility, and contrast.
 - Final recommendation: `ready`, `ready-with-exceptions`, or `blocked`.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Create baseline browser icons | `favicon.ico` and one scalable source icon are integrated and render correctly |
-| L2 Delivery | Ship complete web + PWA icon set | Coverage matrix is complete and manifest/head integration is valid |
-| L3 Hardening | Validate release-grade icon quality | Cross-device rendering checks and exception log are complete |
-| L4 Expert Standardization | Establish reusable icon workflow | Reusable export and verification rubric is documented for future requests |
-
 ## Deterministic Workflow
 
 1. Confirm orchestrator intake selected this skill based on icon-specific required outputs.
@@ -113,49 +104,9 @@ Out of scope:
 - `R3`: Scope includes broader frontend work that should be owned by another phase.
 - `R4`: Existing design language is missing and must be established first.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Preserve existing design language | Specialization + Scope Boundaries + Quality Gate Checklist |
-| Produce complete icon asset set | Required Outputs + Icon Coverage Matrix Template |
-| Framework-aware integration | Inputs + Integration Contract + Workflow steps 6 and 7 |
-| Invoke only when needed | Trigger Conditions + Orchestrator Collaboration Contract |
-| Deterministic closure | Final recommendation + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- The workspace already has an approved design language to follow.
-- Framework metadata or head configuration is accessible for updates.
-
-Trade-offs:
-
-- Strict reuse of existing visual language improves consistency but limits exploration.
-- Broad icon compatibility increases export and verification work, but reduces platform regressions.
-
-Open blockers:
-
-- Missing source icon artwork or missing token guidance can block deterministic execution.
-- Unknown deployment caching behavior can hide icon updates after release.
-
-Recommendation:
-
-- Default to L2 for most feature work and escalate to L3 for release-bound icon changes.
-
-## Source Governance Summary
-
-- Source relevance, authority, freshness, and actionability are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active source checks.
-
 ## Worked Example
 
 - [orchestrator-handoff-example.md](../../../.docs/changes/skill/examples/generate-web-icons/orchestrator-handoff-example.md)
-
-## Pragmatic Stop Rule
-
-Stop when every required icon surface has a mapped file, integration references are valid, and final recommendation status is explicit.
 
 ## Done Criteria
 
@@ -164,3 +115,28 @@ Stop when every required icon surface has a mapped file, integration references 
 - Coverage matrix has no missing required icon surfaces.
 - Recommendation status is explicit (`ready`, `ready-with-exceptions`, or `blocked`).
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

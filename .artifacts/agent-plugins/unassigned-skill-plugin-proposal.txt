@@ -1,0 +1,68 @@
+Unassigned skill plugin proposal
+Generated: 2026-06-01
+
+Summary
+- Total skills: 280
+- Assigned to at least one plugin: 258
+- Unassigned skills: 22
+
+Recommended new plugin: docker-dotnet-platform
+Rationale: bundle the new Docker/.NET family as one containerization capability surface instead of leaving the family orphaned.
+
+Proposed membership
+- docker-dotnet
+- docker-dotnet-buildkit-optimization
+- docker-dotnet-ci-cd
+- docker-dotnet-compose-workflows
+- docker-dotnet-devcontainers
+- docker-dotnet-foundations
+- docker-dotnet-multi-platform-builds
+- docker-dotnet-quality-gate
+- docker-dotnet-runtime-diagnostics
+- docker-dotnet-security-supply-chain
+- docker-dotnet-source-curation
+- docker-dotnet-testcontainers
+- docker-orchestrator
+- ci-cd-workflows
+
+Recommended new plugin: delivery-operability-reliability
+Rationale: group supportability, reliability, and post-delivery operations skills that are currently not represented in staged bundles.
+
+Proposed membership
+- operability-design
+- outcome-review
+- sre-practices
+- support-runbook-generator
+- support-triage
+
+Recommended new plugin: governance-insights-curation
+Rationale: group the remaining cross-cutting governance and feedback skills that are not specific to product delivery or Docker/.NET containerization.
+
+Proposed membership
+- agentic-workflow-patterns
+- asset-naming-taxonomy
+- customer-feedback-synthesis
+
+Unassigned skills (current state)
+- agentic-workflow-patterns
+- asset-naming-taxonomy
+- ci-cd-workflows
+- customer-feedback-synthesis
+- docker-dotnet
+- docker-dotnet-buildkit-optimization
+- docker-dotnet-ci-cd
+- docker-dotnet-compose-workflows
+- docker-dotnet-devcontainers
+- docker-dotnet-foundations
+- docker-dotnet-multi-platform-builds
+- docker-dotnet-quality-gate
+- docker-dotnet-runtime-diagnostics
+- docker-dotnet-security-supply-chain
+- docker-dotnet-source-curation
+- docker-dotnet-testcontainers
+- docker-orchestrator
+- operability-design
+- outcome-review
+- sre-practices
+- support-runbook-generator
+- support-triage

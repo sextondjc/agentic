@@ -67,5 +67,19 @@ pwsh ./.github/skills/scaffold-dotnet/references/scripts/New-DotNetSolutionScaff
 3. Apply templates and verify resulting structure.
 4. Return concise setup status and next actions.
 
+## Execution Context
 
+### Input Context
 
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

@@ -1,0 +1,67 @@
+{
+  "TotalXunitFiles": 7428,
+  "WithFixtures": 2843,
+  "WithGenerators": 1,
+  "TopProjects": [
+    {
+      "Name": "Syrx_2.0.0",
+      "Count": 3737
+    },
+    {
+      "Name": "Syrx_3.0.0",
+      "Count": 1797
+    },
+    {
+      "Name": "Syrx",
+      "Count": 515
+    },
+    {
+      "Name": "Rook_backup",
+      "Count": 505
+    },
+    {
+      "Name": "Syrx_",
+      "Count": 504
+    },
+    {
+      "Name": "anonyme_1x",
+      "Count": 113
+    },
+    {
+      "Name": "aliasesonline",
+      "Count": 45
+    },
+    {
+      "Name": "Dapper",
+      "Count": 33
+    },
+    {
+      "Name": "Mira",
+      "Count": 31
+    },
+    {
+      "Name": "AO",
+      "Count": 25
+    },
+    {
+      "Name": "Lynx",
+      "Count": 25
+    },
+    {
+      "Name": "Syrx_Http_2",
+      "Count": 15
+    },
+    {
+      "Name": "Syrx_Http_1",
+      "Count": 14
+    },
+    {
+      "Name": "Syrx.Samples",
+      "Count": 14
+    },
+    {
+      "Name": "Scapex",
+      "Count": 12
+    }
+  ]
+}

@@ -54,15 +54,6 @@ Out of scope:
 - Store-readiness matrix covering packaging, metadata, and platform-specific disclosures.
 - Final sign-off record with `go`, `hold`, or `no-go` disposition.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Prepare one build for internal review | One gate checklist and one evidence bundle exist |
-| L2 Delivery | Prepare one app for managed release | Store, smoke, rollback, and sign-off evidence are complete |
-| L3 Hardening | Enforce release-grade governance | No blocking gate is unresolved without waiver or owner |
-| L4 Expert Standardization | Build reusable mobile release operating model | Reusable gate schema, evidence bundle, and decision rubric are documented |
-
 ## Deterministic Workflow
 
 1. Confirm release target, originating workstream, and release lane.
@@ -98,47 +89,6 @@ Out of scope:
 - `.docs/changes/<workstream-id>/mobile-store-readiness-matrix.md`
 - `.docs/changes/<workstream-id>/mobile-release-decision.md`
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Deterministic mobile release gate | Deterministic Workflow |
-| Objective gate checklist | Mobile Release Gate Checklist |
-| Durable evidence bundle | Evidence Contract |
-| Explicit release decision | Required Outputs + Decision Rules |
-| Rollback confirmation | Required Outputs + Workflow step 5 |
-| Source freshness governance | Source Governance Summary + Source Catalog |
-
-## Reasoning Package
-
-Assumptions:
-
-- Mobile releases need additional packaging and store-facing evidence beyond generic service releases.
-- Rollback evidence must exist before promotion begins.
-
-Trade-offs:
-
-- Strong mobile gate control reduces release surprises but adds pre-release coordination work.
-- Store-readiness checks improve safety but can slow internal-only lanes when over-applied.
-
-Open blockers:
-
-- Missing signing or store metadata can invalidate a planned release.
-- Unowned rollback steps or open smoke failures block safe promotion.
-
-Recommendation:
-
-- Use L3 by default for release-bound MAUI work and L4 when standardizing the mobile release operating model across repositories.
-
-## Source Governance Summary
-
-- Source relevance, authority, freshness, and actionability are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active release-source checks.
-
-## Pragmatic Stop Rule
-
-Stop when all required mobile gates are passed or explicitly waived, rollback is confirmed, approvals are recorded, and one explicit release decision artifact is published.
-
 ## Done Criteria
 
 - Gate checklist is complete with no hidden open items.
@@ -146,3 +96,28 @@ Stop when all required mobile gates are passed or explicitly waived, rollback is
 - Rollback confirmation is explicit and owned.
 - Final decision is recorded with approvals and rationale.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

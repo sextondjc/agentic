@@ -66,47 +66,34 @@ Out of scope:
 - `hold`: at least one high-risk item is open but remediable in-cycle.
 - `no-go`: unresolved critical risk, or unresolved high risk without approved exception.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Unified release decision | Deterministic Workflow |
-| Deterministic quality synthesis | Decision Rules |
-| Auditable cross-dimension evidence | Required Outputs |
-| Cross-project release portability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Final release confidence requires consolidated rather than fragmented quality decisions.
-- Residual-risk transparency is required for safe promotion governance.
-
-Trade-offs:
-
-- Strong synthesis improves decision quality but requires complete input evidence.
-- Fast decisions with incomplete evidence increase release risk.
-
-Open blockers:
-
-- Missing evidence from any required dimension blocks reliable synthesis.
-- Inconsistent severity semantics across inputs can distort decision outcomes.
-
-Recommendation:
-
-- Use this gate for every release-bound C# slice with cross-capability changes.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-
-## Pragmatic Stop Rule
-
-Stop when every required dimension has a gate status, unresolved risks have explicit owner and due date, and one final recommendation artifact is published.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Decision mode is explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -72,47 +72,34 @@ Out of scope:
 - Use `IAsyncLifetime` when async startup and async cleanup are required.
 - Use `IAsyncDisposable` in xUnit v3 when only async cleanup is required.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert fixture scope choice | Fixture Selection Rules |
-| Deterministic lifecycle contract | Lifecycle Rules + Required Outputs |
-| Parallel safety posture | Deterministic Workflow |
-| Cross-project repeatability | Objective + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Lifecycle clarity is a primary driver of test reliability.
-- Shared mutable fixtures are the biggest source of hidden test coupling.
-
-Trade-offs:
-
-- Broader sharing lowers setup cost but increases coupling risk.
-- Strict isolation raises execution cost but reduces flake risk.
-
-Open blockers:
-
-- Unknown thread-safety of shared resources weakens assembly-fixture decisions.
-- Unclear cleanup semantics can leak state between test runs.
-
-Recommendation:
-
-- Default to narrowest fixture scope that satisfies performance needs, then scale up only with explicit parallel-safety evidence.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-
-## Pragmatic Stop Rule
-
-Stop when each shared resource has one fixture scope decision, one cleanup contract, and one parallel-safety statement.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Scope and lifecycle choices are explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

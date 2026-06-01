@@ -57,17 +57,6 @@ Scan all resolvable dependency manifests in scope, produce an authoritative Soft
 | Dependency findings report | `.docs/changes/[date]-[task]-security-scan.md` | Full findings with CVE IDs, severity, affected version, fix version, recommendations, and gate signal |
 | SBOM inventory (L3+) | `.docs/changes/[date]-[task]-sbom.md` | Full dependency inventory in scope; includes transitive packages |
 
-## Depth Modes
-
-| Mode | When to Use | Coverage |
-|---|---|---|
-| L1 — Manifest Inventory | Quick triage or preliminary scoping | Enumerate all manifests and direct dependency counts; no CVE lookup |
-| L2 — CVE Scan (direct) | Standard delivery gate (Phase P7a default) | Scan direct dependencies; classify findings by severity; produce gate signal |
-| L3 — Full SBOM + Transitive | Release promotion or >3-file change gate | Full SBOM; transitive dependency scan; upgrade path analysis per finding |
-| L4 — Multi-DB Cross-Reference | Critical path, regulated context, or conflicting advisories | L3 plus cross-reference NVD + GitHub Advisory + OSV; flag advisory conflicts; note CVSS score discrepancies |
-
-**Default depth:** L2 for Phase P7a. L3 when `release-simulation` is triggered (>3 asset file changes). L4 on explicit escalation or when advisory conflicts are detected in L3.
-
 ## Deterministic Workflow
 
 1. **Detect manifests.** Enumerate all dependency manifests matching the configured ecosystem filter under the provided path. Record each manifest's type, path, and ecosystem. If no manifests are found, report and stop — do not produce a PASS signal on an empty scan.
@@ -101,64 +90,6 @@ Scan all resolvable dependency manifests in scope, produce an authoritative Soft
 
 9. **Write findings artifact.** Record scan summary, findings table, SBOM (L3+), gate signal, open items requiring owner/date, and recommended next actions.
 
-## Escalation Rules
-
-| Condition | Signal | Required Action |
-|---|---|---|
-| Any CRITICAL finding | **BLOCK** | Halt delivery; route to `security-researcher` agent for remediation plan; re-run scan before proceeding |
-| Any HIGH finding with an available patched version | **BLOCK** | Upgrade to patched version; re-run scan to confirm clean; do not proceed until signal clears |
-| Any HIGH finding with no available fix | **CONDITIONAL** | Produce risk-acceptance rationale; require a named approver; record approver and date in findings artifact |
-| MEDIUM findings only (no HIGH/CRITICAL) | **CONDITIONAL** | Document each finding; may proceed with explicit deferral and scheduled remediation date |
-| LOW / INFORMATIONAL only | **PASS** | Record findings; no gate action required |
-| No findings at or above threshold | **PASS** | Record clean scan result with scan date and tool version as promotion evidence |
-| Manifest found but lock file absent | **CONDITIONAL** | Flag unpinned manifest; recommend adding lock file before next scan |
-
-## Artifact Contract
-
-| Artifact | Required Sections | Gate Dependency |
-|---|---|---|
-| Dependency findings report | Scan summary (manifests, packages in scope, scan date, database version used); Findings table (CVE ID, package, installed version, severity, fix version, recommendation); Open items (CONDITIONAL findings with named owner and remediation date); Gate signal (PASS / CONDITIONAL / BLOCK) | Gate signal must be explicit; BLOCK signal stops promotion |
-| SBOM inventory (L3+) | Package name, version, ecosystem, direct/transitive flag; lock file status (pinned/unpinned) | Required for L3+ depth modes; absence of SBOM at L3+ = incomplete artifact |
-
-## L4 Coverage Matrix
-
-| Check | L1 | L2 | L3 | L4 |
-|---|---|---|---|---|
-| Manifest detection | ✅ | ✅ | ✅ | ✅ |
-| Direct dependency CVE scan | — | ✅ | ✅ | ✅ |
-| Transitive dependency CVE scan | — | — | ✅ | ✅ |
-| SBOM generation | — | — | ✅ | ✅ |
-| NVD lookup | — | ✅ | ✅ | ✅ |
-| GitHub Advisory lookup | — | ✅ | ✅ | ✅ |
-| OSV lookup | — | — | — | ✅ |
-| Advisory conflict flagging | — | — | — | ✅ |
-| Upgrade path analysis | — | — | ✅ | ✅ |
-| Unpinned manifest detection | ✅ | ✅ | ✅ | ✅ |
-
-## Reasoning Package
-
-**Assumptions:**
-- Lock files are treated as the source of truth for pinned versions; manifests without lock files are flagged, not failed
-- CVSS v3.1 is the preferred scoring standard; v2 scores are accepted but noted as such
-- A clean L2 scan at the point of Phase P7a satisfies the delivery gate; a new L3 scan is required at Phase P10 (release readiness) for >3-file changes
-- "No findings" is a valid and complete scan result — the scan must record the clean result as evidence, not simply be skipped
-
-**Trade-offs:**
-- L2 (direct only) misses transitive attack surface but is faster; acceptable for incremental delivery gates where the dependency graph has not materially changed
-- L4 multi-DB cross-reference adds latency; reserved for critical path or when L3 finds conflicting advisory data
-- Requiring a named approver for CONDITIONAL/HIGH-no-fix findings adds friction but prevents silent risk accumulation
-
-**Open blockers:**
-- None at time of authoring. Tool-specific scan commands (dotnet list package --vulnerable, npm audit, pip-audit) are ecosystem-standard; no workspace-specific tooling gap blocks this skill.
-
-## Source Governance Summary
-
-Sources are maintained in `references/source-catalog.md`. Default freshness threshold: 30 days. Mark as **Needs Review** when Last Evaluated exceeds threshold.
-
-## Pragmatic Stop Rule
-
-Stop after producing an explicit gate signal (PASS, CONDITIONAL, or BLOCK) with all findings at or above threshold documented and remediation recommendations present for each BLOCK or CONDITIONAL item. Do not re-scan for findings that have been explicitly deferred with documented rationale and a named approver.
-
 ## Anti-Patterns
 
 - **Proceeding to promotion with a BLOCK signal** — gate signals exist to prevent exactly this; BLOCK is non-negotiable without documented remediation
@@ -178,3 +109,28 @@ Stop after producing an explicit gate signal (PASS, CONDITIONAL, or BLOCK) with 
 - [ ] Gate signal (PASS / CONDITIONAL / BLOCK) is explicit and recorded in the findings artifact
 - [ ] No CRITICAL or unaddressed HIGH finding is present when gate signal is PASS
 - [ ] Unpinned manifests flagged if detected
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

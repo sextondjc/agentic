@@ -97,3 +97,20 @@ Invoke this skill when any of the following is true:
 - Plugin directory structure must be scaffolded with manifest initialization.
 - A plugin is being prepared for distribution (Marketplace, GitHub, private registry).
 - Cross-tool compatibility (VS Code, Copilot CLI, Claude Code) must be enabled from the start.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

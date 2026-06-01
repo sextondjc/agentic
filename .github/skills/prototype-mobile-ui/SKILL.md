@@ -50,15 +50,6 @@ Out of scope:
 - Screen-level annotations for states, validation, accessibility, and platform differences.
 - Handoff package with implementation notes, open risks, and unresolved decisions.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Visualize one flow | One prototype path and one token summary exist |
-| L2 Delivery | Hand off one feature | All target screens and states are annotated |
-| L3 Hardening | De-risk production implementation | Platform deltas, accessibility, and motion rules are explicit |
-| L4 Expert Standardization | Define reusable prototype system | Reusable token, annotation, and handoff standards are documented |
-
 ## Deterministic Workflow
 
 1. Confirm approved wireframe scope, prototype depth, and platform constraints.
@@ -78,46 +69,6 @@ Out of scope:
 - Platform differences are captured where they affect engineering choices.
 - Accessibility notes are attached at the screen or component level.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| High-fidelity prototype artifact | Required Outputs + Deterministic Workflow |
-| Design token system | Required Outputs + Workflow step 2 |
-| State-complete annotations | Workflow step 3 + Prototype Quality Checklist |
-| Engineering-ready handoff | Workflow steps 5 to 7 |
-| Reusable prototyping standard | Depth Modes + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- High-fidelity mobile prototypes reduce implementation churn only when state and token rules are explicit.
-- Visual fidelity without platform or accessibility annotations is insufficient for expert handoff.
-
-Trade-offs:
-
-- Rich annotations improve handoff quality but take longer to produce.
-- Over-animating prototypes increases polish but can hide weak structural decisions.
-
-Open blockers:
-
-- Unapproved wireframes or unstable requirements invalidate prototype detail.
-- Missing design-system constraints lead to inconsistent token decisions.
-
-Recommendation:
-
-- Use L3 or L4 when the prototype will directly guide engineering implementation across projects.
-
-## Source Governance Summary
-
-- Active sources, evaluation date, and guidance deltas are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active source checks.
-
-## Pragmatic Stop Rule
-
-Stop when the prototype communicates the intended visual hierarchy, component rules, state behavior, accessibility constraints, and platform deltas without requiring engineering to infer missing behavior.
-
 ## Done Criteria
 
 - All target screens are represented with required states.
@@ -125,3 +76,27 @@ Stop when the prototype communicates the intended visual hierarchy, component ru
 - Handoff package is complete and unambiguous.
 - Source catalog is current for this evaluation cycle.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

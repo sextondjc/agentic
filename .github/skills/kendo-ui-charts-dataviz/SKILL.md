@@ -74,11 +74,27 @@ seriesClick: function(e) {
 }
 ```
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Deliver one chart correctly | Data mapping and labels are correct |
-| L2 Delivery | Add interactive drill-down or linked filtering | Interaction contract is deterministic |
-| L3 Hardening | Operate with large datasets and refreshes | Performance and readability validated |
-| L4 Expert | Standardize dataviz pattern library | Reusable chart specifications documented |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

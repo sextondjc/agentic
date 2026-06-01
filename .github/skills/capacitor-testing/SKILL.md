@@ -50,15 +50,6 @@ Out of scope:
 - CI configuration for reproducible test execution.
 - Coverage gap analysis with prioritized remediation plan.
 
-## Depth Modes
-
-| Level | Intent | Stop Rule |
-|---|---|---|
-| L1 Orientation | Establish mock patterns | All native plugins have a working mock |
-| L2 Practical Coverage | Core flows are tested | Business logic and critical native interactions have tests |
-| L3 CI Integration | Tests run in CI | Unit and E2E tests pass reproducibly in CI |
-| L4 Expert Baseline | Production-grade coverage | Coverage thresholds are enforced and device tests are included |
-
 ## Native Plugin Mock Pattern
 
 Capacitor plugins inject into the global `window.Capacitor` bridge. In test environments, mock at the module level.
@@ -194,3 +185,28 @@ jobs:
 - E2E tests cover core user journeys in browser mode.
 - CI configuration runs tests reproducibly.
 - Coverage gap analysis is complete with prioritized actions.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

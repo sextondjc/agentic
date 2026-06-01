@@ -1,0 +1,21 @@
+name: container-ci
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-scan-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build image
+        run: docker build -t myservice:${{ github.sha }} .
+      - name: Scan image
+        run: trivy image --exit-code 1 --severity HIGH,CRITICAL myservice:${{ github.sha }}
+      - name: Generate SBOM
+        run: syft myservice:${{ github.sha }} -o spdx-json=sbom.spdx.json
+      - name: Publish image
+        run: docker push myregistry/myservice:${{ github.sha }}

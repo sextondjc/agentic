@@ -7,10 +7,10 @@ param(
 )
 
 $catalogMap = @{
-  'agents' = '.github/agent-lifecycle-catalog.md'
-  'skills' = '.github/skills/skill-discovery-index.md'
-  'instructions' = '.github/instructions/instruction-lifecycle-catalog.md'
-  'prompts' = '.github/prompts/prompt-lifecycle-catalog.md'
+  'agents' = '.github/catalogs/agents-discovery-index.md'
+  'skills' = '.github/catalogs/skills-discovery-index.md'
+  'instructions' = '.github/catalogs/instructions-discovery-index.md'
+  'prompts' = '.github/catalogs/prompts-discovery-index.md'
 }
 
 $catalogFile = $catalogMap[$AssetType]

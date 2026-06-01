@@ -52,15 +52,6 @@ Out of scope:
 - Evidence bundle references (automated scan output + manual verification summary).
 - Explicit sign-off recommendation: `go`, `go-with-exceptions`, or `no-go`.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Validate one page or component baseline | One scoped accessibility report with objective defects listed |
-| L2 Delivery | Validate a complete user flow | All states covered: default, loading, empty, error, success |
-| L3 Hardening | Enforce release-grade quality gates | No unresolved critical/serious issues and evidence bundle complete |
-| L4 Expert Standardization | Build reusable accessibility execution pattern | Reusable checklist, evidence schema, and decision rubric produced |
-
 ## Deterministic Workflow
 
 1. Confirm scope boundary: pages, components, states, and breakpoints.
@@ -99,47 +90,6 @@ Capture artifacts under a change scope path:
 - `.docs/changes/<workstream-id>/scan-results.json`
 - `.docs/changes/<workstream-id>/release-recommendation.md`
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Deterministic expert workflow | Deterministic Workflow |
-| Objective acceptance criteria | Accessibility Gate Checklist |
-| Severity-ranked findings | Severity Model |
-| Durable evidence bundle | Evidence Contract |
-| Explicit go/no-go sign-off | Required Outputs + Workflow step 9 |
-| Source freshness governance | Source Governance Summary + Source Ledger |
-
-## Reasoning Package
-
-Assumptions:
-
-- The target surface is a web UI (not native mobile).
-- Accessibility policy requires objective evidence before release decisions.
-
-Trade-offs:
-
-- Automated scans increase speed but miss interaction nuances; manual checks are mandatory.
-- Strict no-critical/no-serious gates reduce risk but may delay releases.
-
-Open blockers:
-
-- Missing UX state definitions can reduce check completeness.
-- Lack of test environment parity can invalidate some findings.
-
-Recommendation:
-
-- Use L3 by default for release-bound changes and escalate to L4 when building repeatable team standards.
-
-## Source Governance Summary
-
-- Source relevance, authority, freshness, and actionability are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold default is 30 days for active standards checks.
-
-## Pragmatic Stop Rule
-
-Stop when all in-scope criteria are checked, all critical/serious findings are resolved or dispositioned with owner and due date, and the evidence contract artifacts exist with a final recommendation.
-
 ## Anti-Patterns
 
 - Relying on automated scans only.
@@ -155,3 +105,27 @@ Stop when all in-scope criteria are checked, all critical/serious findings are r
 - Source ledger has current evaluation date and disposition.
 - Final recommendation is explicit and evidence-backed.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

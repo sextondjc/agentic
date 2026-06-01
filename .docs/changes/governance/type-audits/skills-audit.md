@@ -4,10 +4,10 @@
 
 | Field | Value |
 |---|---|
-| Audit Date | 2026-05-28 |
+| Audit Date | 2026-05-30 |
 | Type | skills |
 | Primary Lane | Review |
-| Asset Count | 268 |
+| Asset Count | 267 |
 
 ## Findings (Severity Ranked)
 

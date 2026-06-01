@@ -146,11 +146,27 @@ $("#upload").kendoUpload({
 
 Run `npm audit` on each project to detect additional upstream advisories beyond this static list.
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Classify one template as XSS-safe or unsafe | Template encoding decision documented with rationale |
-| L2 Practical | Full template and CSRF audit for one feature area | All `#= #` sinks classified; CSRF tokens injected in mutating transport |
-| L3 Hardening | Upload, Editor, and CSP audit complete | Upload whitelist enforced server-side; Editor sanitized; CSP `unsafe-eval` assessed |
-| L4 Expert | Full CVE assessment + pre-compiled template pipeline | CVE inventory complete; pre-compilation eliminates `unsafe-eval` requirement |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

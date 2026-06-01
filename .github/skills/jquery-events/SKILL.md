@@ -131,3 +131,23 @@ Out of scope:
 - [jQuery Learn: Events](https://learn.jquery.com/events/)
 - [jQuery Learn: Event Delegation](https://learn.jquery.com/events/event-delegation/)
 - [jQuery Migrate: Event API Changes](https://github.com/jquery/jquery-migrate)
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

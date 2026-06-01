@@ -1,0 +1,110 @@
+{
+  "GeneratedAt": "2026-05-31T20:28:21.4950025+01:00",
+  "Root": "C:\\Projects",
+  "TotalCsFiles": 22477,
+  "ModelCount": 2067,
+  "RepositoryCount": 596,
+  "TestsCount": 12734,
+  "TopNamespaces": [
+    {
+      "Name": "",
+      "Count": 2491
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Settings.Extensions",
+      "Count": 1070
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Builders",
+      "Count": 945
+    },
+    {
+      "Name": "Syrx",
+      "Count": 869
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Settings.Extensions.Tests.Unit.CommandSettingBuilderTests",
+      "Count": 840
+    },
+    {
+      "Name": "Syrx.Commanders.Databases",
+      "Count": 810
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Settings",
+      "Count": 749
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Tests.Integration.DatabaseCommanderTests",
+      "Count": 735
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Settings.Extensions.Tests.Unit.CommandSettingBuilderExtensionsTests",
+      "Count": 735
+    },
+    {
+      "Name": "Syrx.Settings",
+      "Count": 496
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Tests.Extensions",
+      "Count": 420
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Builders.Tests.Unit.TableOptionsTests",
+      "Count": 420
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Tests.Integration.Models",
+      "Count": 420
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Tests.Integration.Models.Immutable",
+      "Count": 420
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Tests.Integration.Models.Record",
+      "Count": 420
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Builders.Tests.Unit.FieldBuilderTests",
+      "Count": 315
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Tests.Integration.Models.Mutable",
+      "Count": 315
+    },
+    {
+      "Name": "Syrx.Extensions",
+      "Count": 248
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Tests.Unit.DatabaseCommanderTests",
+      "Count": 224
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Settings.Extensions.Json",
+      "Count": 214
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Connectors.Extensions",
+      "Count": 214
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Settings.Extensions.Xml",
+      "Count": 214
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Settings.Readers",
+      "Count": 214
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Connectors",
+      "Count": 214
+    },
+    {
+      "Name": "Syrx.Commanders.Databases.Settings.Readers.Tests.Unit.DatabaseCommandReaderTests",
+      "Count": 212
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "Fixtures": [
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\TestAssembly.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration",
+      "TestClassNames": "",
+      "FactNames": "",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\CreateAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\DomainRepositoryTests",
+      "TestClassNames": "CreateAsync",
+      "FactNames": "CreateDomainSuccessfully, DuplicateDomainThrowsException",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\DeleteAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\DomainRepositoryTests",
+      "TestClassNames": "DeleteAsync",
+      "FactNames": "DeleteDomainSuccessfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\RetrieveAllAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\DomainRepositoryTests",
+      "TestClassNames": "RetrieveAllAsync",
+      "FactNames": "RetrieveAllAsyncSuccessfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\RetrieveAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\DomainRepositoryTests",
+      "TestClassNames": "RetrieveAsync",
+      "FactNames": "Successfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\GroupRepositoryTests\\CreateAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\GroupRepositoryTests",
+      "TestClassNames": "CreateAsync",
+      "FactNames": "Successfully, NullGroupThrowsArgumentNullException",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\GroupRepositoryTests\\DeleteAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\GroupRepositoryTests",
+      "TestClassNames": "DeleteAsync",
+      "FactNames": "Successfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\GroupRepositoryTests\\RetrieveAllAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\GroupRepositoryTests",
+      "TestClassNames": "RetrieveAllAsync",
+      "FactNames": "Successfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\GroupRepositoryTests\\RetrieveAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\GroupRepositoryTests",
+      "TestClassNames": "RetrieveAsync",
+      "FactNames": "Successfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\GroupRepositoryTests\\UpdateAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\GroupRepositoryTests",
+      "TestClassNames": "UpdateAsync",
+      "FactNames": "Successfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Samples.Tests.Integration\\UnitTest1.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Samples.Tests.Integration",
+      "TestClassNames": "UnitTest1",
+      "FactNames": "",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Server.Apis.Tests.Integration\\Controllers\\AliasesControllerIntegrationTests.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Server.Apis.Tests.Integration\\\\Controllers",
+      "TestClassNames": "AliasesControllerIntegrationTests",
+      "FactNames": "GenerateAlias_Post_ReturnsSuccessAndCorrectContentType, GenerateAlias_Post_ReturnsValidAlias, GenerateAlias_Post_WithoutDomain_ReturnsAliasOnly, GenerateAliases_Get_ReturnsSuccessAndCorrectContentType, GenerateAliases_Get_ReturnsCorrectNumberOfAliases, GenerateAliases_Get_WithDefaults_ReturnsDefaultValues, GenerateAliases_Get_WithInvalidCount_ReturnsBadRequest, GenerateAliases_Get_WithInvalidLength_ReturnsBadRequest, ValidateAlias_WithValidAlias_ReturnsOk, ValidateAlias_WithInvalidAlias_ReturnsValidationErrors, ValidateAlias_WithEmptyAlias_ReturnsBadRequest",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Server.Apis.Tests.Integration\\Controllers\\DomainsControllerIntegrationTests.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Server.Apis.Tests.Integration\\\\Controllers",
+      "TestClassNames": "DomainsControllerIntegrationTests",
+      "FactNames": "GetDomains_ReturnsSuccessAndCorrectContentType, GetDomains_ReturnsPagedResponse, GetDomains_WithInvalidPage_ReturnsBadRequest, GetDomain_WithValidName_ReturnsOk, GetDomain_WithNonExistentName_ReturnsNotFound, CreateDomain_WithValidRequest_ReturnsCreated, CreateDomain_WithExistingDomain_ReturnsConflict, CreateDomain_WithEmptyName_ReturnsBadRequest, DeleteDomain_WithValidName_ReturnsOk, DeleteDomain_WithNonExistentName_ReturnsNotFound, HealthCheck_ReturnsHealthy, RootPath_RedirectsToSwagger",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Services.Wrappers.Tests.Integration\\DomainWrapperServiceTests\\CreateAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Services.Wrappers.Tests.Integration\\\\DomainWrapperServiceTests",
+      "TestClassNames": "CreateAsync",
+      "FactNames": "CreateDomainSuccessfully, DuplicateDomainThrowsException",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Services.Wrappers.Tests.Integration\\DomainWrapperServiceTests\\DeleteAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Services.Wrappers.Tests.Integration\\\\DomainWrapperServiceTests",
+      "TestClassNames": "DeleteAsync",
+      "FactNames": "DeleteDomainSuccessfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Services.Wrappers.Tests.Integration\\DomainWrapperServiceTests\\RetrieveAllAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Services.Wrappers.Tests.Integration\\\\DomainWrapperServiceTests",
+      "TestClassNames": "RetrieveAllAsync",
+      "FactNames": "RetrieveAllAsyncSuccessfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Services.Wrappers.Tests.Integration\\DomainWrapperServiceTests\\RetrieveAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Services.Wrappers.Tests.Integration\\\\DomainWrapperServiceTests",
+      "TestClassNames": "RetrieveAsync",
+      "FactNames": "RetrieveAsyncSuccessfully, NonExistentDomainReturnsNull",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Wrappers.Google.Tests.Integration\\DirectoryServiceWrapperTests\\Resolve.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Wrappers.Google.Tests.Integration\\\\DirectoryServiceWrapperTests",
+      "TestClassNames": "Resolve",
+      "FactNames": "",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Wrappers.Google.Tests.Integration\\DomainWrapperServiceTests\\CreateAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Wrappers.Google.Tests.Integration\\\\DomainWrapperServiceTests",
+      "TestClassNames": "CreateAsync",
+      "FactNames": "CreateDomainSuccessfully, DuplicateDomainThrowsException",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Wrappers.Google.Tests.Integration\\DomainWrapperServiceTests\\DeleteAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Wrappers.Google.Tests.Integration\\\\DomainWrapperServiceTests",
+      "TestClassNames": "DeleteAsync",
+      "FactNames": "DeleteDomainSuccessfully, NonExistentDomainThrowsException",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    }
+  ],
+  "Generators": {
+    "Path": "C:\\Projects\\Syrx_3.0.0\\2025.12.20\\Syrx\\Syrx.SqlServer\\tests\\common\\Syrx.Tests.Common\\Data\\Generators.cs",
+    "Project": "Syrx_3.0.0",
+    "FolderStructure": "Syrx_3.0.0\\\\2025.12.20\\\\Syrx\\\\Syrx.SqlServer\\\\tests\\\\common\\\\Syrx.Tests.Common\\\\Data",
+    "TestClassNames": "",
+    "FactNames": "",
+    "TheoryNames": "",
+    "HasFixture": false,
+    "HasGenerators": true
+  },
+  "Structure": [
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\TestAssembly.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration",
+      "TestClassNames": "",
+      "FactNames": "",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\CreateAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\DomainRepositoryTests",
+      "TestClassNames": "CreateAsync",
+      "FactNames": "CreateDomainSuccessfully, DuplicateDomainThrowsException",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\DeleteAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\DomainRepositoryTests",
+      "TestClassNames": "DeleteAsync",
+      "FactNames": "DeleteDomainSuccessfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\RetrieveAllAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\DomainRepositoryTests",
+      "TestClassNames": "RetrieveAllAsync",
+      "FactNames": "RetrieveAllAsyncSuccessfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\RetrieveAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\DomainRepositoryTests",
+      "TestClassNames": "RetrieveAsync",
+      "FactNames": "Successfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\GroupRepositoryTests\\CreateAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\GroupRepositoryTests",
+      "TestClassNames": "CreateAsync",
+      "FactNames": "Successfully, NullGroupThrowsArgumentNullException",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\GroupRepositoryTests\\DeleteAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\GroupRepositoryTests",
+      "TestClassNames": "DeleteAsync",
+      "FactNames": "Successfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\GroupRepositoryTests\\RetrieveAllAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\GroupRepositoryTests",
+      "TestClassNames": "RetrieveAllAsync",
+      "FactNames": "Successfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\GroupRepositoryTests\\RetrieveAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\GroupRepositoryTests",
+      "TestClassNames": "RetrieveAsync",
+      "FactNames": "Successfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\GroupRepositoryTests\\UpdateAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Repositories.Tests.Integration\\\\GroupRepositoryTests",
+      "TestClassNames": "UpdateAsync",
+      "FactNames": "Successfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Samples.Tests.Integration\\UnitTest1.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Samples.Tests.Integration",
+      "TestClassNames": "UnitTest1",
+      "FactNames": "",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Server.Apis.Tests.Integration\\Controllers\\AliasesControllerIntegrationTests.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Server.Apis.Tests.Integration\\\\Controllers",
+      "TestClassNames": "AliasesControllerIntegrationTests",
+      "FactNames": "GenerateAlias_Post_ReturnsSuccessAndCorrectContentType, GenerateAlias_Post_ReturnsValidAlias, GenerateAlias_Post_WithoutDomain_ReturnsAliasOnly, GenerateAliases_Get_ReturnsSuccessAndCorrectContentType, GenerateAliases_Get_ReturnsCorrectNumberOfAliases, GenerateAliases_Get_WithDefaults_ReturnsDefaultValues, GenerateAliases_Get_WithInvalidCount_ReturnsBadRequest, GenerateAliases_Get_WithInvalidLength_ReturnsBadRequest, ValidateAlias_WithValidAlias_ReturnsOk, ValidateAlias_WithInvalidAlias_ReturnsValidationErrors, ValidateAlias_WithEmptyAlias_ReturnsBadRequest",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Server.Apis.Tests.Integration\\Controllers\\DomainsControllerIntegrationTests.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Server.Apis.Tests.Integration\\\\Controllers",
+      "TestClassNames": "DomainsControllerIntegrationTests",
+      "FactNames": "GetDomains_ReturnsSuccessAndCorrectContentType, GetDomains_ReturnsPagedResponse, GetDomains_WithInvalidPage_ReturnsBadRequest, GetDomain_WithValidName_ReturnsOk, GetDomain_WithNonExistentName_ReturnsNotFound, CreateDomain_WithValidRequest_ReturnsCreated, CreateDomain_WithExistingDomain_ReturnsConflict, CreateDomain_WithEmptyName_ReturnsBadRequest, DeleteDomain_WithValidName_ReturnsOk, DeleteDomain_WithNonExistentName_ReturnsNotFound, HealthCheck_ReturnsHealthy, RootPath_RedirectsToSwagger",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Services.Wrappers.Tests.Integration\\DirectoryServiceWrapperTests\\GetGroupsResource.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Services.Wrappers.Tests.Integration\\\\DirectoryServiceWrapperTests",
+      "TestClassNames": "GetGroupsResource",
+      "FactNames": "",
+      "TheoryNames": "",
+      "HasFixture": false,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Services.Wrappers.Tests.Integration\\DomainWrapperServiceTests\\CreateAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Services.Wrappers.Tests.Integration\\\\DomainWrapperServiceTests",
+      "TestClassNames": "CreateAsync",
+      "FactNames": "CreateDomainSuccessfully, DuplicateDomainThrowsException",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Services.Wrappers.Tests.Integration\\DomainWrapperServiceTests\\DeleteAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Services.Wrappers.Tests.Integration\\\\DomainWrapperServiceTests",
+      "TestClassNames": "DeleteAsync",
+      "FactNames": "DeleteDomainSuccessfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Services.Wrappers.Tests.Integration\\DomainWrapperServiceTests\\RetrieveAllAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Services.Wrappers.Tests.Integration\\\\DomainWrapperServiceTests",
+      "TestClassNames": "RetrieveAllAsync",
+      "FactNames": "RetrieveAllAsyncSuccessfully",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Services.Wrappers.Tests.Integration\\DomainWrapperServiceTests\\RetrieveAsync.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Services.Wrappers.Tests.Integration\\\\DomainWrapperServiceTests",
+      "TestClassNames": "RetrieveAsync",
+      "FactNames": "RetrieveAsyncSuccessfully, NonExistentDomainReturnsNull",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Tests.Integration\\UnitTest1.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Tests.Integration",
+      "TestClassNames": "UnitTest1",
+      "FactNames": "",
+      "TheoryNames": "",
+      "HasFixture": false,
+      "HasGenerators": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Wrappers.Google.Tests.Integration\\DirectoryServiceWrapperTests\\Resolve.cs",
+      "Project": "aliasesonline",
+      "FolderStructure": "aliasesonline\\\\test\\\\integration\\\\Ao.Wrappers.Google.Tests.Integration\\\\DirectoryServiceWrapperTests",
+      "TestClassNames": "Resolve",
+      "FactNames": "",
+      "TheoryNames": "",
+      "HasFixture": true,
+      "HasGenerators": false
+    }
+  ]
+}

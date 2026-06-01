@@ -46,15 +46,6 @@ This skill reviews completed implementations. It does not implement or fix compo
 | Findings table | All findings severity-tagged; owner assigned per finding |
 | Gate recommendation | `GO`, `GO-WITH-CONDITIONS`, or `NO-GO` with explicit reason and evidence reference |
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Spot Check | Fast bundle and config sanity check | Bundle size and content-scan correctness confirmed |
-| L2 Release Gate | Full pre-merge or pre-promotion review | All five verdict dimensions complete; gate recommendation issued |
-| L3 Design System Audit | Token conformance and visual consistency across a component library | All tokens traced; no drift between design spec and implementation |
-| L4 Governance Baseline | Establishes recurring quality policy for a project or team | Repeatable checklist and threshold policy documented for CI integration |
-
 ## Gate Dimensions and Checks
 
 ### 1. Bundle Health
@@ -136,3 +127,28 @@ This skill reviews completed implementations. It does not implement or fix compo
 ## References
 
 - [Source Catalog](./references/source-catalog.md)
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

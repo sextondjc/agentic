@@ -1,0 +1,576 @@
+{
+  "Models": [
+    {
+      "Path": "C:\\Projects\\Syrx_2.0.0\\2025-09-20\\Syrx.Organization\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration.Models\\ComposedTypes.cs",
+      "Project": "Syrx_2.0.0",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_2.0.0\\2025-09-20\\Syrx.Organization\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration.Models\\ImmutableTypeOptions.cs",
+      "Project": "Syrx_2.0.0",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_3.0.0\\2025.11.01\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration.Models\\ComposedTypes.cs",
+      "Project": "Syrx_3.0.0",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_3.0.0\\2025.11.01\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration.Models\\ImmutableTypeOptions.cs",
+      "Project": "Syrx_3.0.0",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Rook_backup\\20260406\\Rook\\src\\Rook.Api.Models\\CaptureRequest.cs",
+      "Project": "Rook_backup",
+      "Namespace": "Rook.Api.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Rook_backup\\20260406\\Rook\\src\\Rook.Api.Models\\CaptureResponse.cs",
+      "Project": "Rook_backup",
+      "Namespace": "Rook.Api.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Syrx\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration.Models\\ComposedTypes.cs",
+      "Project": "Syrx",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration.Models\\ImmutableTypeOptions.cs",
+      "Project": "Syrx",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration.Models\\ComposedTypes.cs",
+      "Project": "Syrx_",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration.Models\\ImmutableTypeOptions.cs",
+      "Project": "Syrx_",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Mobile\\Models\\ApiModels.cs",
+      "Project": "aliasesonline",
+      "Namespace": "Ao.Mobile.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Models\\MappedAliasRecord.cs",
+      "Project": "aliasesonline",
+      "Namespace": "Ao.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\anonyme_1x\\2025.11.14\\src\\backend\\Anonyme.Server.Models\\Entities\\AnonymousEmail.cs",
+      "Project": "anonyme_1x",
+      "Namespace": "Anonyme.Server.Models.Entities",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\anonyme_1x\\2025.11.14\\src\\backend\\Anonyme.Server.Models\\Entities\\BaseEntity.cs",
+      "Project": "anonyme_1x",
+      "Namespace": "Anonyme.Server.Models.Entities",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Mira\\server\\Mira.Online\\src\\Mira.Online.Models\\Ball.cs",
+      "Project": "Mira",
+      "Namespace": "Mira.Online.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Mira\\server\\Mira.Online\\src\\Mira.Online.Models\\Country.cs",
+      "Project": "Mira",
+      "Namespace": "Mira.Online.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\AO\\AO\\src\\Ao.Models\\AliasRecord.cs",
+      "Project": "AO",
+      "Namespace": "Ao.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\AO\\AO\\src\\Ao.Models\\Domain.cs",
+      "Project": "AO",
+      "Namespace": "Ao.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Arclight\\src\\Arclight.Models\\Class1.cs",
+      "Project": "Arclight",
+      "Namespace": "Arclight.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Arclight\\tests\\unit\\Arclight.Models.Unit.Tests\\UnitTest1.cs",
+      "Project": "Arclight",
+      "Namespace": "Arclight.Models.Unit.Tests",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx.Samples\\src\\Syrx.Samples.Models\\Country.cs",
+      "Project": "Syrx.Samples",
+      "Namespace": "Syrx.Samples.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Syrx.Samples\\src\\Syrx.Samples.Models\\Currency.cs",
+      "Project": "Syrx.Samples",
+      "Namespace": "Syrx.Samples.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Eumi\\Eumi.Models\\Position.cs",
+      "Project": "Eumi",
+      "Namespace": "Eumi.Models",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": false
+    }
+  ],
+  "Repositories": [
+    {
+      "Path": "C:\\Projects\\Rook_backup\\20260406\\Rook\\src\\Rook.Drops.Locations.Repositories\\DropRepository.cs",
+      "Project": "Rook_backup",
+      "Namespace": "Rook.Drops.Locations.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Rook_backup\\20260406\\Rook\\src\\Rook.Drops.Locations.Repositories\\IDropRepository.cs",
+      "Project": "Rook_backup",
+      "Namespace": "Rook.Drops.Locations.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\anonyme_1x\\2025.11.14\\src\\backend\\Anonyme.Server.Repositories\\AnonymousEmailRepository.cs",
+      "Project": "anonyme_1x",
+      "Namespace": "Anonyme.Server.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\anonyme_1x\\2025.11.14\\src\\backend\\Anonyme.Server.Repositories\\DistributionGroupRepository.cs",
+      "Project": "anonyme_1x",
+      "Namespace": "Anonyme.Server.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Mira\\server\\Mira.Online\\src\\Mira.Online.Repositories\\CountryRepository.cs",
+      "Project": "Mira",
+      "Namespace": "Mira.Online.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Mira\\server\\Mira.Online\\src\\Mira.Online.Repositories\\CurrencyRepository.cs",
+      "Project": "Mira",
+      "Namespace": "Mira.Online.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Syrx.Samples\\src\\Syrx.Samples.Api\\Bootstrap\\RepositoryInstallers.cs",
+      "Project": "Syrx.Samples",
+      "Namespace": "Syrx.Samples.Api.Bootstrap",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Syrx.Samples\\src\\Syrx.Samples.Repositories\\CountryAsyncRepository.cs",
+      "Project": "Syrx.Samples",
+      "Namespace": "Syrx.Samples.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Repositories\\DomainRepository.cs",
+      "Project": "aliasesonline",
+      "Namespace": "Ao.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Repositories\\GroupRepository.cs",
+      "Project": "aliasesonline",
+      "Namespace": "Ao.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\AO\\AO\\src\\Ao.Repositories\\DomainRepository.cs",
+      "Project": "AO",
+      "Namespace": "Ao.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\AO\\AO\\src\\Ao.Repositories\\GroupRepository.cs",
+      "Project": "AO",
+      "Namespace": "Ao.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Lynx\\src\\Lynx.Settings.Repositories\\IRepository.cs",
+      "Project": "Lynx",
+      "Namespace": "Lynx.Settings.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Lynx\\src\\Lynx.Settings.Repositories\\IRequestCorrelationSettingsRepository.cs",
+      "Project": "Lynx",
+      "Namespace": "Lynx.Settings.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_2.0.0\\2025.10.14\\Syrx\\Syrx.SqlServer\\tests\\performance\\Syrx.SqlServer.Tests.Performance\\Repositories\\PerformanceRepositories.cs",
+      "Project": "Syrx_2.0.0",
+      "Namespace": "Syrx.SqlServer.Tests.Performance.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_2.0.0\\2025.10.19_1310\\Syrx.SqlServer\\tests\\performance\\Syrx.SqlServer.Tests.Performance\\Repositories\\PerformanceRepositories.cs",
+      "Project": "Syrx_2.0.0",
+      "Namespace": "Syrx.SqlServer.Tests.Performance.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Arclight\\src\\Arclight.Repositories\\Class1.cs",
+      "Project": "Arclight",
+      "Namespace": "Arclight.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Arclight\\tests\\integration\\Arclight.Repositories.Integration.Tests\\UnitTest1.cs",
+      "Project": "Arclight",
+      "Namespace": "Arclight.Repositories.Integration.Tests",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx\\Syrx.Sqlite\\tests\\integration\\Syrx.Sqlite.Tests.Integration\\SqliteSmokeRepositoryTests.cs",
+      "Project": "Syrx",
+      "Namespace": "Syrx.Sqlite.Tests.Integration",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx\\Syrx.Sqlite\\tests\\integration\\Syrx.Sqlite.Tests.Integration\\Repositories\\SqliteSmokeRepository.cs",
+      "Project": "Syrx",
+      "Namespace": "Syrx.Sqlite.Tests.Integration.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\syrx-data-access\\references\\create-user-repository-good.cs",
+      "Project": "syrx-data-access",
+      "Namespace": "Sample.Users.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\syrx-data-access\\references\\user-data-mutable-bad.cs",
+      "Project": "syrx-data-access",
+      "Namespace": "Sample.Users.Repositories",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": false
+    },
+    {
+      "Path": "C:\\Projects\\Scapex\\tests\\integration\\ScrapeX.Integration.Tests\\Infrastructure\\EuroMillionsRepository.cs",
+      "Project": "Scapex",
+      "Namespace": "Syrx.Web.Scraping.Integration.Tests.Infrastructure",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Scapex\\tests\\integration\\ScrapeX.Integration.Tests\\Infrastructure\\IEuroMillionsRepository.cs",
+      "Project": "Scapex",
+      "Namespace": "Syrx.Web.Scraping.Integration.Tests.Infrastructure",
+      "IsModel": false,
+      "IsRepository": true,
+      "IsTests": true
+    }
+  ],
+  "Tests": [
+    {
+      "Path": "C:\\Projects\\Syrx_2.0.0\\2025-09-20\\Syrx.Analyzers\\tests\\integration\\Syrx.Analyzers.Usings.Tests.Integration\\EditorConfigIntegrationTests.cs",
+      "Project": "Syrx_2.0.0",
+      "Namespace": "Syrx.Analyzers.Usings.Tests.Integration",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_2.0.0\\2025-09-20\\Syrx.Analyzers\\tests\\integration\\Syrx.Analyzers.Usings.Tests.Integration\\UsingsFileCodeFixProviderIntegrationTests.cs",
+      "Project": "Syrx_2.0.0",
+      "Namespace": "Syrx.Analyzers.Usings.Tests.Integration",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_3.0.0\\2025.11.01\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration\\AssertionMessages.cs",
+      "Project": "Syrx_3.0.0",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_3.0.0\\2025.11.01\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration\\Fixture.cs",
+      "Project": "Syrx_3.0.0",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration\\AssertionMessages.cs",
+      "Project": "Syrx",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration\\Fixture.cs",
+      "Project": "Syrx",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration\\AssertionMessages.cs",
+      "Project": "Syrx_",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_\\Syrx.Cockroach\\.submodules\\Syrx.Commanders.Databases\\tests\\integration\\Syrx.Commanders.Databases.Tests.Integration\\Fixture.cs",
+      "Project": "Syrx_",
+      "Namespace": "Syrx.Commanders.Databases.Tests.Integration",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Rook_backup\\20260406\\Rook\\tests\\common\\Rook.Tests.Extensions\\ExceptionExtensions.cs",
+      "Project": "Rook_backup",
+      "Namespace": "Rook.Tests.Extensions",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Rook_backup\\20260406\\Rook\\tests\\common\\Rook.Tests.Extensions\\Generators.cs",
+      "Project": "Rook_backup",
+      "Namespace": "Rook.Tests.Extensions",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\anonyme_1x\\2025.11.14\\tests\\common\\Anonyme.Tests.Shared\\Generators.cs",
+      "Project": "anonyme_1x",
+      "Namespace": "Anonyme.Tests.Shared",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\anonyme_1x\\2025.11.14\\tests\\common\\Anonyme.Tests.Shared\\Usings.cs",
+      "Project": "anonyme_1x",
+      "Namespace": "",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Dapper\\benchmarks\\Dapper.Tests.Performance\\Benchmarks.Belgrade.cs",
+      "Project": "Dapper",
+      "Namespace": "Dapper.Tests.Performance",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Dapper\\benchmarks\\Dapper.Tests.Performance\\Benchmarks.cs",
+      "Project": "Dapper",
+      "Namespace": "Dapper.Tests.Performance",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Models.Tests.Common\\DomainAliasConstants.cs",
+      "Project": "aliasesonline",
+      "Namespace": "Ao.Models.Tests.Common",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Models.Tests.Common\\DomainConstants.cs",
+      "Project": "aliasesonline",
+      "Namespace": "Ao.Models.Tests.Common",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Mira\\server\\Mira.Online\\test\\common\\Mira.Online.Tests.Common\\ExceptionExtensions.cs",
+      "Project": "Mira",
+      "Namespace": "Mira.Online.Tests.Common",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Mira\\server\\Mira.Online\\test\\common\\Mira.Online.Tests.Common\\Generators.cs",
+      "Project": "Mira",
+      "Namespace": "Mira.Online.Tests.Common",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\AO\\AO\\test\\common\\Ao.Models.Tests.Common\\DomainConstants.cs",
+      "Project": "AO",
+      "Namespace": "Ao.Models.Tests.Common",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\AO\\AO\\test\\common\\Ao.Models.Tests.Common\\GroupConstants.cs",
+      "Project": "AO",
+      "Namespace": "Ao.Models.Tests.Common",
+      "IsModel": true,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Lynx\\test\\Lynx.Middleware.Unit.Tests\\ExceptionHandlingMiddlewareTests\\InvokeAsync.cs",
+      "Project": "Lynx",
+      "Namespace": "Lynx.Middleware.Unit.Tests.ExceptionHandlingMiddlewareTests",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Lynx\\test\\Lynx.Middleware.Unit.Tests\\RequestTracingMiddlewareTests\\InvokeAsync.cs",
+      "Project": "Lynx",
+      "Namespace": "Lynx.Middleware.Unit.Tests.RequestTracingMiddlewareTests",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_Http_1\\Syrx.Commanders.Http.Integration.Tests\\Execute.cs",
+      "Project": "Syrx_Http_1",
+      "Namespace": "Syrx.Commanders.Http.Integration.Tests",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    },
+    {
+      "Path": "C:\\Projects\\Syrx_Http_1\\Syrx.Commanders.Http.Integration.Tests.Client\\Program.cs",
+      "Project": "Syrx_Http_1",
+      "Namespace": "Syrx.Commanders.Http.Integration.Tests.Client",
+      "IsModel": false,
+      "IsRepository": false,
+      "IsTests": true
+    }
+  ]
+}

@@ -57,3 +57,19 @@ This skill centralizes bundle-to-skill associations so individual skills remain 
 - Skill index: `../../catalogs/skills-discovery-index.md`
 - Mapping registry: `./references/mapping-registry.md`
 
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

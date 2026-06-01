@@ -46,15 +46,6 @@ This skill covers setup and configuration. Component design patterns are handled
 | Framework integration checklist | Framework-specific steps completed and verified |
 | Readiness summary | Open risks, deferred items, and known version caveats |
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Install Tailwind and render one styled element | Styles render correctly in dev and build output includes purged CSS |
-| L2 Practical Setup | Fully configure for a real project | Config is correct, all template paths scanned, Prettier plugin active, build verified |
-| L3 Migration Hardening | v3 → v4 migration complete | All deprecated config patterns removed, CSS-first config adopted, visual regression tested |
-| L4 Expert Standardization | Reusable setup template for cross-project use | Framework-agnostic setup template, CI build-size check, CSP policy, and source-catalog entry produced |
-
 ## TailwindCSS v4 Setup Workflow
 
 For new projects targeting v4:
@@ -119,3 +110,28 @@ For new projects targeting v4:
 ## References
 
 - [Source Catalog](./references/source-catalog.md)
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

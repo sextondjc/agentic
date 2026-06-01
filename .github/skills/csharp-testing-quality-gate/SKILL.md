@@ -65,47 +65,34 @@ Out of scope:
 - `pass-with-conditions`: only medium or low findings remain with owner and due date.
 - `fail`: unresolved critical findings, or unresolved high findings in production paths.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert test-quality review | Deterministic Workflow |
-| Deterministic gate decision | Decision Rules |
-| Auditable findings and ownership | Required Outputs |
-| Cross-project portability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Production confidence depends on behavior-based testing, not raw line coverage alone.
-- Defect-prevention value comes from failure-mode and boundary assertions.
-
-Trade-offs:
-
-- Stricter testing gates improve safety but increase pre-merge effort.
-- Looser gates increase throughput but raise escape-risk and maintenance cost.
-
-Open blockers:
-
-- Undefined behavior contracts reduce confidence in coverage decisions.
-- Missing integration seams can hide collaboration defects.
-
-Recommendation:
-
-- Apply this gate to all release-bound C# changes and shared library updates.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-
-## Pragmatic Stop Rule
-
-Stop when every critical behavior has a mapped test expectation, all findings have severity and owner, and one explicit recommendation is published.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Decision mode is explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

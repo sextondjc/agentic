@@ -129,11 +129,27 @@ Trigger rollback if any of the following occur after merging an upgrade:
 - DataSource transport fails to serialize requests correctly.
 - SASS build fails due to undefined variable.
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Identify breaking changes for a patch or minor upgrade | Breaking change inventory complete; no surprises in build |
-| L2 Practical | Major version upgrade with deprecated API remediation | All deprecated APIs replaced; tests pass on new version |
-| L3 Hardening | SASS variable migration + theme rebuild + regression test | Theme builds cleanly; all widget tests pass |
-| L4 Expert | Framework variant migration (jQuery → React/Angular) | Component equivalence map complete; migration phased with coexistence plan |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -13,16 +13,6 @@ Develop a VS Code extension in TypeScript to register custom agents programmatic
 - Language model selection or model-switching logic.
 - Tight integration with VS Code APIs (editors, workspace, commands).
 
-## Supporting Activities
-
-- Scaffold VS Code extension project (TypeScript, webpack, build pipeline).
-- Implement agent registration via `vscode.lm.registerAgent()`.
-- Define custom tools using `LanguageModelToolDefinition` interface.
-- Handle tool invocation and result streaming.
-- Manage agent state and multi-turn conversations.
-- Debug and test agent behavior in VS Code.
-- Package and publish extension as VSIX.
-
 ## Workflow
 
 1. **Scaffold VS Code extension project**:
@@ -322,30 +312,6 @@ Develop a VS Code extension in TypeScript to register custom agents programmatic
 - Tests pass (unit, integration, E2E).
 - VSIX package builds successfully (`vsce package`).
 
-## Validation Checklist
-
-- [ ] `package.json` has valid `contributes.chatParticipants` entry.
-- [ ] `tsconfig.json` has `strict: true` and targets `ES2020`.
-- [ ] `webpack.config.js` bundles extension correctly (checks `out/extension.js`).
-- [ ] Custom tool input schema is valid JSON schema.
-- [ ] Tool handler validates all input fields (no assumptions).
-- [ ] Tool handler returns `LanguageModelToolResult` with `content` array.
-- [ ] Agent handler implements `IChatAgentImplementation` interface correctly.
-- [ ] Agent registration uses `vscode.lm.registerAgent()` with correct parameters.
-- [ ] Extension loads without errors in debug session (F5).
-- [ ] Agent is selectable in Chat and responds to prompts.
-- [ ] Tool invocation succeeds and produces expected output.
-- [ ] Error cases handled gracefully (tool fails, input invalid, etc.).
-
-## References
-
-- [VS Code Extension API Reference](https://code.visualstudio.com/api/references/vscode-api)
-- [Language Model API Documentation](https://code.visualstudio.com/docs/copilot/agents/overview)
-- [Chat Agent Implementation Guide](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
-- [Tool Definition and Invocation](https://code.visualstudio.com/docs/copilot/agents/agent-tools)
-- [VS Code Extension Development Guide](https://code.visualstudio.com/api/get-started/your-first-extension)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-
 ## Trigger Conditions
 
 Invoke this skill when any of the following is true:
@@ -355,3 +321,23 @@ Invoke this skill when any of the following is true:
 - Extension integration with VS Code APIs is required (editors, workspace, commands).
 - Agent needs model selection or behavior tuning via TypeScript code.
 - Complex multi-turn workflows require programmatic state management.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

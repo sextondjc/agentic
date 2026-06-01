@@ -29,6 +29,8 @@ In scope:
 - Data strategy (`InlineData`, `MemberData`, `ClassData`) decisions.
 - Coverage-intent planning for success, failure, and boundary behavior.
 - Assertion clarity and determinism checks.
+- Integration layout decisions for repository tests, including assembly boundary (`<Assembly>.Tests.Integration.csproj`), type folder naming (`<TypeName>Tests`), and method-focused test class ownership.
+- Test class naming rules where each test class name must exactly match the public repository method being tested (for example, `RetrieveAsync`, `RetrieveAllAsync`).
 
 Out of scope:
 
@@ -50,6 +52,7 @@ Out of scope:
 - Coverage-intent matrix across success, failure, and boundary paths.
 - Assertion standards checklist.
 - Final design recommendation with residual risks.
+- Integration test ownership map including assembly name, `<TypeName>Tests` folder, per-method test classes, and fixture name.
 
 ## Deterministic Workflow
 
@@ -67,6 +70,85 @@ Out of scope:
 - Use `Theory` when behavior must hold across multiple parameter sets.
 - Prefer `InlineData` for compact scalar cases.
 - Prefer `MemberData` or `ClassData` for reusable, complex, or generated cases.
+- Prefer behavior-first test method names without underscores; reserve exact class-name matching for the method-under-test class boundary.
+- Prioritize failure-path coverage first for repository methods, then include at least one validated happy-path assertion per method.
+
+## Repository Test Design Examples
+
+```csharp
+namespace My.Application.Repositories.Tests.Integration.UserReadRepositoryTests;
+
+public sealed class RetrieveAsync
+{
+	[Fact]
+	public async Task EmailIsNullOrWhitespaceThrowsArgumentException()
+	{
+		// failure-path validation
+	}
+
+	[Fact]
+	public async Task EmailTooLongThrowsArgumentException()
+	{
+		// failure-path validation
+	}
+
+	[Fact]
+	public async Task InvalidEmailThrowsInvalidEmailException()
+	{
+		// failure-path validation
+	}
+
+	[Fact]
+	public async Task UnknownEmailReturnsNull()
+	{
+		// failure-path validation
+	}
+
+	[Fact]
+	public async Task CancellationRequestedIsSuccessful()
+	{
+		// cancellation-path validation
+	}
+
+	[Fact]
+	public async Task Success()
+	{
+		// happy-path validation returning User
+	}
+}
+
+public sealed class RetrieveAllAsync
+{
+	[Fact]
+	public async Task PageIsNonPositiveThrowsArgumentOutOfRangeException()
+	{
+		// failure-path validation
+	}
+
+	[Fact]
+	public async Task SizeIsNonPositiveThrowsArgumentOutOfRangeException()
+	{
+		// failure-path validation
+	}
+
+	[Fact]
+	public async Task CancellationRequestedIsSuccessful()
+	{
+		// cancellation-path validation
+	}
+
+	[Fact]
+	public async Task Success()
+	{
+		// happy-path validation returning users
+	}
+}
+
+public sealed class UserReadRepositoryTestsFixture
+{
+	// shared integration setup for UserReadRepositoryTests
+}
+```
 
 ## Anti-Pattern Checks
 
@@ -74,44 +156,10 @@ Out of scope:
 - Overloaded theories with unrelated assertions.
 - Assertion bundles that hide the failing intent.
 - Data sources with unstable ordering or implicit side effects.
-
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert test-shape decisions | Deterministic Workflow + Decision Rules |
-| Deterministic data strategy | Decision Rules |
-| Behavior-first coverage planning | Required Outputs |
-| Cross-project reusability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Clear behavior contracts produce clearer test design.
-- Deterministic data and assertions reduce long-term flakiness.
-
-Trade-offs:
-
-- Highly parameterized tests reduce duplication but can reduce readability.
-- Narrow tests improve diagnostics but increase test count.
-
-Open blockers:
-
-- Missing boundary definitions can lead to false confidence.
-- Unclear domain invariants can produce low-signal assertions.
-
-Recommendation:
-
-- Start with behavior-focused, minimal tests and expand data-driven coverage only where risk or variability justifies it.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-
-## Pragmatic Stop Rule
-
-Stop when each target behavior has one explicit test-shape decision, one data strategy decision, and one assertion expectation.
+- Sync-over-async setup or teardown in async repository tests.
+- Tests that assert method names or overload shapes instead of externally observable behavior.
+- Test classes that mix assertions for multiple repository methods instead of one class per public method (`RetrieveAsync`, `RetrieveAllAsync`, etc.).
+- Missing repository-specific fixture in `<TypeName>Tests` integration folders (for example, `UserReadRepositoryTestsFixture`).
 
 ## Done Criteria
 
@@ -119,3 +167,28 @@ Stop when each target behavior has one explicit test-shape decision, one data st
 - Required outputs are complete.
 - Decision logic is explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

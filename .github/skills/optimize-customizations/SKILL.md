@@ -68,5 +68,19 @@ This skill is on-demand and review-focused. It does not run continuously and doe
 - MUST failures are explicit, evidence-backed, and prioritized.
 - Recommended remediations are actionable and mapped to concrete artifact edits.
 
+## Execution Context
 
+### Input Context
 
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

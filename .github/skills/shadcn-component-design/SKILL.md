@@ -50,15 +50,6 @@ This skill covers component-level design. Project installation and wiring is han
 | Export contract | Named exports from `@/components/ui/<component>` following registry conventions |
 | Readiness summary | Known edge cases, deferred variants, and open accessibility items |
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Create one styled component with a default variant | Component renders, variant applies, no console errors |
-| L2 Practical Delivery | Deliver a component with full variant taxonomy | All variants defined in CVA, typed, and rendered correctly |
-| L3 Radix Integration | Implement a complex interactive component from Radix primitives | Primitive wiring correct, keyboard interaction tested, ARIA pattern verified |
-| L4 Expert Standardization | Reusable cross-project component conventions | CVA schema taxonomy, export contract, and a11y baseline documented for any project |
-
 ## Core Patterns
 
 ### CVA Variant Pattern
@@ -176,6 +167,27 @@ All interactive components must satisfy:
 - **Screen reader labels**: all icon-only buttons include `aria-label`; all form inputs are labeled.
 - **Reduced motion**: animations use `motion-safe:` or `prefers-reduced-motion` media queries.
 
-## Pragmatic Stop Rule
+## Workflow
 
-Stop when every component has a valid CVA schema, typed export contract, RSC boundary annotated, and accessibility requirements met. Deferred variants and open items must be recorded in the readiness summary.
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

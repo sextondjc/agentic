@@ -58,15 +58,6 @@ Out of scope:
 - Rejected-candidate table with deterministic reason codes.
 - Closure check: all URL patterns resolve to correct in-app routes on both platforms.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Explain Universal Links vs App Links vs custom schemes; identify which applies | Decision documented with rationale |
-| L2 Delivery | Configure both platforms; implement `appUrlOpen` handler and router mapping | Links verified on at least one physical device per platform |
-| L3 Hardening | Add fallback pages, deferred deep links, hijack prevention, and CI smoke tests | All URL patterns pass on physical iOS and Android; CI gate in place |
-| L4 Expert Standardization | Multi-domain, multi-scheme, cross-team deep-link governance model | Reusable configuration templates and routing conventions documented |
-
 ## Deterministic Workflow
 
 1. Identify all URL patterns, schemes, and target in-app routes.
@@ -168,3 +159,28 @@ App.addListener('appUrlOpen', (event: URLOpenListenerEvent) => {
 - Fallback / preview pages are in place for each domain.
 - Deep-link test plan is documented and CI smoke step is active.
 - Link inventory exists with pattern → route → owner mapping.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

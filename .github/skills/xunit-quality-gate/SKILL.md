@@ -74,48 +74,34 @@ Out of scope:
 - `medium`: meaningful maintainability or coverage gaps with bounded risk.
 - `low`: minor clarity or consistency issues with low immediate impact.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert xUnit quality decision | Deterministic Workflow |
-| Deterministic pass/fail verdict | Decision Rules |
-| Auditable remediation ownership | Required Outputs |
-| Cross-project governance fit | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Test quality should be judged by behavior confidence and determinism, not test count.
-- Explicit ownership is required for unresolved quality risks.
-
-Trade-offs:
-
-- Strict gates reduce regression risk but increase short-term delivery friction.
-- Looser gates increase throughput but risk defect escape and unstable pipelines.
-
-Open blockers:
-
-- Missing behavior contracts reduce confidence in verdict quality.
-- Incomplete flaky-test history can hide systemic determinism issues.
-
-Recommendation:
-
-- Apply this gate to all release-bound xUnit changes and reusable xUnit skill outputs.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Operational checklist guidance is captured in [xunit-quality-gate-checklist.md](./references/xunit-quality-gate-checklist.md).
-
-## Pragmatic Stop Rule
-
-Stop when all findings have severity and owner, determinism posture is explicit, and one recommendation is published.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Decision mode is explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

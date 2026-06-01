@@ -74,3 +74,23 @@ This skill sits at the intersection of UX, Product Management, and Support disci
 ## References
 
 - Related skills: `analysis-execution`, `product-scope-slicing`, `design-web-ux`, `design-mobile-ux`, `operability-design`
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

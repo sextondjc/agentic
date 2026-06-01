@@ -69,12 +69,14 @@ Keep the instruction layer limited to mandatory policy. Keep deep implementation
 - Use explicit column lists; avoid `SELECT *`.
 - Keep repository code focused on persistence mapping only.
 - Validate boundary inputs with Syrx guard semantics.
-- Use async APIs and pass `CancellationToken`.
+- Use async APIs, pass `CancellationToken`, and keep CRUD contracts async-only (do not mix sync and async CRUD members in one repository contract).
+- Prefer canonical CRUD verb families: `Create`, `Retrieve`, `RetrieveAll`, `Update`, `Delete` (and async variants).
+- Avoid synonym drift (`Save`, `Get`, `List`, `Remove`) unless bounded-context semantics require distinct behavior.
 - Prefer paging for list endpoints (`OFFSET/FETCH` on SQL Server).
 
 ## Repository Pattern
 
-Define interface -> inject `ICommander<TRepository>` -> call async query/execute methods -> isolate mapping/materialization -> register repository in DI.
+Define read/write interfaces (optionally composed into one repository facade) -> inject `ICommander<TRepository>` -> call async query/execute methods -> isolate mapping/materialization -> register repositories in DI.
 
 ## Configuration Patterns
 
@@ -84,6 +86,7 @@ Define interface -> inject `ICommander<TRepository>` -> call async query/execute
 - Method names should match configured command keys unless explicitly overridden.
 - Keep connection aliases centralized and consistent.
 - Use per-command timeout/flags only with evidence.
+- Keep repository method signatures independent from command-key resolution concerns; use mapping configuration rather than signature leakage.
 
 ## Query Patterns
 
@@ -91,6 +94,58 @@ Define interface -> inject `ICommander<TRepository>` -> call async query/execute
 - Multi-mapping: use when a joined row must be split into related objects.
 - Multiple result sets: use when batching independent sets reduces round trips.
 - Avoid N+1 repository loops; batch when feasible.
+- Prefer primitive parameters for retrieval/paging scenarios only; prefer complex options/models for state-changing operations.
+
+## Repository Contract and Options Examples
+
+```csharp
+using static Syrx.Validation.Contract;
+
+public sealed record UserQuery
+{
+   public int Page { get; }
+   public int Size { get; }
+
+   public UserQuery(int page = 1, int size = 100)
+   {
+      Throw<ArgumentOutOfRangeException>(page > 0, nameof(page));
+      Throw<ArgumentOutOfRangeException>(size > 0, nameof(size));
+      Page = page;
+      Size = size;
+   }
+}
+
+public sealed record CreateUserOptions
+{
+   public string Email { get; }
+   public string DisplayName { get; }
+
+   public CreateUserOptions(string email, string displayName)
+   {
+      Throw<ArgumentException>(!string.IsNullOrWhiteSpace(email), nameof(email));
+      Throw<ArgumentException>(!string.IsNullOrWhiteSpace(displayName), nameof(displayName));
+      Email = email.Trim();
+      DisplayName = displayName.Trim();
+   }
+}
+
+public interface IUserReadRepository
+{
+   Task<User?> RetrieveAsync(string email, CancellationToken cancellationToken = default);
+   Task<IEnumerable<User>> RetrieveAllAsync(UserQuery query, CancellationToken cancellationToken = default);
+}
+
+public interface IUserWriteRepository
+{
+   Task<User> CreateAsync(CreateUserOptions options, CancellationToken cancellationToken = default);
+   Task<User> UpdateAsync(UpdateUserOptions options, CancellationToken cancellationToken = default);
+   Task<User> DeleteAsync(DeleteUserOptions options, CancellationToken cancellationToken = default);
+}
+
+public interface IUserRepository : IUserReadRepository, IUserWriteRepository
+{
+}
+```
 
 ## Pattern Selection Grid
 
@@ -130,6 +185,9 @@ See `references/review-checklist.md` for review criteria and `references/impleme
 - Returning unbounded result sets for large collections.
 - Mixing domain rules into repository persistence code.
 - Using complex mapping patterns without measured need.
+- Mixing sync and async CRUD members inside one repository contract.
+- Using `Save*` naming where canonical CRUD verb families are expected.
+- Using primitive identifier parameters for state-changing operations when a validated complex options model is expected.
 
 ## Inputs
 
@@ -150,3 +208,19 @@ See `references/review-checklist.md` for review criteria and `references/impleme
 3. Apply DI, async, and guard requirements.
 4. Validate with unit/integration testing guidance.
 
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

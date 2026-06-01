@@ -98,6 +98,22 @@ Out of scope:
 8. Emit the version-impact note for any behavior change that affects existing skill recommendations.
 9. Write updated `./references/source-catalog.md`.
 
-## Pragmatic Stop Rule
+## Execution Context
 
-Stop when every downstream skill topic in the coverage matrix maps to at least one `accept` or `accept-with-watch` source and all guidance deltas are recorded. A bounded exception record is required for any topic with only `accept-with-watch` sources.
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -57,3 +57,20 @@ Invoke this skill when any of the following is true:
 - Coverage grid shows full required-output ownership.
 - Deterministic phase order and handoff criteria are explicit.
 - Phase-output ownership matrix has no unowned or multiply owned required outputs.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

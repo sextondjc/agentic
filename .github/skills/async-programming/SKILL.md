@@ -59,3 +59,23 @@ Use this skill when one or more are true:
 3. Apply cancellation and exception-flow behavior before performance tuning.
 4. Add or run verification for cancellation, timeout, and exception propagation.
 5. Produce outcome summary including any performance evidence and residual risks.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

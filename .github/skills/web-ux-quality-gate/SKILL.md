@@ -52,15 +52,6 @@ Out of scope:
 - Unified release recommendation artifact with `go`, `go-with-exceptions`, or `no-go` disposition.
 - Rejected-candidate table with reason codes for excluded scope or capabilities.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Orchestrate one journey quality gate | One complete intake and one unified recommendation artifact |
-| L2 Delivery | Orchestrate core flow set | All in-scope journeys have evidence in all selected dimensions |
-| L3 Hardening | Enforce release-grade governance | No unresolved high/critical findings without owner and due date |
-| L4 Expert Standardization | Build reusable quality-gate operating model | Reusable intake schema, ownership matrix, and decision rubric are documented |
-
 ## Deterministic Workflow
 
 1. Lock intake scope: journeys, environments, thresholds, and release window.
@@ -172,47 +163,6 @@ Worked example:
 - [ux-quality-gate-recommendation.md](../../../.docs/changes/web-ux-quality-gate-example/ux-quality-gate-recommendation.md)
 - [ux-quality-gate-recommendation.md](../../../.docs/changes/web-ux-quality-gate-full-example/ux-quality-gate-recommendation.md)
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| One intake across all selected dimensions | Deterministic Workflow steps 1 to 3 |
-| Explicit ownership and no ambiguity | Phase-Output Ownership Matrix Template |
-| Unified recommendation artifact | Required Outputs + Evidence Contract |
-| Deterministic release decision rules | Unified Decision Rules |
-| Auditable residual-risk handling | Workflow steps 6 to 10 |
-| Source freshness governance | Source Governance Summary + Source Ledger |
-
-## Reasoning Package
-
-Assumptions:
-
-- Dimension evidence can be produced within release timeline.
-- Decision thresholds are known before synthesis begins.
-
-Trade-offs:
-
-- One umbrella decision improves consistency but requires stronger coordination.
-- Strict blocking rules lower risk but can increase release friction.
-
-Open blockers:
-
-- Missing evidence in any dimension prevents unified recommendation.
-- Inconsistent severity language across dimensions can delay synthesis.
-
-Recommendation:
-
-- Use L3 for release-bound work and L4 when institutionalizing a standard operating model.
-
-## Source Governance Summary
-
-- Source relevance, authority, freshness, and actionability are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold default is 30 days for active source checks.
-
-## Pragmatic Stop Rule
-
-Stop when the ownership matrix has no unowned outputs, all required artifacts are present, and one explicit release recommendation is published with residual-risk accountability.
-
 ## Anti-Patterns
 
 - Running isolated dimension checks without unified synthesis.
@@ -228,3 +178,27 @@ Stop when the ownership matrix has no unowned outputs, all required artifacts ar
 - Source ledger is current for the evaluation cycle.
 - Final recommendation is explicit, evidence-backed, and auditable.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

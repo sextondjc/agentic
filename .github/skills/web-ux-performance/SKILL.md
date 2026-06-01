@@ -52,15 +52,6 @@ Out of scope:
 - Prioritized remediation backlog with owner and expected impact.
 - Final recommendation: `go`, `go-with-exceptions`, or `no-go`.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Validate one journey baseline | One journey has complete UX performance evidence and findings |
-| L2 Delivery | Validate core flow performance quality | Primary, edge, and error journeys have measured UX performance outputs |
-| L3 Hardening | Enforce release-grade UX performance gates | High-risk latency and responsiveness findings are resolved or dispositioned |
-| L4 Expert Standardization | Build reusable UX performance governance pattern | Reusable thresholds, scoring rubric, and evidence schema are documented |
-
 ## Deterministic Workflow
 
 1. Lock scope: journeys, states, devices, and environment assumptions.
@@ -105,52 +96,11 @@ Capture artifacts under one change scope path:
 - `.docs/changes/<workstream-id>/abandonment-risk-rubric.md`
 - `.docs/changes/<workstream-id>/release-recommendation.md`
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Deterministic UX performance execution | Deterministic Workflow |
-| Objective responsiveness and latency evidence | Required Outputs + UX Performance Gate Checklist |
-| Abandonment-risk thresholding | Severity and Risk Model |
-| Durable sign-off artifacts | Evidence Contract |
-| Explicit release recommendation | Required Outputs + Workflow step 9 |
-| Source freshness governance | Source Governance Summary + Source Ledger |
-
-## Reasoning Package
-
-Assumptions:
-
-- In-scope journeys and success criteria are known before validation.
-- UX performance decisions should be based on user-impact evidence, not infrastructure metrics alone.
-
-Trade-offs:
-
-- Stricter thresholds reduce user risk but can increase release pressure.
-- Broader device coverage increases confidence but adds execution time.
-
-Open blockers:
-
-- Missing production-like test conditions can distort perceived-latency outcomes.
-- Undefined loading-state behavior reduces consistency of findings.
-
-Recommendation:
-
-- Use L3 by default for release-bound web UX changes and L4 when establishing reusable team governance.
-
-## Source Governance Summary
-
-- Source relevance, authority, freshness, and actionability are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold default is 30 days for active source checks.
-
 ## Companion Boundaries
 
 - Use this skill for UX performance evidence and release decisions tied to speed and responsiveness.
 - Keep accessibility compliance checks in the accessibility companion skill.
 - Keep task-completion usability studies in the usability companion skill.
-
-## Pragmatic Stop Rule
-
-Stop when all in-scope journeys have measured UX performance evidence, all high and critical abandonment-risk findings are resolved or explicitly deferred with owner and due date, and the final recommendation is recorded with durable artifact links.
 
 ## Anti-Patterns
 
@@ -167,3 +117,27 @@ Stop when all in-scope journeys have measured UX performance evidence, all high 
 - Source ledger is current for this evaluation cycle.
 - Final recommendation is explicit, evidence-backed, and auditable.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -120,11 +120,27 @@ npm install @progress/kendo-theme-default
 - Validate ThemeBuilder output against the new Kendo UI version — regenerate if variable contracts changed.
 - Review CSS custom property names — Progress periodically adds CSS variable support to replace hard-coded SASS outputs.
 
-## Depth Modes
+## Workflow
 
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Apply brand primary color via single SASS variable override | Grid, buttons, and focused widgets reflect the brand color |
-| L2 Practical | Full brand palette mapped to SASS variables with build pipeline integration | SASS compiles without errors; all Kendo UI components reflect brand |
-| L3 Hardening | Dark mode toggle + upgrade-safe theme governance | Dark mode verified across Grid, Chart, and form widgets; upgrade checklist complete |
-| L4 Expert Standardization | Shared Kendo UI theme package in a monorepo with version-locked contracts | Theme package is consumed by two or more projects with documented upgrade governance |
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -78,3 +78,23 @@ This skill does not perform the primary discipline review — it standardises th
 ## References
 
 - Related skills: `code-reviewer`, `manual-code-reviewer`, `request-code-review`, `remediate-review`, `test-design-review`, `release-readiness`
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -1,0 +1,12 @@
+builder:
+  name: docker-container
+  use: true
+command:
+  base: docker buildx build
+  args:
+    - --progress=plain
+    - --cache-from=type=local,src=.buildx-cache
+    - --cache-to=type=local,dest=.buildx-cache-new,mode=max
+    - --file=./Dockerfile
+    - --tag=myservice:optimized
+    - .

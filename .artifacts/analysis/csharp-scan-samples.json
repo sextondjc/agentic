@@ -1,0 +1,218 @@
+[
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Mobile\\Models\\ApiModels.cs",
+    "Namespace": "Ao.Mobile.Models",
+    "Bucket": "Models",
+    "Snippet": "    /// <summary>\n    /// Domain model for the mobile app\n    /// </summary>\n    public class Domain\n    {\n        public string Name { get; set; } = string.Empty;\n        public string? ETag { get; set; }\n        public bool? IsPrimary { get; set; }\n        public string? Kind { get; set; }\n        public bool? Verified { get; set; }\n        public DateTime? CreationTime { get; set; }\n        public List<DomainAlias> Aliases { get; set; } = new();\n    }\n\n    /// <summary>\n    /// Domain alias model for the mobile app\n    /// </summary>\n    public class DomainAlias\n    {\n        public string Name { get; set; } = string.Empty;\n        public string? ETag { get; set; }\n        public string? Kind { get; set; }\n        public string? ParentDomainName { get; set; }\n        public DateTime? CreationTime { get; set; }\n        public bool? Verified { get; set; }\n    }\n\n    /// <summary>\n    /// Generated alias model for the mobile app\n    /// </summary>\n    public class GeneratedAlias\n    {\n        public string Alias { get; set; } = string.Empty;\n        public string? FullEmailAddress { get; set; }\n        public DateTime GeneratedAt { get; set; }\n    }\n\n    /// <summary>\n    /// Paginated response wrapper"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Models\\MappedAliasRecord.cs",
+    "Namespace": "Ao.Models",
+    "Bucket": "Models",
+    "Snippet": "\nnamespace Ao.Models\n{\n    public record MappedAliasRecord(string Alias);\n}"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Models\\MappedDomain.cs",
+    "Namespace": "Ao.Models",
+    "Bucket": "Models",
+    "Snippet": "\nnamespace Ao.Models\n{\n    public record MappedDomain\n    {\n        /// <summary>\n        /// Creation time of the domain. \n        /// (Read-only).\n        /// </summary>\n        public DateTime? CreationTime { get; }\n        /// <summary>A list of domain alias objects. (Read-only)</summary>\n        public IEnumerable<MappedDomainAlias> Aliases { get; }\n        /// <summary>The domain name of the customer.</summary>\n        public string Name { get; }\n        /// <summary>ETag of the resource.</summary>\n        public string ETag { get; }\n        /// <summary>Indicates if the domain is a primary domain (Read-only).</summary>\n        public bool? IsPrimary { get; }\n        /// <summary>Kind of resource this is.</summary>\n        public string Kind { get; }\n        /// <summary>Indicates the verification state of a domain. (Read-only).</summary>\n        public bool? Verified { get; }\n\n        public MappedDomain(\n            string name,\n            IEnumerable<MappedDomainAlias>? aliases = null,\n            string? eTag = null,\n            string? kind = null,\n            bool? isPrimary = false,\n            DateTime? creationTime = null,\n            bool? verified = false)\n        {\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(name), nameof(name));\n\n            CreationTime = creationTime;\n            Aliases = aliases ?? new List<MappedDomainAlias>();\n            Name = name;\n            ETag = eTag;\n            IsPrimary = isPrimary;"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Models\\MappedDomainAlias.cs",
+    "Namespace": "Ao.Models",
+    "Bucket": "Models",
+    "Snippet": "\nnamespace Ao.Models\n{\n    public record MappedDomainAlias\n    {\n        public MappedDomainAlias(\n            string name,\n            string? eTag = null,\n            string? kind = null,\n            string? parentDomainName = null,\n            DateTime? creationTime = null,\n            bool? verified = false)\n        {\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(name), nameof(name));\n\n            Name = name;\n\n            CreationTime = creationTime;\n            ETag = eTag;\n            Kind = kind;\n            ParentDomainName = parentDomainName;\n            Verified = verified;\n        }\n\n        /// <summary>The creation time of the domain alias. (Read-only).</summary>\n        public DateTime? CreationTime { get; }\n        /// <summary>The domain alias name.</summary>\n        public string Name { get; }\n        /// <summary>ETag of the resource.</summary>\n        public string ETag { get; }\n        /// <summary>Kind of resource this is.</summary>\n        public string Kind { get; }\n        /// <summary>\n        /// The parent domain name that the domain alias is associated with. This can either be a primary or secondary\n        /// domain name within a customer.\n        /// </summary>\n        public string ParentDomainName { get; }\n        /// <summary>Indicates the verification state of a domain alias. (Read-only)</summary>\n        public bool? Verified { get; }"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Models\\MappedGroup.cs",
+    "Namespace": "Ao.Models",
+    "Bucket": "Models",
+    "Snippet": "namespace Ao.Models\n{\n    public class MappedGroup\n    {\n        public string Kind { get; }\n        public string Id { get; }\n        public string Etag { get; }\n        public string Email { get; }\n        public string Name { get; }\n        public string Description { get; }\n        public int DirectMembersCount { get; }\n        public bool AdminCreated { get; }\n        public MappedAliasRecord[] Aliases { get; }\n        public MappedAliasRecord[] NonEditableAliases { get; }\n        public IEnumerable<MappedMember> Members { get; }\n\n        public MappedGroup(\n            string name,\n            string email,\n            string description,\n            string etag,\n            string? kind = null,\n            string? id = null,\n            int directMembersCount = 0,\n            bool adminCreated = false,\n            IEnumerable<MappedMember> members = null,\n            MappedAliasRecord[] aliases = null,\n            MappedAliasRecord[] nonEditableAliases = null)\n        {\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(name), nameof(name));\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(email), nameof(email));\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(description), nameof(description));\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(etag), nameof(etag));\n\n            Name = name;\n            Email = email;\n            Description = description;\n            Etag = etag;"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Models\\MappedMember.cs",
+    "Namespace": "Ao.Models",
+    "Bucket": "Models",
+    "Snippet": "    /// domains. For more information about common group member tasks, see the [Developer's\n    /// Guide](/admin-sdk/directory/v1/guides/manage-group-members).\n    /// </summary>\n    public class MappedMember\n    {\n        /// <summary>Defines mail delivery preferences of member. This is only supported by create/update/get.</summary>\n        public string DeliverySettings { get; }\n\n        /// <summary>\n        /// The member's email address. A member can be a user or another group. This property is required when adding a\n        /// member to a group. The `email` must be unique and cannot be an alias of another group. If the email address\n        /// is changed, the API automatically reflects the email address changes.\n        /// </summary>\n        public string Email { get; }\n\n        /// <summary>ETag of the resource.</summary>\n        public string ETag { get; }\n\n        /// <summary>\n        /// The unique ID of the group member. A member `id` can be used as a member request URI's `memberKey`.\n        /// </summary>\n        public string Id { get; }\n\n        /// <summary>\n        /// The type of the API resource. For Members resources, the value is `admin#directory#member`.\n        /// </summary>\n        public string Kind { get; }\n\n        /// <summary>\n        /// The member's role in a group. The API returns an error for cycles in group memberships. For example, if\n        /// `group1` is a member of `group2`, `group2` cannot be a member of `group1`. For more information about a\n        /// member's role, see the [administration help center](https://support.google.com/a/answer/167094).\n        /// </summary>\n        public string Role { get; }\n\n        /// <summary>Status of member (Immutable)</summary>\n        public string Status { get; }\n\n        /// <summary>The type of group member.</summary>"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Models.Mappers\\MappingExtensions.cs",
+    "Namespace": "Ao.Models.Mappers",
+    "Bucket": "Models",
+    "Snippet": "namespace Ao.Models.Mappers\n{\n\n    public static class MappingExtensions\n    {\n\n        public static MappedDomain Map(this Domains domain)\n        {\n            return new MappedDomain(\n                domain.DomainName, \n                domain.DomainAliases.Map(),\n                domain.ETag,\n                domain.Kind,\n                domain.IsPrimary,\n                new DateTime(domain.CreationTime ?? 0),\n                domain.Verified);\n        }\n\n        private static IEnumerable<MappedDomainAlias> Map(this IList<DomainAlias>? domainAliases)\n        {\n            if (domainAliases == null)\n            {\n                return new List<MappedDomainAlias>();\n            }\n\n            return domainAliases.Select(x => new MappedDomainAlias(\n                x.DomainAliasName,\n                x.ETag,\n                x.Kind,\n                x.ParentDomainName,\n                new DateTime(x.CreationTime ?? 0),\n                x.Verified));\n        }\n    }\n}"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Wrappers.Google.Models\\ClientSettings.cs",
+    "Namespace": "Ao.Wrappers.Google.Models",
+    "Bucket": "Models",
+    "Snippet": "namespace Ao.Wrappers.Google.Models\n{\n    public record ClientSettings\n    {\n        public string Application { get; }\n        public string Customer { get; }\n        public string User { get; }\n        public string[] Scopes { get; }\n        public string KeyFilePath { get; }\n        public TimeSpan GroupEditTimeSpan { get; }\n        public string ClientId { get; }\n        public string ClientSecret { get; }\n\n        private ClientSettings(string customer,\n            string user,\n            string application,\n            string[] scopes,\n            TimeSpan groupEditTimeSpan)\n        {\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(application), nameof(application));\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(customer), nameof(customer));\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(user), nameof(user));\n            \n            Throw<ArgumentNullException>(scopes != null, nameof(scopes));\n#pragma warning disable CS8604 // Possible null reference argument.\n            Throw<ArgumentOutOfRangeException>(scopes.Any(), nameof(scopes));\n#pragma warning restore CS8604 // Possible null reference argument.\n\n            Application = application;\n            Customer = customer;\n            User = user;\n            Scopes = scopes;\n            GroupEditTimeSpan = groupEditTimeSpan;\n        }\n                \n        public ClientSettings(\n            string customer,\n            string user,"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Wrappers.Google.Models\\GroupResourceSettings.cs",
+    "Namespace": "Ao.Wrappers.Google.Models",
+    "Bucket": "Models",
+    "Snippet": "\nnamespace Ao.Wrappers.Google.Models\n{\n    public record GroupResourceSettings\n    {\n        /// <summary>\n        /// The amount of time to wait between edits.\n        /// </summary>\n        public TimeSpan EditWaitTimeSpan { get; }\n\n        public GroupResourceSettings(TimeSpan editWaitTimeSpan)\n        {\n            EditWaitTimeSpan = editWaitTimeSpan;\n        }\n    }\n}"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Wrappers.Google.Models\\Builders\\AliasOptions.cs",
+    "Namespace": "Ao.Wrappers.Google.Models.Builders",
+    "Bucket": "Models",
+    "Snippet": "namespace Ao.Wrappers.Google.Models.Builders\n{\n\n    public class AliasOptions\n    {\n        private string? _aliasValue;\n        private string? _id;\n        private string? _primaryEmail;\n        private string? _kind;\n        private string? _etag;\n\n        public AliasOptions AliasValue(string aliasValue)\n        {\n            _aliasValue = aliasValue;\n            return this;\n        }\n\n        public AliasOptions Id(string id)\n        {\n            _id = id;\n            return this;\n        }\n        public AliasOptions PrimaryEmail(string primaryEmail)\n        {\n            _primaryEmail = primaryEmail;\n            return this;\n        }\n\n        public AliasOptions ETag(string etag)\n        {\n            _etag = etag;\n            return this;\n        }\n\n        public AliasOptions Kind(string kind)\n        {\n            _kind = kind;\n            return this;\n        }"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Wrappers.Google.Models\\Builders\\AliasOptionsExtensions.cs",
+    "Namespace": "Ao.Wrappers.Google.Models.Builders",
+    "Bucket": "Models",
+    "Snippet": "namespace Ao.Wrappers.Google.Models.Builders\n{\n    public static class AliasOptionsExtensions\n    {\n        public static Alias UseAliasOptions(Action<AliasOptions> builder)\n        {\n            var options = new AliasOptions();\n            builder(options);\n            return options.Build();\n        }\n    }\n}"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Wrappers.Google.Models\\Builders\\GroupOptions.cs",
+    "Namespace": "Ao.Wrappers.Google.Models.Builders",
+    "Bucket": "Models",
+    "Snippet": "\nnamespace Ao.Wrappers.Google.Models.Builders\n{\n    public class GroupOptions\n    {\n        private string? _name;\n        private string? _email;\n        private string? _description;\n        private string? _etag;\n        private string? _kind;\n        private string? _id;\n        private int? _directMembersCount = 0;\n        private bool? _adminCreated = false;\n        private IList<string>? _aliases = new List<string>();\n\n\n        public GroupOptions Name(string name)\n        {\n            _name = name;\n            return this;\n        }\n\n        public GroupOptions Email(string email)\n        {\n            _email = email;\n            return this;\n        }\n\n        public GroupOptions Description(string description)\n        {\n            _description = description;\n            return this;\n        }\n\n        public GroupOptions ETag(string etag)\n        {\n            _etag = etag;\n            return this;\n        }"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Repositories\\DomainRepository.cs",
+    "Namespace": "Ao.Repositories",
+    "Bucket": "Repositories",
+    "Snippet": "\nnamespace Ao.Repositories {\n\n    public class DomainRepository : IDomainRepository\n    {\n        private readonly IDomainWrapperService _service;\n\n        public DomainRepository(IDomainWrapperService service)\n        {\n            _service = service;\n        }\n\n        public async Task<MappedDomain> CreateAsync(string name, CancellationToken cancellationToken = default)\n        {\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(name), nameof(name));\n            var result = await _service.CreateAsync(name, cancellationToken);\n            return result.Map();\n        }\n\n        public async Task<MappedDomain> DeleteAsync(string name, CancellationToken cancellationToken = default)\n        {\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(name), nameof(name));\n            var result = await _service.DeleteAsync(name, cancellationToken);\n            return result.Map();\n        }\n\n        public async Task<MappedDomain> RetrieveAsync(string name, CancellationToken cancellationToken = default)\n        {\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(name), nameof(name));\n            var result = await _service.RetrieveAsync(name, cancellationToken);\n            return result.Map();\n        }\n\n        public async Task<IEnumerable<MappedDomain>> RetrieveAllAsync(int page = 1, int size = 100, CancellationToken cancellationToken = default)\n        {\n            var result = await _service.RetrieveAllAsync(page, size, cancellationToken);\n            return result.Select(x => x.Map());\n        }\n    }"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Repositories\\GroupRepository.cs",
+    "Namespace": "Ao.Repositories",
+    "Bucket": "Repositories",
+    "Snippet": "namespace Ao.Repositories\n{\n\n    public class GroupRepository : IGroupRepository\n    {\n        private readonly IGroupServiceWrapper _service;\n\n        public GroupRepository(IGroupServiceWrapper service)\n        {\n            _service = service;\n        }\n\n        public async Task<MappedGroup> CreateAsync(MappedGroup group, CancellationToken cancellationToken = default)\n        {\n            Throw<ArgumentNullException>(group is not null, nameof(group));\n            var result = await _service.CreateAsync(Map(group!), cancellationToken);\n            Throw<InvalidOperationException>(result is not null, nameof(result));\n            return Map(result!);\n        }\n\n        public async Task<MappedGroup> RetrieveAsync(string email, CancellationToken cancellationToken = default)\n        {\n            Throw<ArgumentNullException>(!string.IsNullOrWhiteSpace(email), nameof(email));\n            var result = await _service.RetrieveAsync(email, cancellationToken);\n            return Map(result);\n        }\n\n        public async Task<IEnumerable<MappedGroup>> RetrieveAllAsync(int page = 1, int size = 100, CancellationToken cancellationToken = default)\n        {\n            var result = await _service.RetrieveAllAsync(page, size, cancellationToken);\n            return result.Select(Map);\n        }\n\n        public async Task<MappedGroup> UpdateAsync(MappedGroup group, CancellationToken cancellationToken = default)\n        {\n            Throw<ArgumentNullException>(group is not null, nameof(group));\n            var result = await _service.UpdateAsync(Map(group!), cancellationToken);\n            Throw<InvalidOperationException>(result is not null, nameof(result));\n            return Map(result!);"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Repositories\\IDomainRepository.cs",
+    "Namespace": "Ao.Repositories",
+    "Bucket": "Repositories",
+    "Snippet": "\nnamespace Ao.Repositories\n{\n    public interface IDomainRepository\n    {\n        Task<MappedDomain> CreateAsync(string name, CancellationToken cancellationToken = default);\n        Task<MappedDomain> DeleteAsync(string name, CancellationToken cancellationToken = default);\n        Task<MappedDomain> RetrieveAsync(string name, CancellationToken cancellationToken = default);\n        Task<IEnumerable<MappedDomain>> RetrieveAllAsync(\n            int page = 1,\n            int size = 100,\n            CancellationToken cancellationToken = default);\n    }\n}"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Repositories\\IGroupRepository.cs",
+    "Namespace": "Ao.Repositories",
+    "Bucket": "Repositories",
+    "Snippet": "\nnamespace Ao.Repositories\n{\n    public interface IGroupRepository\n    {\n        Task<MappedGroup> CreateAsync(MappedGroup group, CancellationToken cancellationToken = default);\n        Task<MappedGroup> RetrieveAsync(string email, CancellationToken cancellationToken = default);\n        Task<IEnumerable<MappedGroup>> RetrieveAllAsync(int page = 1, int size = 100, CancellationToken cancellationToken = default);\n        Task<MappedGroup> UpdateAsync(MappedGroup group, CancellationToken cancellationToken = default);\n        Task<MappedGroup> DeleteAsync(MappedGroup group, CancellationToken cancellationToken = default);\n    }\n}"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Wrappers.Google.Repositories\\ClientSettingsRepository.cs",
+    "Namespace": "Ao.Wrappers.Google.Repositories",
+    "Bucket": "Repositories",
+    "Snippet": "namespace Ao.Wrappers.Google.Repositories;\n\npublic class ClientSettingsRepository : IClientSettingsRepository\n{\n    private readonly IConfiguration _configuration;\n\n    public ClientSettingsRepository(IConfiguration? configuration = null)\n    {\n        _configuration = configuration ?? new ConfigurationBuilder()\n            .AddJsonFile(\"appsettings.json\", optional: true, reloadOnChange: false)\n            .AddJsonFile(\"secrets.json\", optional: true, reloadOnChange: false)\n            .AddUserSecrets<ClientSettingsRepository>(optional: true)\n            .Build();\n    }\n\n    public ClientSettings Retrieve()\n    {\n        var settings = _configuration.GetSection(\"Google\").Get<ClientSettings>();\n\n        Throw<InvalidOperationException>(settings is not null, \"Google settings are missing from configuration or user secrets.\");\n        Throw<InvalidOperationException>(!string.IsNullOrWhiteSpace(settings!.Customer), \"Google:Customer is required.\");\n        Throw<InvalidOperationException>(!string.IsNullOrWhiteSpace(settings.User), \"Google:User is required.\");\n        Throw<InvalidOperationException>(!string.IsNullOrWhiteSpace(settings.Application), \"Google:Application is required.\");\n        Throw<InvalidOperationException>(settings.Scopes is not null && settings.Scopes.Length > 0, \"Google:Scopes is required.\");\n        Throw<InvalidOperationException>(!string.IsNullOrWhiteSpace(settings.ClientId), \"Google:ClientId is required.\");\n        Throw<InvalidOperationException>(!string.IsNullOrWhiteSpace(settings.ClientSecret), \"Google:ClientSecret is required.\");\n\n        return settings;\n    }\n}"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\src\\Ao.Wrappers.Google.Repositories\\IClientSettingsRepository.cs",
+    "Namespace": "Ao.Wrappers.Google.Repositories",
+    "Bucket": "Repositories",
+    "Snippet": "namespace Ao.Wrappers.Google.Repositories;\n\npublic interface IClientSettingsRepository\n{\n    ClientSettings Retrieve();\n}"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\IntegrationTestsFixture.cs",
+    "Namespace": "Ao.Repositories.Tests.Integration",
+    "Bucket": "Repositories",
+    "Snippet": "namespace Ao.Repositories.Tests.Integration\n{\n    public class IntegrationTestsFixture\n    {\n        public IDirectoryServiceWrapper DirectoryServiceWrapper { get; }\n        public IDomainWrapperService DomainWrapperService { get; }\n        public IGroupServiceWrapper GroupWrapperService { get; }\n\n        private readonly ServiceProvider _serviceProvider;\n\n        public IntegrationTestsFixture()\n        {\n            var provider = Installer.Install();\n\n            DirectoryServiceWrapper = provider.GetRequiredService<IDirectoryServiceWrapper>();\n            DomainWrapperService = provider.GetRequiredService<IDomainWrapperService>();\n            GroupWrapperService = provider.GetRequiredService<IGroupServiceWrapper>();\n        }\n    }\n}\n"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\CreateAsync.cs",
+    "Namespace": "Ao.Repositories.Tests.Integration.DomainRepositoryTests",
+    "Bucket": "Repositories",
+    "Snippet": "namespace Ao.Repositories.Tests.Integration.DomainRepositoryTests\n{\n    public sealed class CreateAsync : IClassFixture<IntegrationTestsFixture>, IDisposable\n    {\n        private readonly IDomainRepository _repository;\n        const string TestDomain = \"creation-test.aliases.online\";\n        public CreateAsync(IntegrationTestsFixture fixture)\n        {\n            _repository = new DomainRepository(fixture.DomainWrapperService);\n        }\n\n        private void TearDown()\n        {\n            try\n            {\n                var domain = _repository.RetrieveAsync(TestDomain).Result;\n                if (domain != null)\n                {\n                    _repository.DeleteAsync(TestDomain).Wait();\n                }\n            }\n            catch (Exception e)\n            {\n                Console.WriteLine(e);\n            }\n        }\n\n        [Fact]\n        public async Task CreateDomainSuccessfully()\n        {\n            var result = await _repository.CreateAsync(TestDomain);\n            NotNull(result);\n            Equal(TestDomain, result.Name);\n        }\n\n        [Fact]\n        public async Task DuplicateDomainThrowsException()\n        {"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\DeleteAsync.cs",
+    "Namespace": "Ao.Repositories.Tests.Integration.DomainRepositoryTests",
+    "Bucket": "Repositories",
+    "Snippet": "\nnamespace Ao.Repositories.Tests.Integration.DomainRepositoryTests\n{\n    public class DeleteAsync : IClassFixture<IntegrationTestsFixture>\n    {\n        private readonly IDomainRepository _repository;\n        const string Name = \"delete-test.aliases.online\";\n\n        public DeleteAsync(IntegrationTestsFixture fixture)\n        {\n            _repository = new DomainRepository(fixture.DomainWrapperService);\n            Setup();\n        }\n\n        private void Setup()\n        {\n            var entry = _repository.RetrieveAllAsync().Result.SingleOrDefault(x => x.Name == Name);\n            if (entry != null)\n            {\n                _repository.DeleteAsync(Name).Wait();\n            }\n\n            _repository.CreateAsync(Name).Wait();\n        }\n\n        [Fact]\n        public async Task DeleteDomainSuccessfully()\n        {\n            var result = await _repository.DeleteAsync(Name);\n            NotNull(result);\n            Equal(Name, result.Name);\n        }\n    }\n}\n"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\RetrieveAllAsync.cs",
+    "Namespace": "Ao.Repositories.Tests.Integration.DomainRepositoryTests",
+    "Bucket": "Repositories",
+    "Snippet": "namespace Ao.Repositories.Tests.Integration.DomainRepositoryTests\n{\n    public class RetrieveAllAsync : IClassFixture<IntegrationTestsFixture>\n    {\n        private readonly IDomainRepository _repository;\n\n        public RetrieveAllAsync(IntegrationTestsFixture fixture)\n        {\n            _repository = new DomainRepository(fixture.DomainWrapperService);\n        }\n        \n        [Fact]\n        public async Task RetrieveAllAsyncSuccessfully()\n        {\n            var result = await _repository.RetrieveAllAsync();\n            result.ToList().ForEach(x => Console.WriteLine(x.Name));\n            NotNull(result);\n        }\n    }\n}"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\DomainRepositoryTests\\RetrieveAsync.cs",
+    "Namespace": "Ao.Repositories.Tests.Integration.DomainRepositoryTests",
+    "Bucket": "Repositories",
+    "Snippet": "\nnamespace Ao.Repositories.Tests.Integration.DomainRepositoryTests\n{\n    public class RetrieveAsync : IClassFixture<IntegrationTestsFixture>\n    {\n        private readonly IDomainRepository _repository;\n\n        public RetrieveAsync(IntegrationTestsFixture fixture)\n        {\n            _repository = new DomainRepository(fixture.DomainWrapperService);\n        }\n\n        [Fact]\n        public async Task Successfully()\n        {\n            const string name = \"shopping.aliases.online\";\n            var result = await _repository.RetrieveAsync(name);\n            NotNull(result);\n            Equal(name, result.Name);\n        }\n\n    }\n}\n"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\GroupRepositoryTests\\CreateAsync.cs",
+    "Namespace": "Ao.Repositories.Tests.Integration.GroupRepositoryTests",
+    "Bucket": "Repositories",
+    "Snippet": "namespace Ao.Repositories.Tests.Integration.GroupRepositoryTests;\n\npublic sealed class CreateAsync : IClassFixture<IntegrationTestsFixture>, IAsyncLifetime\n{\n    private readonly IGroupRepository _repository;\n    private readonly string _email;\n\n    public CreateAsync(IntegrationTestsFixture fixture)\n    {\n        _repository = new GroupRepository(fixture.GroupWrapperService);\n        _email = GroupRepositoryTestData.UniqueEmail(\"grouprepo-create\");\n    }\n\n    [Fact]\n    public async Task Successfully()\n    {\n        var input = GroupRepositoryTestData.Build(_email, \"Group Repo Create\");\n        var result = await _repository.CreateAsync(input);\n\n        NotNull(result);\n        Equal(input.Email, result.Email);\n        Equal(input.Name, result.Name);\n\n        var retrieved = await GroupRepositoryTestData.RetryRetrieveAsync(_repository, _email);\n        NotNull(retrieved);\n    }\n\n    [Fact]\n    public async Task NullGroupThrowsArgumentNullException()\n    {\n        var result = await ThrowsAsync<ArgumentNullException>(() => _repository.CreateAsync(null!));\n        result.ArgumentNull(\"group\");\n    }\n\n    public async Task InitializeAsync()\n    {\n        await GroupRepositoryTestData.CleanupAsync(_repository, _email);\n    }"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Models.Tests.Common\\DomainAliasConstants.cs",
+    "Namespace": "Ao.Models.Tests.Common",
+    "Bucket": "Models",
+    "Snippet": "namespace Ao.Models.Tests.Common\n{\n\n    public class DomainAliasConstants\n    {\n\n        public static MappedDomainAlias Testinstance(string name = Constructor.Name,\n            string? eTag = Constructor.Etag,\n            string? kind = Constructor.Kind,\n            string? parentDomainName = Constructor.ParentDomainName,\n            DateTime? creationTime = null,\n            bool? verified = Constructor.Verified)\n        {\n            return new MappedDomainAlias(name, eTag, kind, parentDomainName, creationTime, verified);\n        }\n\n        public class Constructor\n        {\n            public const string Name = \"constructor.test.domain.alias.name\";\n            public const string Etag = \"constructor.test.domain.alias.etag\";\n            public const string Kind = \"constructor.test.domain.alias.kind\";\n            public const string ParentDomainName = \"constructor.test.domain.alias.parent.domain.name\";\n            public const bool Verified = true;\n            public static readonly DateTime CreationTime = new DateTime(2016, 6, 15, 19, 37, 45);\n        }\n    }\n}"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Models.Tests.Common\\DomainConstants.cs",
+    "Namespace": "Ao.Models.Tests.Common",
+    "Bucket": "Models",
+    "Snippet": "\nnamespace Ao.Models.Tests.Common\n{\n    public class DomainConstants\n    {\n        public const string DoesNotExist = \"does-not-exist.aliases.online\";\n        public const string DoesNotExistErrorMessage =\n            \"The service admin has thrown an exception. HttpStatusCode is NotFound. Domain not found.\";\n\n        public static Domains GoogleDomainTestInstance(\n            string name = \"test-domain.aliases.online\",\n            string etag = \"test.domain.etag\")\n        {\n            return new Domains\n            {\n                DomainName = name,\n                ETag = etag\n            };\n        }\n\n        public class Constructor\n        {\n            public const string Name = \"constructor.domain\";\n            public static readonly IEnumerable<MappedDomainAlias> Aliases = new[] { DomainAliasConstants.Testinstance(\"constructor-domain-1\") };\n            public const string Etag = \"constructor.domain.etag\";\n            public const string Kind = \"constructor.domain.kind\";\n            public const bool Verified = true;\n            public const bool IsPrimary = true;\n            public static readonly DateTime CreationTime = new(2016, 6, 15, 19, 37, 44);\n        }\n\n        public class Create\n        {\n            public const string Name = \"create.aliases.online\";\n            public const string ETag = \"create.domain.etag\";\n            public const string DuplicateErrorMessage =\n                \"The service admin has thrown an exception. HttpStatusCode is Conflict. Domain is already set up.\";\n            \n            public static Domains Instance = GoogleDomainTestInstance(Name, ETag);"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Models.Tests.Common\\GroupAliasConstants.cs",
+    "Namespace": "Ao.Models.Tests.Common",
+    "Bucket": "Models",
+    "Snippet": "namespace Ao.Models.Tests.Common\n{\n\n    public class GroupAliasConstants\n    {\n        public class Builder\n        {\n            public const string AliasValue = \"group.alias.value@test.aliases.online\";\n            public const string Id = \"group.alias.id\";\n            public const string Kind = \"admin#group#alias\";\n            public const string Etag = \"group.alias.etag\";\n            public const string PrimaryEmail = \"unit.test@test.aliases.online\";\n        }\n\n        public class Create\n        {\n            public const string GroupName = \"group.alias.create.test\";\n            public const string GroupEmail = \"group.alias.create.test@test.aliases.online\";\n            public const string Alias = \"group.alias.test.create.one@test.aliases.online\";\n\n            public const string DuplicateGroupName = \"group.alias.create.test.duplicate\";\n            public const string DuplicateGroupEmail = \"group.alias.create.test.duplicate@test.aliases.online\";\n            public const string DuplicateAlias = \"group.alias.test.create.duplicate@test.aliases.online\";\n\n            public const string DuplicateErrorMessage =\n                \"The service admin has thrown an exception. HttpStatusCode is Conflict. Entity already exists.\";\n        }\n\n        public class Delete\n        {\n            public const string GroupName = \"group.alias.delete.test\";\n            public const string GroupEmail = \"group.alias.delete.test@test.aliases.online\";\n            public const string AliasValue = \"group.alias.test.delete.one@test.aliases.online\";\n            public const string NonExistentAlias = \"group.alias.test.delete.nonexistent.one@test.aliases.online\";\n\n            public const string NotFoundErrorMessage =\n                \"The service admin has thrown an exception. HttpStatusCode is NotFound. Resource Not Found: groupKey\";\n\n            public const string BadRequest ="
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Models.Tests.Common\\GroupConstants.cs",
+    "Namespace": "Ao.Models.Tests.Common",
+    "Bucket": "Models",
+    "Snippet": "\nnamespace Ao.Models.Tests.Common\n{\n    public class GroupConstants\n    {\n        public const string NonExistent = \"does-not-exist.group.name\";\n\n        public class Builder\n        {\n            public const string Kind = \"admin#directory#group\";\n            public const string Id = \"unit.test.group.id\";\n            public const string Etag = \"unit.test.group.etag\";\n            public const string Email = \"unit.test.group.email\";\n            public const string Name = \"unit.test.group.name\";\n            public const string Description = \"unit.test.group.description\";\n            public static readonly int DirectMembersCount = 3;\n            public const bool AdminCreated = true;\n\n            public static readonly IEnumerable<MappedMember> Members = new List<MappedMember>()\n            {\n                //GroupMemberConstants.TestInstance(\"unit.group.member.one@test.aliases.online\"),\n                //GroupMemberConstants.TestInstance(\"unit.group.member.two@test.aliases.online\"),\n                //GroupMemberConstants.TestInstance(\"unit.group.member.three@test.aliases.online\"),\n            };\n\n            public static readonly MappedAliasRecord[] Aliases = new[]\n            {\n                new MappedAliasRecord(\"unit.test.group.alias.1\"),\n                new MappedAliasRecord(\"unit.test.group.alias.2\")\n            };\n        }\n\n        public class Constructor\n        {\n            public const string Kind = \"constructor.test.group.kind\";\n            public const string Id = \"constructor.test.group.id\";\n            public const string Etag = \"constructor.test.group.etag\";\n            public const string Email = \"constructor.test.group.email\";\n            public const string Name = \"constructor.test.group.name\";"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Models.Tests.Common\\MemberConstants.cs",
+    "Namespace": "Ao.Models.Tests.Common",
+    "Bucket": "Models",
+    "Snippet": "namespace Ao.Models.Tests.Common\n{\n\n    public class MemberConstants\n    {\n        public class Builder\n        {\n            public const string DeliverySettings = \"member.test.delivery-settings\";\n            public const string Email = \"member.test.email\";\n            public const string ETag = \"member.test.etag\";\n            public const string Id = \"member.test.id\";\n            public const string Kind = \"admin#directory#member\";\n            public const string Role = \"member.test.role\";\n            public const string Status = \"member.test.status\";\n            public const string Type = \"member.test.type\";\n        }\n\n        public class Constructor\n        {\n            public const string DeliverySettings = \"constructor.member.test.delivery-settings\";\n            public const string Email = \"constructor.member.test.email\";\n            public const string ETag = \"constructor.member.test.etag\";\n            public const string Id = \"constructor.member.test.id\";\n            public const string Kind = \"constructor.member.test.kind\";\n            public const string Role = \"constructor.member.test.role\";\n            public const string Status = \"constructor.member.test.status\";\n            public const string MemberType = \"constructor.member.test.type\";\n        }\n    }\n}\n"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Models.Tests.Common\\Usings.cs",
+    "Namespace": "",
+    "Bucket": "Tests",
+    "Snippet": "global // ========================================================================================================================================================\n// author      : david sexton (@sextondjc | sextondjc.com)\n// created     : 2023.08.18 (2:36 PM)\n// modified    : 2023.08.18 (2:36 PM)\n// site        : https://www.github.com/syrx\n// ========================================================================================================================================================\n\nusing Google.Apis.Admin.Directory.directory_v1.Data;"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Tests.Common\\ExceptionExtensions.cs",
+    "Namespace": "Ao.Tests.Common",
+    "Bucket": "Tests",
+    "Snippet": "// ========================================================================================================================================================\n// author      : david sexton (@sextondjc | sextondjc.com)\n// created     : 2023.08.12 (2:36 PM)\n// modified    : 2023.08.12 (2:36 PM)\n// site        : https://www.github.com/syrx\n// ========================================================================================================================================================\n\nnamespace Ao.Tests.Common\n{\n    public static class ExceptionExtensions\n    {\n        public static void ArgumentNull(this Exception exception, string parameterName)\n        {\n            exception.HasMessage($\"Value cannot be null. (Parameter '{parameterName}')\");\n        }\n\n        public static void ArgumentOutOfRange(this Exception exception, string parameterName)\n        {\n            exception.HasMessage($\"Specified argument was out of the range of valid values. (Parameter '{parameterName}')\");\n        }\n\n        public static void HasMessage(this Exception exception, string message)\n        {\n            Assert.Equal(message, exception.Message);\n        }\n    }\n}\n"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Tests.Common\\Generators.cs",
+    "Namespace": "Ao.Tests.Common",
+    "Bucket": "Tests",
+    "Snippet": "namespace Ao.Tests.Common\n{\n\npublic class Generators\n{\n    public static IEnumerable<object[]> NullEmptyWhitespace\n        => new List<object[]>\n        {\n            new object[] {null},\n            new object[] {string.Empty},\n            new object[] {\" \"}\n        };\n}\n}\n"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Tests.Common\\TypeExtensions.cs",
+    "Namespace": "Ao.Tests.Common",
+    "Bucket": "Tests",
+    "Snippet": "namespace Ao.Tests.Common\n{\n\n    public static class TypeExtensions\n    {\n        /// <summary>\n        /// Convenience method for printing object graphs to the console. \n        /// </summary>\n        /// <param name=\"obj\"></param>\n        public static void PrintAsJson(this object obj)\n        {\n            var options = new JsonSerializerOptions()\n            {\n                WriteIndented = true\n            };\n            var content = JsonSerializer.Serialize(obj, options);\n            Console.WriteLine(content);\n        }\n    }\n\n}\n"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\common\\Ao.Tests.Common\\Usings.cs",
+    "Namespace": "",
+    "Bucket": "Tests",
+    "Snippet": "global using Xunit;\nglobal using System.Text.Json;"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\IntegrationTestsFixture.cs",
+    "Namespace": "Ao.Repositories.Tests.Integration",
+    "Bucket": "Repositories",
+    "Snippet": "namespace Ao.Repositories.Tests.Integration\n{\n    public class IntegrationTestsFixture\n    {\n        public IDirectoryServiceWrapper DirectoryServiceWrapper { get; }\n        public IDomainWrapperService DomainWrapperService { get; }\n        public IGroupServiceWrapper GroupWrapperService { get; }\n\n        private readonly ServiceProvider _serviceProvider;\n\n        public IntegrationTestsFixture()\n        {\n            var provider = Installer.Install();\n\n            DirectoryServiceWrapper = provider.GetRequiredService<IDirectoryServiceWrapper>();\n            DomainWrapperService = provider.GetRequiredService<IDomainWrapperService>();\n            GroupWrapperService = provider.GetRequiredService<IGroupServiceWrapper>();\n        }\n    }\n}\n"
+  },
+  {
+    "Path": "C:\\Projects\\aliasesonline\\test\\integration\\Ao.Repositories.Tests.Integration\\TestAssembly.cs",
+    "Namespace": "",
+    "Bucket": "Tests",
+    "Snippet": "["
+  }
+]

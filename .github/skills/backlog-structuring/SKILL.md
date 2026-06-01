@@ -55,15 +55,6 @@ Out of scope:
 - Ready-state checklist for execution-ready items.
 - Deferral register for items held out of the active backlog.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Clarify hierarchy and item naming | One stable hierarchy and item template exist |
-| L2 Delivery | Enable backlog shaping for active work | Active items have required fields and ordering logic |
-| L3 Hardening | Standardize team-ready backlog behavior | Ready-state and deferral rules are enforced consistently |
-| L4 Expert Standardization | Establish reusable cross-project backlog architecture | Hierarchy, item schema, and ordering policy are portable and auditable |
-
 ## Deterministic Workflow
 
 1. Define the top-level goal and the delivery horizon the backlog must serve.
@@ -99,46 +90,6 @@ Out of scope:
 - If a task contains user-value language, it probably belongs one level higher.
 - If a deferral reason is missing, the item is not deferred; it is unmanaged.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Clear hierarchy | Deterministic Workflow steps 1 to 3 |
-| Reusable item schema | Required Outputs + Artifact Contract |
-| Ordering and deferral discipline | Deterministic Workflow steps 5 to 7 |
-| Agent-usable ready state | Ready-state checklist + Decision Rules |
-| Cross-project portability | Depth Modes L4 + Hierarchy Rules |
-
-## Reasoning Package
-
-Assumptions:
-
-- The project benefits from explicit hierarchy rather than a flat list.
-- The lowest planning level is not the same as the execution-task level.
-
-Trade-offs:
-
-- More hierarchy improves traceability but increases maintenance cost.
-- Strict schema rules reduce ambiguity but require disciplined backlog curation.
-
-Open blockers:
-
-- Legacy backlogs may contain unlabeled items that need manual normalization.
-- Tool limits can pressure teams into bad hierarchy compromises.
-
-Recommendation:
-
-- Use this skill whenever delivery work spans more than one release candidate or more than one planning level. It provides the durable structure agents need for planning, execution, and reporting.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Default freshness threshold is 30 days.
-
-## Pragmatic Stop Rule
-
-Stop when every active item fits one level, required fields are explicit, and the execution-ready level has an enforceable Ready checklist.
-
 ## Anti-Patterns
 
 - Treating the backlog as a dumping ground.
@@ -152,3 +103,28 @@ Stop when every active item fits one level, required fields are explicit, and th
 - Ready-state and deferral rules are explicit.
 - Active items can be normalized into one consistent hierarchy.
 - Source catalog entries are current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

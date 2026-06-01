@@ -62,15 +62,6 @@ Out of scope:
 - Rejected-phase table with deterministic reason codes (phases excluded from scope).
 - Closure check stating whether all required outputs are owned.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Route one mixed Tailwind request | One intake and one phase contract exist |
-| L2 Delivery | Coordinate a cross-phase Tailwind effort | Every required output has one owning phase |
-| L3 Hardening | Support production-grade Tailwind delivery | Risks, evidence expectations, and blockers are explicit |
-| L4 Expert Standardization | Establish reusable Tailwind operating model | Reusable intake, token conventions, accessibility baseline, and CI quality policy documented |
-
 ## Tailwind Capability Catalog
 
 | Phase | Specialist Skill | When Active |
@@ -106,16 +97,6 @@ Out of scope:
 | Shared token package architecture and versioning policy | Design System | `tailwind-design-system` | Three-layer taxonomy documented; semver policy and breaking-change matrix in place; cross-app consistency audit complete |
 | Quality gate verdict and findings | Quality Gate | `tailwind-quality-gate` | All five gate dimensions with findings table and GO/NO-GO recommendation |
 
-## Unified Decision Rules
-
-- If the request is a new project on v4: run Source Curation → Setup → Component Design → Quality Gate in sequence.
-- If the request is a v3 → v4 migration of an existing project: start at Setup (migration workflow); run Quality Gate after.
-- If the request is a component library design or update with no config changes: start at Component Design; run Quality Gate after.
-- If the request is a quality audit only: run Quality Gate; invoke Source Curation only if version staleness is suspected.
-- If source curation reveals a breaking change that affects the target version: block downstream phases until curation is complete.
-- If the project serves multiple apps from a shared token package: activate Design System phase before Component Design; Component Design consumes the token package output.
-- If CI enforcement is not yet in place for the project: activate CI Integration phase alongside or immediately after Setup; do not defer to Quality Gate only.
-
 ## Rejected-Phase Reason Codes
 
 | Code | Meaning |
@@ -143,4 +124,27 @@ Out of scope:
 - [tailwind-design-system](../tailwind-design-system/SKILL.md)
 - [tailwind-quality-gate](../tailwind-quality-gate/SKILL.md)
 
+## Workflow
 
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

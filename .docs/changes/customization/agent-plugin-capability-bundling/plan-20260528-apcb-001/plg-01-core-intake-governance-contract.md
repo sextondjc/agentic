@@ -28,6 +28,29 @@
 | Prompts | run-delivery-pattern.prompt.md; execute-delivery.prompt.md; review-project.prompt.md |
 | Skills | work-intake-governance; route-customization; compose-skills; writing-plans; task-research; task-execution; plans; scope-change-control; taxonomy-tag-registry |
 
+## Asset Purpose and Benefit Matrix
+
+| Asset | Purpose | Benefit |
+|---|---|---|
+| orchestrator.agent.md | Mandatory intake and routing authority for deterministic workflows. | Ensures all downstream plugin requests begin with consistent classification and scope control. |
+| governance-lifecycle.instructions.md | Defines lane controls and handoff traceability. | Keeps intake and control-plane behavior aligned to Planning, Execution, Review governance. |
+| request-economy.instructions.md | Enforces bounded discovery and efficient operation. | Reduces noise and unnecessary expansion in control-plane decisioning. |
+| secure-coding.instructions.md | Provides cross-cutting security defaults. | Applies secure baseline to all routed work from this foundational plugin. |
+| governance-release.instructions.md | Defines approval and release evidence policy. | Prevents ungated promotion behavior in routed workflows. |
+| governance-naming-conventions.instructions.md | Standardizes asset naming and discoverability conventions. | Improves consistency of routed asset references and catalog integrity. |
+| run-delivery-pattern.prompt.md | Encodes approved delivery pattern invocation. | Gives a repeatable entrypoint for lifecycle-consistent delivery routing. |
+| execute-delivery.prompt.md | Supports controlled execution resumption. | Improves deterministic transition from intake to execution slices. |
+| review-project.prompt.md | Provides pre-execution review posture check. | Reduces risk of executing with unresolved scope or governance drift. |
+| work-intake-governance | Specializes intake classification and admission control. | Strengthens objective, scope, and boundary quality at request entry. |
+| route-customization | Maps requests to correct customization type. | Prevents misrouting and keeps plugin composition precise. |
+| compose-skills | Defines deterministic multi-skill composition contracts. | Enables safe composition of control-plane capabilities without ambiguity. |
+| writing-plans | Produces execution-ready plans when absent. | Preserves planning completeness before execution starts. |
+| task-research | Supports bounded research before implementation. | Improves decision quality for intake without uncontrolled exploration. |
+| task-execution | Executes approved plans with traceability. | Connects control-plane decisions to implementation lifecycle safely. |
+| plans | Supports checkpointed plan execution in dedicated sessions. | Maintains continuity for longer-running routed workstreams. |
+| scope-change-control | Governs adds, swaps, and descopes during delivery. | Protects control-plane integrity when scope pressure appears. |
+| taxonomy-tag-registry | Maintains tag consistency across artifacts. | Keeps categorization and routing metadata stable across plugins. |
+
 ## Dependency Model
 
 | Rule ID | Rule | Enforcement |

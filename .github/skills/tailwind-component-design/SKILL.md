@@ -50,110 +50,6 @@ This skill covers component-level design patterns. Build pipeline and project se
 | Accessibility annotation | Contrast, focus-visible, reduced-motion, and keyboard interaction requirements met for each component |
 | Readiness summary | Open risks, known edge cases, and deferred patterns |
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Implement one styled component with Tailwind | Component renders correctly across breakpoints with accessible contrast |
-| L2 Practical Delivery | Deliver a component library slice | Token map, responsive strategy, and accessibility annotation complete for all delivered components |
-| L3 Design System Alignment | Align Tailwind tokens with a design system | `@theme` block maps 1:1 with design tokens; visual drift between design and implementation is zero |
-| L4 Expert Standardization | Reusable cross-project component patterns | Documented pattern library with token conventions, accessibility baseline, and dark-mode contract usable by any project |
-
-## Design Token Strategy
-
-### v4 CSS-First Tokens (`@theme`)
-
-Define all design tokens in the CSS entry point using the `@theme {}` block:
-
-```css
-@import "tailwindcss";
-
-@theme {
-  --color-brand-500: oklch(0.6 0.2 260);
-  --color-surface-base: var(--color-white);
-  --font-sans: "Inter", ui-sans-serif, system-ui;
-  --spacing-page: 1.5rem;
-}
-```
-
-- Use semantic names (`brand`, `surface`, `border`, `text-primary`) over raw names (`blue-500`).
-- Map dark mode tokens in a `@media (prefers-color-scheme: dark) {}` or `.dark {}` block.
-- Expose tokens as CSS custom properties so non-Tailwind CSS can consume them.
-
-### Token Semantic Roles
-
-| Role | Examples | Usage |
-|---|---|---|
-| Brand | `--color-brand-500`, `--color-brand-600` | Primary CTAs, links, focus rings |
-| Surface | `--color-surface-base`, `--color-surface-raised` | Page background, card background |
-| Border | `--color-border-default`, `--color-border-strong` | Input borders, dividers |
-| Text | `--color-text-primary`, `--color-text-muted` | Body copy, secondary labels |
-| Status | `--color-status-success`, `--color-status-error` | Alerts, badges, inline validation |
-
-## Responsive Design Rules
-
-- Always write mobile-first: unprefixed utilities apply at all breakpoints; `md:`, `lg:` prefixes override upward.
-- Use Tailwind's built-in breakpoints (`sm` 640px, `md` 768px, `lg` 1024px, `xl` 1280px, `2xl` 1536px) unless a custom breakpoint is justified in the token map.
-- Prefer container queries (`@container`) over viewport breakpoints for components designed to be reused at different widths.
-- Do not use arbitrary breakpoint values without documenting the reason in the component.
-
-## Dark Mode Patterns
-
-| Strategy | When to Use | Configuration |
-|---|---|---|
-| `media` (default) | User OS preference drives mode; no toggle needed | `@variant dark (&:where(.dark, .dark *))` or default media query |
-| `class` | App provides a manual dark/light toggle | Add `dark` class to `<html>`; use `dark:` prefix in components |
-| CSS variable hybrid | Design system provides tokens for both modes | Redefine `@theme` tokens inside `.dark {}` or `@media` block |
-
-## Headless UI Integration Patterns
-
-Use Headless UI for interactive components that require ARIA patterns:
-
-| Component | Headless UI | Styling Rule |
-|---|---|---|
-| Modal / Dialog | `<Dialog>` | `backdrop-blur-sm`, `fixed inset-0`, `z-50` pattern |
-| Dropdown Menu | `<Menu>` | `absolute`, shadow, and `ring-1` for boundary |
-| Listbox / Select | `<Listbox>` | Same visual treatment as `<Menu>` with scroll-snap for long lists |
-| Combobox | `<Combobox>` | Input styling plus floating list; use `transition` utilities for open/close |
-| Tabs | `<Tab.Group>` | `border-b`, active state via `aria-selected` data attribute or `ui-selected:` |
-
-- Do not re-implement ARIA keyboard behavior; delegate entirely to Headless UI.
-- All Headless UI components expose `data-*` attributes; use `data-[state]:` variants for state-driven styling.
-
-## Class Ordering Rules
-
-Enforce using `prettier-plugin-tailwindcss`. The canonical order is:
-
-1. Layout (display, position, inset, z-index)
-2. Box model (width, height, padding, margin, overflow)
-3. Flexbox/Grid (flex, grid, gap, align, justify)
-4. Typography (font, text, leading, tracking)
-5. Visual (bg, border, shadow, ring, opacity)
-6. Interactive (cursor, pointer-events, resize)
-7. State variants (hover:, focus:, disabled:, dark:)
-8. Responsive variants (sm:, md:, lg:)
-
-## Accessibility Component Checklist
-
-Run for every interactive component before marking complete:
-
-- [ ] Color contrast: text on background ≥ 4.5:1 (normal text), ≥ 3:1 (large text). Verify using `text-*` and `bg-*` token pairs.
-- [ ] Focus ring: `focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2` or equivalent on all interactive elements.
-- [ ] Reduced motion: animation utilities wrapped in `motion-safe:` or `motion-reduce:` as appropriate.
-- [ ] Keyboard navigation: tab order is logical; no focus trap outside modals and drawers.
-- [ ] Screen reader: Headless UI components provide ARIA; custom components include explicit `role`, `aria-label`, or `aria-labelledby`.
-- [ ] Touch targets: interactive elements are at minimum `h-11 w-11` (44×44 CSS px) on touch-first surfaces.
-
-## Anti-Patterns to Avoid
-
-| Anti-Pattern | Problem | Correction |
-|---|---|---|
-| Arbitrary color values in component classes (`text-[#3b82f6]`) | Bypasses token system; breaks dark mode | Map color to a `@theme` token and use semantic utility |
-| Rebuilding ARIA patterns without Headless UI | Keyboard and screen reader bugs | Use Headless UI for all interactive ARIA roles |
-| Inline styles alongside Tailwind | Specificity conflicts and inconsistency | Convert to utilities or extend `@theme` |
-| `!important` utilities (`!text-red-500`) | Signals specificity debt | Restructure component hierarchy instead |
-| Dynamic class name construction via string concatenation | Classes not detected by content scanner; purged in production | Use complete class names; safeList only as last resort |
-
 ## Done Criteria
 
 - [ ] Design token map is complete with semantic roles covering brand, surface, border, text, and status.
@@ -165,6 +61,27 @@ Run for every interactive component before marking complete:
 - [ ] No anti-patterns present in delivered components.
 - [ ] Readiness summary written with open risks and deferred patterns.
 
-## References
+## Workflow
 
-- [Source Catalog](./references/source-catalog.md)
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

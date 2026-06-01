@@ -151,3 +151,23 @@ $items.addClass('active'); // operates on collection — one traversal
 - [jQuery Learn: Detach Elements to Work with Them](https://learn.jquery.com/performance/detach-elements-before-work-with-them/)
 - [jQuery API: .stop()](https://api.jquery.com/stop/)
 - [MDN: Avoid Forced Layout/Reflows](https://developer.mozilla.org/en-US/docs/Tools/Performance/Scenarios/Unnecessary_layout)
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

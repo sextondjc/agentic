@@ -60,15 +60,6 @@ Out of scope:
 - Rejected-candidate table with deterministic reason codes.
 - Closure check: no secrets in source; all environments build cleanly.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Identify config categories and choose injection strategy | Strategy decision documented |
-| L2 Delivery | Implement `.env` files, build-time injection, and `capacitor.config.ts` variants | App builds cleanly in at least two environments |
-| L3 Hardening | Add native-layer per-environment config, CI injection, and secret hygiene audit | All environments build in CI; no secrets in source; secret hygiene checklist passes |
-| L4 Expert Standardization | Reusable environment config model for multi-team, multi-app compendium use | Config model documented with templates for each environment tier |
-
 ## Deterministic Workflow
 
 1. Inventory all config values that differ across environments; classify each as secret, sensitive, or non-sensitive.
@@ -179,3 +170,28 @@ android {
 - Secret hygiene checklist passes; no secrets in source or artifact.
 - CI injects all required environment variables from the secret store.
 - Config model is documented with owner assignments and rotation policy.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

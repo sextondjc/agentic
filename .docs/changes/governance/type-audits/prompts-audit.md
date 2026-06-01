@@ -4,10 +4,10 @@
 
 | Field | Value |
 |---|---|
-| Audit Date | 2026-05-28 |
+| Audit Date | 2026-05-30 |
 | Type | prompts |
 | Primary Lane | Review |
-| Asset Count | 22 |
+| Asset Count | 21 |
 
 ## Findings (Severity Ranked)
 

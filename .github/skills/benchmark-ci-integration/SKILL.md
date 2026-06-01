@@ -151,20 +151,34 @@ benchmark:
 - Regression context must include: which method, which run, ratio, error, and linked artifact.
 - Acknowledged regressions must be recorded in the change artifact before merge is unblocked.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| CI execution strategy | CI Execution Strategy Rules |
-| Artifact storage and traceability | Artifact Storage Contract |
-| Threshold policy and regression definition | Threshold Enforcement Policy |
-| GitHub Actions job specification | GitHub Actions Job Skeleton |
-| Noise-reduction controls | Noise-Reduction Controls Checklist |
-| Regression routing and ownership | Regression Alert and Routing |
-
 ## Sources
 
 - [dotnet/performance CI Workflow](https://github.com/dotnet/performance/blob/main/docs/benchmarking-workflow-dotnet-runtime.md)
 - [dotnet/performance Repo](https://github.com/dotnet/performance) — reference benchmark suite structure at scale
 - [BenchmarkDotNet GitHub](https://github.com/dotnet/BenchmarkDotNet) — exporter and runner options
 - [GitHub Actions – actions/setup-dotnet](https://github.com/actions/setup-dotnet)
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

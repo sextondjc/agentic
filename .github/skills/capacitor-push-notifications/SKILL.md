@@ -68,15 +68,6 @@ Out of scope:
 - Rejected-candidate table with deterministic reason codes.
 - Closure check: end-to-end delivery verified on physical devices for each notification type.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Explain APNs/FCM architecture, plugin overview, platform requirements | Decision on APNs method and push service documented |
-| L2 Delivery | Configure APNs and FCM; wire plugin; handle token, foreground, and tap events | Test notification delivered and tapped on physical iOS and Android |
-| L3 Hardening | Add notification channels, silent pushes, opt-in UX, token rotation, and analytics | All notification types verified; opt-in rate baseline measured; token rotation tested |
-| L4 Expert Standardization | Multi-app, multi-environment, multi-team push governance model | Reusable configuration templates, payload schema, and channel inventory documented |
-
 ## Deterministic Workflow
 
 1. Decide APNs method (`.p8` key strongly preferred over certificates for lower rotation overhead).
@@ -93,130 +84,6 @@ Out of scope:
 12. Test silent/data-only pushes: `content-available: 1` (iOS), `data`-only FCM message (Android).
 13. Verify end-to-end delivery on physical devices; log APNs and FCM delivery receipts.
 
-## Plugin Wiring Pattern
-
-```typescript
-import { PushNotifications } from '@capacitor/push-notifications';
-
-export async function registerPushNotifications(
-  onToken: (token: string) => Promise<void>
-): Promise<void> {
-  let permStatus = await PushNotifications.checkPermissions();
-
-  if (permStatus.receive === 'prompt') {
-    permStatus = await PushNotifications.requestPermissions();
-  }
-
-  if (permStatus.receive !== 'granted') {
-    // Guide user to Settings — do not repeatedly re-prompt
-    return;
-  }
-
-  await PushNotifications.register();
-
-  PushNotifications.addListener('registration', async (token) => {
-    await onToken(token.value);
-  });
-
-  PushNotifications.addListener('registrationError', (err) => {
-    console.error('Push registration failed', err);
-  });
-
-  PushNotifications.addListener('pushNotificationReceived', (notification) => {
-    // App is in foreground — present in-app banner or badge
-    console.log('Foreground notification', notification);
-  });
-
-  PushNotifications.addListener('pushNotificationActionPerformed', (action) => {
-    const route = action.notification.data?.route;
-    if (route) {
-      router.push(route);  // replace with framework-specific navigation
-    }
-  });
-}
-
-export async function deregisterPushNotifications(): Promise<void> {
-  await PushNotifications.removeAllListeners();
-  // Notify backend to remove the token for this user
-}
-```
-
-## Android Notification Channel Pattern
-
-```typescript
-import { PushNotifications } from '@capacitor/push-notifications';
-import { Capacitor } from '@capacitor/core';
-
-if (Capacitor.getPlatform() === 'android') {
-  PushNotifications.createChannel({
-    id: 'transactional',
-    name: 'Transactional',
-    description: 'Order updates and account alerts',
-    importance: 4,       // IMPORTANCE_HIGH
-    sound: 'default',
-    vibration: true,
-    visibility: 1,       // VISIBILITY_PUBLIC
-    lights: true,
-    lightColor: '#FF5733',
-  });
-
-  PushNotifications.createChannel({
-    id: 'marketing',
-    name: 'Promotions',
-    description: 'Offers and recommendations',
-    importance: 3,       // IMPORTANCE_DEFAULT
-    sound: 'default',
-    vibration: false,
-    visibility: 1,
-  });
-}
-```
-
-## FCM HTTP v1 Payload Pattern
-
-```json
-{
-  "message": {
-    "token": "<DEVICE_FCM_TOKEN>",
-    "notification": {
-      "title": "Order shipped",
-      "body": "Your order #1234 is on its way."
-    },
-    "data": {
-      "route": "/orders/1234",
-      "orderId": "1234"
-    },
-    "android": {
-      "notification": { "channel_id": "transactional" },
-      "priority": "HIGH",
-      "ttl": "86400s"
-    },
-    "apns": {
-      "payload": {
-        "aps": {
-          "alert": { "title": "Order shipped", "body": "Your order #1234 is on its way." },
-          "sound": "default",
-          "badge": 1
-        }
-      },
-      "headers": { "apns-priority": "10" }
-    }
-  }
-}
-```
-
-## Quality Gates
-
-- APNs `.p8` key is stored in the secret store — not committed to version control.
-- `google-services.json` and `GoogleService-Info.plist` are gitignored in production-credential form (use placeholder files for dev).
-- Test notification delivered and tapped on physical iOS device (simulator cannot receive APNs).
-- Test notification delivered and tapped on physical Android device or emulator with Google Play Services.
-- Android notification channels are created before first notification delivery.
-- Token is rotated on user logout; backend confirms token deregistration.
-- Silent/data-only pushes confirmed to wake the app on both platforms.
-- Foreground notification handled without duplicate system banner.
-- Tap navigation routes to the correct in-app screen for each notification type.
-
 ## Done Criteria
 
 - APNs key and FCM project are configured; no credentials in source.
@@ -227,3 +94,28 @@ if (Capacitor.getPlatform() === 'android') {
 - End-to-end delivery verified on physical devices for all notification types.
 - Server-side payload schema is documented with field reference.
 - Channel and topic inventory exists with owner and business purpose per entry.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

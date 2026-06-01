@@ -178,21 +178,34 @@ Rollback procedure:
 - For performance-sensitive modules, require two approvers: one engineering owner and one performance owner.
 - Accepted regressions require explicit sign-off from the product or delivery owner in addition to the engineering owner.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Lock criteria and decision workflow | Baseline Lock Criteria |
-| Suite-level regression classification | Baseline Regression Classification |
-| ResultsComparer usage | ResultsComparer Usage |
-| Artifact naming and storage | Baseline Artifact Storage Contract |
-| Baseline history and audit trail | Baseline Index Entry Format |
-| Rollback policy | Baseline Rollback Policy |
-| Approval requirements | Baseline Ownership and Approval |
-
 ## Sources
 
 - [dotnet/performance – ResultsComparer](https://github.com/dotnet/performance/tree/main/src/tools/ResultsComparer) — canonical comparison tool and usage patterns
 - [dotnet/performance – Benchmarking Workflow](https://github.com/dotnet/performance/blob/main/docs/benchmarking-workflow-dotnet-runtime.md) — baseline governance patterns from the .NET runtime team
 - [BenchmarkDotNet Docs – Exporters](https://benchmarkdotnet.org/articles/configs/exporters.html) — JSON export configuration
 - [Andrey Akinshin's Blog](https://aakinshin.net/) — longitudinal result interpretation and drift detection
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

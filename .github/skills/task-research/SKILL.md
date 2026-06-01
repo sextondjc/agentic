@@ -63,4 +63,19 @@ On completion: state exact filename, highlight critical findings, confirm single
 - Clear alternatives with trade-offs.
 - Recommended path with implementation-ready handoff notes.
 
+## Execution Context
 
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

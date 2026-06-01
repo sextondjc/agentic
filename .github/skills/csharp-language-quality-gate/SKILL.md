@@ -72,47 +72,34 @@ Out of scope:
 - `pass-with-conditions`: limited medium or low findings remain with owner and due date.
 - `fail`: any unresolved critical finding or unresolved high finding.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert language review | Deterministic Workflow |
-| Deterministic quality gate | Decision Rules |
-| Auditable findings | Required Outputs + Severity Rubric |
-| Cross-project portability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Teams require deterministic language-level review before promotion.
-- Nullability and contract clarity are major defect-prevention controls.
-
-Trade-offs:
-
-- Strict gates prevent defects but may slow rapid iteration.
-- Looser gates increase throughput but raise long-term maintenance risk.
-
-Open blockers:
-
-- Missing TFM or language-version target blocks compatibility decisions.
-- Partial code visibility can hide contract breakage.
-
-Recommendation:
-
-- Use this gate for all public-surface or shared-library C# changes.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-
-## Pragmatic Stop Rule
-
-Stop when every finding has a severity, one remediation, one owner, and one explicit verdict is published.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Decision mode is explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -50,15 +50,6 @@ This skill covers the CSS variable and token layer. Component composition and CV
 | Cross-project token contract | Stable token names that are safe to share across projects; breaking-change policy documented |
 | Readiness summary | Open items, deferred tokens, and known color-system edge cases |
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Swap the default shadcn base color | Brand primary token renders correctly in light and dark |
-| L2 Practical Delivery | Full brand palette applied across all semantic roles | All semantic tokens defined; dark mode renders correctly |
-| L3 Multi-Theme | Two or more themes supported runtime-switchable | Theme switch is clean; no token leakage between themes |
-| L4 Expert Standardization | Cross-project shared token package | Token contract is versioned, breaking-change safe, and consumable from any project |
-
 ## shadcn Token System
 
 shadcn/ui uses a set of semantic CSS variable names. All tokens are declared in `globals.css` inside `@layer base`.
@@ -196,6 +187,27 @@ For multiple themes:
 6. Use the shadcn themes playground (`https://ui.shadcn.com/themes`) to preview and validate.
 7. Record the brand-to-token mapping in the token inventory output.
 
-## Pragmatic Stop Rule
+## Workflow
 
-Stop when all semantic tokens are declared for both `:root` and `.dark`, the Tailwind config consumes them correctly, brand mapping is recorded, and dark mode strategy is documented. Each remaining item must appear in the readiness summary with a deferral reason.
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

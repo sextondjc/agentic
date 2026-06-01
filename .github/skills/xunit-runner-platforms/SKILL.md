@@ -66,48 +66,34 @@ Out of scope:
 - Require explicit parity checks for discovery, filtering, and output formats.
 - Fail closed when result consumers cannot parse emitted artifacts.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert runner selection | Deterministic Workflow |
-| Deterministic platform parity | Required Outputs |
-| Stable evidence outputs | Decision Rules + Required Outputs |
-| Cross-project reusability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- A single runner strategy lowers long-term maintenance overhead.
-- Evidence contracts are as important as command success.
-
-Trade-offs:
-
-- Newer platforms improve forward compatibility but may require migration effort.
-- Legacy compatibility can reduce short-term friction but preserve inconsistency risk.
-
-Open blockers:
-
-- Unknown reporting consumers may invalidate output decisions.
-- Mixed SDK constraints can force temporary dual-path support.
-
-Recommendation:
-
-- Standardize on one primary runner strategy and encode a strict parity contract for local and CI execution.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Execution contract template is provided in [runner-platform-contract-template.md](./references/runner-platform-contract-template.md).
-
-## Pragmatic Stop Rule
-
-Stop when one primary runner is selected, parity checks are explicit, and result outputs are contract-validated.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Platform and output decisions are explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

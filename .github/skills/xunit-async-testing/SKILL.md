@@ -75,47 +75,34 @@ Out of scope:
 - Assertions tied to non-deterministic scheduling order.
 - Timeout values used as behavior proof instead of guardrails.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert async test design | Deterministic Workflow |
-| Deterministic cancellation coverage | Decision Rules + Required Outputs |
-| Concurrency flake reduction | Anti-Pattern Checks |
-| Cross-project reusability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Async correctness requires explicit observation of completion, cancellation, and exception contracts.
-- Most async flakiness comes from timing-based assertions and hidden shared state.
-
-Trade-offs:
-
-- Stricter async assertions improve reliability but increase test authoring effort.
-- Broader concurrency coverage catches more defects but can increase test runtime.
-
-Open blockers:
-
-- Unspecified cancellation semantics reduce assertion precision.
-- Hidden thread-affinity dependencies can invalidate otherwise correct async tests.
-
-Recommendation:
-
-- Encode async behavior as explicit contracts in tests and ban timing-only evidence for correctness decisions.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-
-## Pragmatic Stop Rule
-
-Stop when each async behavior has one explicit completion assertion, one cancellation decision (if applicable), and one exception-path check.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Async decision logic is explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

@@ -66,48 +66,34 @@ Out of scope:
 - Flaky classification requires explicit criteria, not ad hoc judgment.
 - Gate outcomes must cite artifact evidence and named owner dispositions.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Expert CI evidence posture | Deterministic Workflow |
-| Deterministic triage and ownership | Required Outputs |
-| Gate-ready reporting | Decision Rules + Required Outputs |
-| Cross-project portability | Scope Boundaries + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Repeated CI instability is often an evidence and ownership problem, not only a test-authoring problem.
-- Durable artifacts enable fast and consistent release decisions.
-
-Trade-offs:
-
-- Richer evidence increases storage and pipeline overhead.
-- Lighter evidence improves speed but weakens triage quality.
-
-Open blockers:
-
-- Missing historical run data may reduce initial flaky classification accuracy.
-- Incomplete ownership maps can delay remediation.
-
-Recommendation:
-
-- Adopt a minimal-but-strict artifact schema with deterministic failure classes and explicit triage ownership.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Gate artifact template is provided in [ci-test-evidence-template.md](./references/ci-test-evidence-template.md).
-
-## Pragmatic Stop Rule
-
-Stop when artifact contracts, failure classes, and ownership mappings are explicit and gate reports are reproducible.
-
 ## Done Criteria
 
 - Trigger conditions are satisfied.
 - Required outputs are complete.
 - Evidence and ownership rules are explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

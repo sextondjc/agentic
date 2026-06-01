@@ -92,3 +92,20 @@ Optional:
 4. Validate ownership conflicts (retry and timeout especially) before implementation.
 5. Produce implementation guidance and telemetry/test requirements.
 6. If a new library is proposed, complete [library-intake-gate.md](./references/library-intake-gate.md) and stop at evaluation until user approval is explicit.
+
+## Execution Context
+
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.

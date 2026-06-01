@@ -77,45 +77,33 @@ Out of scope:
 - `.docs/changes/<workstream-id>/content-clarity-checklist.md`
 - `.docs/changes/<workstream-id>/release-recommendation.md`
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Deterministic content review | Deterministic Workflow |
-| Objective quality gates | Content Clarity Gate Checklist |
-| Severity-ranked findings | Severity Model |
-| Durable evidence artifacts | Evidence Contract |
-| Explicit release recommendation | Required Outputs |
-
-## Reasoning Package
-
-Assumptions:
-
-- Copy changes materially affect task outcomes.
-
-Trade-offs:
-
-- Tight wording can improve speed but reduce context for new users.
-
-Open blockers:
-
-- Missing terminology standards can cause inconsistent outputs.
-
-Recommendation:
-
-- Use this skill at L3 for release-bound flows with copy changes.
-
-## Source Governance Summary
-
-- Source relevance, authority, freshness, and actionability are tracked in [source-catalog.md](./references/source-catalog.md).
-
-## Pragmatic Stop Rule
-
-Stop when all in-scope content surfaces are evaluated, high and critical issues are resolved or dispositioned with owner and due date, and a final recommendation is published.
-
 ## Done Criteria
 
 - Required outputs are complete and linked.
 - Source ledger is current.
 - Final recommendation is explicit and evidence-backed.
 
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

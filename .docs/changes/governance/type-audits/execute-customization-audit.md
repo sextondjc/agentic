@@ -2,7 +2,7 @@
 
 ## Executive Briefing
 
-Current per-type audits are reconciled and no blocking findings remain. Final disposition is PASSED.
+Current per-type audits are reconciled with updated 2026-05-30 evidence and canonical wrapper execution reports 21/21 checks passed.
 
 ## Aggregate Outcome Grid
 
@@ -10,9 +10,9 @@ Current per-type audits are reconciled and no blocking findings remain. Final di
 |---|---:|---:|---:|---|
 | Agents | 18 | 0 | 0 | Pass |
 | Instructions | 21 | 0 | 0 | Pass |
-| Prompts | 22 | 0 | 0 | Pass |
-| Skills | 268 | 0 | 0 | Pass |
-| Total | 329 | 0 | 0 | Pass |
+| Prompts | 21 | 0 | 0 | Pass |
+| Skills | 267 | 0 | 0 | Pass |
+| Total | 327 | 0 | 0 | Pass |
 
 ## Failure Matrix
 

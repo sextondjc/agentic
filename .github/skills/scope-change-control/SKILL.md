@@ -55,15 +55,6 @@ Out of scope:
 - Compensating action note when approval changes the baseline.
 - Re-baseline trigger or review checkpoint.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Decide one scope-change request | One decision record exists |
-| L2 Delivery | Govern active-scope pressure | All live change requests are dispositioned |
-| L3 Hardening | Prevent silent scope drift | Impact and compensating-action rules are enforced consistently |
-| L4 Expert Standardization | Build reusable scope-control model | Decision schema and re-baseline rules are portable across projects |
-
 ## Deterministic Workflow
 
 1. Record the requested change and the active delivery context it affects.
@@ -90,46 +81,6 @@ Out of scope:
 | Compensating action note | Descope, swap, mitigation, or explicit exception |
 | Re-baseline trigger | Trigger event, owner, next checkpoint |
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Mid-flight scope governance | Objective + Deterministic Workflow |
-| Explicit impact-aware decisions | Required Outputs + Scope Control Rules |
-| Protection against silent drift | Deterministic Workflow steps 3 to 7 |
-| Durable change records | Artifact Contract |
-| Portable scope-control model | Depth Modes L4 + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- Active delivery will attract change pressure.
-- Unlogged scope changes are a direct delivery-control failure.
-
-Trade-offs:
-
-- Strong change control protects commitments but can frustrate urgent requesters.
-- Allowing swaps increases flexibility but demands stricter tracking discipline.
-
-Open blockers:
-
-- Weak baseline definition makes impact analysis harder.
-- Missing owners weaken change accountability.
-
-Recommendation:
-
-- Use this skill only when change pressure is real. It is high value in noisy delivery environments and unnecessary overhead in calm ones.
-
-## Source Governance Summary
-
-- Active sources and evaluation status are tracked in [source-catalog.md](./references/source-catalog.md).
-- Default freshness threshold is 30 days.
-
-## Pragmatic Stop Rule
-
-Stop when each change request has one decision, one impact statement, and one explicit follow-up or re-baseline trigger.
-
 ## Anti-Patterns
 
 - Accepting scope additions with no compensating action.
@@ -144,3 +95,28 @@ Stop when each change request has one decision, one impact statement, and one ex
 - Impact analysis is explicit.
 - Re-baseline triggers are recorded when needed.
 - Source catalog entries are current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

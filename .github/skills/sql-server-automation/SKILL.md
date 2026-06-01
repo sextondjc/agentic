@@ -53,15 +53,6 @@ Out of scope:
 - Evidence artifacts or output expectations.
 - Rejected approaches with deterministic reasons.
 
-## Depth Modes
-
-| Level | Intent | Exit Rule |
-|---|---|---|
-| L1 Orientation | Automate one DBA task | One repeatable operational step is safely defined |
-| L2 Delivery | Ship one reusable workflow | Inputs, outputs, safeguards, and execution path are explicit |
-| L3 Hardening | Make automation production-grade | Rollback and evidence expectations are documented |
-| L4 Expert Standardization | Establish reusable SQL operations library | A durable pattern for cross-project DBA automation is documented |
-
 ## Deterministic Workflow
 
 1. Define the operational objective, blast radius, and allowed execution surface.
@@ -88,49 +79,9 @@ Out of scope:
 - `R4`: Produces weak or non-durable evidence.
 - `R5`: Broader or riskier than the stated operational goal requires.
 
-## L4 Coverage Matrix
-
-| Requested Outcome | Skill Section |
-|---|---|
-| Repeatable operational path | Deterministic Workflow |
-| Safe automation boundaries | Scope Boundaries + Automation Rules |
-| Rollback-aware execution | Required Outputs + Deterministic Workflow step 6 |
-| Explicit rejected options | Rejected Candidate Reasons |
-| Cross-project DBA reuse | Depth Modes + Pragmatic Stop Rule |
-
-## Reasoning Package
-
-Assumptions:
-
-- The automation target is stable enough to justify reuse.
-- Teams value structured operational evidence over ad hoc execution.
-
-Trade-offs:
-
-- More validation and evidence capture slows setup but improves safety and repeatability.
-- Highly generic automation may hide environment-specific operational constraints.
-
-Open blockers:
-
-- Unknown privilege, file-share, or network requirements can invalidate an otherwise sound automation path.
-- Missing rollback expectations weaken stateful operational workflows.
-
-Recommendation:
-
-- Default to repeatable, evidence-producing automation with explicit prerequisites and rollback notes, and reject manual GUI-first approaches for recurring SQL operations.
-
-## Source Governance Summary
-
-- Active sources, evaluation date, and guidance deltas are tracked in [source-catalog.md](./references/source-catalog.md).
-- Freshness threshold defaults to 30 days for active source checks.
-
 ## Reference Assets
 
 - Use [automation-runbook-template.md](./references/automation-runbook-template.md) to define prerequisites, evidence outputs, rollback notes, and operator-safe execution steps.
-
-## Pragmatic Stop Rule
-
-Stop when one automation path is clearly preferable, its prerequisites and rollback notes are explicit, and the workflow can be executed or handed off without hidden operational assumptions.
 
 ## Done Criteria
 
@@ -139,3 +90,28 @@ Stop when one automation path is clearly preferable, its prerequisites and rollb
 - One recommended path is chosen and weaker paths are rejected.
 - Safety, evidence, and rollback expectations are explicit.
 - Source catalog is current for this evaluation cycle.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)

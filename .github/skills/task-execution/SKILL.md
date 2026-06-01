@@ -79,3 +79,33 @@ Use [command-patterns.md](./references/command-patterns.md) for canonical dispat
 - [README.md](./references/README.md)
 - [subagent-dispatch-patterns.md](./references/subagent-dispatch-patterns.md)
 - [command-patterns.md](./references/command-patterns.md)
+
+## Inputs
+
+- Request objective and scope boundary.
+- Applicable constraints and risk context.
+
+## Workflow
+
+1. Capture inputs and constraints.
+2. Execute this skill's deterministic steps.
+3. Publish outputs with status and next actions.
+
+## Execution Context
+### Input Context
+
+- Request objective and scope boundary.
+- Applicable constraints and required outputs.
+
+### Process Context
+
+- Follow this skill's deterministic workflow from intake to closure.
+- Record ownership and decisions for required outputs.
+
+### Output Context
+
+- Deliverables with explicit completion status.
+- Residual risks and next actions.
+## References Assets
+
+- [Reference assets](./references/README.md)
